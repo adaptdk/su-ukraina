@@ -1,4 +1,44 @@
 ---
 label: Organizacija
 hide_body: true
-fields: []
+fields:
+- name: about
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Apie
+  description: Trumpas organizacijos apibūdinimas
+- name: cause
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Paskirtis
+  description: Organizacijos pagrindinė kryptis
+- name: forma
+  type: tag_list
+  default: []
+  label: Forma
+  description: Paramos forma (pvz. auka, savanorystė)
+- name: rekvizitai
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Rekvizitai
+  description: Rekvizitai, registracija, informacija kaip aukoti/prisidėti
+- name: website
+  type: text
+  config:
+    required: false
+  label: Oficialus puslapis
