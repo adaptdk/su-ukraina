@@ -2,6 +2,11 @@
 label: Organizacija
 hide_body: true
 fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Pavadinimas
 - name: about
   type: textarea
   default: ''
