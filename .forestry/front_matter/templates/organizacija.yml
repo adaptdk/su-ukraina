@@ -47,3 +47,5 @@ fields:
   config:
     required: false
   label: Oficialus puslapis
+pages:
+- src/content/organizacijos/blue-yellow.md
