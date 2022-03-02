@@ -1,3 +1,4 @@
+---
 title: "„Aukok.lt“"
 about: "2009 m. įkurtas vienintelis aukojimo internetu portalas Lietuvoje, kuris suteikia galimybę privatiems asmenims ir įmonėms aukoti patogiau."
 cause: "Lietuvos Raudonasis Kryžius, Lietuvos Caritas, Maltiečiai, „Maisto bankas“ ir Gelbėkit vaikus pradeda rinkti lėšas nuo karo Ukrainoje bėgantiems ukrainiečiams. Surinktos lėšos bus skiriamos humanitarinei pagalbai, pirmai psichosocialinei pagalbai ir pirmajai pagalbai teikti."

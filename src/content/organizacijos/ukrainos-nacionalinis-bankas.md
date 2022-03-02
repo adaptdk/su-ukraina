@@ -1,3 +1,4 @@
+---
 title: Ukrainos nacionalinis bankas
 about: "Ukrainos nacionalinis bankas yra modernus, atviras ir nepriklausomas centrinis bankas, kuriuo pasitiki visuomenė, yra neatskiriama Europos nacionalinių centrinių bankų dalis."
 cause: "Ukrainos nacionalinis bankas nusprendė atidaryti specialią sąskaitą paramai, siekiant padėti Ukrainos ginkluotosioms pajėgoms. Toks sprendimasi priimtas po to, kai Ukrainos Vyriausybė visoje šalyje įvedė karinę padėtį, reaguodama į ginkluotą Rusijos agresiją ir atsinaujinusią grėsmę Ukrainos nepriklausomybei ir teritoriniam vientisumui."

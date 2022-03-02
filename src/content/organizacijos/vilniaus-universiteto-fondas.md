@@ -1,3 +1,4 @@
+---
 title: Vilniaus universiteto fondas
 about: "Vilniaus universiteto fondas – 2016 m. įsteigtas paramos fondas, kurio veikla apima tiek neliečiamojo kapitalo valdymą, tiek tikslinius paramos projektus."
 cause: Padėsime nuo Rusijos valdžios vykdomos agresijos nukentėjusiai Ukrainos akademinei bendruomenei tęsti mokslinę veiklą Lietuvoje ir Ukrainoje. Vilniaus universitetas praplėtė 2020 m. vasarą įsteigtos LDK stipendijos sąlygas ir yra pasiruošęs pasiūlyti nemokamas studijas bei finansinę pagalbą Ukrainos studentams.

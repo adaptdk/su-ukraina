@@ -1,3 +1,4 @@
+---
 title: "„Gelbėkit vaikus“"
 about: "Nepolitinė, nereliginė ir nevyriausybinė vaiko teises atstovaujanti organizacija, siekianti ilgalaikių teigiamų pokyčių vaikų gyvenimuose."
 cause: "Šalies gyventojai ir verslas gali padėti pasirūpinti Ukrainos vaikais – tais, kurie vis dar Ukrainoje ir tais, kurie jau pakeliui į Lietuvą."
