@@ -1,4 +1,23 @@
 ---
 label: Renginys
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Pavadinimas
+- name: date
+  type: datetime
+  label: Data
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: location
+  type: text
+  config:
+    required: false
+  label: Vieta
