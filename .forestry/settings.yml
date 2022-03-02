@@ -11,6 +11,8 @@ sections:
   match: "**/*"
   templates:
   - puslapis
+- type: heading
+  label: Parama
 - type: directory
   path: src/content/organizacijos
   label: Organizacijos
