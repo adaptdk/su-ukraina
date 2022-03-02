@@ -5,6 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: src/content/organizacijos
+  label: Organizacijos
+  create: documents
+  match: "**/*"
+  templates:
+  - organizacija
+- type: directory
   path: src/content/events
   label: Renginiai
   create: documents
@@ -18,13 +25,6 @@ sections:
   match: "**/*"
   templates:
   - akcija
-- type: directory
-  path: src/content/organizacijos
-  label: Organizacijos
-  create: documents
-  match: "**/*"
-  templates:
-  - organizacija
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
