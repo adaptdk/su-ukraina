@@ -1,5 +1,5 @@
 ---
-title: „Lietuvos Raudonasis Kryžius“
+title: "„Lietuvos Raudonasis Kryžius“"
 about: "Lietuvos Raudonasis Kryžius kviečia į VIENYBĖS PAJĖGAS prisijungti savanorius, kurie yra pasiruošę reaguoti į Ukrainoje vykstančią krizę."
 cause: "Laukiame Tavęs, jeigu nori prisidėti šiose (vienoje ar keliose) srityse: • Humanitarinės pagalbos teikime (pakavimas, rūšiavimas, transportavimas, dalinimas);•Pirmosios ir pirmosios psichologinės pagalbos teikime;•Atvykusiųjų iš užsienio registravime; •Šeimos ryšių atkūrime;•Kitose veiklose pagal poreikį."
 forma:
