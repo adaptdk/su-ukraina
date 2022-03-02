@@ -5,6 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: src/content/pages
+  label: Puslapiai
+  create: all
+  match: "**/*"
+  templates:
+  - puslapis
+- type: directory
   path: src/content/organizacijos
   label: Organizacijos
   create: documents
