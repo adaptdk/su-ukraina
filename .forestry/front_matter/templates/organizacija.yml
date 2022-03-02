@@ -47,5 +47,16 @@ fields:
   config:
     required: false
   label: Oficialus puslapis
+- name: weight
+  type: number
+  label: Svoris
+  description: Didesnio svorio organizacijos nusėda sąrašo apačioje, mažesnio – kyla
+    į viršų
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 pages:
 - src/content/organizacijos/blue-yellow.md
