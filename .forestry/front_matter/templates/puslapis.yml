@@ -17,6 +17,12 @@ fields:
     min: 
     max: 
     step: 
+- name: slug
+  type: text
+  config:
+    required: true
+  label: Unikalus vardas (slug)
+  description: Tekstas nuorodoje -- parašytas kaip-nors-taip, nes nuoroda
 pages:
 - src/content/pages/akcijos-ir-renginiai.md
 - src/content/pages/apie-mus.md
