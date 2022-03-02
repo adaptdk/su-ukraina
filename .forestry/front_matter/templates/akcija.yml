@@ -9,3 +9,4 @@ fields:
   label: Pavadinimas
 pages:
 - src/content/initiatives/apzvalgu-svetainiu-sturmas.md
+- src/content/initiatives/paskolink-kompiuteriu-resursus.md
