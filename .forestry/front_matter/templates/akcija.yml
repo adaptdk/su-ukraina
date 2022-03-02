@@ -7,3 +7,5 @@ fields:
   config:
     required: false
   label: Pavadinimas
+pages:
+- src/content/initiatives/apzvalgu-svetainiu-sturmas.md
