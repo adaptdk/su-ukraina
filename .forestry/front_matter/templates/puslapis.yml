@@ -7,6 +7,16 @@ fields:
   config:
     required: false
   label: Pavadinimas
+- name: weight
+  type: number
+  label: Svoris
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 pages:
 - src/content/pages/akcijos-ir-renginiai.md
 - src/content/pages/apie-mus.md
