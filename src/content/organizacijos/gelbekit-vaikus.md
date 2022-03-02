@@ -1,7 +1,9 @@
 ---
 title: "„Gelbėkit vaikus“"
-about: "Nepolitinė, nereliginė ir nevyriausybinė vaiko teises atstovaujanti organizacija, siekianti ilgalaikių teigiamų pokyčių vaikų gyvenimuose."
-cause: "Šalies gyventojai ir verslas gali padėti pasirūpinti Ukrainos vaikais – tais, kurie vis dar Ukrainoje ir tais, kurie jau pakeliui į Lietuvą."
+about: Nepolitinė, nereliginė ir nevyriausybinė vaiko teises atstovaujanti organizacija,
+  siekianti ilgalaikių teigiamų pokyčių vaikų gyvenimuose.
+cause: Šalies gyventojai ir verslas gali padėti pasirūpinti Ukrainos vaikais – tais,
+  kurie vis dar Ukrainoje ir tais, kurie jau pakeliui į Lietuvą.
 forma:
 - Auka
 rekvizitai: |-
@@ -15,5 +17,6 @@ rekvizitai: |-
 
   Juridiniai asmenys, įmonės, norintys ir galintys padėti Ukrainos vaikams bei į Lietuvą atvyksiančių pabėgėlių šeimoms kviečiami susisiekti organizacijos „Gelbėkit vaikus“ telefono numeriu +370 607 84 249 arba el. paštu simona.uleckiene@savethechildren.org"
 website: https://gelbekitvaikus.lt
+weight: 4
 
 ---
