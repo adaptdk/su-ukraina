@@ -27,6 +27,8 @@ sections:
   match: "**/*"
   templates:
   - organizacija-savanorystei
+- type: heading
+  label: Protestas
 - type: directory
   path: src/content/events
   label: Renginiai
@@ -41,6 +43,13 @@ sections:
   match: "**/*"
   templates:
   - akcija
+- type: directory
+  path: src/content/addressees
+  label: Laiškų rašymas
+  create: documents
+  match: "**/*"
+  templates:
+  - adresatas-laiskams
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
