@@ -19,6 +19,9 @@ contents:
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
   title: Išmanūs pirmosios pagalbos kursai
   answer: https://www.svarbuszingsnis.lt
+- template: klausimas-atsakymas-tekstas-paaiskinimas-etc
+  title: Išgyvenimo mokyklos organizuojami Išgyvenimo kursai
+  answer: http://www.isgyvenimomokykla.lt
 intro: Labai svarbu žinoti
 
 ---
