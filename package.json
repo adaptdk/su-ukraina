@@ -20,8 +20,11 @@
     "es-abstract": "^1.19.1",
     "es5-ext": "^0.10.53",
     "gatsby": "^4.8.2",
+    "gatsby-plugin-preact": "^6.9.0",
     "gatsby-source-filesystem": "^4.9.0",
     "gatsby-transformer-remark": "^5.9.0",
+    "preact": "^10.6.6",
+    "preact-render-to-string": "^5.1.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-linkify": "^1.0.0-alpha"
