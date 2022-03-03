@@ -24,6 +24,9 @@ const Header = () => {
             <li>
               <Link to="/kaip-galiu-padeti">Kaip galiu padėti?</Link>
             </li>
+            <li>
+              <Link to="/protesto-formos">Protesto formos</Link>
+            </li>
           </ul>
         </nav>
       </Constraint>

@@ -17,6 +17,13 @@ module.exports = {
         path: `${__dirname}/src/content/organizacijos-savanorystei`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `initiatives`,
+        path: `${__dirname}/src/content/initiatives`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-preact`,
   ],
