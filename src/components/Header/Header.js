@@ -23,9 +23,22 @@ const Header = () => {
           <ul>
             <li>
               <Link to="/kaip-galiu-padeti">Kaip galiu padėti?</Link>
+              <ul>
+                <li>
+                  <Link to="/kaip-galiu-padeti/aukojimas">Aukojimas</Link>
+                </li>
+                <li>
+                  <Link to="/kaip-galiu-padeti/savanoryste">Savanorystė</Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link to="/protesto-formos">Protesto formos</Link>
+              <ul>
+                <li>
+                  <Link to="/protesto-formos/akcijos">Akcijos</Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>

@@ -24,6 +24,13 @@ module.exports = {
         path: `${__dirname}/src/content/initiatives`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `page-contents`,
+        path: `${__dirname}/src/content/pages`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-preact`,
   ],

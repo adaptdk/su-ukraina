@@ -10,6 +10,7 @@ import "../../styles/main.css";
 const Layout = ({ children }) => {
   return (
     <div className="Layout">
+      <html lang="lt" />
       <Header />
       <main>{children}</main>
       <Footer />

@@ -7,7 +7,14 @@ import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 
 const Page = ({ data }) => {
-  const organisations = data.allFile.edges.map((edge) => {
+  const content = data.contents.edges.map((edge) => {
+    return {
+      ...edge.node.childMarkdownRemark.frontmatter,
+      html: edge.node.childMarkdownRemark.html,
+    };
+  })[0];
+
+  const organisations = data.organisations.edges.map((edge) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
 
@@ -15,6 +22,13 @@ const Page = ({ data }) => {
     <Layout>
       <Constraint>
         <title>Aukojimas</title>
+
+        {!!content && (
+          <Constraint>
+            {content.title}
+            <div dangerouslySetInnerHTML={{ __html: content.html }} />
+          </Constraint>
+        )}
 
         {organisations.map((organisation, i) => {
           return (
@@ -59,7 +73,26 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile(
+    contents: allFile(
+      filter: {
+        sourceInstanceName: { eq: "page-contents" }
+        absolutePath: {
+          regex: "//src/content/pages/kaip-galiu-padeti/aukojimas.md$/"
+        }
+      }
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              title
+            }
+            html
+          }
+        }
+      }
+    }
+    organisations: allFile(
       filter: { sourceInstanceName: { eq: "orgs-for-donating" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
@@ -83,7 +116,21 @@ export const query = graphql`
 
 Page.propTypes = {
   data: PropTypes.shape({
-    allFile: PropTypes.shape({
+    contents: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            childMarkdownRemark: PropTypes.shape({
+              frontmatter: PropTypes.shape({
+                title: PropTypes.string,
+              }),
+            }),
+            html: PropTypes.string,
+          }),
+        })
+      ),
+    }),
+    organisations: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
