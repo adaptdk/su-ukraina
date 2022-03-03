@@ -17,6 +17,7 @@
   }
 
   &__title {
+    color: var(--c__primary);
     font-size: 1.25rem;
     font-weight: var(--tw__medium);
     margin: 0;
