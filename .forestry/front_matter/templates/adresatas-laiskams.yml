@@ -35,3 +35,5 @@ fields:
   default: []
   label: Tipas
   description: "(„Įmonė“, „Ambasada“)"
+pages:
+- src/content/addressees/adidas.md
