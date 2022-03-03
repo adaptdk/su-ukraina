@@ -7,3 +7,12 @@ fields:
   config:
     required: false
   label: Klausimas, tekstas, pavadinimas
+- name: answer
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Atsakymas, paaiškinimas
