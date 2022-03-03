@@ -27,3 +27,6 @@ fields:
   config:
     required: false
   label: Twitter paskyra
+pages:
+- src/content/info-orgs/urm.md
+- src/content/info-people/vardas-zmogaus.md
