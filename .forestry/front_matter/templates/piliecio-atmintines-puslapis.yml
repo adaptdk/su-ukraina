@@ -6,6 +6,7 @@ fields:
   type: blocks
   template_types:
   - klausimas-atsakymas-tekstas-paaiskinimas-etc
+  - adf
   config:
     min: 
     max: 
