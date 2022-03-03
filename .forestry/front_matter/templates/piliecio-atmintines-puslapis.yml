@@ -7,6 +7,15 @@ fields:
   config:
     required: false
   label: Pavadinimas
+- name: intro
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Intro
 - name: contents
   type: blocks
   template_types:
