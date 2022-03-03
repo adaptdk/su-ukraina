@@ -2,8 +2,8 @@
 title: Kaip geriau pasiruošti
 contents:
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
-  title: Pavadinimas
-  answer: Atsakymas
+  title: Šaulio registracijos forma
+  answer: https://www.sauliusajunga.lt/tapk-sauliu/
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
   title: kl2
   answer: ats2
