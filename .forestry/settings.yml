@@ -5,6 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: src/content/citizen-handbook
+  label: Piliečio atmintinė
+  create: documents
+  match: "**/*"
+  templates:
+  - piliecio-atmintines-puslapis
+- type: directory
   path: src/content/pages
   label: Puslapiai
   create: all
