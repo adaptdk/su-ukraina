@@ -1,4 +1,61 @@
 ---
 label: Organizacija (savanorystei)
-hide_body: false
-fields: []
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Pavadinimas
+- name: about
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Apie
+  description: Trumpas organizacijos apibūdinimas
+- name: cause
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Paskirtis
+  description: Organizacijos pagrindinė kryptis
+- name: forma
+  type: tag_list
+  default: []
+  label: Forma
+  description: Paramos forma (pvz. auka, savanorystė)
+- name: rekvizitai
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Rekvizitai
+  description: Rekvizitai, registracija, informacija kaip aukoti/prisidėti
+- name: website
+  type: text
+  config:
+    required: false
+  label: Oficialus puslapis
+- name: weight
+  type: number
+  label: Svoris
+  description: Didesnio svorio organizacijos nusėda sąrašo apačioje, mažesnio – kyla
+    į viršų
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
