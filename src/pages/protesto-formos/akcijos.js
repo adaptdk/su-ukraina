@@ -2,6 +2,8 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
+import Card from "../../components/Card";
+import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 
@@ -32,14 +34,15 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        {initiatives.map((initiative, i) => {
-          return (
-            <article key={i}>
-              <h2>{initiative.title}</h2>
-              <div dangerouslySetInnerHTML={{ __html: initiative.html }} />
-            </article>
-          );
-        })}
+        <CardList>
+          {initiatives.map((initiative, i) => {
+            return (
+              <Card title={initiative.title} key={i}>
+                <div dangerouslySetInnerHTML={{ __html: initiative.html }} />
+              </Card>
+            );
+          })}
+        </CardList>
       </Constraint>
     </Layout>
   );

@@ -1,0 +1,24 @@
+.Card {
+  background: var(--c__card-bg);
+  border: 1px solid hsl(240deg 30% 92%);
+  border-radius: var(--s__alt-border-radius);
+  margin: var(--s__main-padding) 0;
+  overflow: hidden;
+
+  &__body {
+    padding: var(--s__main-padding);
+    white-space: pre-line;
+  }
+
+  &__heading {
+    background: hsl(240deg 30% 98%);
+    border-bottom: 1px solid hsl(240deg 30% 92%);
+    padding: var(--s__main-padding);
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: var(--tw__medium);
+    margin: 0;
+  }
+}

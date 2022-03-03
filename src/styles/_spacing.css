@@ -2,6 +2,7 @@
   --s__unit: 4px;
   --s__constraint: 1140px;
   --s__main-border-radius: 4px;
+  --s__alt-border-radius: 8px;
   --s__main-padding: calc(var(--s__unit) * 4);
   --s__alt-padding: calc(var(--s__unit) * 8);
 }

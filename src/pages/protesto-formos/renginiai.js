@@ -2,6 +2,8 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
+import Card from "../../components/Card";
+import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 
@@ -22,9 +24,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      {!content?.title && (
-        <title>Renginiai</title>
-      )}
+      {(!content || !content.title) && <title>Renginiai</title>}
 
       {!!content && (
         <Constraint>
@@ -35,16 +35,17 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        {events.map((event, i) => {
-          return (
-            <article key={i}>
-              <h2>{event.title}</h2>
-              <p>Vieta: {event.location}</p>
-              <p>Data: {new Date(event.date).toLocaleString(`lt`)}</p>
-              <div dangerouslySetInnerHTML={{ __html: event.html }} />
-            </article>
-          );
-        })}
+        <CardList>
+          {events.map((event, i) => {
+            return (
+              <Card title={event.title} key={i}>
+                <p>Vieta: {event.location}</p>
+                <p>Data: {new Date(event.date).toLocaleString(`lt`)}</p>
+                <div dangerouslySetInnerHTML={{ __html: event.html }} />
+              </Card>
+            );
+          })}
+        </CardList>
       </Constraint>
     </Layout>
   );

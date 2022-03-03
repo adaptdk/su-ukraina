@@ -1,0 +1,7 @@
+.CardList {
+  columns: 2;
+
+  > * {
+    display: inline-block;
+  }
+}

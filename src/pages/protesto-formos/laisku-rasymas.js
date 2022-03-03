@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Linkify from "react-linkify";
 
+import Card from "../../components/Card";
+import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 
@@ -20,9 +22,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      {!content?.title && (
-        <title>Laiškų rašymas</title>
-      )}
+      {(!content || !content.title) && <title>Laiškų rašymas</title>}
 
       {!!content && (
         <Constraint>
@@ -33,30 +33,36 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        {addressees.map((addressee, i) => {
-          return (
-            <article key={i}>
-              <h2>{addressee.title}</h2>
+        <CardList>
+          {addressees.map((addressee, i) => {
+            return (
+              <Card title={addressee.title} key={i}>
+                <div>
+                  <ul>
+                    {addressee.type.map((singleType, j) => {
+                      return <li key={j}>{singleType}</li>;
+                    })}
+                  </ul>
+                </div>
 
-              <div>
-                <ul>
-                  {addressee.type.map((singleType, j) => {
-                    return <li key={j}>{singleType}</li>;
-                  })}
-                </ul>
-              </div>
+                <h3>Klausimas, dėl kurio galima kreiptis</h3>
+                <div>
+                  <Linkify>{addressee.purpose}</Linkify>
+                </div>
 
-              <h3>Klausimas, dėl kurio galima kreiptis</h3>
-              <div><Linkify>{addressee.purpose}</Linkify></div>
+                <h3>El. pašto adresas ar kitas skaitmeninis kanalas</h3>
+                <div>
+                  <Linkify>{addressee.emailOrLink}</Linkify>
+                </div>
 
-              <h3>El. pašto adresas ar kitas skaitmeninis kanalas</h3>
-              <div><Linkify>{addressee.emailOrLink}</Linkify></div>
-
-              <h3>Adresas</h3>
-              <div><Linkify>{addressee.address}</Linkify></div>
-            </article>
-          );
-        })}
+                <h3>Adresas</h3>
+                <div>
+                  <Linkify>{addressee.address}</Linkify>
+                </div>
+              </Card>
+            );
+          })}
+        </CardList>
       </Constraint>
     </Layout>
   );

@@ -32,6 +32,8 @@ const Page = ({ data }) => {
               <Link to="/bukime-budrus/piliecio-atmintine">
                 Piliečio atmintinė
               </Link>
+            </li>
+            <li>
               <Link to="/bukime-budrus/patikima-informacija">
                 Patikima informacija
               </Link>

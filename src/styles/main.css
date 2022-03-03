@@ -24,19 +24,10 @@ h3,
 h4,
 h5,
 h6,
-p,
-article > div {
+p {
   max-width: 42em;
 }
 
 a {
   color: var(--c__primary);
-}
-
-article {
-  background: #fff;
-  border-radius: var(--s__main-border-radius);
-  margin: var(--s__main-padding) 0;
-  padding: var(--s__main-padding);
-  white-space: pre-line;
 }
