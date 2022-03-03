@@ -21,3 +21,5 @@ fields:
   config:
     required: false
   label: Vieta
+pages:
+- src/content/events/renginys-numeris-1.md
