@@ -25,5 +25,6 @@ fields:
     max: 
   label: Įrašai
 pages:
+- src/content/citizen-handbook/emocines-pagalbos-tarnybos.md
 - src/content/citizen-handbook/kaip-geriau-pasiruosti.md
 - src/content/citizen-handbook/kaip-nusiraminti.md
