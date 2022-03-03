@@ -25,6 +25,9 @@ contents:
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
   title: LKA Keliautojų klubo organizuojami Išgyvenimo kursai
   answer: https://lkakeliautojai.lt/isgyvenimo-kursai-4?fbclid=IwAR3LM-3qxSveNHbFPR2o0g7Mzu29RqZkBfWeWK2KfGZHssebRnrUjdFTPzY
+- template: klausimas-atsakymas-tekstas-paaiskinimas-etc
+  title: Ugniagesių gelbėtojų mokyklos informacija apie gaisrų gesinimą
+  answer: https://ugm.lrv.lt/lt/mokymai/mokymo-priemones-1/gaisras
 intro: Labai svarbu žinoti
 
 ---
