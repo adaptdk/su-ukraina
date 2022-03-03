@@ -8,6 +8,7 @@ const Page = () => {
     <Layout>
       <title>Kaip galiu padėti?</title>
       <Link to="aukojimas">Aukojimas</Link>
+      <Link to="savanoryste">Savanorystė</Link>
     </Layout>
   );
 };

@@ -12,7 +12,9 @@ const Footer = () => {
         <div className="Footer__cta-section">
           Kiekvienas veiksmas svarbus
           <Button to="/kaip-galiu-padeti/aukojimas">Noriu aukoti</Button>
-          <Button>Noriu tapti savanoriu</Button>
+          <Button to="/kaip-galiu-padeti/savanoryste">
+            Noriu tapti savanoriu
+          </Button>
         </div>
         <div className="Footer__credits">
           <div>2022 | Слава Україні!</div>

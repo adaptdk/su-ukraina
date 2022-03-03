@@ -14,7 +14,7 @@ const Page = ({ data }) => {
   return (
     <Layout>
       <Constraint>
-        <title>Aukojimas</title>
+        <title>Savanorystė</title>
 
         {organisations.map((organisation, i) => {
           return (
@@ -60,7 +60,7 @@ const Page = ({ data }) => {
 export const query = graphql`
   query {
     allFile(
-      filter: { sourceInstanceName: { eq: "orgs-for-donating" } }
+      filter: { sourceInstanceName: { eq: "orgs-for-volunteering" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {
