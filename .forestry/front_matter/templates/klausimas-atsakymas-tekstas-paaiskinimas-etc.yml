@@ -1,4 +1,9 @@
 ---
 label: Klausimas/atsakymas, Tekstas/paaiškinimas, etc
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Klausimas, tekstas, pavadinimas
