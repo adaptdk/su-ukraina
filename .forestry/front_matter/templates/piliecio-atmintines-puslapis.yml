@@ -1,4 +1,12 @@
 ---
 label: "„Piliečio atmintinės“ puslapis"
 hide_body: true
-fields: []
+fields:
+- name: contents
+  type: blocks
+  template_types:
+  - klausimas-atsakymas-tekstas-paaiskinimas-etc
+  config:
+    min: 
+    max: 
+  label: Įrašai
