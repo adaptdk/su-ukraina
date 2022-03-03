@@ -59,6 +59,20 @@ sections:
   match: "**/*"
   templates:
   - piliecio-atmintines-puslapis
+- type: directory
+  path: src/content/info-people
+  label: Patikima informacija (asmenybės)
+  create: documents
+  match: "**/*"
+  templates:
+  - patikima-informacija
+- type: directory
+  path: src/content/info-orgs
+  label: Patikima informacija (institucijos)
+  create: documents
+  match: "**/*"
+  templates:
+  - patikima-informacija
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
