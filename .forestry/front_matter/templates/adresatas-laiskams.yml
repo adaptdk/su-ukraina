@@ -16,7 +16,7 @@ fields:
     schema:
       format: markdown
   label: Klausimas, dėl kurio galimas kreiptis
-- name: email-or-link
+- name: emailOrLink
   type: text
   config:
     required: false
