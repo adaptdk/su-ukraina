@@ -1,0 +1,36 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f8f9ff;
+  color: #3e3e64;
+  padding: 2rem;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+article > div {
+  max-width: 42em;
+}
+
+article {
+  background: #fff;
+  box-shadow: 0 0 2rem #e5e7f2;
+  border-radius: 2rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  white-space: pre-line;
+}
