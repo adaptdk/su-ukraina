@@ -20,16 +20,16 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
+      <title>Savanorystė</title>
+
+      {!!content && (
+        <Constraint>
+          <h1>{content.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: content.html }} />
+        </Constraint>
+      )}
+
       <Constraint>
-        <title>Savanorystė</title>
-
-        {!!content && (
-          <Constraint>
-            {content.title}
-            <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          </Constraint>
-        )}
-
         {organisations.map((organisation, i) => {
           return (
             <article key={i}>

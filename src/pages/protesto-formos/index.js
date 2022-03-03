@@ -20,12 +20,14 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          {content.title}
+          <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </Constraint>
       )}
 
-      <Link to="akcijos">Akcijos</Link>
+      <Constraint>
+        <Link to="akcijos">Akcijos</Link>
+      </Constraint>
     </Layout>
   );
 };

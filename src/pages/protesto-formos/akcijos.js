@@ -22,16 +22,16 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
+      <title>Akcijos</title>
+
+      {!!content && (
+        <Constraint>
+          <h1>{content.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: content.html }} />
+        </Constraint>
+      )}
+
       <Constraint>
-        <title>Akcijos</title>
-
-        {!!content && (
-          <Constraint>
-            {content.title}
-            <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          </Constraint>
-        )}
-
         {initiatives.map((initiative, i) => {
           return (
             <article key={i}>
