@@ -26,6 +26,7 @@ fields:
 pages:
 - src/content/pages/apie-mus.md
 - src/content/pages/bukime-budrus/patikima-informacija.md
+- src/content/pages/bukime-budrus/piliecio-atmintine.md
 - src/content/pages/kaip-galiu-padeti.md
 - src/content/pages/kaip-galiu-padeti/aukojimas.md
 - src/content/pages/kaip-galiu-padeti/savanoryste.md
