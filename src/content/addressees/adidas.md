@@ -1,7 +1,7 @@
 ---
 type:
 - Įmonė
-title: Adidas
+title: "„Adidas“"
 purpose: Reginti nutraukti verslo operacijas Rusijoje, kol nebus sustabdytas Ukrainos
   puolimas ir atitraukta Rusijos armija iš Ukrainos teritorijos.
 emailOrLink: https://twitter.com/adidas
