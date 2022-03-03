@@ -22,6 +22,9 @@ contents:
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
   title: Išgyvenimo mokyklos organizuojami Išgyvenimo kursai
   answer: http://www.isgyvenimomokykla.lt
+- template: klausimas-atsakymas-tekstas-paaiskinimas-etc
+  title: LKA Keliautojų klubo organizuojami Išgyvenimo kursai
+  answer: https://lkakeliautojai.lt/isgyvenimo-kursai-4?fbclid=IwAR3LM-3qxSveNHbFPR2o0g7Mzu29RqZkBfWeWK2KfGZHssebRnrUjdFTPzY
 intro: Labai svarbu žinoti
 
 ---
