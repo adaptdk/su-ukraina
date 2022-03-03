@@ -1,4 +1,29 @@
 ---
 label: Patikima informacija
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Vardas/Pavadinimas
+- name: description
+  type: text
+  config:
+    required: false
+  label: Pareigos / Trumpas aprašymas
+- name: url
+  type: text
+  config:
+    required: false
+  label: Puslapis internete
+- name: facebook
+  type: text
+  config:
+    required: false
+  label: Facebook paskyra
+- name: twitter
+  type: text
+  config:
+    required: false
+  label: Twitter paskyra
