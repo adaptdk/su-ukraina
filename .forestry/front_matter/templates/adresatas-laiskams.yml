@@ -30,3 +30,8 @@ fields:
     schema:
       format: markdown
   label: Adresas
+- name: type
+  type: tag_list
+  default: []
+  label: Tipas
+  description: "(„Įmonė“, „Ambasada“)"
