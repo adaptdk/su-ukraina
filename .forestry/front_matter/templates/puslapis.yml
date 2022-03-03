@@ -25,6 +25,7 @@ fields:
   description: Tekstas nuorodoje -- parašytas kaip-nors-taip, nes nuoroda
 pages:
 - src/content/pages/apie-mus.md
+- src/content/pages/bukime-budrus.md
 - src/content/pages/bukime-budrus/patikima-informacija.md
 - src/content/pages/bukime-budrus/piliecio-atmintine.md
 - src/content/pages/kaip-galiu-padeti.md
