@@ -27,6 +27,16 @@ fields:
   config:
     required: false
   label: Twitter paskyra
+- name: weight
+  type: number
+  label: Svoris
+  description: Daugiau svorio – žemiau sąraše, mažiau – aukščiau
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 pages:
 - src/content/info-orgs/urm.md
 - src/content/info-people/vardas-zmogaus.md
