@@ -5,13 +5,6 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: src/content/organizacijos-savanorystei
-  label: Savanorystė
-  create: documents
-  match: "**/*"
-  templates:
-  - organizacija-savanorystei
-- type: directory
   path: src/content/pages
   label: Puslapiai
   create: documents
@@ -27,6 +20,13 @@ sections:
   match: "**/*"
   templates:
   - organizacija
+- type: directory
+  path: src/content/organizacijos-savanorystei
+  label: Savanorystė
+  create: documents
+  match: "**/*"
+  templates:
+  - organizacija-savanorystei
 - type: directory
   path: src/content/events
   label: Renginiai
