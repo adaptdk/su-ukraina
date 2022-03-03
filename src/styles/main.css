@@ -1,0 +1,42 @@
+@import "./_color";
+@import "./_spacing";
+@import "./_typography.css";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--c__main-bg);
+  color: var(--c__main-color);
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+article > div {
+  max-width: 42em;
+}
+
+a {
+  color: var(--c__primary);
+}
+
+article {
+  background: #fff;
+  border-radius: var(--s__main-border-radius);
+  margin: var(--s__main-padding) 0;
+  padding: var(--s__main-padding);
+  white-space: pre-line;
+}

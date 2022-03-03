@@ -1,0 +1,15 @@
+.Button,
+a.Button {
+  background: var(--c__secondary);
+  border: 0;
+  border-radius: var(--s__main-border-radius);
+  color: var(--c__primary);
+  display: inline-block;
+  font: inherit;
+  font-weight: var(--fw__medium);
+  line-height: inherit;
+  margin: 0;
+  padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 6);
+  text-decoration: none;
+  text-transform: uppercase;
+}

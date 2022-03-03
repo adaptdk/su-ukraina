@@ -1,0 +1,34 @@
+.Footer {
+  background: var(--c__footer-bg);
+  color: var(--c__footer-color);
+
+  a:not(.Button) {
+    color: inherit;
+  }
+
+  &__credits {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--s__main-padding) 0;
+  }
+
+  &__cta-section {
+    align-items: center;
+    display: flex;
+    gap: calc(var(--s__unit) * 2);
+    justify-content: center;
+    padding: var(--s__alt-padding) 0;
+    position: relative;
+
+    &::after {
+      background: var(--c__footer-color);
+      bottom: 0;
+      content: "";
+      height: 1px;
+      left: 0;
+      opacity: 0.1;
+      position: absolute;
+      width: 100%;
+    }
+  }
+}

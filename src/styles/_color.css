@@ -1,0 +1,20 @@
+:root {
+  --hue__ua-blue: 220deg;
+  --hue__ua-yellow: 50deg;
+
+  /* Do not use directly, only reference as other names */
+  --c__ua-blue: hsl(var(--hue__ua-blue) 84% 37%);
+  --c__ua-yellow: hsl(var(--hue__ua-yellow) 100% 50%);
+  --c__neutral-10: hsl(var(--hue__ua-blue) 100% 97%);
+  --c__neutral-black: hsl(var(--hue__ua-blue) 100% 12%);
+  --c__neutral-white: hsl(var(--hue__ua-blue) 100% 98%);
+
+  /* Use directly */
+  --c__primary: var(--c__ua-blue);
+  --c__secondary: var(--c__ua-yellow);
+  --c__main-bg: var(--c__neutral-white);
+  --c__main-color: var(--c__neutral-black);
+  --c__alt-bg: var(--c__neutral-10);
+  --c__footer-bg: var(--c__primary);
+  --c__footer-color: var(--c__neutral-white);
+}
