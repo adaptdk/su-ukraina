@@ -16,6 +16,9 @@ contents:
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
   title: Saugios kaimynystės vadovas
   answer: https://www.saugausavoturta.lt
+- template: klausimas-atsakymas-tekstas-paaiskinimas-etc
+  title: Išmanūs pirmosios pagalbos kursai
+  answer: https://www.svarbuszingsnis.lt
 intro: Labai svarbu žinoti
 
 ---
