@@ -1,0 +1,8 @@
+.ContactChipSections {
+  display: flex;
+  gap: var(--s__alt-padding);
+
+  > * {
+    flex: 1;
+  }
+}

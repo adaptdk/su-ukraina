@@ -1,8 +1,9 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Linkify from "react-linkify";
 
+import ContactChip from "../../components/ContactChip";
+import ContactChipSections from "../../components/ContactChipSections";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 
@@ -34,33 +35,40 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        <h2>Asmenybės</h2>
-        {infoPeople.map((person, i) => {
-          return (
-            <article key={i}>
-              <p>{person.title}</p>
-              <p>{person.description}</p>
-              <p>{person.url}</p>
-              <p>{person.twitter}</p>
-              <p>{person.facebook}</p>
-            </article>
-          );
-        })}
-      </Constraint>
-
-      <Constraint>
-        <h2>Institucijos</h2>
-        {infoOrgs.map((org, i) => {
-          return (
-            <article key={i}>
-              <p>{org.title}</p>
-              <p>{org.description}</p>
-              <p>{org.url}</p>
-              <p>{org.twitter}</p>
-              <p>{org.facebook}</p>
-            </article>
-          );
-        })}
+        <ContactChipSections>
+          <section>
+            <h2>Asmenybės</h2>
+            {infoPeople.map((person, i) => {
+              return (
+                <ContactChip
+                  description={person.description}
+                  url={person.url}
+                  facebookUrl={person.facebook}
+                  twitterUrl={person.twitter}
+                  key={i}
+                >
+                  {person.title}
+                </ContactChip>
+              );
+            })}
+          </section>
+          <section>
+            <h2>Institucijos</h2>
+            {infoOrgs.map((org, i) => {
+              return (
+                <ContactChip
+                  description={org.description}
+                  url={org.url}
+                  facebookUrl={org.facebook}
+                  twitterUrl={org.twitter}
+                  key={i}
+                >
+                  {org.title}
+                </ContactChip>
+              );
+            })}
+          </section>
+        </ContactChipSections>
       </Constraint>
     </Layout>
   );

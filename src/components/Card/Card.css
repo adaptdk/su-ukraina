@@ -19,7 +19,7 @@
   &__title {
     color: var(--c__primary);
     font-size: 1.25rem;
-    font-weight: var(--tw__medium);
+    font-weight: var(--fw__bold);
     margin: 0;
   }
 }
