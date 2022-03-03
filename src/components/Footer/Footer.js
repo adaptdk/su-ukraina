@@ -17,7 +17,9 @@ const Footer = () => {
           </Button>
         </div>
         <div className="Footer__credits">
-          <p>2022 | Слава Україні!</p>
+          <p>
+            2022 | <span title="Героям слава!">Слава Україні!</span>
+          </p>
           <p>
             Русский корабль, иди нахуй
             {` `}
@@ -31,7 +33,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              Adapt
+              „Adapt“
             </a>
             ,{` `}
             <a
@@ -39,7 +41,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              Laisvės TV
+              „Laisvės TV“
             </a>
           </p>
         </div>
