@@ -26,8 +26,16 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        <Link to="aukojimas">Aukojimas</Link>
-        <Link to="savanoryste">Savanorystė</Link>
+        <nav>
+          <ul>
+            <li>
+              <Link to="aukojimas">Aukojimas</Link>
+            </li>
+            <li>
+              <Link to="savanoryste">Savanorystė</Link>
+            </li>
+          </ul>
+        </nav>
       </Constraint>
     </Layout>
   );

@@ -1,2 +1,52 @@
+.fix? {
+  /* this is weird. styles are not loaded properly if this is missing */
+}
+
 .Header {
+  background: var(--c__main-bg);
+  position: sticky;
+  top: 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    > ul {
+      display: flex;
+      gap: var(--s__main-padding);
+      list-style: none;
+
+      > li {
+        position: relative;
+
+        > ul {
+          background: var(--c__main-bg);
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          transition: all 0.2s ease;
+          visibility: hidden;
+        }
+
+        &:hover > ul,
+        &:focus-within > ul,
+        > ul:hover,
+        > ul:focus {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    a {
+      display: inline-block;
+      padding: var(--s__unit);
+    }
+  }
 }

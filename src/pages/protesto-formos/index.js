@@ -26,7 +26,13 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        <Link to="akcijos">Akcijos</Link>
+        <nav>
+          <ul>
+            <li>
+              <Link to="akcijos">Akcijos</Link>
+            </li>
+          </ul>
+        </nav>
       </Constraint>
     </Layout>
   );

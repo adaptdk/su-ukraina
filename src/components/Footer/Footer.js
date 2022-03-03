@@ -17,8 +17,15 @@ const Footer = () => {
           </Button>
         </div>
         <div className="Footer__credits">
-          <div>2022 | Слава Україні!</div>
-          <div>
+          <p>2022 | Слава Україні!</p>
+          <p>
+            Русский корабль, иди нахуй
+            {` `}
+            <span role="img" aria-label="Ukrainos vėliava">
+              🇺🇦
+            </span>
+          </p>
+          <p>
             <a
               href="https://adaptagency.com/"
               rel="noopener noreferrer"
@@ -34,7 +41,7 @@ const Footer = () => {
             >
               Laisvės TV
             </a>
-          </div>
+          </p>
         </div>
       </Constraint>
     </footer>

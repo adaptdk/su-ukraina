@@ -8,21 +8,16 @@ import "./Header.css";
 const Header = () => {
   return (
     <header className="Header">
-      <Constraint>
+      <Constraint className="Header__content">
         <Link to="/">
-          <h1>Labas</h1>
+          <h1>SuUkraina.lt</h1>
         </Link>
-        <p>
-          Русский корабль, иди нахуй
-          {` `}
-          <span role="img" aria-label="Ukrainos vėliava">
-            🇺🇦
-          </span>
-        </p>
-        <nav>
+        <nav className="Header__nav" aria-label="Pagrindinė navigacija">
           <ul>
             <li>
-              <Link to="/kaip-galiu-padeti">Kaip galiu padėti?</Link>
+              <Link aria-haspopup="true" to="/kaip-galiu-padeti">
+                Kaip galiu padėti?
+              </Link>
               <ul>
                 <li>
                   <Link to="/kaip-galiu-padeti/aukojimas">Aukojimas</Link>
@@ -33,7 +28,9 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <Link to="/protesto-formos">Protesto formos</Link>
+              <Link aria-haspopup="true" to="/protesto-formos">
+                Protesto formos
+              </Link>
               <ul>
                 <li>
                   <Link to="/protesto-formos/akcijos">Akcijos</Link>
