@@ -7,7 +7,7 @@ sections:
 - type: directory
   path: src/content/pages
   label: Puslapiai
-  create: documents
+  create: all
   match: "**/*"
   templates:
   - puslapis
