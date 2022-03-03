@@ -35,6 +35,31 @@ const Header = () => {
                 <li>
                   <Link to="/protesto-formos/akcijos">Akcijos</Link>
                 </li>
+                <li>
+                  <Link to="/protesto-formos/renginiai">Renginiai</Link>
+                </li>
+                <li>
+                  <Link to="/protesto-formos/laisku-rasymas">
+                    Laiškų rašymas
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link aria-haspopup="true" to="/bukime-budrus">
+                Būkime budrūs
+              </Link>
+              <ul>
+                <li>
+                  <Link to="/bukime-budrus/piliecio-atmintine">
+                    Piliečio atmintinė
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/bukime-budrus/patikima-informacija">
+                    Patikima informacija
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>

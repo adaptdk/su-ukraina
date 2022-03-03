@@ -27,6 +27,41 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `events`,
+        path: `${__dirname}/src/content/events`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `addressees`,
+        path: `${__dirname}/src/content/addressees`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `citizen-handbooks`,
+        path: `${__dirname}/src/content/citizen-handbook`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `info-orgs`,
+        path: `${__dirname}/src/content/info-orgs`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `info-people`,
+        path: `${__dirname}/src/content/info-people`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `page-contents`,
         path: `${__dirname}/src/content/pages`,
       },

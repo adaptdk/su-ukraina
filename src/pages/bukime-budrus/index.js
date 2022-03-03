@@ -16,7 +16,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      <title>Protesto formos</title>
+      <title>Piliečio atmintinė</title>
 
       {!!content && (
         <Constraint>
@@ -29,13 +29,12 @@ const Page = ({ data }) => {
         <nav>
           <ul>
             <li>
-              <Link to="akcijos">Akcijos</Link>
-            </li>
-            <li>
-              <Link to="/protesto-formos/renginiai">Renginiai</Link>
-            </li>
-            <li>
-              <Link to="/protesto-formos/laisku-rasymas">Laiškų rašymas</Link>
+              <Link to="/bukime-budrus/piliecio-atmintine">
+                Piliečio atmintinė
+              </Link>
+              <Link to="/bukime-budrus/patikima-informacija">
+                Patikima informacija
+              </Link>
             </li>
           </ul>
         </nav>
@@ -49,7 +48,7 @@ export const query = graphql`
     contents: allFile(
       filter: {
         sourceInstanceName: { eq: "page-contents" }
-        absolutePath: { regex: "//src/content/pages/protesto-formos.md$/" }
+        absolutePath: { regex: "//src/content/pages/bukime-budrus.md$/" }
       }
     ) {
       edges {
