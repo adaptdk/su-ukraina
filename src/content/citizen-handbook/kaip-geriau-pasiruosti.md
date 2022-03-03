@@ -13,6 +13,9 @@ contents:
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
   title: Lietuvos policijos 8 žingsniai „Kaip sukurti saugios kaimynystės grupę?“
   answer: https://policija.lrv.lt/lt/veiklos-sritys/viesosios-tvarkos-ir-gyventoju-saugumo-uztikrinimas/saugi-kaimynyste/kaip-sukurti-saugios-kaimynystes-grupe
+- template: klausimas-atsakymas-tekstas-paaiskinimas-etc
+  title: Saugios kaimynystės vadovas
+  answer: https://www.saugausavoturta.lt
 intro: Labai svarbu žinoti
 
 ---
