@@ -10,5 +10,6 @@ forma:
 rekvizitai: Anketa:https://stipruskartu.lt/#anketa
 website: https://stipruskartu.lt
 weight: 10
+logo: "../uploads/image-10-4x.png"
 
 ---

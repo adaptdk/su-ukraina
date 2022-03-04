@@ -11,5 +11,6 @@ rekvizitai: '"https://ggi.lt/parama/VšĮ ""Gyvūnų gerovės iniciatyvos""LT897
   Swedbank"'
 website: https://ggi.lt
 weight: 9
+logo: "../uploads/image-17-4x.png"
 
 ---
