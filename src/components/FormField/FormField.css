@@ -1,0 +1,68 @@
+.FormField {
+  /* General */
+
+  + .FormField {
+    margin-top: calc(var(--s__unit) * 3);
+  }
+
+  label {
+    display: block;
+    margin-bottom: calc(var(--s__unit) * 1);
+  }
+
+  input,
+  textarea,
+  select
+   {
+    box-sizing: border-box;
+    border: 1px solid rgba(15, 71, 175, 0.1); 
+    border-radius: var(--s__main-border-radius);
+    padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 3);
+    background-color: var( --c__main-bg); 
+    width: 100%;
+    outline: 0;
+
+    &:focus {
+      border: 1px solid var(--c__primary);
+    }
+
+    &::placeholder {
+      /* Whatever */
+    }
+  }
+
+  /* Specific */
+  select {
+
+  }
+
+  /* Not sure ar butina */
+  &--type-checkbox {
+    input {
+      display: none;
+
+      &:checked {
+        + label {
+          &:before {
+            background-color: var(--c__secondary)
+          }
+        }
+      }
+    }
+
+    label {
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        background-color: var(--c__primary);
+        border-radius: var(--s__main-border-radius);
+        margin-right: calc(var(--s__unit) * 1);
+      }
+    }
+
+
+  }
+}

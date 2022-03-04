@@ -1,0 +1,8 @@
+.Section {
+  /* General */
+  
+  /* Modifiers */
+  &--bg-blue {
+    background-color: var(--c__form-bg);
+  }
+}
