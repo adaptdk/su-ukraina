@@ -36,6 +36,7 @@
     "preact-render-to-string": "^5.1.20",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-head": "^3.4.0",
     "react-linkify": "^1.0.0-alpha",
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0",

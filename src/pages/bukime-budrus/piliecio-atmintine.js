@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Linkify from "react-linkify";
+import { Title, Meta } from "react-head";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
@@ -23,14 +24,14 @@ const Page = ({ data }) => {
 
   return (
     <Layout pagePath="/bukime-budrus/piliecio-atmintine/">
-      <title>Piliečio atmintinė</title>
+      <Title>Piliečio atmintinė</Title>
 
       {!!content && (
         <Constraint>
           <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <meta name="description" content={content.excerpt} />
+          <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 

@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { Title, Meta } from "react-head";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
@@ -27,15 +28,15 @@ const Page = ({ data }) => {
 
   return (
     <Layout pagePath="/protesto-formos/renginiai/">
-      {(!content || !content.title) && <title>Renginiai</title>}
+      {(!content || !content.title) && <Title>Renginiai</Title>}
 
       {!!content && (
         <Constraint>
           <Breadcrumb crumbs={crumbs} />
-          <title>{content.title}</title>
+          <Title>{content.title}</Title>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <meta name="description" content={content.excerpt} />
+          <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 
@@ -45,11 +46,11 @@ const Page = ({ data }) => {
             return (
               <EventCard
                 key={i}
-                type={event.eventType} 
-                title={event.title} 
-                organizer={event.eventOrganizer} 
-                startDate={event.startDate} 
-                endDate={event.endDate} 
+                type={event.eventType}
+                title={event.title}
+                organizer={event.eventOrganizer}
+                startDate={event.startDate}
+                endDate={event.endDate}
                 location={event.location}
                 description={event.html}
                 url={event.eventUrl}
@@ -107,8 +108,6 @@ export const query = graphql`
     }
   }
 `;
-
-
 
 Page.propTypes = {
   data: PropTypes.shape({

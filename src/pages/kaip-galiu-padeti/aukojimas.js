@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Linkify from "react-linkify";
+import { Title, Meta } from "react-head";
 
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
@@ -26,14 +27,14 @@ const Page = ({ data }) => {
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/aukojimas/">
-      <title>Aukojimas</title>
+      <Title>Aukojimas</Title>
 
       {!!content && (
         <Constraint>
           <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <meta name="description" content={content.excerpt} />
+          <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 

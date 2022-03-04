@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
+import { Title, Meta } from "react-head";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
@@ -19,14 +20,14 @@ const Page = ({ data }) => {
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/">
-      <title>Kaip galiu padėti?</title>
+      <Title>Kaip galiu padėti?</Title>
 
       {!!content && (
         <Constraint>
           <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <meta name="description" content={content.excerpt} />
+          <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 
