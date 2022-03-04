@@ -18,6 +18,11 @@ import {
   TEXT_WANT_TO_VOLUNTEER,
 } from "../../constants/Footer";
 
+// SVGs.
+import SuUkrainaWhite from '../../images/logos/su-ukraina--white.svg';
+import Adapt from '../../images/logos/adapt.svg';
+import LaisvesTv from '../../images/logos/laisves-tv.svg';
+
 const Footer = () => {
   return (
     <footer className="Footer">
@@ -36,7 +41,13 @@ const Footer = () => {
           />
         </div>
         <div className="Footer__credits">
-          <p></p>
+          <p>
+            <img
+              className="Footer__logo"
+              src={SuUkrainaWhite}
+              alt="Su Ukraina poraštės logo"
+            />
+          </p>
           <p>
             <nav className="Footer__nav" aria-label="Poraštės navigacija">
               <ul className="Footer__menu">
@@ -60,31 +71,32 @@ const Footer = () => {
           </p>
         </div>
         <div className="Footer__credits">
-          <p>
+          <p className="Footer__slogan">
             2022 | <span title="Героям слава!">Слава Україні!</span>
           </p>
-          <p>
-            Русский корабль, иди нахуй
+          <p className="Footer__partners">
+            Prie puslapio prisidėjo:
             {` `}
-            <span role="img" aria-label="Ukrainos vėliava">
-              🇺🇦
-            </span>
-          </p>
-          <p>
             <a
               href="https://adaptagency.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              „Adapt“
+              <img
+                src={Adapt}
+                alt="Adapt LT logo"
+              />
             </a>
-            ,{` `}
+            {` `}
             <a
               href="https://laisves.tv"
               rel="noopener noreferrer"
               target="_blank"
             >
-              „Laisvės TV“
+              <img
+                src={LaisvesTv}
+                alt="Adapt LT logo"
+              />
             </a>
           </p>
         </div>

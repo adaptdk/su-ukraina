@@ -14,7 +14,16 @@
   &__credits {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: var(--s__main-padding) 0;
+  }
+
+  &__logo {
+    align-self: flex-start;
+  }
+
+  &__slogan {
+    font-size: 1.1rem;
   }
 
   &__cta-section {
@@ -51,5 +60,11 @@
     font-weight: var(--fw__small);
     text-align: right;
     list-style: none;
+  }
+
+  &__partners {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--s__unit) * 4);
   }
 }
