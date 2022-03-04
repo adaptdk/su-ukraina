@@ -1,0 +1,40 @@
+.ContactForm {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  padding: calc(var(--s__unit) * 4) 0;
+
+  @media (min-width: 700px) {
+    padding: calc(var(--s__unit) * 8) 0;
+  }
+
+  > div {
+    box-sizing: border-box;
+    width: 100%;
+
+    @media (min-width: 700px) {
+      width: 50%;
+    }
+  }
+
+  &__text {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(var(--s__unit) * 8);
+
+    @media (min-width: 700px) {
+      padding: calc(var(--s__unit) * 15);
+    }
+
+    h3 {
+      margin-bottom: calc(var(--s__unit) * 6);
+      margin-top: 0;
+    }
+  }
+
+  &__actions {
+    margin-top: calc(var(--s__unit) * 5);
+  }
+}
