@@ -1,0 +1,24 @@
+.CtaLink {
+  display: flex;
+
+  &__link {
+    color: var(--c__main-color);
+    text-decoration: none;
+    font-weight: var(--fw__medium);
+    font-size: 1.25rem;
+    display: flex;
+
+    &::after {
+      background: var(--c__primary);
+      content: "";
+      height: 32px;
+      mask-image: url("../../images/icon-arrow.svg");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: relative;
+      width: 32px;
+      margin-left: var(--s__main-padding);
+    }
+  }
+}
