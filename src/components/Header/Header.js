@@ -19,48 +19,48 @@ const Header = () => {
         <nav className="Header__nav" aria-label="Pagrindinė navigacija">
           <ul className="Header__menu">
             <li>
-              <Link aria-haspopup="true" to="/kaip-galiu-padeti">
+              <Link aria-haspopup="true" to="/kaip-galiu-padeti/">
                 Kaip galiu padėti?
               </Link>
               <ul>
                 <li>
-                  <Link to="/kaip-galiu-padeti/aukojimas">Aukojimas</Link>
+                  <Link to="/kaip-galiu-padeti/aukojimas/">Aukojimas</Link>
                 </li>
                 <li>
-                  <Link to="/kaip-galiu-padeti/savanoryste">Savanorystė</Link>
+                  <Link to="/kaip-galiu-padeti/savanoryste/">Savanorystė</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link aria-haspopup="true" to="/protesto-formos">
+              <Link aria-haspopup="true" to="/protesto-formos/">
                 Protesto formos
               </Link>
               <ul>
                 <li>
-                  <Link to="/protesto-formos/akcijos">Akcijos</Link>
+                  <Link to="/protesto-formos/akcijos/">Akcijos</Link>
                 </li>
                 <li>
-                  <Link to="/protesto-formos/renginiai">Renginiai</Link>
+                  <Link to="/protesto-formos/renginiai/">Renginiai</Link>
                 </li>
                 <li>
-                  <Link to="/protesto-formos/laisku-rasymas">
+                  <Link to="/protesto-formos/laisku-rasymas/">
                     Laiškų rašymas
                   </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link aria-haspopup="true" to="/bukime-budrus">
+              <Link aria-haspopup="true" to="/bukime-budrus/">
                 Būkime budrūs
               </Link>
               <ul>
                 <li>
-                  <Link to="/bukime-budrus/piliecio-atmintine">
+                  <Link to="/bukime-budrus/piliecio-atmintine/">
                     Piliečio atmintinė
                   </Link>
                 </li>
                 <li>
-                  <Link to="/bukime-budrus/patikima-informacija">
+                  <Link to="/bukime-budrus/patikima-informacija/">
                     Patikima informacija
                   </Link>
                 </li>
