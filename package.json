@@ -11,6 +11,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
+    "postbuild": "cp _headers public/_headers",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
