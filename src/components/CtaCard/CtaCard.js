@@ -9,9 +9,7 @@ const CtaCard = ({ children, title, iconHandle, link }) => {
     <div className="CtaCard">
         <Link to={link} title={title}>
           <div className="CtaCard__heading">
-            <div className={`CtaCard__icon CtaCard__icon--${iconHandle}`}>
-
-            </div>
+            <div className={`CtaCard__icon CtaCard__icon--${iconHandle}`}/>
             <h2 className="CtaCard__title">
               {title}
               </h2>
