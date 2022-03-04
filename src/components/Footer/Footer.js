@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 
 import Button from "../Button";
 import Constraint from "../Constraint";
@@ -15,6 +16,30 @@ const Footer = () => {
           <Button to="/kaip-galiu-padeti/savanoryste">
             Noriu tapti savanoriu
           </Button>
+        </div>
+        <div className="Footer__credits">
+          <p></p>
+          <p>
+            <nav className="Footer__nav" aria-label="Poraštės navigacija">
+              <ul className="Footer__menu">
+                <li>
+                  <Link to="/apie-mus/">
+                    Apie mus
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/privatumo-politika/">
+                    Privatumo politika
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/kontaktai/">
+                    Kontaktai
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </p>
         </div>
         <div className="Footer__credits">
           <p>
