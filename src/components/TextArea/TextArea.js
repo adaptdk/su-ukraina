@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import "./TextArea.css";
 
-const TextArea = ({ id, placeholder }) => {
-  return <textarea id={id} placeholder={placeholder}></textarea>;
+const TextArea = (props) => {
+  return <textarea {...props}></textarea>;
 };
 
 TextArea.propTypes = {

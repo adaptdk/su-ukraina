@@ -6,19 +6,19 @@ import "./Button.css";
 
 const CN = `Button`;
 
-const Button = ({ href, to, icon, text }) => {
+const Button = ({ icon, text, ...props }) => {
   let Tag = `button`;
 
-  if (href) {
+  if (props.href) {
     Tag = `a`;
   }
 
-  if (to) {
+  if (props.to) {
     Tag = Link;
   }
 
   return (
-    <Tag className={CN} href={href} to={to}>
+    <Tag className={CN} {...props}>
       {icon && <span className={`${CN}__icon ${CN}__icon--${icon}`} />}
       {text}
     </Tag>

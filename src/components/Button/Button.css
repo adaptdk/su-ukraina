@@ -9,7 +9,7 @@ a.Button {
   font: inherit;
   font-weight: var(--fw__medium);
   line-height: inherit;
-  margin: 0 10px;
+  margin: 0;
   padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 6);
   text-decoration: none;
   text-transform: uppercase;
@@ -31,16 +31,16 @@ a.Button {
 
     &--donate {
       &::before {
-        mask-image: url("../../images/icons/donate.svg");
         height: 20px;
+        mask-image: url("../../images/icons/donate.svg");
         width: 20px;
       }
     }
 
     &--volunteer {
       &::before {
-        mask-image: url("../../images/icons/volunteer.svg");
         height: 20px;
+        mask-image: url("../../images/icons/volunteer.svg");
         width: 20px;
       }
     }

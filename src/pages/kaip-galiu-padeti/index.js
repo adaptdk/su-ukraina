@@ -15,7 +15,7 @@ const Page = ({ data }) => {
   })[0];
 
   return (
-    <Layout>
+    <Layout pagePath="/kaip-galiu-padeti/">
       <title>Kaip galiu padėti?</title>
 
       {!!content && (

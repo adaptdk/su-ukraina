@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import "./EmailInput.css";
 
-const EmailInput = ({ id, placeholder }) => {
-  return <input type="email" id={id} placeholder={placeholder} />;
+const EmailInput = (props) => {
+  return <input type="email" {...props} />;
 };
 
 EmailInput.propTypes = {

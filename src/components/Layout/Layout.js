@@ -9,24 +9,23 @@ import Section from "../Section";
 
 import "./Layout.css";
 
-
 /*
       <html lang="lt" />
       */
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pagePath }) => {
   return (
     <div className="Layout">
       <Header />
-      
+
       <main>{children}</main>
 
       <Section bgColor="blue">
         <Constraint>
-          <ContactForm />
+          <ContactForm returnDestination={pagePath} />
         </Constraint>
       </Section>
-     
+
       <Footer />
     </div>
   );
@@ -34,6 +33,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node,
+  pagePath: PropTypes.string,
 };
 
 export default Layout;

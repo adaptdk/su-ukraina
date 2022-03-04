@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import "./SelectInput.css";
 
-const SelectInput = ({ id, children }) => {
-  return <select id={id}>{children}</select>;
+const SelectInput = (props) => {
+  return <select {...props} />;
 };
 
 SelectInput.propTypes = {

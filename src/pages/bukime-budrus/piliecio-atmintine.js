@@ -19,7 +19,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout>
+    <Layout pagePath="/bukime-budrus/piliecio-atmintine/">
       <title>Piliečio atmintinė</title>
 
       {!!content && (

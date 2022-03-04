@@ -24,7 +24,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout>
+    <Layout pagePath="/bukime-budrus/patikima-informacija/">
       <title>Patikima informacija</title>
 
       {!!content && (

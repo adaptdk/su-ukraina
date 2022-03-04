@@ -22,7 +22,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout>
+    <Layout pagePath="/kaip-galiu-padeti/savanoryste/">
       <title>Savanorystė</title>
 
       {!!content && (
