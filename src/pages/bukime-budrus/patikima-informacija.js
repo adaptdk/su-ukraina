@@ -36,8 +36,10 @@ const Page = ({ data }) => {
 
       <Constraint>
         <ContactChipSections>
-          <section>
-            <h2>Asmenybės</h2>
+          <details open>
+            <summary>
+              <h2>Asmenybės</h2>
+            </summary>
             {infoPeople.map((person, i) => {
               return (
                 <ContactChip
@@ -51,9 +53,11 @@ const Page = ({ data }) => {
                 </ContactChip>
               );
             })}
-          </section>
-          <section>
-            <h2>Institucijos</h2>
+          </details>
+          <details open>
+            <summary>
+              <h2>Institucijos</h2>
+            </summary>
             {infoOrgs.map((org, i) => {
               return (
                 <ContactChip
@@ -67,7 +71,7 @@ const Page = ({ data }) => {
                 </ContactChip>
               );
             })}
-          </section>
+          </details>
         </ContactChipSections>
       </Constraint>
     </Layout>
