@@ -1,41 +1,37 @@
 .ContactForm {
-  padding: calc(var(--s__unit) * 4) 0;
+  align-items: stretch;
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+  padding: calc(var(--s__unit) * 4) 0;
 
-  @media all and (min-width:700px) {
+  @media (min-width: 700px) {
     padding: calc(var(--s__unit) * 8) 0;
   }
 
-  > div {  
-    width: 100%; 
+  > div {
     box-sizing: border-box;
+    width: 100%;
 
-    @media all and (min-width:700px) {
+    @media (min-width: 700px) {
       width: 50%;
     }
   }
 
   &__text {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     padding: calc(var(--s__unit) * 8);
 
-    @media all and (min-width:700px) {
+    @media (min-width: 700px) {
       padding: calc(var(--s__unit) * 15);
     }
 
     h3 {
-      margin-top: 0;
       margin-bottom: calc(var(--s__unit) * 6);
+      margin-top: 0;
     }
-  }
-
-  &__form {
-
   }
 
   &__actions {

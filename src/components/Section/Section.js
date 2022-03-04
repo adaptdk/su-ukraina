@@ -5,9 +5,7 @@ import "./Section.css";
 
 const Section = ({ bgColor, children }) => {
   return (
-    <section className={`Section Section--bg-${bgColor}`}>
-      {children}
-    </section>
+    <section className={`Section Section--bg-${bgColor}`}>{children}</section>
   );
 };
 

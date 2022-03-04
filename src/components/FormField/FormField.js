@@ -6,7 +6,7 @@ import "./FormField.css";
 const FormField = ({ type, label, labelFor, children }) => {
   return (
     <div className={`FormField FormField--type-${type}`}>
-      <label for={labelFor}>{label}</label>
+      <label htmlFor={labelFor}>{label}</label>
       {children}
     </div>
   );

@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 import "./TextInput.css";
 
 const TextInput = ({ id, placeholder }) => {
-  return (
-    <input type="text" id={id} placeholder={placeholder}/>
-  );
+  return <input type="text" id={id} placeholder={placeholder} />;
 };
 
 TextInput.propTypes = {
