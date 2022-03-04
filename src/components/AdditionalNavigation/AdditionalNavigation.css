@@ -1,0 +1,36 @@
+.additional-navigation {
+    width: fit-content;
+
+    &__container {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        list-style-type: none;
+        display: flex;
+        margin-left: 25px;
+
+        &::after {
+            margin-left: 10px;
+            background: var(--c__primary);
+            content: "";
+            height: inherit;
+            mask-image: url("../../images/icon-arrow.svg");
+            mask-position: center;
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            position: relative;
+            width: 16px;
+        }
+    }
+
+    a {
+        color: var(--c__primary);
+        text-transform: uppercase;
+        text-decoration: inherit;
+        font-weight: 500;
+        font-size: 14px;
+    }
+}

@@ -7,10 +7,11 @@ import Card from "../../components/Card";
 import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
-import Breadcrumb from "../../components/Breadcrumbs";
+import NavigationGroup from "../../components/NavigationGroup";
 
 const Page = ({ data }) => {
   const crumbs = [`Darykite spaudimą`];
+  const additionalNavigation = [`Akcijos ir renginiai`, `Prekių boikotas`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -28,7 +29,10 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          <Breadcrumb crumbs={crumbs} />
+          <NavigationGroup
+            crumbs={crumbs}
+            additionalNav={additionalNavigation}
+          />
           <title>{content.title}</title>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
