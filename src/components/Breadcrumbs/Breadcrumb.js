@@ -14,7 +14,7 @@ const Breadcrumb = ({ crumbs }) => {
         {crumbs.map((crumb, index) => {
           return (
             <li key={index} className="breadcrumb__item">
-              <Link>{crumb}</Link>
+              <span>{crumb}</span>
             </li>
           );
         })}

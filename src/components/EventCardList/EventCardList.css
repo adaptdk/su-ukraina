@@ -1,0 +1,4 @@
+.EventCardList {
+  display: flex;
+  flex-wrap: wrap;
+}

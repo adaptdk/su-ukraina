@@ -1,0 +1,105 @@
+.EventCard {
+  align-items: flex-start;
+  background: #f9f9f9;
+  border-radius: var(--s__alt-border-radius);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 14px 10px;
+  max-width: 360px;
+  padding: 24px;
+  width: 100%;
+
+  &__content-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__event-type-wrapper {
+    background: #e7ecef;
+    border-radius: var(--s__main-border-radius);
+    margin-bottom: var(--s__unit);
+    padding: 12px;
+  }
+
+  &__event-type {
+    align-items: center;
+    color: var(--c__primary);
+    display: flex;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__event-title {
+    color: #262626;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: var(--fw__medium);
+    line-height: 29px;
+    margin: 0 0 2px;
+  }
+
+  &__event-organizer {
+    color: #262626;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: var(--fw__medium);
+    line-height: 22px;
+    margin: 0 0 12px;
+  }
+
+  &__event-info-wrapper {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+
+    &::before {
+      background: var(--c__primary);
+      content: "";
+      display: block;
+      height: 16px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: relative;
+      width: 16px;
+    }
+
+    &--calendar {
+      &::before {
+        mask-image: url("../../images/icons/calendar.svg");
+        width: 16px;
+      }
+    }
+
+    &--clock {
+      &::before {
+        mask-image: url("../../images/icons/clock.svg");
+        width: 16px;
+      }
+    }
+
+    &--location {
+      &::before {
+        mask-image: url("../../images/icons/location.svg");
+        width: 12px;
+      }
+    }
+  }
+
+  &__event-info-text {
+    margin: 0;
+  }
+}

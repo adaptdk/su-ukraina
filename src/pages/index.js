@@ -1,29 +1,41 @@
 import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import { Title } from "react-head";
+
 import Constraint from "../components/Constraint";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
-
 import Layout from "../components/Layout";
 import Section from "../components/Section";
-import { StaticImage } from "gatsby-plugin-image"
 import CtaCard from "../components/CtaCard";
 import CtaCardItem from "../components/CtaCard/CtaCardItem";
 
 const Page = () => {
   return (
     <Layout>
-      <title>Привіт!</title>
+      <Title>Привіт!</Title>
       <Section customClass="HeroSection">
         <StaticImage src="../images/hero-banner.jpg" alt="Su Ukraina!" />
-        <HeroBanner title="Su Ukraina iki pergalės!" subtitle="Tinklalapis skirtas sutelkti informaciją apie krizę Ukrainoje.">
+        <HeroBanner
+          title="Su Ukraina iki pergalės!"
+          subtitle="Tinklalapis skirtas sutelkti informaciją apie krizę Ukrainoje."
+        >
           <Constraint customClass="HeroBanner__inner">
-            <CtaCard title="Aukojimas" link="/kaip-galiu-padeti/aukojimas/" iconHandle="donate">
-              <CtaCardItem label="Lietuvoje"/>
-              <CtaCardItem label="Užsienyje"/>
+            <CtaCard
+              title="Aukojimas"
+              link="/kaip-galiu-padeti/aukojimas/"
+              iconHandle="donate"
+            >
+              <CtaCardItem label="Lietuvoje" />
+              <CtaCardItem label="Užsienyje" />
             </CtaCard>
-            <CtaCard title="Savanoriavimas" link="/kaip-galiu-padeti/savanoryste/" iconHandle="volunteer">
-              <CtaCardItem label="Apgyvendinimas"/>
-              <CtaCardItem label="Pavežėjimas"/>
-              <CtaCardItem label="Pagalba gyūnams"/>
+            <CtaCard
+              title="Savanoriavimas"
+              link="/kaip-galiu-padeti/savanoryste/"
+              iconHandle="volunteer"
+            >
+              <CtaCardItem label="Apgyvendinimas" />
+              <CtaCardItem label="Pavežėjimas" />
+              <CtaCardItem label="Pagalba gyūnams" />
             </CtaCard>
           </Constraint>
         </HeroBanner>

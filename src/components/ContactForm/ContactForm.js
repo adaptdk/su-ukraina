@@ -49,12 +49,12 @@ const ContactForm = ({ returnDestination = `/` }) => {
           </FormField>
 
           <div className="form-field form-field--type-checkbox">
-            <input
-              type="checkbox"
-              id="privacy-policy-accepted"
-              name="privacy-policy-accepted"
-            />
             <label htmlFor="privacy-policy-accepted" tabIndex="0">
+              <input
+                type="checkbox"
+                id="privacy-policy-accepted"
+                name="privacy-policy-accepted"
+              />
               Susipažinau ir sutinku su{` `}
               <a href="#" title="Privatumo politika">
                 privatumo politika
