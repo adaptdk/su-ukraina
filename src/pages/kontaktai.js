@@ -4,8 +4,10 @@ import { graphql } from "gatsby";
 
 import Constraint from "../components/Constraint";
 import ContentLayout from "../components/ContentLayout";
+import Breadcrumb from "../components/Breadcrumbs";
 
 const Page = ({ data }) => {
+  const crumbs = [`Kontaktai`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -15,10 +17,11 @@ const Page = ({ data }) => {
 
   return (
     <ContentLayout pagePath="/apie-mus/">
-      <title>Piliečio atmintinė</title>
+      <title>Kontaktai</title>
 
       {!!content && (
         <Constraint>
+          <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </Constraint>
