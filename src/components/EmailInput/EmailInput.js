@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 import "./EmailInput.css";
 
 const EmailInput = ({ id, placeholder }) => {
-  return (
-    <input type="email" id={id} placeholder={placeholder}/>
-  );
+  return <input type="email" id={id} placeholder={placeholder} />;
 };
 
 EmailInput.propTypes = {
