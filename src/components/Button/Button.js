@@ -4,28 +4,32 @@ import { Link } from "gatsby";
 
 import "./Button.css";
 
-const Button = ({ children, href, to }) => {
+const CN = `Button`;
+
+const Button = ({ icon, text, ...props }) => {
   let Tag = `button`;
 
-  if (href) {
+  if (props.href) {
     Tag = `a`;
   }
 
-  if (to) {
+  if (props.to) {
     Tag = Link;
   }
 
   return (
-    <Tag className="Button" href={href} to={to}>
-      {children}
+    <Tag className={CN} {...props}>
+      {icon && <span className={`${CN}__icon ${CN}__icon--${icon}`} />}
+      {text}
     </Tag>
   );
 };
 
 Button.propTypes = {
-  children: PropTypes.node,
   href: PropTypes.string,
   to: PropTypes.string,
+  icon: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default Button;

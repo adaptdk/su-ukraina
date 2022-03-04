@@ -9,5 +9,6 @@ forma:
 rekvizitai: 'Parama: https://unicef.lt/paaukok-vaikams-2/'
 website: https://unicef.lt
 weight: 5
+logo: "../uploads/image-9-4x.png"
 
 ---

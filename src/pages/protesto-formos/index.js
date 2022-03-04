@@ -15,7 +15,7 @@ const Page = ({ data }) => {
   })[0];
 
   return (
-    <Layout>
+    <Layout pagePath="/protesto-formos/">
       <title>Protesto formos</title>
 
       {!!content && (

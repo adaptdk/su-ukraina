@@ -15,7 +15,7 @@ const Page = ({ data }) => {
   })[0];
 
   return (
-    <Layout>
+    <Layout pagePath="/bukime-budrus/">
       <title>Piliečio atmintinė</title>
 
       {!!content && (

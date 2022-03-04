@@ -21,7 +21,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout>
+    <Layout pagePath="/protesto-formos/laisku-rasymas/">
       {(!content || !content.title) && <title>Laiškų rašymas</title>}
 
       {!!content && (

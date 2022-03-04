@@ -1,9 +1,21 @@
 import * as React from "react";
 
+// Styles.
+import "./Footer.css";
+
+// Components.
 import Button from "../Button";
 import Constraint from "../Constraint";
 
-import "./Footer.css";
+// Constants.
+import {
+  PATH_HOW_TO_DONATE,
+  PATH_HOW_TO_VOLUNTEER,
+  ICON_DONATE,
+  ICON_VOLUNTEER,
+  TEXT_WANT_TO_DONATE,
+  TEXT_WANT_TO_VOLUNTEER,
+} from "../../constants/Footer";
 
 const Footer = () => {
   return (
@@ -11,10 +23,16 @@ const Footer = () => {
       <Constraint>
         <div className="Footer__cta-section">
           Kiekvienas veiksmas svarbus
-          <Button to="/kaip-galiu-padeti/aukojimas">Noriu aukoti</Button>
-          <Button to="/kaip-galiu-padeti/savanoryste">
-            Noriu tapti savanoriu
-          </Button>
+          <Button
+            to={PATH_HOW_TO_DONATE}
+            icon={ICON_DONATE}
+            text={TEXT_WANT_TO_DONATE}
+          />
+          <Button
+            to={PATH_HOW_TO_VOLUNTEER}
+            icon={ICON_VOLUNTEER}
+            text={TEXT_WANT_TO_VOLUNTEER}
+          />
         </div>
         <div className="Footer__credits">
           <p>

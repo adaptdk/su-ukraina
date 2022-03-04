@@ -1,10 +1,11 @@
 .Button,
 a.Button {
+  align-items: center;
   background: var(--c__secondary);
   border: 0;
   border-radius: var(--s__main-border-radius);
   color: var(--c__primary);
-  display: inline-block;
+  display: flex;
   font: inherit;
   font-weight: var(--fw__medium);
   line-height: inherit;
@@ -12,4 +13,36 @@ a.Button {
   padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 6);
   text-decoration: none;
   text-transform: uppercase;
+
+  &__icon {
+    margin-right: 10px;
+
+    &::before {
+      background: #0f47af;
+      content: "";
+      display: block;
+      height: 16px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      position: relative;
+      width: 16px;
+    }
+
+    &--donate {
+      &::before {
+        height: 20px;
+        mask-image: url("../../images/icons/donate.svg");
+        width: 20px;
+      }
+    }
+
+    &--volunteer {
+      &::before {
+        height: 20px;
+        mask-image: url("../../images/icons/volunteer.svg");
+        width: 20px;
+      }
+    }
+  }
 }

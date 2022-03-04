@@ -23,7 +23,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout>
+    <Layout pagePath="/protesto-formos/akcijos/">
       <title>Akcijos</title>
 
       {!!content && (
