@@ -1,0 +1,117 @@
+.ContactForm {
+  background-color: var(--c__form-bg);
+  padding: calc(var(--s__unit) * 4) 0;
+
+  @media all and (min-width:700px) {
+    padding: calc(var(--s__unit) * 8) 0;
+  }
+
+  .Constraint {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    > div {  
+      width: 100%; 
+      box-sizing: border-box;
+
+      @media all and (min-width:700px) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(var(--s__unit) * 8);
+
+    @media all and (min-width:700px) {
+      padding: calc(var(--s__unit) * 15);
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: calc(var(--s__unit) * 6);
+    }
+  }
+
+  &__form {
+
+  }
+
+  &__actions {
+    margin-top: calc(var(--s__unit) * 5);
+  }
+}
+
+.form-field {
+  /* General */
+
+  + .form-field {
+    margin-top: calc(var(--s__unit) * 3);
+  }
+
+  label {
+    display: block;
+    margin-bottom: calc(var(--s__unit) * 1);
+  }
+
+  input,
+  textarea,
+  select
+   {
+    box-sizing: border-box;
+    border: 1px solid rgba(15, 71, 175, 0.1); 
+    border-radius: var(--s__main-border-radius);
+    padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 3);
+    background-color: var( --c__main-bg); 
+    width: 100%;
+    outline: 0;
+
+    &:focus {
+      border: 1px solid var(--c__primary);
+    }
+
+    &::placeholder {
+      /* Whatever */
+    }
+  }
+
+  /* Specific */
+  select {
+
+  }
+
+  /* Not sure ar butina */
+  &--type-checkbox {
+    input {
+      display: none;
+
+      &:checked {
+        + label {
+          &:before {
+            background-color: var(--c__secondary)
+          }
+        }
+      }
+    }
+
+    label {
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        background-color: var(--c__primary);
+        border-radius: var(--s__main-border-radius);
+        margin-right: calc(var(--s__unit) * 1);
+      }
+    }
+
+
+  }
+}
