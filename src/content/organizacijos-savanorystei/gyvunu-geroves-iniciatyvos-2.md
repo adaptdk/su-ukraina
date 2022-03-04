@@ -9,5 +9,6 @@ forma:
 rekvizitai: 'Registracija dėl gyvūnų priglaudimo / transportavimo: https://bit.ly/UkrainosGyvūnai'
 website: https://ggi.lt
 weight: 13
+logo: "../uploads/image-17-4x.png"
 
 ---
