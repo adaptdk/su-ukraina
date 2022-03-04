@@ -12,8 +12,12 @@ const Header = () => {
         <Link to="/">
           <h1>SuUkraina.lt</h1>
         </Link>
+        <input type="checkbox" name="menu-sensor" id="menu-sensor" />
+        <label className="Header__menu-trigger" htmlFor="menu-sensor">
+          ☰
+        </label>
         <nav className="Header__nav" aria-label="Pagrindinė navigacija">
-          <ul>
+          <ul className="Header__menu">
             <li>
               <Link aria-haspopup="true" to="/kaip-galiu-padeti">
                 Kaip galiu padėti?
