@@ -10,6 +10,7 @@ import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
+  const crumbs = [`Darykite spaudimą`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -27,7 +28,7 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          <Breadcrumb crumbs={[`Darykite spaudimą`]} />
+          <Breadcrumb crumbs={crumbs} />
           <title>{content.title}</title>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
