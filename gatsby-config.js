@@ -66,8 +66,27 @@ module.exports = {
         path: `${__dirname}/src/content/pages`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/src/content/uploads`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `avif`],
+          placeholder: `dominantColor`,
+          quality: 80,
+        },
+      },
+    },
+    `gatsby-transformer-sharp`,
   ],
 };

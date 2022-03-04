@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Linkify from "react-linkify";
 
 import Card from "../../components/Card";
@@ -36,8 +37,14 @@ const Page = ({ data }) => {
       <Constraint>
         <CardList>
           {organisations.map((organisation, i) => {
+            const logo = organisation.logo && (
+              <GatsbyImage
+                image={getImage(organisation.logo)}
+                alt={organisation.title}
+              />
+            );
             return (
-              <Card title={organisation.title} key={i}>
+              <Card title={organisation.title} logo={logo} key={i}>
                 <h3>Paskirtis</h3>
                 <div>
                   <Linkify>{organisation.cause}</Linkify>
@@ -110,6 +117,11 @@ export const query = graphql`
               rekvizitai
               title
               website
+              logo {
+                childImageSharp {
+                  gatsbyImageData(height: 30)
+                }
+              }
             }
           }
         }
@@ -146,6 +158,7 @@ Page.propTypes = {
                 rekvizitai: PropTypes.string,
                 title: PropTypes.string,
                 website: PropTypes.string,
+                logo: PropTypes.object,
               }),
             }),
           }),
