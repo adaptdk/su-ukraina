@@ -1,10 +1,11 @@
 .Button,
 a.Button {
+  align-items: center;
   background: var(--c__secondary);
   border: 0;
   border-radius: var(--s__main-border-radius);
   color: var(--c__primary);
-  display: inline-block;
+  display: flex;
   font: inherit;
   font-weight: var(--fw__medium);
   line-height: inherit;
@@ -12,4 +13,8 @@ a.Button {
   padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 6);
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.Button > img {
+  margin-right: calc(var(--s__unit) * 4);
 }

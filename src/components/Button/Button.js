@@ -4,7 +4,9 @@ import { Link } from "gatsby";
 
 import "./Button.css";
 
-const Button = ({ children, href, to }) => {
+const CN = `Button`;
+
+const Button = ({ href, to, icon, text }) => {
   let Tag = `button`;
 
   if (href) {
@@ -16,16 +18,18 @@ const Button = ({ children, href, to }) => {
   }
 
   return (
-    <Tag className="Button" href={href} to={to}>
-      {children}
+    <Tag className={CN} href={href} to={to}>
+      {icon && <img src={`../../images/icons/${icon}.svg`} />}
+      {text}
     </Tag>
   );
 };
 
 Button.propTypes = {
-  children: PropTypes.node,
   href: PropTypes.string,
   to: PropTypes.string,
+  icon: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default Button;
