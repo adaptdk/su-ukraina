@@ -35,7 +35,7 @@ const Page = ({ data }) => {
         <CardList>
           {organisations.map((organisation, i) => {
             return (
-              <Card title={organisation.title} key={i}>
+              <Card title={organisation.title} logo={organisation.logo} key={i}>
                 <h3>Paskirtis</h3>
                 <div>
                   <Linkify>{organisation.cause}</Linkify>
@@ -108,6 +108,7 @@ export const query = graphql`
               rekvizitai
               title
               website
+              logo
             }
           }
         }
@@ -144,6 +145,7 @@ Page.propTypes = {
                 rekvizitai: PropTypes.string,
                 title: PropTypes.string,
                 website: PropTypes.string,
+                logo: PropTypes.string,
               }),
             }),
           }),
