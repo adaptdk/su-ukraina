@@ -21,6 +21,7 @@
     "es5-ext": "^0.10.53",
     "gatsby": "^4.9.1",
     "gatsby-plugin-image": "^2.9.0",
+    "gatsby-plugin-manifest": "^4.9.0",
     "gatsby-plugin-postcss": "^5.9.0",
     "gatsby-plugin-preact": "^6.9.0",
     "gatsby-plugin-sharp": "^4.9.0",

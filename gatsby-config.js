@@ -88,5 +88,17 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `SuUkraina.lt`,
+        short_name: `SuUkraina.lt`,
+        start_url: `/`,
+        background_color: `#0F47AF`,
+        theme_color: `#FFD500`,
+        display: `standalone`,
+        icon: `src/images/main-icon.png`,
+      },
+    },
   ],
 };
