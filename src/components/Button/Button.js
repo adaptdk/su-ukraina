@@ -19,7 +19,7 @@ const Button = ({ href, to, icon, text }) => {
 
   return (
     <Tag className={CN} href={href} to={to}>
-      {icon && <img src={`../../images/icons/${icon}.svg`} />}
+      {icon && <span className={`${CN}__icon ${CN}__icon--${icon}`} />}
       {text}
     </Tag>
   );

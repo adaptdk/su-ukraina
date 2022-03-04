@@ -9,12 +9,40 @@ a.Button {
   font: inherit;
   font-weight: var(--fw__medium);
   line-height: inherit;
-  margin: 0;
+  margin: 0 10px;
   padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 6);
   text-decoration: none;
   text-transform: uppercase;
-}
 
-.Button > img {
-  margin-right: calc(var(--s__unit) * 4);
+  &__icon {
+    margin-right: 10px;
+
+    &::before {
+      background: #0f47af;
+      content: "";
+      display: block;
+      height: 16px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      position: relative;
+      width: 16px;
+    }
+
+    &--donate {
+      &::before {
+        mask-image: url("../../images/icons/donate.svg");
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    &--volunteer {
+      &::before {
+        mask-image: url("../../images/icons/volunteer.svg");
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
 }
