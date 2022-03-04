@@ -29,13 +29,13 @@ const Page = ({ data }) => {
         <nav>
           <ul>
             <li>
-              <Link to="akcijos">Akcijos</Link>
+              <Link to="/protesto-formos/akcijos/">Akcijos</Link>
             </li>
             <li>
-              <Link to="/protesto-formos/renginiai">Renginiai</Link>
+              <Link to="/protesto-formos/renginiai/">Renginiai</Link>
             </li>
             <li>
-              <Link to="/protesto-formos/laisku-rasymas">Laiškų rašymas</Link>
+              <Link to="/protesto-formos/laisku-rasymas/">Laiškų rašymas</Link>
             </li>
           </ul>
         </nav>
