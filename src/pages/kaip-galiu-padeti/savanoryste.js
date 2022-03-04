@@ -16,6 +16,7 @@ const Page = ({ data }) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
       html: edge.node.childMarkdownRemark.html,
+      excerpt: edge.node.childMarkdownRemark.excerpt,
     };
   })[0];
 
@@ -32,6 +33,7 @@ const Page = ({ data }) => {
           <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
+          <meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 
@@ -100,6 +102,7 @@ export const query = graphql`
               title
             }
             html
+            excerpt(format: PLAIN, pruneLength: 160)
           }
         }
       }
@@ -143,6 +146,7 @@ Page.propTypes = {
               }),
             }),
             html: PropTypes.string,
+            excerpt: PropTypes.string,
           }),
         })
       ),
