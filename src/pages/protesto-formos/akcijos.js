@@ -6,6 +6,7 @@ import Card from "../../components/Card";
 import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
+import Breadcrumb from "../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
   const content = data.contents.edges.map((edge) => {
@@ -28,6 +29,7 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
+          <Breadcrumb crumbs={[`Titulinis`, `Akcijos ir renginiai`]} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </Constraint>
