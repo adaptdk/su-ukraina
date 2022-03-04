@@ -1,0 +1,54 @@
+.HeroSection {
+  position: relative;
+
+  .gatsby-image-wrapper {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+    &::after {
+      background: rgb(15 71 175 / 50%);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+.HeroBanner {
+  &__content {
+    margin-bottom: calc(var(--s__unit) * 10);
+    position: relative;
+    z-index: 10;
+  }
+
+  &__text {
+    color: white;
+    margin-bottom: calc(var(--s__unit) * 20);
+    position: relative;
+    text-align: center;
+    z-index: 10;
+
+    h1 {
+      font-size: 60px;
+      font-weight: var(--fw__medium);
+    }
+
+    p {
+      font-size: 24px;
+      margin: 0 auto;
+    }
+  }
+
+  .Constraint {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

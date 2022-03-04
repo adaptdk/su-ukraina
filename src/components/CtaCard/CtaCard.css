@@ -1,0 +1,88 @@
+.CtaCard {
+  background: var(--c__card-bg);
+  border-radius: var(--s__alt-border-radius);
+  box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
+  box-sizing: border-box;
+  margin: var(--s__main-padding) 0;
+  overflow: hidden;
+  width: 100%;
+
+  @media (min-width: 700px) {
+    width: 49%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__body {
+    padding: var(--s__main-padding);
+    white-space: pre-line;
+    word-break: break-word;
+  }
+
+  &__heading {
+    background: var(--c__secondary);
+    border-bottom: 1px solid hsl(240deg 30% 92%);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--s__main-padding);
+  }
+
+  &__icon {
+    &::before {
+      background: var(--c__primary);
+      content: "";
+      display: block;
+      height: 40px;
+      margin-right: calc(var(--s__unit) * 4);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: relative;
+      width: 40px;
+    }
+
+    &--volunteer {
+      &::before {
+        mask-image: url("../../images/icon-volunteer.svg");
+        width: 40px;
+      }
+    }
+
+    &--donate {
+      &::before {
+        mask-image: url("../../images/icon-donate.svg");
+        width: 40px;
+      }
+    }
+  }
+
+  &__title {
+    align-items: center;
+    color: var(--c__primary);
+    display: flex;
+    flex: 1 auto;
+    font-size: 1.5em;
+    font-weight: var(--fw__bold);
+    justify-content: space-between;
+    margin: 0;
+
+    &::after {
+      background: var(--c__primary);
+      content: "";
+      height: 32px;
+      mask-image: url("../../images/icon-arrow.svg");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: relative;
+      width: 32px;
+    }
+  }
+}
+
+.CtaCardItem {
+  font-size: 1.25rem;
+  padding: calc(var(--s__unit) * 4) 0;
+}

@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       <Section bgColor="blue">
-        <Constraint>
+        <Constraint className="Constraint--narrow">
           <ContactForm />
         </Constraint>
       </Section>

@@ -3,14 +3,15 @@ import PropTypes from "prop-types";
 
 import "./Section.css";
 
-const Section = ({ bgColor, children }) => {
+const Section = ({ customClass, bgColor, children }) => {
   return (
-    <section className={`Section Section--bg-${bgColor}`}>{children}</section>
+    <section className={`Section Section--bg-${bgColor} ${customClass}`}>{children}</section>
   );
 };
 
 Section.propTypes = {
   bgColor: PropTypes.node,
+  customClass: PropTypes.node,
   children: PropTypes.node,
 };
 
