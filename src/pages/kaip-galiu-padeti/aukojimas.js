@@ -21,8 +21,6 @@ const Page = ({ data }) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
 
-  console.log(`ORGS`, organisations);
-
   return (
     <Layout>
       <title>Aukojimas</title>

@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import "./Card.css";
 
 const Card = ({ children, title, logo }) => {
-  console.log(`CARD`, logo);
   return (
     <article className="Card">
       <div className="Card__heading">
