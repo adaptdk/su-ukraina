@@ -18,7 +18,7 @@ const Card = ({ children, title, logo }) => {
 Card.propTypes = {
   children: PropTypes.node,
   title: PropTypes.node,
-  logo: PropTypes.any,
+  logo: PropTypes.node,
 };
 
 export default Card;

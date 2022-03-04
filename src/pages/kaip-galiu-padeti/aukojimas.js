@@ -156,7 +156,7 @@ Page.propTypes = {
                 rekvizitai: PropTypes.string,
                 title: PropTypes.string,
                 website: PropTypes.string,
-                logo: PropTypes.any,
+                logo: PropTypes.object,
               }),
             }),
           }),
