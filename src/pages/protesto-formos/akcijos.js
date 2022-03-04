@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { Title, Meta } from "react-head";
 
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
@@ -14,6 +15,7 @@ const Page = ({ data }) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
       html: edge.node.childMarkdownRemark.html,
+      excerpt: edge.node.childMarkdownRemark.excerpt,
     };
   })[0];
 
@@ -26,13 +28,14 @@ const Page = ({ data }) => {
 
   return (
     <Layout pagePath="/protesto-formos/akcijos/">
-      <title>Akcijos</title>
+      <Title>Akcijos</Title>
 
       {!!content && (
         <Constraint>
           <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
+          <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 
@@ -68,6 +71,7 @@ export const query = graphql`
               title
             }
             html
+            excerpt(format: PLAIN, pruneLength: 160)
           }
         }
       }
@@ -102,6 +106,7 @@ Page.propTypes = {
               }),
             }),
             html: PropTypes.string,
+            excerpt: PropTypes.string,
           }),
         })
       ),

@@ -25,14 +25,14 @@ fields:
   description: Tekstas nuorodoje -- parašytas kaip-nors-taip, nes nuoroda
 pages:
 - src/content/pages/apie-mus.md
-- src/content/pages/kontaktai.md
-- src/content/pages/privatumo-politika.md
 - src/content/pages/bukime-budrus.md
 - src/content/pages/bukime-budrus/patikima-informacija.md
 - src/content/pages/bukime-budrus/piliecio-atmintine.md
 - src/content/pages/kaip-galiu-padeti.md
 - src/content/pages/kaip-galiu-padeti/aukojimas.md
 - src/content/pages/kaip-galiu-padeti/savanoryste.md
+- src/content/pages/kontaktai.md
+- src/content/pages/privatumo-politika.md
 - src/content/pages/protesto-formos.md
 - src/content/pages/protesto-formos/laisku-rasymas.md
 - src/content/pages/protesto-formos/renginiai.md

@@ -7,9 +7,9 @@ fields:
   config:
     required: false
   label: Pavadinimas
-- name: date
+- name: startDate
   type: datetime
-  label: Data
+  label: Renginio pradžia
   description: ''
   config:
     required: false
@@ -21,5 +21,32 @@ fields:
   config:
     required: false
   label: Vieta
+- name: endDate
+  type: datetime
+  label: Renginio pabaiga
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: eventType
+  type: text
+  config:
+    required: false
+  label: Renginio tipas
+  description: 'pavyzdžiai: Protestas, Paramos renginys, Paramos koncertas ir t.t...'
+- name: eventOrganizer
+  type: text
+  config:
+    required: false
+  label: Renginio Organizatorius
+- name: eventUrl
+  type: text
+  config:
+    required: false
+  label: Renginio tiklalapis
 pages:
 - src/content/events/renginys-numeris-1.md
+- src/content/events/renginys-numeris-2.md
+- src/content/events/renginys-numeris-3.md

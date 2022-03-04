@@ -12,7 +12,6 @@ import "./Layout.css";
 const Layout = ({ children, pagePath }) => {
   return (
     <div className="Layout">
-      <html lang="lt" />
       <Header />
 
       <main>{children}</main>
