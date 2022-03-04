@@ -29,7 +29,7 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          <Breadcrumb crumbs={[`Titulinis`, `Akcijos ir renginiai`]} />
+          <Breadcrumb crumbs={[`Akcijos ir renginiai`]} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </Constraint>

@@ -1,39 +1,30 @@
 import React from "react";
-import { navigate } from "gatsby";
 import PropTypes from "prop-types";
+import { Link } from "gatsby";
 
 import "./Breadcrumb.css";
 
 const Breadcrumb = ({ crumbs }) => {
-  const handleSelected = (selectedCrumb) => {
-    if (selectedCrumb === `Titulinis`) {
-      navigate(`/`);
-    }
-  };
-
   return (
-    <nav className="Breadcrumb">
-      <ul className="Breadcrumb__container">
+    <nav className="breadcrumb">
+      <ol className="breadcrumb__container">
+        <li className="breadcrumb__item">
+          <Link to="/">Titulinis</Link>
+        </li>
         {crumbs.map((crumb, index) => {
           return (
-            <li key={index} className="Breadcrumb__container--crumb">
-              <button
-                onClick={() => {
-                  handleSelected(crumb);
-                }}
-              >
-                {crumb}
-              </button>
+            <li key={index} className="breadcrumb__item">
+              <Link>{crumb}</Link>
             </li>
           );
         })}
-      </ul>
+      </ol>
     </nav>
   );
 };
 
 Breadcrumb.propTypes = {
-  crumbs: PropTypes.array,
+  crumbs: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Breadcrumb;
