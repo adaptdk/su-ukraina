@@ -10,19 +10,25 @@
     &__item {
         list-style-type: none;
         display: flex;
-        margin-left: 25px;
+        flex-wrap: wrap;
+        &:not(:first-child) {
+            margin-left: 25px;
+        }
 
         &::after {
-            margin-left: 10px;
+            margin-left: 20px;
             background: var(--c__primary);
             content: "";
-            height: inherit;
             mask-image: url("../../images/icon-arrow.svg");
             mask-position: center;
             mask-repeat: no-repeat;
             mask-size: cover;
             position: relative;
+            height: 16px;
             width: 16px;
+            top: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 

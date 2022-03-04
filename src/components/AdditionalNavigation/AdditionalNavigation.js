@@ -18,6 +18,8 @@ const handlePath = (additionalNavigationText) => {
       return `/protesto-formos/akcijos/`;
     case `patikima informacija`:
       return `/bukime-budrus/patikima-informacija/`;
+    case `piliečio atmintinė`:
+      return `/bukime-budrus/piliecio-atmintine/`;
     case `kaip apsisaugoti nuo sukčių?`:
       return `/`;
   }
