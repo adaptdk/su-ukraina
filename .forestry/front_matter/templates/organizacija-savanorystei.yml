@@ -59,3 +59,8 @@ fields:
     min: 
     max: 
     step: 
+- name: logo
+  type: file
+  config:
+    maxSize: 64
+  label: Logo
