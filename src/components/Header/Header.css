@@ -1,4 +1,6 @@
-.fix? {
+.header {
+  background: transparent;
+
   /* this is weird. styles are not loaded properly if this is missing */
 }
 

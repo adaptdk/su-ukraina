@@ -5,12 +5,14 @@ import Header from "../Header";
 import Footer from "../Footer";
 
 import "./Layout.css";
-import "../../styles/main.css";
+
+/*
+      <html lang="lt" />
+      */
 
 const Layout = ({ children }) => {
   return (
     <div className="Layout">
-      <html lang="lt" />
       <Header />
       <main>{children}</main>
       <Footer />

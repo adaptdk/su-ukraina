@@ -7,7 +7,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <header className="Header">
+    <div className="Header">
       <Constraint className="Header__content">
         <Link to="/">
           <h1>SuUkraina.lt</h1>
@@ -65,7 +65,7 @@ const Header = () => {
           </ul>
         </nav>
       </Constraint>
-    </header>
+    </div>
   );
 };
 
