@@ -2,11 +2,11 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import Card from "../../components/Card";
-import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumbs";
+import EventCard from "../../components/EventCard";
+import EventCardList from "../../components/EventCardList";
 
 const Page = ({ data }) => {
   const crumbs = [`Akcijos ir renginiai`];
@@ -40,17 +40,23 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        <CardList>
+        <EventCardList>
           {events.map((event, i) => {
             return (
-              <Card title={event.title} key={i}>
-                <p>Vieta: {event.location}</p>
-                <p>Data: {new Date(event.date).toLocaleString(`lt`)}</p>
-                <div dangerouslySetInnerHTML={{ __html: event.html }} />
-              </Card>
+              <EventCard
+                key={i}
+                type={event.eventType} 
+                title={event.title} 
+                organizer={event.eventOrganizer} 
+                startDate={event.startDate} 
+                endDate={event.endDate} 
+                location={event.location}
+                description={event.html}
+                url={event.eventUrl}
+              />
             );
           })}
-        </CardList>
+        </EventCardList>
       </Constraint>
     </Layout>
   );
@@ -86,9 +92,13 @@ export const query = graphql`
         node {
           childMarkdownRemark {
             frontmatter {
+              eventType
               title
-              date
+              eventOrganizer
+              startDate
+              endDate
               location
+              eventUrl
             }
             html
           }
@@ -97,6 +107,8 @@ export const query = graphql`
     }
   }
 `;
+
+
 
 Page.propTypes = {
   data: PropTypes.shape({
