@@ -5,8 +5,10 @@ import Linkify from "react-linkify";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
+import Breadcrumb from "../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
+  const crumbs = [`Piliečio atmintinė`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -24,6 +26,7 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
+          <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </Constraint>

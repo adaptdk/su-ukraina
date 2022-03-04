@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 
 // Styles.
 import "./Footer.css";
@@ -16,6 +17,11 @@ import {
   TEXT_WANT_TO_DONATE,
   TEXT_WANT_TO_VOLUNTEER,
 } from "../../constants/Footer";
+
+// SVGs.
+import SuUkrainaWhite from '../../images/logos/su-ukraina--white.svg';
+import Adapt from '../../images/logos/adapt.svg';
+import LaisvesTv from '../../images/logos/laisves-tv.svg';
 
 const Footer = () => {
   return (
@@ -36,30 +42,61 @@ const Footer = () => {
         </div>
         <div className="Footer__credits">
           <p>
+            <img
+              className="Footer__logo"
+              src={SuUkrainaWhite}
+              alt="Su Ukraina poraštės logo"
+            />
+          </p>
+          <p>
+            <nav className="Footer__nav" aria-label="Poraštės navigacija">
+              <ul className="Footer__menu">
+                <li>
+                  <Link to="/apie-mus/">
+                    Apie mus
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/privatumo-politika/">
+                    Privatumo politika
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/kontaktai/">
+                    Kontaktai
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </p>
+        </div>
+        <div className="Footer__credits">
+          <p className="Footer__slogan">
             2022 | <span title="Героям слава!">Слава Україні!</span>
           </p>
-          <p>
-            Русский корабль, иди нахуй
+          <p className="Footer__partners">
+            Prie puslapio prisidėjo:
             {` `}
-            <span role="img" aria-label="Ukrainos vėliava">
-              🇺🇦
-            </span>
-          </p>
-          <p>
             <a
               href="https://adaptagency.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              „Adapt“
+              <img
+                src={Adapt}
+                alt="Adapt LT logo"
+              />
             </a>
-            ,{` `}
+            {` `}
             <a
               href="https://laisves.tv"
               rel="noopener noreferrer"
               target="_blank"
             >
-              „Laisvės TV“
+              <img
+                src={LaisvesTv}
+                alt="Adapt LT logo"
+              />
             </a>
           </p>
         </div>
