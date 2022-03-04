@@ -11,5 +11,6 @@ forma:
 rekvizitai: 'Parama: https://www.paypal.com/donate?token=J0WhCAkS9X_7VcS0ELwCfz6ryIpWxOD4YzWICTZNSww4PFax0i_Eut-U5LIURF0Q0TICbpNbeh-ljqzN'
 website: https://novaukraine.org
 weight: 7
+logo: "../uploads/image-15-4x.png"
 
 ---
