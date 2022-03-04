@@ -13,6 +13,6 @@ rekvizitai: 'Parama:https://vuf.lt/projektai/ukrainai/Paramą galima skirti ir b
   fondas Vilniaus universiteto fondas ( į/k 304222713)'
 website: https://vuf.lt
 weight: 8
-logo: ../uploads/vu.png
+logo: "../uploads/vu.png"
 
 ---
