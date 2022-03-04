@@ -10,8 +10,8 @@ const Section = ({ customClass, bgColor, children }) => {
 };
 
 Section.propTypes = {
-  bgColor: PropTypes.node,
-  customClass: PropTypes.node,
+  bgColor: PropTypes.string,
+  customClass: PropTypes.string,
   children: PropTypes.node,
 };
 

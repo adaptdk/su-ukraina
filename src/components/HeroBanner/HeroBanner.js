@@ -18,7 +18,8 @@ const HeroBanner = ({ title, subtitle, children }) => {
 };
 
 HeroBanner.propTypes = {
-  bgColor: PropTypes.node,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
   children: PropTypes.node,
 };
 

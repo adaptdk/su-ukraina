@@ -25,9 +25,9 @@ const CtaCard = ({ children, title, iconHandle, link }) => {
 
 CtaCard.propTypes = {
   children: PropTypes.node,
-  title: PropTypes.node,
-  link: PropTypes.node,
-  iconHandle: PropTypes.node,
+  title: PropTypes.string,
+  link: PropTypes.string,
+  iconHandle: PropTypes.string,
 };
 
 export default CtaCard;
