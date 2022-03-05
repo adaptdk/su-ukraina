@@ -7,26 +7,63 @@
   font-weight: var(--fw__medium);
   line-height: inherit;
   margin: 0;
-  padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 6);
+  overflow: hidden;
+  padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 4);
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  z-index: 1;
+
+  + .Button {
+    margin-left: calc(var(--s__unit) * 2);
+  }
+
+  &::after {
+    border-radius: 100%;
+    bottom: -50px;
+    content: "";
+    height: 50px;
+    position: absolute;
+    right: -50px;
+    transition: transform 1s ease-in-out;
+    width: 50px;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(15);
+    }
+  }
 
   &__primary {
     background: var(--c__primary);
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
     color: var(--c__main-bg);
+
+    &::after {
+      background: #2161d7;
+    }
   }
 
   &__secondary {
     background: var(--c__secondary);
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
     color: var(--c__primary);
+
+    &::after {
+      background: #ffc700;
+    }
   }
 
   &__transparent {
     background: var(--c__main-bg);
     border: 1px solid rgb(63 81 181 / 50%);
     color: var(--c__primary);
+
+    &::after {
+      background: #eaf1ff;
+    }
   }
 
   &__icon {

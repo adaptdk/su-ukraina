@@ -8,6 +8,48 @@
   &__actions {
     display: flex;
     gap: var(--s__unit);
+    padding-left: var(--s__main-padding);
+
+    > a {
+      background: #6b6b6b;
+      color: transparent;
+      content: "";
+      font-size: 0.1px;
+      height: 48px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: 20px;
+      position: relative;
+      width: 48px;
+
+      + a {
+        margin-left: var(--s__unit);
+      }
+
+      &:hover,
+      &:active {
+        background: #545454;
+      }
+
+      &:focus {
+        background: #545454;
+      }
+    }
+
+    &-web {
+      mask-image: url("../../images/icons/web.svg");
+      width: 20px;
+    }
+
+    &-facebook {
+      mask-image: url("../../images/icons/facebook.svg");
+      width: 20px;
+    }
+
+    &-twitter {
+      mask-image: url("../../images/icons/twitter.svg");
+      width: 20px;
+    }
   }
 
   &__title {
