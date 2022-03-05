@@ -79,12 +79,14 @@ const Page = ({ data }) => {
                 </div>
 
                 <div className={`Card__actions`}>
+                  {/*
                   <Button
                     icon={`arrow-white`}
                     color={`primary`}
                     text={`Paremti`}
                     position={`right`}
                   />
+                  */}
 
                   <Linkify>
                     <Button
