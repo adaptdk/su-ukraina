@@ -12,9 +12,9 @@
   }
 
   &__credits {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: var(--s__main-padding) 0;
   }
 
@@ -48,23 +48,23 @@
 
   &__nav {
     ul {
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
   }
 
   &__menu {
     display: flex;
-    gap: var(--s__main-padding);
     flex-direction: column;
     font-weight: var(--fw__small);
-    text-align: right;
+    gap: var(--s__main-padding);
     list-style: none;
+    text-align: right;
   }
 
   &__partners {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: calc(var(--s__unit) * 4);
   }
 }

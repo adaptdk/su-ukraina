@@ -19,9 +19,9 @@ import {
 } from "../../constants/Footer";
 
 // SVGs.
-import SuUkrainaWhite from '../../images/logos/su-ukraina--white.svg';
-import Adapt from '../../images/logos/adapt.svg';
-import LaisvesTv from '../../images/logos/laisves-tv.svg';
+import SuUkrainaWhite from "../../images/logos/su-ukraina--white.svg";
+import Adapt from "../../images/logos/adapt.svg";
+import LaisvesTv from "../../images/logos/laisves-tv.svg";
 
 const Footer = () => {
   return (
@@ -49,26 +49,20 @@ const Footer = () => {
             <img
               className="Footer__logo"
               src={SuUkrainaWhite}
-              alt="Su Ukraina poraštės logo"
+              alt="SuUkraina.lt"
             />
           </p>
           <p>
             <nav className="Footer__nav" aria-label="Poraštės navigacija">
               <ul className="Footer__menu">
                 <li>
-                  <Link to="/apie-mus/">
-                    Apie mus
-                  </Link>
+                  <Link to="/apie-mus/">Apie mus</Link>
                 </li>
                 <li>
-                  <Link to="/privatumo-politika/">
-                    Privatumo politika
-                  </Link>
+                  <Link to="/privatumo-politika/">Privatumo politika</Link>
                 </li>
                 <li>
-                  <Link to="/kontaktai/">
-                    Kontaktai
-                  </Link>
+                  <Link to="/kontaktai/">Kontaktai</Link>
                 </li>
               </ul>
             </nav>
@@ -86,10 +80,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
-                src={Adapt}
-                alt="Adapt LT logo"
-              />
+              <img src={Adapt} alt="Adapt LT logo" />
             </a>
             {` `}
             <a
@@ -97,10 +88,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
-                src={LaisvesTv}
-                alt="Adapt LT logo"
-              />
+              <img src={LaisvesTv} alt="Adapt LT logo" />
             </a>
           </p>
         </div>

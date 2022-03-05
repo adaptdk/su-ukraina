@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 
 import Constraint from "../Constraint";
 
+import Logo from "../../images/logos/su-ukraina--original.svg";
+
 import "./Header.css";
 
 const Header = () => {
@@ -10,7 +12,7 @@ const Header = () => {
     <div className="Header">
       <Constraint className="Header__content">
         <Link to="/">
-          <h1>SuUkraina.lt</h1>
+          <img className="Header__logo" src={Logo} alt="SuUkraina.lt" />
         </Link>
         <input type="checkbox" name="menu-sensor" id="menu-sensor" />
         <label className="Header__menu-trigger" htmlFor="menu-sensor">
