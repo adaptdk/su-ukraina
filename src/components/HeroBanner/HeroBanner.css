@@ -11,7 +11,7 @@
 
   &__background {
     grid-area: 1/1;
-    max-height: 500px;
+    max-height: 600px;
     position: relative;
 
     &::after {
@@ -23,6 +23,12 @@
       top: 0;
       width: 100%;
       z-index: 1;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    &__background {
+      max-height: 500px;
     }
   }
 }
@@ -54,7 +60,7 @@
     }
   }
 
-  .Constraint {
+  &__content .Constraint {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
