@@ -98,6 +98,9 @@ module.exports = {
         theme_color: `#FFD500`,
         display: `standalone`,
         icon: `src/images/main-icon.svg`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
   ],
