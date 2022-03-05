@@ -28,28 +28,32 @@ const Footer = () => {
     <footer className="Footer">
       <Constraint>
         <div className="Footer__cta-section">
-          Kiekvienas veiksmas svarbus
-          <Button
-            to={PATH_HOW_TO_DONATE}
-            icon={ICON_DONATE}
-            color={`secondary`}
-            text={TEXT_WANT_TO_DONATE}
-            position={`left`}
-          />
-          <Button
-            to={PATH_HOW_TO_VOLUNTEER}
-            icon={ICON_VOLUNTEER}
-            color={`secondary`}
-            text={TEXT_WANT_TO_VOLUNTEER}
-            position={`left`}
-          />
+          <div>Kiekvienas veiksmas svarbus</div>
+          <div className="Footer__cta-section-actions">
+            <Button
+              to={PATH_HOW_TO_DONATE}
+              icon={ICON_DONATE}
+              color={`secondary`}
+              text={TEXT_WANT_TO_DONATE}
+              position={`left`}
+            />
+            <Button
+              to={PATH_HOW_TO_VOLUNTEER}
+              icon={ICON_VOLUNTEER}
+              color={`secondary`}
+              text={TEXT_WANT_TO_VOLUNTEER}
+              position={`left`}
+            />
+          </div>
         </div>
-        <div className="Footer__credits">
+        <div className="Footer__menus">
           <p>
             <img
               className="Footer__logo"
               src={SuUkrainaWhite}
               alt="SuUkraina.lt"
+              height="40"
+              width="235"
             />
           </p>
           <p>
@@ -73,14 +77,16 @@ const Footer = () => {
             2022 | <span title="Героям слава!">Слава Україні!</span>
           </p>
           <p className="Footer__partners">
-            Prie puslapio prisidėjo:
+            <span className="Footer__partners-intro">
+              Prie puslapio prisidėjo:
+            </span>
             {` `}
             <a
               href="https://adaptagency.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={Adapt} alt="Adapt LT logo" />
+              <img src={Adapt} alt="Adapt LT logo" width="93" height="15" />
             </a>
             {` `}
             <a
@@ -88,7 +94,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={LaisvesTv} alt="Adapt LT logo" />
+              <img src={LaisvesTv} alt="Adapt LT logo" width="49" height="49" />
             </a>
           </p>
         </div>

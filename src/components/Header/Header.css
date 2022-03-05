@@ -17,6 +17,7 @@
   &__logo {
     height: 24px;
     padding: calc(var(--s__unit) * 3) 0;
+    width: auto;
 
     @media (min-width: 18rem) {
       height: 32px;

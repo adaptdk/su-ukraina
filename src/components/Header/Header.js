@@ -12,7 +12,13 @@ const Header = () => {
     <div className="Header">
       <Constraint className="Header__content">
         <Link to="/">
-          <img className="Header__logo" src={Logo} alt="SuUkraina.lt" />
+          <img
+            className="Header__logo"
+            src={Logo}
+            alt="SuUkraina.lt"
+            height="40"
+            width="235"
+          />
         </Link>
         <input type="checkbox" name="menu-sensor" id="menu-sensor" />
         <label className="Header__menu-trigger" htmlFor="menu-sensor">
