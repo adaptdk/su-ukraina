@@ -1,0 +1,45 @@
+.ContentWithImage {
+  &__content {
+    padding-top: calc(var(--s__alt-padding) * 1.5);
+    margin-bottom: calc(var(--s__alt-padding) * 1.5);
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    margin: 0;
+    margin-bottom: calc(var(--s__alt-padding) * 1.5);
+  }
+
+  &__image {
+    .gatsby-image-wrapper {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .CtaLink {
+    margin-bottom: var(--s__alt-padding);
+  }
+
+  @media (min-width: 700px) {
+    display: flex;
+
+    > * {
+      flex: 1;
+    }
+
+    &__content {
+      padding-top: calc(var(--s__alt-padding) * 2);
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: calc(var(--s__alt-padding) * 2);
+    }
+
+    &__text {
+      padding-right: var(--s__main-padding);
+    }
+  }
+}
