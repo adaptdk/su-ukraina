@@ -17,7 +17,12 @@ const Page = () => {
     <Layout>
       <Title>Привіт!</Title>
       <Section className="HeroSection">
-        <StaticImage src="../images/hero-banner.jpg" alt="Su Ukraina!" />
+        <StaticImage
+          className="HeroSection__background"
+          src="../images/hero-banner.jpg"
+          alt="Su Ukraina!"
+          layout="fullWidth"
+        />
         <HeroBanner
           title="Su Ukraina iki pergalės!"
           subtitle="Tinklalapis skirtas sutelkti informaciją apie krizę Ukrainoje."

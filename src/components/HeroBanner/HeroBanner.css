@@ -1,12 +1,18 @@
+.herosection {
+  background: transparent;
+
+  /* this is weird. styles are not loaded properly if this is missing */
+}
+
 .HeroSection {
+  display: grid;
+  padding: 1px 0;
   position: relative;
 
-  .gatsby-image-wrapper {
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
+  &__background {
+    grid-area: 1/1;
+    max-height: 500px;
+    position: relative;
 
     &::after {
       background: rgb(15 71 175 / 50%);
@@ -22,6 +28,8 @@
 }
 
 .HeroBanner {
+  grid-area: 1 / 1;
+
   &__content {
     margin-bottom: calc(var(--s__unit) * 10);
     position: relative;
