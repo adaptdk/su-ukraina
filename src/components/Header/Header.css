@@ -80,6 +80,10 @@
       display: none;
     }
 
+    #menu-sensor:checked + &__menu-trigger + &__nav {
+      height: auto;
+    }
+
     &__nav {
       height: initial;
       overflow: visible;
@@ -98,13 +102,30 @@
       > li {
         position: relative;
 
+        > a {
+          padding: 0 var(--s__main-padding);
+        }
+
         > ul {
           background: var(--c__main-bg);
+          border-radius: var(--s__main-border-radius);
+          box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
           left: 0;
           opacity: 0;
+          overflow: hidden;
           position: absolute;
           transition: all 0.2s ease;
           visibility: hidden;
+        }
+
+        li {
+          list-style: none;
+
+          a {
+            display: block;
+            margin: 0 calc(var(--s__main-padding) - 1);
+            padding: var(--s__main-padding);
+          }
         }
 
         &:hover > ul,
