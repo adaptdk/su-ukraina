@@ -32,12 +32,16 @@ const Footer = () => {
           <Button
             to={PATH_HOW_TO_DONATE}
             icon={ICON_DONATE}
+            color={`secondary`}
             text={TEXT_WANT_TO_DONATE}
+            position={`left`}
           />
           <Button
             to={PATH_HOW_TO_VOLUNTEER}
             icon={ICON_VOLUNTEER}
+            color={`secondary`}
             text={TEXT_WANT_TO_VOLUNTEER}
+            position={`left`}
           />
         </div>
         <div className="Footer__credits">

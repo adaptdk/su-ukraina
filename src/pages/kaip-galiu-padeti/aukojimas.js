@@ -5,10 +5,15 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
 
+// Styles.
+import "./aukojimas.css";
+
+// Components.
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
+import Button from "../../components/Button";
 import Breadcrumb from "../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
@@ -49,33 +54,47 @@ const Page = ({ data }) => {
             );
             return (
               <Card title={organisation.title} logo={logo} key={i}>
-                <h3>Paskirtis</h3>
-                <div>
-                  <Linkify>{organisation.cause}</Linkify>
-                </div>
-
                 <h3>Apie</h3>
                 <div>
                   <Linkify>{organisation.about}</Linkify>
                 </div>
 
-                <h3>Forma</h3>
+                <h3>Paskirtis</h3>
                 <div>
-                  <ul>
-                    {organisation.forma.map((forma, j) => {
-                      return <li key={j}>{forma}</li>;
-                    })}
-                  </ul>
+                  <Linkify>{organisation.cause}</Linkify>
                 </div>
+
+                {/*<h3>Forma</h3>*/}
+                {/*<div>*/}
+                {/*  <ul>*/}
+                {/*    {organisation.forma.map((forma, j) => {*/}
+                {/*      return <li key={j}>{forma}</li>;*/}
+                {/*    })}*/}
+                {/*  </ul>*/}
+                {/*</div>*/}
 
                 <h3>Rekvizitai/registracija</h3>
                 <div>
                   <Linkify>{organisation.rekvizitai}</Linkify>
                 </div>
 
-                <h3>Oficialus puslapis</h3>
-                <div>
-                  <Linkify>{organisation.website}</Linkify>
+                <div className={`Card__actions`}>
+                  <Button
+                    icon={`arrow-white`}
+                    color={`primary`}
+                    text={`Paremti`}
+                    position={`right`}
+                  />
+
+                  <Linkify>
+                    <Button
+                      icon={`arrow-blue`}
+                      href={organisation.website}
+                      color={`transparent`}
+                      text={`Oficialus puslapis`}
+                      position={`right`}
+                    />
+                  </Linkify>
                 </div>
               </Card>
             );
