@@ -10,6 +10,7 @@ import Section from "../components/Section";
 import CtaCard from "../components/CtaCard";
 import CtaCardItem from "../components/CtaCard/CtaCardItem";
 import CtaLink from "../components/CtaLink";
+import ProtestForms from "../components/ProtestForms";
 import ContentWithImage from "../components/ContentWithImage";
 
 const Page = () => {
@@ -47,6 +48,11 @@ const Page = () => {
             </CtaCard>
           </Constraint>
         </HeroBanner>
+      </Section>
+      <Section className="ProtestFormsSection">
+        <Constraint>
+          <ProtestForms title="Protesto formos"/>
+        </Constraint>
       </Section>
       <Section className="ContentWithImageSection">
         <Constraint>

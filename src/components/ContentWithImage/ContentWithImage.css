@@ -1,13 +1,13 @@
 .ContentWithImage {
   &__content {
-    padding-top: calc(var(--s__alt-padding) * 1.5);
-    margin-bottom: calc(var(--s__alt-padding) * 1.5);
+    padding-top: calc(var(--s__unit) * 10);
+    margin-bottom: calc(var(--s__unit) * 10);
   }
 
   &__title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 0;
-    margin-bottom: calc(var(--s__alt-padding) * 1.5);
+    margin-bottom: calc(var(--s__unit) * 10);
   }
 
   &__image {
@@ -30,11 +30,12 @@
 
     &__content {
       padding-top: calc(var(--s__alt-padding) * 2);
+      padding-right: var(--s__main-padding);
       margin-bottom: 0;
     }
 
     &__title {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: calc(var(--s__alt-padding) * 2);
     }
 
