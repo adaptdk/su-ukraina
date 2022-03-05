@@ -9,8 +9,8 @@ import Layout from "../components/Layout";
 import Section from "../components/Section";
 import CtaCard from "../components/CtaCard";
 import CtaCardItem from "../components/CtaCard/CtaCardItem";
-import CtaLink from '../components/CtaLink';
-import ContentWithImage from '../components/ContentWithImage';
+import CtaLink from "../components/CtaLink";
+import ContentWithImage from "../components/ContentWithImage";
 
 const Page = () => {
   return (
@@ -46,9 +46,15 @@ const Page = () => {
       <Section customClass="ContentWithImageSection">
         <Constraint>
           <ContentWithImage title="Būkime budrūs ir pasiruošę">
-            <CtaLink url="/bukime-budrus/patikima-informacija" title="Patikima informacija"/>
-            <CtaLink url="/bukime-budrus/piliecio-atmintine" title="Piliečio atmintinė"/>
-            <CtaLink url="/bukime-budrus/kaip-apsisaugoti-nuo-sukciu" title="Kaip apsisaugoti nuo sukčių?"/>
+            <CtaLink
+              url="/bukime-budrus/patikima-informacija"
+              title="Patikima informacija"
+            />
+            <CtaLink
+              url="/bukime-budrus/piliecio-atmintine"
+              title="Piliečio atmintinė"
+            />
+            {/* <CtaLink url="/bukime-budrus/kaip-apsisaugoti-nuo-sukciu" title="Kaip apsisaugoti nuo sukčių?"/>*/}
           </ContentWithImage>
         </Constraint>
       </Section>
