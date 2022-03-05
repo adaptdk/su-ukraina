@@ -23,7 +23,7 @@ const Button = ({ icon, text, color, position, ...props }) => {
   };
 
   return (
-    <Tag className={`${CN} ${CN}__${color}`} {...props}>
+    <Tag className={`${CN} ${CN}--${color}`} {...props}>
       {icon && isIconAlignedLeft() && (
         <span className={`${CN}__icon ${CN}__icon--${icon}`} />
       )}
