@@ -18,17 +18,32 @@ const ContactChip = ({
       </div>
       <div className="ContactChip__actions">
         {!!url && (
-          <a href={url} rel="noopener noreferrer" class="ContactChip__actions-web" target="_blank">
+          <a
+            href={url}
+            rel="noopener noreferrer"
+            className="ContactChip__actions-web"
+            target="_blank"
+          >
             WWW
           </a>
         )}
         {!!facebookUrl && (
-          <a href={facebookUrl} rel="noopener noreferrer" class="ContactChip__actions-facebook" target="_blank">
+          <a
+            href={facebookUrl}
+            rel="noopener noreferrer"
+            className="ContactChip__actions-facebook"
+            target="_blank"
+          >
             Facebook
           </a>
         )}
         {!!twitterUrl && (
-          <a href={twitterUrl} rel="noopener noreferrer" class="ContactChip__actions-twitter" target="_blank">
+          <a
+            href={twitterUrl}
+            rel="noopener noreferrer"
+            className="ContactChip__actions-twitter"
+            target="_blank"
+          >
             twitter
           </a>
         )}
