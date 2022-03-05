@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/roboto": "^4.5.3",
     "caniuse-lite": "^1.0.30001313",
     "core-js-pure": "^3.21.1",
     "es-abstract": "^1.19.1",

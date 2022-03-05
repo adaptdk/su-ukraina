@@ -22,7 +22,7 @@
   &__title {
     color: var(--c__primary);
     font-size: 1.25rem;
-    font-weight: var(--fw__bold);
+    font-weight: var(--fw__medium);
     margin: 0;
   }
 }
