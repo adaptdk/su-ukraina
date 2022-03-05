@@ -11,7 +11,6 @@
   }
 
   &.ContentWithImageSection {
-    margin-bottom: calc(var(--s__unit) * 10);
     background-color: #F9F9F9;
   }
 }
