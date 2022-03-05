@@ -6,3 +6,7 @@ import "./src/styles/main.css";
 export const wrapRootElement = ({ element }) => {
   return <HeadProvider>{element}</HeadProvider>;
 };
+
+export const onServiceWorkerUpdateReady = () => {
+  window.location.reload();
+};
