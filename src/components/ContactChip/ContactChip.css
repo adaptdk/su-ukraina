@@ -8,6 +8,47 @@
   &__actions {
     display: flex;
     gap: var(--s__unit);
+
+    > a {
+      background: #6B6B6B;
+      content: "";
+      height: 20px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: relative;
+      width: 20px;
+      font-size: 0.1px;
+      color: transparent;
+
+      + a {
+        margin-left: calc(var(--s__unit) * 3);
+      }
+
+      &:hover,
+      &:active {
+        background: #545454;
+      }
+
+      &:focus {
+        background: #545454;
+      }
+    }
+
+    &-web {
+      mask-image: url("../../images/icons/web.svg");
+      width: 20px;
+    }
+
+    &-facebook {
+      mask-image: url("../../images/icons/facebook.svg");
+      width: 20px;
+    }
+
+    &-twitter {
+      mask-image: url("../../images/icons/twitter.svg");
+      width: 20px;
+    }
   }
 
   &__title {
