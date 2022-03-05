@@ -16,13 +16,13 @@ const Page = () => {
   return (
     <Layout>
       <Title>Привіт!</Title>
-      <Section customClass="HeroSection">
+      <Section className="HeroSection">
         <StaticImage src="../images/hero-banner.jpg" alt="Su Ukraina!" />
         <HeroBanner
           title="Su Ukraina iki pergalės!"
           subtitle="Tinklalapis skirtas sutelkti informaciją apie krizę Ukrainoje."
         >
-          <Constraint customClass="HeroBanner__inner">
+          <Constraint className="HeroBanner__inner">
             <CtaCard
               title="Aukojimas"
               link="/kaip-galiu-padeti/aukojimas/"
@@ -43,7 +43,7 @@ const Page = () => {
           </Constraint>
         </HeroBanner>
       </Section>
-      <Section customClass="ContentWithImageSection">
+      <Section className="ContentWithImageSection">
         <Constraint>
           <ContentWithImage title="Būkime budrūs ir pasiruošę">
             <CtaLink
