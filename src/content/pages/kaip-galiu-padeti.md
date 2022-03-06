@@ -4,4 +4,4 @@ weight: 1
 slug: kaip-galiu-padeti
 
 ---
-Kaip galiu padėti intro
+Prisidėti galite šiais būdais:
