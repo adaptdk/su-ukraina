@@ -28,7 +28,7 @@ const Footer = () => {
     <footer className="Footer">
       <Constraint>
         <div className="Footer__cta-section">
-          <div>Kiekvienas veiksmas svarbus</div>
+          <div className="Footer__cta-section-title">Kiekvienas veiksmas svarbus</div>
           <div className="Footer__cta-section-actions">
             <Button
               to={PATH_HOW_TO_DONATE}

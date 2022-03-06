@@ -1,4 +1,8 @@
 .ProtestForms {
+  margin: var(--s__main-padding) 0;
+  overflow: hidden;
+  width: 100%;
+
   &__title {
     font-size: 1.8rem;
     margin: 0;
@@ -8,30 +12,39 @@
   &__button-list {
     display: flex;
     flex-direction: column;
+    font-size: var(--fs__h5);
     gap: var(--s__main-padding);
-    font-size: 1.25rem;
-    padding: 0;
     list-style: none;
+    padding: 0;
 
     .Button {
+      justify-content: space-between;
       text-transform: none;
+
+      &:hover {
+        color: var(--c__secondary);
+
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 40rem) {
     text-align: center;
 
     &__title {
-      font-size: 2.2rem;
+      font-size: var(--fs__h3);
     }
 
     &__button-list {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: calc(var(--s__main-padding) * 1.5) var(--s__main-padding);
       background-color: var(--c__primary);
       border-radius: var(--s__alt-border-radius);
+      flex-direction: row;
       font-size: 1.5rem;
+      justify-content: space-between;
+      padding: calc(var(--s__main-padding) * 1.5) var(--s__main-padding);
 
       > * {
         flex: 1;
@@ -39,8 +52,8 @@
     }
 
     .Button {
-      justify-content: center;
       box-shadow: none;
+      justify-content: center;
 
       &__icon {
         display: none;

@@ -42,8 +42,13 @@
   &__content {
     align-items: center;
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (min-width: 46rem) {
+      flex-direction: row;
+    }
   }
 
   &__menu {
@@ -86,6 +91,17 @@
     outline: 1px solid;
   }
 
+  /* Menu active state */
+  #menu-sensor:checked + &__menu-trigger {
+    span {
+      width: 100%;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+
   #menu-sensor:checked + &__menu-trigger + &__nav {
     /* 70px -- magic number. height of header */
     height: calc(100vh - 70px);
@@ -96,10 +112,51 @@
     align-items: center;
     cursor: pointer;
     display: flex;
-    height: 48px;
+    height: 40px;
     justify-content: center;
+    position: relative;
     user-select: none;
-    width: 48px;
+    width: 40px;
+
+    span {
+      background-color: var(--c__primary);
+      border-radius: 15px;
+      content: "";
+      height: 4px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: width 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      width: 75%;
+    }
+
+    &::before,
+    &::after {
+      border-radius: 15px;
+      content: "";
+      height: 4px;
+      position: absolute;
+    }
+
+    &::before {
+      background-color: var(--c__primary);
+      left: 0;
+      margin-top: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    &::after {
+      background-color: var(--c__secondary);
+      left: 0;
+      margin-top: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: width 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      width: 50%;
+    }
   }
 
   @media (min-width: 46rem) {
@@ -149,10 +206,11 @@
           background: var(--c__main-bg);
           border-radius: var(--s__main-border-radius);
           box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
-          left: 0;
+          left: 16px;
           opacity: 0;
           overflow: hidden;
           position: absolute;
+          top: 28px;
           transition: all 0.2s ease;
           visibility: hidden;
         }
@@ -164,6 +222,10 @@
             display: block;
             margin: 0 calc(var(--s__main-padding) - 1);
             padding: var(--s__main-padding);
+
+            &:hover {
+              background-color: #eaf1ff;
+            }
           }
         }
 

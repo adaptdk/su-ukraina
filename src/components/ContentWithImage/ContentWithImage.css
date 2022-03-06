@@ -1,11 +1,11 @@
 .ContentWithImage {
   &__content {
-    padding-top: calc(var(--s__unit) * 10);
     margin-bottom: calc(var(--s__unit) * 10);
+    padding-top: calc(var(--s__unit) * 10);
   }
 
   &__title {
-    font-size: 1.8rem;
+    font-size: var(--fs__h4);
     margin: 0;
     margin-bottom: calc(var(--s__unit) * 10);
   }
@@ -13,15 +13,34 @@
   &__image {
     .gatsby-image-wrapper {
       height: 100%;
+
+      /* Fuck this hack, but ok. */
+      margin: 0 -16px;
       width: 100%;
+      width: calc(100% + 32px);
     }
   }
 
   .CtaLink {
-    margin-bottom: var(--s__alt-padding);
+    margin: 0;
+    padding: var(--s__main-padding) 0;
+    width: 100%;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    + .CtaLink {
+      border-top: 1px solid #ececec;
+    }
+
+    a {
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 40rem) {
     display: flex;
 
     > * {
@@ -29,18 +48,42 @@
     }
 
     &__content {
-      padding-top: calc(var(--s__alt-padding) * 2);
-      padding-right: var(--s__main-padding);
       margin-bottom: 0;
+      padding-right: var(--s__main-padding);
+      padding-top: calc(var(--s__alt-padding) * 2);
     }
 
     &__title {
-      font-size: 2.2rem;
+      font-size: var(--fs__h3);
       margin-bottom: calc(var(--s__alt-padding) * 2);
     }
 
     &__text {
       padding-right: var(--s__main-padding);
+    }
+
+    &__image {
+      .gatsby-image-wrapper {
+        margin: unset;
+        width: 100%;
+      }
+    }
+
+    .CtaLink {
+      margin: 0;
+      padding: var(--s__alt-padding) 0;
+
+      + .CtaLink {
+        border-top: unset;
+      }
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      a {
+        justify-content: flex-start;
+      }
     }
   }
 }

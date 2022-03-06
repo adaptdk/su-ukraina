@@ -40,10 +40,18 @@
     }
   }
 
+  &__cta-section-title {
+    font-size: 1.25rem;
+  }
+
   &__cta-section-actions {
     display: flex;
     flex-direction: column;
     gap: var(--s__main-padding);
+
+    .Button {
+      justify-content: center;
+    }
   }
 
   &__logo {
@@ -122,6 +130,10 @@
 
     &__cta-section-actions {
       flex-direction: row;
+    }
+
+    &__cta-section-title {
+      font-size: 1.5rem;
     }
   }
 

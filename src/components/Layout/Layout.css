@@ -5,6 +5,5 @@
 
   > main {
     flex: 1;
-    margin-bottom: calc(var(--s__unit) * 10);
   }
 }
