@@ -80,7 +80,7 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "page-contents" }
         absolutePath: {
-          regex: "//src/content/pages/protesto-formos/laisku-rasymas.md$/"
+          regex: "//src/content/pages/protesto-formos/darykite-spaudima.md$/"
         }
       }
     ) {

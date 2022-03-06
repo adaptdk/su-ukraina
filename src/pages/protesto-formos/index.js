@@ -41,7 +41,7 @@ const Page = ({ data }) => {
               <Link to="/protesto-formos/renginiai/">Renginiai</Link>
             </li>
             <li>
-              <Link to="/protesto-formos/laisku-rasymas/">Laiškų rašymas</Link>
+              <Link to="/protesto-formos/darykite-spaudima/">Darykite spaudimą</Link>
             </li>
           </ul>
         </nav>
