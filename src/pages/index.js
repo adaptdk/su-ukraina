@@ -53,7 +53,7 @@ const Page = () => {
           <ProtestForms title="Protesto formos"/>
         </Constraint>
       </Section>
-      <Section className="ContentWithImageSection">
+      <Section className="BeAwakeSection">
         <Constraint>
           <BeAwake title="Būkime budrūs ir pasiruošę"/>
         </Constraint>
