@@ -47,6 +47,5 @@ fields:
     required: false
   label: Renginio tiklalapis
 pages:
-- src/content/events/renginys-numeris-1.md
 - src/content/events/renginys-numeris-2.md
 - src/content/events/renginys-numeris-3.md
