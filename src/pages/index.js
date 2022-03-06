@@ -9,9 +9,8 @@ import Layout from "../components/Layout";
 import Section from "../components/Section";
 import CtaCard from "../components/CtaCard";
 import CtaCardItem from "../components/CtaCard/CtaCardItem";
-import CtaLink from "../components/CtaLink";
 import ProtestForms from "../components/ProtestForms";
-import ContentWithImage from "../components/ContentWithImage";
+import BeAwake from "../components/BeAwake";
 
 const Page = () => {
   return (
@@ -56,17 +55,7 @@ const Page = () => {
       </Section>
       <Section className="ContentWithImageSection">
         <Constraint>
-          <ContentWithImage title="Būkime budrūs ir pasiruošę">
-            <CtaLink
-              url="/bukime-budrus/patikima-informacija"
-              title="Patikima informacija"
-            />
-            <CtaLink
-              url="/bukime-budrus/piliecio-atmintine"
-              title="Piliečio atmintinė"
-            />
-            {/* <CtaLink url="/bukime-budrus/kaip-apsisaugoti-nuo-sukciu" title="Kaip apsisaugoti nuo sukčių?"/>*/}
-          </ContentWithImage>
+          <BeAwake title="Būkime budrūs ir pasiruošę"/>
         </Constraint>
       </Section>
     </Layout>
