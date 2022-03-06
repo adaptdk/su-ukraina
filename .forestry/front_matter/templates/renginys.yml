@@ -46,5 +46,3 @@ fields:
   config:
     required: false
   label: Renginio tiklalapis
-pages:
-- src/content/events/renginys-numeris-2.md
