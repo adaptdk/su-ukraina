@@ -46,3 +46,5 @@ fields:
   config:
     required: false
   label: Renginio tiklalapis
+pages:
+- src/content/events/placeholder-to-prevent-error.md
