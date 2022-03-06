@@ -21,4 +21,10 @@
       width: 32px;
     }
   }
+
+  @media (min-width: 700px) {
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
 }

@@ -1,0 +1,50 @@
+.ProtestForms {
+  &__title {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: calc(var(--s__unit) * 10);
+  }
+
+  &__button-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s__main-padding);
+    font-size: 1.25rem;
+    padding: 0;
+    list-style: none;
+
+    .Button {
+      text-transform: none;
+    }
+  }
+
+  @media (min-width: 700px) {
+    text-align: center;
+
+    &__title {
+      font-size: 2.2rem;
+    }
+
+    &__button-list {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: calc(var(--s__main-padding) * 1.5) var(--s__main-padding);
+      background-color: var(--c__primary);
+      border-radius: var(--s__alt-border-radius);
+      font-size: 1.5rem;
+
+      > * {
+        flex: 1;
+      }
+    }
+
+    .Button {
+      justify-content: center;
+      box-shadow: none;
+
+      &__icon {
+        display: none;
+      }
+    }
+  }
+}
