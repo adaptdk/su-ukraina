@@ -9,8 +9,9 @@ import Layout from "../components/Layout";
 import Section from "../components/Section";
 import CtaCard from "../components/CtaCard";
 import CtaCardItem from "../components/CtaCard/CtaCardItem";
-import ProtestForms from "../components/ProtestForms";
+import LinkCollection from "../components/LinkCollection";
 import BeAwake from "../components/BeAwake";
+import LinkCollectionItem from "../components/LinkCollection/LinkCollectionItem";
 
 const Page = () => {
   return (
@@ -50,7 +51,11 @@ const Page = () => {
       </Section>
       <Section className="ProtestFormsSection">
         <Constraint>
-          <ProtestForms title="Protesto formos"/>
+          <LinkCollection title="Protesto formos">
+              <LinkCollectionItem to={`/protesto-formos/akcijos`} text={`Akcijos`}/>
+              <LinkCollectionItem to={`/protesto-formos/renginiai`} text={`Renginiai`}/>
+              <LinkCollectionItem to={`/protesto-formos/darykite-spaudima`} text={`Darykite spaudimą`}/>          
+          </LinkCollection>
         </Constraint>
       </Section>
       <Section className="BeAwakeSection">

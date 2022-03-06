@@ -15,7 +15,6 @@
   }
 
   &.BeAwakeSection {
-    margin-bottom: calc(var(--s__unit) * 10);
     background-color: #f6f6f6;
   }
 }
