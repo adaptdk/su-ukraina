@@ -34,9 +34,9 @@ const ProtestForms = ({ title }) => {
         <li>
           <Button
             icon={`arrow-white`}
-            to={`/protesto-formos/laisku-rasymas`}
+            to={`/protesto-formos/darykite-spaudimą`}
             color={`primary`}
-            text={`Laiškų rašymas`}
+            text={`Darykite spaudimą`}
             position={`right`}
           />
         </li>

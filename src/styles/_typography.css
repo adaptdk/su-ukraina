@@ -3,4 +3,80 @@
   --fw__normal: 400;
   --fw__medium: 500;
   --fw__bold: 700;
+  --fs__h1: 4rem;
+  --fs__h2: 3rem;
+  --fs__h3: 2.25rem;
+  --fs__h4: 1.75rem;
+  --fs__h5: 1.375rem;
+  --fs__h6: 1.125rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: var(--fw__medium);
+  margin-bottom: calc(var(--s__unit) * 4);
+}
+
+h1,
+.h1 {
+  font-size: var(--fs__h1);
+
+  @media and (min-width: 700px) {
+    font-size: var(--fs__h1);
+  }
+}
+
+h2,
+.h2 {
+  font-size: var(--fs__h2);
+
+  @media and (min-width: 700px) {
+    font-size: var(--fs__h2);
+  }
+}
+
+h3,
+.h3 {
+  font-size: var(--fs__h3);
+
+  @media and (min-width: 700px) {
+    font-size: var(--fs__h3);
+  }
+}
+
+h4,
+.h4 {
+  font-size: var(--fs__h4);
+
+  @media and (min-width: 700px) {
+    font-size: var(--fs__h4);
+  }
+}
+
+h5,
+.h5 {
+  font-size: var(--fs__h5);
+
+  @media and (min-width: 700px) {
+    font-size: var(--fs__h5);
+  }
+}
+
+h6,
+.h6 {
+  font-size: var(--fs__h6);
+
+  @media and (min-width: 700px) {
+    font-size: var(--fs__h6);
+  }
 }
