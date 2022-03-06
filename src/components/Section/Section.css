@@ -10,7 +10,11 @@
     margin-bottom: calc(var(--s__unit) * 10);
   }
 
+  &.HeroSection {
+    margin-bottom: calc(var(--s__unit) * 10);
+  }
+
   &.ContentWithImageSection {
-    background-color: #F9F9F9;
+    background-color: #f6f6f6;
   }
 }

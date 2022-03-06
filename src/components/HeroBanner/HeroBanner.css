@@ -44,19 +44,30 @@
 
   &__text {
     color: white;
-    margin-bottom: calc(var(--s__unit) * 20);
+    margin-bottom: calc(var(--s__unit) * 10);
     position: relative;
-    text-align: center;
+    text-align: left;
     z-index: 10;
 
     h1 {
-      font-size: 60px;
-      font-weight: var(--fw__medium);
+      font-size: var(--fs__h2);
     }
 
     p {
-      font-size: 24px;
       margin: 0 auto;
+    }
+
+    @media (min-width: 40rem) {
+      margin-bottom: calc(var(--s__unit) * 20);
+      text-align: center;
+
+      h1 {
+        font-size: var(--fs__h1);
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 
