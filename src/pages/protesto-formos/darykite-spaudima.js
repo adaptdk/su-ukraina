@@ -25,7 +25,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout pagePath="/protesto-formos/laisku-rasymas/">
+    <Layout pagePath="/protesto-formos/darykite-spaudima/">
       {(!content || !content.title) && <Title>Laiškų rašymas</Title>}
 
       {!!content && (
@@ -80,7 +80,7 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "page-contents" }
         absolutePath: {
-          regex: "//src/content/pages/protesto-formos/darykite-spaudima.md$/"
+          regex: "//src/content/pages/protesto-formos/laisku-rasymas.md$/"
         }
       }
     ) {
