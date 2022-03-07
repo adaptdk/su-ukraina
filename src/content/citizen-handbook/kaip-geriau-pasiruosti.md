@@ -36,7 +36,7 @@ resources:
   link: https://ugm.lrv.lt/lt/mokymai/mokymo-priemones-1/gaisras
   subtitle: ''
 - title: LKA Keliautojų klubo organizuojami Išgyvenimo kursai.
-  link: https://lkakeliautojai.lt/isgyvenimo-kursai-4?fbclid=IwAR3LM-3qxSveNHbFPR2o0g7Mzu29RqZkBfWeWK2KfGZHssebRnrUjdFTPzY
+  link: https://lkakeliautojai.lt/isgyvenimo-kursai-4
   subtitle: ''
 
 ---
