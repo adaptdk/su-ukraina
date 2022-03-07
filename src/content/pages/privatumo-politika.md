@@ -4,4 +4,12 @@ weight: 100
 slug: privatumo-politika
 
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+**Kas yra atsakingas už mano informacijos apsaugą?**
+
+Mes esame: UAB Adapt LT
+
+Mūsų įmonės kodas yra: 303276505
+
+Mūsų adresas: Antakalnio g. 13-23, LT-66117 Druskininkai
+
+Mūsų el. pašto adresas: [vita@adaptagency.com](mailto:vita@adaptagency.com)
