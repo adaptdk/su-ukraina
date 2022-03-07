@@ -10,6 +10,8 @@ import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumbs";
+import CardSection from "../../components/Card/CardSection";
+import Button from "../../components/Button";
 
 const Page = ({ data }) => {
   const crumbs = [`Savanorystė`];
@@ -49,33 +51,44 @@ const Page = ({ data }) => {
             );
             return (
               <Card title={organisation.title} logo={logo} key={i}>
-                <h3>Paskirtis</h3>
-                <div>
-                  <Linkify>{organisation.cause}</Linkify>
-                </div>
+                {!!organisation.cause && <CardSection title="Paskirtis" content={organisation.cause}/>}
+                {!!organisation.about && <CardSection title="Apie" content={organisation.about}/>}
+                {!!organisation.rekvizitai && <CardSection title="Kita informacija" content={organisation.rekvizitai}/>}
 
-                <h3>Apie</h3>
-                <div>
-                  <Linkify>{organisation.about}</Linkify>
-                </div>
-
-                <h3>Forma</h3>
+                {/* <h3>Forma</h3>
                 <div>
                   <ul>
                     {organisation.forma.map((forma, j) => {
                       return <li key={j}>{forma}</li>;
                     })}
                   </ul>
-                </div>
+                </div> */}
 
-                <h3>Rekvizitai/registracija</h3>
-                <div>
-                  <Linkify>{organisation.rekvizitai}</Linkify>
-                </div>
+                <div className={`Card__actions`}>
+                  {!!organisation.action &&
+                  <Button
+                    icon={`arrow-white`}
+                    href={organisation.action}
+                    color={`primary`}
+                    text={`Pildyti formą`}
+                    position={`right`}
+                    target="_blank"
+                  />
+                  }
 
-                <h3>Oficialus puslapis</h3>
-                <div>
-                  <Linkify>{organisation.website}</Linkify>
+                  {!!organisation.website &&
+                    <Button
+                      icon={`arrow-blue`}
+                      href={organisation.website}
+                      color={`transparent`}
+                      text={`Oficialus puslapis`}
+                      position={`right`}
+                      target="_blank"
+                    />
+                  }
+
+                  {organisation.location}
+
                 </div>
               </Card>
             );
@@ -122,6 +135,7 @@ export const query = graphql`
               rekvizitai
               title
               website
+              action
               logo {
                 childImageSharp {
                   gatsbyImageData(height: 30)
@@ -164,6 +178,7 @@ Page.propTypes = {
                 rekvizitai: PropTypes.string,
                 title: PropTypes.string,
                 website: PropTypes.string,
+                action: PropTypes.string,
                 logo: PropTypes.object,
               }),
             }),

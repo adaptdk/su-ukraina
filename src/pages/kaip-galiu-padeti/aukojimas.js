@@ -15,6 +15,7 @@ import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import Button from "../../components/Button";
 import Breadcrumb from "../../components/Breadcrumbs";
+import CardSection from "../../components/Card/CardSection";
 
 const Page = ({ data }) => {
   const crumbs = [`Aukojimas`];
@@ -54,15 +55,9 @@ const Page = ({ data }) => {
             );
             return (
               <Card title={organisation.title} logo={logo} key={i}>
-                <h3>Apie</h3>
-                <div>
-                  <Linkify>{organisation.about}</Linkify>
-                </div>
-
-                <h3>Paskirtis</h3>
-                <div>
-                  <Linkify>{organisation.cause}</Linkify>
-                </div>
+                {!!organisation.about && <CardSection title="Apie" content={organisation.about}/>}
+                {!!organisation.cause && <CardSection title="Paskirtis" content={organisation.cause}/>}
+                {!!organisation.rekvizitai && <CardSection title="Kita informacija" content={organisation.rekvizitai}/>}
 
                 {/*<h3>Forma</h3>*/}
                 {/*<div>*/}
@@ -73,30 +68,31 @@ const Page = ({ data }) => {
                 {/*  </ul>*/}
                 {/*</div>*/}
 
-                <h3>Rekvizitai/registracija</h3>
-                <div>
-                  <Linkify>{organisation.rekvizitai}</Linkify>
-                </div>
-
                 <div className={`Card__actions`}>
-                  {/*
+                  {!!organisation.support_link &&
                   <Button
                     icon={`arrow-white`}
+                    href={organisation.support_link}
                     color={`primary`}
                     text={`Paremti`}
                     position={`right`}
+                    target="_blank"
                   />
-                  */}
+                  }
 
-                  <Linkify>
+                  {!!organisation.website &&
                     <Button
                       icon={`arrow-blue`}
                       href={organisation.website}
                       color={`transparent`}
                       text={`Oficialus puslapis`}
                       position={`right`}
+                      target="_blank"
                     />
-                  </Linkify>
+                  }
+
+                  {organisation.location}
+
                 </div>
               </Card>
             );
@@ -139,10 +135,11 @@ export const query = graphql`
             frontmatter {
               about
               cause
-              forma
               rekvizitai
               title
               website
+              support_link
+              location
               logo {
                 childImageSharp {
                   gatsbyImageData(height: 30)
@@ -181,11 +178,12 @@ Page.propTypes = {
               frontmatter: PropTypes.shape({
                 about: PropTypes.string,
                 cause: PropTypes.string,
-                forma: PropTypes.array,
                 rekvizitai: PropTypes.string,
                 title: PropTypes.string,
                 website: PropTypes.string,
+                support_link: PropTypes.string,
                 logo: PropTypes.object,
+                location: PropTypes.string,
               }),
             }),
           }),
