@@ -16,5 +16,11 @@ contents:
 - template: nuoroda-tekstas
   text: KAM Dalijasi karo psichologo A. Jurgaičio patarimais
   link: https://www.facebook.com/LRKAM/posts/325131716317564
+- template: nuoroda-tekstas
+  link: https://www.delfi.lt/projektai/daugiau-sviesos/karo-psichologe-danute-lapenaite-siuos-klausimus-sau-turetu-uzduoti-kiekvienas-stebintis-siandienine-situacija.d?id=89602427
+  text: 'Karo psichologė Danutė Lapėnaitė: šiuos klausimus sau turėtų užduoti kiekvienas,
+    stebintis šiandieninę situaciją
+
+    '
 
 ---
