@@ -17,10 +17,12 @@ const EventCard = ({
   description,
   url,
 }) => {
-  const eventDate = `${new Date(startDate).toLocaleString('lt', { month: 'long' })} ${new Date(startDate).getDay()} d.`;
+  const eventDate = `${new Date(startDate).toLocaleString('lt', { month: 'long' })} ${new Date(startDate).getDate()} d.`;
   const getEventTime = (date) => {
-    const val = `${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`;
-    return val;
+    const hours = new Date(date).getHours();
+    const minutes = new Date(date).getMinutes();
+
+    return `${hours >= 10 ? hours : '0' + hours}:${minutes >= 10 ? minutes : '0' + minutes}`;
   };
 
   return (
