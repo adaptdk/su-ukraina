@@ -8,9 +8,10 @@ cause: Teikiama humanitarinė pagalba pažeidžiamoms grupėms ir individams Ukr
   kovoti korupcija.
 forma:
 - Auka
-rekvizitai: 'Parama: https://www.paypal.com/donate?token=J0WhCAkS9X_7VcS0ELwCfz6ryIpWxOD4YzWICTZNSww4PFax0i_Eut-U5LIURF0Q0TICbpNbeh-ljqzN'
+rekvizitai: ''
 website: https://novaukraine.org
 weight: 7
 logo: "../uploads/image-15-4x.png"
+support_link: https://www.paypal.com/donate?token=72LrLntRYDlGXBzDglcy2H9vtGmnW4Ingp7zoXRWo7MBJnRC8mxUVxn4-ddXrdimIfyEojowwEjZAZ1p
 
 ---
