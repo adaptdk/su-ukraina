@@ -10,8 +10,8 @@ const handlePath = (additionalNavigationText) => {
       return `/kaip-galiu-padeti/savanoryste/`;
     case `aukojimas`:
       return `/kaip-galiu-padeti/aukojimas/`;
-    case `darykite spaudimą`:
-      return `/protesto-formos/darykite-spaudima/`;
+    case `Budinkite veikti`:
+      return `/protesto-formos/budinkite-veikti/`;
     case `prekių boikotas`:
       return `/`;
     case `akcijos ir renginiai`:

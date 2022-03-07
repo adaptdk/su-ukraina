@@ -51,8 +51,8 @@ const Header = () => {
                   <Link to="/protesto-formos/renginiai/">Renginiai</Link>
                 </li>
                 <li>
-                  <Link to="/protesto-formos/darykite-spaudima/">
-                    Darykite spaudimą
+                  <Link to="/protesto-formos/budinkite-veikti/">
+                    Budinkite veikti
                   </Link>
                 </li>
               </ul>

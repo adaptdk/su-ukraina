@@ -7,6 +7,9 @@ import { Title, Meta } from "react-head";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
+import ResourceList from "../../components/ResourceList";
+import ResourceListItem from "../../components/ResourceList/ResourceListItem";
+import SubPage from "../../components/SubPage";
 
 const Page = ({ data }) => {
   const crumbs = [`Piliečio atmintinė`];
@@ -45,18 +48,15 @@ const Page = ({ data }) => {
       <Constraint>
         {handbooks.map((handbook, i) => {
           return (
-            <section key={i}>
-              <h2>{handbook.title}</h2>
-              <div>{handbook.intro}</div>
-              {handbook.contents.map((contents, j) => {
-                return (
-                  <details key={j}>
-                    <summary>{contents.title}</summary>
-                    <Linkify>{contents.answer}</Linkify>
-                  </details>
-                );
-              })}
-            </section>
+            <SubPage title={handbook.title} intro={handbook.intro}>
+              <ResourceList>
+                {handbook.resources?.map((resource, i) => {
+                  return (
+                    <ResourceListItem title={resource.title} subtitle={resource.subtitle} url={resource.link}/>
+                  )
+                })}
+              </ResourceList>
+            </SubPage>
           );
         })}
       </Constraint>
@@ -95,9 +95,10 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              contents {
+              resources {
                 title
-                answer
+                subtitle
+                link
               }
               intro
             }
@@ -133,10 +134,11 @@ Page.propTypes = {
               frontmatter: PropTypes.shape({
                 title: PropTypes.string,
                 intro: PropTypes.string,
-                contents: PropTypes.arrayOf(
+                resources: PropTypes.arrayOf(
                   PropTypes.shape({
                     title: PropTypes.string,
-                    answer: PropTypes.string,
+                    subtitle: PropTypes.string,
+                    link: PropTypes.string,
                   })
                 ),
               }),

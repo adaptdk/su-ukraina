@@ -39,7 +39,7 @@ const Page = ({ data }) => {
           <LinkCollection>
               <LinkCollectionItem to={`/protesto-formos/akcijos/`} text={`Akcijos`}/>
               <LinkCollectionItem to={`/protesto-formos/renginiai/`} text={`Renginiai`}/>
-              <LinkCollectionItem to={`/protesto-formos/darykite-spaudima/`} text={`Darykite spaudimą`}/> 
+              <LinkCollectionItem to={`/protesto-formos/budinkite-veikti/`} text={`Budinkite veikti`}/> 
           </LinkCollection>
         </Constraint>
       </Section>

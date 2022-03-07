@@ -1,0 +1,12 @@
+.SubPage {
+  margin-bottom: calc(var(--s__unit) * 8);
+
+  &__title {
+    font-size: var(--fs__h3);
+  }
+
+  &__intro {
+    margin-bottom: calc(var(--s__unit) * 7);
+    max-width: 42em;
+  }
+}

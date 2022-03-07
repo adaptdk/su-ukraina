@@ -13,7 +13,7 @@ import CardSection from "../../components/Card/CardSection";
 import Button from "../../components/Button";
 
 const Page = ({ data }) => {
-  const crumbs = [`Darykite spaudimą`];
+  const crumbs = [`Budinkite veikti`];
   const additionalNavigation = [`Akcijos ir renginiai`, `Prekių boikotas`];
   const content = data.contents.edges.map((edge) => {
     return {
@@ -28,7 +28,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout pagePath="/protesto-formos/darykite-spaudima/">
+    <Layout pagePath="/protesto-formos/budinkite-veikti/">
       {(!content || !content.title) && <Title>Laiškų rašymas</Title>}
 
       {!!content && (
@@ -88,7 +88,7 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "page-contents" }
         absolutePath: {
-          regex: "//src/content/pages/protesto-formos/darykite-spaudima.md$/"
+          regex: "//src/content/pages/protesto-formos/budinkite-veikti.md$/"
         }
       }
     ) {
