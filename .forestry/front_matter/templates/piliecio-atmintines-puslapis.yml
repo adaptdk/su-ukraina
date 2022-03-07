@@ -19,7 +19,7 @@ fields:
 - name: contents
   type: blocks
   template_types:
-  - klausimas-atsakymas-tekstas-paaiskinimas-etc
+  - nuoroda-tekstas
   config:
     min: 
     max: 
