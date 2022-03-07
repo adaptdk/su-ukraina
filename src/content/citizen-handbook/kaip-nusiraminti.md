@@ -1,12 +1,10 @@
 ---
 title: Kaip nusiraminti
-intro: Visose situacijose svarbu išlikti ramiems, veikti apgalvotai.
+intro: Visose situacijose svarbu išlikti ramiems, veikti apgalvotai. Panika stresinėse
+  situacijos sukelia tik dar daugiau sumaišties.
 contents:
-- template: klausimas-atsakymas-tekstas-paaiskinimas-etc
-  title: Psichologas Antanas
-  answer: Atsako
-- template: klausimas-atsakymas-tekstas-paaiskinimas-etc
-  title: ''
-  answer: ''
+- template: nuoroda-tekstas
+  text: Rūpinkitės savo emocine sveikata.
+  link: https://pagalbasau.lt/apie-projekta/
 
 ---
