@@ -13,6 +13,9 @@ test:
   link: ''
   subtitle: ''
 resources:
+- title: 8 žingsniai „Kaip sukurti saugios kaimynystės grupę?“
+  link: https://policija.lrv.lt/lt/veiklos-sritys/viesosios-tvarkos-ir-gyventoju-saugumo-uztikrinimas/saugi-kaimynyste/kaip-sukurti-saugios-kaimynystes-grupe
+  subtitle: Lietuvos policija
 - title: "„PILIETINIO PASIPRIEŠINIMO ABĖCĖLĖ. Patarimai, kaip kovoti be ginklų“"
   link: "„PILIETINIO PASIPRIEŠINIMO ABĖCĖLĖ. Patarimai, kaip kovoti be ginklų“"
   subtitle: Krašto apsaugos ministerijos leidinys
