@@ -19,7 +19,7 @@ import {
 } from "../../constants/Footer";
 
 // SVGs.
-import SuUkrainaWhite from "../../images/logos/su-ukraina--white.svg";
+import SuUkrainaWhite from "../../images/logos/su-ukraina--secondary.svg";
 import Adapt from "../../images/logos/adapt.svg";
 import LaisvesTv from "../../images/logos/laisves-tv.svg";
 
