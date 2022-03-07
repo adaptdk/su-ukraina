@@ -16,14 +16,6 @@ fields:
     schema:
       format: markdown
   label: Intro
-- name: contents
-  type: blocks
-  template_types:
-  - nuoroda-tekstas
-  config:
-    min: 
-    max: 
-  label: Įrašai
 - name: resources
   type: field_group_list
   fields:
