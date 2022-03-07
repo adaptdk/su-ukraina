@@ -5,5 +5,8 @@ contents:
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
   title: Psichologas Antanas
   answer: Atsako
+- template: klausimas-atsakymas-tekstas-paaiskinimas-etc
+  title: ''
+  answer: ''
 
 ---
