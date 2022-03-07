@@ -9,5 +9,9 @@ contents:
 - template: nuoroda-tekstas
   link: https://soundcloud.com/user-349444234/sets/ramyb-s-sodas
   text: Atsipalaidavimo pratimai
+- template: nuoroda-tekstas
+  text: Paramos vaikams centras dalijasi patarimais, kaip kalbėtis apie situaciją
+    su vaikais.
+  link: https://www.facebook.com/PVC.lt/posts/5556518651041561
 
 ---
