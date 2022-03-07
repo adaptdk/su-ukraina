@@ -20,7 +20,6 @@ const ContentLayout = ({ children }) => {
 
 ContentLayout.propTypes = {
   children: PropTypes.node,
-  pagePath: PropTypes.string,
 };
 
 export default ContentLayout;

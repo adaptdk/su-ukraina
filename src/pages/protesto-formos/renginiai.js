@@ -5,12 +5,13 @@ import { Title, Meta } from "react-head";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
-import Breadcrumb from "../../components/Breadcrumbs";
+import NavigationGroup from "../../components/NavigationGroup";
 import EventCard from "../../components/EventCard";
 import EventCardList from "../../components/EventCardList";
 
 const Page = ({ data }) => {
   const crumbs = [`Akcijos ir renginiai`];
+  const additionalNavigation = [`Darykite spaudimą`, `Prekių boikotas`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -32,7 +33,10 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          <Breadcrumb crumbs={crumbs} />
+          <NavigationGroup
+            crumbs={crumbs}
+            additionalNav={additionalNavigation}
+          />
           <Title>{content.title}</Title>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />

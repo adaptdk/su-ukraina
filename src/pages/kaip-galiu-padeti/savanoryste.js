@@ -9,12 +9,13 @@ import Card from "../../components/Card";
 import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
-import Breadcrumb from "../../components/Breadcrumbs";
+import NavigationGroup from "../../components/NavigationGroup";
 import CardSection from "../../components/Card/CardSection";
 import Button from "../../components/Button";
 
 const Page = ({ data }) => {
   const crumbs = [`Savanorystė`];
+  const additionalNavigation = [`Aukojimas`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -33,7 +34,10 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          <Breadcrumb crumbs={crumbs} />
+          <NavigationGroup
+            crumbs={crumbs}
+            additionalNav={additionalNavigation}
+          />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <Meta name="description" content={content.excerpt} />
