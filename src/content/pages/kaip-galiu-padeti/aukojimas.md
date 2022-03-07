@@ -1,7 +1,7 @@
 ---
-weight: 0
+weight: 
 title: Aukojimas
 slug: aukojimas
 
 ---
-Aukojimo intro
+Aukoti galite per žemiau išvardintas organizacijas. Ačiū už pilietiškumą!
