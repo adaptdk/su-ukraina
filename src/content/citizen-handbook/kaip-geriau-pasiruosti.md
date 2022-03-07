@@ -13,9 +13,6 @@ test:
   link: ''
   subtitle: ''
 resources:
-- title: Ugniagesių gelbėtojų mokyklos informacija apie gaisrų gesinimą.
-  link: https://ugm.lrv.lt/lt/mokymai/mokymo-priemones-1/gaisras
-  subtitle: ''
 - title: "„Ką turime žinoti apie pasirengimą ekstremaliosioms situacijoms ir karo
     metui“"
   link: https://vilnius.lt/lt/savivaldybe/saugus-miestas/civiline-sauga/ka-turime-zinoti-apie-pasirengima-ekstremaliosioms-situacijoms-ir-karo-metui-5/?fbclid=IwAR3PTfD3DqVYzJD26t5XgFKiZuUUlqZKIX6-K_bOgv2CbO7H3FHrt6Soo3o
@@ -34,6 +31,9 @@ resources:
   subtitle: ''
 - title: Išgyvenimo mokyklos organizuojami Išgyvenimo kursai.
   link: http://www.isgyvenimomokykla.lt
+  subtitle: ''
+- title: Ugniagesių gelbėtojų mokyklos informacija apie gaisrų gesinimą.
+  link: https://ugm.lrv.lt/lt/mokymai/mokymo-priemones-1/gaisras
   subtitle: ''
 
 ---
