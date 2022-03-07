@@ -1,42 +1,36 @@
 .additional-navigation {
-    width: fit-content;
+  width: fit-content;
 
-    &__container {
-        display: flex;
-        margin: 0;
-        padding: 0;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    &::after {
+      margin: 0 25px 0 5px;
+      background: var(--c__primary);
+      content: "";
+      mask-image: url("../../images/icons/arrow.svg");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 16px;
     }
+  }
 
-    &__item {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        &:not(:first-child) {
-            margin-left: 25px;
-        }
+  a {
+    text-transform: uppercase;
+    text-decoration: inherit;
+    font-size: 14px;
+  }
 
-        &::after {
-            margin-left: 20px;
-            background: var(--c__primary);
-            content: "";
-            mask-image: url("../../images/icon-arrow.svg");
-            mask-position: center;
-            mask-repeat: no-repeat;
-            mask-size: cover;
-            position: relative;
-            height: 16px;
-            width: 16px;
-            top: 50%;
-            bottom: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-    a {
-        color: var(--c__primary);
-        text-transform: uppercase;
-        text-decoration: inherit;
-        font-weight: 500;
-        font-size: 14px;
-    }
+  li {
+    list-style-type: none;
+  }
 }

@@ -11,7 +11,7 @@ const handlePath = (additionalNavigationText) => {
     case `aukojimas`:
       return `/kaip-galiu-padeti/aukojimas/`;
     case `darykite spaudimą`:
-      return `/protesto-formos/laisku-rasymas/`;
+      return `/protesto-formos/darykite-spaudima/`;
     case `prekių boikotas`:
       return `/`;
     case `akcijos ir renginiai`:
@@ -31,8 +31,8 @@ const AdditionalNavigation = ({ additionalNav }) => {
         {additionalNav.map((additionalEl, index) => {
           let path = handlePath(additionalEl);
           return (
-            <li key={index} className="additional-navigation__item">
-              <Link to={path}>{additionalEl}</Link>
+            <li key={index}>
+              <Link className="additional-navigation__item" to={path}>{additionalEl}</Link>
             </li>
           );
         })}

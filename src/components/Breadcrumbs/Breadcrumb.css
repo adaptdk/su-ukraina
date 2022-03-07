@@ -25,8 +25,17 @@
     padding: 0;
   }
 
+  &__solo{
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
   span {
     color: inherit;
     text-decoration: inherit;
+  }
+
+  a, span {
+    font-size: 14px;
   }
 }

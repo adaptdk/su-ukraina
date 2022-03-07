@@ -4,9 +4,9 @@ import { Link } from "gatsby";
 
 import "./Breadcrumb.css";
 
-const Breadcrumb = ({ crumbs }) => {
+const Breadcrumb = ({ crumbs, className = `` }) => {
   return (
-    <nav className="breadcrumb">
+    <nav className={`breadcrumb${className}`}>
       <ol className="breadcrumb__container">
         <li className="breadcrumb__item">
           <Link to="/">Titulinis</Link>
@@ -25,6 +25,7 @@ const Breadcrumb = ({ crumbs }) => {
 
 Breadcrumb.propTypes = {
   crumbs: PropTypes.arrayOf(PropTypes.string),
+  className: PropTypes.string,
 };
 
 export default Breadcrumb;
