@@ -1,4 +1,18 @@
 ---
 label: Nuoroda + tekstas
 hide_body: true
-fields: []
+fields:
+- name: link
+  type: text
+  config:
+    required: false
+  label: Nuoroda
+- name: text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Tekstas
