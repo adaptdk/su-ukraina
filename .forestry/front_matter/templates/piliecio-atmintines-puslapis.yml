@@ -45,7 +45,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: title
   label: Resursai
 pages:
 - src/content/citizen-handbook/kaip-geriau-pasiruosti.md
