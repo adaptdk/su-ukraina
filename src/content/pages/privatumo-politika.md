@@ -20,7 +20,7 @@ Mūsų įmonės kodas yra: 303276505
 
 Mūsų adresas: Antakalnio g. 13-23, LT-66117 Druskininkai
 
-Mūsų el. pašto adresas: [vita@adaptagency.com](mailto:vita@adaptagency.com)
+Mūsų el. pašto adresas: emilija[@adaptagency.com](mailto:vita@adaptagency.com)
 
 **3. Kodėl renkate informaciją apie mane?**
 
@@ -38,21 +38,13 @@ Pateikus paklausimą, gali būti prašoma pateikti papildomos informacijos apie 
 
 Jūsų el. pašto adresas;
 
-Įmonės pavadinimas;
-
-Telefono numeris;
-
-Pareigos;
+Jūsų vardas ir pavardė;
 
 Paklausimo tema;
 
 Paklausimo data;
 
 Paklausimo turinys;
-
-Prie paklausimo pridėti failai;
-
-Jūsų vardas ir pavardė;
 
 Atsakymas į Jūsų paklausimą;
 
@@ -66,7 +58,7 @@ Slapukai (angl. cookies) – tai įprasta naršymo tinklalapiuose praktika, kuri
 
 Naudojame slapukus, kad:
 
-užtikrintume puslapio funkcionalumą;tiksliniam rinkodaros planavimui ir veiksmų orientavimui;jog mūsų puslapis geriau atitiktų Jūsų poreikius;paslaugų plėtrai ir naudojimosi svetaine analizei.
+užtikrintume puslapio funkcionalumą; tiksliniam rinkodaros planavimui ir veiksmų orientavimui; jog mūsų puslapis geriau atitiktų Jūsų poreikius; paslaugų plėtrai ir naudojimosi svetaine analizei.
 
 **8. Kaip ištrinti slapukus?**
 
@@ -114,4 +106,4 @@ Jei norite imtis žemiau nurodytų veiksmų, prašome kreiptis į mūsų kontakt
 
 Jeigu Jūs turite klausimų, komentarų ar nusiskundimų, susijusių su tuo, kaip mes renkame, naudojame ir saugome duomenis apie Jus, UAB „Adapt LT“ yra paskyrusi kontaktinį asmenį, kuris Jums gali padėti.
 
-Jei Jums reikalinga jo pagalba, prašome kreiptis el. paštu [vita@adaptagency.com](mailto:vita@adaptagency.com)
+Jei Jums reikalinga jo pagalba, prašome kreiptis el. paštu [emilija@adaptagency.com](mailto:vita@adaptagency.com)
