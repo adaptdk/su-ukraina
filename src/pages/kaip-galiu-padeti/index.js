@@ -7,6 +7,9 @@ import { Title, Meta } from "react-head";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumbs";
+import Section from "../../components/Section";
+import LinkCollection from "../../components/LinkCollection";
+import LinkCollectionItem from "../../components/LinkCollection/LinkCollectionItem";
 
 const Page = ({ data }) => {
   const crumbs = [`Kaip galiu padėti?`];
@@ -31,18 +34,14 @@ const Page = ({ data }) => {
         </Constraint>
       )}
 
-      <Constraint>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/kaip-galiu-padeti/aukojimas/">Aukojimas</Link>
-            </li>
-            <li>
-              <Link to="/kaip-galiu-padeti/savanoryste/">Savanorystė</Link>
-            </li>
-          </ul>
-        </nav>
-      </Constraint>
+      <Section className="LinksCollectionWrapper">
+        <Constraint>
+          <LinkCollection>
+              <LinkCollectionItem to={`/kaip-galiu-padeti/aukojimas/`} text={`Aukojimas`}/>
+              <LinkCollectionItem to={`/kaip-galiu-padeti/savanoryste/`} text={`Savanorystė`}/>      
+          </LinkCollection>
+        </Constraint>
+      </Section>
     </Layout>
   );
 };

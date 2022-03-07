@@ -41,13 +41,19 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Rekvizitai
+  label: Kita informacija
   description: Rekvizitai, registracija, informacija kaip aukoti/prisidėti
 - name: website
   type: text
   config:
     required: false
   label: Oficialus puslapis
+- name: action
+  type: text
+  config:
+    required: false
+  label: Veiksmo nuoroda
+  description: Nuoroda į anketą ar pan.
 - name: weight
   type: number
   label: Svoris

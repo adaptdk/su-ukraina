@@ -1,18 +1,20 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
+import Constraint from "../Constraint";
+
 import "./HeroBanner.css";
 
 const HeroBanner = ({ title, subtitle, children }) => {
   return (
     <section className="HeroBanner">
       <div className="HeroBanner__text">
-        {!!title && <h1>{title}</h1>}
-        {!!subtitle && <p>{subtitle}</p>}
+        <Constraint>
+          {!!title && <h1>{title}</h1>}
+          {!!subtitle && <p>{subtitle}</p>}
+        </Constraint>
       </div>
-      <div class="HeroBanner__content">
-        {children}
-      </div>
+      <div className="HeroBanner__content">{children}</div>
     </section>
   );
 };
@@ -22,6 +24,5 @@ HeroBanner.propTypes = {
   subtitle: PropTypes.string,
   children: PropTypes.node,
 };
-
 
 export default HeroBanner;

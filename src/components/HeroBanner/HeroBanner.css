@@ -1,12 +1,18 @@
+.herosection {
+  background: transparent;
+
+  /* this is weird. styles are not loaded properly if this is missing */
+}
+
 .HeroSection {
+  display: grid;
+  padding: 1px 0;
   position: relative;
 
-  .gatsby-image-wrapper {
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
+  &__background {
+    grid-area: 1/1;
+    max-height: 600px;
+    position: relative;
 
     &::after {
       background: rgb(15 71 175 / 50%);
@@ -19,9 +25,17 @@
       z-index: 1;
     }
   }
+
+  @media (min-width: 40rem) {
+    &__background {
+      max-height: 500px;
+    }
+  }
 }
 
 .HeroBanner {
+  grid-area: 1 / 1;
+
   &__content {
     margin-bottom: calc(var(--s__unit) * 10);
     position: relative;
@@ -30,23 +44,34 @@
 
   &__text {
     color: white;
-    margin-bottom: calc(var(--s__unit) * 20);
+    margin-bottom: calc(var(--s__unit) * 10);
     position: relative;
-    text-align: center;
+    text-align: left;
     z-index: 10;
 
     h1 {
-      font-size: 60px;
-      font-weight: var(--fw__medium);
+      font-size: var(--fs__h2);
     }
 
     p {
-      font-size: 24px;
       margin: 0 auto;
+    }
+
+    @media (min-width: 40rem) {
+      margin-bottom: calc(var(--s__unit) * 20);
+      text-align: center;
+
+      h1 {
+        font-size: var(--fs__h1);
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 
-  .Constraint {
+  &__content .Constraint {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

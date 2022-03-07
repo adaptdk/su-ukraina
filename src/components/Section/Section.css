@@ -5,4 +5,16 @@
   &--bg-blue {
     background-color: var(--c__form-bg);
   }
+
+  &.HeroSection {
+    margin-bottom: calc(var(--s__unit) * 10);
+  }
+
+  &.ProtestFormsSection {
+    margin-bottom: calc(var(--s__unit) * 10);
+  }
+
+  &.BeAwakeSection {
+    background-color: #f6f6f6;
+  }
 }

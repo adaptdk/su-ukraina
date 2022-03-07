@@ -6,7 +6,7 @@ import FormField from "../FormField";
 import TextInput from "../TextInput";
 import TextArea from "../TextArea";
 import EmailInput from "../EmailInput";
-import SelectInput from "../SelectInput/SelectInput";
+// import SelectInput from "../SelectInput/SelectInput";
 
 import "./ContactForm.css";
 
@@ -26,24 +26,30 @@ const ContactForm = ({ returnDestination = `/` }) => {
           action={`https://ihv3yqhbe7.execute-api.eu-west-1.amazonaws.com/v1/submit?destination=${returnDestination}`}
         >
           <FormField labelFor="name" label="Vardas" type="text">
-            <TextInput id="name" placeholder="Vardas" name="name" />
+            <TextInput
+              id="name"
+              placeholder="Vardenis Pavardenis"
+              name="name"
+            />
           </FormField>
 
           <FormField labelFor="email" label="El. paštas" type="email">
-            <EmailInput id="email" placeholder="Vardas" name="email" />
+            <EmailInput id="email" placeholder="vardas@post.lt" name="email" />
           </FormField>
 
+          {/*
           <FormField labelFor="category" label="Kategorija" type="select">
             <SelectInput id="category" name="category">
               <option value="A">A</option>
               <option value="B">B</option>
             </SelectInput>
           </FormField>
+          */}
 
-          <FormField labelFor="description" label="Aprašymas" type="textarea">
+          <FormField labelFor="description" label="Žinutė" type="textarea">
             <TextArea
               id="description"
-              placeholder="Aprašymas"
+              placeholder="Žinutė"
               name="description"
             />
           </FormField>
@@ -54,6 +60,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
                 type="checkbox"
                 id="privacy-policy-accepted"
                 name="privacy-policy-accepted"
+                required
               />
               Susipažinau ir sutinku su{` `}
               <a href="#" title="Privatumo politika">
@@ -63,7 +70,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
           </div>
 
           <div className="ContactForm__actions">
-            <Button type="submit" text="Siųsti" />
+            <Button color="transparent" type="submit" text="Siųsti" />
           </div>
         </form>
       </div>

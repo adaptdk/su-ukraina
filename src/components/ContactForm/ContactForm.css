@@ -8,16 +8,21 @@
     color: red;
   }
 
-  @media (min-width: 700px) {
-    padding: calc(var(--s__unit) * 8) 0;
-  }
-
   > div {
     box-sizing: border-box;
     width: 100%;
 
-    @media (min-width: 700px) {
+    @media (min-width: 40rem) {
       width: 50%;
+    }
+  }
+
+  &__actions {
+    margin-top: calc(var(--s__unit) * 5);
+
+    .Button {
+      justify-content: center;
+      width: 100%;
     }
   }
 
@@ -26,19 +31,37 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: calc(var(--s__unit) * 8);
-
-    @media (min-width: 700px) {
-      padding: calc(var(--s__unit) * 15);
-    }
+    padding: calc(var(--s__unit) * 4) 0;
 
     h3 {
       margin-bottom: calc(var(--s__unit) * 6);
+      margin-top: 0;
+    }
+
+    p {
       margin-top: 0;
     }
   }
 
   &__actions {
     margin-top: calc(var(--s__unit) * 5);
+
+    .Button {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    padding: calc(var(--s__unit) * 8) 0;
+
+    &__text {
+      padding: calc(var(--s__unit) * 15);
+    }
+
+    &__actions {
+      .Button {
+        width: unset;
+      }
+    }
   }
 }

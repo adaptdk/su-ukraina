@@ -19,52 +19,54 @@ import {
 } from "../../constants/Footer";
 
 // SVGs.
-import SuUkrainaWhite from '../../images/logos/su-ukraina--white.svg';
-import Adapt from '../../images/logos/adapt.svg';
-import LaisvesTv from '../../images/logos/laisves-tv.svg';
+import SuUkrainaWhite from "../../images/logos/su-ukraina--white.svg";
+import Adapt from "../../images/logos/adapt.svg";
+import LaisvesTv from "../../images/logos/laisves-tv.svg";
 
 const Footer = () => {
   return (
     <footer className="Footer">
       <Constraint>
         <div className="Footer__cta-section">
-          Kiekvienas veiksmas svarbus
-          <Button
-            to={PATH_HOW_TO_DONATE}
-            icon={ICON_DONATE}
-            text={TEXT_WANT_TO_DONATE}
-          />
-          <Button
-            to={PATH_HOW_TO_VOLUNTEER}
-            icon={ICON_VOLUNTEER}
-            text={TEXT_WANT_TO_VOLUNTEER}
-          />
+          <div className="Footer__cta-section-title">Kiekvienas veiksmas svarbus</div>
+          <div className="Footer__cta-section-actions">
+            <Button
+              to={PATH_HOW_TO_DONATE}
+              icon={ICON_DONATE}
+              color={`secondary`}
+              text={TEXT_WANT_TO_DONATE}
+              position={`left`}
+            />
+            <Button
+              to={PATH_HOW_TO_VOLUNTEER}
+              icon={ICON_VOLUNTEER}
+              color={`secondary`}
+              text={TEXT_WANT_TO_VOLUNTEER}
+              position={`left`}
+            />
+          </div>
         </div>
-        <div className="Footer__credits">
+        <div className="Footer__menus">
           <p>
             <img
               className="Footer__logo"
               src={SuUkrainaWhite}
-              alt="Su Ukraina poraštės logo"
+              alt="SuUkraina.lt"
+              height="40"
+              width="235"
             />
           </p>
           <p>
             <nav className="Footer__nav" aria-label="Poraštės navigacija">
               <ul className="Footer__menu">
                 <li>
-                  <Link to="/apie-mus/">
-                    Apie mus
-                  </Link>
+                  <Link to="/apie-mus/">Apie mus</Link>
                 </li>
                 <li>
-                  <Link to="/privatumo-politika/">
-                    Privatumo politika
-                  </Link>
+                  <Link to="/privatumo-politika/">Privatumo politika</Link>
                 </li>
                 <li>
-                  <Link to="/kontaktai/">
-                    Kontaktai
-                  </Link>
+                  <Link to="/kontaktai/">Kontaktai</Link>
                 </li>
               </ul>
             </nav>
@@ -75,17 +77,16 @@ const Footer = () => {
             2022 | <span title="Героям слава!">Слава Україні!</span>
           </p>
           <p className="Footer__partners">
-            Prie puslapio prisidėjo:
+            <span className="Footer__partners-intro">
+              Prie puslapio prisidėjo:
+            </span>
             {` `}
             <a
               href="https://adaptagency.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
-                src={Adapt}
-                alt="Adapt LT logo"
-              />
+              <img src={Adapt} alt="Adapt LT logo" width="93" height="15" />
             </a>
             {` `}
             <a
@@ -93,10 +94,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
-                src={LaisvesTv}
-                alt="Adapt LT logo"
-              />
+              <img src={LaisvesTv} alt="Adapt LT logo" width="49" height="49" />
             </a>
           </p>
         </div>

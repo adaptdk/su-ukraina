@@ -12,5 +12,7 @@ rekvizitai: 'Parama: https://www.aukok.lt/projektai/Musu-sirdys-ir-rankos-Ukrain
 website: https://www.aukok.lt
 weight: 3
 logo: "../uploads/image-5-4x.png"
+support_link: https://www.aukok.lt/projektai/Musu-sirdys-ir-rankos-Ukrainai#aukoti
+location: Lietuvoje
 
 ---

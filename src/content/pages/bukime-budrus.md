@@ -1,7 +1,6 @@
 ---
-weight: 0
+weight: 
 title: Būkime budrūs
 slug: bukime-budrus
 
 ---
-Būkime budrūs intro

@@ -11,6 +11,42 @@
     word-break: break-word;
   }
 
+  &__type {
+    margin-bottom: calc(var(--s__unit)*5);
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        background: #e7ecef;
+        border-radius: var(--s__main-border-radius);
+        padding: var(--s__unit);
+        display: inline-block;
+        text-transform: uppercase;
+        color: var(--c__primary);
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  &__html {
+    white-space: normal;
+
+    ul {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 10px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
   &__heading {
     background: hsl(240deg 30% 98%);
     border-bottom: 1px solid hsl(240deg 30% 92%);
@@ -22,7 +58,26 @@
   &__title {
     color: var(--c__primary);
     font-size: 1.25rem;
-    font-weight: var(--fw__bold);
+    font-weight: var(--fw__medium);
     margin: 0;
+  }
+}
+
+.CardSection {
+
+  + .CardSection {
+    margin-top: calc(var(--s__unit)*5);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    margin-bottom: calc(var(--s__unit)*2);
+    margin-top: 0;
+  }
+
+  &__content {
+
   }
 }

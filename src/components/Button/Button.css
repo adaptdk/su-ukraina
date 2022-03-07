@@ -1,37 +1,88 @@
-.Button,
-a.Button {
+.Button {
   align-items: center;
-  background: var(--c__secondary);
   border: 0;
   border-radius: var(--s__main-border-radius);
-  color: var(--c__primary);
   display: flex;
   font: inherit;
   font-weight: var(--fw__medium);
   line-height: inherit;
   margin: 0;
-  padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 6);
+  overflow: hidden;
+  padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 4);
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  z-index: 1;
+
+  + .Button:not(.Footer__cta-section .Button) {
+    margin-left: calc(var(--s__unit) * 2);
+  }
+
+  &::after {
+    border-radius: 100%;
+    bottom: -50px;
+    content: "";
+    height: 50px;
+    position: absolute;
+    right: -50px;
+    transition: transform 1s ease-in-out;
+    width: 50px;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(15);
+    }
+  }
+
+  &--primary {
+    background: var(--c__primary);
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
+    color: var(--c__main-bg);
+
+    &::after {
+      background: #2161d7;
+    }
+  }
+
+  &--secondary {
+    background: var(--c__secondary);
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
+    color: var(--c__primary);
+
+    &::after {
+      background: #ffc700;
+    }
+  }
+
+  &--transparent {
+    background: transparent;
+    border: 1px solid rgb(63 81 181 / 50%);
+    color: var(--c__primary);
+
+    &::after {
+      background: #eaf1ff;
+    }
+  }
 
   &__icon {
-    margin-right: 10px;
-
     &::before {
-      background: #0f47af;
       content: "";
       display: block;
-      height: 16px;
+      height: 20px;
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: contain;
       position: relative;
-      width: 16px;
+      width: 20px;
     }
 
     &--donate {
       &::before {
+        background: #3f51b5;
         height: 20px;
+        margin-right: 10px;
         mask-image: url("../../images/icons/donate.svg");
         width: 20px;
       }
@@ -39,8 +90,30 @@ a.Button {
 
     &--volunteer {
       &::before {
+        background: #3f51b5;
         height: 20px;
+        margin-right: 10px;
         mask-image: url("../../images/icons/volunteer.svg");
+        width: 20px;
+      }
+    }
+
+    &--arrow-white {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-left: 10px;
+        mask-image: url("../../images/icons/arrow-white.svg");
+        width: 20px;
+      }
+    }
+
+    &--arrow-blue {
+      &::before {
+        background: #3f51b5;
+        height: 20px;
+        margin-left: 10px;
+        mask-image: url("../../images/icons/arrow-blue.svg");
         width: 20px;
       }
     }

@@ -97,8 +97,12 @@ module.exports = {
         background_color: `#0F47AF`,
         theme_color: `#FFD500`,
         display: `standalone`,
-        icon: `src/images/main-icon.png`,
+        icon: `src/images/main-icon.svg`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
+    `gatsby-plugin-offline`,
   ],
 };

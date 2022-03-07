@@ -71,7 +71,7 @@ const EventCard = ({
           <div dangerouslySetInnerHTML={{ __html: description }} className="EventCard__event-information"/>
         }
       </div>
-      {url && <Button href={url} text="Renginio Nuoroda"/>}
+      {url && <Button icon="arrow-blue" color="transparent" href={url} text="Renginio Nuoroda"/>}
     </div>
   );
 };

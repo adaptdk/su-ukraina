@@ -1,7 +1,6 @@
 ---
-weight: 0
+weight: 
 title: Savanorystė
 slug: savanoryste
 
 ---
-Savanorystės intro

@@ -6,10 +6,33 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 14px 10px;
-  max-width: 360px;
+  width: 100%;
+  margin-bottom: calc(var(--s__unit)*5);
   padding: 24px;
   width: 100%;
+
+  @media (min-width: 40rem) {
+    width: calc(50% - var(--s__unit)*5);
+    margin-right: calc(var(--s__unit)*5);
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 60rem) {
+    width: calc(33.3% - var(--s__unit)*5);
+    margin-right: calc(var(--s__unit)*5);
+
+    /* For now */
+    &:nth-of-type(2n) {
+      margin-right: calc(var(--s__unit)*5);
+    }
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+   }
 
   &__content-container {
     align-items: flex-start;
@@ -20,18 +43,15 @@
   &__event-type-wrapper {
     background: #e7ecef;
     border-radius: var(--s__main-border-radius);
-    margin-bottom: var(--s__unit);
-    padding: 12px;
+    margin-bottom: calc(var(--s__unit)*2);
+    padding: var(--s__unit);
   }
 
   &__event-type {
     align-items: center;
     color: var(--c__primary);
     display: flex;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 18px;
+    font-size: 0.75rem;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
@@ -40,7 +60,7 @@
 
   &__event-title {
     color: #262626;
-    font-size: 24px;
+    font-size: 1.45rem;
     font-style: normal;
     font-weight: var(--fw__medium);
     line-height: 29px;
@@ -49,17 +69,16 @@
 
   &__event-organizer {
     color: #262626;
-    font-size: 14px;
+    font-size: 0.825rem;
     font-style: normal;
     font-weight: var(--fw__medium);
-    line-height: 22px;
     margin: 0 0 12px;
   }
 
   &__event-info-wrapper {
     align-items: center;
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: calc(var(--s__unit)*2);
   }
 
   &__icon {
@@ -101,5 +120,11 @@
 
   &__event-info-text {
     margin: 0;
+  }
+
+  .Button {
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
   }
 }

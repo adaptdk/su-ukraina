@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 
 import Constraint from "../Constraint";
 
+import Logo from "../../images/logos/su-ukraina--original.svg";
+
 import "./Header.css";
 
 const Header = () => {
@@ -10,11 +12,17 @@ const Header = () => {
     <div className="Header">
       <Constraint className="Header__content">
         <Link to="/">
-          <h1>SuUkraina.lt</h1>
+          <img
+            className="Header__logo"
+            src={Logo}
+            alt="SuUkraina.lt"
+            height="40"
+            width="235"
+          />
         </Link>
         <input type="checkbox" name="menu-sensor" id="menu-sensor" />
         <label className="Header__menu-trigger" htmlFor="menu-sensor">
-          ☰
+          <span></span>
         </label>
         <nav className="Header__nav" aria-label="Pagrindinė navigacija">
           <ul className="Header__menu">
@@ -43,8 +51,8 @@ const Header = () => {
                   <Link to="/protesto-formos/renginiai/">Renginiai</Link>
                 </li>
                 <li>
-                  <Link to="/protesto-formos/laisku-rasymas/">
-                    Laiškų rašymas
+                  <Link to="/protesto-formos/darykite-spaudima/">
+                    Darykite spaudimą
                   </Link>
                 </li>
               </ul>

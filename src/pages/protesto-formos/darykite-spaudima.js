@@ -9,6 +9,8 @@ import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
+import CardSection from "../../components/Card/CardSection";
+import Button from "../../components/Button";
 
 const Page = ({ data }) => {
   const crumbs = [`Darykite spaudimą`];
@@ -26,7 +28,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout pagePath="/protesto-formos/laisku-rasymas/">
+    <Layout pagePath="/protesto-formos/darykite-spaudima/">
       {(!content || !content.title) && <Title>Laiškų rašymas</Title>}
 
       {!!content && (
@@ -47,7 +49,7 @@ const Page = ({ data }) => {
           {addressees.map((addressee, i) => {
             return (
               <Card title={addressee.title} key={i}>
-                <div>
+                <div class="Card__type">
                   <ul>
                     {addressee.type.map((singleType, j) => {
                       return <li key={j}>{singleType}</li>;
@@ -55,19 +57,21 @@ const Page = ({ data }) => {
                   </ul>
                 </div>
 
-                <h3>Klausimas, dėl kurio galima kreiptis</h3>
-                <div>
-                  <Linkify>{addressee.purpose}</Linkify>
-                </div>
+                {!!addressee.purpose && <CardSection title="Kreipimosi klausimas" content={addressee.purpose}/>}
+                {!!addressee.emailOrLink && <CardSection title="Skaitmeninis kanalas" content={addressee.emailOrLink}/>}
+                {!!addressee.address && <CardSection title="Adresas" content={addressee.address}/>}
 
-                <h3>El. pašto adresas ar kitas skaitmeninis kanalas</h3>
-                <div>
-                  <Linkify>{addressee.emailOrLink}</Linkify>
-                </div>
-
-                <h3>Adresas</h3>
-                <div>
-                  <Linkify>{addressee.address}</Linkify>
+                <div className={`Card__actions`}>
+                  {!!addressee.emailOrLink &&
+                    <Button
+                      icon={`arrow-blue`}
+                      href={`mailto:${addressee.emailOrLink}`}
+                      color={`transparent`}
+                      text={`Rašyti laišką`}
+                      position={`right`}
+                      target="_blank"
+                    />
+                  }
                 </div>
               </Card>
             );
@@ -84,7 +88,7 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "page-contents" }
         absolutePath: {
-          regex: "//src/content/pages/protesto-formos/laisku-rasymas.md$/"
+          regex: "//src/content/pages/protesto-formos/darykite-spaudima.md$/"
         }
       }
     ) {
