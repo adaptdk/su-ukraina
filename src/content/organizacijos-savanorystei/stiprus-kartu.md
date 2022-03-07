@@ -7,7 +7,7 @@ cause: Pagalba į Lietuvą atvykstantiems karo pabėgeliams. Jei turite laisvą 
 forma:
 - Apgyvendinimas
 - Pavežėjimas
-rekvizitai: Anketa:https://stipruskartu.lt/#anketa
+rekvizitai: ''
 website: https://stipruskartu.lt
 weight: 10
 logo: "../uploads/image-10-4x.png"
