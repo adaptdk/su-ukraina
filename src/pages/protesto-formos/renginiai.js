@@ -11,7 +11,7 @@ import EventCardList from "../../components/EventCardList";
 
 const Page = ({ data }) => {
   const crumbs = [`Akcijos ir renginiai`];
-  const additionalNavigation = [`Darykite spaudimą`, `Prekių boikotas`];
+  const additionalNavigation = [`Darykite spaudimą`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,

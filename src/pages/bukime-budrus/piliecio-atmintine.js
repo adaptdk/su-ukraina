@@ -10,10 +10,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 
 const Page = ({ data }) => {
   const crumbs = [`Piliečio atmintinė`];
-  const additionalNavigation = [
-    `Patikima informacija`,
-    `Kaip apsisaugoti nuo sukčių?`,
-  ];
+  const additionalNavigation = [`Patikima informacija`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
