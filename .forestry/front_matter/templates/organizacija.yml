@@ -66,3 +66,18 @@ fields:
     maxSize: 64
   label: Logotipas
   description: Organization logo
+- name: location
+  type: select
+  default: Lietuvoje
+  config:
+    required: false
+    options:
+    - Lietuvoje
+    - Užsienyje
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Vieta
+  description: Kurioje vietoje randasi organizacija.
