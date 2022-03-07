@@ -6,9 +6,10 @@ cause: Padėkite vaikams Ukrainoje. Karo ištiktose šalyse vaikamstrūksta mais
   vandens, pastogės.Padėkite suteikti vaikams būtiną pagalbą.
 forma:
 - Auka
-rekvizitai: 'Parama: https://unicef.lt/paaukok-vaikams-2/'
+rekvizitai: ''
 website: https://unicef.lt
 weight: 5
 logo: "../uploads/image-9-4x.png"
+support_link: https://unicef.lt/paaukok-vaikams-2/
 
 ---
