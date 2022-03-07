@@ -28,11 +28,6 @@ fields:
       format: markdown
   label: Paskirtis
   description: Organizacijos pagrindinė kryptis
-- name: forma
-  type: tag_list
-  default: []
-  label: Forma
-  description: Paramos forma (pvz. auka, savanorystė)
 - name: rekvizitai
   type: textarea
   default: ''
