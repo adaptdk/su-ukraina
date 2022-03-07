@@ -14,7 +14,7 @@ import Button from "../../components/Button";
 
 const Page = ({ data }) => {
   const crumbs = [`Budinkite veikti`];
-  const additionalNavigation = [`Akcijos ir renginiai`, `Prekių boikotas`];
+  const additionalNavigation = [`Akcijos ir renginiai`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,

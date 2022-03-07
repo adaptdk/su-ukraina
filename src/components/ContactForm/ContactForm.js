@@ -16,8 +16,10 @@ const ContactForm = ({ returnDestination = `/` }) => {
       <div className="ContactForm__text">
         <h3>Turi idėjų? Pasidalink</h3>
         <p>
-          Karas Ukrainoje sukėlė ir didžiulę dezinformacijos bei propagandos
-          bangą.
+          Šis puslapis skirtas pateikti svarbiausią informaciją apie pagalbą Ukrainai.
+        </p>
+        <p>
+          Jeigu turite idėjų kaip papildyti turinį, kviečiame susisiekti.
         </p>
       </div>
       <div className="ContactForm__form">

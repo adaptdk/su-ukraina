@@ -13,21 +13,30 @@
     flex-wrap: wrap;
 
     &::after {
-      margin: 0 25px 0 5px;
       background: var(--c__primary);
       content: "";
+      margin: 0 25px 0 5px;
       mask-image: url("../../images/icons/arrow.svg");
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: cover;
+      transform: translateX(0);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
       width: 16px;
+    }
+
+    &:hover {
+      &::after {
+        background: #2161d7;
+        transform: translateX(5px);
+      }
     }
   }
 
   a {
-    text-transform: uppercase;
-    text-decoration: inherit;
     font-size: 14px;
+    text-decoration: inherit;
+    text-transform: uppercase;
   }
 
   li {
