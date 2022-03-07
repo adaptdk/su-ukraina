@@ -94,8 +94,9 @@ const Page = ({ data }) => {
                       target="_blank"
                     />
                   }
-
-                  {organisation.location}
+                  
+                  {/* Use this for tabs */}
+                  {/* {organisation.location} */}
 
                 </div>
               </Card>
