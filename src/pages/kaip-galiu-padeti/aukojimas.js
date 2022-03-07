@@ -16,6 +16,7 @@ import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
 import Button from "../../components/Button";
 import CardSection from "../../components/Card/CardSection";
+import Tabs from "../../components/Tabs";
 
 const Page = ({ data }) => {
   const crumbs = [`Aukojimas`];
@@ -31,6 +32,12 @@ const Page = ({ data }) => {
   const organisations = data.organisations.edges.map((edge) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
+
+  const [tabState, setTabState] = React.useState(1);
+
+  function handleTab(tabState) {
+    setTabState(tabState);
+  }
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/aukojimas/">
@@ -49,6 +56,12 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
+        <Tabs
+          handleTab={handleTab}
+          tabState={tabState}
+          firstOption={`Lietuvoje`}
+          secondOption={`Užsienyje`}
+        />
         <CardList>
           {organisations.map((organisation, i) => {
             const logo = organisation.logo && (
@@ -57,50 +70,64 @@ const Page = ({ data }) => {
                 alt={organisation.title}
               />
             );
-            return (
-              <Card title={organisation.title} logo={logo} key={i}>
-                {!!organisation.about && <CardSection title="Apie" content={organisation.about}/>}
-                {!!organisation.cause && <CardSection title="Paskirtis" content={organisation.cause}/>}
-                {!!organisation.rekvizitai && <CardSection title="Kita informacija" content={organisation.rekvizitai}/>}
-
-                {/*<h3>Forma</h3>*/}
-                {/*<div>*/}
-                {/*  <ul>*/}
-                {/*    {organisation.forma.map((forma, j) => {*/}
-                {/*      return <li key={j}>{forma}</li>;*/}
-                {/*    })}*/}
-                {/*  </ul>*/}
-                {/*</div>*/}
-
-                <div className={`Card__actions`}>
-                  {!!organisation.support_link &&
-                  <Button
-                    icon={`arrow-white`}
-                    href={organisation.support_link}
-                    color={`primary`}
-                    text={`Paremti`}
-                    position={`right`}
-                    target="_blank"
-                  />
-                  }
-
-                  {!!organisation.website &&
-                    <Button
-                      icon={`arrow-blue`}
-                      href={organisation.website}
-                      color={`transparent`}
-                      text={`Oficialus puslapis`}
-                      position={`right`}
-                      target="_blank"
+            const location = tabState === 1 ? `Lietuvoje` : `Užsienyje`;
+            if (location === organisation.location) {
+              return (
+                <Card title={organisation.title} logo={logo} key={i}>
+                  {!!organisation.about && (
+                    <CardSection title="Apie" content={organisation.about} />
+                  )}
+                  {!!organisation.cause && (
+                    <CardSection
+                      title="Paskirtis"
+                      content={organisation.cause}
                     />
-                  }
-                  
-                  {/* Use this for tabs */}
-                  {/* {organisation.location} */}
+                  )}
+                  {!!organisation.rekvizitai && (
+                    <CardSection
+                      title="Kita informacija"
+                      content={organisation.rekvizitai}
+                    />
+                  )}
 
-                </div>
-              </Card>
-            );
+                  {/*<h3>Forma</h3>*/}
+                  {/*<div>*/}
+                  {/*  <ul>*/}
+                  {/*    {organisation.forma.map((forma, j) => {*/}
+                  {/*      return <li key={j}>{forma}</li>;*/}
+                  {/*    })}*/}
+                  {/*  </ul>*/}
+                  {/*</div>*/}
+
+                  <div className={`Card__actions`}>
+                    {!!organisation.support_link && (
+                      <Button
+                        icon={`arrow-white`}
+                        href={organisation.support_link}
+                        color={`primary`}
+                        text={`Paremti`}
+                        position={`right`}
+                        target="_blank"
+                      />
+                    )}
+
+                    {!!organisation.website && (
+                      <Button
+                        icon={`arrow-blue`}
+                        href={organisation.website}
+                        color={`transparent`}
+                        text={`Oficialus puslapis`}
+                        position={`right`}
+                        target="_blank"
+                      />
+                    )}
+
+                    {/* Use this for tabs */}
+                    {/* {organisation.location} */}
+                  </div>
+                </Card>
+              );
+            }
           })}
         </CardList>
       </Constraint>

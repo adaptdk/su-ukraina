@@ -19,5 +19,6 @@ rekvizitai: |-
 website: https://gelbekitvaikus.lt
 weight: 4
 logo: "../uploads/image-6-4x.png"
+location: Lietuvoje
 
 ---

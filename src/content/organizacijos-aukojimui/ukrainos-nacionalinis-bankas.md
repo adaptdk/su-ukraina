@@ -21,5 +21,6 @@ rekvizitai: |-
   Informacija ir pavedimai kitomis valiutomis: https://bank.gov.ua/ua/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi
 website: https://bank.gov.ua/en/
 weight: 2
+location: Užsienyje
 
 ---
