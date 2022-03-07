@@ -48,6 +48,12 @@ fields:
   config:
     required: false
   label: Oficialus puslapis
+- name: action
+  type: text
+  config:
+    required: false
+  label: Veiksmo nuoroda
+  description: Nuoroda į anketą ar pan.
 - name: weight
   type: number
   label: Svoris
