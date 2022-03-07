@@ -22,5 +22,12 @@ contents:
     stebintis šiandieninę situaciją
 
     '
+resources:
+- title: Atsipalaidavimo pratimai
+  link: ''
+  subtitle: ''
+- title: Rūpinkitės savo emocine sveikata.
+  link: ''
+  subtitle: ''
 
 ---

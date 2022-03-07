@@ -24,7 +24,7 @@ fields:
     min: 
     max: 
   label: Įrašai
-- name: test
+- name: resources
   type: field_group_list
   fields:
   - name: title
@@ -46,7 +46,7 @@ fields:
     min: 
     max: 
     labelField: 
-  label: test
+  label: Resursai
 pages:
 - src/content/citizen-handbook/kaip-geriau-pasiruosti.md
 - src/content/citizen-handbook/kaip-nusiraminti.md
