@@ -1,6 +1,6 @@
 ---
 title: March 8 – the International Day of Solidarity with Ukrainian women!
-startDate: 2022-03-07T22:00:00Z
+startDate: 2022-03-08T10:00:00Z
 location: Internetinis renginys
 endDate: 2022-03-08T11:00:00Z
 eventType: Paramos renginys
