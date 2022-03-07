@@ -13,5 +13,8 @@ contents:
   text: Paramos vaikams centras dalijasi patarimais, kaip kalbėtis apie situaciją
     su vaikais.
   link: https://www.facebook.com/PVC.lt/posts/5556518651041561
+- template: nuoroda-tekstas
+  text: KAM Dalijasi karo psichologo A. Jurgaičio patarimais
+  link: https://www.facebook.com/LRKAM/posts/325131716317564
 
 ---
