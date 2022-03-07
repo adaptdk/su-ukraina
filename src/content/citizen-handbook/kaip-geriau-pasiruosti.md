@@ -28,6 +28,6 @@ contents:
 - template: klausimas-atsakymas-tekstas-paaiskinimas-etc
   title: Ugniagesių gelbėtojų mokyklos informacija apie gaisrų gesinimą
   answer: https://ugm.lrv.lt/lt/mokymai/mokymo-priemones-1/gaisras
-intro: Labai svarbu žinoti
+intro: 'Labai svarbu žinoti ir būti pasiruošus, kaip elgtis ekstremaliose situacijose. '
 
 ---
