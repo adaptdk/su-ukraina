@@ -41,7 +41,7 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Rekvizitai
+  label: Kita informacija
   description: Rekvizitai, registracija, informacija kaip aukoti/prisidėti
 - name: website
   type: text
