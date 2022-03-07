@@ -8,8 +8,9 @@ cause: "„The Kyiv Independent“ ir toliau dirba, teikdamas pasauliui patikim�
   ką atneš ateinančios dienos ir ką mums reikės reaguoti."
 forma:
 - Auka
-rekvizitai: 'Parama: https://www.gofundme.com/f/kyivindependent-launch?utm_source=customer&utm_medium=copy_link_all&utm_campaign=m_pd%20share-sheet&fbclid=IwAR3W3nhwSw3PWKYm0KFw-cCh5pWAx7lEIen3L0ldx6HotHtW6tYVk04GJG8'
+rekvizitai: ''
 website: https://kyivindependent.com
 weight: 6
+support_link: " https://www.gofundme.com/f/kyivindependent-launch?utm_source=customer&utm_medium=copy_link_all&utm_campaign=m_pd%20share-sheet"
 
 ---

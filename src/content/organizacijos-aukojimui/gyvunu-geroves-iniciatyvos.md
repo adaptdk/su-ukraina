@@ -7,10 +7,13 @@ cause: Vykstant karui Ukrainoje nukentės ne tik žmonės, bet ir gyvūnai. Inte
   iš Ukrainos transportavimu ir priglaudimu Lietuvoje.
 forma:
 - Auka
-rekvizitai: '"https://ggi.lt/parama/VšĮ ""Gyvūnų gerovės iniciatyvos""LT897300010171249917
-  Swedbank"'
+rekvizitai: |-
+  "Gyvūnų gerovės iniciatyvos"
+  LT897300010171249917
+  Swedbank
 website: https://ggi.lt
 weight: 9
 logo: "../uploads/image-17-4x.png"
+support_link: https://www.paypal.com/paypalme/AnimalWelfare2012
 
 ---

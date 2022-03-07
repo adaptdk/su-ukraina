@@ -8,11 +8,13 @@ cause: Padėsime nuo Rusijos valdžios vykdomos agresijos nukentėjusiai Ukraino
   nemokamas studijas bei finansinę pagalbą Ukrainos studentams.
 forma:
 - Auka
-rekvizitai: 'Parama:https://vuf.lt/projektai/ukrainai/Paramą galima skirti ir bankiniu
-  pavedimu:Sąskaitos numeris: LT23 7300 0101 7123 1608 (AB „Swedbank“)Gavėjas: Paramos
-  fondas Vilniaus universiteto fondas ( į/k 304222713)'
+rekvizitai: |-
+  Paramą galima skirti ir bankiniu pavedimu:
+  Sąskaitos numeris: LT23 7300 0101 7123 1608 (AB „Swedbank“)
+  Gavėjas: Paramos fondas Vilniaus universiteto fondas ( į/k 304222713)
 website: https://vuf.lt
 weight: 8
 logo: "../uploads/vu.png"
+support_link: https://vuf.lt/projektai/ukrainai/
 
 ---
