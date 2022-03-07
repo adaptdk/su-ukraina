@@ -6,9 +6,10 @@ cause: Vykstant karui Ukrainoje nukentės ne tik žmonės, bet ir gyvūnai, tod�
   registruotis, kas esant poreikiui galėtumėte suteikti laikiną prieglobstį gyvūnams.
 forma:
 - Gyvūnų prieglobstis ir transportavimas
-rekvizitai: 'Registracija dėl gyvūnų priglaudimo / transportavimo: https://bit.ly/UkrainosGyvūnai'
+rekvizitai: ''
 website: https://ggi.lt
 weight: 13
 logo: "../uploads/image-17-4x.png"
+action: https://bit.ly/UkrainosGyvūnai
 
 ---
