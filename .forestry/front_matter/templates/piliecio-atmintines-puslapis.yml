@@ -24,6 +24,29 @@ fields:
     min: 
     max: 
   label: Įrašai
+- name: test
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Antraste
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Nuoroda
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Paantraštė
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: test
 pages:
 - src/content/citizen-handbook/kaip-geriau-pasiruosti.md
 - src/content/citizen-handbook/kaip-nusiraminti.md
