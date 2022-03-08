@@ -12,6 +12,7 @@
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  transition: opacity 0.2s ease;
   z-index: 1;
 
   + .Button {
@@ -34,6 +35,10 @@
     &::after {
       transform: scale(15);
     }
+  }
+
+  &:disabled {
+    opacity: 0.6;
   }
 
   &--primary {

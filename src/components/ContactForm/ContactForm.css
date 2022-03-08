@@ -19,11 +19,23 @@
 
   &__actions {
     margin-top: calc(var(--s__unit) * 5);
+    padding-bottom: calc(var(--s__unit) * 5);
 
     .Button {
       justify-content: center;
+      margin-top: calc(var(--s__unit) * 5);
       width: 100%;
     }
+  }
+
+  &__error {
+    color: red;
+  }
+
+  &__success {
+    align-items: center;
+    display: flex;
+    height: 100%;
   }
 
   &__text {
@@ -43,26 +55,21 @@
     }
   }
 
-  &__actions {
-    margin-top: calc(var(--s__unit) * 5);
-    padding-bottom: calc(var(--s__unit) * 5);
-
-    .Button {
-      width: 100%;
-    }
-  }
-
   @media (min-width: 40rem) {
     padding: calc(var(--s__unit) * 8) 0;
-
-    &__text {
-      padding: calc(var(--s__unit) * 15);
-    }
 
     &__actions {
       .Button {
         width: unset;
       }
+    }
+
+    &__text {
+      padding: calc(var(--s__unit) * 15);
+    }
+
+    &__success {
+      justify-content: center;
     }
   }
 }
