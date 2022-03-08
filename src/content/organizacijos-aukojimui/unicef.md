@@ -11,5 +11,6 @@ website: https://unicef.lt
 weight: 5
 logo: "../uploads/image-9-4x.png"
 support_link: https://unicef.lt/paaukok-vaikams-2/
+location: Lietuvoje
 
 ---

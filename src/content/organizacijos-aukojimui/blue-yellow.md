@@ -14,5 +14,6 @@ rekvizitai: |-
 website: https://www.blue-yellow.lt/
 weight: 1
 logo: "../uploads/image-4-4x.png"
+location: Užsienyje
 
 ---
