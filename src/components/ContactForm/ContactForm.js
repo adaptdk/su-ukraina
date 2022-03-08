@@ -61,7 +61,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
   return (
     <div className="ContactForm">
       <div className="ContactForm__text">
-        <h3>Turi idėjų? Pasidalink</h3>
+        <div className="ContactForm__text-title">Turi idėjų? Pasidalink</div>
         <p>
           Šis puslapis skirtas pateikti svarbiausią informaciją apie pagalbą
           Ukrainai.

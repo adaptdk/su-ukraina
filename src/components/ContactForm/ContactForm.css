@@ -45,9 +45,14 @@
     justify-content: center;
     padding: calc(var(--s__unit) * 4) 0;
 
-    h3 {
+    &-title {
+      font-size: var(--fs__h4);
       margin-bottom: calc(var(--s__unit) * 6);
       margin-top: 0;
+
+      @media and (min-width: 40rem) {
+        font-size: var(--fs__h3);
+      }
     }
 
     p {
