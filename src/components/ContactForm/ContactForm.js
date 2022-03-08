@@ -76,7 +76,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
         ) : (
           <form
             method="POST"
-            action={`https://suukraina.lt/api/v1/submit?destination=${encodeURIComponent(
+            action={`https://api.suukraina.lt/v1/submit?destination=${encodeURIComponent(
               returnDestination
             )}`}
             onSubmit={curriedHandleSubmit}
