@@ -38,7 +38,7 @@ const Page = () => {
               <CtaCardItem label="Užsienyje" />
             </CtaCard>
             <CtaCard
-              title="Savanoriavimas"
+              title="Savanorystė"
               link="/kaip-galiu-padeti/savanoryste/"
               iconHandle="volunteer"
             >
