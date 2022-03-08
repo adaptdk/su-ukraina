@@ -65,7 +65,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
                 required
               />
               Susipažinau ir sutinku su{` `}
-              <a href="#" title="Privatumo politika">
+              <a href="/privatumo-politika" title="Privatumo politika">
                 privatumo politika
               </a>
             </label>

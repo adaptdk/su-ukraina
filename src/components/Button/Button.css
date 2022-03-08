@@ -14,7 +14,7 @@
   text-transform: uppercase;
   z-index: 1;
 
-  + .Button:not(.Footer__cta-section .Button) {
+  + .Button {
     margin-left: calc(var(--s__unit) * 2);
   }
 

@@ -17,6 +17,8 @@
     font-weight: var(--fw__bold);
     list-style: none;
     padding: var(--s__main-padding);
+    display: flex;
+    justify-content: space-between;
 
     &::after {
       border-style: solid;
@@ -24,7 +26,7 @@
       content: "";
       display: inline-block;
       height: 0.45em;
-      left: 0.5em;
+      left: -0.5em;
       position: relative;
       transform: rotate(45deg) translateX(0.625em);
       transition: transform 0.2s ease;

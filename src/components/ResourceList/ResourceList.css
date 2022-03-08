@@ -30,6 +30,10 @@
       color: var(--c__primary);
       font-size: 1.25rem;
       margin-top: 0;
+
+      &:only-child {
+        margin-bottom: 0;
+      }
     }
   }
 

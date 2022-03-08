@@ -55,12 +55,12 @@ const Page = ({ data }) => {
         <Tabs
           handleTab={handleTab}
           tabState={tabState}
-          firstOption={`Įmonė`}
-          secondOption={`Ambasada`}
+          firstOption={`Ambasada`}
+          secondOption={`Įmonė`}
         />
         <CardList>
           {addressees.map((addressee, i) => {
-            const type = tabState === 1 ? `įmonė` : `ambasada`;
+            const type = tabState === 1 ? `ambasada` : `įmonė`;
             if (type === addressee.type[0]) {
               return (
                 <Card title={addressee.title} key={i}>
