@@ -20,7 +20,7 @@ Mūsų įmonės kodas yra: 303276505
 
 Mūsų adresas: Antakalnio g. 13-23, LT-66117 Druskininkai
 
-Mūsų el. pašto adresas: emilija[@adaptagency.com](mailto:vita@adaptagency.com)
+Mūsų el. pašto adresas: [suukraina@adaptagency.com](suukraina@adaptagency.com "suukraina@adaptagency.com")
 
 **3. Kodėl renkate informaciją apie mane?**
 
@@ -106,4 +106,4 @@ Jei norite imtis žemiau nurodytų veiksmų, prašome kreiptis į mūsų kontakt
 
 Jeigu Jūs turite klausimų, komentarų ar nusiskundimų, susijusių su tuo, kaip mes renkame, naudojame ir saugome duomenis apie Jus, UAB „Adapt LT“ yra paskyrusi kontaktinį asmenį, kuris Jums gali padėti.
 
-Jei Jums reikalinga jo pagalba, prašome kreiptis el. paštu [emilija@adaptagency.com](mailto:vita@adaptagency.com)
+Jei Jums reikalinga jo pagalba, prašome kreiptis el. paštu [suukraina@adaptagency.com](suukraina@adaptagency.com "suukraina@adaptagency.com")
