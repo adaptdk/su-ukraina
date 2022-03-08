@@ -11,7 +11,7 @@ forma:
 rekvizitai: ''
 website: https://novaukraine.org
 weight: 7
-logo: "../uploads/image-15-4x.png"
+logo: "../uploads/nu_large_logo.png"
 support_link: https://www.paypal.com/donate?token=72LrLntRYDlGXBzDglcy2H9vtGmnW4Ingp7zoXRWo7MBJnRC8mxUVxn4-ddXrdimIfyEojowwEjZAZ1p
 location: Užsienyje
 

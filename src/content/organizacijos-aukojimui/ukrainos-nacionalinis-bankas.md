@@ -22,5 +22,6 @@ rekvizitai: |-
 website: https://bank.gov.ua/en/
 weight: 2
 location: Užsienyje
+logo: "../uploads/logo-en.png"
 
 ---
