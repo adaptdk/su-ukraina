@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Title } from "react-head";
+import { Title, Meta } from "react-head";
 
 // Components.
 import Constraint from "../components/Constraint";
