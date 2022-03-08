@@ -29,7 +29,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout pagePath="/protesto-formos/akcijos/">
-      <Title>Akcijos</Title>
+      {(!content || !content.title) && <Title>Akcijos</Title>}
 
       {!!content && (
         <Constraint>

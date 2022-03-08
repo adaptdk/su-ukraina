@@ -17,6 +17,7 @@ const Page = () => {
   return (
     <Layout>
       <Title>Привіт!</Title>
+      <Meta name="description" content="Tinklalapis skirtas sutelkti informaciją apie krizę Ukrainoje." />
       <Section className="HeroSection">
         <StaticImage
           className="HeroSection__background"

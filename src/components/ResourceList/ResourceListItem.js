@@ -15,6 +15,7 @@ const ResourceListItem = ({ title, subtitle, url}) => {
           color={`transparent`}
           text={'Šaltinis'}
           position={`right`}
+          target="_blank"
         />
     </li>
   );

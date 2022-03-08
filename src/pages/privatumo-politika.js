@@ -17,7 +17,7 @@ const Page = ({ data }) => {
 
   return (
     <ContentLayout pagePath="/privatumo-politika/">
-      <title>Privatumo politika</title>
+      {(!content || !content.title) && <Title>Privatumo Politika</Title>}
 
       {!!content && (
         <Constraint>

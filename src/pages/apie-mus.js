@@ -17,7 +17,8 @@ const Page = ({ data }) => {
 
   return (
     <ContentLayout pagePath="/apie-mus/">
-      <title>Apie mus</title>
+      {(!content || !content.title) && <Title>Apie Mus</Title>}
+      
 
       {!!content && (
         <Constraint>

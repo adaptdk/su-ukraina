@@ -36,7 +36,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout pagePath="/protesto-formos/budinkite-veikti/">
-      {(!content || !content.title) && <Title>Laiškų rašymas</Title>}
+      {(!content || !content.title) && <Title>Budinkite veikti</Title>}
 
       {!!content && (
         <Constraint>
