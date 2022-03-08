@@ -14,14 +14,16 @@ const handlePath = (additionalNavigationText) => {
       return `/protesto-formos/budinkite-veikti/`;
     case `prekių boikotas`:
       return `/`;
-    case `akcijos ir renginiai`:
+    case `akcijos`:
       return `/protesto-formos/akcijos/`;
+    case `renginiai`:
+      return `/protesto-formos/renginiai/`;
     case `patikima informacija`:
       return `/bukime-budrus/patikima-informacija/`;
     case `piliečio atmintinė`:
       return `/bukime-budrus/piliecio-atmintine/`;
-    case `kaip apsisaugoti nuo sukčių?`:
-      return `/`;
+    case `sukčiai ir dezinformacija`:
+      return `/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`;
   }
 };
 const AdditionalNavigation = ({ additionalNav }) => {

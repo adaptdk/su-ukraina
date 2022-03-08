@@ -6,12 +6,16 @@ import { Title, Meta } from "react-head";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
-import EventCard from "../../components/EventCard";
-import EventCardList from "../../components/EventCardList";
+import ResourceList from "../../components/ResourceList";
+import ResourceListItem from "../../components/ResourceList/ResourceListItem";
+import SubPage from "../../components/SubPage";
 
 const Page = ({ data }) => {
-  const crumbs = [`Renginiai`];
-  const additionalNavigation = [`Budinkite veikti`, 'akcijos'];
+  const crumbs = [`Kaip saugotis nuo sukčių ir dezinformacijos`];
+  const additionalNavigation = [
+    `piliečio atmintinė`,
+    `patikima informacija`
+  ];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -20,16 +24,13 @@ const Page = ({ data }) => {
     };
   })[0];
 
-  const events = data.events.edges.map((edge) => {
-    return {
-      ...edge.node.childMarkdownRemark.frontmatter,
-      html: edge.node.childMarkdownRemark.html,
-    };
+  const handbooks = data.handbooks.edges.map((edge) => {
+    return edge.node.childMarkdownRemark.frontmatter;
   });
 
   return (
-    <Layout pagePath="/protesto-formos/renginiai/">
-      {(!content || !content.title) && <Title>Renginiai</Title>}
+    <Layout pagePath="/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/">
+      <Title>Kaip saugotis nuo sukčių ir dezinformacijos</Title>
 
       {!!content && (
         <Constraint>
@@ -37,7 +38,6 @@ const Page = ({ data }) => {
             crumbs={crumbs}
             additionalNav={additionalNavigation}
           />
-          <Title>{content.title}</Title>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <Meta name="description" content={content.excerpt} />
@@ -45,23 +45,19 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        <EventCardList>
-          {events.map((event, i) => {
-            return (
-              <EventCard
-                key={i}
-                type={event.eventType}
-                title={event.title}
-                organizer={event.eventOrganizer}
-                startDate={event.startDate}
-                endDate={event.endDate}
-                location={event.location}
-                description={event.html}
-                url={event.eventUrl}
-              />
-            );
-          })}
-        </EventCardList>
+        {handbooks.map((handbook, i) => {
+          return (
+            <SubPage title={handbook.title} intro={handbook.intro}>
+              <ResourceList>
+                {handbook.resources?.map((resource, i) => {
+                  return (
+                    <ResourceListItem title={resource.title} subtitle={resource.subtitle} url={resource.link}/>
+                  )
+                })}
+              </ResourceList>
+            </SubPage>
+          );
+        })}
       </Constraint>
     </Layout>
   );
@@ -73,7 +69,7 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "page-contents" }
         absolutePath: {
-          regex: "//src/content/pages/protesto-formos/renginiai.md$/"
+          regex: "//src/content/pages/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos.md$/"
         }
       }
     ) {
@@ -89,23 +85,22 @@ export const query = graphql`
         }
       }
     }
-    events: allFile(
-      filter: { sourceInstanceName: { eq: "events" } }
+    handbooks: allFile(
+      filter: { sourceInstanceName: { eq: "beware-of-scams-and-misinformation" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {
         node {
           childMarkdownRemark {
             frontmatter {
-              eventType
               title
-              eventOrganizer
-              startDate
-              endDate
-              location
-              eventUrl
+              resources {
+                title
+                subtitle
+                link
+              }
+              intro
             }
-            html
           }
         }
       }
@@ -130,18 +125,23 @@ Page.propTypes = {
         })
       ),
     }),
-    events: PropTypes.shape({
+    handbooks: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
             childMarkdownRemark: PropTypes.shape({
               frontmatter: PropTypes.shape({
                 title: PropTypes.string,
-                date: PropTypes.string,
-                location: PropTypes.string,
+                intro: PropTypes.string,
+                resources: PropTypes.arrayOf(
+                  PropTypes.shape({
+                    title: PropTypes.string,
+                    subtitle: PropTypes.string,
+                    link: PropTypes.string,
+                  })
+                ),
               }),
             }),
-            html: PropTypes.string,
           }),
         })
       ),

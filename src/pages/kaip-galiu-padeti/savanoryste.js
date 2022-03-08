@@ -2,7 +2,6 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
 
 import Card from "../../components/Card";
@@ -142,7 +141,7 @@ export const query = graphql`
               action
               logo {
                 childImageSharp {
-                  gatsbyImageData(height: 30)
+                  gatsbyImageData(height: 30, placeholder: NONE)
                 }
               }
             }

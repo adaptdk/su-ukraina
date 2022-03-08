@@ -38,7 +38,7 @@ const Page = () => {
               <CtaCardItem label="Užsienyje" />
             </CtaCard>
             <CtaCard
-              title="Savanoriavimas"
+              title="Savanorystė"
               link="/kaip-galiu-padeti/savanoryste/"
               iconHandle="volunteer"
             >
@@ -54,7 +54,7 @@ const Page = () => {
           <LinkCollection title="Protesto formos">
               <LinkCollectionItem to={`/protesto-formos/akcijos`} text={`Akcijos`}/>
               <LinkCollectionItem to={`/protesto-formos/renginiai`} text={`Renginiai`}/>
-              <LinkCollectionItem to={`/protesto-formos/budinkite-veikti`} text={`Budinkite veikti`}/>          
+              <LinkCollectionItem to={`/protesto-formos/budinkite-veikti`} text={`Budinkite veikti`}/>
           </LinkCollection>
         </Constraint>
       </Section>

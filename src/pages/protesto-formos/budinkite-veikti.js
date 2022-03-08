@@ -15,7 +15,7 @@ import Tabs from "../../components/Tabs";
 
 const Page = ({ data }) => {
   const crumbs = [`Budinkite veikti`];
-  const additionalNavigation = [`Akcijos ir renginiai`];
+  const additionalNavigation = [`akcijos`, 'renginiai'];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,

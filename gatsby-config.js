@@ -48,6 +48,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `beware-of-scams-and-misinformation`,
+        path: `${__dirname}/src/content/beware-of-scams-and-misinformation`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `info-orgs`,
         path: `${__dirname}/src/content/info-orgs`,
       },

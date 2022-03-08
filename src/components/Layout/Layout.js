@@ -16,7 +16,7 @@ const Layout = ({ children, pagePath }) => {
 
       <main>{children}</main>
 
-      <Section bgColor="blue">
+      <Section className="ContactFormSection" bgColor="blue">
         <Constraint>
           <ContactForm returnDestination={pagePath} />
         </Constraint>

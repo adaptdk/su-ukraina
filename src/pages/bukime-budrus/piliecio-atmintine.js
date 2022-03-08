@@ -14,7 +14,8 @@ import SubPage from "../../components/SubPage";
 const Page = ({ data }) => {
   const crumbs = [`Piliečio atmintinė`];
   const additionalNavigation = [
-    `Patikima informacija`
+    `Patikima informacija`,
+    `sukčiai ir dezinformacija`
   ];
   const content = data.contents.edges.map((edge) => {
     return {

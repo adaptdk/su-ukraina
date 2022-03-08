@@ -10,8 +10,8 @@ import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
 
 const Page = ({ data }) => {
-  const crumbs = [`Akcijos ir renginiai`];
-  const additionalNavigation = [`Budinkite veikti`];
+  const crumbs = [`Akcijos`];
+  const additionalNavigation = [`Budinkite veikti`, `renginiai`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,

@@ -6,6 +6,10 @@
     background-color: var(--c__form-bg);
   }
 
+  &.ContactFormSection {
+    margin-bottom: calc(var(--s__unit) * -8);
+  }
+
   &.HeroSection {
     margin-bottom: calc(var(--s__unit) * 10);
   }
