@@ -2,5 +2,10 @@
   &__actions {
     display: flex;
     margin: 20px 0;
+    flex-wrap: wrap;
+    
+    @media (min-width: 41rem) {
+      flex-wrap: nowrap;
+    }
   }
 }

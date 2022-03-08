@@ -3,6 +3,7 @@
   border: 1px solid hsl(240deg 30% 92%);
   border-radius: var(--s__alt-border-radius);
   margin: var(--s__main-padding) 0;
+  margin-bottom: 0;
   overflow: hidden;
 
   &__body {
@@ -12,7 +13,7 @@
   }
 
   &__type {
-    margin-bottom: calc(var(--s__unit)*5);
+    margin-bottom: calc(var(--s__unit) * 5);
 
     ul {
       list-style-type: none;
@@ -22,11 +23,11 @@
       li {
         background: #e7ecef;
         border-radius: var(--s__main-border-radius);
-        padding: var(--s__unit);
-        display: inline-block;
-        text-transform: uppercase;
         color: var(--c__primary);
+        display: inline-block;
         font-size: 0.75rem;
+        padding: var(--s__unit);
+        text-transform: uppercase;
       }
     }
   }
@@ -61,20 +62,52 @@
     font-weight: var(--fw__medium);
     margin: 0;
   }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+
+    .Button {
+      justify-content: space-between;
+      margin-left: 0;
+      width: 100%;
+
+      + .Button {
+        margin-left: 0;
+        margin-top: calc(var(--s__unit) * 3);
+      }
+    }
+
+    @media (min-width: 40rem) {
+      flex-wrap: nowrap;
+      align-items: center;
+      
+      
+      .Button {
+        justify-content: center;
+        width: unset;
+
+        + .Button {
+          margin-left: calc(var(--s__unit) * 3);
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }
 
 .CardSection {
-
   + .CardSection {
-    margin-top: calc(var(--s__unit)*5);
+    margin-top: calc(var(--s__unit) * 5);
   }
 
   &__title {
-    text-transform: uppercase;
+    color: #6b6b6b;
     font-size: 0.9rem;
-    color: #6B6B6B;
-    margin-bottom: calc(var(--s__unit)*2);
+    margin-bottom: calc(var(--s__unit) * 2);
     margin-top: 0;
+    text-transform: uppercase;
   }
 
   &__content {

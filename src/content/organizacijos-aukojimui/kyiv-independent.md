@@ -12,5 +12,7 @@ rekvizitai: ''
 website: https://kyivindependent.com
 weight: 6
 support_link: " https://www.gofundme.com/f/kyivindependent-launch?utm_source=customer&utm_medium=copy_link_all&utm_campaign=m_pd%20share-sheet"
+location: Užsienyje
+logo: "../uploads/logo-png.png"
 
 ---

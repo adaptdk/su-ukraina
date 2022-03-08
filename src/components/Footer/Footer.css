@@ -51,6 +51,10 @@
 
     .Button {
       justify-content: center;
+      
+      + .Button {
+        margin-left: 0;
+      }
     }
   }
 

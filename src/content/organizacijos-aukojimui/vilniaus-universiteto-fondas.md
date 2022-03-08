@@ -16,5 +16,6 @@ website: https://vuf.lt
 weight: 8
 logo: "../uploads/vu.png"
 support_link: https://vuf.lt/projektai/ukrainai/
+location: Lietuvoje
 
 ---

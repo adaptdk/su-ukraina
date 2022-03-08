@@ -15,5 +15,6 @@ website: https://ggi.lt
 weight: 9
 logo: "../uploads/image-17-4x.png"
 support_link: https://www.paypal.com/paypalme/AnimalWelfare2012
+location: Lietuvoje
 
 ---
