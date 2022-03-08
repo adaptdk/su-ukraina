@@ -39,3 +39,8 @@
     font-size: 14px;
   }
 }
+
+/* Edge case */
+.Constraint > .breadcrumb {
+  margin-top: calc(var(--s__unit) * 3);
+}

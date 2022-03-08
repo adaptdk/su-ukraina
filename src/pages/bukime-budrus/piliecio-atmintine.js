@@ -15,7 +15,7 @@ const Page = ({ data }) => {
   const crumbs = [`Piliečio atmintinė`];
   const additionalNavigation = [
     `Patikima informacija`,
-    `kaip apsisaugoti`
+    `sukčiai ir dezinformacija`
   ];
   const content = data.contents.edges.map((edge) => {
     return {

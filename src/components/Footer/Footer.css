@@ -1,6 +1,7 @@
 .Footer {
   background: var(--c__footer-bg);
   color: var(--c__footer-color);
+  margin-top: calc(var(--s__unit) * 8);
 
   a:not(.Button) {
     color: inherit;

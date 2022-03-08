@@ -74,7 +74,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to="/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/">
-                    Kaip apsisaugoti
+                    Sukčiai ir dezinformacija
                   </Link>
                 </li>
               </ul>

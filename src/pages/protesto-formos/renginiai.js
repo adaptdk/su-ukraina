@@ -10,8 +10,8 @@ import EventCard from "../../components/EventCard";
 import EventCardList from "../../components/EventCardList";
 
 const Page = ({ data }) => {
-  const crumbs = [`Akcijos ir renginiai`];
-  const additionalNavigation = [`Budinkite veikti`];
+  const crumbs = [`Renginiai`];
+  const additionalNavigation = [`Budinkite veikti`, 'akcijos'];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
