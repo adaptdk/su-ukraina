@@ -76,7 +76,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
         ) : (
           <form
             method="POST"
-            action={`https://suukraina.lt/api/v1/submit?destination=${encodeURIComponent(
+            action={`https://api.suukraina.lt/v1/submit?destination=${encodeURIComponent(
               returnDestination
             )}`}
             onSubmit={curriedHandleSubmit}
@@ -86,6 +86,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
                 id="name"
                 placeholder="Vardenis Pavardenis"
                 name="name"
+                required
               />
             </FormField>
 
@@ -94,6 +95,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
                 id="email"
                 placeholder="vardas@post.lt"
                 name="email"
+                required
               />
             </FormField>
 
@@ -111,6 +113,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
                 id="description"
                 placeholder="Žinutė"
                 name="description"
+                required
               />
             </FormField>
 
