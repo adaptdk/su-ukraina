@@ -23,6 +23,13 @@ fields:
     required: true
   label: Unikalus vardas (slug)
   description: Tekstas nuorodoje -- parašytas kaip-nors-taip, nes nuoroda
+- name: short_description
+  type: text
+  config:
+    required: false
+  label: Trumpas aprašymas (meta)
+  description: Tekstas kuris bus naudojamas kai puslapis bus dalinamasis soc. tinkluose
+    ir atvaizduojamas google.
 pages:
 - src/content/pages/apie-mus.md
 - src/content/pages/bukime-budrus.md
