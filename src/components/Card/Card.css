@@ -12,6 +12,11 @@
     word-break: break-word;
   }
 
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
   &__type {
     margin-bottom: calc(var(--s__unit) * 5);
 
@@ -37,6 +42,12 @@
 
     ul {
       margin-top: 0;
+
+      li {
+        + li {
+          margin-top: calc(var(--s__unit) * 2);
+        }
+      }
     }
 
     p {

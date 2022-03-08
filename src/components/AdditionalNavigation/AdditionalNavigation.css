@@ -41,5 +41,19 @@
 
   li {
     list-style-type: none;
+    margin: calc(var(--s__unit)*2) 0;
+
+    + li {
+      
+    }
+
+    @media (min-width: 40rem) {
+      margin: 0;
+
+      + li {
+        margin-top: 0;
+      }
+      
+    }
   }
 }

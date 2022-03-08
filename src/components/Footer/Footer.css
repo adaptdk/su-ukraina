@@ -52,7 +52,7 @@
 
     .Button {
       justify-content: center;
-      
+
       + .Button {
         margin-left: 0;
       }
@@ -116,6 +116,15 @@
       opacity: 0.1;
       position: absolute;
       width: 100%;
+    }
+
+    a {
+      opacity: 0.8;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

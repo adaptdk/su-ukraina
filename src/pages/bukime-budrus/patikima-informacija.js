@@ -51,7 +51,7 @@ const Page = ({ data }) => {
         <ContactChipSections>
           <details open>
             <summary>
-              <h2>Asmenybės</h2>
+              <h2><span class="ContactChipSections__icon ContactChipSections__icon--people"></span>Asmenybės</h2>
             </summary>
             {infoPeople.map((person, i) => {
               return (
@@ -69,7 +69,7 @@ const Page = ({ data }) => {
           </details>
           <details open>
             <summary>
-              <h2>Institucijos</h2>
+              <h2><span class="ContactChipSections__icon ContactChipSections__icon--institutions"></span>Institucijos</h2>
             </summary>
             {infoOrgs.map((org, i) => {
               return (

@@ -14,11 +14,15 @@
     border-radius: var(--s__alt-border-radius);
     color: var(--c__primary);
     cursor: pointer;
+    display: flex;
     font-weight: var(--fw__bold);
+    justify-content: space-between;
     list-style: none;
     padding: var(--s__main-padding);
-    display: flex;
-    justify-content: space-between;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
 
     &::after {
       border-style: solid;
@@ -35,10 +39,40 @@
     }
 
     > h2 {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       font: inherit;
       margin: 0;
       padding: 0;
+    }
+  }
+
+  &__icon {
+    content: "";
+    display: block;
+    height: 24px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    position: relative;
+    width: 24px;
+    display: inline-block;
+    margin-right: 10px;
+
+    &--people {
+      background: var(--c__primary);
+      height: 24px;
+      margin-right: 10px;
+      mask-image: url("../../images/icons/people.svg");
+      width: 24px;
+    }
+
+    &--institutions {
+      background: var(--c__primary);
+      height: 24px;
+      margin-right: 10px;
+      mask-image: url("../../images/icons/institutions.svg");
+      width: 24px;
     }
   }
 
