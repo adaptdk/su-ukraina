@@ -12,6 +12,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 const Page = ({ data }) => {
   const crumbs = [`Patikima informacija`];
   const additionalNavigation = [
+    `piliečio atmintinė`,
     `kaip apsisaugoti`
   ];
   const content = data.contents.edges.map((edge) => {
