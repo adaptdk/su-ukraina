@@ -33,15 +33,15 @@ const BeAwake = ({ title }) => {
               position={`right`}
             />
           </li>
-          {/* <li>
+          <li>
             <Button
               icon={`arrow-blue`}
-              to={`/bukime-budrus/kaip-apsisaugoti-nuo-sukciu`}
+              to={`/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos`}
               color={`transparent`}
               text={`Kaip apsisaugoti nuo sukčių?`}
               position={`right`}
             />
-          </li> */}
+          </li>
         </ul>
       </div>
 

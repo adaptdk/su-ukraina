@@ -72,6 +72,11 @@ const Header = () => {
                     Patikima informacija
                   </Link>
                 </li>
+                <li>
+                  <Link to="/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/">
+                    Kaip apsisaugoti
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>

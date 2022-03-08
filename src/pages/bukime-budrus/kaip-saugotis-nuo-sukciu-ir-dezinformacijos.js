@@ -1,7 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
 
 import Constraint from "../../components/Constraint";
@@ -14,7 +13,8 @@ import SubPage from "../../components/SubPage";
 const Page = ({ data }) => {
   const crumbs = [`Kaip saugotis nuo sukčių ir dezinformacijos`];
   const additionalNavigation = [
-    `Patikima informacija`
+    `piliečio atmintinė`,
+    `patikima informacija`
   ];
   const content = data.contents.edges.map((edge) => {
     return {

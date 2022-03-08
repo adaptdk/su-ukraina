@@ -65,9 +65,6 @@ const Footer = () => {
                 <li>
                   <Link to="/privatumo-politika/">Privatumo politika</Link>
                 </li>
-                <li>
-                  <Link to="/kontaktai/">Kontaktai</Link>
-                </li>
               </ul>
             </nav>
           </p>
