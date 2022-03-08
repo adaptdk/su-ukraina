@@ -23,9 +23,6 @@ resources:
 - title: 8 žingsniai „Kaip sukurti saugios kaimynystės grupę?“
   link: https://policija.lrv.lt/lt/veiklos-sritys/viesosios-tvarkos-ir-gyventoju-saugumo-uztikrinimas/saugi-kaimynyste/kaip-sukurti-saugios-kaimynystes-grupe
   subtitle: Lietuvos policija
-- title: Saugios kaimynystės vadovas
-  link: https://www.saugausavoturta.lt/
-  subtitle: ''
 - title: Išmanūs pirmosios pagalbos kursai
   link: https://www.svarbuszingsnis.lt
   subtitle: ''
