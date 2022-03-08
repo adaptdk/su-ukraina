@@ -79,7 +79,7 @@ const Footer = () => {
             </span>
             {` `}
             <a
-              href="https://adaptagency.com/"
+              href="https://adaptagency.com/adapt-lithuania"
               rel="noopener noreferrer"
               target="_blank"
             >
