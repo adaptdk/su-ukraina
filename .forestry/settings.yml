@@ -45,7 +45,7 @@ sections:
   - akcija
 - type: directory
   path: src/content/addressees
-  label: Laiškų rašymas
+  label: Budinkime veikti
   create: documents
   match: "**/*"
   templates:
