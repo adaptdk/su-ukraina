@@ -39,7 +39,7 @@ const Page = ({ data }) => {
           <LinkCollection>
               <LinkCollectionItem to={`/bukime-budrus/piliecio-atmintine/`} text={`Piliečio atmintinė`}/>
               <LinkCollectionItem to={`/bukime-budrus/patikima-informacija/`} text={`Patikima informacija`}/>
-              {/* <LinkCollectionItem to={`/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`} text={`Kaip saugotis nuo sukčių ir dezinformacijos`}/> */}
+              <LinkCollectionItem to={`/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`} text={`Kaip apsisaugoti`}/>
           </LinkCollection>
         </Constraint>
       </Section>

@@ -20,8 +20,8 @@ const handlePath = (additionalNavigationText) => {
       return `/bukime-budrus/patikima-informacija/`;
     case `piliečio atmintinė`:
       return `/bukime-budrus/piliecio-atmintine/`;
-    case `kaip apsisaugoti nuo sukčių?`:
-      return `/`;
+    case `kaip apsisaugoti`:
+      return `/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`;
   }
 };
 const AdditionalNavigation = ({ additionalNav }) => {

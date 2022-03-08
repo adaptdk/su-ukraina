@@ -11,7 +11,7 @@ const ResourceListItem = ({ title, subtitle, url}) => {
         </div>
         <Button
           icon={`arrow-blue`}
-          to={url}
+          href={url}
           color={`transparent`}
           text={'Šaltinis'}
           position={`right`}
