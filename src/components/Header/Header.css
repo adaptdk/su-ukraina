@@ -118,6 +118,8 @@
     position: relative;
     user-select: none;
     width: 40px;
+    font-size: 0.1px;
+    color: transparent;
 
     span {
       background-color: var(--c__primary);

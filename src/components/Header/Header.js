@@ -22,7 +22,7 @@ const Header = () => {
         </Link>
         <input type="checkbox" name="menu-sensor" id="menu-sensor" />
         <label className="Header__menu-trigger" htmlFor="menu-sensor">
-          <span></span>
+          <span></span>Navigacija
         </label>
         <nav className="Header__nav" aria-label="Pagrindinė navigacija">
           <ul className="Header__menu">
