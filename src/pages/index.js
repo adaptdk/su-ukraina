@@ -45,7 +45,7 @@ const Page = () => {
             >
               <CtaCardItem label="Apgyvendinimas" />
               <CtaCardItem label="Pavežėjimas" />
-              <CtaCardItem label="Pagalba gyūnams" />
+              <CtaCardItem label="Pagalba gyvūnams" />
             </CtaCard>
           </Constraint>
         </HeroBanner>
