@@ -4,6 +4,9 @@ intro: Visose situacijose svarbu išlikti ramiems, veikti apgalvotai. Panika str
   situacijos sukelia tik dar daugiau sumaišties.
 contents: []
 resources:
+- title: "„Jaunimo linija“ - emocinė pagalba jaunimui telefonu arba susirašinėjimu"
+  link: https://www.jaunimolinija.lt
+  subtitle: ''
 - title: 'Karo psichologė Danutė Lapėnaitė: šiuos klausimus sau turėtų užduoti kiekvienas,
     stebintis šiandieninę situaciją'
   link: https://www.delfi.lt/projektai/daugiau-sviesos/karo-psichologe-danute-lapenaite-siuos-klausimus-sau-turetu-uzduoti-kiekvienas-stebintis-siandienine-situacija.d?id=89602427
