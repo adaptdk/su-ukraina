@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: -4
 location: Lietuvoje
 title: Laisvės bankas
 about: Laisvės TV - daugiau nei televizija! Kartu su Jumis Laisvės TV atidaro „Laisvės
