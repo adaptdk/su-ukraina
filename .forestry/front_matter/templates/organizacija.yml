@@ -83,3 +83,4 @@ fields:
   description: Kurioje vietoje randasi organizacija.
 pages:
 - src/content/organizacijos-aukojimui/laisves-bankas.md
+- src/content/organizacijos-aukojimui/tusti-narvai.md
