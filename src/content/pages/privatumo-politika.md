@@ -2,11 +2,12 @@
 title: Privatumo politika
 weight: 100
 slug: privatumo-politika
+short_description: ''
 
 ---
 Privatumo politika
 
-**UAB** UAB „Adapt LT“**,** juridinio asmens kodas **303276505**, rūpinasi Jūsų informacijos apsauga. Mes laikomės Europos Sąjungos Bendrojo duomenų apsaugos reglamento (GDPR) bei kitų įstatymų, reglamentuojančių Jūsų informacijos saugumą. Norėdami sužinoti daugiau, atidžiai perskaitykite šį pranešimą.
+**UAB „Adapt LT“,** juridinio asmens kodas **303276505**, rūpinasi Jūsų informacijos apsauga. Mes laikomės Europos Sąjungos Bendrojo duomenų apsaugos reglamento (GDPR) bei kitų įstatymų, reglamentuojančių Jūsų informacijos saugumą. Norėdami sužinoti daugiau, atidžiai perskaitykite šį pranešimą.
 
 **1. Kaip turėčiau skaityti šį pranešimą?**
 
