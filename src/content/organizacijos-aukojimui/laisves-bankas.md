@@ -15,7 +15,7 @@ rekvizitai: "Paramą galite skirti:\nGavėjas: Všį Laisvės TV \nSąskaitos nu
   Swedbank \nPaskirtis: Parama Ukrainai \nPaypal: el. paštas – gabija@laisves.tv,
   pažymėti „Parama Ukrainai“"
 website: https://www.facebook.com/laisvestv
-support_link: ''
+support_link: https://www.facebook.com/laisvestv
 logo: "../uploads/274655874_3082225842035430_5322232338567462749_n.jpg"
 
 ---
