@@ -81,3 +81,5 @@ fields:
       path: 
   label: Vieta
   description: Kurioje vietoje randasi organizacija.
+pages:
+- src/content/organizacijos-aukojimui/laisves-bankas.md
