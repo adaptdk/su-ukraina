@@ -1,7 +1,7 @@
 ---
 label: Partner logos
 hide_body: true
-display_field: partner_title
+display_field: title
 fields:
 - name: title
   type: text
@@ -20,4 +20,4 @@ fields:
   label: Partner website
 pages:
 - src/content/partners/laisves-tv.md
-- src/content/partners/tusti-narvai.md
+- src/content/partners/ponas-testas.md
