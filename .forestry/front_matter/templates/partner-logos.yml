@@ -1,6 +1,7 @@
 ---
 label: Partner logos
 hide_body: true
+display_field: partner_title
 fields:
 - name: partner_title
   type: text
