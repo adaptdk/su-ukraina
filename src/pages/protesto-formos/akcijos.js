@@ -59,7 +59,10 @@ const Page = ({ data }) => {
           {initiatives.map((initiative, i) => {
             return (
               <Card title={initiative.title} key={i}>
-                <div className="Card__html" dangerouslySetInnerHTML={{ __html: initiative.html }} />
+                <div
+                  className="Card__html"
+                  dangerouslySetInnerHTML={{ __html: initiative.html }}
+                />
               </Card>
             );
           })}

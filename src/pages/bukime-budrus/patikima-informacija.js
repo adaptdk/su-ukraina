@@ -15,7 +15,7 @@ const Page = ({ data }) => {
   const crumbs = [`Patikima informacija`];
   const additionalNavigation = [
     `piliečio atmintinė`,
-    `sukčiai ir dezinformacija`
+    `sukčiai ir dezinformacija`,
   ];
   const content = data.contents.edges.map((edge) => {
     return {
@@ -62,7 +62,10 @@ const Page = ({ data }) => {
         <ContactChipSections>
           <details open>
             <summary>
-              <h2><span class="ContactChipSections__icon ContactChipSections__icon--people"></span>Asmenybės</h2>
+              <h2>
+                <span className="ContactChipSections__icon ContactChipSections__icon--people"></span>
+                Asmenybės
+              </h2>
             </summary>
             {infoPeople.map((person, i) => {
               return (
@@ -80,7 +83,10 @@ const Page = ({ data }) => {
           </details>
           <details open>
             <summary>
-              <h2><span class="ContactChipSections__icon ContactChipSections__icon--institutions"></span>Institucijos</h2>
+              <h2>
+                <span className="ContactChipSections__icon ContactChipSections__icon--institutions"></span>
+                Institucijos
+              </h2>
             </summary>
             {infoOrgs.map((org, i) => {
               return (

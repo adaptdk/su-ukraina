@@ -13,7 +13,7 @@ import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Renginiai`];
-  const additionalNavigation = [`Budinkite veikti`, 'akcijos'];
+  const additionalNavigation = [`Budinkite veikti`, `akcijos`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,

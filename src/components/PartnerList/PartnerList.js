@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 import "./PartnerList.css";
 
 const PartnerList = ({ children }) => {
-  return (
-    <div className="PartnerList">{children}</div>
-  );
+  return <div className="PartnerList">{children}</div>;
 };
 
 PartnerList.propTypes = {

@@ -90,11 +90,12 @@ const Page = ({ data }) => {
           <Constraint>
             <h2 className="Section__title">Mus palaiko</h2>
             <PartnerList>
-              {partners.map((partner, i) => {
+              {partners.map((partner) => {
                 const logo = partner.logo && (
                   <GatsbyImage
                     image={getImage(partner.logo)}
                     alt={partner.title}
+                    height="80"
                   />
                 );
 

@@ -64,9 +64,18 @@ const Page = ({ data }) => {
             );
             return (
               <Card title={organisation.title} logo={logo} key={i}>
-                {!!organisation.cause && <CardSection title="Paskirtis" content={organisation.cause}/>}
-                {!!organisation.about && <CardSection title="Apie" content={organisation.about}/>}
-                {!!organisation.rekvizitai && <CardSection title="Kita informacija" content={organisation.rekvizitai}/>}
+                {!!organisation.cause && (
+                  <CardSection title="Paskirtis" content={organisation.cause} />
+                )}
+                {!!organisation.about && (
+                  <CardSection title="Apie" content={organisation.about} />
+                )}
+                {!!organisation.rekvizitai && (
+                  <CardSection
+                    title="Kita informacija"
+                    content={organisation.rekvizitai}
+                  />
+                )}
 
                 {/* <h3>Forma</h3>
                 <div>
@@ -78,18 +87,18 @@ const Page = ({ data }) => {
                 </div> */}
 
                 <div className={`Card__actions`}>
-                  {!!organisation.action &&
-                  <Button
-                    icon={`arrow-white`}
-                    href={organisation.action}
-                    color={`primary`}
-                    text={`Pildyti formą`}
-                    position={`right`}
-                    target="_blank"
-                  />
-                  }
+                  {!!organisation.action && (
+                    <Button
+                      icon={`arrow-white`}
+                      href={organisation.action}
+                      color={`primary`}
+                      text={`Pildyti formą`}
+                      position={`right`}
+                      target="_blank"
+                    />
+                  )}
 
-                  {!!organisation.website &&
+                  {!!organisation.website && (
                     <Button
                       icon={`arrow-blue`}
                       href={organisation.website}
@@ -98,10 +107,9 @@ const Page = ({ data }) => {
                       position={`right`}
                       target="_blank"
                     />
-                  }
+                  )}
 
                   {organisation.location}
-
                 </div>
               </Card>
             );
