@@ -2,12 +2,14 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
+import { StaticImage } from "gatsby-plugin-image";
 
 import ContactChip from "../../components/ContactChip";
 import ContactChipSections from "../../components/ContactChipSections";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
+import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Patikima informacija`];
@@ -34,6 +36,15 @@ const Page = ({ data }) => {
   return (
     <Layout pagePath="/bukime-budrus/patikima-informacija/">
       <Title>Patikima informacija</Title>
+
+      <Section className="HeroSectionB">
+        <StaticImage
+          className="HeroSectionB__background"
+          src="../../images/hero/patikima_informacija.jpg"
+          alt="Budinkite veikti"
+          layout="fullWidth"
+        />
+      </Section>
 
       {!!content && (
         <Constraint>

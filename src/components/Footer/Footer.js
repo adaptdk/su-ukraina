@@ -91,7 +91,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={LaisvesTv} alt="Adapt LT logo" width="49" height="49" />
+              <img src={LaisvesTv} alt="Laisvės TV logo" width="49" height="49" />
             </a>
           </p>
         </div>

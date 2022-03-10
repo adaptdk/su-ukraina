@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
@@ -12,6 +13,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import CardSection from "../../components/Card/CardSection";
 import Button from "../../components/Button";
 import Tabs from "../../components/Tabs";
+import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Budinkite veikti`];
@@ -37,6 +39,15 @@ const Page = ({ data }) => {
   return (
     <Layout pagePath="/protesto-formos/budinkite-veikti/">
       {(!content || !content.title) && <Title>Budinkite veikti</Title>}
+
+      <Section className="HeroSectionB">
+        <StaticImage
+          className="HeroSectionB__background"
+          src="../../images/hero/darykite_spaudima.jpg"
+          alt="Budinkite veikti"
+          layout="fullWidth"
+        />
+      </Section>
 
       {!!content && (
         <Constraint>

@@ -1,0 +1,18 @@
+.Partner {
+  overflow: hidden;
+  display: inline-block;
+  margin: 1rem;
+  margin-top: 0;
+
+  .gatsby-image-wrapper {
+    > div {
+      /* Atleisk man Grinkau */
+      max-width: unset !important;
+    }
+  }
+
+  img {
+    min-height: 60px;
+    width: auto;
+  }
+}

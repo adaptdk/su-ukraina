@@ -2,12 +2,14 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
 import EventCard from "../../components/EventCard";
 import EventCardList from "../../components/EventCardList";
+import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Renginiai`];
@@ -30,6 +32,15 @@ const Page = ({ data }) => {
   return (
     <Layout pagePath="/protesto-formos/renginiai/">
       {(!content || !content.title) && <Title>Renginiai</Title>}
+
+      <Section className="HeroSectionB">
+        <StaticImage
+          className="HeroSectionB__background"
+          src="../../images/hero/akcijos_ir_renginiai.jpg"
+          alt="Su Ukraina!"
+          layout="fullWidth"
+        />
+      </Section>
 
       {!!content && (
         <Constraint>
