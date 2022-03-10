@@ -6,6 +6,7 @@
 
   .gatsby-image-wrapper {
     > div {
+      /* Atleisk man Grinkau */
       max-width: unset !important;
     }
   }
