@@ -18,3 +18,5 @@ fields:
   config:
     required: false
   label: Partner website
+pages:
+- src/content/partners/laisves-tv.md
