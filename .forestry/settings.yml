@@ -11,6 +11,13 @@ sections:
   match: "**/*"
   templates:
   - puslapis
+- type: directory
+  path: src/content/partners
+  label: Partner logos
+  create: documents
+  match: "**/*"
+  templates:
+  - partner-logos
 - type: heading
   label: Parama
 - type: directory

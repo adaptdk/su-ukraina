@@ -1,0 +1,22 @@
+---
+label: Partner logos
+hide_body: true
+display_field: partner_title
+fields:
+- name: partner_title
+  type: text
+  config:
+    required: false
+  label: Partner title
+- name: partner_logo
+  type: file
+  config:
+    maxSize: 64
+  label: Partner logo
+- name: partner_website
+  type: text
+  config:
+    required: false
+  label: Partner website
+pages:
+- src/content/partners/laisves-tv.md
