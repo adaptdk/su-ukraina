@@ -1,6 +1,6 @@
 ---
 title: Nova Media
-logo: "../uploads/46077533_1944655775622042_3045112275057770496_n.png"
+logo: "../uploads/30726918_1673841179370171_244851936606552064_n.jpeg"
 website: https://novamedia.lt
 
 ---
