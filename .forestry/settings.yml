@@ -5,17 +5,17 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: src/content/partners
-  label: Partner logos
-  create: all
-  match: "**/*"
-- type: directory
   path: src/content/pages
   label: Puslapiai
   create: all
   match: "**/*"
   templates:
   - puslapis
+- type: directory
+  path: src/content/partners
+  label: Partner logos
+  create: all
+  match: "**/*"
 - type: heading
   label: Parama
 - type: directory
