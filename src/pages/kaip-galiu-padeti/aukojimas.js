@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
 
@@ -17,6 +17,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import Button from "../../components/Button";
 import CardSection from "../../components/Card/CardSection";
 import Tabs from "../../components/Tabs";
+import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Aukojimas`];
@@ -42,6 +43,15 @@ const Page = ({ data }) => {
   return (
     <Layout pagePath="/kaip-galiu-padeti/aukojimas/">
       <Title>Aukojimas</Title>
+
+      <Section className="HeroSection">
+        <StaticImage
+          className="HeroSection__background"
+          src="../images/hero/aukojimas.jpg"
+          alt="Su Ukraina!"
+          layout="fullWidth"
+        />
+      </Section>
 
       {!!content && (
         <Constraint>

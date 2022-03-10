@@ -1,9 +1,8 @@
 .CardList {
   margin-bottom: calc(var(--s__unit) * 8);
+  display: flex;
 
   @media (min-width: 54rem) {
-    columns: 2;
-
     > * {
       display: inline-block;
     }
