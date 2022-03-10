@@ -1,6 +1,16 @@
 .Section {
   /* General */
 
+  &__title {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: calc(var(--s__unit) * 10);
+
+    @media (min-width: 40rem) {
+      text-align: center;
+      font-size: var(--fs__h3);
+    }
+  }
   /* Modifiers */
   &--bg-blue {
     background-color: var(--c__form-bg);
@@ -20,5 +30,9 @@
 
   &.BeAwakeSection {
     background-color: #f6f6f6;
+  }
+
+  &.PartnerSection {
+    margin: calc(var(--s__unit) * 12) 0;
   }
 }

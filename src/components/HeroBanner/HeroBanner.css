@@ -33,6 +33,26 @@
   }
 }
 
+
+.HeroSectionB {
+  display: grid;
+  padding: 1px 0;
+  position: relative;
+
+  &__background {
+    grid-area: 1/1;
+    max-height: 600px;
+    min-height: 100px;
+    position: relative;
+  }
+
+  @media (min-width: 40rem) {
+    &__background {
+      max-height: 500px;
+    }
+  }
+}
+
 .HeroBanner {
   grid-area: 1 / 1;
 

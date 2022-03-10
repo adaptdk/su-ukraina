@@ -44,10 +44,10 @@ const Page = ({ data }) => {
     <Layout pagePath="/kaip-galiu-padeti/aukojimas/">
       <Title>Aukojimas</Title>
 
-      <Section className="HeroSection">
+      <Section className="HeroSectionB">
         <StaticImage
-          className="HeroSection__background"
-          src="../images/hero/aukojimas.jpg"
+          className="HeroSectionB__background"
+          src="../../images/hero/aukojimas.jpg"
           alt="Su Ukraina!"
           layout="fullWidth"
         />

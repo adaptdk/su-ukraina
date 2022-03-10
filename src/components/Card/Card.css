@@ -2,14 +2,13 @@
   background: var(--c__card-bg);
   border: 1px solid hsl(240deg 30% 92%);
   border-radius: var(--s__alt-border-radius);
-  margin: var(--s__main-padding) 0;
-  margin-bottom: 0;
+  margin-bottom: calc(var(--s__unit)*5);
   overflow: hidden;
 
   width: 100%;
 
-  @media (min-width: 40rem) {
-    width: calc(50% - var(--s__unit)*5);
+  @media (min-width: 50rem) {
+    width: calc(50% - var(--s__unit)*3);
     margin-right: calc(var(--s__unit)*5);
 
     &:nth-of-type(2n) {

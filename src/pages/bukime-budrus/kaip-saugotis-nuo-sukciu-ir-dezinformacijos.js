@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
@@ -9,6 +10,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import ResourceList from "../../components/ResourceList";
 import ResourceListItem from "../../components/ResourceList/ResourceListItem";
 import SubPage from "../../components/SubPage";
+import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Kaip saugotis nuo sukčių ir dezinformacijos`];
@@ -31,6 +33,15 @@ const Page = ({ data }) => {
   return (
     <Layout pagePath="/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/">
       <Title>Kaip saugotis nuo sukčių ir dezinformacijos</Title>
+
+      <Section className="HeroSectionB">
+        <StaticImage
+          className="HeroSectionB__background"
+          src="../../images/hero/sukciai_dezinformacija.jpg"
+          alt="Budinkite veikti"
+          layout="fullWidth"
+        />
+      </Section>
 
       {!!content && (
         <Constraint>

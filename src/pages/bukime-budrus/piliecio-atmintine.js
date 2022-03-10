@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
@@ -10,6 +11,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import ResourceList from "../../components/ResourceList";
 import ResourceListItem from "../../components/ResourceList/ResourceListItem";
 import SubPage from "../../components/SubPage";
+import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Piliečio atmintinė`];
@@ -32,6 +34,15 @@ const Page = ({ data }) => {
   return (
     <Layout pagePath="/bukime-budrus/piliecio-atmintine/">
       <Title>Piliečio atmintinė</Title>
+
+      <Section className="HeroSectionB">
+        <StaticImage
+          className="HeroSectionB__background"
+          src="../../images/hero/piliecio_atmintine.jpg"
+          alt="Budinkite veikti"
+          layout="fullWidth"
+        />
+      </Section>
 
       {!!content && (
         <Constraint>
