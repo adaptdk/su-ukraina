@@ -3,17 +3,17 @@ label: Partner logos
 hide_body: true
 display_field: partner_title
 fields:
-- name: partner_title
+- name: title
   type: text
   config:
     required: false
   label: Partner title
-- name: partner_logo
+- name: logo
   type: file
   config:
     maxSize: 64
   label: Partner logo
-- name: partner_website
+- name: website
   type: text
   config:
     required: false
