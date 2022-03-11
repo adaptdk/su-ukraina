@@ -17,12 +17,24 @@ const EventCard = ({
   description,
   url,
 }) => {
-  const eventDate = `${new Date(startDate).toLocaleString('lt', { month: 'long' })} ${new Date(startDate).getDate()} d.`;
+  const getEventDate = (date) => (
+    `${new Date(date).toLocaleString('lt', { month: 'long' })} ${new Date(date).getDate()} d.`
+  );
+
   const getEventTime = (date) => {
     const hours = new Date(date).getHours();
     const minutes = new Date(date).getMinutes();
 
     return `${hours >= 10 ? hours : '0' + hours}:${minutes >= 10 ? minutes : '0' + minutes}`;
+  };
+
+  const datesAreOnSameDay = (first, second) => {
+    const firstDate = new Date(first);
+    const secondDate = new Date(second);
+
+    return firstDate.getFullYear() === secondDate.getFullYear() &&
+      firstDate.getMonth() === secondDate.getMonth() &&
+      firstDate.getDate() === secondDate.getDate();
   };
 
   return (
@@ -45,19 +57,21 @@ const EventCard = ({
             {organizer}
           </p>
         }
-        {eventDate && 
+        {startDate &&
           <div className="EventCard__event-info-wrapper">
             <div className="EventCard__icon EventCard__icon--calendar"/>
             <p className="EventCard__event-info-text">
-              {eventDate}
+              {getEventDate(startDate)}
+              {endDate && !datesAreOnSameDay(startDate, endDate) && ` - ${getEventDate(endDate)}`}
             </p>
           </div>
         }
-        {startDate && 
+        {startDate &&
           <div className="EventCard__event-info-wrapper">
             <div className="EventCard__icon EventCard__icon--clock"/>
             <p className="EventCard__event-info-text">
-              {getEventTime(startDate)} - {getEventTime(endDate)}
+              {getEventTime(startDate)}
+              {endDate && datesAreOnSameDay(startDate, endDate) && ` - ${getEventTime(endDate)}`}
             </p>
           </div>
         }
