@@ -1,5 +1,5 @@
 ---
-title: Skaitymo performansas „Budėjimas už Ukrainą“
+title: Skaitymo performansas „Budėjimas už Ukrainą“ (kovo 10-11 d.)
 startDate: 2022-03-09T22:00:00Z
 location: Ukmergės kultūros centras
 endDate: 2022-03-11T10:00:00Z
