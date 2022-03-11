@@ -1,5 +1,5 @@
 ---
-title: Kaunas už laisvę!
+title: Kaunas už laisvę! (kovo 10-11 d.)
 startDate: 2022-03-10T16:00:00Z
 location: Kaunas
 endDate: 2022-03-11T15:00:00Z
