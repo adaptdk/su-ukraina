@@ -82,6 +82,7 @@ fields:
   label: Vieta
   description: Kurioje vietoje randasi organizacija.
 pages:
+- src/content/organizacijos-aukojimui/labdaros-ir-paramos-fondas-rugute.md
 - src/content/organizacijos-aukojimui/laisves-bankas.md
 - src/content/organizacijos-aukojimui/sos-vaiku-kaimai.md
 - src/content/organizacijos-aukojimui/tele2.md
