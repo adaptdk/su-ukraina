@@ -4,6 +4,10 @@ intro: Visose situacijose svarbu išlikti ramiems, veikti apgalvotai. Panika str
   situacijos sukelia tik dar daugiau sumaišties.
 contents: []
 resources:
+- title: 'VU psichotraumatologijos centro psichologų rekomendacijos, kaip padėti sau
+    ir kaip kalbėti su karo paveiktais žmonėmis:'
+  link: https://www.fsf.vu.lt/psichologijos-institutas/psichologijos-instituto-struktura/centrai/vu-traumu-psichologijos-grupe#karas
+  subtitle: ''
 - title: "„Jaunimo linija“ - emocinė pagalba jaunimui telefonu arba susirašinėjimu"
   link: https://www.jaunimolinija.lt
   subtitle: ''
