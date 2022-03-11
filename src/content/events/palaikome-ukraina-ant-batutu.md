@@ -1,5 +1,5 @@
 ---
-title: Palaikome Ukrainą ant batutų
+title: Palaikome Ukrainą ant batutų (nuo kovo 10 d.)
 startDate: 2022-03-11T08:00:00Z
 location: Live In Bounce, Draugystės g. 15k, Kaunas
 endDate: 
