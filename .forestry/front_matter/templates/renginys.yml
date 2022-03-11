@@ -48,6 +48,7 @@ fields:
   label: Renginio tiklalapis
 pages:
 - src/content/events/koncertas-ukraina-mes-esame-su-tavimi.md
+- src/content/events/palaikome-ukraina-ant-batutu.md
 - src/content/events/paveikslo-ukraina-aukcionas.md
 - src/content/events/placeholder-to-prevent-error.md
 - src/content/events/po-baznycios-skliautais-gloria-ukraina.md
