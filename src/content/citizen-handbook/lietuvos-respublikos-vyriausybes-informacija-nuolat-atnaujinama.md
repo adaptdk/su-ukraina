@@ -20,6 +20,6 @@ resources:
 - link: https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini
   subtitle: ''
   title: Інформація для громадян України
-weight: 10
+weight: 1
 
 ---
