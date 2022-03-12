@@ -37,3 +37,5 @@ fields:
     min: 
     max: 
     step: 
+pages:
+- src/content/info-foreign/sergiy-kyslytsya.md
