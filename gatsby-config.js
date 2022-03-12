@@ -69,6 +69,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `info-foreign`,
+        path: `${__dirname}/src/content/info-foreign`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `partners`,
         path: `${__dirname}/src/content/partners`,
       },

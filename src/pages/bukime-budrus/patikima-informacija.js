@@ -33,6 +33,10 @@ const Page = ({ data }) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
 
+  const infoForeign = data.infoForeign.edges.map((edge) => {
+    return edge.node.childMarkdownRemark.frontmatter;
+  });
+
   return (
     <Layout pagePath="/bukime-budrus/patikima-informacija/">
       <Title>Patikima informacija</Title>
@@ -103,6 +107,29 @@ const Page = ({ data }) => {
             })}
           </details>
         </ContactChipSections>
+        <ContactChipSections>
+          <details open>
+            <summary>
+              <h2>
+                <span className="ContactChipSections__icon ContactChipSections__icon--foreign"></span>
+                Užsienio šaltiniai
+              </h2>
+            </summary>
+            {infoForeign.map((foreignSource, i) => {
+              return (
+                <ContactChip
+                  description={foreignSource.description}
+                  url={foreignSource.url}
+                  facebookUrl={foreignSource.facebook}
+                  twitterUrl={foreignSource.twitter}
+                  key={i}
+                >
+                  {foreignSource.title}
+                </ContactChip>
+              );
+            })}
+          </details>
+        </ContactChipSections>
       </Constraint>
     </Layout>
   );
@@ -132,6 +159,25 @@ export const query = graphql`
     }
     infoPeople: allFile(
       filter: { sourceInstanceName: { eq: "info-people" } }
+      sort: { fields: childMarkdownRemark___frontmatter___weight }
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              title
+              description
+              url
+              facebook
+              twitter
+              weight
+            }
+          }
+        }
+      }
+    }
+    infoForeign: allFile(
+      filter: { sourceInstanceName: { eq: "info-foreign" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {

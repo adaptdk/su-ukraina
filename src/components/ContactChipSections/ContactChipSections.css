@@ -74,6 +74,14 @@
       mask-image: url("../../images/icons/institutions.svg");
       width: 24px;
     }
+
+    &--foreign {
+      background: var(--c__primary);
+      height: 24px;
+      margin-right: 10px;
+      mask-image: url("../../images/icons/web.svg");
+      width: 24px;
+    }
   }
 
   @media (min-width: 50rem) {
