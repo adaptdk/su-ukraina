@@ -42,7 +42,8 @@ fields:
 - name: weight
   type: number
   label: Svoris
-  description: ''
+  description: Didesnio svorio puslapiai nusėda sąrašo apačioje, mažesnio – kyla į
+    viršų
   default: 0
   required: true
   config:
