@@ -35,5 +35,6 @@ resources:
 - title: LKA Keliautojų klubo organizuojami Išgyvenimo kursai.
   link: https://lkakeliautojai.lt/isgyvenimo-kursai-4
   subtitle: ''
+weight: 8
 
 ---
