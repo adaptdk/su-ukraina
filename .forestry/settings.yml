@@ -80,6 +80,13 @@ sections:
   match: "**/*"
   templates:
   - patikima-informacija
+- type: directory
+  path: src/content/info-foreign
+  label: Patikima informacija (užsienis)
+  create: documents
+  match: "**/*"
+  templates:
+  - patikima-informacija
 upload_dir: src/content/uploads
 public_path: "/uploads"
 front_matter_path: "../uploads"
