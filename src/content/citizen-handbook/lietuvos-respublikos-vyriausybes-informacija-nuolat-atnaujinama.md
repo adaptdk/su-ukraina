@@ -9,7 +9,7 @@ resources:
   link: https://lrv.lt/lt/aktuali-informacija/informacija-apie-situacija-ukrainoje/aktuali-informacija-1/information-for-ukrainian-citizens
   subtitle: ''
 - link: https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini
-  subtitle: Lietuvos respublikos vyriausybė
+  subtitle: ''
   title: Інформація для громадян України
 
 ---
