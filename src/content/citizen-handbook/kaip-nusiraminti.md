@@ -28,6 +28,6 @@ resources:
 - title: Rūpinkitės savo emocine sveikata.
   link: https://pagalbasau.lt/apie-projekta/
   subtitle: ''
-weight: 9
+weight: 3
 
 ---
