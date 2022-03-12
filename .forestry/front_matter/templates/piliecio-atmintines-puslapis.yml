@@ -39,6 +39,16 @@ fields:
     max: 
     labelField: title
   label: Resursai
+- name: weight
+  type: number
+  label: Svoris
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 pages:
 - src/content/citizen-handbook/kaip-geriau-pasiruosti.md
 - src/content/citizen-handbook/kaip-nusiraminti.md
