@@ -2,6 +2,9 @@
 title: Lietuvos respublikos vyriausybės informacija (nuolat atnaujinama)
 intro: ''
 resources:
+- title: Karo pabėgėlių iš Ukrainos priėmimas Lietuvoje
+  link: https://lrv.lt/lt/aktuali-informacija/informacija-apie-situacija-ukrainoje/aktuali-informacija-1/karo-pabegeliu-is-ukrainos-priemimas-lietuvoje
+  subtitle: ''
 - title: Information for Ukrainian citizens
   link: https://lrv.lt/lt/aktuali-informacija/informacija-apie-situacija-ukrainoje/aktuali-informacija-1/information-for-ukrainian-citizens
   subtitle: Lietuvos respublikos vyriausybė
