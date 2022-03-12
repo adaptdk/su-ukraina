@@ -2,6 +2,9 @@
 title: Lietuvos respublikos vyriausybės informacija (nuolat atnaujinama)
 intro: ''
 resources:
+- title: Informacija Lietuvos gyventojams
+  link: https://lrv.lt/lt/aktuali-informacija/informacija-apie-situacija-ukrainoje/aktuali-informacija-1/informacija-lietuvos-gyventojams
+  subtitle: ''
 - title: Parama Ukrainai
   link: https://lrv.lt/lt/aktuali-informacija/informacija-apie-situacija-ukrainoje/aktuali-informacija-1/parama-ukrainai
   subtitle: ''
