@@ -39,5 +39,6 @@ fields:
     step: 
 pages:
 - src/content/info-foreign/sergiy-kyslytsya.md
+- src/content/info-foreign/ukraine-siren-alerts.md
 - src/content/info-foreign/ukrainos-uzsienio-reikalu-ministerija.md
 - src/content/info-people/antonio-guterres.md
