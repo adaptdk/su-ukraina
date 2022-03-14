@@ -13,6 +13,6 @@ cause: "Karas Ukrainoje keičia ne tik žmonių, bet ir gyvūnų likimus. Padėt
 rekvizitai: 'Skirti paramą galite šioje platformoje: https://ukrainosgyvunai.lt'
 website: https://ukrainosgyvunai.lt
 support_link: https://ukrainosgyvunai.lt
-logo: "../uploads/1-1.png"
+logo: "../uploads/tusti_narvai_ok_transparent-beee960.png"
 
 ---
