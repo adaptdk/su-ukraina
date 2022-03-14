@@ -38,19 +38,5 @@ fields:
     max: 
     step: 
 pages:
-- src/content/info-foreign/nexta.md
 - src/content/info-foreign/sergiy-kyslytsya.md
-- src/content/info-foreign/ukraine-siren-alerts.md
-- src/content/info-foreign/ukraine-ua.md
 - src/content/info-foreign/ukrainos-uzsienio-reikalu-ministerija.md
-- src/content/info-people/antonio-guterres.md
-- src/content/info-people/emilio-morenatti.md
-- src/content/info-people/evgeny-maloletka.md
-- src/content/info-people/igor-kossov.md
-- src/content/info-people/john-sweeney.md
-- src/content/info-people/lynsey-addario.md
-- src/content/info-people/marcus-yam.md
-- src/content/info-people/mikhail-palinchak.md
-- src/content/info-people/olga-tokariuk.md
-- src/content/info-people/tim-mak.md
-- src/content/info-people/viktorija-cmilyte-nielsen.md
