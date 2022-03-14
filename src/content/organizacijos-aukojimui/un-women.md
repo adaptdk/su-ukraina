@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: 
 location: Užsienyje
 title: UN Women
 about: "„UN Women“ – Jungtinių Tautų (JT) įkurta organizacija, spartinanti pažangą
@@ -10,6 +10,6 @@ cause: |-
 rekvizitai: ''
 website: https://www.unwomen.org/en
 support_link: https://donate.unwomen.org/en/ukraine?fbclid=IwAR27R1fDVzPlw3sHSdxPECGKz0MdxeTUFY6S1u4EPmoqFVpPp28Ag1VHRIg
-logo: "../uploads/logo 1.png"
+logo: "../uploads/logo-1-1.png"
 
 ---
