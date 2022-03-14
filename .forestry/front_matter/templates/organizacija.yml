@@ -82,13 +82,9 @@ fields:
   label: Vieta
   description: Kurioje vietoje randasi organizacija.
 pages:
-- src/content/organizacijos-aukojimui/come-back-alive.md
 - src/content/organizacijos-aukojimui/labdaros-ir-paramos-fondas-rugute.md
 - src/content/organizacijos-aukojimui/laisves-bankas.md
 - src/content/organizacijos-aukojimui/sos-vaiku-kaimai.md
 - src/content/organizacijos-aukojimui/tele2.md
 - src/content/organizacijos-aukojimui/tusti-narvai.md
-- src/content/organizacijos-aukojimui/un-women.md
-- src/content/organizacijos-aukojimui/unhcr-the-un-refugee-agency.md
-- src/content/organizacijos-aukojimui/vaiku-svajones.md
 - src/content/organizacijos-aukojimui/vytauto-didziojo-universiteto-paramos-fondas.md
