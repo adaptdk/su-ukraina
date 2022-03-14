@@ -10,6 +10,6 @@ cause: |-
 rekvizitai: ''
 website: https://www.unwomen.org/en
 support_link: https://donate.unwomen.org/en/ukraine?fbclid=IwAR27R1fDVzPlw3sHSdxPECGKz0MdxeTUFY6S1u4EPmoqFVpPp28Ag1VHRIg
-logo: "../uploads/logo.svg"
+logo: "../uploads/logo 1.png"
 
 ---

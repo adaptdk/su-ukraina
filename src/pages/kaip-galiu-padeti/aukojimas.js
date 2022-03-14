@@ -73,6 +73,7 @@ const Page = ({ data }) => {
         />
         <CardList>
           {organisations.map((organisation, i) => {
+            console.log(`ORG`, organisation);
             const logo = organisation.logo && (
               <GatsbyImage
                 image={getImage(organisation.logo)}
