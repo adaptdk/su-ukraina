@@ -5,8 +5,10 @@
   flex-direction: row;
   width: 100%;
   justify-content: flex-start;
+  margin: 0 -1rem;
 
   @media (min-width: 40rem) {
     justify-content: center;
+    margin: unset;
   }
 }

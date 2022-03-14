@@ -126,7 +126,7 @@ export const query = graphql`
               website
               logo {
                 childImageSharp {
-                  gatsbyImageData(height: 30, placeholder: NONE)
+                  gatsbyImageData(height: 100, placeholder: NONE)
                 }
               }
             }

@@ -6,14 +6,13 @@
 
   .gatsby-image-wrapper {
     > div {
-      /* Atleisk man Grinkau */
-      /* GALBUT LAIKINA IR MANO SIELA PASVEIKS */
-      max-width: unset !important;
+
     }
   }
 
   img {
     min-height: 60px;
+    max-height: 80px;
     width: auto;
   }
 }
