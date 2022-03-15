@@ -88,7 +88,7 @@ const Page = ({ data }) => {
       {partners.length > 0 && (
         <Section className="PartnerSection">
           <Constraint>
-            <h2 className="Section__title">Mus turinio kūrimo prisideda</h2>
+            <h2 className="Section__title">Prie turinio kūrimo prisideda</h2>
             <PartnerList>
               {partners.map((partner) => {
                 const logo = partner.logo && (
