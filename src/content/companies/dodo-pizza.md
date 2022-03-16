@@ -2,7 +2,7 @@
 country: Rusija
 title: Dodo Pizza
 description: Frančizė
-image_url: ''
+image_url: https://brandbook.dodopizza.info/images/EN-Dodo-Pizza-Logotype-Black-letters.svg
 information:
 - description: Siekdami padėti nuo karo Ukrainoje nukentėjusiems žmonėms, ateinančias
     dvi savaites 5 proc. nuo kiekvieno Dodo Pizza Lietuvoje užsakymo skirsime Ukrainoje
