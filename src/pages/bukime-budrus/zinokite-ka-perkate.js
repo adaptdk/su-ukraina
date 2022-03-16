@@ -74,6 +74,19 @@ const Page = ({ data }) => {
           {companies.map((company, i) => {
             //const location = tabState === 1 ? `Lietuvoje` : `Užsienyje`;
             // if (location === company.location) {
+
+            const positives = [];
+            const negatives = [];
+
+            company.information.forEach((information) => {
+              if (information.type === `positive`) {
+                return positives.push(information);
+              }
+              if (information.type === `negative`) {
+                return negatives.push(information);
+              }
+            });
+
             return (
               <Card
                 title={company.title}
@@ -82,16 +95,29 @@ const Page = ({ data }) => {
                 key={i}
               >
                 <PositiveNegativeList>
-                  {company.information?.map((information, i) => {
-                    return (
-                      <PositiveNegativeListItem
-                        key={i}
-                        type={information.type}
-                        description={information.description}
-                        source={information.source}
-                      />
-                    );
-                  })}
+                  <React.Fragment>
+                    {negatives.map((information, i) => {
+                      return (
+                        <PositiveNegativeListItem
+                          key={i}
+                          type={information.type}
+                          description={information.description}
+                          source={information.source}
+                        />
+                      );
+                    })}
+                    {!!positives.length && <p>Bet</p>}
+                    {positives.map((information, i) => {
+                      return (
+                        <PositiveNegativeListItem
+                          key={i}
+                          type={information.type}
+                          description={information.description}
+                          source={information.source}
+                        />
+                      );
+                    })}
+                  </React.Fragment>
                 </PositiveNegativeList>
               </Card>
             );
@@ -177,11 +203,13 @@ Page.propTypes = {
                 description: PropTypes.string,
                 country: PropTypes.string,
                 image_url: PropTypes.string,
-                information: PropTypes.shape({
-                  description: PropTypes.string,
-                  type: PropTypes.string,
-                  source: PropTypes.string,
-                }),
+                information: PropTypes.arrayOf(
+                  PropTypes.shape({
+                    description: PropTypes.string,
+                    type: PropTypes.string,
+                    source: PropTypes.string,
+                  })
+                ),
               }),
             }),
           }),

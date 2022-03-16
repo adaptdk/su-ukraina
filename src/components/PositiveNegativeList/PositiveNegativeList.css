@@ -14,14 +14,6 @@
     flex-wrap: nowrap;
   }
 
-  &[data-type="positive"] {
-    order: 10;
-  }
-
-  &[data-type="negative"] {
-    order: 1;
-  }
-
   + .ResourceListItem {
     margin-top: calc(var(--s__unit) * 2);
   }
