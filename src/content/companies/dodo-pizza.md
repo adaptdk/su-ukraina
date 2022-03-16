@@ -4,6 +4,12 @@ title: Dodo Pizza
 description: Frančizė
 image_url: ''
 information:
+- description: Siekdami padėti nuo karo Ukrainoje nukentėjusiems žmonėms, ateinančias
+    dvi savaites 5 proc. nuo kiekvieno Dodo Pizza Lietuvoje užsakymo skirsime Ukrainoje
+    veikiančioms nevyriausybinėms (NVO) organizacijoms, teikiančioms humanitarinę
+    ar pirmąją pagalbą.
+  type: positive
+  source: https://www.facebook.com/DodoPizzaLietuva/posts/3214114178877214
 - description: Dodo Pizza franchisee in Klaipeda and Vilnius, Lithuania
   type: negative
   source: https://topfranchise.com/products/pizza-delivery-franchise-dodo-pizza/
