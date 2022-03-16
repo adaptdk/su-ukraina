@@ -13,14 +13,14 @@ import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
 import Section from "../../components/Section";
 import PositiveNegativeList from "../../components/PositiveNegativeList";
-import PositiveNegativeListItem from "../../components/PositiveNegativeList/PositivenegativeListItem";
+import PositiveNegativeListItem from "../../components/PositiveNegativeList/PositiveNegativeListItem";
 import Tabs from "../../components/Tabs";
 
 const Page = ({ data }) => {
   const crumbs = [`Žinokite ką perkate`];
   const additionalNavigation = [
     `Patikima informacija`,
-    `sukčiai ir dezinformacija`
+    `sukčiai ir dezinformacija`,
   ];
   const content = data.contents.edges.map((edge) => {
     return {
@@ -67,7 +67,7 @@ const Page = ({ data }) => {
         </Constraint>
       )}
 
-<Constraint>
+      <Constraint>
         <Tabs
           handleTab={handleTab}
           tabState={tabState}
@@ -76,21 +76,28 @@ const Page = ({ data }) => {
         />
         <CardList>
           {companies.map((company, i) => {
-
-
             const location = tabState === 1 ? `Lietuvoje` : `Užsienyje`;
             // if (location === company.location) {
-              return (
-                <Card title={company.title} subtitle={company.description} externalImage={company.image_url} key={i}>
-                  <PositiveNegativeList>
-                    {company.information?.map((information, i) => {
-                      return (
-                        <PositiveNegativeListItem type={information.type} description={information.description} source={information.source}/>
-                      )
+            return (
+              <Card
+                title={company.title}
+                subtitle={company.description}
+                externalImage={company.image_url}
+                key={i}
+              >
+                <PositiveNegativeList>
+                  {company.information?.map((information, i) => {
+                    return (
+                      <PositiveNegativeListItem
+                        type={information.type}
+                        description={information.description}
+                        source={information.source}
+                      />
+                    );
                   })}
-                  </PositiveNegativeList>
-                </Card>
-              );
+                </PositiveNegativeList>
+              </Card>
+            );
             // }
           })}
         </CardList>
