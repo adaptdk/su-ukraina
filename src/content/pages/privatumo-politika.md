@@ -2,12 +2,10 @@
 title: Privatumo politika
 weight: 100
 slug: privatumo-politika
-short_description: ''
-
+short_description: ""
 ---
-Privatumo politika
 
-**UAB „Adapt LT“,** juridinio asmens kodas **303276505**, rūpinasi Jūsų informacijos apsauga. Mes laikomės Europos Sąjungos Bendrojo duomenų apsaugos reglamento (GDPR) bei kitų įstatymų, reglamentuojančių Jūsų informacijos saugumą. Norėdami sužinoti daugiau, atidžiai perskaitykite šį pranešimą.
+**VšĮ „Laisvės TV“,** juridinio asmens kodas **304405807**, rūpinasi Jūsų informacijos apsauga. Mes laikomės Europos Sąjungos Bendrojo duomenų apsaugos reglamento (GDPR) bei kitų įstatymų, reglamentuojančių Jūsų informacijos saugumą. Norėdami sužinoti daugiau, atidžiai perskaitykite šį pranešimą.
 
 **1. Kaip turėčiau skaityti šį pranešimą?**
 
@@ -15,13 +13,13 @@ Privatumo politika
 
 **2. Kas yra atsakingas už mano informacijos apsaugą?**
 
-Mes esame: UAB Adapt LT
+Mes esame: VšĮ „Laisvės TV“
 
-Mūsų įmonės kodas yra: 303276505
+Mūsų įmonės kodas yra: 304405807
 
-Mūsų adresas: Antakalnio g. 13-23, LT-66117 Druskininkai
+Mūsų adresas: Verkių g. 31B-2, LT-09108 Vilnius
 
-Mūsų el. pašto adresas: [suukraina@adaptagency.com](mailto:suukraina@adaptagency.com "suukraina@adaptagency.com")
+Mūsų el. pašto adresas: [bendraukime@laisves.tv]()
 
 **3. Kodėl renkate informaciją apie mane?**
 
@@ -95,13 +93,13 @@ Jūsų informaciją saugome ne ilgiau negu to reikalauja duomenų tvarkymo tiksl
 
 Jei norite imtis žemiau nurodytų veiksmų, prašome kreiptis į mūsų kontaktinį asmenį, kaip tai nurodyta 13 skyriuje. Prašome atkreipti dėmesį, jog šioms teisėms taikomos įstatymų numatytos sąlygos ir išimtys:
 
-* Pateikti prašymą susipažinti su turima informacija apie Jus;Pateikti prašymą ištaisyti turimą informaciją apie Jus;
-* Pateikti prašymą ištrinti turimą informaciją apie Jus;
-* Pateikti prašymą apriboti prieigą prie turimos informacijos apie Jus ar jos ištrynimą;
-* Ginčyti Jūsų informacijos rinkimą, naudojimą ir saugojimą mūsų bendrovėje;
-* Pateikti prašymą išeksportuoti Jūsų duomenis arba perkelti juos į kitą bendrovę;
-* Bet kuriuo metu atšaukti duotą sutikimą nedarant poveikio sutikimu grindžiamo duomenų tvarkymo iki sutikimo atšaukimo teisėtumui;
-* Pateikti skundą Valstybinei duomenų apsaugos inspekcijai.
+- Pateikti prašymą susipažinti su turima informacija apie Jus;Pateikti prašymą ištaisyti turimą informaciją apie Jus;
+- Pateikti prašymą ištrinti turimą informaciją apie Jus;
+- Pateikti prašymą apriboti prieigą prie turimos informacijos apie Jus ar jos ištrynimą;
+- Ginčyti Jūsų informacijos rinkimą, naudojimą ir saugojimą mūsų bendrovėje;
+- Pateikti prašymą išeksportuoti Jūsų duomenis arba perkelti juos į kitą bendrovę;
+- Bet kuriuo metu atšaukti duotą sutikimą nedarant poveikio sutikimu grindžiamo duomenų tvarkymo iki sutikimo atšaukimo teisėtumui;
+- Pateikti skundą Valstybinei duomenų apsaugos inspekcijai.
 
 **15. Kaip Jūsų kontaktinis asmuo/Duomenų apsaugos pareigūnas gali man padėti?**
 
