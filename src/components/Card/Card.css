@@ -27,6 +27,16 @@
     align-items: center;
   }
 
+  &__externalLogo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+
   &__type {
     margin-bottom: calc(var(--s__unit) * 5);
 

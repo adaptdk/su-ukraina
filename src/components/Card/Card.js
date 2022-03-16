@@ -12,7 +12,7 @@ const Card = ({ children, title, subtitle, externalImage, logo }) => {
           {!!subtitle && <div className="Card__subtitle">{subtitle}</div>}
         </div>
         {!!logo && <div className="Card__logo">{logo}</div>}
-        {!!externalImage && <div className="Card__logo"><img src={externalImage}/></div>}
+        {!!externalImage && <div className="Card__externalLogo"><img src={externalImage}/></div>}
       </header>
       <div className="Card__body">{children}</div>
     </article>

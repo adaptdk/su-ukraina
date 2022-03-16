@@ -34,13 +34,13 @@ const Page = ({ data }) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
 
+  console.log(companies);
+
   const [tabState, setTabState] = React.useState(1);
 
   function handleTab(tabState) {
     setTabState(tabState);
   }
-
-  console.log(companies);
 
   return (
     <Layout pagePath="/bukime-budrus/zinokite-ka-perkate/">
@@ -85,7 +85,7 @@ const Page = ({ data }) => {
                   <PositiveNegativeList>
                     {company.information?.map((information, i) => {
                       return (
-                        <PositiveNegativeListItem title={information.title} description={information.description} source={information.source}/>
+                        <PositiveNegativeListItem type={information.type} description={information.description} source={information.source}/>
                       )
                   })}
                   </PositiveNegativeList>
@@ -105,7 +105,7 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "page-contents" }
         absolutePath: {
-          regex: "//src/content/pages/bukime-budrus/piliecio-atmintine.md$/"
+          regex: "//src/content/pages/bukime-budrus/zinokite-ka-perkate.md$/"
         }
       }
     ) {

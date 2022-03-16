@@ -1,16 +1,11 @@
 .PositiveNegativeList {
-  &__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
 .PositiveNegativeListItem {
-  background: #f9f9f9;
-  display: flex;
   width: 100%;
-  padding: calc(var(--s__unit)*5);
+  padding: calc(var(--s__unit)*2);
   align-items: center;
   box-sizing: border-box;
   flex-wrap:wrap;
@@ -19,21 +14,41 @@
     flex-wrap: nowrap;
   }
 
+  &[data-type='positive'] {
+    order: 10;
+  }
+
+  &[data-type='negative'] {
+    order: 1;
+  }
+
   + .ResourceListItem {
     margin-top: calc(var(--s__unit)*2);
   }
 
+  &__source {
+    display: block;
+    height: 24px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    position: relative;
+    width: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    mask-image: url("../../images/icons/info.svg");
+    background: var(--c__primary);
+  }
+
   &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
 
-    h3 {
-      color: var(--c__primary);
-      font-size: 1.25rem;
-      margin-top: 0;
-
-      &:only-child {
-        margin-bottom: 0;
-      }
+    p {
+      display: block;
+      flex: 1;
     }
   }
 
