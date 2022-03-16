@@ -87,6 +87,15 @@ sections:
   match: "**/*"
   templates:
   - patikima-informacija
+- type: heading
+  label: Importuoti duomenys
+- type: directory
+  path: src/content/companies
+  label: Kompanijos (žinokite ką perkate)
+  create: documents
+  match: "**/*"
+  templates:
+  - company
 upload_dir: src/content/uploads
 public_path: "/uploads"
 front_matter_path: "../uploads"
