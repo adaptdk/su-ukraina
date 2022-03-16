@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image";
 
 // Style.
 import "./BeAwake.css";
@@ -11,7 +11,6 @@ import Button from "../Button";
 const BeAwake = ({ title }) => {
   return (
     <section className="BeAwake">
-
       <div className="BeAwake__text">
         {!!title && <h2 className="BeAwake__title">{title}</h2>}
         <ul className="BeAwake__button-list">
@@ -45,10 +44,12 @@ const BeAwake = ({ title }) => {
         </ul>
       </div>
 
-      <div class="BeAwake__image">
-        <StaticImage src="../../images/photos/bukime-budrus-ir-pasiruose.jpg" alt={title}/>
+      <div className="BeAwake__image">
+        <StaticImage
+          src="../../images/photos/bukime-budrus-ir-pasiruose.jpg"
+          alt={title}
+        />
       </div>
-
     </section>
   );
 };
@@ -56,6 +57,5 @@ const BeAwake = ({ title }) => {
 BeAwake.propTypes = {
   title: PropTypes.string,
 };
-
 
 export default BeAwake;

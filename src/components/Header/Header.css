@@ -6,10 +6,10 @@
 
 .Header {
   background: var(--c__main-bg);
+  box-shadow: 0 0 10px -1px rgb(0 0 0 / 10%);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
 
   a {
     text-decoration: none;
@@ -43,8 +43,7 @@
   &__content {
     align-items: center;
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+    flex-flow: row-reverse wrap;
     justify-content: space-between;
 
     @media (min-width: 46rem) {
@@ -111,15 +110,15 @@
 
   &__menu-trigger {
     align-items: center;
+    color: transparent;
     cursor: pointer;
     display: flex;
+    font-size: 0.1px;
     height: 40px;
     justify-content: center;
     position: relative;
     user-select: none;
     width: 40px;
-    font-size: 0.1px;
-    color: transparent;
 
     span {
       background-color: var(--c__primary);

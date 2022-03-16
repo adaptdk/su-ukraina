@@ -1,7 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -17,7 +16,7 @@ import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Budinkite veikti`];
-  const additionalNavigation = [`akcijos`, 'renginiai'];
+  const additionalNavigation = [`akcijos`, `renginiai`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,

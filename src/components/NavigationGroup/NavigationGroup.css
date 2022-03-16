@@ -1,19 +1,16 @@
 .navigation-group {
+  align-items: baseline;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
-  margin-top: calc(var(--s__unit)*4);
+  margin-top: calc(var(--s__unit) * 4);
 
   .additional-navigation {
-    margin-top: calc(var(--s__unit)*2);
+    margin-top: calc(var(--s__unit) * 2);
     width: 100%;
   }
 
   @media (min-width: 40rem) {
-    .breadcrumb {
-
-    }
     .additional-navigation {
       margin-top: 0;
       width: auto;

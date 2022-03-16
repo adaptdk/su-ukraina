@@ -1,13 +1,11 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
-import CardSection from "../../components/Card/CardSection";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
@@ -33,8 +31,6 @@ const Page = ({ data }) => {
   const companies = data.companies.edges.map((edge) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
-
-  console.log(companies);
 
   const [tabState, setTabState] = React.useState(1);
 
@@ -76,7 +72,7 @@ const Page = ({ data }) => {
         />
         <CardList>
           {companies.map((company, i) => {
-            const location = tabState === 1 ? `Lietuvoje` : `Užsienyje`;
+            //const location = tabState === 1 ? `Lietuvoje` : `Užsienyje`;
             // if (location === company.location) {
             return (
               <Card
@@ -89,6 +85,7 @@ const Page = ({ data }) => {
                   {company.information?.map((information, i) => {
                     return (
                       <PositiveNegativeListItem
+                        key={i}
                         type={information.type}
                         description={information.description}
                         source={information.source}
@@ -166,6 +163,27 @@ Page.propTypes = {
             }),
             html: PropTypes.string,
             excerpt: PropTypes.string,
+          }),
+        })
+      ),
+    }),
+    companies: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            childMarkdownRemark: PropTypes.shape({
+              frontmatter: PropTypes.shape({
+                title: PropTypes.string,
+                description: PropTypes.string,
+                country: PropTypes.string,
+                image_url: PropTypes.string,
+                information: PropTypes.shape({
+                  description: PropTypes.string,
+                  type: PropTypes.string,
+                  source: PropTypes.string,
+                }),
+              }),
+            }),
           }),
         })
       ),

@@ -6,7 +6,12 @@ const PositiveNegativeListItem = ({ description, type, source }) => {
     <div className="PositiveNegativeListItem " data-type={type}>
       <div className="PositiveNegativeListItem__content">
         {!!source && (
-          <a className="PositiveNegativeListItem__source" target="_blank" href={source}></a>
+          <a
+            className="PositiveNegativeListItem__source"
+            target="_blank"
+            href={source}
+            rel="noopener"
+          ></a>
         )}
         {!!description && <p>{description}</p>}
       </div>

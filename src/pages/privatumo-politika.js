@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { Title } from "react-head";
 
 import Constraint from "../components/Constraint";
 import ContentLayout from "../components/ContentLayout";

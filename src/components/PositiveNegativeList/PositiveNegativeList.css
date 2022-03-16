@@ -4,46 +4,46 @@
 }
 
 .PositiveNegativeListItem {
-  width: 100%;
-  padding: calc(var(--s__unit)*2);
   align-items: center;
   box-sizing: border-box;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  padding: calc(var(--s__unit) * 2);
+  width: 100%;
 
   @media (min-width: 42rem) {
     flex-wrap: nowrap;
   }
 
-  &[data-type='positive'] {
+  &[data-type="positive"] {
     order: 10;
   }
 
-  &[data-type='negative'] {
+  &[data-type="negative"] {
     order: 1;
   }
 
   + .ResourceListItem {
-    margin-top: calc(var(--s__unit)*2);
+    margin-top: calc(var(--s__unit) * 2);
   }
 
   &__source {
+    background: var(--c__primary);
     display: block;
+    display: inline-block;
     height: 24px;
+    margin-right: 10px;
+    mask-image: url("../../images/icons/info.svg");
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
     position: relative;
     width: 24px;
-    display: inline-block;
-    margin-right: 10px;
-    mask-image: url("../../images/icons/info.svg");
-    background: var(--c__primary);
   }
 
   &__content {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 100%;
 
     p {
@@ -53,8 +53,8 @@
   }
 
   .Button {
-    min-width: 120px;
     justify-content: space-between;
+    min-width: 120px;
     width: 100%;
 
     @media (min-width: 42rem) {

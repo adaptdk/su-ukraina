@@ -1,7 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Link } from "gatsby";
 import { Title, Meta } from "react-head";
 
 import Constraint from "../../components/Constraint";
@@ -37,9 +36,18 @@ const Page = ({ data }) => {
       <Section className="LinksCollectionWrapper">
         <Constraint>
           <LinkCollection>
-              <LinkCollectionItem to={`/protesto-formos/akcijos/`} text={`Akcijos`}/>
-              <LinkCollectionItem to={`/protesto-formos/renginiai/`} text={`Renginiai`}/>
-              <LinkCollectionItem to={`/protesto-formos/budinkite-veikti/`} text={`Budinkite veikti`}/> 
+            <LinkCollectionItem
+              to={`/protesto-formos/akcijos/`}
+              text={`Akcijos`}
+            />
+            <LinkCollectionItem
+              to={`/protesto-formos/renginiai/`}
+              text={`Renginiai`}
+            />
+            <LinkCollectionItem
+              to={`/protesto-formos/budinkite-veikti/`}
+              text={`Budinkite veikti`}
+            />
           </LinkCollection>
         </Constraint>
       </Section>

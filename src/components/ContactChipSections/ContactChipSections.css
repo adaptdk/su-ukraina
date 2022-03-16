@@ -39,8 +39,8 @@
     }
 
     > h2 {
-      display: inline-flex;
       align-items: center;
+      display: inline-flex;
       font: inherit;
       margin: 0;
       padding: 0;
@@ -50,14 +50,14 @@
   &__icon {
     content: "";
     display: block;
+    display: inline-block;
     height: 24px;
+    margin-right: 10px;
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
     position: relative;
     width: 24px;
-    display: inline-block;
-    margin-right: 10px;
 
     &--people {
       background: var(--c__primary);

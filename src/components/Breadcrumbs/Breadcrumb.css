@@ -25,9 +25,9 @@
     padding: 0;
   }
 
-  &__solo{
-    margin-top: 10px;
+  &__solo {
     font-size: 14px;
+    margin-top: 10px;
   }
 
   span {
@@ -35,7 +35,8 @@
     text-decoration: inherit;
   }
 
-  a, span {
+  a,
+  span {
     font-size: 14px;
   }
 }

@@ -1,8 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
-import "./SelectInput.css";
-
 const SelectInput = (props) => {
   return <select {...props} />;
 };

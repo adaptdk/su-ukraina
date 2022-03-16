@@ -1,14 +1,10 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 
-import './EventCardList.css';
+import "./EventCardList.css";
 
 const EventCardList = ({ children }) => {
-  return (
-    <div className="EventCardList">
-      {children}
-    </div>
-  );
+  return <div className="EventCardList">{children}</div>;
 };
 
 EventCardList.propTypes = {
