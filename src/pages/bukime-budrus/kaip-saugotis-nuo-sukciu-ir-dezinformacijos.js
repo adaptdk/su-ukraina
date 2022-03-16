@@ -14,7 +14,11 @@ import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Kaip saugotis nuo sukčių ir dezinformacijos`];
-  const additionalNavigation = [`piliečio atmintinė`, `patikima informacija`];
+  const additionalNavigation = [
+    `piliečio atmintinė`,
+    `patikima informacija`,
+    `žinokite ką perkate`,
+  ];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,

@@ -66,6 +66,7 @@
     &__actions {
       .Button {
         width: unset;
+        cursor: pointer;
       }
     }
 

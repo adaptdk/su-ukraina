@@ -35,6 +35,12 @@
     &::after {
       transform: scale(15);
     }
+
+    .Button__icon--arrow-blue {
+      &::before {
+        transform: translateX(5px);
+      }
+    }
   }
 
   &:disabled {
@@ -43,7 +49,8 @@
 
   &--primary {
     background: var(--c__primary);
-    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%),
+      0 1px 5px rgb(0 0 0 / 12%);
     color: var(--c__main-bg);
 
     &::after {
@@ -53,7 +60,8 @@
 
   &--secondary {
     background: var(--c__secondary);
-    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%),
+      0 1px 5px rgb(0 0 0 / 12%);
     color: var(--c__primary);
 
     &::after {
@@ -81,6 +89,8 @@
       mask-size: contain;
       position: relative;
       width: 20px;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform: translateX(0px);
     }
 
     &--donate {

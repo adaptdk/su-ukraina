@@ -19,6 +19,7 @@ const Page = ({ data }) => {
   const additionalNavigation = [
     `Patikima informacija`,
     `sukčiai ir dezinformacija`,
+    "piliečio atmintinė",
   ];
   const content = data.contents.edges.map((edge) => {
     return {
@@ -106,7 +107,11 @@ const Page = ({ data }) => {
                         />
                       );
                     })}
-                    {!!positives.length && <p>Bet</p>}
+                    {!!positives.length && (
+                      <p className="separator">
+                        <span>Bet</span>
+                      </p>
+                    )}
                     {positives.map((information, i) => {
                       return (
                         <PositiveNegativeListItem

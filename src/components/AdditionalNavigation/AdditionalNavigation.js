@@ -24,6 +24,8 @@ const handlePath = (additionalNavigationText) => {
       return `/bukime-budrus/piliecio-atmintine/`;
     case `sukčiai ir dezinformacija`:
       return `/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`;
+    case `žinokite ką perkate`:
+      return `/bukime-budrus/zinokite-ka-perkate/`;
   }
 };
 const AdditionalNavigation = ({ additionalNav }) => {

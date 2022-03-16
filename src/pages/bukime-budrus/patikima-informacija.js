@@ -16,6 +16,7 @@ const Page = ({ data }) => {
   const additionalNavigation = [
     `piliečio atmintinė`,
     `sukčiai ir dezinformacija`,
+    `žinokite ką perkate`,
   ];
   const content = data.contents.edges.map((edge) => {
     return {
