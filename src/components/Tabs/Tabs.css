@@ -1,29 +1,45 @@
 .tabs {
-  color: #6b6b6b;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  min-width: 30em;
   justify-content: space-around;
-  text-transform: uppercase;
+  color: #6b6b6b;
 
-  &__section {
-    align-items: center;
-    border-bottom: 1px solid #c0c0c0;
+  & label {
+    text-transform: uppercase;
+    color: var(--c__primary);
     display: flex;
     flex-direction: column;
-    margin-bottom: 1px;
+    align-items: center;
     width: 50%;
-
-    &--active {
-      align-items: center;
-      border-bottom: 3px solid #ffd500;
-      color: var(--c__primary);
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-    }
+    border-bottom: 1px solid #c0c0c0;
+    padding: 16px 0 16px 0;
+    margin-bottom: 1px;
   }
 
-  &__name {
-    cursor: pointer;
+  & > [type="radio"]:checked + label {
+    border-bottom: 3px solid #ffd500;
+    margin-bottom: 0;
+  }
+
+  & > [type="radio"] {
+    position: absolute;
+    opacity: 0;
+    & + label {
+      order: 1;
+      cursor: pointer;
+      & + * {
+        width: 100%;
+        order: 2;
+      }
+    }
+  }
+  & > [type="radio"]:not(:checked) {
+    & + label {
+      color: inherit;
+      & + * {
+        display: none;
+      }
+    }
   }
 }

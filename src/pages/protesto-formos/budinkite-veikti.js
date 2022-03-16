@@ -4,15 +4,11 @@ import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Card from "../../components/Card";
-import CardList from "../../components/CardList";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
-import CardSection from "../../components/Card/CardSection";
-import Button from "../../components/Button";
-import Tabs from "../../components/Tabs";
 import Section from "../../components/Section";
+import TabsAddresses from "../../components/Tabs/TabsAddresses";
 
 const Page = ({ data }) => {
   const crumbs = [`Budinkite veikti`];
@@ -28,12 +24,6 @@ const Page = ({ data }) => {
   const addressees = data.addressees.edges.map((edge) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
-
-  const [tabState, setTabState] = React.useState(1);
-
-  function handleTab(tabState) {
-    setTabState(tabState);
-  }
 
   return (
     <Layout pagePath="/protesto-formos/budinkite-veikti/">
@@ -62,59 +52,7 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
-        <Tabs
-          handleTab={handleTab}
-          tabState={tabState}
-          firstOption={`Ambasada`}
-          secondOption={`Įmonė`}
-        />
-        <CardList>
-          {addressees.map((addressee, i) => {
-            const type = tabState === 1 ? `ambasada` : `įmonė`;
-            if (type === addressee.type[0]) {
-              return (
-                <Card title={addressee.title} key={i}>
-                  <div className="Card__type">
-                    <ul>
-                      {addressee.type.map((singleType, j) => {
-                        return <li key={j}>{singleType}</li>;
-                      })}
-                    </ul>
-                  </div>
-
-                  {!!addressee.purpose && (
-                    <CardSection
-                      title="Kreipimosi klausimas"
-                      content={addressee.purpose}
-                    />
-                  )}
-                  {!!addressee.emailOrLink && (
-                    <CardSection
-                      title="Skaitmeninis kanalas"
-                      content={addressee.emailOrLink}
-                    />
-                  )}
-                  {!!addressee.address && (
-                    <CardSection title="Adresas" content={addressee.address} />
-                  )}
-
-                  <div className={`Card__actions`}>
-                    {!!addressee.emailOrLink && (
-                      <Button
-                        icon={`arrow-blue`}
-                        href={`mailto:${addressee.emailOrLink}`}
-                        color={`transparent`}
-                        text={`Rašyti laišką`}
-                        position={`right`}
-                        target="_blank"
-                      />
-                    )}
-                  </div>
-                </Card>
-              );
-            }
-          })}
-        </CardList>
+        <TabsAddresses addressees={addressees} />
       </Constraint>
     </Layout>
   );
