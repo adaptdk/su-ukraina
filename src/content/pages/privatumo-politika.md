@@ -5,8 +5,6 @@ slug: privatumo-politika
 short_description: ''
 
 ---
-Privatumo politika
-
 **VšĮ „Laisvės TV“,** juridinio asmens kodas **304405807**, rūpinasi Jūsų informacijos apsauga. Mes laikomės Europos Sąjungos Bendrojo duomenų apsaugos reglamento (GDPR) bei kitų įstatymų, reglamentuojančių Jūsų informacijos saugumą. Norėdami sužinoti daugiau, atidžiai perskaitykite šį pranešimą.
 
 **1. Kaip turėčiau skaityti šį pranešimą?**
