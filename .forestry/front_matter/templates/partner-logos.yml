@@ -19,5 +19,6 @@ fields:
     required: false
   label: Partner website
 pages:
+- src/content/partners/https-lrv.lt-lt-aktuali-informacija-informacija-apie-kara-ukrainoje-aktuali-informacija-1.md
 - src/content/partners/nova-media.md
 - src/content/partners/vilniaus-universiteto-jaunuju-zurnalistu-draugija.md
