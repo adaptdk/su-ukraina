@@ -72,3 +72,5 @@ fields:
     max: 
     labelField: 
   label: Information
+pages:
+- src/content/companies/dodo-pizza.md
