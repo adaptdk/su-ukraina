@@ -77,6 +77,11 @@ const Header = () => {
                     Sukčiai ir dezinformacija
                   </Link>
                 </li>
+                <li>
+                  <Link to="/bukime-budrus/zinokite-ka-perkate/">
+                    Žinokite ką perkate
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>

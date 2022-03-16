@@ -1,0 +1,50 @@
+.PositiveNegativeList {
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.PositiveNegativeListItem {
+  background: #f9f9f9;
+  display: flex;
+  width: 100%;
+  padding: calc(var(--s__unit)*5);
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap:wrap;
+
+  @media (min-width: 42rem) {
+    flex-wrap: nowrap;
+  }
+
+  + .ResourceListItem {
+    margin-top: calc(var(--s__unit)*2);
+  }
+
+  &__content {
+    width: 100%;
+
+    h3 {
+      color: var(--c__primary);
+      font-size: 1.25rem;
+      margin-top: 0;
+
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .Button {
+    min-width: 120px;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (min-width: 42rem) {
+      flex-wrap: no-wrap;
+      width: unset;
+    }
+  }
+}

@@ -10,11 +10,11 @@ import "./aukojimas.css";
 // Components.
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
+import CardSection from "../../components/Card/CardSection";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
 import Button from "../../components/Button";
-import CardSection from "../../components/Card/CardSection";
 import Tabs from "../../components/Tabs";
 import Section from "../../components/Section";
 
@@ -73,7 +73,6 @@ const Page = ({ data }) => {
         />
         <CardList>
           {organisations.map((organisation, i) => {
-            console.log(`ORG`, organisation);
             const logo = organisation.logo && (
               <GatsbyImage
                 image={getImage(organisation.logo)}

@@ -3,13 +3,17 @@ import PropTypes from "prop-types";
 
 import "./Card.css";
 
-const Card = ({ children, title, logo }) => {
+const Card = ({ children, title, subtitle, externalImage, logo }) => {
   return (
     <article className="Card">
-      <div className="Card__heading">
-        <h2 className="Card__title">{title}</h2>
+      <header className="Card__heading">
+        <div class="Card__heading-text">
+          <h2 className="Card__title">{title}</h2>
+          {!!subtitle && <div className="Card__subtitle">{subtitle}</div>}
+        </div>
         {!!logo && <div className="Card__logo">{logo}</div>}
-      </div>
+        {!!externalImage && <div className="Card__logo"><img src={externalImage}/></div>}
+      </header>
       <div className="Card__body">{children}</div>
     </article>
   );
@@ -19,6 +23,8 @@ Card.propTypes = {
   children: PropTypes.node,
   title: PropTypes.node,
   logo: PropTypes.node,
+  subtitle: PropTypes.node,
+  externalImage: PropTypes.node,
 };
 
 export default Card;
