@@ -10,6 +10,7 @@ location:
 time: 
 phone: +370 5 2600 600
 email: bta@bta.lt
+contacts: +370 5 2600 600;; bta@bta.lt
 date: 
 urls:
 - https://www.bta.lt/naujienos/bta-draudimas-jungiasi-prie-stiprus-kartu-nemokamai-draus-turta-skirta-ukrainos-karo-pabegeliams

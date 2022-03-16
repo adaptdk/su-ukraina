@@ -1,6 +1,5 @@
 ---
 tags:
-- 
 languages:
 - lt
 - uk
@@ -10,6 +9,7 @@ location: Vilniuje: Šeimyniškių g. 24;Vilniuje: Kareivių g. 2B;Kaune: Kaunak
 time: I-V 09:00 - 18:00; VI 10:00 - 17:00.VII (Tik Vilniuje ir Kaune): 10:00 - 17:00
 phone: 
 email: 
+contacts: 
 date: 
 urls:
 - https://www.facebook.com/andrius.tapinas/posts/10225210419400809

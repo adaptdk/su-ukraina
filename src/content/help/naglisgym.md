@@ -11,6 +11,7 @@ location: Savanorių pr. 66, Kaunas
 time: 
 phone: +37065503225
 email: 
+contacts: +37065503225
 date: 
 urls:
 - https://www.facebook.com/naglisgym

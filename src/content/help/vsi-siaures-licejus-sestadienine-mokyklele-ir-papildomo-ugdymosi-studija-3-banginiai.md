@@ -11,6 +11,7 @@ location: Rotušės a. 19 Kaunas; A. Juozapavičiaus g. 13, Vilnius
 time: 
 phone: +370 612 54 048
 email: 3banginiai@siaureslicejus.lt
+contacts: 3banginiai@siaureslicejus.lt;;+370 612 54 048
 date: 
 urls:
 - www.siaureslicejus.lt

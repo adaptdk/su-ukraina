@@ -9,6 +9,7 @@ location: Noreikiškės, Kaunas
 time: 
 phone: 
 email: info@mykoliukas.lt
+contacts: (8-611) 88423; info@mykoliukas.lt
 date: 
 urls:
 - https://www.facebook.com/permalink.php?story_fbid=5358029814209662&id=209406762405352

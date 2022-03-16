@@ -11,6 +11,7 @@ location: Bendroji registracija
 time: 
 phone: 
 email: 
+contacts: Gydytojų kontaktai
 date: 
 urls:
 - https://www.facebook.com/4pcentras/posts/1297837147367796

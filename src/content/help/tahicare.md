@@ -11,6 +11,7 @@ location: http://www.tahicare.com/
 time: 
 phone: 
 email: contact@tahicare.com
+contacts: contact@tahicare.com
 date: 
 urls:
 - https://www.facebook.com/tahicare/posts/285987663661457

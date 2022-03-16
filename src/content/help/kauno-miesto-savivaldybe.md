@@ -11,6 +11,7 @@ location:
 time: I-IV 8:00 - 12:00; 12:45 - 17:00; V 8:00 - 12:00; 12:45 - 15:45
 phone: +370 603 10 093
 email: rosvita.rupsiene@kaunas.lt
+contacts: +370 603 10 093;; rosvita.rupsiene@kaunas.lt
 date: 
 urls:
 - http://www.kaunas.lt/2022/03/svarbi-informacija/ua/

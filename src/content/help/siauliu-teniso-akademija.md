@@ -10,6 +10,7 @@ location: Gardino g. 8(4-ios uždarų patalpų lauko teniso aikštelės)Gardino 
 time: 
 phone: +37067450455
 email: jurate.juodyte@siauliaitennis.lt
+contacts: jurate.juodyte@siauliaitennis.lt; +37067450455
 date: 
 urls:
 - https://siauliaitennis.lt/?nid=1048

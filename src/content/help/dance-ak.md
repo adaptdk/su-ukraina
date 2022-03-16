@@ -10,6 +10,7 @@ location: Kovo 11-osios g. 18, Kaunas
 time: Antradieniais 17:30
 phone: 37069924090
 email: 
+contacts: 37069924090
 date: 
 urls:
 - https://www.facebook.com/danceakstudio

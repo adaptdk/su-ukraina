@@ -10,6 +10,7 @@ location:
 time: 
 phone: 
 email: 
+contacts: 
 date: 
 urls:
 - https://www.instagram.com/joboffersforukrainians/

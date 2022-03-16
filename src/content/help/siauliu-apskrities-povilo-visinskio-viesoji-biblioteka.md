@@ -12,6 +12,7 @@ location: Aušros al. 62, Šiauliai
 time: 
 phone: +370 41 523 750
 email: bibl@savb.lt
+contacts: +370 41 523 750;; bibl@savb.lt
 date: 
 urls:
 - https://savb.lt/lt/renginys/kvieciame/

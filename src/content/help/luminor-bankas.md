@@ -11,6 +11,7 @@ location: https://www.luminor.lt/lt/banko-tinklas
 time: I-V 8:00 - 20:00; VI 9:00 - 16:00
 phone: +370 5 239 3444
 email: 
+contacts: +370 5 239 3444
 date: 
 urls:
 - https://www.luminor.lt/lt/del-situacijos-ukrainoje

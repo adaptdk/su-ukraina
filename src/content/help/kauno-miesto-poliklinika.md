@@ -11,6 +11,7 @@ location: Visi padaliniai: Pramonės pr. 31, Baltų pr. 7, Savanorių pr. 369, A
 time: 
 phone: +370 373 13 289;+370 373 12 804
 email: 
+contacts: +370 373 13 289;;+370 373 12 804
 date: 
 urls:
 - 

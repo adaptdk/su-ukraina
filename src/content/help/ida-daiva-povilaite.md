@@ -12,6 +12,7 @@ location:
 time: 
 phone: +370 614 36 308
 email: daiva.povilaite@gmail.com
+contacts: daiva.povilaite@gmail.com;; +370 614 36 308;;Facebook žinute
 date: 2022-03-08-2022-05-13
 urls:
 - 

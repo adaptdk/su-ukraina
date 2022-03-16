@@ -11,6 +11,7 @@ location:
 time: I–V 8:00–20:00
 phone: 
 email: 
+contacts: + 370 5 268 2800
 date: 
 urls:
 - https://www.facebook.com/seblietuvoje/posts/4775856205864186

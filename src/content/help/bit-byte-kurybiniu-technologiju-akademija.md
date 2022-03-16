@@ -10,6 +10,7 @@ location:
 time: 
 phone: +370 678 84 177
 email: hello@bitbyte.lt
+contacts: +370 678 84 177;; hello@bitbyte.lt
 date: 
 urls:
 - https://registracija.bitbyte.lt/

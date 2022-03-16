@@ -12,8 +12,9 @@ time: I - IV    12.00 - 22.00
 V	12.00 - 23.00
 VI	10.00 - 23.00
 VII	10.00 - 22.00
-phone: +370 313 52338 info@aquapark.lt
-email: 
+phone: +370 313 52338
+email: info@aquapark.lt
+contacts: +370 313 52338; info@aquapark.lt
 date: 
 urls:
 - https://www.akvapark.lt/vandens-parkas/akcijos/ukrainieciams-parama-is-musu-visu/

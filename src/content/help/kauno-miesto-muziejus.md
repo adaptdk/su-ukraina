@@ -12,6 +12,7 @@ location: Pilies skyrius - Pilies g. 17Tautinės muzikos skyrius - L. Zamenhofo 
 time: II-V 10:00 - 18:00VI 10:00 - 17:00
 phone: +370 610 82 503
 email: muziejus@kaunomuziejus.lt
+contacts: +370 610 82 503;; muziejus@kaunomuziejus.lt
 date: 
 urls:
 - https://kaunomuziejus.lt/svarbu-del-karo-ukrainoje/

@@ -11,6 +11,7 @@ location: Tele 2 aptarnavimo centrai
 time: 
 phone: +370 684 00 077
 email: 
+contacts: +370 684 00 077
 date: 
 urls:
 - https://pildyk.lt/slava-ukraini?fbclid=IwAR2jKY8oNtPoy5vADFVHgPNxBhsy2nBPkhEj3wn8m2Pei-593rh_z49A0Vg

@@ -10,6 +10,7 @@ location:
 time: 
 phone: 
 email: 
+contacts: Facebook žinute
 date: 
 urls:
 - https://www.facebook.com/jurate.kiaulakiene.9/posts/5599738623374502

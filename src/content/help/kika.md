@@ -10,6 +10,7 @@ location: Bet kuri KIKA fizinė parduotuvė
 time: 
 phone: 
 email: 
+contacts: 
 date: 
 urls:
 - 

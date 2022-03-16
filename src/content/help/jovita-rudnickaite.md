@@ -11,6 +11,7 @@ location: Kaunas ar Kauno raj.
 time: Atskiru susitarimu
 phone: +37067165843
 email: jrudnickaite@gmail.com
+contacts: +37067165843; jrudnickaite@gmail.com
 date: 
 urls:
 - 

@@ -11,6 +11,7 @@ location: Antakalnio g. 97, Vilnius ir nuotloniniu būdu
 time: Psichologai konsultuoja I-V nuo 16 iki 20 val., VI nuo 12 iki 20 val.
 phone: +370 640 51 555
 email: 
+contacts: +370 640 51 555
 date: 
 urls:
 - https://krizesiveikimas.lt/naujienos/nemokamos-psichologo-konsultacijos-ukrainos-pilieciams-ir-ju-seimu-nariams/

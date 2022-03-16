@@ -11,6 +11,7 @@ location:
 time: Darbo laikas. Esant reikalui galima derinti ir savaitgalį. 
 phone: +37069885980, info@ilonoskeliones.lt
 email: 
+contacts: +37069885980, info@ilonoskeliones.lt
 date: 
 urls:
 - 

@@ -9,6 +9,7 @@ location: Kaune, Drobės g. 26
 time: 
 phone: +370 685 15 565
 email: 
+contacts: +370 685 15 565
 date: 
 urls:
 - http://www.ndantys.lt/

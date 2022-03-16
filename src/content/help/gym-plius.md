@@ -11,6 +11,7 @@ location: Visi 14 Gym+ klubų
 time: 
 phone: 
 email: 
+contacts: kreiptis el. paštu
 date: 
 urls:
 - https://gymplius.lt/kontaktai

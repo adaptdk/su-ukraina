@@ -11,6 +11,7 @@ location: Kovo 11 - osios g. 22 (Girstupio "IKI" prekybos centras) Kaunas
 time: 
 phone: +370 372 25 577;+370 677 76 075
 email: info@avevitaklinika.lt
+contacts: +370 372 25 577;;+370 677 76 075;; info@avevitaklinika.lt
 date: 
 urls:
 - https://www.facebook.com/avevitaklinika/posts/7417398908272002

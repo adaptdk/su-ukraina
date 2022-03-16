@@ -11,6 +11,7 @@ location: J. Basanavičiaus al. 54 LT-50209 Kaunas
 time: 
 phone: +370 682 10405
 email: 
+contacts: +370 682 10405;;;Facebook žinut;e;, internetu
 date: 
 urls:
 - https://www.gerasodontologas.lt/registracija/

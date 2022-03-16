@@ -10,6 +10,7 @@ location: Smalininkų g. 2, Kaunas
 time: 
 phone: 
 email: 
+contacts: Facebook žinutė
 date: 
 urls:
 - https://www.facebook.com/Pilates.house.Lietuva/posts/3124216017851487

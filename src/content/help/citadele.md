@@ -11,6 +11,7 @@ location: Citadelės banko padaliniai
 time: 
 phone: 
 email: 
+contacts: 
 date: 
 urls:
 - https://www.citadele.lt/lt/support/citizens-of-ukraine/

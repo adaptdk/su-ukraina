@@ -9,6 +9,7 @@ location:
 time: 
 phone: +370 670 23 081
 email: 
+contacts: +370 670 23 081
 date: 
 urls:
 - https://www.facebook.com/gyvenimaspagalMaryKay

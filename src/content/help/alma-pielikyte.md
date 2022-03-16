@@ -12,6 +12,7 @@ location:
 time: pagal susitarimą
 phone: +37069934050
 email: aoielikyte@yahoo.co.uk
+contacts: +37069934050; aoielikyte@yahoo.co.uk
 date: 
 urls:
 - 

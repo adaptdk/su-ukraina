@@ -11,6 +11,7 @@ location:
 time: 
 phone: 
 email: 
+contacts: 
 date: 
 urls:
 - https://www.facebook.com/LietuvosTukstantmecioVaikai/posts/10159223050698515

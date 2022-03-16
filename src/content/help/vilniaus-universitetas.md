@@ -10,6 +10,7 @@ location:
 time: 
 phone: 
 email: ask@vu.lt
+contacts: ask@vu.lt
 date: 
 urls:
 - https://www.vu.lt/parama-ukrainai

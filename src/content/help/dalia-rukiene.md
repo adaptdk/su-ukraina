@@ -1,14 +1,17 @@
 ---
 tags:
-- grožio paslaugos
+- sveikatos priežiūra
 languages:
-- 
+- lt
+- en
+- ru
 title: Dalia Rukiene
-purpose: Kirpėja - stilistė, registracija tel.
-location: Kaunas, Garliava
+purpose: Terapeutė, masažuotoja
+location: Kaunas, Žaliakalnis
 time: 
-phone: +37067465098
+phone: +37062098686
 email: 
+contacts: +37062098686
 date: 
 urls:
 - https://www.facebook.com/DaliRuk

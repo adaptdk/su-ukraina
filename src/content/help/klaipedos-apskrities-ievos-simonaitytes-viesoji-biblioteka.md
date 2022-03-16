@@ -12,6 +12,7 @@ location: Herkaus Manto g. 25, Klaipėda
 time: 
 phone: +370 464 125 33
 email: biblioteka@klavb.lt
+contacts: +370 464 125 33;; biblioteka@klavb.lt
 date: 
 urls:
 - https://www.klavb.lt/naujienos/1/bblotekidlja-ukrani-libraries-for-ukraine-bibliotekos-ukrainai:429

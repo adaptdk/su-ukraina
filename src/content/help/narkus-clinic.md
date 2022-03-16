@@ -9,6 +9,7 @@ location: Uosio g. 42, Kaunas
 time: 
 phone: 
 email: info@narkusclinic.lt
+contacts: ;info@narkusclinic.lt; (8-616) 44119
 date: 
 urls:
 - https://www.facebook.com/narkusclinic/posts/984788752423513

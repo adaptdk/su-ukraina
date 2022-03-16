@@ -10,6 +10,7 @@ location:
 time: I ir III nuo 19:00 val.
 phone: 
 email: Daiva.dijokeviciene@gmail.com
+contacts: Daiva.dijokeviciene@gmail.com
 date: 
 urls:
 - https://www.facebook.com/daiva.dijokeviciene

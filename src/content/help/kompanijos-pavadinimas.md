@@ -9,6 +9,7 @@ location: Adresas / Aдрес
 time: Darbo laikas / Время работы
 phone: 
 email: 
+contacts: Kontaktai / Kонтакты
 date: Galioja iki / Действительна до
 urls:
 - URL

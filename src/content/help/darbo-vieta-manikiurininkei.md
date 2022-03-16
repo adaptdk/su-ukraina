@@ -11,6 +11,7 @@ location: Taikos pr. 21 B
 time: 
 phone: 
 email: 
+contacts: Raminta kalba tik LT tad pokalbiui reikalingas tarpininkas. +37062483818
 date: 
 urls:
 - 

@@ -10,6 +10,7 @@ location: Kęstučio g. 74, Kaunas
 time: I-VI 09:00-20:00
 phone: 
 email: 
+contacts: Giedrė +37065061016
 date: 
 urls:
 - 
