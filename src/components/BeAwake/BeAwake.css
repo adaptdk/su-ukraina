@@ -1,7 +1,7 @@
 .BeAwake {
   &__text {
-    padding-top: calc(var(--s__unit) * 10);
     margin-bottom: calc(var(--s__unit) * 10);
+    padding-top: calc(var(--s__unit) * 10);
   }
 
   &__title {
@@ -14,8 +14,8 @@
     display: flex;
     flex-direction: column;
     font-size: 1.25rem;
-    padding: 0;
     list-style: none;
+    padding: 0;
 
     li {
       padding: var(--s__main-padding) 0;
@@ -42,17 +42,17 @@
   }
 
   .Button {
-    text-transform: none;
     border: none;
     color: var(--c__main-color);
-    padding: 0;
     justify-content: space-between;
+    padding: 0;
+    text-transform: none;
 
     &__icon {
       &::before {
-        width: 32px;
         height: 32px;
         margin-left: var(--s__main-padding);
+        width: 32px;
       }
     }
 
@@ -73,8 +73,6 @@
     }
 
     &__text {
-      padding-top: calc(var(--s__alt-padding) * 2);
-      padding-right: var(--s__main-padding);
       margin-bottom: 0;
       padding-right: var(--s__main-padding);
       padding-top: calc(var(--s__alt-padding) * 2);

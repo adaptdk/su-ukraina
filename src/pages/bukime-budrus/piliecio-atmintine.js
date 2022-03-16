@@ -1,7 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Linkify from "react-linkify";
 import { Title, Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -17,7 +16,7 @@ const Page = ({ data }) => {
   const crumbs = [`Piliečio atmintinė`];
   const additionalNavigation = [
     `Patikima informacija`,
-    `sukčiai ir dezinformacija`
+    `sukčiai ir dezinformacija`,
   ];
   const content = data.contents.edges.map((edge) => {
     return {
@@ -59,12 +58,17 @@ const Page = ({ data }) => {
       <Constraint>
         {handbooks.map((handbook, i) => {
           return (
-            <SubPage title={handbook.title} intro={handbook.intro}>
+            <SubPage key={i} title={handbook.title} intro={handbook.intro}>
               <ResourceList>
-                {handbook.resources?.map((resource, i) => {
+                {handbook.resources?.map((resource, j) => {
                   return (
-                    <ResourceListItem title={resource.title} subtitle={resource.subtitle} url={resource.link}/>
-                  )
+                    <ResourceListItem
+                      key={j}
+                      title={resource.title}
+                      subtitle={resource.subtitle}
+                      url={resource.link}
+                    />
+                  );
                 })}
               </ResourceList>
             </SubPage>

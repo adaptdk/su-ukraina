@@ -7,17 +7,13 @@ import { Link } from "gatsby";
 const CtaCard = ({ children, title, iconHandle, link }) => {
   return (
     <div className="CtaCard">
-        <Link to={link} title={title}>
-          <div className="CtaCard__heading">
-            <div className={`CtaCard__icon CtaCard__icon--${iconHandle}`}/>
-            <div className="CtaCard__title">
-              {title}
-              </div>
-          </div>
-          <div className="CtaCard__body">
-            {children}
-            </div>
-        </Link>
+      <Link to={link} title={title}>
+        <div className="CtaCard__heading">
+          <div className={`CtaCard__icon CtaCard__icon--${iconHandle}`} />
+          <div className="CtaCard__title">{title}</div>
+        </div>
+        <div className="CtaCard__body">{children}</div>
+      </Link>
     </div>
   );
 };

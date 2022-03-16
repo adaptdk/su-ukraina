@@ -1,11 +1,9 @@
-.PartnerList
- {
+.PartnerList {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 100%;
+  flex-flow: row wrap;
   justify-content: flex-start;
   margin: 0 -1rem;
+  width: 100%;
 
   @media (min-width: 40rem) {
     justify-content: center;

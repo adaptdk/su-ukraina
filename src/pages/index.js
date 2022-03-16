@@ -90,7 +90,7 @@ const Page = ({ data }) => {
           <Constraint>
             <h2 className="Section__title">Prie turinio kūrimo prisideda</h2>
             <PartnerList>
-              {partners.map((partner) => {
+              {partners.map((partner, i) => {
                 const logo = partner.logo && (
                   <GatsbyImage
                     image={getImage(partner.logo)}
@@ -101,6 +101,7 @@ const Page = ({ data }) => {
 
                 return (
                   <Partner
+                    key={i}
                     title={partner.title}
                     logo={logo}
                     website={partner.website}

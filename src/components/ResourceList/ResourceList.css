@@ -7,20 +7,20 @@
 }
 
 .ResourceListItem {
-  background: #f9f9f9;
-  display: flex;
-  width: 100%;
-  padding: calc(var(--s__unit)*5);
   align-items: center;
+  background: #f9f9f9;
   box-sizing: border-box;
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
+  padding: calc(var(--s__unit) * 5);
+  width: 100%;
 
   @media (min-width: 42rem) {
     flex-wrap: nowrap;
   }
 
   + .ResourceListItem {
-    margin-top: calc(var(--s__unit)*2);
+    margin-top: calc(var(--s__unit) * 2);
   }
 
   &__content {
@@ -38,8 +38,8 @@
   }
 
   .Button {
-    min-width: 120px;
     justify-content: space-between;
+    min-width: 120px;
     width: 100%;
 
     @media (min-width: 42rem) {

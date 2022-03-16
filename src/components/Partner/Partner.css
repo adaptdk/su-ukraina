@@ -1,18 +1,12 @@
 .Partner {
-  overflow: hidden;
   display: inline-block;
   margin: 1rem;
   margin-top: 0;
-
-  .gatsby-image-wrapper {
-    > div {
-
-    }
-  }
+  overflow: hidden;
 
   img {
-    min-height: 60px;
     max-height: 80px;
+    min-height: 60px;
     width: auto;
   }
 }

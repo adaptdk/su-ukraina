@@ -14,10 +14,7 @@ import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Kaip saugotis nuo sukčių ir dezinformacijos`];
-  const additionalNavigation = [
-    `piliečio atmintinė`,
-    `patikima informacija`
-  ];
+  const additionalNavigation = [`piliečio atmintinė`, `patikima informacija`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -58,12 +55,17 @@ const Page = ({ data }) => {
       <Constraint>
         {handbooks.map((handbook, i) => {
           return (
-            <SubPage title={handbook.title} intro={handbook.intro}>
+            <SubPage key={i} title={handbook.title} intro={handbook.intro}>
               <ResourceList>
-                {handbook.resources?.map((resource, i) => {
+                {handbook.resources?.map((resource, j) => {
                   return (
-                    <ResourceListItem title={resource.title} subtitle={resource.subtitle} url={resource.link}/>
-                  )
+                    <ResourceListItem
+                      key={j}
+                      title={resource.title}
+                      subtitle={resource.subtitle}
+                      url={resource.link}
+                    />
+                  );
                 })}
               </ResourceList>
             </SubPage>
@@ -97,7 +99,9 @@ export const query = graphql`
       }
     }
     handbooks: allFile(
-      filter: { sourceInstanceName: { eq: "beware-of-scams-and-misinformation" } }
+      filter: {
+        sourceInstanceName: { eq: "beware-of-scams-and-misinformation" }
+      }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {

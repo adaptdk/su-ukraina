@@ -234,6 +234,23 @@ Page.propTypes = {
         })
       ),
     }),
+    infoForeign: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            childMarkdownRemark: PropTypes.shape({
+              frontmatter: PropTypes.shape({
+                title: PropTypes.string,
+                description: PropTypes.string,
+                url: PropTypes.string,
+                facebook: PropTypes.string,
+                twitter: PropTypes.string,
+              }),
+            }),
+          }),
+        })
+      ),
+    }),
     infoPeople: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({

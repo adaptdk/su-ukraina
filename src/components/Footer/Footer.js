@@ -28,7 +28,9 @@ const Footer = () => {
     <footer className="Footer">
       <Constraint>
         <div className="Footer__cta-section">
-          <div className="Footer__cta-section-title">Kiekvienas veiksmas svarbus</div>
+          <div className="Footer__cta-section-title">
+            Kiekvienas veiksmas svarbus
+          </div>
           <div className="Footer__cta-section-actions">
             <Button
               to={PATH_HOW_TO_DONATE}
@@ -91,7 +93,12 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={LaisvesTv} alt="Laisvės TV logo" width="49" height="49" />
+              <img
+                src={LaisvesTv}
+                alt="Laisvės TV logo"
+                width="49"
+                height="49"
+              />
             </a>
           </p>
         </div>

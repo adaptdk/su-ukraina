@@ -6,9 +6,9 @@ import "./SubPage.css";
 const SubPage = ({ title, intro, children }) => {
   return (
     <section className="SubPage">
-    <h2 className="SubPage__title">{title}</h2>
-    <div className="SubPage__intro">{intro}</div>
-    {children}
+      <h2 className="SubPage__title">{title}</h2>
+      <div className="SubPage__intro">{intro}</div>
+      {children}
     </section>
   );
 };

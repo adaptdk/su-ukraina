@@ -34,7 +34,9 @@ const AdditionalNavigation = ({ additionalNav }) => {
           let path = handlePath(additionalEl);
           return (
             <li key={index}>
-              <Link className="additional-navigation__item" to={path}>{additionalEl}</Link>
+              <Link className="additional-navigation__item" to={path}>
+                {additionalEl}
+              </Link>
             </li>
           );
         })}

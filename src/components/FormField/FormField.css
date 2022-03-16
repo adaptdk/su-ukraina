@@ -18,10 +18,10 @@
     border: 1px solid rgb(15 71 175 / 10%);
     border-radius: var(--s__main-border-radius);
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
     outline: 0;
     padding: calc(var(--s__unit) * 3) calc(var(--s__unit) * 4);
     width: 100%;
-    font-family: Roboto, sans-serif;
 
     &:focus {
       border: 1px solid var(--c__primary);
