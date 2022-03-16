@@ -7,7 +7,7 @@ short_description: ''
 ---
 Privatumo politika
 
-**UAB „Adapt LT“,** juridinio asmens kodas **303276505**, rūpinasi Jūsų informacijos apsauga. Mes laikomės Europos Sąjungos Bendrojo duomenų apsaugos reglamento (GDPR) bei kitų įstatymų, reglamentuojančių Jūsų informacijos saugumą. Norėdami sužinoti daugiau, atidžiai perskaitykite šį pranešimą.
+**VšĮ „Laisvės TV“,** juridinio asmens kodas **304405807**, rūpinasi Jūsų informacijos apsauga. Mes laikomės Europos Sąjungos Bendrojo duomenų apsaugos reglamento (GDPR) bei kitų įstatymų, reglamentuojančių Jūsų informacijos saugumą. Norėdami sužinoti daugiau, atidžiai perskaitykite šį pranešimą.
 
 **1. Kaip turėčiau skaityti šį pranešimą?**
 
@@ -15,13 +15,13 @@ Privatumo politika
 
 **2. Kas yra atsakingas už mano informacijos apsaugą?**
 
-Mes esame: UAB Adapt LT
+Mes esame: VšĮ „Laisvės TV“
 
-Mūsų įmonės kodas yra: 303276505
+Mūsų įmonės kodas yra: 304405807
 
-Mūsų adresas: Antakalnio g. 13-23, LT-66117 Druskininkai
+Mūsų adresas: Verkių g. 31B-2, LT-09108 Vilnius
 
-Mūsų el. pašto adresas: [suukraina@adaptagency.com](mailto:suukraina@adaptagency.com "suukraina@adaptagency.com")
+Mūsų el. pašto adresas: [bendraukime@laisves.tv]()
 
 **3. Kodėl renkate informaciją apie mane?**
 
