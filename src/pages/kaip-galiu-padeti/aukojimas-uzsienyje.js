@@ -63,23 +63,22 @@ const Page = ({ data }) => {
           <TabsButton
             href={`/kaip-galiu-padeti/aukojimas/`}
             text={`Lietuvoje`}
-            active={`active`}
           />
           <TabsButton
             href={`/kaip-galiu-padeti/aukojimas-uzsienyje/`}
             text={`Užsienyje`}
+            active={`active`}
           />
         </section>
         <CardList>
           {organisations.map((organisation, i) => {
-            console.log(`ORG`, organisation);
             const logo = organisation.logo && (
               <GatsbyImage
                 image={getImage(organisation.logo)}
                 alt={organisation.title}
               />
             );
-            if (`Lietuvoje` === organisation.location) {
+            if (`Užsienyje` === organisation.location) {
               return (
                 <Card title={organisation.title} logo={logo} key={i}>
                   {!!organisation.about && (
