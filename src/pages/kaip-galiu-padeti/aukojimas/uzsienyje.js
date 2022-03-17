@@ -78,63 +78,58 @@ const Page = ({ data }) => {
                 alt={organisation.title}
               />
             );
-            if (`Užsienyje` === organisation.location) {
-              return (
-                <Card title={organisation.title} logo={logo} key={i}>
-                  {!!organisation.about && (
-                    <CardSection title="Apie" content={organisation.about} />
-                  )}
-                  {!!organisation.cause && (
-                    <CardSection
-                      title="Paskirtis"
-                      content={organisation.cause}
+            return (
+              <Card title={organisation.title} logo={logo} key={i}>
+                {!!organisation.about && (
+                  <CardSection title="Apie" content={organisation.about} />
+                )}
+                {!!organisation.cause && (
+                  <CardSection title="Paskirtis" content={organisation.cause} />
+                )}
+                {!!organisation.rekvizitai && (
+                  <CardSection
+                    title="Kita informacija"
+                    content={organisation.rekvizitai}
+                  />
+                )}
+
+                {/*<h3>Forma</h3>*/}
+                {/*<div>*/}
+                {/*  <ul>*/}
+                {/*    {organisation.forma.map((forma, j) => {*/}
+                {/*      return <li key={j}>{forma}</li>;*/}
+                {/*    })}*/}
+                {/*  </ul>*/}
+                {/*</div>*/}
+
+                <div className={`Card__actions`}>
+                  {!!organisation.support_link && (
+                    <Button
+                      icon={`arrow-white`}
+                      href={organisation.support_link}
+                      color={`primary`}
+                      text={`Paremti`}
+                      position={`right`}
+                      target="_blank"
                     />
                   )}
-                  {!!organisation.rekvizitai && (
-                    <CardSection
-                      title="Kita informacija"
-                      content={organisation.rekvizitai}
+
+                  {!!organisation.website && (
+                    <Button
+                      icon={`arrow-blue`}
+                      href={organisation.website}
+                      color={`transparent`}
+                      text={`Oficialus puslapis`}
+                      position={`right`}
+                      target="_blank"
                     />
                   )}
 
-                  {/*<h3>Forma</h3>*/}
-                  {/*<div>*/}
-                  {/*  <ul>*/}
-                  {/*    {organisation.forma.map((forma, j) => {*/}
-                  {/*      return <li key={j}>{forma}</li>;*/}
-                  {/*    })}*/}
-                  {/*  </ul>*/}
-                  {/*</div>*/}
-
-                  <div className={`Card__actions`}>
-                    {!!organisation.support_link && (
-                      <Button
-                        icon={`arrow-white`}
-                        href={organisation.support_link}
-                        color={`primary`}
-                        text={`Paremti`}
-                        position={`right`}
-                        target="_blank"
-                      />
-                    )}
-
-                    {!!organisation.website && (
-                      <Button
-                        icon={`arrow-blue`}
-                        href={organisation.website}
-                        color={`transparent`}
-                        text={`Oficialus puslapis`}
-                        position={`right`}
-                        target="_blank"
-                      />
-                    )}
-
-                    {/* Use this for tabs */}
-                    {/* {organisation.location} */}
-                  </div>
-                </Card>
-              );
-            }
+                  {/* Use this for tabs */}
+                  {/* {organisation.location} */}
+                </div>
+              </Card>
+            );
           })}
         </CardList>
       </Constraint>
@@ -165,7 +160,10 @@ export const query = graphql`
       }
     }
     organisations: allFile(
-      filter: { sourceInstanceName: { eq: "orgs-for-donating" } }
+      filter: {
+        sourceInstanceName: { eq: "orgs-for-donating" }
+        childMarkdownRemark: { frontmatter: { location: { eq: "Užsienyje" } } }
+      }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {
