@@ -9,6 +9,7 @@
 
   &__item {
     list-style-type: none;
+    display: flex;
   }
 
   &__item::before {
@@ -28,6 +29,10 @@
   &__solo {
     font-size: 14px;
     margin-top: 10px;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   span {

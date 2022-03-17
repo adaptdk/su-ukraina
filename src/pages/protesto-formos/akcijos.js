@@ -12,7 +12,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Akcijos`];
+  const crumbs = [`Protesto formos`, `Akcijos`];
   const additionalNavigation = [`Budinkite veikti`, `renginiai`];
   const content = data.contents.edges.map((edge) => {
     return {

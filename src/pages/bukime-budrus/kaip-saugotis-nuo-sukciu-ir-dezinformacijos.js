@@ -13,7 +13,10 @@ import SubPage from "../../components/SubPage";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Kaip saugotis nuo sukčių ir dezinformacijos`];
+  const crumbs = [
+    `Būkime budrūs`,
+    `Kaip saugotis nuo sukčių ir dezinformacijos`,
+  ];
   const additionalNavigation = [`piliečio atmintinė`, `patikima informacija`];
   const content = data.contents.edges.map((edge) => {
     return {

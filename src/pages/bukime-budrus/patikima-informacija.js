@@ -12,7 +12,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Patikima informacija`];
+  const crumbs = [`Būkime budrūs`, `Patikima informacija`];
   const additionalNavigation = [
     `piliečio atmintinė`,
     `sukčiai ir dezinformacija`,

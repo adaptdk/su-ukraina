@@ -15,7 +15,7 @@ import Tabs from "../../components/Tabs";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Budinkite veikti`];
+  const crumbs = [`Protesto formos`, `Budinkite veikti`];
   const additionalNavigation = [`akcijos`, `renginiai`];
   const content = data.contents.edges.map((edge) => {
     return {
