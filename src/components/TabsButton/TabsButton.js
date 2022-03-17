@@ -7,7 +7,7 @@ import "./TabsButton.css";
 
 const CN = `TabsButton`;
 
-const TabsButton = ({ text, active, ...props }) => {
+const TabsButton = ({ text, active, pagePath, ...props }) => {
   let Tag = `button`;
 
   if (props.href) {
@@ -19,7 +19,12 @@ const TabsButton = ({ text, active, ...props }) => {
   }
 
   return (
-    <Tag className={`${CN} ${CN}--${active}`} {...props}>
+    <Tag
+      className={`${CN} ${
+        !!active || props.to === pagePath ? `${CN}--active` : ``
+      }`}
+      {...props}
+    >
       {text}
     </Tag>
   );
@@ -30,6 +35,7 @@ TabsButton.propTypes = {
   to: PropTypes.string,
   text: PropTypes.string,
   active: PropTypes.string,
+  pagePath: PropTypes.string,
 };
 
 export default TabsButton;
