@@ -14,7 +14,7 @@ import Button from "../../components/Button";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Savanorystė`];
+  const crumbs = [`Kaip galiu padėti`, `Savanorystė`];
   const additionalNavigation = [`Aukojimas`];
   const content = data.contents.edges.map((edge) => {
     return {

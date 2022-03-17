@@ -16,7 +16,7 @@ import Section from "../../components/Section";
 import TabsButton from "../../components/TabsButton";
 
 const Page = ({ content, organisations, pagePath }) => {
-  const crumbs = [`Aukojimas`];
+  const crumbs = [`Kaip galiu padėti`, `Aukojimas`];
   const additionalNavigation = [`Savanorystė`];
 
   return (

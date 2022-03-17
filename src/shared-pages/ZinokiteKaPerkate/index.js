@@ -50,18 +50,18 @@ const Page = ({ companies, content, pagePath }) => {
         <section className="TabsContainer">
           <TabsButton
             pagePath={pagePath}
-            text={`Rusiškos`}
-            to={`/bukime-budrus/zinokite-ka-perkate/rusiskos/`}
+            text={`Įmonių sąrašas`}
+            to={`/bukime-budrus/zinokite-ka-perkate/imoniu-sarasas/`}
           />
           <TabsButton
             pagePath={pagePath}
-            text={`Baltarusiškos`}
-            to={`/bukime-budrus/zinokite-ka-perkate/baltarusiskos/`}
+            text={`Įmonės nutraukę sąsajas`}
+            to={`/bukime-budrus/zinokite-ka-perkate/imones-nutrauke-sasajas/`}
           />
           <TabsButton
             pagePath={pagePath}
-            text={`Ukrainietiškos`}
-            to={`/bukime-budrus/zinokite-ka-perkate/ukrainietiskos/`}
+            text={`Ukrainietiškos įmonės`}
+            to={`/bukime-budrus/zinokite-ka-perkate/ukrainietiskos-imones/`}
           />
         </section>
         <CardList>

@@ -21,7 +21,7 @@ const Page = ({ data }) => {
     <ZinokiteKaPerkate
       content={content}
       companies={companies}
-      pagePath="/bukime-budrus/zinokite-ka-perkate/ukrainietiskos/"
+      pagePath="/bukime-budrus/zinokite-ka-perkate/ukrainietiskos-imones/"
     />
   );
 };
@@ -49,10 +49,7 @@ export const query = graphql`
       }
     }
     companies: allFile(
-      filter: {
-        sourceInstanceName: { eq: "companies" }
-        childMarkdownRemark: { frontmatter: { country: { eq: "Ukraina" } } }
-      }
+      filter: { sourceInstanceName: { eq: "companies-ukraine" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {

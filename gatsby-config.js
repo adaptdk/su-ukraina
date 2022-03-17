@@ -83,8 +83,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `companies`,
-        path: `${__dirname}/src/content/companies`,
+        name: `companies-general`,
+        path: `${__dirname}/src/content/companies/general`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `companies-exited`,
+        path: `${__dirname}/src/content/companies/exited`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `companies-ukraine`,
+        path: `${__dirname}/src/content/companies/ukraine`,
       },
     },
     {

@@ -13,7 +13,7 @@ import SubPage from "../../components/SubPage";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Piliečio atmintinė`];
+  const crumbs = [`Būkime budrūs`, `Piliečio atmintinė`];
   const additionalNavigation = [
     `Patikima informacija`,
     `sukčiai ir dezinformacija`,

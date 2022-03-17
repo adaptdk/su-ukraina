@@ -21,7 +21,7 @@ const Page = ({ data }) => {
     <ZinokiteKaPerkate
       content={content}
       companies={companies}
-      pagePath="/bukime-budrus/zinokite-ka-perkate/baltarusiskos/"
+      pagePath="/bukime-budrus/zinokite-ka-perkate/imones-nutrauke-sasajas/"
     />
   );
 };
@@ -49,10 +49,7 @@ export const query = graphql`
       }
     }
     companies: allFile(
-      filter: {
-        sourceInstanceName: { eq: "companies" }
-        childMarkdownRemark: { frontmatter: { country: { eq: "Baltarusija" } } }
-      }
+      filter: { sourceInstanceName: { eq: "companies-exited" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {

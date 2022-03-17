@@ -21,7 +21,7 @@ const Page = ({ data }) => {
     <ZinokiteKaPerkate
       content={content}
       companies={companies}
-      pagePath="/bukime-budrus/zinokite-ka-perkate/rusiskos/"
+      pagePath="/bukime-budrus/zinokite-ka-perkate/imoniu-sarasas/"
     />
   );
 };
@@ -49,10 +49,7 @@ export const query = graphql`
       }
     }
     companies: allFile(
-      filter: {
-        sourceInstanceName: { eq: "companies" }
-        childMarkdownRemark: { frontmatter: { country: { eq: "Rusija" } } }
-      }
+      filter: { sourceInstanceName: { eq: "companies-general" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {
