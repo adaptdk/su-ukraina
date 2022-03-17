@@ -13,7 +13,7 @@ const Layout = ({ children, pagePath }) => {
 
   function RenderForm(props) {
     const zinokiteKaPerkatePath = `zinokite-ka-perkate`;
-    const path = props.currentPath;
+    const path = props.currentPath || ``;
 
     if (path.includes(zinokiteKaPerkatePath)) {
       return <ProductForm returnDestination={pagePath} />;
