@@ -9,3 +9,7 @@
     }
   }
 }
+
+.TabsContainer {
+  display: flex;
+}
