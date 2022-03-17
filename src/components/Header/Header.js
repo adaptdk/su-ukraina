@@ -32,7 +32,9 @@ const Header = () => {
               </Link>
               <ul>
                 <li>
-                  <Link to="/kaip-galiu-padeti/aukojimas/">Aukojimas</Link>
+                  <Link to="/kaip-galiu-padeti/aukojimas/lietuvoje/">
+                    Aukojimas
+                  </Link>
                 </li>
                 <li>
                   <Link to="/kaip-galiu-padeti/savanoryste/">Savanorystė</Link>
@@ -51,7 +53,7 @@ const Header = () => {
                   <Link to="/protesto-formos/renginiai/">Renginiai</Link>
                 </li>
                 <li>
-                  <Link to="/protesto-formos/budinkite-veikti/">
+                  <Link to="/protesto-formos/budinkite-veikti/ambasada/">
                     Budinkite veikti
                   </Link>
                 </li>
