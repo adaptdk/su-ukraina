@@ -93,15 +93,6 @@ const Page = ({ data }) => {
                   />
                 )}
 
-                {/*<h3>Forma</h3>*/}
-                {/*<div>*/}
-                {/*  <ul>*/}
-                {/*    {organisation.forma.map((forma, j) => {*/}
-                {/*      return <li key={j}>{forma}</li>;*/}
-                {/*    })}*/}
-                {/*  </ul>*/}
-                {/*</div>*/}
-
                 <div className={`Card__actions`}>
                   {!!organisation.support_link && (
                     <Button
@@ -124,9 +115,6 @@ const Page = ({ data }) => {
                       target="_blank"
                     />
                   )}
-
-                  {/* Use this for tabs */}
-                  {/* {organisation.location} */}
                 </div>
               </Card>
             );
