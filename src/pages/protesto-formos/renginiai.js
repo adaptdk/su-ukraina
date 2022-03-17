@@ -12,7 +12,7 @@ import EventCardList from "../../components/EventCardList";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Renginiai`];
+  const crumbs = [`Protesto formos`, `Renginiai`];
   const additionalNavigation = [`Budinkite veikti`, `akcijos`];
   const content = data.contents.edges.map((edge) => {
     return {
