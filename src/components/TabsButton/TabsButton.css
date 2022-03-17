@@ -1,14 +1,14 @@
 .TabsButton {
-  color: #6b6b6b;
-  text-transform: uppercase;
   align-items: center;
   border-bottom: 1px solid #c0c0c0;
+  color: #6b6b6b;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  text-decoration: none;
   margin-bottom: 1px;
-  padding: 16px 0 16px 0;
+  padding: 16px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 50%;
 
   &--active {
     border-bottom: 3px solid #ffd500;

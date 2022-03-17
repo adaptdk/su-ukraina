@@ -37,7 +37,7 @@ const Page = ({ data }) => {
         <Constraint>
           <LinkCollection>
             <LinkCollectionItem
-              to={`/kaip-galiu-padeti/aukojimas/`}
+              to={`/kaip-galiu-padeti/aukojimas/lietuvoje/`}
               text={`Aukojimas`}
             />
             <LinkCollectionItem

@@ -43,7 +43,7 @@ const Page = ({ data }) => {
           <Constraint className="HeroBanner__inner">
             <CtaCard
               title="Aukojimas"
-              link="/kaip-galiu-padeti/aukojimas/"
+              link="/kaip-galiu-padeti/aukojimas/lietuvoje/"
               iconHandle="donate"
             >
               <CtaCardItem label="Lietuvoje" />

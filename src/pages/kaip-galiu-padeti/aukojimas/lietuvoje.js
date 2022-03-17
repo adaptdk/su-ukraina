@@ -8,15 +8,15 @@ import { Title, Meta } from "react-head";
 import "./aukojimas.css";
 
 // Components.
-import Card from "../../components/Card";
-import CardList from "../../components/CardList";
-import Constraint from "../../components/Constraint";
-import Layout from "../../components/Layout";
-import NavigationGroup from "../../components/NavigationGroup";
-import Button from "../../components/Button";
-import CardSection from "../../components/Card/CardSection";
-import Section from "../../components/Section";
-import TabsButton from "../../components/TabsButton";
+import Card from "../../../components/Card";
+import CardList from "../../../components/CardList";
+import Constraint from "../../../components/Constraint";
+import Layout from "../../../components/Layout";
+import NavigationGroup from "../../../components/NavigationGroup";
+import Button from "../../../components/Button";
+import CardSection from "../../../components/Card/CardSection";
+import Section from "../../../components/Section";
+import TabsButton from "../../../components/TabsButton";
 
 const Page = ({ data }) => {
   const crumbs = [`Aukojimas`];
@@ -34,13 +34,13 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout pagePath="/kaip-galiu-padeti/aukojimas/">
+    <Layout pagePath="/kaip-galiu-padeti/aukojimas/lietuvoje/">
       <Title>Aukojimas</Title>
 
       <Section className="HeroSectionB">
         <StaticImage
           className="HeroSectionB__background"
-          src="../../images/hero/aukojimas.jpg"
+          src="../../../images/hero/aukojimas.jpg"
           alt="Su Ukraina!"
           layout="fullWidth"
         />
@@ -61,18 +61,17 @@ const Page = ({ data }) => {
       <Constraint>
         <section className="TabsContainer">
           <TabsButton
-            href={`/kaip-galiu-padeti/aukojimas/`}
+            to={`/kaip-galiu-padeti/aukojimas/lietuvoje/`}
             text={`Lietuvoje`}
             active={`active`}
           />
           <TabsButton
-            href={`/kaip-galiu-padeti/aukojimas-uzsienyje/`}
+            to={`/kaip-galiu-padeti/aukojimas/uzsienyje/`}
             text={`Užsienyje`}
           />
         </section>
         <CardList>
           {organisations.map((organisation, i) => {
-            console.log(`ORG`, organisation);
             const logo = organisation.logo && (
               <GatsbyImage
                 image={getImage(organisation.logo)}
