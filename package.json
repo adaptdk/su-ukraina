@@ -18,8 +18,10 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^4.5.3",
+    "algoliasearch": "^4.13.0",
     "caniuse-lite": "^1.0.30001313",
     "core-js-pure": "^3.21.1",
+    "dotenv": "^16.0.0",
     "es-abstract": "^1.19.1",
     "es5-ext": "^0.10.53",
     "gatsby": "^4.9.1",
@@ -42,6 +44,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-head": "^3.4.0",
+    "react-instantsearch-dom": "^6.22.0",
     "react-linkify": "^1.0.0-alpha",
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0",
