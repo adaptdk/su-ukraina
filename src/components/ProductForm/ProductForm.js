@@ -16,10 +16,16 @@ const handleSubmit = (setFormState) => {
     setFormState({ error: false, loading: true, success: false });
 
     const body = {
-      name: formData.get(`name`) || ``,
-      email: formData.get(`email`) || ``,
-      category: formData.get(`category`) || ``,
+      title: formData.get(`title`) || ``,
       description: formData.get(`description`) || ``,
+      imageUrl: formData.get(`imageUrl`) || ``,
+      rows: [
+        {
+          type: `negative`,
+          text: formData.get(`text`),
+          source: formData.get(`source`),
+        },
+      ],
       "privacy-policy-accepted": formData.get(`privacy-policy-accepted`) || ``,
     };
 
@@ -48,7 +54,7 @@ const handleSubmit = (setFormState) => {
   };
 };
 
-const ContactForm = ({ returnDestination = `/` }) => {
+const ProductForm = ({ returnDestination = `/` }) => {
   const [formState, setFormState] = React.useState({
     error: false,
     loading: false,
@@ -58,24 +64,23 @@ const ContactForm = ({ returnDestination = `/` }) => {
   const curriedHandleSubmit = React.useCallback(handleSubmit(setFormState), []);
 
   return (
-    <div className="ContactForm">
-      <div className="ContactForm__text">
-        <div className="ContactForm__text-title">
-          Siūlyk produktą
-        </div>
+    <div className="ProductForm">
+      <div className="ProductForm__text">
+        <div className="ProductForm__text-title">Siūlyk produktą</div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          vulputate libero et velit interdum, ac aliquet odio mattis.
         </p>
       </div>
-      <div className="ContactForm__form">
+      <div className="ProductForm__form">
         {formState.success ? (
-          <div className="ContactForm__success">
+          <div className="ProductForm__success">
             <p>Jūsų žinutė išsiųsta. Ačiū!</p>
           </div>
         ) : (
           <form
             method="POST"
-            action={`https://api.suukraina.lt/v1/submit?destination=${encodeURIComponent(
+            action={`https://api.suukraina.lt/v1/company?destination=${encodeURIComponent(
               returnDestination
             )}`}
             onSubmit={curriedHandleSubmit}
@@ -89,7 +94,11 @@ const ContactForm = ({ returnDestination = `/` }) => {
               />
             </FormField>
 
-            <FormField labelFor="description" label="Veiklos sritis" type="text">
+            <FormField
+              labelFor="description"
+              label="Veiklos sritis"
+              type="text"
+            >
               <TextInput
                 id="description"
                 placeholder="Kuo subjektas užsiima? Picerija, Kavinė, Grožio salonas..."
@@ -125,11 +134,8 @@ const ContactForm = ({ returnDestination = `/` }) => {
               />
             </FormField>
 
-
-
-
             {!!formState.error && (
-              <p className="ContactForm__error">
+              <p className="ProductForm__error">
                 Išsiųsti nepavyko. Bandykite dar kartą arba praneškite apie
                 technines problemas{` `}
                 <a href="mailto:suukraina@adaptagency.com">
@@ -139,7 +145,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
               </p>
             )}
 
-            <div className="ContactForm__actions">
+            <div className="ProductForm__actions">
               <Button
                 color="transparent"
                 disabled={formState.loading}
@@ -154,8 +160,8 @@ const ContactForm = ({ returnDestination = `/` }) => {
   );
 };
 
-ContactForm.propTypes = {
+ProductForm.propTypes = {
   returnDestination: PropTypes.string,
 };
 
-export default ContactForm;
+export default ProductForm;
