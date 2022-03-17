@@ -1,5 +1,6 @@
 .additional-navigation {
   width: fit-content;
+  margin-bottom: 10px;
 
   &__container {
     display: flex;

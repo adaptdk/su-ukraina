@@ -80,7 +80,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/bukime-budrus/zinokite-ka-perkate/rusiskos/">
+                  <Link to="/bukime-budrus/zinokite-ka-perkate/imoniu-sarasas/">
                     Žinokite ką perkate
                   </Link>
                 </li>
