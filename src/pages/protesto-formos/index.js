@@ -45,7 +45,7 @@ const Page = ({ data }) => {
               text={`Renginiai`}
             />
             <LinkCollectionItem
-              to={`/protesto-formos/budinkite-veikti/`}
+              to={`/protesto-formos/budinkite-veikti/ambasada/`}
               text={`Budinkite veikti`}
             />
           </LinkCollection>

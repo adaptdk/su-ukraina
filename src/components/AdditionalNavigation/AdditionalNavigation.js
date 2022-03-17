@@ -11,7 +11,7 @@ const handlePath = (additionalNavigationText) => {
     case `aukojimas`:
       return `/kaip-galiu-padeti/aukojimas/lietuvoje/`;
     case `budinkite veikti`:
-      return `/protesto-formos/budinkite-veikti/`;
+      return `/protesto-formos/budinkite-veikti/ambasada/`;
     case `prekių boikotas`:
       return `/`;
     case `akcijos`:
