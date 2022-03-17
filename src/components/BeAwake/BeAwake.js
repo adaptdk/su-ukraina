@@ -44,7 +44,7 @@ const BeAwake = ({ title }) => {
           <li>
             <Button
               icon={`arrow-blue`}
-              to={`/bukime-budrus/zinokite-ka-perkate`}
+              to={`/bukime-budrus/zinokite-ka-perkate/rusiskos/`}
               color={`transparent`}
               text={`Žinokite ką perkate`}
               position={`right`}

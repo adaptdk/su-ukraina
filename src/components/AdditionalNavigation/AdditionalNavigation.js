@@ -25,7 +25,7 @@ const handlePath = (additionalNavigationText) => {
     case `sukčiai ir dezinformacija`:
       return `/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`;
     case `žinokite ką perkate`:
-      return `/bukime-budrus/zinokite-ka-perkate/`;
+      return `/bukime-budrus/zinokite-ka-perkate/rusiskos/`;
   }
 };
 const AdditionalNavigation = ({ additionalNav }) => {
