@@ -9,7 +9,7 @@ intro: "Visų pirma, susidarykite sąrašą patikimų šaltinių ir jais naudoki
   informacijos, kurios tikrumu suabejojote. Kai kurie žmonės yra suinteresuoti platinti
   dezinformaciją dėl finansinės naudos, kad parduotų nevertingus daiktus, pritrauktų
   daugiau lankytojų į savo interneto svetaines ar padidintų iš reklamos gaunamas pajamas.
-  Nespauskite nuorodų, kurių nežinote. Dar kartą – neskubėkite, tikrinkite, lyginkite.
+  **Nespauskite nuorodų, kurių nežinote. Dar kartą – neskubėkite, tikrinkite, lyginkite.**
   \n\nSocialinėje žiniasklaidoje susidūrę su neteisinga, smurtą ar neapykantą skatinančia
   informacija, tendencingais profiliais ar grupėmis, apie tai raportuokite konkrečių
   socialinių tinklų administratoriams, nepriitiną turinį, profilius ir grupes blokuokite."
