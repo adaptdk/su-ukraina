@@ -2,6 +2,6 @@
 title: Kaip galiu padėti?
 weight: 1
 slug: kaip-galiu-padeti
+short_description: ''
 
 ---
-Prisidėti galite šiais būdais:
