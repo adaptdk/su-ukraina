@@ -1,10 +1,16 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
+// Components.
 import Constraint from "../Constraint";
 
+// SVGs.
 import Logo from "../../images/logos/su-ukraina--original.svg";
 
+// Constants.
+import { NAVIGATION_MAIN } from "../../constants/Navigation";
+
+// Style.
 import "./Header.css";
 
 const Header = () => {
@@ -26,66 +32,22 @@ const Header = () => {
         </label>
         <nav className="Header__nav" aria-label="Pagrindinė navigacija">
           <ul className="Header__menu">
-            <li>
-              <Link aria-haspopup="true" to="/kaip-galiu-padeti/">
-                Kaip galiu padėti?
-              </Link>
-              <ul>
-                <li>
-                  <Link to="/kaip-galiu-padeti/aukojimas/lietuvoje/">
-                    Aukojimas
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/kaip-galiu-padeti/savanoryste/">Savanorystė</Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link aria-haspopup="true" to="/protesto-formos/">
-                Protesto formos
-              </Link>
-              <ul>
-                <li>
-                  <Link to="/protesto-formos/akcijos/">Akcijos</Link>
-                </li>
-                <li>
-                  <Link to="/protesto-formos/renginiai/">Renginiai</Link>
-                </li>
-                <li>
-                  <Link to="/protesto-formos/budinkite-veikti/ambasada/">
-                    Budinkite veikti
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link aria-haspopup="true" to="/bukime-budrus/">
-                Būkime budrūs
-              </Link>
-              <ul>
-                <li>
-                  <Link to="/bukime-budrus/piliecio-atmintine/">
-                    Piliečio atmintinė
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/bukime-budrus/patikima-informacija/">
-                    Patikima informacija
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/">
-                    Sukčiai ir dezinformacija
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/bukime-budrus/zinokite-ka-perkate/imoniu-sarasas/">
-                    Žinokite ką perkate
-                  </Link>
-                </li>
-              </ul>
-            </li>
+            {NAVIGATION_MAIN.map((item) => (
+              <li>
+                <Link aria-haspopup={!!item.children} to={item.pathname}>
+                  {item.title}
+                </Link>
+                {item.children && (
+                  <ul>
+                    {item.children.map((subItem) => (
+                      <li>
+                        <Link to={subItem.pathname}>{subItem.title}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
           </ul>
         </nav>
       </Constraint>
