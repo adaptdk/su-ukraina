@@ -70,7 +70,7 @@ const Header = () => {
               icon={`arrow-blue`}
               href="https://www.zukraine.lt"
               color={`secondary`}
-              text={`Lentelė`}
+              text={`послуги`}
               position={`right`}
               target="_blank"
             />

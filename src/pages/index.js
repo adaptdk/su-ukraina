@@ -57,6 +57,7 @@ const Page = ({ data }) => {
               title="Pasiūlyk pagalbą ukrainiečiams"
               link="https://0rs0r9mdix1.typeform.com/to/QXLxIUjt"
               iconHandle="ua-flag"
+              target="_blank"
             />
           </Constraint>
         </HeroBanner>

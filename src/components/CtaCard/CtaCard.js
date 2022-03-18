@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 import "./CtaCard.css";
 import { Link } from "gatsby";
 
-const CtaCard = ({ children, title, iconHandle, link }) => {
+const CtaCard = ({ children, title, iconHandle, link, ...props }) => {
   return (
     <div className="CtaCard">
-      <Link to={link} title={title}>
+      <Link to={link} title={title} {...props}>
         <div className="CtaCard__heading">
           <div className={`CtaCard__icon CtaCard__icon--${iconHandle}`} />
           <div className="CtaCard__title">{title}</div>
