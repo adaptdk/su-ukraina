@@ -31,3 +31,4 @@ resources:
 weight: 3
 
 ---
+Visose situacijose svarbu išlikti ramiems, veikti apgalvotai. Panika stresinėse situacijos sukelia tik dar daugiau sumaišties.

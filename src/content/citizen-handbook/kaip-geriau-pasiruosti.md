@@ -41,3 +41,4 @@ resources:
 weight: 2
 
 ---
+Labai svarbu žinoti ir būti pasiruošus, kaip elgtis ekstremaliose situacijose.
