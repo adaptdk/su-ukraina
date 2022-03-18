@@ -13,7 +13,7 @@ import PositiveNegativeList from "../../components/PositiveNegativeList";
 import PositiveNegativeListItem from "../../components/PositiveNegativeList/PositiveNegativeListItem";
 import TabsButton from "../../components/TabsButton";
 
-const Page = ({ companies, content, pagePath }) => {
+const Page = ({ companies, content, pagePath, introText }) => {
   const crumbs = [`Žinokite ką perkate`];
   const additionalNavigation = [
     `Patikima informacija`,
@@ -47,7 +47,7 @@ const Page = ({ companies, content, pagePath }) => {
       )}
 
       <Constraint>
-        <section className="TabsContainer">
+        <section className="TabsContainer TabsContainer--manyItems">
           <TabsButton
             pagePath={pagePath}
             text={`Įmonių sąrašas`}
@@ -64,6 +64,8 @@ const Page = ({ companies, content, pagePath }) => {
             to={`/bukime-budrus/zinokite-ka-perkate/ukrainietiskos-imones/`}
           />
         </section>
+
+        {!!introText && <p className="introText">{introText}</p>}
         <CardList>
           {companies.map((company, i) => {
             const positives = [];
@@ -146,6 +148,7 @@ Page.propTypes = {
     })
   ),
   pagePath: PropTypes.string,
+  introText: PropTypes.string,
 };
 
 export default Page;

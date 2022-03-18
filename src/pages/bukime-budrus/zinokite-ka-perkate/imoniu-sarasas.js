@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       content={content}
       companies={companies}
       pagePath="/bukime-budrus/zinokite-ka-perkate/imoniu-sarasas/"
+      introText="Pateikiame išskirtinai tik kituose šaltiniuose nurodytą informaciją, už kurios tikrumą atsako tos informacijos skleidėjai."
     />
   );
 };

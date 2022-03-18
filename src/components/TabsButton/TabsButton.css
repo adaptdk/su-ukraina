@@ -16,3 +16,53 @@
     margin-bottom: 0;
   }
 }
+
+.TabsContainer {
+  display: flex;
+
+  &--manyItems {
+    flex-wrap: wrap;
+
+    @media (min-width: 40rem) {
+      flex-wrap: nowrap;
+    }
+
+    .TabsButton {
+      background: var(--c__primary);
+      border-bottom: unset;
+      border-radius: var(--s__main-border-radius);
+      color: white;
+      margin-bottom: calc(var(--s__unit) * 2);
+      width: 100%;
+
+      &--active,
+      &:hover,
+      &:active {
+        color: var(--c__secondary);
+      }
+
+      @media (min-width: 40rem) {
+        align-items: center;
+        background: unset;
+        border-bottom: 1px solid #c0c0c0;
+        border-radius: unset;
+        color: #6b6b6b;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1px;
+        padding: 16px 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 50%;
+
+        &--active,
+        &:hover,
+        &:active {
+          border-bottom: 3px solid #ffd500;
+          color: var(--c__primary);
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

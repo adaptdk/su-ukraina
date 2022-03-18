@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       content={content}
       companies={companies}
       pagePath="/bukime-budrus/zinokite-ka-perkate/imones-nutrauke-sasajas/"
+      introText="Pateikiame sąrašą kompanijų, kurios viešai išreiškė ketinimus atsisakyti sąsajų ir/arba ėmėsi veiksmų tiesiogiai paremti Ukrainą"
     />
   );
 };

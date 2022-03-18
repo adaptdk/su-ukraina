@@ -22,6 +22,7 @@ const Page = ({ data }) => {
       content={content}
       companies={companies}
       pagePath="/bukime-budrus/zinokite-ka-perkate/ukrainietiskos-imones/"
+      introText="Pateikiame patikrintą sąrašą pilnai arba dalinai Ukrainietiško kapitalo verslo subjektų; verslų, kurių produkciją pirkdami galite bent truputį prisidėti prie nepriklausomos Ukrainos ateities"
     />
   );
 };
