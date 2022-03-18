@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import Linkify from "react-linkify";
 import algoliasearch from "algoliasearch/lite";
 import {
+  connectStateResults,
   ClearRefinements,
   CurrentRefinements,
   Highlight,
   Hits,
   HitsPerPage,
   InstantSearch,
-  // NoResults,
   Pagination,
   Panel,
   PoweredBy,
@@ -28,6 +28,23 @@ const DEBOUNCE_TIME = 400;
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
+);
+
+const Results = connectStateResults(
+  ({ searchState, searchResults, children, language }) => {
+    return searchResults && searchResults.nbHits !== 0 ? (
+      children
+    ) : (
+      <div
+        dangerouslySetInnerHTML={{
+          __html: TRANSLATIONS.noResults[language].replace(
+            `{query}`,
+            `<strong>${searchState.query}</strong>`
+          ),
+        }}
+      />
+    );
+  }
 );
 
 const getHitWithLanguage = (language) => {
@@ -95,7 +112,6 @@ const getHitWithLanguage = (language) => {
             })}
           </Panel>
         )}
-        {/*<Snippet attribute="" tagName="mark" hit={hit} />*/}
       </article>
     );
   };
@@ -207,6 +223,11 @@ const TRANSLATIONS = {
     lt: `Paieška`,
     ru: `Поиск`,
     uk: `Пошук`,
+  },
+  noResults: {
+    lt: `Paieškai {query} rezultatų rasti nepavyko.`,
+    ru: `По запросу {query} ничего не нашлось.`,
+    uk: `Не знайдено результатів для {query}.`,
   },
 };
 
@@ -366,11 +387,12 @@ const HelpSearch = () => {
               </div>
             </div>
 
-            <Hits
-              hitComponent={HitWithCurrentLanguage}
-              language={resultsLang}
-            />
-            {/* <NoResults /> */}
+            <Results language={resultsLang}>
+              <Hits
+                hitComponent={HitWithCurrentLanguage}
+                language={resultsLang}
+              />
+            </Results>
 
             <footer className="container-footer">
               <Pagination
