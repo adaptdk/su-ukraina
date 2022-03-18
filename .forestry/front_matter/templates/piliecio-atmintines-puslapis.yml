@@ -22,6 +22,10 @@ fields:
     maxSize: 64
   label: Paveiksliukas
   description: Atsiras šalia teksto, dešinėje.
+- name: image_is_left
+  type: boolean
+  label: Paveikslėlis kairėje
+  description: Rodyti paveiksliuką kairėję.
 - name: resources
   type: field_group_list
   fields:
