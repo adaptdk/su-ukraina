@@ -22,7 +22,7 @@ fields:
     maxSize: 64
   label: Paveiksliukas
   description: Atsiras šalia teksto, dešinėje.
-- name: image_is_left
+- name: imageIsLeft
   type: boolean
   label: Paveikslėlis kairėje
   description: Rodyti paveiksliuką kairėję.
