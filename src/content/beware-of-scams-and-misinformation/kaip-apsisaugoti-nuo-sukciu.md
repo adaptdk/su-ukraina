@@ -13,6 +13,7 @@ resources:
 image: "../uploads/antra2x.jpg"
 image_is_left: true
 imageIsLeft: true
+weight: 10
 
 ---
 Susidarius neelinėms situacijoms, ar tai būtų pandemija, ar karas Ukrainoje, jumis gali siekti pasinaudoti sukčiai, siekdami išvilioti iš jūsų pinigus ar asmens duomenis, todėl galioja ta pati taisyklė – neskubėkite, tikrinkite, lyginkite. Būtinai susipažinkite su Lietuvos policijos parengta informacija, kaip atpažinti sukčius ir ką daryti su jais susidūrus.
