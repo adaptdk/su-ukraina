@@ -21,6 +21,7 @@ resources:
   link: https://www.draugiskasinternetas.lt/
   subtitle: ''
 image: "../uploads/pirma2x.jpg"
+weight: 5
 
 ---
 * Visų pirma, susidarykite **sąrašą patikimų šaltinių** ir jais naudokitės. 
