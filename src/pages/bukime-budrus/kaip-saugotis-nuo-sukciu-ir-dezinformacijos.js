@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
@@ -17,7 +17,7 @@ const Page = ({ data }) => {
     `Būkime budrūs`,
     `Kaip saugotis nuo sukčių ir dezinformacijos`,
   ];
-  const additionalNavigation = [`piliečio atmintinė`, `patikima informacija`];
+  const additionalNavigation = [`patikima informacija`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -27,7 +27,10 @@ const Page = ({ data }) => {
   })[0];
 
   const handbooks = data.handbooks.edges.map((edge) => {
-    return edge.node.childMarkdownRemark.frontmatter;
+    return {
+      ...edge.node.childMarkdownRemark.frontmatter,
+      html: edge.node.childMarkdownRemark.html,
+    };
   });
 
   return (
@@ -58,8 +61,14 @@ const Page = ({ data }) => {
       <Constraint>
         {handbooks.map((handbook, i) => {
           return (
-            <SubPage key={i} title={handbook.title} intro={handbook.intro}>
-              <ResourceList>
+            <SubPage
+              key={i}
+              title={handbook.title}
+              intro={handbook.html}
+              image={handbook.image}
+              imageIsLeft={handbook.imageIsLeft}
+            >
+              <ResourceList title="Resursai">
                 {handbook.resources?.map((resource, j) => {
                   return (
                     <ResourceListItem
@@ -118,7 +127,14 @@ export const query = graphql`
                 link
               }
               intro
+              image {
+                childImageSharp {
+                  gatsbyImageData(height: 500, placeholder: NONE)
+                }
+              }
+              imageIsLeft
             }
+            html
           }
         }
       }
@@ -151,6 +167,8 @@ Page.propTypes = {
               frontmatter: PropTypes.shape({
                 title: PropTypes.string,
                 intro: PropTypes.string,
+                image: PropTypes.string,
+                imageIsLeft: PropTypes.bool,
                 resources: PropTypes.arrayOf(
                   PropTypes.shape({
                     title: PropTypes.string,
@@ -161,6 +179,7 @@ Page.propTypes = {
               }),
             }),
           }),
+          html: PropTypes.string,
         })
       ),
     }),

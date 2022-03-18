@@ -36,32 +36,27 @@ const Page = ({ data }) => {
           alt="Su Ukraina!"
           layout="fullWidth"
         />
-        <HeroBanner
-          title="Su Ukraina iki pergalės!"
-          subtitle="Tinklalapis skirtas sutelkti informaciją apie krizę Ukrainoje."
-        >
+        <HeroBanner title="Su Ukraina iki pergalės!">
           <Constraint className="HeroBanner__inner">
             <CtaCard
               title="Aukojimas"
               link="/kaip-galiu-padeti/aukojimas/lietuvoje/"
               iconHandle="donate"
-            >
-              <CtaCardItem label="Lietuvoje" />
-              <CtaCardItem label="Užsienyje" />
-            </CtaCard>
+            />
             <CtaCard
               title="Savanorystė"
               link="/kaip-galiu-padeti/savanoryste/"
               iconHandle="volunteer"
-            >
-              <CtaCardItem label="Apgyvendinimas" />
-              <CtaCardItem label="Pavežėjimas" />
-              <CtaCardItem label="Pagalba gyvūnams" />
-            </CtaCard>
+            />
+            <CtaCard
+              title="Pasiūlyk pagalbą ukrainiečiams"
+              link="https://0rs0r9mdix1.typeform.com/to/QXLxIUjt"
+              iconHandle="ua-flag"
+            />
           </Constraint>
         </HeroBanner>
       </Section>
-      <Section className="ProtestFormsSection">
+      {/* <Section className="ProtestFormsSection">
         <Constraint>
           <LinkCollection title="Protesto formos">
             <LinkCollectionItem
@@ -78,7 +73,7 @@ const Page = ({ data }) => {
             />
           </LinkCollection>
         </Constraint>
-      </Section>
+      </Section> */}
       <Section className="BeAwakeSection">
         <Constraint>
           <BeAwake title="Būkime budrūs ir pasiruošę" />

@@ -29,7 +29,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: var(--fs__h2);
+  font-size: 2.4rem;
 
   @media and (min-width: 40rem) {
     font-size: var(--fs__h1);
@@ -38,7 +38,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: var(--fs__h3);
+  font-size: 2rem;
 
   @media and (min-width: 40rem) {
     font-size: var(--fs__h2);
