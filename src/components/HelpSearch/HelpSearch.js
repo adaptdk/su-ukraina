@@ -278,7 +278,7 @@ const urlToSearchState = ({ search }) => {
 
 const HelpSearch = () => {
   const [searchState, setSearchState] = React.useState(
-    urlToSearchState(location)
+    typeof window === `undefined` ? {} : urlToSearchState(location)
   );
   const [resultsLang, setResultsLang] = React.useState(
     POSSIBLE_SEARCH_LANGS[0]
@@ -306,9 +306,14 @@ const HelpSearch = () => {
     setSearchState(updatedSearchState);
   };
 
-  React.useEffect(() => {
-    setSearchState(urlToSearchState(location));
-  }, [location]);
+  React.useEffect(
+    () => {
+      setSearchState(
+        typeof window === `undefined` ? {} : urlToSearchState(location)
+      );
+    },
+    typeof window === `undefined` ? [] : [location]
+  );
 
   return (
     <div className="HelpSearch">
