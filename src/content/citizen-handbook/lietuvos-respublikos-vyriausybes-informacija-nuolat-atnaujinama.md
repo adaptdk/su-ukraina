@@ -23,3 +23,4 @@ resources:
 weight: 1
 
 ---
+Aktuali informacija iš Lietuvos Respublikos vyriausybės puslapio
