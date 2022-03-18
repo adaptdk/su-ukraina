@@ -67,6 +67,13 @@ sections:
   templates:
   - piliecio-atmintines-puslapis
 - type: directory
+  path: src/content/beware-of-scams-and-misinformation
+  label: Dezinformacija ir sukčiai
+  create: documents
+  match: "**/*"
+  templates:
+  - piliecio-atmintines-puslapis
+- type: directory
   path: src/content/info-people
   label: Patikima informacija (asmenybės)
   create: documents
