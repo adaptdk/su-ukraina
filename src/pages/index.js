@@ -12,10 +12,15 @@ import Section from "../components/Section";
 import CtaCard from "../components/CtaCard";
 import CtaCardItem from "../components/CtaCard/CtaCardItem";
 import LinkCollection from "../components/LinkCollection";
-import BeAwake from "../components/BeAwake";
+import LinkCollectionWithImage from "../components/LinkCollectionWithImage";
 import LinkCollectionItem from "../components/LinkCollection/LinkCollectionItem";
 import PartnerList from "../components/PartnerList/PartnerList";
 import Partner from "../components/Partner/Partner";
+import Button from "../components/Button";
+
+// Constants.
+import { NAVIGATION_PROTEST_FORMS } from "../constants/Navigation";
+import { NAVIGATION_BE_VIGILANT } from "../constants/Navigation";
 
 const Page = ({ data }) => {
   const partners = data.partners.edges.map((edge) => {
@@ -64,24 +69,31 @@ const Page = ({ data }) => {
       <Section className="ProtestFormsSection">
         <Constraint>
           <LinkCollection title="Protesto formos">
-            <LinkCollectionItem
-              to={`/protesto-formos/akcijos`}
-              text={`Akcijos`}
-            />
-            <LinkCollectionItem
-              to={`/protesto-formos/renginiai`}
-              text={`Renginiai`}
-            />
-            <LinkCollectionItem
-              to={`/protesto-formos/budinkite-veikti/ambasada/`}
-              text={`Budinkite veikti`}
-            />
+            {NAVIGATION_PROTEST_FORMS.map((item, index) => (
+              <LinkCollectionItem
+                key={index}
+                to={item.pathname}
+                text={item.title}
+              />
+            ))}
           </LinkCollection>
         </Constraint>
       </Section>
-      <Section className="BeAwakeSection">
+      <Section className="BeVigilantSection">
         <Constraint>
-          <BeAwake title="Būkime budrūs ir pasiruošę" />
+          <LinkCollectionWithImage title="Būkime budrūs ir pasiruošę">
+            {NAVIGATION_BE_VIGILANT.map((item, index) => (
+              <li key={index}>
+                <Button
+                  icon={`arrow-blue`}
+                  to={item.pathname}
+                  color={`transparent`}
+                  text={item.altTitle || item.title}
+                  position={`right`}
+                />
+              </li>
+            ))}
+          </LinkCollectionWithImage>
         </Constraint>
       </Section>
 

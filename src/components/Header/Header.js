@@ -32,15 +32,15 @@ const Header = () => {
         </label>
         <nav className="Header__nav" aria-label="Pagrindinė navigacija">
           <ul className="Header__menu">
-            {NAVIGATION_MAIN.map((item) => (
-              <li>
+            {NAVIGATION_MAIN.map((item, index) => (
+              <li key={index}>
                 <Link aria-haspopup={!!item.children} to={item.pathname}>
                   {item.title}
                 </Link>
                 {item.children && (
                   <ul>
-                    {item.children.map((subItem) => (
-                      <li>
+                    {item.children.map((subItem, index) => (
+                      <li key={index}>
                         <Link to={subItem.pathname}>{subItem.title}</Link>
                       </li>
                     ))}

@@ -3,12 +3,16 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
 
+// Components.
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumbs";
 import Section from "../../components/Section";
 import LinkCollection from "../../components/LinkCollection";
 import LinkCollectionItem from "../../components/LinkCollection/LinkCollectionItem";
+
+// Constants.
+import { NAVIGATION_BE_VIGILANT } from "../../constants/Navigation";
 
 const Page = ({ data }) => {
   const crumbs = [`Būkime budrūs`];
@@ -36,18 +40,13 @@ const Page = ({ data }) => {
       <Section className="LinksCollectionWrapper">
         <Constraint>
           <LinkCollection>
-            <LinkCollectionItem
-              to={`/bukime-budrus/piliecio-atmintine/`}
-              text={`Piliečio atmintinė`}
-            />
-            <LinkCollectionItem
-              to={`/bukime-budrus/patikima-informacija/`}
-              text={`Patikima informacija`}
-            />
-            <LinkCollectionItem
-              to={`/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`}
-              text={`Kaip apsisaugoti`}
-            />
+            {NAVIGATION_BE_VIGILANT.map((item, index) => (
+              <LinkCollectionItem
+                key={index}
+                to={item.pathname}
+                text={item.title}
+              />
+            ))}
           </LinkCollection>
         </Constraint>
       </Section>

@@ -3,12 +3,16 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
 
+// Components.
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumbs";
 import Section from "../../components/Section";
 import LinkCollection from "../../components/LinkCollection";
 import LinkCollectionItem from "../../components/LinkCollection/LinkCollectionItem";
+
+// Constants.
+import { NAVIGATION_HOW_CAN_I_HELP } from "../../constants/Navigation";
 
 const Page = ({ data }) => {
   const crumbs = [`Kaip galiu padėti?`];
@@ -36,14 +40,13 @@ const Page = ({ data }) => {
       <Section className="LinksCollectionWrapper">
         <Constraint>
           <LinkCollection>
-            <LinkCollectionItem
-              to={`/kaip-galiu-padeti/aukojimas/lietuvoje/`}
-              text={`Aukojimas`}
-            />
-            <LinkCollectionItem
-              to={`/kaip-galiu-padeti/savanoryste/`}
-              text={`Savanorystė`}
-            />
+            {NAVIGATION_HOW_CAN_I_HELP.map((item, index) => (
+              <LinkCollectionItem
+                key={index}
+                to={item.pathname}
+                text={item.title}
+              />
+            ))}
           </LinkCollection>
         </Constraint>
       </Section>
