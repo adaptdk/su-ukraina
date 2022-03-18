@@ -37,10 +37,6 @@ const Page = ({ data }) => {
         <Constraint>
           <LinkCollection>
             <LinkCollectionItem
-              to={`/bukime-budrus/piliecio-atmintine/`}
-              text={`Piliečio atmintinė`}
-            />
-            <LinkCollectionItem
               to={`/bukime-budrus/patikima-informacija/`}
               text={`Patikima informacija`}
             />

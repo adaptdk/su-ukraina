@@ -12,7 +12,7 @@ const CtaCard = ({ children, title, iconHandle, link }) => {
           <div className={`CtaCard__icon CtaCard__icon--${iconHandle}`} />
           <div className="CtaCard__title">{title}</div>
         </div>
-        <div className="CtaCard__body">{children}</div>
+        {!!children && <div className="CtaCard__body">{children}</div>}
       </Link>
     </div>
   );

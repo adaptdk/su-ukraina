@@ -26,15 +26,6 @@ const BeAwake = ({ title }) => {
           <li>
             <Button
               icon={`arrow-blue`}
-              to={`/bukime-budrus/piliecio-atmintine`}
-              color={`transparent`}
-              text={`Piliečio atmintinė`}
-              position={`right`}
-            />
-          </li>
-          <li>
-            <Button
-              icon={`arrow-blue`}
               to={`/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos`}
               color={`transparent`}
               text={`Kaip apsisaugoti nuo sukčių ir dezinformacijos?`}

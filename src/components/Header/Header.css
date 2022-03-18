@@ -4,6 +4,49 @@
   /* this is weird. styles are not loaded properly if this is missing */
 }
 
+.promoLine {
+  background: var(--c__primary);
+  padding: calc(var(--s__unit) * 2) 0;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+    > a {
+      color: white;
+      font-size: 0.8rem;
+      text-align: center;
+      display: block;
+      width: 100%;
+
+      @media (min-width: 40rem) {
+        pointer-events: none;
+        font-size: 1rem;
+        text-align: left;
+      }
+    }
+  }
+
+  &__actions {
+    display: none;
+    align-items: stretch;
+
+    @media (min-width: 40rem) {
+      display: flex;
+    }
+
+    .Button {
+      padding: calc(var(--s__unit) * 1.5) calc(var(--s__unit) * 3);
+
+      + .Button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
 .Header {
   background: var(--c__main-bg);
   box-shadow: 0 0 10px -1px rgb(0 0 0 / 10%);
@@ -199,6 +242,7 @@
 
       > li {
         position: relative;
+        z-index: 10;
 
         > a {
           padding: 0 var(--s__main-padding);

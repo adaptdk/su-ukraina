@@ -22,6 +22,7 @@ import {
 import SuUkrainaWhite from "../../images/logos/su-ukraina--secondary.svg";
 import Adapt from "../../images/logos/adapt.svg";
 import LaisvesTv from "../../images/logos/laisves-tv.svg";
+import Shift4 from "../../images/logos/shift4.svg";
 
 const Footer = () => {
   return (
@@ -99,6 +100,14 @@ const Footer = () => {
                 width="49"
                 height="49"
               />
+            </a>
+            {` `}
+            <a
+              href="https://shift4.lt"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={Shift4} alt="Shift4 logo" width="93" height="40" />
             </a>
           </p>
         </div>
