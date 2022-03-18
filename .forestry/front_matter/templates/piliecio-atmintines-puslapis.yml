@@ -16,6 +16,12 @@ fields:
     schema:
       format: markdown
   label: Intro
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Paveiksliukas
+  description: Atsiras šalia teksto, dešinėje.
 - name: resources
   type: field_group_list
   fields:
