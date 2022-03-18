@@ -20,6 +20,7 @@ resources:
 - title: Informacija apie saugumą internete, kaip apsaugoti vaikus.
   link: https://www.draugiskasinternetas.lt/
   subtitle: ''
+image: "../uploads/pirma2x.jpg"
 
 ---
 * Visų pirma, susidarykite **sąrašą patikimų šaltinių** ir jais naudokitės. 
