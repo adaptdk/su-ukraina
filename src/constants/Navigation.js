@@ -55,27 +55,27 @@ export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
   altTitle: `Kaip apsisaugoti nuo sukčių ir dezinformacijos?`,
 };
 
-// How can I help navigation.
+// Navigation of how can I help page.
 export const NAVIGATION_HOW_CAN_I_HELP = [
   NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA,
   NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER,
 ];
 
-// Protest forms navigation.
+// Navigation of protest forms page.
 export const NAVIGATION_PROTEST_FORMS = [
   NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS,
   NAVIGATION_ITEM_PROTEST_FORMS_EVENTS,
   NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY,
 ];
 
-// Protest forms navigation.
+// Navigation of be vigilant page.
 export const NAVIGATION_BE_VIGILANT = [
   NAVIGATION_ITEM_BE_VIGILANT_RELIABLE_INFORMATION,
   NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION,
 ];
 
-// Main menu navigation.
-export const NAVIGATION_MAIN = [
+// Navigation of main menu.
+export const NAVIGATION_MAIN_MENU = [
   {
     ...NAVIGATION_ITEM_HOW_CAN_I_HELP,
     children: [...NAVIGATION_HOW_CAN_I_HELP],
