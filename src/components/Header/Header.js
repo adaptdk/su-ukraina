@@ -9,7 +9,7 @@ import Button from "../Button";
 import Logo from "../../images/logos/su-ukraina--original.svg";
 
 // Constants.
-import { NAVIGATION_MAIN } from "../../constants/Navigation";
+import { NAVIGATION_MAIN_MENU } from "../../constants/Navigation";
 
 // Style.
 import "./Header.css";
@@ -33,15 +33,15 @@ const Header = () => {
         </label>
         <nav className="Header__nav" aria-label="Pagrindinė navigacija">
           <ul className="Header__menu">
-            {NAVIGATION_MAIN.map((item) => (
-              <li>
+            {NAVIGATION_MAIN_MENU.map((item) => (
+              <li key={item.pathname}>
                 <Link aria-haspopup={!!item.children} to={item.pathname}>
                   {item.title}
                 </Link>
                 {item.children && (
                   <ul>
                     {item.children.map((subItem) => (
-                      <li>
+                      <li key={subItem.pathname}>
                         <Link to={subItem.pathname}>{subItem.title}</Link>
                       </li>
                     ))}
