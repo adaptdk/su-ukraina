@@ -22,7 +22,11 @@
   }
 
   &.HeroSection {
-    margin-bottom: calc(var(--s__unit) * 10);
+    margin-bottom: 0;
+
+    @media (min-width: 40rem) {
+      margin-bottom: calc(var(--s__unit) * 20);
+    }
   }
 
   &.ProtestFormsSection {

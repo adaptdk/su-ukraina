@@ -13,11 +13,8 @@ import SubPage from "../../components/SubPage";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Būkime budrūs`, `Piliečio atmintinė`];
-  const additionalNavigation = [
-    `Patikima informacija`,
-    `sukčiai ir dezinformacija`,
-  ];
+  const crumbs = [`Piliečio atmintinė`];
+  const additionalNavigation = [];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,

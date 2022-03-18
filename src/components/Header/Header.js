@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 // Components.
 import Constraint from "../Constraint";
+import Button from "../Button";
 
 // SVGs.
 import Logo from "../../images/logos/su-ukraina--original.svg";
@@ -51,6 +52,31 @@ const Header = () => {
           </ul>
         </nav>
       </Constraint>
+      <div className="promoLine">
+        <Constraint className="promoLine__content">
+          <a href="https://www.zukraine.lt">
+            ВСЯ ВАЖЛИВА ІНФОРМАЦІЯ ДЛЯ ГРОМАДЯН УКРАЇНИ
+          </a>
+          <div class="promoLine__actions">
+            <Button
+              icon={`arrow-blue`}
+              href="https://www.zukraine.lt/info"
+              color={`secondary`}
+              text={`ІНФОРМАЦІЯ`}
+              position={`right`}
+              target="_blank"
+            />
+            <Button
+              icon={`arrow-blue`}
+              href="https://www.zukraine.lt"
+              color={`secondary`}
+              text={`Lentelė`}
+              position={`right`}
+              target="_blank"
+            />
+          </div>
+        </Constraint>
+      </div>
     </div>
   );
 };
