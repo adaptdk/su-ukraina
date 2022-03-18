@@ -35,6 +35,7 @@
     "gatsby-source-filesystem": "^4.9.0",
     "gatsby-transformer-remark": "^5.9.0",
     "gatsby-transformer-sharp": "^4.9.0",
+    "instantsearch.css": "^7.4.5",
     "postcss": "^8.4.7",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
