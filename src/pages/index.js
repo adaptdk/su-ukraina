@@ -64,9 +64,9 @@ const Page = ({ data }) => {
       {/* <Section className="ProtestFormsSection">
         <Constraint>
           <LinkCollection title="Protesto formos">
-            {NAVIGATION_PROTEST_FORMS.map((item, index) => (
+            {NAVIGATION_PROTEST_FORMS.map((item) => (
               <LinkCollectionItem
-                key={index}
+                key={item.pathname}
                 to={item.pathname}
                 text={item.title}
               />
@@ -77,8 +77,8 @@ const Page = ({ data }) => {
       <Section className="BeVigilantSection">
         <Constraint>
           <LinkCollectionWithImage title="Būkime budrūs ir pasiruošę">
-            {NAVIGATION_BE_VIGILANT.map((item, index) => (
-              <li key={index}>
+            {NAVIGATION_BE_VIGILANT.map((item) => (
+              <li key={item.pathname}>
                 <Button
                   icon={`arrow-blue`}
                   to={item.pathname}

@@ -40,9 +40,9 @@ const Page = ({ data }) => {
       <Section className="LinksCollectionWrapper">
         <Constraint>
           <LinkCollection>
-            {NAVIGATION_BE_VIGILANT.map((item, index) => (
+            {NAVIGATION_BE_VIGILANT.map((item) => (
               <LinkCollectionItem
-                key={index}
+                key={item.pathname}
                 to={item.pathname}
                 text={item.title}
               />
