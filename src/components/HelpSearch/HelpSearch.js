@@ -16,12 +16,15 @@ import {
   RefinementList,
   SearchBox,
 } from "react-instantsearch-dom";
+import qs from "qs";
+import { navigate } from "gatsby";
 
 import Constraint from "../Constraint";
 
 import "instantsearch.css/themes/satellite.css";
 import "./HelpSearch.css";
 
+const DEBOUNCE_TIME = 400;
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
@@ -240,10 +243,27 @@ LangSwitcher.propTypes = {
   handleSearchLangChange: PropTypes.func,
 };
 
+const createURL = (state) => {
+  return `?${qs.stringify(state)}`;
+};
+
+const searchStateToUrl = (searchState) => {
+  return searchState ? createURL(searchState) : ``;
+};
+
+const urlToSearchState = ({ search }) => {
+  return qs.parse(search.slice(1));
+};
+
 const HelpSearch = () => {
+  const [searchState, setSearchState] = React.useState(
+    urlToSearchState(location)
+  );
   const [resultsLang, setResultsLang] = React.useState(
     POSSIBLE_SEARCH_LANGS[0]
   );
+
+  const debouncedSetStateRef = React.useRef(null);
 
   const handleSearchLangChange = (event) => {
     if (event.target.value !== resultsLang) {
@@ -255,9 +275,28 @@ const HelpSearch = () => {
     return getHitWithLanguage(resultsLang);
   }, [resultsLang]);
 
+  const handleSearchStateChange = (updatedSearchState) => {
+    clearTimeout(debouncedSetStateRef.current);
+
+    debouncedSetStateRef.current = setTimeout(() => {
+      navigate(searchStateToUrl(updatedSearchState));
+    }, DEBOUNCE_TIME);
+
+    setSearchState(updatedSearchState);
+  };
+
+  React.useEffect(() => {
+    setSearchState(urlToSearchState(location));
+  }, [location]);
+
   return (
     <div className="HelpSearch">
-      <InstantSearch indexName="Support" searchClient={searchClient}>
+      <InstantSearch
+        indexName="Support"
+        onSearchStateChange={handleSearchStateChange}
+        searchClient={searchClient}
+        searchState={searchState}
+      >
         <div className="HelpSearch__header">
           <Constraint className="HelpSearch__header-content">
             <SearchBox
