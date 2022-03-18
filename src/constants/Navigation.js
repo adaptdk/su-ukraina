@@ -54,6 +54,11 @@ export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
   title: `Sukčiai ir dezinformacija`,
 };
 
+export const NAVIGATION_ITEM_KNOW_WHAT_YOU_BUY = {
+  pathname: `/bukime-budrus/zinokite-ka-perkate/`,
+  title: `Žinokite ką perkate`,
+};
+
 // Main menu navigation.
 export const NAVIGATION_MAIN = [
   {
@@ -77,6 +82,7 @@ export const NAVIGATION_MAIN = [
       NAVIGATION_ITEM_BE_VIGILANT_CITIZEN_HANDBOOK,
       NAVIGATION_ITEM_BE_VIGILANT_RELIABLE_INFORMATION,
       NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION,
+      NAVIGATION_ITEM_KNOW_WHAT_YOU_BUY,
     ],
   },
 ];
