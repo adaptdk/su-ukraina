@@ -1,6 +1,6 @@
 ---
-title: Lietuvos respublikos vyriausybės informacija (nuolat atnaujinama)
-intro: Aktuali informacija iš Lietuvos respublikos vyriausybės puslapio
+title: Lietuvos Respublikos vyriausybės informacija (nuolat atnaujinama)
+intro: Aktuali informacija iš Lietuvos Respublikos vyriausybės puslapio
 resources:
 - title: Sankcijos Rusijai ir Baltarusijai
   link: https://lrv.lt/lt/aktuali-informacija/informacija-apie-situacija-ukrainoje/aktuali-informacija-1/sankcijos-rusijai-ir-baltarusijai
