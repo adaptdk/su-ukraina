@@ -26,6 +26,7 @@ fields:
     options:
     - informacinis
     - institucinis
+    - technologinis
     source:
       type: simple
       section: 
