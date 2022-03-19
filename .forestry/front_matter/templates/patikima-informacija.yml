@@ -39,7 +39,6 @@ fields:
     step: 
 pages:
 - src/content/info-foreign/nexta.md
-- src/content/info-foreign/sergiy-kyslytsya.md
 - src/content/info-foreign/ukraine-siren-alerts.md
 - src/content/info-foreign/ukraine-ua.md
 - src/content/info-foreign/ukrainos-uzsienio-reikalu-ministerija.md
