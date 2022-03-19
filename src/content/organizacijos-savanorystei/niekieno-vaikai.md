@@ -1,6 +1,6 @@
 ---
 forma: []
-weight: 0
+weight: -2000
 title: "„Niekieno vaikai“"
 about: 'VšĮ "Savanoriai vaikams" prisideda prie pagalbos teikimo karo pabėgėliams
   iš Ukrainos. Ieškome galinčių savanoriauti jau veikiančiuose arba artimiausiu metu
