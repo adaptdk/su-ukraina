@@ -23,6 +23,9 @@ import { NAVIGATION_PROTEST_FORMS } from "../constants/Navigation";
 import { NAVIGATION_BE_VIGILANT } from "../constants/Navigation";
 import PromoLine from "../components/PromoLine";
 
+//Meta data, I don't know how to handle this
+import OgImage from "../images/og-image.png";
+
 const Page = ({ data }) => {
   const partners = data.partners.edges.map((edge) => {
     return edge.node.childMarkdownRemark.frontmatter;
@@ -35,7 +38,6 @@ const Page = ({ data }) => {
         name="description"
         content="Visa svarbiausia informacija apie Lietuvos pagalbą Ukrainai ir jos piliečiams Lietuvoje"
       />
-      <Meta property="og:image" content="../images/og-image.jpg" />
       <Section className="HeroSection">
         <StaticImage
           className="HeroSection__background"
