@@ -39,6 +39,7 @@ fields:
     step: 
 pages:
 - src/content/info-foreign/1000-the-kyiv-independent.md
+- src/content/info-foreign/al-jazeera.md
 - src/content/info-foreign/associated-press.md
 - src/content/info-foreign/bbc.md
 - src/content/info-foreign/nexta.md
