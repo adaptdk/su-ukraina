@@ -9,7 +9,7 @@ forma:
 - Pavežėjimas
 rekvizitai: ''
 website: https://stipruskartu.lt
-weight: 10
+weight: -4000
 logo: "../uploads/image-10-4x.png"
 action: https://stipruskartu.lt/#anketa
 
