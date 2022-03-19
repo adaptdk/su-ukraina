@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -15
 location: Lietuvoje
 title: Labdaros ir paramos fondas „Rugutė“
 about: Labdaros ir paramos fondo „Rugutė“ tikslas – teikti informacinę, finansinę,
