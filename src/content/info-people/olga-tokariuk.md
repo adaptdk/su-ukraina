@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: 600
 title: Olga Tokariuk
 description: Europos politikos analizės centro (CEPA) narė, žurnalistė Ukrainoje
 url: ''
