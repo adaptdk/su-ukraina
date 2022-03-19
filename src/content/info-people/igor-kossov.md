@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: 400
 title: Igor Kossov
 description: "„Kyiv Independent“ kanalo reporteris ir redaktorius"
 url: https://kyivindependent.com/tag/russias-war/
