@@ -4,7 +4,6 @@ description: ''
 url: https://www.lt72.lt
 facebook: 
 twitter: 
-weight: 1000
+weight: -10
 
 ---
-
