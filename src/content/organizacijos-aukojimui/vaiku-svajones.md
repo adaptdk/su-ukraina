@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -40
 location: Lietuvoje
 title: Vaikų svajonės
 about: Šis projektas 2010 m. pradėtas kaip savanoriška veikla, kuria siekiama išpildyti
