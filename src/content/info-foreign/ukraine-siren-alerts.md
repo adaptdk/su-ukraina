@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -200
 title: Ukraine Siren Alerts
 description: Sistema, automatiškai ir tiesiogiai pranešanti apie aptiktas pavojaus
   sirenas Ukrainoje
