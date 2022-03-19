@@ -61,7 +61,7 @@ const Header = () => {
       >
         <Button
           icon={`arrow-blue`}
-          href="https://www.withukraine.lt/info"
+          href="https://www.withukraine.lt"
           color={`secondary`}
           text={`ІНФОРМАЦІЯ`}
           position={`right`}
@@ -70,7 +70,7 @@ const Header = () => {
         />
         <Button
           icon={`arrow-blue`}
-          href="https://www.withukraine.lt"
+          href="https://www.withukraine.lt/help-search"
           color={`secondary`}
           text={`послуги`}
           position={`right`}
