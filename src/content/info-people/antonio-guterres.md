@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -1
 title: Antonio Guterres
 description: Jungtinių Tautų generalinis sekretorius
 url: ''
