@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -1500
 title: NEXTA
 description: Didžiausios Rytų Europos žiniasklaidos puslapis
 url: https://t.me/s/nexta_live
