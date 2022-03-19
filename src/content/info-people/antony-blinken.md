@@ -1,5 +1,5 @@
 ---
-weight: 8
+weight: -150
 title: Antony Blinken
 description: JAV valstybės sekretorius
 url: ''
