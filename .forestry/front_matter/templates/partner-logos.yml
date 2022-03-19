@@ -18,6 +18,20 @@ fields:
   config:
     required: false
   label: Partner website
+- name: category
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - informacinis
+    - institucinis
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Kategorija
 pages:
 - src/content/partners/https-lrv.lt-lt-aktuali-informacija-informacija-apie-kara-ukrainoje-aktuali-informacija-1.md
 - src/content/partners/nova-media.md
