@@ -39,6 +39,7 @@ fields:
     step: 
 pages:
 - src/content/info-foreign/nexta.md
+- src/content/info-foreign/reuters.md
 - src/content/info-foreign/ukraine-siren-alerts.md
 - src/content/info-orgs/eucom.md
 - src/content/info-orgs/lietuvos-kariuomene.md
