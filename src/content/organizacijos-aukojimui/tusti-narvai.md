@@ -1,5 +1,5 @@
 ---
-weight: 
+weight: 5
 location: Lietuvoje
 title: Tušti narvai
 about: VšĮ „Tušti narvai“ yra nevyriausybinė gyvūnų apsaugos organizacija, įkurta
