@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: 500
 title: John Sweeney
 description: Britų reporteris, dirbantis Ukrainoje
 url: ''
