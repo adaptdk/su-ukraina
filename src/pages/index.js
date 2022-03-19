@@ -33,8 +33,9 @@ const Page = ({ data }) => {
       <Title>Привіт!</Title>
       <Meta
         name="description"
-        content="Tinklalapis skirtas sutelkti informaciją apie krizę Ukrainoje."
+        content="Visa svarbiausia informacija apie Lietuvos pagalbą Ukrainai ir jos piliečiams Lietuvoje"
       />
+      <Meta property="og:image" content="../images/og-image.jpg" />
       <Section className="HeroSection">
         <StaticImage
           className="HeroSection__background"
@@ -105,17 +106,19 @@ const Page = ({ data }) => {
       <Section className="BeVigilantSection">
         <Constraint>
           <LinkCollectionWithImage title="Būkime budrūs ir pasiruošę">
-            {NAVIGATION_BE_VIGILANT.map((item) => (
-              <li key={item.pathname}>
-                <Button
-                  icon={`arrow-blue`}
-                  to={item.pathname}
-                  color={`transparent`}
-                  text={item.altTitle || item.title}
-                  position={`right`}
-                />
-              </li>
-            ))}
+            {NAVIGATION_BE_VIGILANT.map((item) => {
+              return (
+                <li key={item.pathname}>
+                  <Button
+                    icon={`arrow-blue`}
+                    to={item.pathname}
+                    color={`transparent`}
+                    text={item.altTitle || item.title}
+                    position={`right`}
+                  />
+                </li>
+              );
+            })}
           </LinkCollectionWithImage>
         </Constraint>
       </Section>
