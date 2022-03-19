@@ -38,6 +38,7 @@ const Page = ({ data }) => {
         name="description"
         content="Visa svarbiausia informacija apie Lietuvos pagalbą Ukrainai ir jos piliečiams Lietuvoje"
       />
+      <Meta property="og:image" content={OgImage} />
       <Section className="HeroSection">
         <StaticImage
           className="HeroSection__background"
