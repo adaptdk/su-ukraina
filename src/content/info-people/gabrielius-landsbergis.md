@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -450
 title: Gabrielius Landsbergis
 description: Užsienio reikalų ministras
 url: ''
