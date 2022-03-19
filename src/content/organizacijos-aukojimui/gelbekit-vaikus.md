@@ -17,7 +17,7 @@ rekvizitai: |-
 
   Juridiniai asmenys, įmonės, norintys ir galintys padėti Ukrainos vaikams bei į Lietuvą atvyksiančių pabėgėlių šeimoms kviečiami susisiekti organizacijos „Gelbėkit vaikus“ telefono numeriu +370 607 84 249 arba el. paštu simona.uleckiene@savethechildren.org"
 website: https://gelbekitvaikus.lt
-weight: 4
+weight: -100
 logo: "../uploads/image-6-4x.png"
 location: Lietuvoje
 
