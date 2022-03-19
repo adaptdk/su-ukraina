@@ -40,8 +40,6 @@ fields:
 pages:
 - src/content/info-foreign/nexta.md
 - src/content/info-foreign/ukraine-siren-alerts.md
-- src/content/info-foreign/ukraine-ua.md
-- src/content/info-foreign/ukrainos-uzsienio-reikalu-ministerija.md
 - src/content/info-orgs/eucom.md
 - src/content/info-orgs/lietuvos-kariuomene.md
 - src/content/info-orgs/nato.md
