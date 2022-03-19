@@ -1,0 +1,117 @@
+.PromoLine {
+  background: var(--c__primary);
+  padding: calc(var(--s__unit) * 3) 0;
+
+  &--big {
+    padding: calc(var(--s__unit) * 10) 0;
+
+    .PromoLine__content {
+      > a {
+        font-size: 1.8rem;
+      }
+    }
+
+    .PromoLine__actions {
+      margin-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .Button {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (min-width: 40rem) {
+      padding: calc(var(--s__unit) * 20) 0;
+
+      .PromoLine__content {
+        > a {
+          font-size: 1.8rem;
+        }
+      }
+
+      .PromoLine__actions {
+        margin-left: 50px;
+        margin-top: 0;
+        flex-wrap: nowrap;
+        width: auto;
+
+        .Button {
+          font-size: 1.4rem;
+          width: auto;
+
+          + .Button {
+            margin-left: 10px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    flex-wrap: wrap;
+
+    > a {
+      color: var(--c__secondary);
+      font-size: 1.2rem;
+      text-align: center;
+      display: block;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    @media (min-width: 40rem) {
+      flex-wrap: nowrap;
+
+      > a {
+        font-size: 1.5rem;
+        text-align: left;
+      }
+    }
+  }
+
+  &__actions {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+
+    .Button {
+      font-weight: var(--fw__bold);
+      width: 100%;
+      justify-content: space-between;
+      margin-left: 0;
+
+      + .Button {
+        margin-top: 10px;
+      }
+    }
+
+    @media (min-width: 40rem) {
+      display: flex;
+      margin-top: 0;
+      flex-wrap: nowrap;
+      width: auto;
+
+      .Button {
+        width: auto;
+
+        + .Button {
+          margin-left: 10px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

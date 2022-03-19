@@ -21,6 +21,7 @@ import Button from "../components/Button";
 // Constants.
 import { NAVIGATION_PROTEST_FORMS } from "../constants/Navigation";
 import { NAVIGATION_BE_VIGILANT } from "../constants/Navigation";
+import PromoLine from "../components/PromoLine";
 
 const Page = ({ data }) => {
   const partners = data.partners.edges.map((edge) => {
@@ -61,6 +62,32 @@ const Page = ({ data }) => {
             />
           </Constraint>
         </HeroBanner>
+      </Section>
+      <Section>
+        <PromoLine
+          title="ВСЯ ВАЖЛИВА ІНФОРМАЦІЯ ДЛЯ ГРОМАДЯН УКРАЇНИ"
+          titleLink="https://www.withukraine.lt"
+          modifier="big"
+        >
+          <Button
+            icon={`arrow-blue`}
+            href="https://www.withukraine.lt/info"
+            color={`secondary`}
+            text={`ІНФОРМАЦІЯ`}
+            position={`right`}
+            target="_blank"
+            rel="noopener nofollow"
+          />
+          <Button
+            icon={`arrow-blue`}
+            href="https://www.withukraine.lt"
+            color={`secondary`}
+            text={`послуги`}
+            position={`right`}
+            target="_blank"
+            rel="noopener nofollow"
+          />
+        </PromoLine>
       </Section>
       {/* <Section className="ProtestFormsSection">
         <Constraint>

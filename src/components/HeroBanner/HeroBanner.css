@@ -6,10 +6,7 @@
 
 .HeroSection {
   display: grid;
-  padding: 1px 0;
   position: relative;
-  /* Hack for 1px spacing line */
-  margin-top: -2px;
 
   &__background {
     grid-area: 1/1;
@@ -37,7 +34,6 @@
 
 .HeroSectionB {
   display: grid;
-  padding: 1px 0;
   position: relative;
   /* Hack for 1px spacing line */
   margin-top: -2px;
