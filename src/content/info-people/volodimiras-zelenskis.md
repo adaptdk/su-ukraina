@@ -3,7 +3,6 @@ title: Volodimiras Zelenskis
 description: Ukrainos prezidentas
 twitter: https://twitter.com/ZelenskyyUa
 facebook: 
-weight: 600
+weight: 1
 
 ---
-
