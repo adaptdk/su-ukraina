@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -50
 location: Lietuvoje
 title: SOS vaikų kaimai
 about: SOS vaikų kaimai Lietuvoje – ne pelno siekianti, nevyriausybinė organizacija,
