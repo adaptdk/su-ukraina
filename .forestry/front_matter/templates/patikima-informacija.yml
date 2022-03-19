@@ -38,6 +38,7 @@ fields:
     max: 
     step: 
 pages:
+- src/content/info-foreign/bbc.md
 - src/content/info-foreign/nexta.md
 - src/content/info-foreign/reuters.md
 - src/content/info-foreign/ukraine-siren-alerts.md
