@@ -1,9 +1,8 @@
 ---
 title: Max Seddon
-description: „Financial Times“ žurnalistas Maskvoje
+description: "„Financial Times“ žurnalistas Maskvoje"
 twitter: https://twitter.com/maxseddon
 facebook: 
-weight: 1700
+weight: 2000
 
 ---
-
