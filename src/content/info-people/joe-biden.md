@@ -3,6 +3,6 @@ title: Joe Biden
 description: JAV prezidentas
 twitter: https://twitter.com/POTUS
 facebook: 
-weight: 6
+weight: -300
 
 ---
