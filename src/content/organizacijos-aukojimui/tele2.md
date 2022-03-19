@@ -1,5 +1,5 @@
 ---
-weight: -200
+weight: -10
 location: Lietuvoje
 title: Tele2
 about: "„Tele2“ kviečia aukoti nebenaudojamus telefonus ir planšetinius kompiuterius
