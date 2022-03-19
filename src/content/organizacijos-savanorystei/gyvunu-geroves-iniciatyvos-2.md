@@ -8,7 +8,7 @@ forma:
 - Gyvūnų prieglobstis ir transportavimas
 rekvizitai: ''
 website: https://ggi.lt
-weight: 13
+weight: -1000
 logo: "../uploads/image-17-4x.png"
 action: https://bit.ly/UkrainosGyvūnai
 
