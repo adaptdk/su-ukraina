@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -40
 title: Viktorija Čmilytė - Nielsen
 description: LR Seimo pirmininkė
 url: ''
