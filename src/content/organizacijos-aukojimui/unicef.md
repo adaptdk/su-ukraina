@@ -8,7 +8,7 @@ forma:
 - Auka
 rekvizitai: ''
 website: https://unicef.lt
-weight: 5
+weight: -30
 logo: "../uploads/image-9-4x.png"
 support_link: https://unicef.lt/paaukok-vaikams-2/
 location: Lietuvoje
