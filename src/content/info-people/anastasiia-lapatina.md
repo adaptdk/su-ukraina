@@ -1,9 +1,8 @@
 ---
 title: Anastasiia Lapatina
-description: „The Kyiv Independent“ žurnalistė
+description: "„The Kyiv Independent“ žurnalistė"
 twitter: https://twitter.com/lapatina_
 facebook: 
-weight: 1000
+weight: 900
 
 ---
-
