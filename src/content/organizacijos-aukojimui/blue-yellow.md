@@ -12,7 +12,7 @@ rekvizitai: |-
 
   Taip pat galima tapti nuolatiniu rėmėju, skiriant po 3 ar 5 eurus per mėnesį. Tokiu atveju, skambinkit arba siųskit SMS numeriu 1482 ir gausit tolimesnes instrukcijas.
 website: https://www.blue-yellow.lt/
-weight: 24
+weight: -500
 logo: "../uploads/image-4-4x.png"
 location: Lietuvoje
 
