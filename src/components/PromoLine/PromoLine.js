@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 // Components.
 import Constraint from "../Constraint";
-import Button from "../Button";
 
 // Style.
 import "./PromoLine.css";
