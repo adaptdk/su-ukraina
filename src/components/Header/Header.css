@@ -237,13 +237,15 @@
       display: flex;
       gap: var(--s__main-padding);
       list-style: none;
+      margin: calc(var(--s__main-padding) * 1.5) 0;
 
       > li {
+        margin: 0;
         position: relative;
         z-index: 10;
 
         > a {
-          padding: 0 var(--s__main-padding);
+          padding: calc(var(--s__main-padding) / 2) var(--s__main-padding);
         }
 
         > ul {
@@ -254,7 +256,6 @@
           opacity: 0;
           overflow: hidden;
           position: absolute;
-          top: 28px;
           transition: all 0.2s ease;
           visibility: hidden;
         }
