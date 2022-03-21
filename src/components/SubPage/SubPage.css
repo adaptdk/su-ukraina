@@ -3,10 +3,10 @@
 
   &.has-image {
     .SubPage__content {
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
 
       @media (min-width: 40rem) {
         flex-wrap: nowrap;
@@ -29,8 +29,8 @@
         width: 100%;
 
         @media (min-width: 40rem) {
-          width: 50%;
           text-align: right;
+          width: 50%;
         }
       }
     }
@@ -46,8 +46,8 @@
         width: 100%;
 
         @media (min-width: 40rem) {
-          width: 50%;
           margin-right: 20px;
+          width: 50%;
         }
       }
     }
@@ -76,13 +76,13 @@
       }
 
       blockquote {
-        margin: 0;
-        margin-bottom: calc(var(--s__unit) * 3);
         border: 1px solid #b10d01;
         border-radius: 6px;
+        color: #b10d01;
+        margin: 0;
+        margin-bottom: calc(var(--s__unit) * 3);
         padding: calc(var(--s__unit) * 2);
         text-align: center;
-        color: #b10d01;
       }
 
       ul {
@@ -91,10 +91,6 @@
         li {
           + li {
             margin-top: calc(var(--s__unit) * 2);
-          }
-
-          &::marker {
-            //color: var(--c__primary);
           }
         }
       }

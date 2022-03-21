@@ -39,13 +39,13 @@
 
   .Button {
     justify-content: space-between;
+    margin-top: calc(var(--s__unit) * 2);
     min-width: 120px;
     width: 100%;
-    margin-top: calc(var(--s__unit) * 2);
 
     @media (min-width: 42rem) {
-      margin-top: 0;
       flex-wrap: nowrap;
+      margin-top: 0;
       width: unset;
     }
   }

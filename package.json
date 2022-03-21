@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "eslint \"src/**/*.{js,jsx}\" --fix & stylelint \"src/**/*.css\" --fix",
+    "format": "eslint \"src/**/*.{js,jsx}\" --fix && stylelint \"src/**/*.css\" --fix",
     "prepare": "husky install"
   },
   "dependencies": {

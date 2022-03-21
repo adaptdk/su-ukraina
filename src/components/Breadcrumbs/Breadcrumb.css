@@ -8,8 +8,8 @@
   }
 
   &__item {
-    list-style-type: none;
     display: flex;
+    list-style-type: none;
   }
 
   &__item::before {

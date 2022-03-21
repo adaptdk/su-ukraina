@@ -1,15 +1,16 @@
 .CtaCard {
+  align-items: stretch;
+
   /* background: var(--c__card-bg); */
   background: var(--c__secondary);
   border-radius: var(--s__alt-border-radius);
   box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
   margin: var(--s__small-padding) 0;
   overflow: hidden;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
 
   @media (min-width: 40rem) {
     margin: var(--s__main-padding) 0;
@@ -17,11 +18,11 @@
   }
 
   a {
-    text-decoration: none;
-    width: 100%;
+    align-items: stretch;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    text-decoration: none;
+    width: 100%;
   }
 
   &__body {
@@ -38,10 +39,11 @@
   }
 
   &__heading {
+    align-items: center;
     background: var(--c__secondary);
+
     /* border-bottom: 1px solid hsl(240deg 30% 92%); */
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: var(--s__main-padding);
     transition: background 0.25s ease-in-out;

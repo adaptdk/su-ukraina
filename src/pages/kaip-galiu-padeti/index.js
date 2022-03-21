@@ -40,13 +40,15 @@ const Page = ({ data }) => {
       <Section className="LinksCollectionWrapper">
         <Constraint>
           <LinkCollection>
-            {NAVIGATION_HOW_CAN_I_HELP.map((item) => (
-              <LinkCollectionItem
-                key={item.pathname}
-                to={item.pathname}
-                text={item.title}
-              />
-            ))}
+            {NAVIGATION_HOW_CAN_I_HELP.map((item) => {
+              return (
+                <LinkCollectionItem
+                  key={item.pathname}
+                  to={item.pathname}
+                  text={item.title}
+                />
+              );
+            })}
           </LinkCollection>
         </Constraint>
       </Section>

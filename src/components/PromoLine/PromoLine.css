@@ -12,12 +12,12 @@
     }
 
     .PromoLine__actions {
-      margin-left: 0;
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
-      margin-top: 20px;
       justify-content: center;
-      align-items: center;
+      margin-left: 0;
+      margin-top: 20px;
       width: 100%;
 
       .Button {
@@ -35,9 +35,9 @@
       }
 
       .PromoLine__actions {
+        flex-wrap: nowrap;
         margin-left: 50px;
         margin-top: 0;
-        flex-wrap: nowrap;
         width: auto;
 
         .Button {
@@ -54,19 +54,19 @@
   }
 
   &__content {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
     color: white;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     > a {
       color: var(--c__secondary);
+      display: block;
       font-size: 1.2rem;
       text-align: center;
-      display: block;
-      width: 100%;
       text-decoration: none;
+      width: 100%;
     }
 
     @media (min-width: 40rem) {
@@ -83,15 +83,15 @@
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
     justify-content: center;
+    margin-top: 20px;
     width: 100%;
 
     .Button {
       font-weight: var(--fw__bold);
-      width: 100%;
       justify-content: space-between;
       margin-left: 0;
+      width: 100%;
 
       + .Button {
         margin-top: 10px;
@@ -100,8 +100,8 @@
 
     @media (min-width: 40rem) {
       display: flex;
-      margin-top: 0;
       flex-wrap: nowrap;
+      margin-top: 0;
       width: auto;
 
       .Button {

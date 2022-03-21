@@ -1,11 +1,11 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import "./SubPage.css";
 
 const SubPage = ({ title, intro, children, image, imageIsLeft }) => {
-  const imageSide = imageIsLeft ? "left" : "right";
+  const imageSide = imageIsLeft ? `left` : `right`;
   const contentClass = image ? `has-image has-image--${imageSide}` : ``;
 
   return (

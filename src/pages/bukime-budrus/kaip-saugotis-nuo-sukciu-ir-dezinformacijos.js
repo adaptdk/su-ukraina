@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
