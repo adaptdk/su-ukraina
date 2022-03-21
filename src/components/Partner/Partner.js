@@ -6,7 +6,7 @@ import "./Partner.css";
 const Partner = ({ title, logo, website }) => {
   return (
     <div className="Partner">
-      <a href={website} target="_blank" rel="noreferrer noopener" title={title}>
+      <a href={website} target="_blank" rel="noopener" title={title}>
         {!!logo && <div className="Partner__logo">{logo}</div>}
       </a>
     </div>

@@ -105,7 +105,7 @@ const getHitWithLanguage = (language) => {
           <Panel header="URLs">
             {urls.map((url, i) => {
               return (
-                <a href={url} key={i} target="_blank" rel="noreferrer noopener">
+                <a href={url} key={i} target="_blank" rel="noopener">
                   {url}
                 </a>
               );

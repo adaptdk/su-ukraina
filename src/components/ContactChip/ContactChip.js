@@ -20,7 +20,7 @@ const ContactChip = ({
         {!!url && (
           <a
             href={url}
-            rel="noopener noreferrer"
+            rel="noopener"
             className="ContactChip__actions-web"
             target="_blank"
           >
@@ -30,7 +30,7 @@ const ContactChip = ({
         {!!facebookUrl && (
           <a
             href={facebookUrl}
-            rel="noopener noreferrer"
+            rel="noopener"
             className="ContactChip__actions-facebook"
             target="_blank"
           >
@@ -40,7 +40,7 @@ const ContactChip = ({
         {!!twitterUrl && (
           <a
             href={twitterUrl}
-            rel="noopener noreferrer"
+            rel="noopener"
             className="ContactChip__actions-twitter"
             target="_blank"
           >

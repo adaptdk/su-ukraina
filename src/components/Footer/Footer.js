@@ -83,17 +83,13 @@ const Footer = () => {
             {` `}
             <a
               href="https://adaptagency.com/adapt-lithuania"
-              rel="noopener noreferrer"
+              rel="noopener"
               target="_blank"
             >
               <img src={Adapt} alt="Adapt LT logo" width="93" height="15" />
             </a>
             {` `}
-            <a
-              href="https://laisves.tv"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <a href="https://laisves.tv" rel="noopener" target="_blank">
               <img
                 src={LaisvesTv}
                 alt="Laisvės TV logo"
@@ -102,11 +98,7 @@ const Footer = () => {
               />
             </a>
             {` `}
-            <a
-              href="https://shift4.lt"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <a href="https://shift4.lt" rel="noopener" target="_blank">
               <img src={Shift4} alt="Shift4 logo" width="93" height="40" />
             </a>
           </p>

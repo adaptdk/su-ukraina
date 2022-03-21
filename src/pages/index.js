@@ -80,7 +80,7 @@ const Page = ({ data }) => {
             text={`ІНФОРМАЦІЯ`}
             position={`right`}
             target="_blank"
-            rel="noopener nofollow"
+            rel="noopener"
           />
           <Button
             icon={`arrow-blue`}
@@ -89,7 +89,7 @@ const Page = ({ data }) => {
             text={`послуги`}
             position={`right`}
             target="_blank"
-            rel="noopener nofollow"
+            rel="noopener"
           />
         </PromoLine>
       </Section>

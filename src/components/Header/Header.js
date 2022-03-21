@@ -35,22 +35,26 @@ const Header = () => {
           </label>
           <nav className="Header__nav" aria-label="Pagrindinė navigacija">
             <ul className="Header__menu">
-              {NAVIGATION_MAIN_MENU.map((item) => (
-                <li key={item.pathname}>
-                  <Link aria-haspopup={!!item.children} to={item.pathname}>
-                    {item.title}
-                  </Link>
-                  {item.children && (
-                    <ul>
-                      {item.children.map((subItem) => (
-                        <li key={subItem.pathname}>
-                          <Link to={subItem.pathname}>{subItem.title}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
+              {NAVIGATION_MAIN_MENU.map((item) => {
+                return (
+                  <li key={item.pathname}>
+                    <Link aria-haspopup={!!item.children} to={item.pathname}>
+                      {item.title}
+                    </Link>
+                    {item.children && (
+                      <ul>
+                        {item.children.map((subItem) => {
+                          return (
+                            <li key={subItem.pathname}>
+                              <Link to={subItem.pathname}>{subItem.title}</Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </Constraint>
@@ -66,7 +70,7 @@ const Header = () => {
           text={`ІНФОРМАЦІЯ`}
           position={`right`}
           target="_blank"
-          rel="noopener nofollow"
+          rel="noopener"
         />
         <Button
           icon={`arrow-blue`}
@@ -75,7 +79,7 @@ const Header = () => {
           text={`послуги`}
           position={`right`}
           target="_blank"
-          rel="noopener nofollow"
+          rel="noopener"
         />
       </PromoLine>
     </React.Fragment>
