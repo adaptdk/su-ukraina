@@ -24,7 +24,7 @@ const PromoLine = ({
         <a href={titleLink} rel="noopener noreferrer" target="_blank">
           {title}
         </a>
-        <div class="PromoLine__actions">{children}</div>
+        <div className="PromoLine__actions">{children}</div>
       </Constraint>
     </div>
   );
