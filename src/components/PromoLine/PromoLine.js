@@ -22,7 +22,7 @@ const PromoLine = ({
       } ${className}`}
     >
       <Constraint className="PromoLine__content">
-        <a href={titleLink} target="_blank">
+        <a href={titleLink} rel="noopener noreferrer" target="_blank">
           {title}
         </a>
         <div class="PromoLine__actions">{children}</div>
