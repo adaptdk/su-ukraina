@@ -31,6 +31,7 @@ const PromoLine = ({
 };
 
 PromoLine.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string,
   titleLink: PropTypes.string,
   modifier: PropTypes.string,
