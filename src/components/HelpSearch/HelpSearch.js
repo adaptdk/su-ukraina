@@ -58,26 +58,28 @@ const getHitWithLanguage = (language) => {
     const workingHours = hit[`workingHours_${language}`];
 
     return (
-      <article className="Hit">
-        <p className="HelpSearch__Hit-title">
-          <Highlight attribute={`title_${language}`} tagName="mark" hit={hit} />
-        </p>
-        {!!hit.languages.length && (
-          <Panel header={TRANSLATIONS.hit.languages[language]}>
+      <article className="HelpSearch__Hit">
+        <div className="HelpSearch__Hit-header">
+          <p className="HelpSearch__Hit-title">
+            <Highlight
+              attribute={`title_${language}`}
+              tagName="mark"
+              hit={hit}
+            />
+          </p>
+          {!!hit.languages.length && (
             <ul className="HelpSearch__Hit-languages">
               {hit.languages.map((lang) => {
                 return <li key={lang}>{lang}</li>;
               })}
             </ul>
-          </Panel>
-        )}
-        <Panel header={TRANSLATIONS.hit.tags[language]}>
-          <ul className="HelpSearch__Hit-tags">
-            {hit[`tags_${language}`].map((tag) => {
-              return <li key={tag}>{tag}</li>;
-            })}
-          </ul>
-        </Panel>
+          )}
+        </div>
+        <ul className="HelpSearch__Hit-tags">
+          {hit[`tags_${language}`].map((tag) => {
+            return <li key={tag}>{tag}</li>;
+          })}
+        </ul>
         <Panel header={TRANSLATIONS.hit.purpose[language]}>
           <Highlight
             attribute={`purpose_${language}`}
@@ -169,11 +171,6 @@ const TRANSLATIONS = {
       ru: `Kонтакты`,
       uk: `Контакти`,
     },
-    languages: {
-      lt: `Kalba`,
-      ru: `Язык`,
-      uk: `Мова`,
-    },
     purpose: {
       lt: `Aprašymas`,
       ru: `Дополнительная информация`,
@@ -183,11 +180,6 @@ const TRANSLATIONS = {
       lt: `Vieta`,
       ru: `Место нахождения`,
       uk: `Місцезнаходження`,
-    },
-    tags: {
-      lt: `Pagalbos rūšis`,
-      ru: `Тип помощи`,
-      uk: `Вид допомоги`,
     },
     workingHours: {
       lt: `Darbo laikas`,
