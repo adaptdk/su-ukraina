@@ -1,19 +1,20 @@
 ---
 label: FAQ page
 hide_body: false
-display_field: title
+display_field: title_override
 fields:
-- name: title
+- name: title_override
   type: text
   config:
     required: false
   label: Title
-- name: slug
+  description: Used for creating unique path (url) to section
+- name: title
   type: text
   config:
-    required: false
-  label: Unique name (slug)
-  description: Used for creating unique path (url) to section
+    required: true
+  label: Slug
+  hidden: false
 - name: questions
   type: field_group_list
   fields:
