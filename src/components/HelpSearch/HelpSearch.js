@@ -47,6 +47,31 @@ const Results = connectStateResults(
   }
 );
 
+const SplitHitValue = ({ children }) => {
+  return (
+    <>
+      {splitHitValueByNewlines(children).map((str, i) => {
+        return (
+          <p key={i}>
+            <Linkify>{str}</Linkify>
+          </p>
+        );
+      })}
+    </>
+  );
+};
+
+SplitHitValue.propTypes = {
+  children: PropTypes.string,
+};
+
+const splitHitValueByNewlines = (str) => {
+  return str
+    .split(/<br\s*\/?>/) /* <br> or <br/> or <br />, etc */
+    .join(`\n`)
+    .split(/\n+/);
+};
+
 const getHitWithLanguage = (language) => {
   const Hit = ({ hit }) => {
     const address = hit[`address_${language}`];
@@ -56,6 +81,27 @@ const getHitWithLanguage = (language) => {
       return !!url;
     });
     const workingHours = hit[`workingHours_${language}`];
+
+    const purposeHighlights = splitHitValueByNewlines(
+      hit._highlightResult[`purpose_${language}`].value
+    ).map((highlightValuePart, i) => {
+      return (
+        <p key={i}>
+          <Highlight
+            attribute={`purpose_${language}`}
+            tagName="mark"
+            hit={{
+              _highlightResult: {
+                [`purpose_${language}`]: {
+                  ...hit._highlightResult[`purpose_${language}`],
+                  value: highlightValuePart,
+                },
+              },
+            }}
+          />
+        </p>
+      );
+    });
 
     return (
       <article className="HelpSearch__Hit">
@@ -81,26 +127,26 @@ const getHitWithLanguage = (language) => {
           })}
         </ul>
         <Panel header={TRANSLATIONS.hit.purpose[language]}>
-          <Highlight
-            attribute={`purpose_${language}`}
-            tagName="mark"
-            hit={hit}
-          />
+          {purposeHighlights}
         </Panel>
         {!!address && (
-          <Panel header={TRANSLATIONS.hit.address[language]}>{address}</Panel>
+          <Panel header={TRANSLATIONS.hit.address[language]}>
+            <SplitHitValue>{address}</SplitHitValue>
+          </Panel>
         )}
         {!!contacts && (
           <Panel header={TRANSLATIONS.hit.contacts[language]}>
-            <Linkify>{contacts}</Linkify>
+            <SplitHitValue>{contacts}</SplitHitValue>
           </Panel>
         )}
         {!!region && (
-          <Panel header={TRANSLATIONS.hit.region[language]}>{region}</Panel>
+          <Panel header={TRANSLATIONS.hit.region[language]}>
+            <SplitHitValue>{region}</SplitHitValue>
+          </Panel>
         )}
         {!!workingHours && (
           <Panel header={TRANSLATIONS.hit.workingHours[language]}>
-            {workingHours}
+            <SplitHitValue>{workingHours}</SplitHitValue>
           </Panel>
         )}
         {!!urls.length && (
@@ -146,6 +192,11 @@ const getHitWithLanguage = (language) => {
       workingHours_uk: PropTypes.string,
       objectID: PropTypes.string,
       languages: PropTypes.arrayOf(PropTypes.string),
+      _highlightResult: PropTypes.shape({
+        purpose_lt: PropTypes.shape({
+          value: PropTypes.string,
+        }),
+      }),
     }),
   };
 
