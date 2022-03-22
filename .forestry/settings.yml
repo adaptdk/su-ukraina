@@ -4,10 +4,6 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: src/content/ua-faq/**/*
-  label: Ukrainiečių gidas
-  match: "**/*"
 - type: directory
   path: src/content/pages
   label: Puslapiai
@@ -98,8 +94,6 @@ sections:
   match: "**/*"
   templates:
   - patikima-informacija
-- type: heading
-  label: Importuoti duomenys
 - type: directory
   path: src/content/companies
   label: Kompanijos (žinokite ką perkate)
@@ -107,6 +101,11 @@ sections:
   match: "**/*"
   templates:
   - company
+- type: heading
+  label: Ukrainiečių gidas
+- type: document
+  path: src/content/ua-faq/**/*
+  label: FAQ
 upload_dir: src/content/uploads
 public_path: "/uploads"
 front_matter_path: "../uploads"
