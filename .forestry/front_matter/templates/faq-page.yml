@@ -69,3 +69,5 @@ fields:
     min: 
     max: 
     step: 
+pages:
+- src/content/ua-faq/міграційні-служби.md
