@@ -72,6 +72,3 @@ fields:
     step: 
 pages:
 - src/content/ua-faq/currency-exchange.md
-- src/content/ua-faq/мобільне-зв-язку.md
-- src/content/ua-faq/міграційні-служби.md
-- src/content/ua-faq/проживання.md
