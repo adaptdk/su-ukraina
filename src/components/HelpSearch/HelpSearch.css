@@ -76,6 +76,11 @@
 
   &__body {
     flex-basis: 75%;
+
+    .ais-Panel-body,
+    .ais-Panel-header {
+      margin-bottom: 0;
+    }
   }
 
   &__content {
@@ -129,6 +134,18 @@
     }
   }
 
+  .ais-Panel-body {
+    > * {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .ais-Panel-header {
     word-break: normal;
   }
@@ -172,11 +189,13 @@
       }
     }
 
-    .ais-Panel {
-      align-items: baseline;
-      display: flex;
-      gap: var(--s__main-padding);
-      margin-bottom: 1rem;
+    &__body {
+      .ais-Panel {
+        align-items: baseline;
+        display: flex;
+        gap: var(--s__main-padding);
+        margin-bottom: 1rem;
+      }
     }
   }
 
