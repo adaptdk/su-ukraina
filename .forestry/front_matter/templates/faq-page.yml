@@ -1,0 +1,51 @@
+---
+label: "FAQ page"
+hide_body: false
+fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Aprašymas
+  - name: resources
+    type: field_group_list
+    fields:
+      - name: title
+        type: text
+        config:
+          required: false
+        label: Title
+      - name: link
+        type: text
+        config:
+          required: false
+        label: URL
+      - name: subtitle
+        type: text
+        config:
+          required: false
+        label: Subtitle
+    config:
+      min:
+      max:
+      labelField: title
+    label: Resources
+  - name: weight
+    type: number
+    label: Weight
+    description: Higher weight resources go up in the list, smaller go down
+    default: 0
+    required: true
+    config:
+      min:
+      max:
+      step:
