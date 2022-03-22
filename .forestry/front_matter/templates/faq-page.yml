@@ -13,7 +13,7 @@ fields:
   config:
     required: false
   label: Unique name (slug)
-  description: Used for creating unique links to section
+  description: Used for creating unique path (url) to section
 - name: questions
   type: field_group_list
   fields:
