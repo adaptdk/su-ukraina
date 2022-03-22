@@ -8,6 +8,12 @@ fields:
   config:
     required: false
   label: Title
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Unique name (slug)
+  description: Used for creating unique links to section
 - name: questions
   type: field_group_list
   fields:
