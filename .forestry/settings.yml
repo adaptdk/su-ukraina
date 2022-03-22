@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: src/content/ua-faq/**/*
+  label: Ukrainiečių gidas
+  match: "**/*"
 - type: directory
   path: src/content/pages
   label: Puslapiai
