@@ -103,9 +103,13 @@ sections:
   - company
 - type: heading
   label: Ukrainiečių gidas
-- type: document
-  path: src/content/ua-faq/**/*
-  label: FAQ
+- type: directory
+  path: src/content/ua-faq
+  label: UA FAQ
+  create: documents
+  match: "**/*"
+  templates:
+  - faq-page
 upload_dir: src/content/uploads
 public_path: "/uploads"
 front_matter_path: "../uploads"
