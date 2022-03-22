@@ -11,3 +11,10 @@ export const wrapRootElement = ({ element }) => {
 export const onServiceWorkerUpdateReady = () => {
   window.location.reload();
 };
+
+export const shouldUpdateScroll = ({ routerProps: { location } }) => {
+  if (location.pathname.toLowerCase() === `/pagalba`) {
+    return false;
+  }
+  return true;
+};

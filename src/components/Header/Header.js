@@ -1,4 +1,5 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 // Components.
@@ -15,10 +16,10 @@ import { NAVIGATION_MAIN_MENU } from "../../constants/Navigation";
 import "./Header.css";
 import PromoLine from "../PromoLine/PromoLine";
 
-const Header = () => {
+const Header = ({ noSticky }) => {
   return (
     <React.Fragment>
-      <div className="Header">
+      <div className={`Header ${noSticky ? `Header--no-sticky` : ``}`}>
         <Constraint className="Header__content">
           <Link to="/">
             <img
@@ -84,6 +85,10 @@ const Header = () => {
       </PromoLine>
     </React.Fragment>
   );
+};
+
+Header.propTypes = {
+  noSticky: PropTypes.bool,
 };
 
 export default Header;

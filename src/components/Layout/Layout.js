@@ -9,10 +9,10 @@ import Section from "../Section";
 
 import "./Layout.css";
 
-const Layout = ({ children, pagePath }) => {
+const Layout = ({ children, noStickyHeader, pagePath }) => {
   return (
     <div className="Layout">
-      <Header />
+      <Header noSticky={noStickyHeader} />
 
       <main>{children}</main>
 
@@ -29,6 +29,7 @@ const Layout = ({ children, pagePath }) => {
 
 Layout.propTypes = {
   children: PropTypes.node,
+  noStickyHeader: PropTypes.bool,
   pagePath: PropTypes.string,
 };
 

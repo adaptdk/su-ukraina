@@ -233,8 +233,8 @@ const TRANSLATIONS = {
 
 const LangSwitcher = ({ resultsLang, handleSearchLangChange, name }) => {
   return (
-    <div>
-      {TRANSLATIONS.langSwitcher.language[resultsLang]}
+    <div className="HelpSearch__LangSwitcher">
+      <i>{TRANSLATIONS.langSwitcher.language[resultsLang]}</i>
       {POSSIBLE_SEARCH_LANGS.map((lang) => {
         return (
           <label key={lang} aria-label={lang.toUpperCase()}>
@@ -246,11 +246,14 @@ const LangSwitcher = ({ resultsLang, handleSearchLangChange, name }) => {
               value={lang}
             />
             {` `}
-            {lang
-              .toUpperCase()
-              .replace(`LT`, `🇱🇹`)
-              .replace(`RU`, `🇷🇺`)
-              .replace(`UK`, `🇺🇦`)}
+            <span>
+              {lang
+                .toUpperCase()
+                .replace(`LT`, `Lietuvių`)
+                .replace(`RU`, `Русский`)
+                .replace(`UK`, `Українська`)}
+            </span>
+            <span>{lang.toUpperCase()}</span>
           </label>
         );
       })}
@@ -325,16 +328,15 @@ const HelpSearch = () => {
       >
         <div className="HelpSearch__header">
           <Constraint className="HelpSearch__header-content">
-            <SearchBox
-              translations={{
-                placeholder: `${TRANSLATIONS.searchBox[resultsLang]} 🇱🇹 🇷🇺 🇺🇦`,
-              }}
-            />
-            <PoweredBy translations={{ searchBy: `` }} />
             <LangSwitcher
               handleSearchLangChange={handleSearchLangChange}
               name="header-lang-switcher"
               resultsLang={resultsLang}
+            />
+            <SearchBox
+              translations={{
+                placeholder: `${TRANSLATIONS.searchBox[resultsLang]}`,
+              }}
             />
           </Constraint>
         </div>
@@ -446,13 +448,14 @@ const HelpSearch = () => {
                 }}
               />
             </footer>
-            <p style={{ background: `#fff`, position: `sticky`, bottom: 0 }}>
+            <div className="HelpSearch__footer-lang-switcher">
               <LangSwitcher
                 handleSearchLangChange={handleSearchLangChange}
                 name="footer-lang-switcher"
                 resultsLang={resultsLang}
               />
-            </p>
+            </div>
+            <PoweredBy translations={{ searchBy: `` }} />
           </div>
 
           <div className="HelpSearch__sidebar">

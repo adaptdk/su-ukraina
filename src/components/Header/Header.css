@@ -52,6 +52,10 @@
   top: 0;
   z-index: 1000;
 
+  &--no-sticky {
+    position: static;
+  }
+
   a {
     text-decoration: none;
   }
