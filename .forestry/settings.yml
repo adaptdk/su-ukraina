@@ -102,10 +102,10 @@ sections:
   templates:
   - company
 - type: heading
-  label: Ukrainiečių gidas
+  label: Refugee guide
 - type: directory
-  path: src/content/ua-faq
-  label: UA FAQ
+  path: src/content/refugee-guide
+  label: Guide pages
   create: documents
   match: "**/*"
   templates:
