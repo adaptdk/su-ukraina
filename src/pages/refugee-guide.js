@@ -1,11 +1,16 @@
 import * as React from "react";
 import { Title, Meta } from "react-head";
 import { graphql } from "gatsby";
+import PropTypes from "prop-types";
+
+import Constraint from "../components/Constraint";
+import ContentLayout from "../components/ContentLayout";
 
 import HelpSearch from "../components/HelpSearch";
 import Layout from "../components/Layout";
+import FaqNav from "../components/Faq/FaqNav";
 
-const Page = () => {
+const Page = ({ data }) => {
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -14,14 +19,12 @@ const Page = () => {
     };
   })[0];
 
-  const faq = data.faq.edges.map((edge) => {
+  const faqNav = data.faq.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
       html: edge.node.childMarkdownRemark.html,
     };
   });
-
-  console.log(faq);
 
   return (
     <Layout>
@@ -35,6 +38,7 @@ const Page = () => {
         <Constraint>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
+          <FaqNav navData={faqNav} />
         </Constraint>
       )}
     </Layout>
@@ -46,7 +50,7 @@ export const query = graphql`
     contents: allFile(
       filter: {
         sourceInstanceName: { eq: "page-contents" }
-        absolutePath: { regex: "//src/content/pages/gidas-ukrainieciams.md$/" }
+        absolutePath: { regex: "//src/content/pages/refugee-guide.md$/" }
       }
     ) {
       edges {
@@ -62,7 +66,7 @@ export const query = graphql`
       }
     }
     faq: allFile(
-      filter: { sourceInstanceName: { eq: "faq-ua" } }
+      filter: { sourceInstanceName: { eq: "refugee-guide" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {
@@ -71,17 +75,8 @@ export const query = graphql`
             frontmatter {
               title
               title_override
-              questions {
-                title
-                answer
-                resources {
-                  title
-                  subtitle
-                  url
-                }
-              }
+              slug
             }
-            html
           }
         }
       }
@@ -114,19 +109,7 @@ Page.propTypes = {
               frontmatter: PropTypes.shape({
                 title_override: PropTypes.string,
                 title: PropTypes.string,
-                questions: PropTypes.arrayOf(
-                  PropTypes.shape({
-                    title: PropTypes.string,
-                    answer: PropTypes.string,
-                    resources: PropTypes.arrayOf(
-                      PropTypes.shape({
-                        title: PropTypes.string,
-                        subtitle: PropTypes.string,
-                        url: PropTypes.string,
-                      })
-                    ),
-                  })
-                ),
+                slug: PropTypes.slug,
               }),
             }),
             html: PropTypes.string,

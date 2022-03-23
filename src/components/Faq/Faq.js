@@ -2,25 +2,14 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import ResourceList from "../../components/ResourceList";
 import ResourceListItem from "../../components/ResourceList/ResourceListItem";
+import FaqNav from "./FaqNav";
 
 import "./Faq.css";
 
 const Faq = ({ currentItemData, navData, faqHtml }) => {
   return (
     <div class="Faq">
-      <div className="FaqNav">
-        <nav>
-          <ul>
-            {navData.map((faqPage, i) => {
-              return (
-                <li>
-                  <a href={faqPage.title}>{faqPage.title_override}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
+      <FaqNav navData={navData} />
 
       <div className="FaqContent">
         <h1>{currentItemData.title_override}</h1>

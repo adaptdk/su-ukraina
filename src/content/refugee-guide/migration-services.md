@@ -1,7 +1,8 @@
 ---
 weight: 0
 title: migration-office
-slug: migration-services
+title_override: Міграційні служби
+slug: /refugee-guide/migration-office
 questions:
   - title:
       Що робити, якщо закінчився строк дії національної візи або дозволу на тимчасове
@@ -74,5 +75,4 @@ questions:
       безвізовий режим (можливість перебування в Литві та всій Шенгенській зоні 90 днів
       протягом 180 днів).</p>"
     resources: []
-title_override: Міграційні служби
 ---

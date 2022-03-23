@@ -1,7 +1,7 @@
 ---
 weight: 0
 title: residence
-slug: residence
+slug: /refugee-guide/residence
 questions: []
 title_override: Проживання
 ---

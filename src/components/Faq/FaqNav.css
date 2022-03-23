@@ -1,0 +1,39 @@
+.FaqNav {
+  background-color: var(--c__primary);
+  border-radius: var(--s__alt-border-radius);
+  flex-direction: row;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  padding: calc(var(--s__main-padding) * 1.5) var(--s__main-padding);
+  margin-right: calc(var(--s__unit) * 8);
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      width: 100%;
+
+      + li {
+        margin-top: calc(var(--s__unit) * 3);
+      }
+    }
+
+    a {
+      box-sizing: border-box;
+      justify-content: space-between;
+      text-transform: none;
+      width: 100%;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+
+      &:hover,
+      &:focus {
+        color: var(--c__secondary);
+      }
+    }
+  }
+}

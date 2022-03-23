@@ -51,7 +51,7 @@ export const pageQuery = graphql`
       }
     }
     faq: allFile(
-      filter: { sourceInstanceName: { eq: "faq-ua" } }
+      filter: { sourceInstanceName: { eq: "refugee-guide" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {
@@ -60,6 +60,7 @@ export const pageQuery = graphql`
             frontmatter {
               title
               title_override
+              slug
             }
           }
         }
