@@ -13,7 +13,9 @@ const FaqNav = ({ navData, modifier }) => {
           {navData.map((navItem, i) => {
             return (
               <li>
-                <a href={navItem.slug}>{navItem.title_override}</a>
+                <a href={`/refugee-guide${navItem.slug}`}>
+                  {navItem.title_override}
+                </a>
               </li>
             );
           })}

@@ -3,12 +3,12 @@ import { Title, Meta } from "react-head";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
-import Constraint from "../components/Constraint";
-import ContentLayout from "../components/ContentLayout";
+import Constraint from "../../components/Constraint";
+import ContentLayout from "../../components/ContentLayout";
 
-import HelpSearch from "../components/HelpSearch";
-import Layout from "../components/Layout";
-import FaqNav from "../components/Faq/FaqNav";
+import HelpSearch from "../../components/HelpSearch";
+import Layout from "../../components/Layout";
+import FaqNav from "../../components/Faq/FaqNav";
 
 const Page = ({ data }) => {
   const content = data.contents.edges.map((edge) => {

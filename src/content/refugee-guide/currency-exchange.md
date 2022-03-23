@@ -2,7 +2,7 @@
 weight: 0
 title_override: ОБМІН ВАЛЮТИ
 title: currency-exchange
-slug: /refugee-guide/currency-exchange
+slug: /currency-exchange
 questions:
   - title: UAB Florinus.lt Investment Gold - Silver - Currency
     answer:

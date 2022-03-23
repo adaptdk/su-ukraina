@@ -2,7 +2,7 @@
 weight: 0
 title: migration-office
 title_override: Міграційні служби
-slug: /refugee-guide/migration-office
+slug: /migration-office
 questions:
   - title:
       Що робити, якщо закінчився строк дії національної візи або дозволу на тимчасове

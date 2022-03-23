@@ -2,9 +2,9 @@ import { graphql } from "gatsby";
 import * as React from "react";
 import { Title } from "react-head";
 
-import Constraint from "../components/Constraint";
-import ContentLayout from "../components/ContentLayout";
-import Faq from "../components/Faq";
+import Constraint from "../../components/Constraint";
+import ContentLayout from "../../components/ContentLayout";
+import Faq from "../../components/Faq";
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
@@ -22,7 +22,6 @@ export default function Template({ data }) {
       {(!frontmatter || !frontmatter.title_override) && (
         <Title>{frontmatter.title_override}</Title>
       )}
-
       {!!frontmatter && (
         <Constraint>
           <Faq currentItemData={frontmatter} navData={faq} faqHtml={html} />
