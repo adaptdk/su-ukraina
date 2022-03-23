@@ -11,6 +11,14 @@ html {
 body {
   background: var(--c__main-bg);
   color: var(--c__main-color);
+
+  &[data-filters="visible"] {
+    overflow: hidden;
+
+    @media (min-width: 50rem) {
+      overflow: initial;
+    }
+  }
 }
 
 html {

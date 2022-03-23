@@ -7,8 +7,20 @@ import "./Button.css";
 
 const CN = `Button`;
 
-const Button = ({ icon, text, color, position, ...props }) => {
+const Button = ({
+  className = ``,
+  icon,
+  text,
+  color,
+  position,
+  pretend,
+  ...props
+}) => {
   let Tag = `button`;
+
+  if (pretend) {
+    Tag = `span`;
+  }
 
   if (props.href) {
     Tag = `a`;
@@ -23,7 +35,7 @@ const Button = ({ icon, text, color, position, ...props }) => {
   };
 
   return (
-    <Tag className={`${CN} ${CN}--${color}`} {...props}>
+    <Tag className={`${CN} ${CN}--${color} ${className}`} {...props}>
       {icon && isIconAlignedLeft() && (
         <span className={`${CN}__icon ${CN}__icon--${icon}`} />
       )}
@@ -36,12 +48,14 @@ const Button = ({ icon, text, color, position, ...props }) => {
 };
 
 Button.propTypes = {
+  className: PropTypes.string,
   href: PropTypes.string,
   to: PropTypes.string,
   icon: PropTypes.string,
   text: PropTypes.string,
   color: PropTypes.string,
   position: PropTypes.string,
+  pretend: PropTypes.bool,
 };
 
 export default Button;
