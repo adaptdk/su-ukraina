@@ -92,8 +92,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `faq-ua`,
-        path: `${__dirname}/src/content/ua-faq`,
+        name: `refugee-guide`,
+        path: `${__dirname}/src/content/refugee-guide`,
       },
     },
     `gatsby-transformer-remark`,

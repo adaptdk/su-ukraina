@@ -2,10 +2,7 @@
 weight: 0
 title: residence
 slug: residence
-questions:
-  - title: ""
-    answer: ""
-    resources: []
+questions: []
 title_override: Проживання
 ---
 
