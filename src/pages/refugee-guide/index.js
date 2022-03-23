@@ -5,10 +5,12 @@ import PropTypes from "prop-types";
 
 import Constraint from "../../components/Constraint";
 import ContentLayout from "../../components/ContentLayout";
+import { StaticImage } from "gatsby-plugin-image";
 
 import HelpSearch from "../../components/HelpSearch";
 import Layout from "../../components/Layout";
 import FaqNav from "../../components/Faq/FaqNav";
+import Section from "../../components/Section";
 
 const Page = ({ data }) => {
   const content = data.contents.edges.map((edge) => {
@@ -34,11 +36,20 @@ const Page = ({ data }) => {
         content="Sąrašas iniciatyvų vykdomų Lietuvoje, kurios skirtos pagelbėti Ukrainos žmonėms"
       />
 
+      <Section className="HeroSectionB">
+        <StaticImage
+          className="HeroSectionB__background"
+          src="../../images/hero/refugee_guide.jpg"
+          alt="Refugee Guide"
+          layout="fullWidth"
+        />
+      </Section>
+
       {!!content && (
         <Constraint>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <FaqNav navData={faqNav} />
+          <FaqNav navData={faqNav} modifier="wide" />
         </Constraint>
       )}
     </Layout>

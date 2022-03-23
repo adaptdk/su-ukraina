@@ -5,47 +5,50 @@ import ResourceListItem from "../../components/ResourceList/ResourceListItem";
 import FaqNav from "./FaqNav";
 
 import "./Faq.css";
+import Constraint from "../Constraint";
 
 const Faq = ({ currentItemData, navData, faqHtml }) => {
   return (
-    <div class="Faq">
-      <FaqNav navData={navData} />
+    <div className="Faq">
+      <Constraint className="FaqInner">
+        <FaqNav navData={navData} />
 
-      <div className="FaqContent">
-        <h1>{currentItemData.title_override}</h1>
-        <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
+        <div className="FaqContent">
+          <h1>{currentItemData.title_override}</h1>
+          <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
 
-        {currentItemData.questions?.map((question, i) => {
-          return (
-            <div className="FaqQuestion">
-              <details open>
-                <summary>
-                  <h2>{question.title}</h2>
-                </summary>
-                <div
-                  class="FaqQuestion__answer"
-                  dangerouslySetInnerHTML={{ __html: question.answer }}
-                />
+          {currentItemData.questions?.map((question, i) => {
+            return (
+              <div className="FaqQuestion">
+                <details open>
+                  <summary>
+                    <h2>{question.title}</h2>
+                  </summary>
+                  <div
+                    className="FaqQuestion__answer"
+                    dangerouslySetInnerHTML={{ __html: question.answer }}
+                  />
 
-                {!!question.resources && (
-                  <ResourceList>
-                    {question.resources?.map((resource, j) => {
-                      return (
-                        <ResourceListItem
-                          key={j}
-                          title={resource.title}
-                          subtitle={resource.subtitle}
-                          url={resource.url}
-                        />
-                      );
-                    })}
-                  </ResourceList>
-                )}
-              </details>
-            </div>
-          );
-        })}
-      </div>
+                  {!!question.resources && (
+                    <ResourceList>
+                      {question.resources?.map((resource, j) => {
+                        return (
+                          <ResourceListItem
+                            key={j}
+                            title={resource.title}
+                            subtitle={resource.subtitle}
+                            url={resource.url}
+                          />
+                        );
+                      })}
+                    </ResourceList>
+                  )}
+                </details>
+              </div>
+            );
+          })}
+        </div>
+      </Constraint>
     </div>
   );
 };

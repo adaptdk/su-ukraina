@@ -1,10 +1,13 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import { Title } from "react-head";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Constraint from "../../components/Constraint";
 import ContentLayout from "../../components/ContentLayout";
 import Faq from "../../components/Faq";
+
+import Section from "../../components/Section";
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
@@ -22,10 +25,16 @@ export default function Template({ data }) {
       {(!frontmatter || !frontmatter.title_override) && (
         <Title>{frontmatter.title_override}</Title>
       )}
+      <Section className="HeroSectionB">
+        <StaticImage
+          className="HeroSectionB__background"
+          src="../../images/hero/refugee_guide.jpg"
+          alt="Refugee Guide"
+          layout="fullWidth"
+        />
+      </Section>
       {!!frontmatter && (
-        <Constraint>
-          <Faq currentItemData={frontmatter} navData={faq} faqHtml={html} />
-        </Constraint>
+        <Faq currentItemData={frontmatter} navData={faq} faqHtml={html} />
       )}
     </ContentLayout>
   );

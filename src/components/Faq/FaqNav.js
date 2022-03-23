@@ -1,21 +1,31 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { useLocation } from "@reach/router";
 
 import "./FaqNav.css";
+import Button from "../Button";
 
 const FaqNav = ({ navData, modifier }) => {
   const modifierClass = modifier ? `FaqNav--${modifier}` : ``;
+  const location = useLocation();
+  const pathname = location.pathname;
 
   return (
     <div className={`FaqNav ${modifierClass}`}>
       <nav>
         <ul>
           {navData.map((navItem, i) => {
+            const activeClass = pathname.includes(navItem.slug)
+              ? `is-active`
+              : ``;
+
             return (
-              <li>
-                <a href={`/refugee-guide${navItem.slug}`}>
-                  {navItem.title_override}
-                </a>
+              <li className={activeClass}>
+                <Button
+                  text={navItem.title_override}
+                  color="primary"
+                  href={`/refugee-guide${navItem.slug}`}
+                />
               </li>
             );
           })}

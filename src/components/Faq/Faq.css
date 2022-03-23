@@ -1,50 +1,15 @@
 .Faq {
-  display: flex;
-  align-items: flex-start;
-  margin: calc(var(--s__unit) * 8) 0;
-  flex-wrap: wrap;
+  width: 100%;
+  padding: calc(var(--s__unit) * 12) 0;
+  background-color: #f5f5f5;
 
-  @media (min-width: 40rem) {
-    flex-wrap: nowrap;
-  }
-}
+  .FaqInner {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
-.FaqNav {
-  background-color: var(--c__primary);
-  border-radius: var(--s__alt-border-radius);
-  flex-direction: row;
-  font-size: 1.5rem;
-  justify-content: space-between;
-  padding: calc(var(--s__main-padding) * 1.5) var(--s__main-padding);
-  margin-right: calc(var(--s__unit) * 8);
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      width: 100%;
-
-      + li {
-        margin-top: calc(var(--s__unit) * 3);
-      }
-    }
-
-    a {
-      box-sizing: border-box;
-      justify-content: space-between;
-      text-transform: none;
-      width: 100%;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 1.2rem;
-
-      &:hover,
-      &:focus {
-        color: var(--c__secondary);
-      }
+    @media (min-width: 40rem) {
+      flex-wrap: nowrap;
     }
   }
 }
@@ -69,7 +34,13 @@
   }
 
   details {
+    box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
+    border: 1px solid #ececec;
+    background: white;
+
     &[open] > summary {
+      border-bottom: 1px solid #ececec;
+
       &::after {
         transform: rotate(135deg) translateX(-0.25em) translateY(-0.75em);
       }
@@ -77,12 +48,12 @@
   }
 
   summary {
-    background: var(--c__secondary);
     border-radius: var(--s__alt-border-radius);
     color: var(--c__primary);
     cursor: pointer;
     display: flex;
     font-weight: var(--fw__bold);
+    font-size: 1.5rem;
     justify-content: space-between;
     list-style: none;
     padding: var(--s__main-padding);
@@ -125,7 +96,6 @@
 
     details {
       border-radius: var(--s__alt-border-radius);
-      box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
       padding: 0 var(--s__main-padding);
 
       > summary {
