@@ -75,19 +75,6 @@ fields:
     max: 
     labelField: 
   label: Questions
-- name: addresses
-  type: field_group_list
-  fields:
-  - name: address
-    type: text
-    config:
-      required: false
-    label: Address
-  config:
-    min: 
-    max: 
-    labelField: address
-  label: Addresses
 - name: contacts
   type: include
   config: {}
