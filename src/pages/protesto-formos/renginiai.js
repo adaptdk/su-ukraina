@@ -10,6 +10,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import EventCard from "../../components/EventCard";
 import EventCardList from "../../components/EventCardList";
 import Section from "../../components/Section";
+import DetailsWrapper from "../../components/DetailsWrapper";
 
 const Page = ({ data }) => {
   const crumbs = [`Protesto formos`, `Renginiai`];
@@ -29,6 +30,19 @@ const Page = ({ data }) => {
     };
   });
 
+  const currentDate = new Date();
+  const upcomingEvents = [];
+  const previousEvents = events.map((event) => {
+    const startDate = new Date(event.startDate);
+    if (event.endDate) {
+      const endDate = new Date(event.endDate);
+      if (currentDate > endDate) {
+        return event;
+      } else upcomingEvents.push(event);
+    } else if (currentDate > startDate) {
+      return event;
+    } else upcomingEvents.push(event);
+  });
   return (
     <Layout pagePath="/protesto-formos/renginiai/">
       {(!content || !content.title) && <Title>Renginiai</Title>}
@@ -50,30 +64,59 @@ const Page = ({ data }) => {
           />
           <Title>{content.title}</Title>
           <h1>{content.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: content.html }} />
+          {upcomingEvents.length ? (
+            <div dangerouslySetInnerHTML={{ __html: content.html }} />
+          ) : (
+            <p>Šiuo metu nėra jokių artėjančių renginių.</p>
+          )}
           <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 
       <Constraint>
         <EventCardList>
-          {events.map((event, i) => {
-            return (
-              <EventCard
-                key={i}
-                type={event.eventType}
-                title={event.title}
-                organizer={event.eventOrganizer}
-                startDate={event.startDate}
-                endDate={event.endDate}
-                location={event.location}
-                description={event.html}
-                url={event.eventUrl}
-              />
-            );
-          })}
+          {upcomingEvents.length !== 0 &&
+            upcomingEvents.map((event, i) => {
+              return (
+                <EventCard
+                  key={i}
+                  type={event.eventType}
+                  title={event.title}
+                  organizer={event.eventOrganizer}
+                  startDate={event.startDate}
+                  endDate={event.endDate}
+                  location={event.location}
+                  description={event.html}
+                  url={event.eventUrl}
+                />
+              );
+            })}
         </EventCardList>
       </Constraint>
+
+      {previousEvents.length && (
+        <Constraint>
+          <DetailsWrapper tag="h2" summary="Praėję renginiai">
+            <EventCardList>
+              {previousEvents.map((event, i) => {
+                return (
+                  <EventCard
+                    key={i}
+                    type={event.eventType}
+                    title={event.title}
+                    organizer={event.eventOrganizer}
+                    startDate={event.startDate}
+                    endDate={event.endDate}
+                    location={event.location}
+                    description={event.html}
+                    url={event.eventUrl}
+                  />
+                );
+              })}
+            </EventCardList>
+          </DetailsWrapper>
+        </Constraint>
+      )}
     </Layout>
   );
 };
