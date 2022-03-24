@@ -17,6 +17,16 @@ import "./Header.css";
 import PromoLine from "../PromoLine/PromoLine";
 
 const Header = ({ noSticky }) => {
+  const closeMenuOnSameLink = (nextPathName) => {
+    if (typeof window === `undefined`) {
+      return;
+    }
+    const menuTriggerElement = document.getElementById(`menu-sensor`);
+    if (nextPathName === window.location.pathname) {
+      menuTriggerElement.click();
+    }
+  };
+
   return (
     <React.Fragment>
       <div className={`Header ${noSticky ? `Header--no-sticky` : ``}`}>
@@ -39,7 +49,13 @@ const Header = ({ noSticky }) => {
               {NAVIGATION_MAIN_MENU.map((item) => {
                 return (
                   <li key={item.pathname}>
-                    <Link aria-haspopup={!!item.children} to={item.pathname}>
+                    <Link
+                      aria-haspopup={!!item.children}
+                      to={item.pathname}
+                      onClick={() => {
+                        closeMenuOnSameLink(item.pathname);
+                      }}
+                    >
                       {item.title}
                     </Link>
                     {item.children && (
@@ -47,7 +63,14 @@ const Header = ({ noSticky }) => {
                         {item.children.map((subItem) => {
                           return (
                             <li key={subItem.pathname}>
-                              <Link to={subItem.pathname}>{subItem.title}</Link>
+                              <Link
+                                to={subItem.pathname}
+                                onClick={() => {
+                                  closeMenuOnSameLink(subItem.pathname);
+                                }}
+                              >
+                                {subItem.title}
+                              </Link>
                             </li>
                           );
                         })}
