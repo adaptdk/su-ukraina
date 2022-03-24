@@ -149,10 +149,31 @@
     position: fixed;
     transition: height 0.2s ease;
     width: calc(100% - var(--s__main-padding));
+    z-index: 1002; /* 1 above `&__sidebar-overlay` */
+  }
+
+  &__sidebar-overlay {
+    background: rgb(0 0 0 / 20%);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.2s ease;
+    width: 100%;
     z-index: 1001; /* 1 above `.Header` */
   }
 
-  #filters-sensor:checked + &__filters-trigger + &__sidebar {
+  #filters-sensor:checked + &__filters-trigger + &__sidebar-overlay {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #filters-sensor:checked
+    + &__filters-trigger
+    + &__sidebar-overlay
+    + &__sidebar {
     height: 80vh;
     overflow: auto;
   }
@@ -278,7 +299,14 @@
       width: auto;
     }
 
-    #filters-sensor:checked + &__filters-trigger + &__sidebar {
+    &__sidebar-overlay {
+      display: none;
+    }
+
+    #filters-sensor:checked
+      + &__filters-trigger
+      + &__sidebar-overlay
+      + &__sidebar {
       height: auto;
       overflow: visible;
     }

@@ -546,6 +546,10 @@ const HelpSearch = () => {
               text={TRANSLATIONS.refinements.panelTitle[resultsLang]}
             />
           </label>
+          <label
+            className="HelpSearch__sidebar-overlay"
+            htmlFor="filters-sensor"
+          />
           <div className="HelpSearch__sidebar">
             <p className="HelpSearch__sidebar-title">
               {TRANSLATIONS.refinements.panelTitle[resultsLang]}
