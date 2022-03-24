@@ -2,7 +2,7 @@
 weight: 5
 title_override: ПСИХОЛОГІЧНА ДОПОМОГА
 title: psychological-assistance
-slug: "/pasychological-assistance"
+slug: "/psychological-assistance"
 questions:
 - title: Емоційна допомога на російській мові
   answer: "<p>Емоційна допомога на російській мові 1809 або +37066465792</p><p>Години
