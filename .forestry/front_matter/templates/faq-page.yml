@@ -8,18 +8,20 @@ fields:
   config:
     required: false
   label: Title
-  description: Used for creating unique path (url) to section
 - name: title
   type: text
   config:
     required: true
   label: Filename
   hidden: false
+  description: This will be used for file name -- keep it english.
 - name: slug
   type: text
   config:
     required: false
   label: Slug
+  description: Used for creating unique path (url) to section. it will be /refugee-guide{whatever
+    you enter here} - we recommend entering /filename
 - name: weight
   type: number
   label: Weight
@@ -70,6 +72,16 @@ fields:
       max: 
       labelField: title
     label: Resources
+  - name: contacts
+    type: include
+    config: {}
+    template: contacts
+    label: Contacts
+  - name: addresses
+    type: include
+    config: {}
+    template: address
+    label: Addresses
   config:
     min: 
     max: 
