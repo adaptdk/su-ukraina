@@ -97,3 +97,5 @@ fields:
   config: {}
   template: address
   label: Addresses
+pages:
+- src/content/refugee-guide/financial-services.md
