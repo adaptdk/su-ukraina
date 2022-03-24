@@ -29,6 +29,13 @@ const Page = ({ data }) => {
     };
   });
 
+  const sortedEvents = events.slice().sort((a, b) => {
+    const dateA = new Date(a.startDate);
+    const dateB = new Date(b.startDate);
+
+    return dateA - dateB;
+  });
+
   return (
     <Layout pagePath="/protesto-formos/renginiai/">
       {(!content || !content.title) && <Title>Renginiai</Title>}
@@ -57,7 +64,7 @@ const Page = ({ data }) => {
 
       <Constraint>
         <EventCardList>
-          {events.map((event, i) => {
+          {sortedEvents.map((event, i) => {
             return (
               <EventCard
                 key={i}
