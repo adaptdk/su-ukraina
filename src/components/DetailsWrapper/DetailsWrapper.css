@@ -1,0 +1,33 @@
+.DetailsWrapper {
+  & > summary {
+    list-style: none;
+  }
+
+  & > summary::marker,
+  & > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  &__summary {
+    cursor: pointer;
+    padding-left: 2.2rem;
+    position: relative;
+  }
+
+  &__summary::after {
+    border-color: transparent transparent transparent black;
+    border-style: solid;
+    border-width: 0.4rem;
+    content: "";
+    left: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: rotate(0) translateY(-50%);
+    transform-origin: 0.2rem 50%;
+    transition: 0.25s transform ease;
+  }
+
+  &[open] &__summary::after {
+    transform: rotate(90deg) translateX(-50%);
+  }
+}
