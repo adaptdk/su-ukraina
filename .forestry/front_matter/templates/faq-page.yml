@@ -13,8 +13,23 @@ fields:
   type: text
   config:
     required: true
-  label: Slug
+  label: Filename
   hidden: false
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: weight
+  type: number
+  label: Weight
+  description: Higher weight resources go up in the list, smaller go down
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 - name: questions
   type: field_group_list
   fields:
@@ -60,15 +75,40 @@ fields:
     max: 
     labelField: 
   label: Questions
-- name: weight
-  type: number
-  label: Weight
-  description: Higher weight resources go up in the list, smaller go down
-  default: 0
-  required: true
+- name: contacts
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Laukelis nematomas gide. Padeda susigaudyti sistemoje.
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Phone
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
   config:
     min: 
     max: 
-    step: 
-pages:
-- src/content/ua-faq/currency-exchange.md
+    labelField: title
+  label: Contacts
+- name: addresses
+  type: field_group_list
+  fields:
+  - name: address
+    type: text
+    config:
+      required: false
+    label: Address
+  config:
+    min: 
+    max: 
+    labelField: address
+  label: Addresses
