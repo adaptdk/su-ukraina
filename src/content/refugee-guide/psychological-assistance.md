@@ -50,11 +50,6 @@ questions:
   resources: []
   contacts: []
   adresses: []
-- title: ''
-  answer: ''
-  resources: []
-  contacts: []
-  adresses: []
 contacts: []
 adresses: []
 
