@@ -29,13 +29,6 @@ const Page = ({ data }) => {
     };
   });
 
-  const sortedEvents = events.slice().sort((a, b) => {
-    const dateA = new Date(a.startDate);
-    const dateB = new Date(b.startDate);
-
-    return dateA - dateB;
-  });
-
   return (
     <Layout pagePath="/protesto-formos/renginiai/">
       {(!content || !content.title) && <Title>Renginiai</Title>}
@@ -64,7 +57,7 @@ const Page = ({ data }) => {
 
       <Constraint>
         <EventCardList>
-          {sortedEvents.map((event, i) => {
+          {events.map((event, i) => {
             return (
               <EventCard
                 key={i}
@@ -109,7 +102,7 @@ export const query = graphql`
     }
     events: allFile(
       filter: { sourceInstanceName: { eq: "events" } }
-      sort: { fields: childMarkdownRemark___frontmatter___weight }
+      sort: { fields: childMarkdownRemark___frontmatter___startDate }
     ) {
       edges {
         node {
