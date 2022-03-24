@@ -75,30 +75,6 @@ fields:
     max: 
     labelField: 
   label: Questions
-- name: contacts
-  type: field_group_list
-  fields:
-  - name: title
-    type: text
-    config:
-      required: false
-    label: Title
-    description: Laukelis nematomas gide. Padeda susigaudyti sistemoje.
-  - name: phone
-    type: text
-    config:
-      required: false
-    label: Phone
-  - name: email
-    type: text
-    config:
-      required: false
-    label: Email
-  config:
-    min: 
-    max: 
-    labelField: title
-  label: Contacts
 - name: addresses
   type: field_group_list
   fields:
@@ -112,3 +88,8 @@ fields:
     max: 
     labelField: address
   label: Addresses
+- name: contacts
+  type: include
+  config: {}
+  template: contacts
+  label: Contacts
