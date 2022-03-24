@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 
 import "./CtaCard.css";
-import { Link } from "gatsby";
+import Link from "../Link";
 
 const CtaCard = ({ children, title, iconHandle, link, ...props }) => {
   return (

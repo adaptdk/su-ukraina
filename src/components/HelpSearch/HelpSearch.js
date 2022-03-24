@@ -19,6 +19,7 @@ import {
 import qs from "qs";
 import { navigate } from "gatsby";
 
+import Button from "../Button";
 import Constraint from "../Constraint";
 
 import "instantsearch.css/themes/satellite.css";
@@ -261,6 +262,16 @@ const TRANSLATIONS = {
       ru: `Тип помощи`,
       uk: `Вид допомоги`,
     },
+    panelTitle: {
+      lt: `Filtrai`,
+      ru: `Фильтры`,
+      uk: `Фільтри`,
+    },
+    doFilter: {
+      lt: `Filtruoti`,
+      ru: `Фильтровать`,
+      uk: `Фільтрувати`,
+    },
   },
   searchBox: {
     lt: `Paieška`,
@@ -332,6 +343,17 @@ const HelpSearch = () => {
 
   const debouncedSetStateRef = React.useRef(null);
 
+  const handleFiltersSensorChange = (e) => {
+    if (typeof window === `undefined`) {
+      return;
+    }
+    if (e.target.checked) {
+      document.body.dataset.filters = `visible`;
+    } else {
+      document.body.removeAttribute(`data-filters`);
+    }
+  };
+
   const handleSearchLangChange = (event) => {
     if (event.target.value !== resultsLang) {
       setResultsLang(event.target.value);
@@ -360,6 +382,12 @@ const HelpSearch = () => {
     },
     typeof window === `undefined` ? [] : [location]
   );
+
+  React.useEffect(() => {
+    return () => {
+      document.body.removeAttribute(`data-filters`);
+    };
+  }, []);
 
   return (
     <div className="HelpSearch">
@@ -501,7 +529,31 @@ const HelpSearch = () => {
             <PoweredBy translations={{ searchBy: `` }} />
           </div>
 
+          <input
+            type="checkbox"
+            name="filters-sensor"
+            id="filters-sensor"
+            onChange={handleFiltersSensorChange}
+          />
+          <label
+            className="HelpSearch__filters-trigger"
+            htmlFor="filters-sensor"
+          >
+            <Button
+              className="HelpSearch__filters-trigger-button"
+              color="secondary"
+              pretend
+              text={TRANSLATIONS.refinements.panelTitle[resultsLang]}
+            />
+          </label>
+          <label
+            className="HelpSearch__sidebar-overlay"
+            htmlFor="filters-sensor"
+          />
           <div className="HelpSearch__sidebar">
+            <p className="HelpSearch__sidebar-title">
+              {TRANSLATIONS.refinements.panelTitle[resultsLang]}
+            </p>
             <Panel header={TRANSLATIONS.refinements.typeOfHelp[resultsLang]}>
               <RefinementList attribute={`tags_${resultsLang}`} />
             </Panel>
@@ -513,6 +565,20 @@ const HelpSearch = () => {
             <Panel header={TRANSLATIONS.refinements.languages[resultsLang]}>
               <RefinementList attribute={`languages`} />
             </Panel>
+
+            <div className="HelpSearch__sidebar-actions">
+              <label
+                className="HelpSearch__filters-close-trigger"
+                htmlFor="filters-sensor"
+              >
+                <Button
+                  className="HelpSearch__filters-close-trigger-button"
+                  color="primary"
+                  pretend
+                  text={TRANSLATIONS.refinements.doFilter[resultsLang]}
+                />
+              </label>
+            </div>
           </div>
         </Constraint>
       </InstantSearch>
