@@ -1,5 +1,5 @@
 ---
-weight: 5
+weight: 7
 title_override: ПСИХОЛОГІЧНА ДОПОМОГА
 title: psychological-assistance
 slug: "/psychological-assistance"

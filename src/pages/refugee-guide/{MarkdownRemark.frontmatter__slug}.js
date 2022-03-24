@@ -66,6 +66,7 @@ export const pageQuery = graphql`
         node {
           childMarkdownRemark {
             frontmatter {
+              weight
               title
               title_override
               slug

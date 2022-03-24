@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: 12
 title_override: Соціальна підтримка
 title: social-support
 slug: "/social-support"

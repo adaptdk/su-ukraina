@@ -24,7 +24,7 @@ const FaqNav = ({ navData, modifier }) => {
                 <Button
                   text={navItem.title_override}
                   color="primary"
-                  href={`/refugee-guide${navItem.slug}`}
+                  to={`/refugee-guide${navItem.slug}`}
                 />
               </li>
             );

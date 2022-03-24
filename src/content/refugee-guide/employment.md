@@ -1,5 +1,5 @@
 ---
-weight: 5
+weight: 8
 title_override: ПОШУК РОБОТИ/СЛУЖБА ЗАЙНЯТОСТІ
 title: employment
 slug: "/employment"

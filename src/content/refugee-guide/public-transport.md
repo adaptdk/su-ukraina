@@ -1,5 +1,5 @@
 ---
-weight: 4
+weight: 9
 title_override: ГРОМАДСЬКИЙ ТРАНСПОРТ – БЕЗКОШТОВНО
 title: public-transport
 slug: "/public-transport"

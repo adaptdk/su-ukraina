@@ -1,5 +1,5 @@
 ---
-weight: 7
+weight: 4
 title_override: Банки - фінансові сервіси
 title: financial-services
 slug: "/financial-services"

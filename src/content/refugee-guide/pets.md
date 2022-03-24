@@ -1,5 +1,5 @@
 ---
-weight: 3
+weight: 10
 title_override: Домашні тварини
 title: pets
 slug: "/pets"

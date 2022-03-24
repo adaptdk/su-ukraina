@@ -1,5 +1,5 @@
 ---
-weight: 6
+weight: 5
 title_override: Школа - дитячий садок
 title: school-kindergarten
 slug: "/school-kindergarten"

@@ -1,5 +1,5 @@
 ---
-weight: 8
+weight: 3
 title_override: ОБМІН ВАЛЮТИ
 title: currency-exchange
 slug: "/currency-exchange"
