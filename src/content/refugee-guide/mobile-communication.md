@@ -1,7 +1,7 @@
 ---
 weight: 0
 title: mobile-communication
-slug: mobile-communication
+slug: /mobile-communication
 questions:
   - title: На який термін видається безкоштовна картка?
     answer:
