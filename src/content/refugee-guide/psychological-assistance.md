@@ -12,6 +12,37 @@ questions:
   resources: []
   contacts: []
   adresses: []
+- title: Емоційна допомога на російській мові для підлітків "Зв'язок довіри"
+  answer: "<p>+37080077277</p><p>Години роботи: I-VII 16-19</p><p>Емоційну підтримку
+    надають школярі добровольці</p><p><br></p>"
+  resources: []
+  contacts: []
+  adresses: []
+- title: ''
+  answer: ''
+  resources: []
+  contacts: []
+  adresses: []
+- title: ''
+  answer: ''
+  resources: []
+  contacts: []
+  adresses: []
+- title: ''
+  answer: ''
+  resources: []
+  contacts: []
+  adresses: []
+- title: ''
+  answer: ''
+  resources: []
+  contacts: []
+  adresses: []
+- title: ''
+  answer: ''
+  resources: []
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 
