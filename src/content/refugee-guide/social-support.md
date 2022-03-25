@@ -10,6 +10,12 @@ questions:
   contacts: []
   adresses: []
   image: "../uploads/623b6eb161447c76da819572_.jpg"
+- title: Грошове соціальне забезпечення для українців
+  answer: ''
+  resources: []
+  image: "../uploads/623b6e768547e47e25346795_-p-1080.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
