@@ -37,6 +37,11 @@ const PromoLine = ({
       </div>
     );
   }
+
+  ConditionalRender.propTypes = {
+    currentPath: PropTypes.string,
+  };
+
   return <ConditionalRender currentPath={path} />;
 };
 

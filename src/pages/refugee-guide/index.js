@@ -4,10 +4,8 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 
 import Constraint from "../../components/Constraint";
-import ContentLayout from "../../components/ContentLayout";
 import { StaticImage } from "gatsby-plugin-image";
 
-import HelpSearch from "../../components/HelpSearch";
 import Layout from "../../components/Layout";
 import FaqNav from "../../components/Faq/FaqNav";
 import Section from "../../components/Section";

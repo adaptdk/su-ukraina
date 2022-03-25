@@ -1,9 +1,9 @@
 import { graphql } from "gatsby";
 import * as React from "react";
+import PropTypes from "prop-types";
 import { Title } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Constraint from "../../components/Constraint";
 import ContentLayout from "../../components/ContentLayout";
 import Faq from "../../components/Faq";
 
@@ -39,6 +39,20 @@ export default function Template({ data }) {
     </ContentLayout>
   );
 }
+
+Template.propTypes = {
+  data: PropTypes.shape({
+    faq: PropTypes.shape({
+      edges: PropTypes.arrayOf(),
+    }),
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title_override: PropTypes.string,
+      }),
+      html: PropTypes.string,
+    }),
+  }),
+};
 
 export const pageQuery = graphql`
   query ($id: String!) {

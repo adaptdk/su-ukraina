@@ -29,8 +29,8 @@
     h3 {
       color: var(--c__primary);
       font-size: 1.25rem;
-      margin-top: 0;
       margin-bottom: calc(var(--s_unit) * 2);
+      margin-top: 0;
 
       &:only-child {
         margin-bottom: 0;
@@ -38,8 +38,8 @@
     }
 
     p {
-      margin-top: 0;
       margin-bottom: 0;
+      margin-top: 0;
     }
   }
 

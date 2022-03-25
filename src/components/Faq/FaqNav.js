@@ -14,13 +14,13 @@ const FaqNav = ({ navData, modifier }) => {
     <div className={`FaqNav ${modifierClass}`}>
       <nav>
         <ul>
-          {navData.map((navItem, i) => {
+          {navData.map((navItem) => {
             const activeClass = pathname.includes(navItem.slug)
               ? `is-active`
               : ``;
 
             return (
-              <li className={activeClass}>
+              <li className={activeClass} key={navItem.slug}>
                 <Button
                   text={navItem.title_override}
                   color="primary"
@@ -36,6 +36,7 @@ const FaqNav = ({ navData, modifier }) => {
 };
 
 FaqNav.propTypes = {
+  modifier: PropTypes.string,
   navData: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,

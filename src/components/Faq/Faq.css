@@ -1,11 +1,11 @@
 .Faq {
-  width: 100%;
-  padding: calc(var(--s__unit) * 12) 0;
   background-color: #f5f5f5;
+  padding: calc(var(--s__unit) * 12) 0;
+  width: 100%;
 
   .FaqInner {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     flex-wrap: wrap;
 
     @media (min-width: 40rem) {
@@ -34,9 +34,9 @@
   }
 
   details {
-    box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
-    border: 1px solid #ececec;
     background: white;
+    border: 1px solid #ececec;
+    box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
     padding: 0 var(--s__main-padding);
 
     &[open] > summary {
@@ -49,16 +49,16 @@
   }
 
   summary {
+    align-items: center;
     border-radius: var(--s__alt-border-radius);
     color: var(--c__primary);
     cursor: pointer;
     display: flex;
-    font-weight: var(--fw__bold);
     font-size: 1.3rem;
+    font-weight: var(--fw__bold);
     justify-content: space-between;
     list-style: none;
     padding: var(--s__main-padding) 0;
-    align-items: center;
 
     &::-webkit-details-marker {
       display: none;
@@ -73,20 +73,20 @@
       left: -0.5em;
       position: relative;
       transform: rotate(45deg);
+      transform-origin: center;
       transition: transform 0.2s ease;
       vertical-align: middle;
       width: 0.45em;
-      transform-origin: center;
     }
 
     > h2 {
       align-items: center;
       display: inline-flex;
+      flex: 1;
       font: inherit;
       margin: 0;
       padding: 0;
       padding-right: 1.2rem;
-      flex: 1;
     }
   }
 
@@ -103,10 +103,10 @@
       border-radius: var(--s__alt-border-radius);
 
       > summary {
+        font-size: 1.5rem;
         margin-left: calc(var(--s__main-padding) * -1);
         margin-right: calc(var(--s__main-padding) * -1);
         padding: var(--s__main-padding);
-        font-size: 1.5rem;
       }
 
       &[open] > summary {
@@ -114,8 +114,5 @@
         border-bottom-right-radius: 0;
       }
     }
-  }
-  &__answer {
-    /*  */
   }
 }

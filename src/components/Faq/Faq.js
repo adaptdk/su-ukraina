@@ -19,7 +19,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
 
           {currentItemData.questions?.map((question, i) => {
             return (
-              <div className="FaqQuestion">
+              <div className="FaqQuestion" key={i}>
                 <details open>
                   <summary>
                     <h2>{question.title}</h2>
@@ -57,6 +57,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
 Faq.propTypes = {
   currentItemData: PropTypes.shape({
     title: PropTypes.string,
+    title_override: PropTypes.string,
     questions: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,
@@ -71,6 +72,7 @@ Faq.propTypes = {
       })
     ),
   }),
+  faqHtml: PropTypes.string.isRequired,
   navData: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
