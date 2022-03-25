@@ -13,10 +13,7 @@ export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
-  const crumbs = [
-    `Pagalba ukrainiečiams Lietuvoje`,
-    frontmatter.title_override,
-  ];
+  const crumbs = [`Важлива інформація`, frontmatter.title_override];
 
   const faq = data.faq.edges.map((edge) => {
     return {

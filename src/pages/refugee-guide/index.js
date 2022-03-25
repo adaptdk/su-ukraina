@@ -12,7 +12,7 @@ import Section from "../../components/Section";
 import Breadcrumb from "../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
-  const crumbs = [`Pagalba ukrainiečiams Lietuvoje`];
+  const crumbs = [`Важлива інформація`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
