@@ -61,7 +61,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
           {currentItemData.questions?.map((question, i) => {
             return (
               <div className="FaqQuestion" id={`tab-${i}`} key={i}>
-                <details open>
+                <details>
                   <summary>
                     <h2>{question.title}</h2>
                   </summary>
