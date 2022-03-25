@@ -16,7 +16,7 @@ import { NAVIGATION_MAIN_MENU } from "../../constants/Navigation";
 import "./Header.css";
 import PromoLine from "../PromoLine/PromoLine";
 
-const Header = ({ noSticky, withCTA }) => {
+const Header = ({ noSticky }) => {
   const closeMenuOnSameLink = (nextPathName) => {
     if (typeof window === `undefined`) {
       return;
@@ -25,6 +25,20 @@ const Header = ({ noSticky, withCTA }) => {
     if (nextPathName === window.location.pathname) {
       menuTriggerElement.click();
     }
+  };
+
+  const alternativeHeader = () => {
+    if (typeof window === `undefined`) {
+      return;
+    }
+    const pathName = window.location.pathname;
+    if (
+      pathName.startsWith(`/pagalba`) ||
+      pathName.startsWith(`/refugee-guide`)
+    ) {
+      return true;
+    }
+    return false;
   };
 
   return (
@@ -79,7 +93,7 @@ const Header = ({ noSticky, withCTA }) => {
                   </li>
                 );
               })}
-              {withCTA && (
+              {alternativeHeader() && (
                 <li>
                   <Button
                     className="Header__menu__help-btn"
@@ -140,7 +154,6 @@ const Header = ({ noSticky, withCTA }) => {
 
 Header.propTypes = {
   noSticky: PropTypes.bool,
-  withCTA: PropTypes.bool,
 };
 
 export default Header;
