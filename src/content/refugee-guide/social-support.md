@@ -22,6 +22,12 @@ questions:
   image: "../uploads/623b6ee261447c6ff58196cc_-p-1080.jpeg"
   contacts: []
   adresses: []
+- title: Одноразова допомога для українців при поселенні
+  answer: ''
+  resources: []
+  image: "../uploads/623b6f09d333773280345d97_-p-1080.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
