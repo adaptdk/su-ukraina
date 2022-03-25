@@ -14,4 +14,3 @@ adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
 
 ---
-test
