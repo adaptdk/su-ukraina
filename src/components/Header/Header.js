@@ -10,7 +10,10 @@ import Button from "../Button";
 import Logo from "../../images/logos/su-ukraina--original.svg";
 
 // Constants.
-import { NAVIGATION_MAIN_MENU } from "../../constants/Navigation";
+import {
+  NAVIGATION_MAIN_MENU,
+  NAVIGATION_MAIN_MENU_ALT,
+} from "../../constants/Navigation";
 
 // Style.
 import "./Header.css";
@@ -41,6 +44,13 @@ const Header = ({ noSticky }) => {
     return false;
   };
 
+  const mainMenu = () => {
+    if (alternativeHeader()) {
+      return NAVIGATION_MAIN_MENU_ALT;
+    }
+    return NAVIGATION_MAIN_MENU;
+  };
+
   return (
     <React.Fragment>
       <div className={`Header ${noSticky ? `Header--no-sticky` : ``}`}>
@@ -60,7 +70,7 @@ const Header = ({ noSticky }) => {
           </label>
           <nav className="Header__nav" aria-label="Pagrindinė navigacija">
             <ul className="Header__menu">
-              {NAVIGATION_MAIN_MENU.map((item) => {
+              {mainMenu().map((item) => {
                 return (
                   <li key={item.pathname}>
                     <Link
