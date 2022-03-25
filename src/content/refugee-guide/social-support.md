@@ -34,6 +34,12 @@ questions:
   image: "../uploads/623b6f26053b8a9b64d91c55_-p-1080.jpeg"
   contacts: []
   adresses: []
+- title: Соціальні послуги
+  answer: ''
+  resources: []
+  image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
