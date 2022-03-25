@@ -102,7 +102,7 @@ export const query = graphql`
     }
     events: allFile(
       filter: { sourceInstanceName: { eq: "events" } }
-      sort: { fields: childMarkdownRemark___frontmatter___weight }
+      sort: { fields: childMarkdownRemark___frontmatter___startDate }
     ) {
       edges {
         node {

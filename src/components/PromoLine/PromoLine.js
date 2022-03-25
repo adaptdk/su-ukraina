@@ -1,5 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { useLocation } from "@reach/router";
 
 // Components.
 import Constraint from "../Constraint";
@@ -14,20 +15,34 @@ const PromoLine = ({
   modifier,
   children,
 }) => {
-  return (
-    <div
-      className={`PromoLine ${
-        modifier ? `PromoLine--${modifier}` : ``
-      } ${className}`}
-    >
-      <Constraint className="PromoLine__content">
-        <a href={titleLink} rel="noopener" target="_blank">
-          {title}
-        </a>
-        <div className="PromoLine__actions">{children}</div>
-      </Constraint>
-    </div>
-  );
+  const location = useLocation();
+  const path = location.pathname;
+
+  function ConditionalRender(props) {
+    if (props.currentPath.includes(`refugee-guide`)) {
+      return null;
+    }
+    return (
+      <div
+        className={`PromoLine ${
+          modifier ? `PromoLine--${modifier}` : ``
+        } ${className}`}
+      >
+        <Constraint className="PromoLine__content">
+          <a href={titleLink} rel="noopener" target="_blank">
+            {title}
+          </a>
+          <div className="PromoLine__actions">{children}</div>
+        </Constraint>
+      </div>
+    );
+  }
+
+  ConditionalRender.propTypes = {
+    currentPath: PropTypes.string,
+  };
+
+  return <ConditionalRender currentPath={path} />;
 };
 
 PromoLine.propTypes = {

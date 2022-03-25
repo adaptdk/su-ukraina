@@ -1,20 +1,16 @@
 import * as React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+import PropTypes from "prop-types";
 
 import Constraint from "../../components/Constraint";
+import { StaticImage } from "gatsby-plugin-image";
+
 import Layout from "../../components/Layout";
-import NavigationGroup from "../../components/NavigationGroup";
-import ResourceList from "../../components/ResourceList";
-import ResourceListItem from "../../components/ResourceList/ResourceListItem";
-import SubPage from "../../components/SubPage";
+import FaqNav from "../../components/Faq/FaqNav";
 import Section from "../../components/Section";
 
 const Page = ({ data }) => {
-  const crumbs = [`Piliečio atmintinė`];
-  const additionalNavigation = [];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -23,56 +19,37 @@ const Page = ({ data }) => {
     };
   })[0];
 
-  const handbooks = data.handbooks.edges.map((edge) => {
-    return edge.node.childMarkdownRemark.frontmatter;
+  const faqNav = data.faq.edges.map((edge) => {
+    return {
+      ...edge.node.childMarkdownRemark.frontmatter,
+      html: edge.node.childMarkdownRemark.html,
+    };
   });
 
   return (
-    <Layout pagePath="/bukime-budrus/piliecio-atmintine/">
-      <Title>Piliečio atmintinė</Title>
+    <Layout>
+      {(!content || !content.title) && <Title>Gidas Ukrainiečiams</Title>}
+      <Meta
+        name="description"
+        content="Sąrašas iniciatyvų vykdomų Lietuvoje, kurios skirtos pagelbėti Ukrainos žmonėms"
+      />
 
       <Section className="HeroSectionB">
         <StaticImage
           className="HeroSectionB__background"
-          src="../../images/hero/piliecio_atmintine.jpg"
-          alt="Budinkite veikti"
+          src="../../images/hero/refugee_guide.jpg"
+          alt="Refugee Guide"
           layout="fullWidth"
         />
       </Section>
 
       {!!content && (
         <Constraint>
-          <NavigationGroup
-            crumbs={crumbs}
-            additionalNav={additionalNavigation}
-          />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <Meta name="description" content={content.excerpt} />
+          <FaqNav navData={faqNav} modifier="wide" />
         </Constraint>
       )}
-
-      <Constraint>
-        {handbooks.map((handbook, i) => {
-          return (
-            <SubPage key={i} title={handbook.title} intro={handbook.intro}>
-              <ResourceList>
-                {handbook.resources?.map((resource, j) => {
-                  return (
-                    <ResourceListItem
-                      key={j}
-                      title={resource.title}
-                      subtitle={resource.subtitle}
-                      url={resource.link}
-                      buttonText={`Šaltinis`}
-                    />
-                  );
-                })}
-              </ResourceList>
-            </SubPage>
-          );
-        })}
-      </Constraint>
     </Layout>
   );
 };
@@ -82,9 +59,7 @@ export const query = graphql`
     contents: allFile(
       filter: {
         sourceInstanceName: { eq: "page-contents" }
-        absolutePath: {
-          regex: "//src/content/pages/bukime-budrus/piliecio-atmintine.md$/"
-        }
+        absolutePath: { regex: "//src/content/pages/refugee-guide.md$/" }
       }
     ) {
       edges {
@@ -99,8 +74,8 @@ export const query = graphql`
         }
       }
     }
-    handbooks: allFile(
-      filter: { sourceInstanceName: { eq: "citizen-handbooks" } }
+    faq: allFile(
+      filter: { sourceInstanceName: { eq: "refugee-guide" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {
@@ -108,12 +83,8 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              resources {
-                title
-                subtitle
-                link
-              }
-              intro
+              title_override
+              slug
             }
           }
         }
@@ -139,23 +110,18 @@ Page.propTypes = {
         })
       ),
     }),
-    handbooks: PropTypes.shape({
+    faq: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
             childMarkdownRemark: PropTypes.shape({
               frontmatter: PropTypes.shape({
+                title_override: PropTypes.string,
                 title: PropTypes.string,
-                intro: PropTypes.string,
-                resources: PropTypes.arrayOf(
-                  PropTypes.shape({
-                    title: PropTypes.string,
-                    subtitle: PropTypes.string,
-                    link: PropTypes.string,
-                  })
-                ),
+                slug: PropTypes.slug,
               }),
             }),
+            html: PropTypes.string,
           }),
         })
       ),
