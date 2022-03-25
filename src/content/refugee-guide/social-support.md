@@ -52,6 +52,12 @@ questions:
   image: "../uploads/623b6f9ec26286581d28d6e6_-p-1080.jpeg"
   contacts: []
   adresses: []
+- title: Яка допомога належить українцям, якщо померла близька людина?
+  answer: ''
+  resources: []
+  image: "../uploads/623b6fc928f79c4ac84b997e_-p-1080.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
