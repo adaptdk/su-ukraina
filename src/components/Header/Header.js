@@ -16,7 +16,7 @@ import { NAVIGATION_MAIN_MENU } from "../../constants/Navigation";
 import "./Header.css";
 import PromoLine from "../PromoLine/PromoLine";
 
-const Header = ({ noSticky }) => {
+const Header = ({ noSticky, withCTA }) => {
   const closeMenuOnSameLink = (nextPathName) => {
     if (typeof window === `undefined`) {
       return;
@@ -79,8 +79,33 @@ const Header = ({ noSticky }) => {
                   </li>
                 );
               })}
+              {withCTA && (
+                <li>
+                  <Button
+                    className="Header__menu__help-btn"
+                    icon={`edit`}
+                    href="https://0rs0r9mdix1.typeform.com/to/QXLxIUjt"
+                    color={`primary`}
+                    text={`NORIU SUTEIKTI PAGALBĄ`}
+                    position={`left`}
+                    target="_blank"
+                    rel="noopener"
+                  />
+                </li>
+              )}
             </ul>
           </nav>
+          {/* @TODO add functionality to actually switch language */}
+          <div className="Header__languages">
+            <div className="Header__language Header__language--active">
+              <div className="Header__language__icon Header__language__icon--ua-flag-alt" />
+              <div className="Header__language__title">UK</div>
+            </div>
+            <div className="Header__language">
+              <div className="Header__language__icon Header__language__icon--lt-flag" />
+              <div className="Header__language__title">LT</div>
+            </div>
+          </div>
         </Constraint>
       </div>
       <PromoLine
@@ -112,6 +137,7 @@ const Header = ({ noSticky }) => {
 
 Header.propTypes = {
   noSticky: PropTypes.bool,
+  withCTA: PropTypes.bool,
 };
 
 export default Header;

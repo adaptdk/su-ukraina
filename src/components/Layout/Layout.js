@@ -2,7 +2,6 @@ import * as React from "react";
 import PropTypes from "prop-types";
 
 import Header from "../Header";
-import HeaderAlt from "../HeaderAlt";
 import Footer from "../Footer";
 import ContactForm from "../ContactForm";
 import Constraint from "../Constraint";
@@ -13,8 +12,7 @@ import "./Layout.css";
 const Layout = ({ children, noStickyHeader, pagePath }) => {
   return (
     <div className="Layout">
-      {/* <Header noSticky={noStickyHeader} /> */}
-      <HeaderAlt noSticky={noStickyHeader} />
+      <Header noSticky={noStickyHeader} withCTA={true} />
       <main>{children}</main>
 
       <Section className="ContactFormSection" bgColor="blue">
