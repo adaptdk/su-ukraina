@@ -2,27 +2,27 @@
 label: Contacts
 hide_body: true
 fields:
-  - name: contacts
-    type: field_group_list
-    fields:
-      - name: title
-        type: text
-        config:
-          required: false
-        label: Title
-        description: To make it easier for editors.
-      - name: phone
-        type: text
-        config:
-          required: false
-        label: Phone
-      - name: email
-        type: text
-        config:
-          required: false
-        label: Email
+- name: contacts
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
     config:
-      min:
-      max:
-      labelField:
-    label: Contacts
+      required: false
+    label: Title
+    description: To make it easier for editors.
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Phone
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Contacts
