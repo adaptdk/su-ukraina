@@ -10,7 +10,10 @@ import Button from "../Button";
 import Logo from "../../images/logos/su-ukraina--original.svg";
 
 // Constants.
-import { NAVIGATION_MAIN_MENU } from "../../constants/Navigation";
+import {
+  NAVIGATION_MAIN_MENU,
+  NAVIGATION_MAIN_MENU_ALT,
+} from "../../constants/Navigation";
 
 // Style.
 import "./Header.css";
@@ -25,6 +28,27 @@ const Header = ({ noSticky }) => {
     if (nextPathName === window.location.pathname) {
       menuTriggerElement.click();
     }
+  };
+
+  const alternativeHeader = () => {
+    if (typeof window === `undefined`) {
+      return;
+    }
+    const pathName = window.location.pathname;
+    if (
+      pathName.startsWith(`/pagalba`) ||
+      pathName.startsWith(`/refugee-guide`)
+    ) {
+      return true;
+    }
+    return false;
+  };
+
+  const mainMenu = () => {
+    if (alternativeHeader()) {
+      return NAVIGATION_MAIN_MENU_ALT;
+    }
+    return NAVIGATION_MAIN_MENU;
   };
 
   return (
@@ -46,7 +70,7 @@ const Header = ({ noSticky }) => {
           </label>
           <nav className="Header__nav" aria-label="Pagrindinė navigacija">
             <ul className="Header__menu">
-              {NAVIGATION_MAIN_MENU.map((item) => {
+              {mainMenu().map((item) => {
                 return (
                   <li key={item.pathname}>
                     <Link
@@ -79,33 +103,63 @@ const Header = ({ noSticky }) => {
                   </li>
                 );
               })}
+              {alternativeHeader() && (
+                <li>
+                  <Button
+                    className="Header__menu__help-btn"
+                    icon={`edit`}
+                    href="https://0rs0r9mdix1.typeform.com/to/QXLxIUjt"
+                    color={`primary`}
+                    text={`NORIU SUTEIKTI PAGALBĄ`}
+                    position={`left`}
+                    target="_blank"
+                    rel="noopener"
+                  />
+                </li>
+              )}
             </ul>
           </nav>
+          {/* Commented out for future use */}
+          {/* @TODO add functionality to actually switch language
+          {withCTA && (
+            <div className="Header__languages">
+              <div className="Header__language Header__language--active">
+                <div className="Header__language__icon Header__language__icon--ua-flag-alt" />
+                <div className="Header__language__title">UK</div>
+              </div>
+              <div className="Header__language">
+                <div className="Header__language__icon Header__language__icon--lt-flag" />
+                <div className="Header__language__title">LT</div>
+              </div>
+            </div>
+          )} */}
         </Constraint>
       </div>
-      <PromoLine
-        title="ВСЯ ВАЖЛИВА ІНФОРМАЦІЯ ДЛЯ ГРОМАДЯН УКРАЇНИ"
-        titleLink="https://www.withukraine.lt"
-      >
-        <Button
-          icon={`arrow-blue`}
-          href="https://www.withukraine.lt"
-          color={`secondary`}
-          text={`ІНФОРМАЦІЯ`}
-          position={`right`}
-          target="_blank"
-          rel="noopener"
-        />
-        <Button
-          icon={`arrow-blue`}
-          href="https://www.withukraine.lt/help-search"
-          color={`secondary`}
-          text={`послуги`}
-          position={`right`}
-          target="_blank"
-          rel="noopener"
-        />
-      </PromoLine>
+      {!alternativeHeader() && (
+        <PromoLine
+          title="ВСЯ ВАЖЛИВА ІНФОРМАЦІЯ ДЛЯ ГРОМАДЯН УКРАЇНИ"
+          titleLink="https://www.withukraine.lt"
+        >
+          <Button
+            icon={`arrow-blue`}
+            href="https://www.withukraine.lt"
+            color={`secondary`}
+            text={`ІНФОРМАЦІЯ`}
+            position={`right`}
+            target="_blank"
+            rel="noopener"
+          />
+          <Button
+            icon={`arrow-blue`}
+            href="https://www.withukraine.lt/help-search"
+            color={`secondary`}
+            text={`послуги`}
+            position={`right`}
+            target="_blank"
+            rel="noopener"
+          />
+        </PromoLine>
+      )}
     </React.Fragment>
   );
 };

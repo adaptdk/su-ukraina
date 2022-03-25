@@ -13,7 +13,6 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
   return (
     <div className="Layout">
       <Header noSticky={noStickyHeader} />
-
       <main>{children}</main>
 
       <Section className="ContactFormSection" bgColor="blue">
