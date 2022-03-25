@@ -49,6 +49,7 @@ Template.propTypes = {
         PropTypes.shape({
           title: PropTypes.string,
           answer: PropTypes.string,
+          image: PropTypes.string,
           resources: PropTypes.arrayOf(
             PropTypes.shape({
               title: PropTypes.string,
@@ -75,6 +76,11 @@ export const pageQuery = graphql`
       frontmatter {
         title
         title_override
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 800, placeholder: NONE)
+          }
+        }
         questions {
           title
           answer

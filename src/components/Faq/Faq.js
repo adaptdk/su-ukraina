@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import ResourceList from "../../components/ResourceList";
 import ResourceListItem from "../../components/ResourceList/ResourceListItem";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import FaqNav from "./FaqNav";
 
 import "./Faq.css";
@@ -49,6 +50,13 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
     );
   }
 
+  const image = currentItemData.image && (
+    <GatsbyImage
+      image={getImage(currentItemData.image)}
+      alt="Image inside tab"
+    />
+  );
+
   return (
     <div className="Faq">
       <Constraint className="FaqInner">
@@ -63,7 +71,9 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
               <div className="FaqQuestion" id={`tab-${i}`} key={i}>
                 <details>
                   <summary>
-                    <h2>{question.title}</h2>
+                    <div className="FaqQuestion__summary">
+                      <h2>{question.title}</h2>
+                    </div>
                   </summary>
                   <div
                     className="FaqQuestion__answer"
@@ -85,6 +95,8 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                       })}
                     </ResourceList>
                   )}
+
+                  {!!image && <div className="FaqQuestion__image">{image}</div>}
 
                   <div className="FaqQuestion__actions">
                     <div className="FaqQuestion__actions-copy">
