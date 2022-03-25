@@ -43,7 +43,21 @@ export default function Template({ data }) {
 Template.propTypes = {
   data: PropTypes.shape({
     faq: PropTypes.shape({
-      edges: PropTypes.arrayOf(),
+      title: PropTypes.string,
+      title_override: PropTypes.string,
+      questions: PropTypes.arrayOf(
+        PropTypes.shape({
+          title: PropTypes.string,
+          answer: PropTypes.string,
+          resources: PropTypes.arrayOf(
+            PropTypes.shape({
+              title: PropTypes.string,
+              subtitle: PropTypes.string,
+              url: PropTypes.string,
+            })
+          ),
+        })
+      ),
     }),
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.shape({

@@ -29,6 +29,40 @@
     margin-top: calc(var(--s__unit) * 4);
   }
 
+  &__actions {
+    margin-bottom: calc(var(--s__unit) * 4);
+    text-align: right;
+
+    .copy {
+      font-size: 0.9rem;
+      color: var(--c__primary);
+
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        background-color: var(--c__primary);
+        height: 20px;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        position: relative;
+        width: 20px;
+        margin-left: 10px;
+        mask-image: url("../../images/icons/copy.svg");
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: var(--c__primary);
+
+        &::before {
+          background-color: var(--c__primary);
+        }
+      }
+    }
+  }
+
   .ResourceList {
     margin-bottom: calc(var(--s__unit) * 4);
   }

@@ -8,6 +8,47 @@ import "./Faq.css";
 import Constraint from "../Constraint";
 
 const Faq = ({ currentItemData, navData, faqHtml }) => {
+  // Just took this from stackoverflow
+  function fallbackCopyUrlToClipboard(text) {
+    var textArea = document.createElement(`textarea`);
+    textArea.value = text;
+
+    // Avoid scrolling to bottom
+    textArea.style.top = `0`;
+    textArea.style.left = `0`;
+    textArea.style.position = `fixed`;
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      var successful = document.execCommand(`copy`);
+      var msg = successful ? `successful` : `unsuccessful`;
+
+      console.log(`Fallback: Copying text command was ` + msg);
+    } catch (err) {
+      console.error(`Fallback: Oops, unable to copy`, err);
+    }
+
+    document.body.removeChild(textArea);
+  }
+  function copyUrlToClipboard(text) {
+    const url = `${window.location.href.replace(location.hash, ``)}${text}`;
+    if (!navigator.clipboard) {
+      fallbackCopyUrlToClipboard(url);
+      return;
+    }
+    navigator.clipboard.writeText(url).then(
+      function () {
+        console.log(`Async: Copying to clipboard was successful!`);
+      },
+      function (err) {
+        console.error(`Async: Could not copy text: `, err);
+      }
+    );
+  }
+
   return (
     <div className="Faq">
       <Constraint className="FaqInner">
@@ -19,7 +60,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
 
           {currentItemData.questions?.map((question, i) => {
             return (
-              <div className="FaqQuestion" key={i}>
+              <div className="FaqQuestion" id={`tab-${i}`} key={i}>
                 <details open>
                   <summary>
                     <h2>{question.title}</h2>
@@ -44,6 +85,19 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                       })}
                     </ResourceList>
                   )}
+
+                  <div className="FaqQuestion__actions">
+                    <div className="FaqQuestion__actions-copy">
+                      <span
+                        onClick={() => {
+                          return copyUrlToClipboard(`#tab-${i}`);
+                        }}
+                        className="copy"
+                      >
+                        Kопіювати посилання
+                      </span>
+                    </div>
+                  </div>
                 </details>
               </div>
             );
