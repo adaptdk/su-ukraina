@@ -29,11 +29,17 @@
     h3 {
       color: var(--c__primary);
       font-size: 1.25rem;
+      margin-bottom: calc(var(--s_unit) * 2);
       margin-top: 0;
 
       &:only-child {
         margin-bottom: 0;
       }
+    }
+
+    p {
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 
