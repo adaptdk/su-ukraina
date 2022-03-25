@@ -9,8 +9,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../../components/Layout";
 import FaqNav from "../../components/Faq/FaqNav";
 import Section from "../../components/Section";
+import Breadcrumb from "../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
+  const crumbs = [`Pagalba ukrainiečiams Lietuvoje`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -45,6 +47,7 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
+          <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <FaqNav navData={faqNav} modifier="wide" />
