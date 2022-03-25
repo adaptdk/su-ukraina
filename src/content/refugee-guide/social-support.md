@@ -58,6 +58,12 @@ questions:
   image: "../uploads/623b6fc928f79c4ac84b997e_-p-1080.jpeg"
   contacts: []
   adresses: []
+- title: Допомога українським військовим біженцям за особистим статусом
+  answer: ''
+  resources: []
+  image: "../uploads/623b72d4d333774c1f34800a_-1-p-1080.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
