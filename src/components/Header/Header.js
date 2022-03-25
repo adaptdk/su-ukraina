@@ -95,7 +95,8 @@ const Header = ({ noSticky, withCTA }) => {
               )}
             </ul>
           </nav>
-          {/* @TODO add functionality to actually switch language */}
+          {/* Commented out for future use */}
+          {/* @TODO add functionality to actually switch language
           {withCTA && (
             <div className="Header__languages">
               <div className="Header__language Header__language--active">
@@ -107,7 +108,7 @@ const Header = ({ noSticky, withCTA }) => {
                 <div className="Header__language__title">LT</div>
               </div>
             </div>
-          )}
+          )} */}
         </Constraint>
       </div>
       <PromoLine
