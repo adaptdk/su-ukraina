@@ -5,10 +5,11 @@ title: social-support
 slug: "/social-support"
 questions:
 - title: Що належить українським дітям?
-  answer: <p><img src="/uploads/623b6eb161447c76da819572_.jpg"></p>
+  answer: "<p></p>"
   resources: []
   contacts: []
   adresses: []
+  image: "../uploads/623b6eb161447c76da819572_.jpg"
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
