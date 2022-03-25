@@ -46,6 +46,12 @@ questions:
   image: "../uploads/623b6f80a01bddbc26d36804_-p-1080.jpeg"
   contacts: []
   adresses: []
+- title: Допомога, виплати та послуги для людей із інвалідністю
+  answer: ''
+  resources: []
+  image: "../uploads/623b6f9ec26286581d28d6e6_-p-1080.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
