@@ -16,6 +16,12 @@ questions:
   image: "../uploads/623b6e768547e47e25346795_-p-1080.jpeg"
   contacts: []
   adresses: []
+- title: Компенсація частини орендної оплати житла для українців
+  answer: ''
+  resources: []
+  image: "../uploads/623b6ee261447c6ff58196cc_-p-1080.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
