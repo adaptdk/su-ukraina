@@ -50,13 +50,6 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
     );
   }
 
-  const image = currentItemData.image && (
-    <GatsbyImage
-      image={getImage(currentItemData.image)}
-      alt="Image inside tab"
-    />
-  );
-
   return (
     <div className="Faq">
       <Constraint className="FaqInner">
@@ -67,6 +60,13 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
           <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
 
           {currentItemData.questions?.map((question, i) => {
+            const image = question.image && (
+              <GatsbyImage
+                image={getImage(question.image)}
+                alt="Image inside tab"
+              />
+            );
+
             return (
               <div className="FaqQuestion" id={`tab-${i}`} key={i}>
                 <details>
@@ -79,6 +79,8 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                     className="FaqQuestion__answer"
                     dangerouslySetInnerHTML={{ __html: question.answer }}
                   />
+
+                  {!!image && <div className="FaqQuestion__image">{image}</div>}
 
                   {!!question.resources && (
                     <ResourceList>
@@ -95,8 +97,6 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                       })}
                     </ResourceList>
                   )}
-
-                  {!!image && <div className="FaqQuestion__image">{image}</div>}
 
                   <div className="FaqQuestion__actions">
                     <div className="FaqQuestion__actions-copy">

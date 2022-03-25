@@ -30,7 +30,7 @@
   }
 
   &__image {
-    margin-bottom: calc(var(--s__unit) * 4);
+    margin: calc(var(--s__unit) * 4) 0;
   }
 
   &__actions {

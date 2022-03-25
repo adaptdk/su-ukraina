@@ -76,14 +76,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         title_override
-        image {
-          childImageSharp {
-            gatsbyImageData(width: 800, placeholder: NONE)
-          }
-        }
         questions {
           title
           answer
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 800, placeholder: NONE)
+            }
+          }
           resources {
             title
             subtitle
