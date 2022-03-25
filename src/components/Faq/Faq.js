@@ -38,6 +38,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                             title={resource.title}
                             subtitle={resource.subtitle}
                             url={resource.url}
+                            buttonText={`Джерело`}
                           />
                         );
                       })}

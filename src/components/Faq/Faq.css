@@ -37,12 +37,13 @@
     box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
     border: 1px solid #ececec;
     background: white;
+    padding: 0 var(--s__main-padding);
 
     &[open] > summary {
       border-bottom: 1px solid #ececec;
 
       &::after {
-        transform: rotate(135deg) translateX(-0.25em) translateY(-0.75em);
+        transform: rotate(135deg);
       }
     }
   }
@@ -53,10 +54,11 @@
     cursor: pointer;
     display: flex;
     font-weight: var(--fw__bold);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     justify-content: space-between;
     list-style: none;
-    padding: var(--s__main-padding);
+    padding: var(--s__main-padding) 0;
+    align-items: center;
 
     &::-webkit-details-marker {
       display: none;
@@ -70,10 +72,11 @@
       height: 0.45em;
       left: -0.5em;
       position: relative;
-      transform: rotate(45deg) translateX(0.625em);
+      transform: rotate(45deg);
       transition: transform 0.2s ease;
-      vertical-align: top;
+      vertical-align: middle;
       width: 0.45em;
+      transform-origin: center;
     }
 
     > h2 {
@@ -82,6 +85,8 @@
       font: inherit;
       margin: 0;
       padding: 0;
+      padding-right: 1.2rem;
+      flex: 1;
     }
   }
 
@@ -96,11 +101,12 @@
 
     details {
       border-radius: var(--s__alt-border-radius);
-      padding: 0 var(--s__main-padding);
 
       > summary {
         margin-left: calc(var(--s__main-padding) * -1);
         margin-right: calc(var(--s__main-padding) * -1);
+        padding: var(--s__main-padding);
+        font-size: 1.5rem;
       }
 
       &[open] > summary {

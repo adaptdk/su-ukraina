@@ -96,7 +96,6 @@ module.exports = {
         path: `${__dirname}/src/content/refugee-guide`,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

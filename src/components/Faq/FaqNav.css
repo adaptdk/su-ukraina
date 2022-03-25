@@ -1,14 +1,17 @@
 .FaqNav {
   flex-direction: row;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   justify-content: space-between;
-  margin-right: calc(var(--s__unit) * 8);
   width: 100%;
-  flex: 1 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: calc(var(--s__unit) * 4);
 
   @media (min-width: 40rem) {
     width: 18.75rem;
     flex-basis: 18.75rem;
+    min-width: 18.75rem;
+    margin-right: calc(var(--s__unit) * 8);
 
     &--wide {
       width: 100%;
@@ -20,12 +23,19 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: stretch;
 
     li {
       width: 100%;
 
       + li {
-        margin-top: calc(var(--s__unit) * 3);
+        margin-left: 2px;
+      }
+
+      .Button {
+        white-space: nowrap;
+        border-radius: 0;
       }
 
       &.is-active {
@@ -41,6 +51,22 @@
         }
       }
     }
+
+    @media (min-width: 40rem) {
+      display: block;
+
+      li {
+        + li {
+          margin-top: 10px;
+          margin-left: 0;
+        }
+
+        .Button {
+          border-radius: var(--s__main-border-radius);
+          white-space: normal;
+        }
+      }
+    }
   }
 
   &--wide {
@@ -51,24 +77,33 @@
       display: block;
       width: 100%;
 
-      @media (min-width: 40rem) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 1fr;
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-      }
-
       li {
         display: flex;
         width: 100%;
 
         .Button {
           width: 100%;
+          border-radius: var(--s__main-border-radius);
+          white-space: normal;
         }
 
         + li {
-          margin-top: 0;
+          margin-top: 10px;
+          margin-left: 0;
+        }
+      }
+
+      @media (min-width: 40rem) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+
+        li {
+          + li {
+            margin-top: 0;
+          }
         }
       }
     }

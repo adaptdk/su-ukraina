@@ -64,6 +64,7 @@ const Page = ({ data }) => {
                       title={resource.title}
                       subtitle={resource.subtitle}
                       url={resource.link}
+                      buttonText={`Šaltinis`}
                     />
                   );
                 })}
