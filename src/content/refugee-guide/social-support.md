@@ -40,6 +40,12 @@ questions:
   image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
   contacts: []
   adresses: []
+- title: Встановлення інвалідності. Що важливо знати українцям?
+  answer: ''
+  resources: []
+  image: "../uploads/623b6f80a01bddbc26d36804_-p-1080.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
