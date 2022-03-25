@@ -28,6 +28,12 @@ questions:
   image: "../uploads/623b6f09d333773280345d97_-p-1080.jpeg"
   contacts: []
   adresses: []
+- title: Пенсії соціальної допомоги для українців
+  answer: ''
+  resources: []
+  image: "../uploads/623b6f26053b8a9b64d91c55_-p-1080.jpeg"
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
