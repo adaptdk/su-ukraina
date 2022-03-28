@@ -26,10 +26,12 @@
   width: 100%;
 
   &__anchor::before {
+    background-color: red;
     content: "";
     display: block;
+    height: 10px;
     position: relative;
-    top: -200px;
+    top: -100px;
 
     /* visibility: hidden; */
   }
