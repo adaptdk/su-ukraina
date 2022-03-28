@@ -25,11 +25,13 @@
 .FaqQuestion {
   width: 100%;
 
-  &__anchor {
+  &__anchor::before {
+    content: "";
     display: block;
     position: relative;
-    top: -150px;
-    visibility: hidden;
+    top: -200px;
+
+    /* visibility: hidden; */
   }
 
   + .FaqQuestion {

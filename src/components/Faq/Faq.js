@@ -34,6 +34,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
 
     document.body.removeChild(textArea);
   };
+
   const copyUrlToClipboard = (text, index) => {
     const url = `${window.location.href.replace(location.hash, ``)}${text}`;
     if (!navigator.clipboard) {
@@ -55,6 +56,30 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
     );
   };
 
+  // https://stackoverflow.com/a/37033774
+  const openTarget = () => {
+    const hash = location.hash.substring(1);
+    if (hash) {
+      const details = Array.from(document.getElementById(hash).children).find(
+        (element) => {
+          return element.tagName === `DETAILS`;
+        }
+      );
+      if (details) {
+        details.open = true;
+      }
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener(`hashchange`, openTarget);
+    openTarget();
+
+    return () => {
+      window.removeEventListener(`hashchange`, openTarget);
+    };
+  }, []);
+
   return (
     <div className="Faq">
       <Constraint className="FaqInner">
@@ -74,55 +99,58 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
 
             return (
               <div className="FaqQuestion" key={i}>
-                <details>
-                  <summary>
-                    <div className="FaqQuestion__summary">
-                      <h2>{question.title}</h2>
-                      <a className="FaqQuestion__anchor" id={`tab-${i}`}></a>
-                    </div>
-                  </summary>
-                  <div
-                    className="FaqQuestion__answer"
-                    dangerouslySetInnerHTML={{ __html: question.answer }}
-                  />
+                <a className="FaqQuestion__anchor" id={`tab-${i}`}>
+                  <details>
+                    <summary>
+                      <div className="FaqQuestion__summary">
+                        <h2>{question.title}</h2>
+                      </div>
+                    </summary>
+                    <div
+                      className="FaqQuestion__answer"
+                      dangerouslySetInnerHTML={{ __html: question.answer }}
+                    />
 
-                  {!!image && <div className="FaqQuestion__image">{image}</div>}
+                    {!!image && (
+                      <div className="FaqQuestion__image">{image}</div>
+                    )}
 
-                  {!!question.resources && (
-                    <ResourceList>
-                      {question.resources?.map((resource, j) => {
-                        return (
-                          <ResourceListItem
-                            key={j}
-                            title={resource.title}
-                            subtitle={resource.subtitle}
-                            url={resource.url}
-                            buttonText={`Джерело`}
-                          />
-                        );
-                      })}
-                    </ResourceList>
-                  )}
+                    {!!question.resources && (
+                      <ResourceList>
+                        {question.resources?.map((resource, j) => {
+                          return (
+                            <ResourceListItem
+                              key={j}
+                              title={resource.title}
+                              subtitle={resource.subtitle}
+                              url={resource.url}
+                              buttonText={`Джерело`}
+                            />
+                          );
+                        })}
+                      </ResourceList>
+                    )}
 
-                  <div className="FaqQuestion__actions">
-                    <div className="FaqQuestion__actions-copy">
-                      <span
-                        onClick={() => {
-                          return copyUrlToClipboard(`#tab-${i}`, i);
-                        }}
-                        className="copy"
-                      >
-                        Kопіювати посилання
+                    <div className="FaqQuestion__actions">
+                      <div className="FaqQuestion__actions-copy">
                         <span
-                          className={`copy-popup copy-popup-${i}`}
-                          aria-hidden="true"
+                          onClick={() => {
+                            return copyUrlToClipboard(`#tab-${i}`, i);
+                          }}
+                          className="copy"
                         >
-                          скопійовано
+                          Kопіювати посилання
+                          <span
+                            className={`copy-popup copy-popup-${i}`}
+                            aria-hidden="true"
+                          >
+                            скопійовано
+                          </span>
                         </span>
-                      </span>
+                      </div>
                     </div>
-                  </div>
-                </details>
+                  </details>
+                </a>
               </div>
             );
           })}
