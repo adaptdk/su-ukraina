@@ -1,76 +1,93 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+import Constraint from "../Constraint";
+import FaqNav from "./FaqNav";
 import ResourceList from "../../components/ResourceList";
 import ResourceListItem from "../../components/ResourceList/ResourceListItem";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import FaqNav from "./FaqNav";
 
 import "./Faq.css";
-import Constraint from "../Constraint";
 
-const Faq = ({ currentItemData, navData, faqHtml }) => {
-  // Just took this from stackoverflow
-  const fallbackCopyUrlToClipboard = (text) => {
-    var textArea = document.createElement(`textarea`);
-    textArea.value = text;
+// Just took this from stackoverflow
+// https://stackoverflow.com/a/30810322
+const fallbackCopyTextToClipboard = (text) => {
+  var textArea = document.createElement(`textarea`);
+  textArea.value = text;
 
-    // Avoid scrolling to bottom
-    textArea.style.top = `0`;
-    textArea.style.left = `0`;
-    textArea.style.position = `fixed`;
+  // Avoid scrolling to bottom
+  textArea.style.top = `0`;
+  textArea.style.left = `0`;
+  textArea.style.position = `fixed`;
 
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
 
-    try {
-      var successful = document.execCommand(`copy`);
-      var msg = successful ? `successful` : `unsuccessful`;
+  try {
+    var successful = document.execCommand(`copy`);
+    var msg = successful ? `successful` : `unsuccessful`;
 
-      console.log(`Fallback: Copying text command was ` + msg);
-    } catch (err) {
-      console.error(`Fallback: Oops, unable to copy`, err);
+    console.log(`Fallback: Copying text command was ` + msg);
+  } catch (err) {
+    console.error(`Fallback: Oops, unable to copy`, err);
+  }
+
+  document.body.removeChild(textArea);
+};
+function copyTextToClipboard(text) {
+  if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(text);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(
+    function () {
+      console.log(`Async: Copying to clipboard was successful!`);
+    },
+    function (err) {
+      console.error(`Async: Could not copy text: `, err);
     }
+  );
+}
 
-    document.body.removeChild(textArea);
-  };
-
-  const copyUrlToClipboard = (text, index) => {
-    const url = `${window.location.href.replace(location.hash, ``)}${text}`;
-    if (!navigator.clipboard) {
-      fallbackCopyUrlToClipboard(url);
-      return;
-    }
-    const copyPopup = document.querySelector(`.copy-popup-${index}`);
-    navigator.clipboard.writeText(url).then(
-      function () {
-        console.log(`Async: Copying to clipboard was successful!`);
-        copyPopup.classList.add(`copy-popup--active`);
-        setTimeout(() => {
-          copyPopup.classList.remove(`copy-popup--active`);
-        }, 1000);
-      },
-      function (err) {
-        console.error(`Async: Could not copy text: `, err);
+// https://stackoverflow.com/a/37033774
+const openTarget = () => {
+  const hash = location.hash.substring(1);
+  if (hash) {
+    const details = Array.from(document.getElementById(hash).children).find(
+      (element) => {
+        return element.tagName === `DETAILS`;
       }
     );
-  };
-
-  // https://stackoverflow.com/a/37033774
-  const openTarget = () => {
-    const hash = location.hash.substring(1);
-    if (hash) {
-      const details = Array.from(document.getElementById(hash).children).find(
-        (element) => {
-          return element.tagName === `DETAILS`;
-        }
-      );
-      if (details) {
-        details.open = true;
-      }
+    if (details) {
+      details.open = true;
     }
-  };
+  }
+};
 
+const handleAnchorClick = (e) => {
+  const el = document.createElement(`span`);
+  el.className = `copy-popup`;
+  el.ariaHidden = true;
+  el.innerText = e.target.dataset.copied;
+  e.target.parentNode.appendChild(el);
+  setTimeout(() => {
+    el.classList.add(`copy-popup--active`);
+  }, 1);
+
+  setTimeout(() => {
+    el.classList.remove(`copy-popup--active`);
+    setTimeout(() => {
+      el.parentNode.removeChild(el);
+    }, 500);
+  }, 1001);
+
+  copyTextToClipboard(e.target.href);
+
+  e.preventDefault();
+};
+
+const Faq = ({ currentItemData, navData, faqHtml }) => {
   React.useEffect(() => {
     window.addEventListener(`hashchange`, openTarget);
     openTarget();
@@ -96,61 +113,54 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                 alt="Image inside tab"
               />
             );
+            const tabId = `tab-${i}`;
 
             return (
-              <div className="FaqQuestion" key={i}>
-                <a className="FaqQuestion__anchor" id={`tab-${i}`}>
-                  <details>
-                    <summary>
-                      <div className="FaqQuestion__summary">
-                        <h2>{question.title}</h2>
-                      </div>
-                    </summary>
-                    <div
-                      className="FaqQuestion__answer"
-                      dangerouslySetInnerHTML={{ __html: question.answer }}
-                    />
-
-                    {!!image && (
-                      <div className="FaqQuestion__image">{image}</div>
-                    )}
-
-                    {!!question.resources && (
-                      <ResourceList>
-                        {question.resources?.map((resource, j) => {
-                          return (
-                            <ResourceListItem
-                              key={j}
-                              title={resource.title}
-                              subtitle={resource.subtitle}
-                              url={resource.url}
-                              buttonText={`Джерело`}
-                            />
-                          );
-                        })}
-                      </ResourceList>
-                    )}
-
-                    <div className="FaqQuestion__actions">
-                      <div className="FaqQuestion__actions-copy">
-                        <span
-                          onClick={() => {
-                            return copyUrlToClipboard(`#tab-${i}`, i);
-                          }}
-                          className="copy"
-                        >
-                          Kопіювати посилання
-                          <span
-                            className={`copy-popup copy-popup-${i}`}
-                            aria-hidden="true"
-                          >
-                            скопійовано
-                          </span>
-                        </span>
-                      </div>
+              <div className="FaqQuestion" id={tabId} key={tabId}>
+                <details>
+                  <summary>
+                    <div className="FaqQuestion__summary">
+                      <h2>{question.title}</h2>
                     </div>
-                  </details>
-                </a>
+                  </summary>
+                  <div
+                    className="FaqQuestion__answer"
+                    dangerouslySetInnerHTML={{ __html: question.answer }}
+                  />
+
+                  {!!image && <div className="FaqQuestion__image">{image}</div>}
+
+                  {!!question.resources && (
+                    <ResourceList>
+                      {question.resources?.map((resource, j) => {
+                        return (
+                          <ResourceListItem
+                            key={j}
+                            title={resource.title}
+                            subtitle={resource.subtitle}
+                            url={resource.url}
+                            buttonText={`Джерело`}
+                          />
+                        );
+                      })}
+                    </ResourceList>
+                  )}
+
+                  <div className="FaqQuestion__actions">
+                    <div className="FaqQuestion__actions-copy">
+                      <a
+                        href={`#${tabId}`}
+                        data-copied="Скопійовано"
+                        onClick={(e) => {
+                          handleAnchorClick(e);
+                        }}
+                        className="copy"
+                      >
+                        Kопіювати посилання
+                      </a>
+                    </div>
+                  </div>
+                </details>
               </div>
             );
           })}
