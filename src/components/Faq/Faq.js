@@ -10,7 +10,7 @@ import Constraint from "../Constraint";
 
 const Faq = ({ currentItemData, navData, faqHtml }) => {
   // Just took this from stackoverflow
-  function fallbackCopyUrlToClipboard(text) {
+  const fallbackCopyUrlToClipboard = (text) => {
     var textArea = document.createElement(`textarea`);
     textArea.value = text;
 
@@ -33,8 +33,8 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
     }
 
     document.body.removeChild(textArea);
-  }
-  function copyUrlToClipboard(text, index) {
+  };
+  const copyUrlToClipboard = (text, index) => {
     const url = `${window.location.href.replace(location.hash, ``)}${text}`;
     if (!navigator.clipboard) {
       fallbackCopyUrlToClipboard(url);
@@ -53,7 +53,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
         console.error(`Async: Could not copy text: `, err);
       }
     );
-  }
+  };
 
   return (
     <div className="Faq">
