@@ -2,44 +2,44 @@
 label: Puslapis
 hide_body: false
 fields:
-- name: title
-  type: text
-  config:
-    required: false
-  label: Pavadinimas
-- name: weight
-  type: number
-  label: Svoris
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-- name: slug
-  type: text
-  config:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Pavadinimas
+  - name: weight
+    type: number
+    label: Svoris
+    description: ""
+    default: 0
     required: true
-  label: Unikalus vardas (slug)
-  description: Tekstas nuorodoje -- parašytas kaip-nors-taip, nes nuoroda
-- name: short_description
-  type: text
-  config:
-    required: false
-  label: Trumpas aprašymas (meta)
-  description: Tekstas kuris bus naudojamas kai puslapis bus dalinamasis soc. tinkluose
-    ir atvaizduojamas google.
+    config:
+      min:
+      max:
+      step:
+  - name: slug
+    type: text
+    config:
+      required: true
+    label: Unikalus vardas (slug)
+    description: Tekstas nuorodoje -- parašytas kaip-nors-taip, nes nuoroda
+  - name: short_description
+    type: text
+    config:
+      required: false
+    label: Trumpas aprašymas (meta)
+    description:
+      Tekstas kuris bus naudojamas kai puslapis bus dalinamasis soc. tinkluose
+      ir atvaizduojamas google.
 pages:
-- src/content/pages/apie-mus.md
-- src/content/pages/bukime-budrus.md
-- src/content/pages/bukime-budrus/patikima-informacija.md
-- src/content/pages/bukime-budrus/piliecio-atmintine.md
-- src/content/pages/bukime-budrus/zinokite-ka-perkate.md
-- src/content/pages/gidas-ukrainieciams.md
-- src/content/pages/kaip-galiu-padeti.md
-- src/content/pages/kaip-galiu-padeti/aukojimas.md
-- src/content/pages/kaip-galiu-padeti/savanoryste.md
-- src/content/pages/privatumo-politika.md
-- src/content/pages/protesto-formos.md
-- src/content/pages/protesto-formos/renginiai.md
+  - src/content/pages/apie-mus.md
+  - src/content/pages/bukime-budrus.md
+  - src/content/pages/bukime-budrus/patikima-informacija.md
+  - src/content/pages/bukime-budrus/piliecio-atmintine.md
+  - src/content/pages/bukime-budrus/zinokite-ka-perkate.md
+  - src/content/pages/kaip-galiu-padeti.md
+  - src/content/pages/kaip-galiu-padeti/aukojimas.md
+  - src/content/pages/kaip-galiu-padeti/savanoryste.md
+  - src/content/pages/privatumo-politika.md
+  - src/content/pages/protesto-formos.md
+  - src/content/pages/protesto-formos/renginiai.md

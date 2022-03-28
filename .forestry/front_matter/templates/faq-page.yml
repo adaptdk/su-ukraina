@@ -50,6 +50,11 @@ fields:
           schema:
             format: html-blocks
         label: Answer
+      - name: image
+        type: file
+        config:
+          maxSize: 64
+        label: Image
       - name: resources
         type: field_group_list
         fields:

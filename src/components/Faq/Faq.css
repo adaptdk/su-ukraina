@@ -29,6 +29,44 @@
     margin-top: calc(var(--s__unit) * 4);
   }
 
+  &__image {
+    margin: calc(var(--s__unit) * 4) 0;
+  }
+
+  &__actions {
+    margin-bottom: calc(var(--s__unit) * 4);
+    text-align: right;
+
+    .copy {
+      font-size: 0.9rem;
+      color: var(--c__primary);
+
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        background-color: var(--c__primary);
+        height: 20px;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        position: relative;
+        width: 20px;
+        margin-left: 10px;
+        mask-image: url("../../images/icons/copy.svg");
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: var(--c__primary);
+
+        &::before {
+          background-color: var(--c__primary);
+        }
+      }
+    }
+  }
+
   .ResourceList {
     margin-bottom: calc(var(--s__unit) * 4);
   }
@@ -42,27 +80,20 @@
     &[open] > summary {
       border-bottom: 1px solid #ececec;
 
-      &::after {
-        transform: rotate(135deg);
+      .FaqQuestion__summary {
+        &::after {
+          transform: rotate(135deg);
+        }
       }
     }
   }
-
-  summary {
-    align-items: center;
-    border-radius: var(--s__alt-border-radius);
-    color: var(--c__primary);
-    cursor: pointer;
+  /* This DIV was introduced because on IOS flex on summary tag does not work */
+  &__summary {
     display: flex;
-    font-size: 1.3rem;
-    font-weight: var(--fw__bold);
     justify-content: space-between;
-    list-style: none;
+    align-items: center;
+    flex-direction: row;
     padding: var(--s__main-padding) 0;
-
-    &::-webkit-details-marker {
-      display: none;
-    }
 
     &::after {
       border-style: solid;
@@ -78,8 +109,21 @@
       vertical-align: middle;
       width: 0.45em;
     }
+  }
 
-    > h2 {
+  summary {
+    border-radius: var(--s__alt-border-radius);
+    color: var(--c__primary);
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: var(--fw__bold);
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    h2 {
       align-items: center;
       display: inline-flex;
       flex: 1;
@@ -104,6 +148,9 @@
 
       > summary {
         font-size: 1.5rem;
+      }
+
+      FaqQuestion__summary {
         margin-left: calc(var(--s__main-padding) * -1);
         margin-right: calc(var(--s__main-padding) * -1);
         padding: var(--s__main-padding);

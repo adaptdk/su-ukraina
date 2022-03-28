@@ -1,6 +1,6 @@
 .FaqNav {
   flex-direction: row;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   justify-content: space-between;
   margin-bottom: calc(var(--s__unit) * 4);
   -webkit-overflow-scrolling: touch;
@@ -36,12 +36,17 @@
       .Button {
         border-radius: 0;
         white-space: nowrap;
+        justify-content: space-between;
       }
 
       &.is-active {
         .Button {
           background: var(--c__secondary);
           color: var(--c__primary);
+
+          .Button__icon {
+            display: none;
+          }
 
           &:hover {
             &::after {
@@ -70,7 +75,7 @@
   }
 
   &--wide {
-    margin-bottom: calc(var(--s__unit) * 4);
+    margin-bottom: calc(var(--s__unit) * 12);
     width: 100%;
 
     ul {
@@ -85,6 +90,7 @@
           border-radius: var(--s__main-border-radius);
           white-space: normal;
           width: 100%;
+          justify-content: space-between;
         }
 
         + li {
