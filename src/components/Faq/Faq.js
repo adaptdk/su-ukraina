@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import ResourceList from "../../components/ResourceList";
 import ResourceListItem from "../../components/ResourceList/ResourceListItem";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import FaqNav from "./FaqNav";
 
 import "./Faq.css";
@@ -34,15 +34,20 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
 
     document.body.removeChild(textArea);
   }
-  function copyUrlToClipboard(text) {
+  function copyUrlToClipboard(text, index) {
     const url = `${window.location.href.replace(location.hash, ``)}${text}`;
     if (!navigator.clipboard) {
       fallbackCopyUrlToClipboard(url);
       return;
     }
+    const copyPopup = document.querySelector(`.copy-popup-${index}`);
     navigator.clipboard.writeText(url).then(
       function () {
         console.log(`Async: Copying to clipboard was successful!`);
+        copyPopup.classList.add(`copy-popup--active`);
+        setTimeout(() => {
+          copyPopup.classList.remove(`copy-popup--active`);
+        }, 1000);
       },
       function (err) {
         console.error(`Async: Could not copy text: `, err);
@@ -68,11 +73,12 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
             );
 
             return (
-              <div className="FaqQuestion" id={`tab-${i}`} key={i}>
+              <div className="FaqQuestion" key={i}>
                 <details>
                   <summary>
                     <div className="FaqQuestion__summary">
                       <h2>{question.title}</h2>
+                      <a className="FaqQuestion__anchor" id={`tab-${i}`}></a>
                     </div>
                   </summary>
                   <div
@@ -102,11 +108,17 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                     <div className="FaqQuestion__actions-copy">
                       <span
                         onClick={() => {
-                          return copyUrlToClipboard(`#tab-${i}`);
+                          return copyUrlToClipboard(`#tab-${i}`, i);
                         }}
                         className="copy"
                       >
                         Kопіювати посилання
+                        <span
+                          className={`copy-popup copy-popup-${i}`}
+                          aria-hidden="true"
+                        >
+                          скопійовано
+                        </span>
                       </span>
                     </div>
                   </div>

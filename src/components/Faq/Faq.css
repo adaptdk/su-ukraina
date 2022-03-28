@@ -25,6 +25,13 @@
 .FaqQuestion {
   width: 100%;
 
+  &__anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+  }
+
   + .FaqQuestion {
     margin-top: calc(var(--s__unit) * 4);
   }
@@ -38,30 +45,45 @@
     text-align: right;
 
     .copy {
-      font-size: 0.9rem;
       color: var(--c__primary);
+      font-size: 0.9rem;
+      position: relative;
 
       &::after {
+        background-color: var(--c__primary);
         content: "";
         display: inline-block;
-        vertical-align: middle;
-        background-color: var(--c__primary);
         height: 20px;
+        margin-left: 10px;
+        mask-image: url("../../images/icons/copy.svg");
         mask-position: center;
         mask-repeat: no-repeat;
         mask-size: contain;
         position: relative;
+        vertical-align: middle;
         width: 20px;
-        margin-left: 10px;
-        mask-image: url("../../images/icons/copy.svg");
       }
 
       &:hover {
-        cursor: pointer;
         color: var(--c__primary);
+        cursor: pointer;
 
         &::before {
           background-color: var(--c__primary);
+        }
+      }
+
+      .copy-popup {
+        opacity: 0;
+        position: absolute;
+        right: 30px; /* icon width + margin */
+        text-transform: uppercase;
+        top: 0;
+        transition: transform 0.2s ease-in, opacity 0.5s;
+
+        &--active {
+          opacity: 1;
+          transform: translateY(-2em);
         }
       }
     }
@@ -87,12 +109,13 @@
       }
     }
   }
+
   /* This DIV was introduced because on IOS flex on summary tag does not work */
   &__summary {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: var(--s__main-padding) 0;
 
     &::after {
@@ -150,7 +173,7 @@
         font-size: 1.5rem;
       }
 
-      FaqQuestion__summary {
+      .FaqQuestion__summary {
         margin-left: calc(var(--s__main-padding) * -1);
         margin-right: calc(var(--s__main-padding) * -1);
         padding: var(--s__main-padding);
