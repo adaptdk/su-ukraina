@@ -84,11 +84,12 @@
     }
 
     &__actions {
+      color: var(--c__primary);
       margin-bottom: calc(var(--s__unit) * 4);
+      position: relative;
       text-align: right;
 
       .copy {
-        color: var(--c__primary);
         font-size: 0.9rem;
 
         &::after {
@@ -110,9 +111,43 @@
           color: var(--c__primary);
           cursor: pointer;
 
-          &::before {
+          &::after {
             background-color: var(--c__primary);
+            content: "";
+            display: inline-block;
+            height: 20px;
+            margin-left: 10px;
+            mask-image: url("../../images/icons/copy.svg");
+            mask-position: center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            position: relative;
+            vertical-align: middle;
+            width: 20px;
           }
+
+          &:hover {
+            color: var(--c__primary);
+            cursor: pointer;
+
+            &::before {
+              background-color: var(--c__primary);
+            }
+          }
+        }
+      }
+
+      .copy-popup {
+        opacity: 0;
+        position: absolute;
+        right: 30px; /* icon width + margin */
+        text-transform: uppercase;
+        top: 0;
+        transition: transform 0.2s ease-in, opacity 0.5s;
+
+        &--active {
+          opacity: 1;
+          transform: translateY(-2em);
         }
       }
     }

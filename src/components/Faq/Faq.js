@@ -6,50 +6,99 @@ import { ResourceList, ResourceListItem } from "../ResourceList";
 import FaqNav from "./FaqNav";
 import Constraint from "../Constraint";
 import Button from "../Button";
+import Breadcrumb from "../Breadcrumbs";
 
 import "./Faq.css";
 
-const Faq = ({ currentItemData, navData, faqHtml }) => {
-  // Just took this from stackoverflow
-  function fallbackCopyUrlToClipboard(text) {
-    var textArea = document.createElement(`textarea`);
-    textArea.value = text;
+// Just took this from stackoverflow
+// https://stackoverflow.com/a/30810322
+const fallbackCopyTextToClipboard = (text) => {
+  var textArea = document.createElement(`textarea`);
+  textArea.value = text;
 
-    // Avoid scrolling to bottom
-    textArea.style.top = `0`;
-    textArea.style.left = `0`;
-    textArea.style.position = `fixed`;
+  // Avoid scrolling to bottom
+  textArea.style.top = `0`;
+  textArea.style.left = `0`;
+  textArea.style.position = `fixed`;
 
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
 
-    try {
-      var successful = document.execCommand(`copy`);
-      var msg = successful ? `successful` : `unsuccessful`;
+  try {
+    var successful = document.execCommand(`copy`);
+    var msg = successful ? `successful` : `unsuccessful`;
 
-      console.log(`Fallback: Copying text command was ` + msg);
-    } catch (err) {
-      console.error(`Fallback: Oops, unable to copy`, err);
-    }
-
-    document.body.removeChild(textArea);
+    console.log(`Fallback: Copying text command was ` + msg);
+  } catch (err) {
+    console.error(`Fallback: Oops, unable to copy`, err);
   }
-  function copyUrlToClipboard(text) {
-    const url = `${window.location.href.replace(location.hash, ``)}${text}`;
-    if (!navigator.clipboard) {
-      fallbackCopyUrlToClipboard(url);
-      return;
+
+  document.body.removeChild(textArea);
+};
+function copyTextToClipboard(text) {
+  if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(text);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(
+    function () {
+      console.log(`Async: Copying to clipboard was successful!`);
+    },
+    function (err) {
+      console.error(`Async: Could not copy text: `, err);
     }
-    navigator.clipboard.writeText(url).then(
-      function () {
-        console.log(`Async: Copying to clipboard was successful!`);
-      },
-      function (err) {
-        console.error(`Async: Could not copy text: `, err);
+  );
+}
+
+// Used stackoverflow as reference
+// Not a 1:1 copy
+// https://stackoverflow.com/a/37033774
+const openTarget = () => {
+  const hash = location.hash.substring(1);
+  if (hash) {
+    const details = Array.from(document.getElementById(hash).children).find(
+      (element) => {
+        return element.tagName === `DETAILS`;
       }
     );
+    if (details) {
+      details.open = true;
+    }
   }
+};
+
+const handleAnchorClick = (e) => {
+  const el = document.createElement(`span`);
+  el.className = `copy-popup`;
+  el.ariaHidden = true;
+  el.innerText = e.target.dataset.copied;
+  e.target.parentNode.appendChild(el);
+  setTimeout(() => {
+    el.classList.add(`copy-popup--active`);
+  }, 1);
+
+  setTimeout(() => {
+    el.classList.remove(`copy-popup--active`);
+    setTimeout(() => {
+      el.parentNode.removeChild(el);
+    }, 500);
+  }, 1001);
+
+  copyTextToClipboard(e.target.href);
+
+  e.preventDefault();
+};
+
+const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
+  React.useEffect(() => {
+    window.addEventListener(`hashchange`, openTarget);
+    openTarget();
+
+    return () => {
+      window.removeEventListener(`hashchange`, openTarget);
+    };
+  }, []);
 
   const handleFaqNavSensorChange = (e) => {
     if (typeof window === `undefined`) {
@@ -74,6 +123,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
         <FaqNav navData={navData} />
 
         <div className="Faq__content">
+          <Breadcrumb crumbs={crumbs} />
           <h1>{currentItemData.title_override}</h1>
           <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
 
@@ -84,9 +134,10 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                 alt="Image inside tab"
               />
             );
+            const tabId = `tab-${i}`;
 
             return (
-              <div className="Faq__question" id={`tab-${i}`} key={i}>
+              <div className="Faq__question" id={tabId} key={tabId}>
                 <details>
                   <summary>
                     <div className="Faq__question__summary">
@@ -120,14 +171,16 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
 
                   <div className="Faq__question__actions">
                     <div className="Faq__question__actions-copy">
-                      <span
-                        onClick={() => {
-                          return copyUrlToClipboard(`#tab-${i}`);
+                      <a
+                        href={`#${tabId}`}
+                        data-copied="Скопійовано"
+                        onClick={(e) => {
+                          handleAnchorClick(e);
                         }}
                         className="copy"
                       >
                         Kопіювати посилання
-                      </span>
+                      </a>
                     </div>
                   </div>
                 </details>
@@ -176,6 +229,7 @@ Faq.propTypes = {
     })
   ),
   pagePath: PropTypes.string,
+  crumbs: PropTypes.array,
 };
 
 export default Faq;

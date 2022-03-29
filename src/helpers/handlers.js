@@ -24,5 +24,7 @@ export const handlePath = (pseudoLink) => {
       return `/protesto-formos/`;
     case `būkime budrūs`:
       return `/bukime-budrus/`;
+    case `важлива інформація`:
+      return `/refugee-guide/`;
   }
 };
