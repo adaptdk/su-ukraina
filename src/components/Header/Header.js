@@ -20,6 +20,23 @@ import "./Header.css";
 import PromoLine from "../PromoLine/PromoLine";
 
 const Header = ({ noSticky }) => {
+  const [headerHeight, setHeaderHeight] = React.useState(null);
+  const headerRef = React.useRef(null);
+  React.useLayoutEffect(() => {
+    const resetHeaderHeight = () => {
+      const newHeight = headerRef.current.offsetHeight;
+      if (newHeight !== headerHeight) {
+        setHeaderHeight(newHeight);
+      }
+    };
+
+    resetHeaderHeight();
+    window.addEventListener(`resize`, resetHeaderHeight);
+    return () => {
+      window.removeEventListener(`resize`, resetHeaderHeight);
+    };
+  }, []);
+
   const closeMenuOnSameLink = (nextPathName) => {
     if (typeof window === `undefined`) {
       return;
@@ -53,7 +70,13 @@ const Header = ({ noSticky }) => {
 
   return (
     <React.Fragment>
-      <div className={`Header ${noSticky ? `Header--no-sticky` : ``}`}>
+      <div
+        className={`Header ${noSticky ? `Header--no-sticky` : ``}`}
+        ref={headerRef}
+      >
+        {!!headerHeight && (
+          <style>{`:root { --header-height: ${headerHeight}px; }`}</style>
+        )}
         <Constraint className="Header__content">
           <Link to="/">
             <img

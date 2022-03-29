@@ -2,6 +2,11 @@
 @import "./_spacing";
 @import "./_typography.css";
 
+:root {
+  /* Mobile header height that's later overriden with JS */
+  --header-height: 71px;
+}
+
 body,
 html {
   margin: 0;
@@ -24,6 +29,7 @@ body {
 html {
   font-family: Roboto, sans-serif;
   line-height: 1.5;
+  scroll-padding-top: var(--header-height);
 }
 
 h1,
