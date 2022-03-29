@@ -1,5 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { useLocation } from "@reach/router";
 
 import Header from "../Header";
 import Footer from "../Footer";
@@ -12,16 +13,14 @@ import Button from "../Button";
 import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
-  let altHeader = false;
-  if (typeof window !== `undefined`) {
-    const pathName = window.location.pathname;
+  const location = useLocation();
+  const pathName = location.pathname;
 
-    altHeader =
-      pathName.startsWith(`/pagalba`) ||
-      pathName.startsWith(`/help-search`) ||
-      pathName.startsWith(`/refugee-guide`) ||
-      pathName.startsWith(`/pagalbos-paieska`);
-  }
+  const altHeader =
+    pathName.startsWith(`/pagalba`) ||
+    pathName.startsWith(`/help-search`) ||
+    pathName.startsWith(`/refugee-guide`) ||
+    pathName.startsWith(`/pagalbos-paieska`);
 
   return (
     <div className="Layout">
