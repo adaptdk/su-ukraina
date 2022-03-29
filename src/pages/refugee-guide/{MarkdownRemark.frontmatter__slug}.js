@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Title } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import ContentLayout from "../../components/ContentLayout";
+import Layout from "../../components/Layout";
 import Faq from "../../components/Faq";
 
 import Section from "../../components/Section";
@@ -23,7 +23,7 @@ export default function Template({ data }) {
   });
 
   return (
-    <ContentLayout pagePath="/apie-mus/">
+    <Layout pagePath="/apie-mus/">
       {(!frontmatter || !frontmatter.title_override) && (
         <Title>{frontmatter.title_override}</Title>
       )}
@@ -43,7 +43,7 @@ export default function Template({ data }) {
           crumbs={crumbs}
         />
       )}
-    </ContentLayout>
+    </Layout>
   );
 }
 
