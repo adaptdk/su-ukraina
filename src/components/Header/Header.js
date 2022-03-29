@@ -19,6 +19,23 @@ import {
 import "./Header.css";
 
 const Header = ({ noSticky, altHeader }) => {
+  const [headerHeight, setHeaderHeight] = React.useState(null);
+  const headerRef = React.useRef(null);
+  React.useLayoutEffect(() => {
+    const resetHeaderHeight = () => {
+      const newHeight = headerRef.current?.offsetHeight;
+      if (newHeight !== headerHeight) {
+        setHeaderHeight(newHeight);
+      }
+    };
+
+    resetHeaderHeight();
+    window.addEventListener(`resize`, resetHeaderHeight);
+    return () => {
+      window.removeEventListener(`resize`, resetHeaderHeight);
+    };
+  }, []);
+
   const closeMenuOnSameLink = (nextPathName) => {
     if (typeof window === `undefined`) {
       return;
