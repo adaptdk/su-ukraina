@@ -17,7 +17,6 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
   const pathName = location.pathname;
 
   const altHeader =
-    pathName.startsWith(`/pagalba`) ||
     pathName.startsWith(`/help-search`) ||
     pathName.startsWith(`/refugee-guide`) ||
     pathName.startsWith(`/pagalbos-paieska`);
