@@ -50,6 +50,8 @@ function copyTextToClipboard(text) {
   );
 }
 
+// Used stackoverflow as reference
+// Not a 1:1 copy
 // https://stackoverflow.com/a/37033774
 const openTarget = () => {
   const hash = location.hash.substring(1);
