@@ -7,8 +7,9 @@ import FaqNav from "./FaqNav";
 
 import "./Faq.css";
 import Constraint from "../Constraint";
+import Breadcrumb from "../Breadcrumbs";
 
-const Faq = ({ currentItemData, navData, faqHtml }) => {
+const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
   // Just took this from stackoverflow
   function fallbackCopyUrlToClipboard(text) {
     var textArea = document.createElement(`textarea`);
@@ -56,6 +57,7 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
         <FaqNav navData={navData} />
 
         <div className="FaqContent">
+          <Breadcrumb crumbs={crumbs} />
           <h1>{currentItemData.title_override}</h1>
           <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
 
@@ -146,6 +148,7 @@ Faq.propTypes = {
     })
   ),
   pagePath: PropTypes.string,
+  crumbs: PropTypes.array,
 };
 
 export default Faq;

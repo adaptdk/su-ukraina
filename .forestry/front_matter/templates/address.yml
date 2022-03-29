@@ -2,16 +2,16 @@
 label: Address
 hide_body: true
 fields:
-- name: adresses
-  type: field_group_list
-  fields:
-  - name: address
-    type: text
+  - name: adresses
+    type: field_group_list
+    fields:
+      - name: address
+        type: text
+        config:
+          required: false
+        label: Address
     config:
-      required: false
-    label: Address
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Adresses
+      min:
+      max:
+      labelField:
+    label: Adresses

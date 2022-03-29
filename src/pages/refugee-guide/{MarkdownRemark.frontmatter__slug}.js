@@ -13,6 +13,8 @@ export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
+  const crumbs = [`Важлива інформація`, frontmatter.title_override];
+
   const faq = data.faq.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -34,7 +36,12 @@ export default function Template({ data }) {
         />
       </Section>
       {!!frontmatter && (
-        <Faq currentItemData={frontmatter} navData={faq} faqHtml={html} />
+        <Faq
+          currentItemData={frontmatter}
+          navData={faq}
+          faqHtml={html}
+          crumbs={crumbs}
+        />
       )}
     </ContentLayout>
   );
