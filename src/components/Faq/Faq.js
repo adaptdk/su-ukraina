@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { ResourceList, ResourceListItem } from "../ResourceList";
-import FaqNav from "./FaqNav";
+import FaqNavCollapsible from "./FaqNavCollapsible";
 import Constraint from "../Constraint";
 import Button from "../Button";
 import Breadcrumb from "../Breadcrumbs";
@@ -100,6 +100,12 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
     };
   }, []);
 
+  React.useEffect(() => {
+    return () => {
+      document.body.removeAttribute(`data-filters`);
+    };
+  }, []);
+
   const handleFaqNavSensorChange = (e) => {
     if (typeof window === `undefined`) {
       return;
@@ -121,7 +127,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
           id="faqnav-sensor"
           onChange={handleFaqNavSensorChange}
         />
-        <FaqNav navData={navData} />
+        <FaqNavCollapsible navData={navData} />
 
         <div className="Faq__content">
           <Breadcrumb crumbs={crumbs} />

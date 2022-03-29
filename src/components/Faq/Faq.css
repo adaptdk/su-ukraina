@@ -42,7 +42,7 @@
       pointer-events: all;
     }
 
-    #faqnav-sensor:checked ~ .FaqNav {
+    #faqnav-sensor:checked ~ .FaqNavCollapsible {
       height: 80vh;
       overflow: auto;
       padding: var(--s__small-padding);

@@ -2,16 +2,17 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "@reach/router";
 
-import "./FaqNav.css";
+import "./FaqNavCollapsible.css";
 import Button from "../Button";
 
-const FaqNav = ({ navData, modifier }) => {
-  const modifierClass = modifier ? `FaqNav--${modifier}` : ``;
+// @TODO Refactor to use <FaqNav />
+const FaqNavCollapsible = ({ navData, modifier }) => {
+  const modifierClass = modifier ? `FaqNavCollapsible--${modifier}` : ``;
   const location = useLocation();
   const pathname = location.pathname;
 
   return (
-    <div className={`FaqNav ${modifierClass}`}>
+    <div className={`FaqNavCollapsible ${modifierClass}`}>
       <nav>
         <ul>
           {navData.map((navItem) => {
@@ -31,12 +32,25 @@ const FaqNav = ({ navData, modifier }) => {
             );
           })}
         </ul>
+        <div className="FaqNavCollapsible__actions">
+          <label
+            className="FaqNavCollapsible__close-trigger"
+            htmlFor="faqnav-sensor"
+          >
+            <Button
+              className="FaqNavCollapsible__close-trigger-button"
+              color="primary"
+              pretend
+              text="Закрити"
+            />
+          </label>
+        </div>
       </nav>
     </div>
   );
 };
 
-FaqNav.propTypes = {
+FaqNavCollapsible.propTypes = {
   modifier: PropTypes.string,
   navData: PropTypes.arrayOf(
     PropTypes.shape({
@@ -48,4 +62,4 @@ FaqNav.propTypes = {
   pagePath: PropTypes.string,
 };
 
-export default FaqNav;
+export default FaqNavCollapsible;
