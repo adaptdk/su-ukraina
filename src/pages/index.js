@@ -65,7 +65,7 @@ const Page = ({ data }) => {
       </Section>
       <Section>
         <PromoLine
-          title="ВСЯ ВАЖЛИВА ІНФОРМАЦІЯ ДЛЯ ГРОМАДЯН УКРАЇНИ"
+          title="Вся важлива інформація для громадян України"
           titleLink="https://www.withukraine.lt"
           modifier="big"
         >
@@ -73,7 +73,7 @@ const Page = ({ data }) => {
             icon={`arrow-blue`}
             href="https://www.withukraine.lt"
             color={`secondary`}
-            text={`ІНФОРМАЦІЯ`}
+            text={`Інформація`}
             position={`right`}
             target="_blank"
             rel="noopener"
@@ -82,7 +82,7 @@ const Page = ({ data }) => {
             icon={`arrow-blue`}
             href="https://www.withukraine.lt/help-search"
             color={`secondary`}
-            text={`послуги`}
+            text={`Послуги`}
             position={`right`}
             target="_blank"
             rel="noopener"

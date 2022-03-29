@@ -26,14 +26,14 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
       <Header noSticky={noStickyHeader} altHeader={altHeader} />
       {!altHeader && (
         <PromoLine
-          title="ВСЯ ВАЖЛИВА ІНФОРМАЦІЯ ДЛЯ ГРОМАДЯН УКРАЇНИ"
+          title="Вся важлива інформація для громадян України"
           titleLink="https://www.withukraine.lt"
         >
           <Button
             icon={`arrow-blue`}
             href="https://www.withukraine.lt"
             color={`secondary`}
-            text={`ІНФОРМАЦІЯ`}
+            text={`Інформація`}
             position={`right`}
             target="_blank"
             rel="noopener"
@@ -42,7 +42,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
             icon={`arrow-blue`}
             href="https://www.withukraine.lt/help-search"
             color={`secondary`}
-            text={`послуги`}
+            text={`Послуги`}
             position={`right`}
             target="_blank"
             rel="noopener"
