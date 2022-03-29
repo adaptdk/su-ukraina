@@ -3,6 +3,7 @@ import { Title, Meta } from "react-head";
 
 import HelpSearch from "../components/HelpSearch";
 import Layout from "../components/Layout";
+import { LANG_UK } from "../constants/HelpSearch";
 
 const Page = () => {
   return (
@@ -12,7 +13,7 @@ const Page = () => {
         name="description"
         content="Sąrašas iniciatyvų vykdomų Lietuvoje, kurios skirtos pagelbėti Ukrainos žmonėms"
       />
-      <HelpSearch />
+      <HelpSearch defaultResultsLang={LANG_UK} />
     </Layout>
   );
 };
