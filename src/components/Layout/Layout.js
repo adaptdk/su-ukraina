@@ -19,7 +19,9 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
     const pathName = window.location.pathname;
     if (
       pathName.startsWith(`/pagalba`) ||
-      pathName.startsWith(`/refugee-guide`)
+      pathName.startsWith(`/help-search`) ||
+      pathName.startsWith(`/refugee-guide`) ||
+      pathName.startsWith(`/pagalbos-paieska`)
     ) {
       return true;
     }
