@@ -7,6 +7,7 @@
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
 
     #faqnav-sensor {
       /* Referenced from HelpSearch.css
@@ -44,7 +45,7 @@
     #faqnav-sensor:checked ~ .FaqNav {
       height: 80vh;
       overflow: auto;
-      transform: translateY(0);
+      padding: var(--s__small-padding);
     }
 
     &__faqnav-trigger {
@@ -246,6 +247,8 @@
 
   @media (min-width: 40rem) {
     &__inner {
+      gap: 0;
+
       &__faqnav-trigger {
         display: none;
       }

@@ -8,9 +8,8 @@
   height: 0;
   left: calc(var(--s__main-padding) / 2);
   overflow: hidden;
-  padding: var(--s__small-padding);
+  padding: 0;
   position: fixed;
-  transform: translateY(100%);
   transition: height 0.2s ease;
   width: calc(100% - (var(--s__main-padding) * 2));
   z-index: 1002; /* 1 above faqnav-overlay */
