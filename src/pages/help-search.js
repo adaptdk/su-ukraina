@@ -8,7 +8,7 @@ import { LANG_UK } from "../constants/HelpSearch";
 const Page = () => {
   return (
     <Layout noStickyHeader>
-      <Title>Pagalba</Title>
+      <Title>Послуги</Title>
       <Meta
         name="description"
         content="Sąrašas iniciatyvų vykdomų Lietuvoje, kurios skirtos pagelbėti Ukrainos žmonėms"
