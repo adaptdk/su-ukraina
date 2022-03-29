@@ -105,9 +105,10 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
       return;
     }
     if (e.target.checked) {
-      document.body.dataset.faqnav = `visible`;
+      // This data attribute disables body scrollbar
+      document.body.dataset.filters = `visible`;
     } else {
-      document.body.removeAttribute(`data-faqnav`);
+      document.body.removeAttribute(`data-filters`);
     }
   };
 
