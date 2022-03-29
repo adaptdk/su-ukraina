@@ -90,7 +90,7 @@ const handleAnchorClick = (e) => {
   e.preventDefault();
 };
 
-const Faq = ({ currentItemData, navData, faqHtml }) => {
+const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
   React.useEffect(() => {
     window.addEventListener(`hashchange`, openTarget);
     openTarget();
