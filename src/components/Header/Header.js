@@ -54,7 +54,10 @@ const Header = ({ noSticky, altHeader }) => {
   };
 
   return (
-    <div className={`Header ${noSticky ? `Header--no-sticky` : ``}`}>
+    <div
+      className={`Header ${noSticky ? `Header--no-sticky` : ``}`}
+      ref={headerRef}
+    >
       <Constraint className="Header__content">
         <Link to="/">
           <img
