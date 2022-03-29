@@ -2,11 +2,11 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import Breadcrumb from "../Breadcrumbs";
+import { ResourceList, ResourceListItem } from "../ResourceList";
+import FaqNavCollapsible from "./FaqNavCollapsible";
 import Constraint from "../Constraint";
-import FaqNav from "./FaqNav";
-import ResourceList from "../../components/ResourceList";
-import ResourceListItem from "../../components/ResourceList/ResourceListItem";
+import Button from "../Button";
+import Breadcrumb from "../Breadcrumbs";
 
 import "./Faq.css";
 
@@ -100,12 +100,36 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
     };
   }, []);
 
+  React.useEffect(() => {
+    return () => {
+      document.body.removeAttribute(`data-filters`);
+    };
+  }, []);
+
+  const handleFaqNavSensorChange = (e) => {
+    if (typeof window === `undefined`) {
+      return;
+    }
+    if (e.target.checked) {
+      // This data attribute disables body scrollbar
+      document.body.dataset.filters = `visible`;
+    } else {
+      document.body.removeAttribute(`data-filters`);
+    }
+  };
+
   return (
     <div className="Faq">
-      <Constraint className="FaqInner">
-        <FaqNav navData={navData} />
+      <Constraint className="Faq__inner">
+        <input
+          type="checkbox"
+          name="faqnav-sensor"
+          id="faqnav-sensor"
+          onChange={handleFaqNavSensorChange}
+        />
+        <FaqNavCollapsible navData={navData} />
 
-        <div className="FaqContent">
+        <div className="Faq__content">
           <Breadcrumb crumbs={crumbs} />
           <h1>{currentItemData.title_override}</h1>
           <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
@@ -120,19 +144,21 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
             const tabId = `tab-${i}`;
 
             return (
-              <div className="FaqQuestion" id={tabId} key={tabId}>
+              <div className="Faq__question" id={tabId} key={tabId}>
                 <details>
                   <summary>
-                    <div className="FaqQuestion__summary">
+                    <div className="Faq__question__summary">
                       <h2>{question.title}</h2>
                     </div>
                   </summary>
                   <div
-                    className="FaqQuestion__answer"
+                    className="Faq__question__answer"
                     dangerouslySetInnerHTML={{ __html: question.answer }}
                   />
 
-                  {!!image && <div className="FaqQuestion__image">{image}</div>}
+                  {!!image && (
+                    <div className="Faq__question__image">{image}</div>
+                  )}
 
                   {!!question.resources && (
                     <ResourceList>
@@ -150,8 +176,8 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
                     </ResourceList>
                   )}
 
-                  <div className="FaqQuestion__actions">
-                    <div className="FaqQuestion__actions-copy">
+                  <div className="Faq__question__actions">
+                    <div className="Faq__question__actions-copy">
                       <a
                         href={`#${tabId}`}
                         data-copied="Скопійовано"
@@ -169,6 +195,16 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
             );
           })}
         </div>
+
+        <label className="Faq__inner__faqnav-trigger" htmlFor="faqnav-sensor">
+          <Button
+            className="Faq__inner__faqnav-trigger-button"
+            color="secondary"
+            pretend
+            text="НАВІГАЦІЯ"
+          />
+        </label>
+        <label className="Faq__inner__faqnav-overlay" htmlFor="faqnav-sensor" />
       </Constraint>
     </div>
   );

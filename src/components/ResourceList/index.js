@@ -1,1 +1,3 @@
-export { default } from "./ResourceList";
+import ResourceList from "./ResourceList";
+import ResourceListItem from "./ResourceListItem";
+export { ResourceList, ResourceListItem };
