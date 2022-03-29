@@ -12,26 +12,21 @@ import Button from "../Button";
 import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
-  const alternativeHeader = () => {
-    if (typeof window === `undefined`) {
-      return;
-    }
+  let altHeader = false;
+  if (typeof window !== `undefined`) {
     const pathName = window.location.pathname;
-    if (
+
+    altHeader =
       pathName.startsWith(`/pagalba`) ||
       pathName.startsWith(`/help-search`) ||
       pathName.startsWith(`/refugee-guide`) ||
-      pathName.startsWith(`/pagalbos-paieska`)
-    ) {
-      return true;
-    }
-    return false;
-  };
+      pathName.startsWith(`/pagalbos-paieska`);
+  }
 
   return (
     <div className="Layout">
-      <Header noSticky={noStickyHeader} altHeader={alternativeHeader()} />
-      {!alternativeHeader() && (
+      <Header noSticky={noStickyHeader} altHeader={altHeader} />
+      {!altHeader && (
         <PromoLine
           title="ВСЯ ВАЖЛИВА ІНФОРМАЦІЯ ДЛЯ ГРОМАДЯН УКРАЇНИ"
           titleLink="https://www.withukraine.lt"
