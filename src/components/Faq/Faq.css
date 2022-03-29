@@ -52,6 +52,7 @@
       bottom: 2rem;
       left: 50%;
       position: sticky;
+      z-index: 2;
     }
 
     &__faqnav-trigger-button {
