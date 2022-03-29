@@ -14,12 +14,13 @@ import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
   const location = useLocation();
-  const pathName = location.pathname;
+  const splitPathname = location.pathname.split(`/`);
 
-  const altHeader =
-    pathName.startsWith(`/help-search`) ||
-    pathName.startsWith(`/refugee-guide`) ||
-    pathName.startsWith(`/pagalbos-paieska`);
+  const altHeader = [
+    `pagalbos-paieska`,
+    `refugee-guide`,
+    `help-search`,
+  ].includes(splitPathname[1]);
 
   return (
     <div className="Layout">
