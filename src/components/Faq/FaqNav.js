@@ -31,6 +31,16 @@ const FaqNav = ({ navData, modifier }) => {
             );
           })}
         </ul>
+        <div className="FaqNav__actions">
+          <label className="FaqNav__close-trigger" htmlFor="faqnav-sensor">
+            <Button
+              className="FaqNav__close-trigger-button"
+              color="primary"
+              pretend
+              text="Закрити"
+            />
+          </label>
+        </div>
       </nav>
     </div>
   );

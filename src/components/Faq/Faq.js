@@ -1,12 +1,13 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import ResourceList from "../../components/ResourceList";
-import ResourceListItem from "../../components/ResourceList/ResourceListItem";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+import { ResourceList, ResourceListItem } from "../ResourceList";
 import FaqNav from "./FaqNav";
+import Constraint from "../Constraint";
+import Button from "../Button";
 
 import "./Faq.css";
-import Constraint from "../Constraint";
 
 const Faq = ({ currentItemData, navData, faqHtml }) => {
   // Just took this from stackoverflow
@@ -50,12 +51,29 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
     );
   }
 
+  const handleFaqNavSensorChange = (e) => {
+    if (typeof window === `undefined`) {
+      return;
+    }
+    if (e.target.checked) {
+      document.body.dataset.faqnav = `visible`;
+    } else {
+      document.body.removeAttribute(`data-faqnav`);
+    }
+  };
+
   return (
     <div className="Faq">
-      <Constraint className="FaqInner">
+      <Constraint className="Faq__inner">
+        <input
+          type="checkbox"
+          name="faqnav-sensor"
+          id="faqnav-sensor"
+          onChange={handleFaqNavSensorChange}
+        />
         <FaqNav navData={navData} />
 
-        <div className="FaqContent">
+        <div className="Faq__content">
           <h1>{currentItemData.title_override}</h1>
           <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
 
@@ -68,19 +86,21 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
             );
 
             return (
-              <div className="FaqQuestion" id={`tab-${i}`} key={i}>
+              <div className="Faq__question" id={`tab-${i}`} key={i}>
                 <details>
                   <summary>
-                    <div className="FaqQuestion__summary">
+                    <div className="Faq__question__summary">
                       <h2>{question.title}</h2>
                     </div>
                   </summary>
                   <div
-                    className="FaqQuestion__answer"
+                    className="Faq__question__answer"
                     dangerouslySetInnerHTML={{ __html: question.answer }}
                   />
 
-                  {!!image && <div className="FaqQuestion__image">{image}</div>}
+                  {!!image && (
+                    <div className="Faq__question__image">{image}</div>
+                  )}
 
                   {!!question.resources && (
                     <ResourceList>
@@ -98,8 +118,8 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
                     </ResourceList>
                   )}
 
-                  <div className="FaqQuestion__actions">
-                    <div className="FaqQuestion__actions-copy">
+                  <div className="Faq__question__actions">
+                    <div className="Faq__question__actions-copy">
                       <span
                         onClick={() => {
                           return copyUrlToClipboard(`#tab-${i}`);
@@ -115,6 +135,16 @@ const Faq = ({ currentItemData, navData, faqHtml }) => {
             );
           })}
         </div>
+
+        <label className="Faq__inner__faqnav-trigger" htmlFor="faqnav-sensor">
+          <Button
+            className="Faq__inner__faqnav-trigger-button"
+            color="secondary"
+            pretend
+            text="НАВІГАЦІЯ"
+          />
+        </label>
+        <label className="Faq__inner__faqnav-overlay" htmlFor="faqnav-sensor" />
       </Constraint>
     </div>
   );
