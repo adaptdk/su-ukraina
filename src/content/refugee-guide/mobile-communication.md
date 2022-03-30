@@ -24,6 +24,6 @@ questions:
   - subtitle: Провайдер мобільного зв'язку
     url: https://pildyk.lt
     title: Pildyk.lt
-title_override: МОБІЛЬНЕ ЗВ'ЯЗКУ
+title_override: Мобільний зв 'язок
 
 ---
