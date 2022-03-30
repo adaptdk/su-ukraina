@@ -1,5 +1,5 @@
 ---
-weight: 11
+weight: 13
 title_override: Поточні контакти
 title: contacts
 slug: "/contacts"
