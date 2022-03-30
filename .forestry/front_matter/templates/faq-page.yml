@@ -3,96 +3,80 @@ label: FAQ page
 hide_body: false
 display_field: title_override
 fields:
-  - name: title_override
+- name: title_override
+  type: text
+  config:
+    required: false
+  label: Title
+- name: title
+  type: text
+  config:
+    required: true
+  label: Filename
+  hidden: false
+  description: This will be used for file name -- keep it english.
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+  description: Used for creating unique path (url) to section. it will be /refugee-guide{whatever
+    you enter here} - we recommend entering /filename
+- name: weight
+  type: number
+  label: Weight
+  description: Higher weight resources go up in the list, smaller go down
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: questions
+  type: field_group_list
+  fields:
+  - name: title
     type: text
     config:
       required: false
     label: Title
-  - name: title
-    type: text
-    config:
-      required: true
-    label: Filename
-    hidden: false
-    description: This will be used for file name -- keep it english.
-  - name: slug
-    type: text
+  - name: answer
+    type: textarea
+    default: ''
     config:
       required: false
-    label: Slug
-    description:
-      Used for creating unique path (url) to section. it will be /refugee-guide{whatever
-      you enter here} - we recommend entering /filename
-  - name: weight
-    type: number
-    label: Weight
-    description: Higher weight resources go up in the list, smaller go down
-    default: 0
-    required: true
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Answer
+  - name: image
+    type: file
     config:
-      min:
-      max:
-      step:
-  - name: questions
+      maxSize: 64
+    label: Image
+  - name: resources
     type: field_group_list
     fields:
-      - name: title
-        type: text
-        config:
-          required: false
-        label: Title
-      - name: answer
-        type: textarea
-        default: ""
-        config:
-          required: false
-          wysiwyg: true
-          schema:
-            format: html-blocks
-        label: Answer
-      - name: image
-        type: file
-        config:
-          maxSize: 64
-        label: Image
-      - name: resources
-        type: field_group_list
-        fields:
-          - name: title
-            type: text
-            config:
-              required: false
-            label: Title
-          - name: subtitle
-            type: text
-            config:
-              required: false
-            label: Subtitle
-          - name: url
-            type: text
-            config:
-              required: false
-            label: URL
-        config:
-          min:
-          max:
-          labelField: title
-        label: Resources
-      - name: contacts
-        type: include
-        config: {}
-        template: contacts
-        label: Contacts
-      - name: addresses
-        type: include
-        config: {}
-        template: address
-        label: Addresses
+    - name: title
+      type: text
+      config:
+        required: false
+      label: Title
+    - name: subtitle
+      type: text
+      config:
+        required: false
+      label: Subtitle
+    - name: url
+      type: text
+      config:
+        required: false
+      label: URL
     config:
-      min:
-      max:
-      labelField:
-    label: Questions
+      min: 
+      max: 
+      labelField: title
+    label: Resources
   - name: contacts
     type: include
     config: {}
@@ -103,13 +87,28 @@ fields:
     config: {}
     template: address
     label: Addresses
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Questions
+- name: contacts
+  type: include
+  config: {}
+  template: contacts
+  label: Contacts
+- name: addresses
+  type: include
+  config: {}
+  template: address
+  label: Addresses
 pages:
-  - src/content/refugee-guide/contacts.md
-  - src/content/refugee-guide/employment.md
-  - src/content/refugee-guide/financial-services.md
-  - src/content/refugee-guide/healthcare.md
-  - src/content/refugee-guide/pets.md
-  - src/content/refugee-guide/psychological-assistance.md
-  - src/content/refugee-guide/public-transport.md
-  - src/content/refugee-guide/school-kindergarten.md
-  - src/content/refugee-guide/social-support.md
+- src/content/refugee-guide/contacts.md
+- src/content/refugee-guide/employment.md
+- src/content/refugee-guide/financial-services.md
+- src/content/refugee-guide/healthcare.md
+- src/content/refugee-guide/pets.md
+- src/content/refugee-guide/psychological-assistance.md
+- src/content/refugee-guide/public-transport.md
+- src/content/refugee-guide/school-kindergarten.md
+- src/content/refugee-guide/social-support.md
