@@ -1,5 +1,5 @@
 ---
-weight: 9
+weight: 3
 title: mobile-communication
 slug: "/mobile-communication"
 questions:
