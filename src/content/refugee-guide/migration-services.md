@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 1
 title: migration-office
 title_override: Міграційні служби
 slug: "/migration-office"
