@@ -23,11 +23,12 @@ const FaqNavCollapsible = ({ navData, modifier }) => {
             return (
               <li className={activeClass} key={navItem.slug}>
                 <Button
-                  text={navItem.title_override}
                   color="primary"
                   icon={`arrow-white`}
                   to={`/refugee-guide${navItem.slug}/`}
-                />
+                >
+                  {navItem.title_override}
+                </Button>
               </li>
             );
           })}
@@ -41,8 +42,9 @@ const FaqNavCollapsible = ({ navData, modifier }) => {
               className="FaqNavCollapsible__close-trigger-button"
               color="primary"
               pretend
-              text="Закрити"
-            />
+            >
+              Закрити
+            </Button>
           </label>
         </div>
       </nav>

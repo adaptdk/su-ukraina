@@ -90,10 +90,11 @@ const Page = ({ content, addressees, pagePath }) => {
                       icon={`arrow-blue`}
                       href={`mailto:${addressee.emailOrLink}`}
                       color={`transparent`}
-                      text={`Rašyti laišką`}
                       position={`right`}
                       target="_blank"
-                    />
+                    >
+                      Rašyti laišką
+                    </Button>
                   )}
                 </div>
               </Card>

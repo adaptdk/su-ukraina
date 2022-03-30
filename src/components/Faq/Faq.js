@@ -201,8 +201,9 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
             className="Faq__inner__faqnav-trigger-button"
             color="secondary"
             pretend
-            text="НАВІГАЦІЯ"
-          />
+          >
+            Навігація
+          </Button>
         </label>
         <label className="Faq__inner__faqnav-overlay" htmlFor="faqnav-sensor" />
       </Constraint>

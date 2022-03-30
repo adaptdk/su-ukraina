@@ -5,13 +5,9 @@ import Button from "../Button";
 const LinkCollectionItem = ({ to, text }) => {
   return (
     <li>
-      <Button
-        icon={`arrow-white`}
-        to={to}
-        color={`primary`}
-        text={text}
-        position={`right`}
-      />
+      <Button icon={`arrow-white`} to={to} color={`primary`} position={`right`}>
+        {text}
+      </Button>
     </li>
   );
 };

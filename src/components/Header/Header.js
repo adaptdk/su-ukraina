@@ -114,11 +114,12 @@ const Header = ({ noSticky, altHeader }) => {
                   icon={`edit`}
                   href="https://0rs0r9mdix1.typeform.com/to/QXLxIUjt"
                   color={`primary`}
-                  text={`NORIU SUTEIKTI PAGALBĄ`}
                   position={`left`}
                   target="_blank"
                   rel="noopener"
-                />
+                >
+                  Noriu suteikti pagalbą
+                </Button>
               </li>
             )}
           </ul>

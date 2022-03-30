@@ -13,10 +13,11 @@ const ResourceListItem = ({ title, subtitle, url, buttonText }) => {
         icon={`arrow-blue`}
         href={url}
         color={`transparent`}
-        text={buttonText}
         position={`right`}
         target="_blank"
-      />
+      >
+        {buttonText}
+      </Button>
     </li>
   );
 };

@@ -88,12 +88,9 @@ const EventCard = ({
         )}
       </div>
       {url && (
-        <Button
-          icon="arrow-blue"
-          color="transparent"
-          href={url}
-          text="Renginio Nuoroda"
-        />
+        <Button icon="arrow-blue" color="transparent" href={url}>
+          Renginio Nuoroda
+        </Button>
       )}
     </div>
   );
