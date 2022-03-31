@@ -34,20 +34,22 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
             icon={`arrow-blue`}
             href="https://www.withukraine.lt"
             color={`secondary`}
-            text={`Інформація`}
             position={`right`}
             target="_blank"
             rel="noopener"
-          />
+          >
+            Інформація
+          </Button>
           <Button
             icon={`arrow-blue`}
             href="https://www.withukraine.lt/help-search"
             color={`secondary`}
-            text={`Послуги`}
             position={`right`}
             target="_blank"
             rel="noopener"
-          />
+          >
+            Послуги
+          </Button>
         </PromoLine>
       )}
       <main>{children}</main>

@@ -37,16 +37,18 @@ const Footer = () => {
               to={PATH_HOW_TO_DONATE}
               icon={ICON_DONATE}
               color={`secondary`}
-              text={TEXT_WANT_TO_DONATE}
               position={`left`}
-            />
+            >
+              {TEXT_WANT_TO_DONATE}
+            </Button>
             <Button
               to={PATH_HOW_TO_VOLUNTEER}
               icon={ICON_VOLUNTEER}
               color={`secondary`}
-              text={TEXT_WANT_TO_VOLUNTEER}
               position={`left`}
-            />
+            >
+              {TEXT_WANT_TO_VOLUNTEER}
+            </Button>
           </div>
         </div>
         <div className="Footer__menus">

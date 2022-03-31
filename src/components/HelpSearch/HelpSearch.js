@@ -465,8 +465,9 @@ const HelpSearch = ({ defaultResultsLang }) => {
               className="HelpSearch__filters-trigger-button"
               color="secondary"
               pretend
-              text={TRANSLATIONS.refinements.panelTitle[resultsLang]}
-            />
+            >
+              {TRANSLATIONS.refinements.panelTitle[resultsLang]}
+            </Button>
           </label>
           <label
             className="HelpSearch__sidebar-overlay"
@@ -497,8 +498,9 @@ const HelpSearch = ({ defaultResultsLang }) => {
                   className="HelpSearch__filters-close-trigger-button"
                   color="primary"
                   pretend
-                  text={TRANSLATIONS.refinements.doFilter[resultsLang]}
-                />
+                >
+                  {TRANSLATIONS.refinements.doFilter[resultsLang]}
+                </Button>
               </label>
             </div>
           </div>
