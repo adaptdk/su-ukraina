@@ -1,14 +1,14 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { useLocation } from "@reach/router";
+// import { useLocation } from "@reach/router";
 
 import "./FaqNav.css";
 import Button from "../Button";
 
 const FaqNav = ({ navData, modifier }) => {
   const modifierClass = modifier ? `FaqNav--${modifier}` : ``;
-  const location = useLocation();
-  const pathname = location.pathname;
+  // const location = useLocation();
+  const pathname = `/currency-exchange`;
 
   return (
     <div className={`FaqNav ${modifierClass}`}>
