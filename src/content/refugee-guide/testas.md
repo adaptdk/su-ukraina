@@ -1,11 +1,16 @@
 ---
-weight: 0
-title_override: Testas
+weight: 
+title_override: Testas, tweaked
 title: testas
 slug: "/testas"
 questions:
 - title: Testas su paveiksliuku
-  answer: <p>Tekstas</p><p><img src="/uploads/623b6e768547e47e25346795_-p-1080.jpeg"></p><p>tekstas.</p>
+  answer: |-
+    Tekstas
+
+    ![](/uploads/623b72d4d333774c1f34800a_-1-p-1080.jpeg)
+
+    tekstas
   image: ''
   resources: []
   contacts: []
