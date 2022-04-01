@@ -1,6 +1,6 @@
 .EventCard {
   align-items: flex-start;
-  background: #f9f9f9;
+  background: #f5f9ff;
   border-radius: var(--s__alt-border-radius);
   box-sizing: border-box;
   display: flex;
@@ -9,6 +9,10 @@
   margin-bottom: calc(var(--s__unit) * 5);
   padding: 24px;
   width: 100%;
+
+  &--previous {
+    background: #f9f9f9;
+  }
 
   @media (min-width: 40rem) {
     margin-right: calc(var(--s__unit) * 5);
