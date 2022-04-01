@@ -1,5 +1,5 @@
 ---
-weight: 10
+weight: 2
 title: residence
 slug: "/residence"
 questions: []

@@ -148,8 +148,9 @@ const ContactForm = ({ returnDestination = `/` }) => {
                 color="transparent"
                 disabled={formState.loading}
                 type="submit"
-                text="Siųsti"
-              />
+              >
+                Siųsti
+              </Button>
             </div>
           </form>
         )}

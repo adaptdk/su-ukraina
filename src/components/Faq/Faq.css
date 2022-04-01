@@ -1,0 +1,262 @@
+.Faq {
+  background-color: #f5f5f5;
+  padding: calc(var(--s__unit) * 12) 0;
+  width: 100%;
+
+  &__inner {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    #faqnav-sensor {
+      /* Referenced from HelpSearch.css
+      #filters-sensor */
+
+      /* Visually hidden */
+      bottom: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: fixed;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    &__faqnav-overlay {
+      background: rgb(0 0 0 / 20%);
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      transition: opacity 0.2s ease;
+      width: 100%;
+      z-index: 1001; /* 1 above `.Header` */
+    }
+
+    #faqnav-sensor:checked ~ &__faqnav-trigger ~ &__faqnav-overlay {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    #faqnav-sensor:checked ~ .FaqNavCollapsible {
+      height: 80vh;
+      overflow: auto;
+      padding: var(--s__small-padding);
+    }
+
+    &__faqnav-trigger {
+      bottom: 2rem;
+      left: 50%;
+      position: sticky;
+      z-index: 2;
+    }
+
+    &__faqnav-trigger-button {
+      border-radius: var(--s__alt-border-radius);
+      display: inline-flex;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: 40rem) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__content {
+    flex: 1 auto;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  &__question {
+    width: 100%;
+
+    + .Faq__question {
+      margin-top: calc(var(--s__unit) * 4);
+    }
+
+    &__image {
+      margin: calc(var(--s__unit) * 4) 0;
+    }
+
+    &__actions {
+      color: var(--c__primary);
+      margin-bottom: calc(var(--s__unit) * 4);
+      position: relative;
+      text-align: right;
+
+      .copy {
+        font-size: 0.9rem;
+
+        &::after {
+          background-color: var(--c__primary);
+          content: "";
+          display: inline-block;
+          height: 20px;
+          margin-left: 10px;
+          mask-image: url("../../images/icons/copy.svg");
+          mask-position: center;
+          mask-repeat: no-repeat;
+          mask-size: contain;
+          position: relative;
+          vertical-align: middle;
+          width: 20px;
+        }
+
+        &:hover {
+          color: var(--c__primary);
+          cursor: pointer;
+
+          &::after {
+            background-color: var(--c__primary);
+            content: "";
+            display: inline-block;
+            height: 20px;
+            margin-left: 10px;
+            mask-image: url("../../images/icons/copy.svg");
+            mask-position: center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            position: relative;
+            vertical-align: middle;
+            width: 20px;
+          }
+
+          &:hover {
+            color: var(--c__primary);
+            cursor: pointer;
+
+            &::before {
+              background-color: var(--c__primary);
+            }
+          }
+        }
+      }
+
+      .copy-popup {
+        opacity: 0;
+        position: absolute;
+        right: 30px; /* icon width + margin */
+        text-transform: uppercase;
+        top: 0;
+        transition: transform 0.2s ease-in, opacity 0.5s;
+
+        &--active {
+          opacity: 1;
+          transform: translateY(-2em);
+        }
+      }
+    }
+
+    .ResourceList {
+      margin-bottom: calc(var(--s__unit) * 4);
+    }
+
+    details {
+      background: white;
+      border: 1px solid #ececec;
+      box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
+      padding: 0 var(--s__main-padding);
+
+      &[open] > summary {
+        border-bottom: 1px solid #ececec;
+
+        .Faq__question__summary {
+          &::after {
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+
+    /* This DIV was introduced because on IOS flex on summary tag does not work */
+    &__summary {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: var(--s__main-padding) 0;
+
+      &::after {
+        border-style: solid;
+        border-width: 0.15em 0.15em 0 0;
+        content: "";
+        display: inline-block;
+        height: 0.45em;
+        left: -0.5em;
+        position: relative;
+        transform: rotate(45deg);
+        transform-origin: center;
+        transition: transform 0.2s ease;
+        vertical-align: middle;
+        width: 0.45em;
+      }
+    }
+
+    summary {
+      border-radius: var(--s__alt-border-radius);
+      color: var(--c__primary);
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: var(--fw__bold);
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      h2 {
+        align-items: center;
+        display: inline-flex;
+        flex: 1;
+        font: inherit;
+        margin: 0;
+        padding: 0;
+        padding-right: 1.2rem;
+      }
+    }
+
+    @media (min-width: 50rem) {
+      align-items: flex-start;
+      display: flex;
+      gap: var(--s__alt-padding);
+
+      > * {
+        flex: 1;
+      }
+
+      details {
+        border-radius: var(--s__alt-border-radius);
+
+        > summary {
+          font-size: 1.5rem;
+        }
+
+        &[open] > summary {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 40rem) {
+    &__inner {
+      gap: 0;
+
+      &__faqnav-trigger {
+        display: none;
+      }
+
+      &__faqnav-overlay {
+        display: none;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import Button from "../Button";
 
-const ResourceListItem = ({ title, subtitle, url }) => {
+const ResourceListItem = ({ title, subtitle, url, buttonText }) => {
   return (
     <li className="ResourceListItem">
       <div className="ResourceListItem__content">
@@ -13,10 +13,11 @@ const ResourceListItem = ({ title, subtitle, url }) => {
         icon={`arrow-blue`}
         href={url}
         color={`transparent`}
-        text={`Šaltinis`}
         position={`right`}
         target="_blank"
-      />
+      >
+        {buttonText}
+      </Button>
     </li>
   );
 };
@@ -25,6 +26,7 @@ ResourceListItem.propTypes = {
   subtitle: PropTypes.string,
   title: PropTypes.string,
   url: PropTypes.string,
+  buttonText: PropTypes.string,
 };
 
 export default ResourceListItem;

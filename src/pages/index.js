@@ -65,7 +65,7 @@ const Page = ({ data }) => {
       </Section>
       <Section>
         <PromoLine
-          title="ВСЯ ВАЖЛИВА ІНФОРМАЦІЯ ДЛЯ ГРОМАДЯН УКРАЇНИ"
+          title="Вся важлива інформація для громадян України"
           titleLink="https://www.withukraine.lt"
           modifier="big"
         >
@@ -73,20 +73,22 @@ const Page = ({ data }) => {
             icon={`arrow-blue`}
             href="https://www.withukraine.lt"
             color={`secondary`}
-            text={`ІНФОРМАЦІЯ`}
             position={`right`}
             target="_blank"
             rel="noopener"
-          />
+          >
+            Інформація
+          </Button>
           <Button
             icon={`arrow-blue`}
             href="https://www.withukraine.lt/help-search"
             color={`secondary`}
-            text={`послуги`}
             position={`right`}
             target="_blank"
             rel="noopener"
-          />
+          >
+            Послуги
+          </Button>
         </PromoLine>
       </Section>
       {/* <Section className="ProtestFormsSection">
@@ -112,9 +114,10 @@ const Page = ({ data }) => {
                     icon={`arrow-blue`}
                     to={item.pathname}
                     color={`transparent`}
-                    text={item.altTitle || item.title}
                     position={`right`}
-                  />
+                  >
+                    {item.altTitle || item.title}
+                  </Button>
                 </li>
               );
             })}

@@ -43,7 +43,8 @@
 
   &--primary {
     background: var(--c__primary);
-    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%),
+      0 1px 5px rgb(0 0 0 / 12%);
     color: var(--c__main-bg);
 
     &::after {
@@ -53,7 +54,8 @@
 
   &--secondary {
     background: var(--c__secondary);
-    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 1px 5px rgb(0 0 0 / 12%);
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%),
+      0 1px 5px rgb(0 0 0 / 12%);
     color: var(--c__primary);
 
     &::after {
@@ -119,6 +121,16 @@
         height: 20px;
         margin-left: 10px;
         mask-image: url("../../images/icons/arrow-blue.svg");
+        width: 20px;
+      }
+    }
+
+    &--edit {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/edit.svg");
         width: 20px;
       }
     }

@@ -7,8 +7,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
-import ResourceList from "../../components/ResourceList";
-import ResourceListItem from "../../components/ResourceList/ResourceListItem";
+import { ResourceList, ResourceListItem } from "../../components/ResourceList";
 import SubPage from "../../components/SubPage";
 import Section from "../../components/Section";
 
@@ -64,6 +63,7 @@ const Page = ({ data }) => {
                       title={resource.title}
                       subtitle={resource.subtitle}
                       url={resource.link}
+                      buttonText={`Šaltinis`}
                     />
                   );
                 })}

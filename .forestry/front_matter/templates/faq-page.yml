@@ -47,8 +47,13 @@ fields:
       required: false
       wysiwyg: true
       schema:
-        format: html-blocks
+        format: markdown
     label: Answer
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
   - name: resources
     type: field_group_list
     fields:
@@ -106,3 +111,5 @@ pages:
 - src/content/refugee-guide/psychological-assistance.md
 - src/content/refugee-guide/public-transport.md
 - src/content/refugee-guide/school-kindergarten.md
+- src/content/refugee-guide/social-support.md
+- src/content/refugee-guide/testas.md

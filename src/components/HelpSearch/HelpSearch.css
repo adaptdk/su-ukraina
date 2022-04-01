@@ -134,7 +134,9 @@
   }
 
   &__refinements {
+    align-items: center;
     display: flex;
+    gap: var(--s__main-padding);
   }
 
   &__sidebar {
@@ -200,6 +202,53 @@
     position: fixed;
     white-space: nowrap;
     width: 1px;
+  }
+
+  .ais-ClearRefinements-button {
+    gap: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .ais-CurrentRefinements {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ais-CurrentRefinements-category {
+    align-items: center;
+    border: 1px solid;
+    border-radius: var(--s__main-border-radius);
+    color: var(--c__primary);
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+  }
+
+  .ais-CurrentRefinements-categoryLabel {
+    padding: 0.05rem 0.25rem;
+    padding-right: 0;
+  }
+
+  .ais-CurrentRefinements-delete {
+    color: inherit;
+    margin: 0;
+    padding: 0.25rem;
+  }
+
+  .ais-CurrentRefinements-item {
+    background: transparent;
+    border: 0;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .ais-CurrentRefinements-label {
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+  }
+
+  .ais-CurrentRefinements-list {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .ais-Hits-item {
@@ -339,11 +388,16 @@
       padding-top: calc(var(--s__main-padding) * 4);
     }
 
+    &__hits-per-page {
+      align-self: initial;
+    }
+
     &__sidebar {
       flex-basis: 25%;
     }
 
     &__top-actions {
+      align-items: center;
       display: flex;
     }
 

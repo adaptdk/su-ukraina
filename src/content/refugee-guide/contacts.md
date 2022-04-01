@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 13
 title_override: Поточні контакти
 title: contacts
 slug: "/contacts"
@@ -14,7 +14,7 @@ adresses: []
 
 Карітас Вільнюської архієпархії (гуманітарна допомога): [Kalvarijų g. 39](https://www.google.com/url?q=https://www.google.com/maps/place/Kalvarij%25C5%25B3%2Bg.%2B39,%2BVilnius%2B09313/@54.6968049,25.2798479,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9403a623c795:0x3fc23c8393bae375!8m2!3d54.6968049!4d25.2820366&sa=D&source=docs&ust=1647605173611724&usg=AOvVaw1qdSCoUaaW8oNqIWTE967E), Vilnius, tel. [+370 673 24 225](tel:+37067324225), el. p. [kulturunamai@vilnius.caritas.lt](mailto:kulturunamai@vilnius.caritas.lt)
 
-Служба підтримки Мальтійського ордену (гуманітарна допомога): [Gedimino pr. 56B](https://www.google.com/url?q=https://www.google.com/maps/place/Gedimino%2Bpr.%2B56B,%2BVilnius%2B01110/@54.6888431,25.2619019,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906&sa=D&source=docs&ust=1647605190372926&usg=AOvVaw2V7SoOEYvEytwYQSHUnfBh), Vilnius, Tel. [+370 600 23 220,](tel:+37060023220) [www.maltieciai.lt](http://www.maltieciai.lt/); [facebook.com/maltieciai](http://facebook.com/maltieciai)
+Служба підтримки Мальтійського ордену (гуманітарна допомога): [Gedimino pr. 56B](https://www.google.com/url?q=https://www.google.com/maps/place/Gedimino%2Bpr.%2B56B,%2BVilnius%2B01110/@54.6888431,25.2619019,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906&sa=D&source=docs&ust=1647605190372926&usg=AOvVaw2V7SoOEYvEytwYQSHUnfBh), Vilnius, Tel. [+370 600 23 220,](tel:+37060023220)[www.maltieciai.lt](http://www.maltieciai.lt/); [facebook.com/maltieciai](http://facebook.com/maltieciai)
 
 Графік роботи: I – VII 08:00–20:00 год. (литовською, англійською та російською мовами).
 

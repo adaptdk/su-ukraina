@@ -55,6 +55,18 @@ export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
   altTitle: `Kaip apsisaugoti nuo sukčių ir dezinformacijos?`,
 };
 
+export const NAVIGATION_ITEM_HELP = {
+  pathname: `/help-search/`,
+  title: `Знайти довідку`,
+  altTitle: `Знайти довідку`,
+};
+
+export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
+  pathname: `/refugee-guide/`,
+  title: `Важлива інформація`,
+  altTitle: `Важлива інформація`,
+};
+
 // Navigation of how can I help page.
 export const NAVIGATION_HOW_CAN_I_HELP = [
   NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA,
@@ -93,4 +105,10 @@ export const NAVIGATION_MAIN_MENU = [
     ...NAVIGATION_ITEM_BE_VIGILANT,
     children: [...NAVIGATION_BE_VIGILANT],
   },
+];
+
+// Navigation of alternative main menu.
+export const NAVIGATION_MAIN_MENU_ALT = [
+  NAVIGATION_ITEM_HELP,
+  NAVIGATION_ITEM_REFUGEE_GUIDE,
 ];

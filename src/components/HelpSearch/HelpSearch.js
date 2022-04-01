@@ -19,6 +19,11 @@ import {
 import qs from "qs";
 import { navigate } from "gatsby";
 
+import {
+  POSSIBLE_SEARCH_LANGS,
+  TRANSLATIONS,
+} from "../../constants/HelpSearch";
+
 import Button from "../Button";
 import Constraint from "../Constraint";
 
@@ -204,87 +209,6 @@ const getHitWithLanguage = (language) => {
   return Hit;
 };
 
-const POSSIBLE_SEARCH_LANGS = [`lt`, `ru`, `uk`];
-
-const TRANSLATIONS = {
-  hit: {
-    _template: {
-      lt: ``,
-      ru: ``,
-      uk: ``,
-    },
-    address: {
-      lt: `Adresas`,
-      ru: `Aдрес`,
-      uk: `Адреса`,
-    },
-    contacts: {
-      lt: `Kontaktai`,
-      ru: `Kонтакты`,
-      uk: `Контакти`,
-    },
-    purpose: {
-      lt: `Aprašymas`,
-      ru: `Дополнительная информация`,
-      uk: `Додаткова інформація`,
-    },
-    region: {
-      lt: `Vieta`,
-      ru: `Место нахождения`,
-      uk: `Місцезнаходження`,
-    },
-    workingHours: {
-      lt: `Darbo laikas`,
-      ru: `Время работы`,
-      uk: `Час роботи`,
-    },
-  },
-  langSwitcher: {
-    language: {
-      lt: `Kalba`,
-      ru: `Язык`,
-      uk: `Мова`,
-    },
-  },
-  refinements: {
-    languages: {
-      lt: `Kalba`,
-      ru: `Язык`,
-      uk: `Мова`,
-    },
-    region: {
-      lt: `Vieta`,
-      ru: `Место нахождения`,
-      uk: `Місцезнаходження`,
-    },
-    typeOfHelp: {
-      lt: `Pagalbos rūšis`,
-      ru: `Тип помощи`,
-      uk: `Вид допомоги`,
-    },
-    panelTitle: {
-      lt: `Filtrai`,
-      ru: `Фильтры`,
-      uk: `Фільтри`,
-    },
-    doFilter: {
-      lt: `Filtruoti`,
-      ru: `Фильтровать`,
-      uk: `Фільтрувати`,
-    },
-  },
-  searchBox: {
-    lt: `Paieška`,
-    ru: `Поиск`,
-    uk: `Пошук`,
-  },
-  noResults: {
-    lt: `Paieškai {query} rezultatų rasti nepavyko.`,
-    ru: `По запросу {query} ничего не нашлось.`,
-    uk: `Не знайдено результатів для {query}.`,
-  },
-};
-
 const LangSwitcher = ({ resultsLang, handleSearchLangChange, name }) => {
   return (
     <div className="HelpSearch__LangSwitcher">
@@ -333,13 +257,11 @@ const urlToSearchState = ({ search }) => {
   return qs.parse(search.slice(1));
 };
 
-const HelpSearch = () => {
+const HelpSearch = ({ defaultResultsLang }) => {
   const [searchState, setSearchState] = React.useState(
     typeof window === `undefined` ? {} : urlToSearchState(location)
   );
-  const [resultsLang, setResultsLang] = React.useState(
-    POSSIBLE_SEARCH_LANGS[0]
-  );
+  const [resultsLang, setResultsLang] = React.useState(defaultResultsLang);
 
   const debouncedSetStateRef = React.useRef(null);
 
@@ -416,7 +338,23 @@ const HelpSearch = () => {
           <div className="HelpSearch__body">
             <div className="HelpSearch__top-actions">
               <div className="HelpSearch__refinements">
-                <CurrentRefinements />
+                <CurrentRefinements
+                  transformItems={(items) => {
+                    return items.map((item) => {
+                      return {
+                        ...item,
+                        label: `${
+                          TRANSLATIONS.refinements[
+                            item.attribute
+                              .replace(/tags_../, `typeOfHelp`)
+                              .replace(/region_../, `region`)
+                              .replace(/languages_../, `languages`)
+                          ][resultsLang]
+                        }: `,
+                      };
+                    });
+                  }}
+                />
                 <ClearRefinements
                   translations={{
                     reset: (
@@ -436,7 +374,7 @@ const HelpSearch = () => {
                             />
                           </g>
                         </svg>
-                        Clear filters
+                        {TRANSLATIONS.refinements.clearFilters[resultsLang]}
                       </>
                     ),
                   }}
@@ -448,15 +386,15 @@ const HelpSearch = () => {
                   className="container-option"
                   items={[
                     {
-                      label: `16 hits per page`,
+                      label: `16 ${TRANSLATIONS.hitsPerPage[resultsLang]}`,
                       value: 16,
                     },
                     {
-                      label: `32 hits per page`,
+                      label: `32 ${TRANSLATIONS.hitsPerPage[resultsLang]}`,
                       value: 32,
                     },
                     {
-                      label: `64 hits per page`,
+                      label: `64 ${TRANSLATIONS.hitsPerPage[resultsLang]}`,
                       value: 64,
                     },
                   ]}
@@ -543,8 +481,9 @@ const HelpSearch = () => {
               className="HelpSearch__filters-trigger-button"
               color="secondary"
               pretend
-              text={TRANSLATIONS.refinements.panelTitle[resultsLang]}
-            />
+            >
+              {TRANSLATIONS.refinements.panelTitle[resultsLang]}
+            </Button>
           </label>
           <label
             className="HelpSearch__sidebar-overlay"
@@ -575,8 +514,9 @@ const HelpSearch = () => {
                   className="HelpSearch__filters-close-trigger-button"
                   color="primary"
                   pretend
-                  text={TRANSLATIONS.refinements.doFilter[resultsLang]}
-                />
+                >
+                  {TRANSLATIONS.refinements.doFilter[resultsLang]}
+                </Button>
               </label>
             </div>
           </div>
@@ -584,6 +524,10 @@ const HelpSearch = () => {
       </InstantSearch>
     </div>
   );
+};
+
+HelpSearch.propTypes = {
+  defaultResultsLang: PropTypes.string.isRequired,
 };
 
 export default HelpSearch;

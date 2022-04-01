@@ -92,6 +92,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `refugee-guide`,
+        path: `${__dirname}/src/content/refugee-guide`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `uploads`,
         path: `${__dirname}/src/content/uploads`,
       },
@@ -147,5 +154,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
+    {
+      resolve: `remove-empty-fields`,
+      options: {
+        fieldsToRemove: [`image`],
+      },
+    },
   ],
 };
