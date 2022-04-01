@@ -93,7 +93,7 @@ const Page = ({ data }) => {
               );
             })
           ) : (
-            <p>Numatomų renginių kolkas nėra.</p>
+            <p>Numatomų renginių kol kas nėra.</p>
           )}
         </EventCardList>
       </Constraint>
