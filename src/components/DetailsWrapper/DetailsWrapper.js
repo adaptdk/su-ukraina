@@ -8,7 +8,7 @@ const DetailsWrapper = ({ tag, summary, children }) => {
   return (
     <details className="DetailsWrapper">
       <summary className="DetailsWrapper__summary-wrapper">
-        <Tag className="DetailsWrapper__summary">{summary}</Tag>
+        <Tag className="DetailsWrapper__summary-title">{summary}</Tag>
       </summary>
       {children}
     </details>

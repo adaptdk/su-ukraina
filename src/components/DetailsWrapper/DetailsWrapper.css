@@ -1,33 +1,30 @@
 .DetailsWrapper {
-  & > summary {
-    list-style: none;
-  }
-
-  & > summary::marker,
-  & > summary::-webkit-details-marker {
-    display: none;
-  }
-
-  &__summary {
+  &__summary-wrapper {
+    align-items: center;
     cursor: pointer;
-    padding-left: 2.2rem;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: var(--s__main-padding) 0;
+
+    &::after {
+      border-color: var(--c__primary);
+      border-style: solid;
+      border-width: 0.15em 0.15em 0 0;
+      content: "";
+      display: inline-block;
+      height: 0.45em;
+      left: -0.5em;
+      margin-left: 2rem;
+      position: relative;
+      transform: rotate(45deg) translateY(50%);
+      transform-origin: center;
+      transition: transform 0.2s ease;
+      vertical-align: middle;
+      width: 0.45em;
+    }
   }
 
-  &__summary::after {
-    border-color: transparent transparent transparent black;
-    border-style: solid;
-    border-width: 0.4rem;
-    content: "";
-    left: 1rem;
-    position: absolute;
-    top: 50%;
-    transform: rotate(0) translateY(-50%);
-    transform-origin: 0.2rem 50%;
-    transition: 0.25s transform ease;
-  }
-
-  &[open] &__summary::after {
-    transform: rotate(90deg) translateX(-50%);
+  &[open] &__summary-wrapper::after {
+    transform: rotate(135deg);
   }
 }
