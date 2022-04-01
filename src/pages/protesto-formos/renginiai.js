@@ -32,17 +32,21 @@ const Page = ({ data }) => {
 
   const currentDate = new Date();
   const upcomingEvents = [];
-  const previousEvents = events.map((event) => {
+  const previousEvents = [];
+
+  events.forEach((event) => {
     const startDate = new Date(event.startDate);
+
     if (event.endDate) {
       const endDate = new Date(event.endDate);
       if (currentDate > endDate) {
-        return event;
+        previousEvents.push(event);
       } else upcomingEvents.push(event);
     } else if (currentDate > startDate) {
-      return event;
+      previousEvents.push(event);
     } else upcomingEvents.push(event);
   });
+
   return (
     <Layout pagePath="/protesto-formos/renginiai/">
       {(!content || !content.title) && <Title>Renginiai</Title>}
@@ -64,18 +68,15 @@ const Page = ({ data }) => {
           />
           <Title>{content.title}</Title>
           <h1>{content.title}</h1>
-          {upcomingEvents.length ? (
-            <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          ) : (
-            <p>Šiuo metu nėra jokių artėjančių renginių.</p>
-          )}
+          <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 
       <Constraint>
+        <h2>Organizuojami renginiai</h2>
         <EventCardList>
-          {upcomingEvents.length !== 0 &&
+          {upcomingEvents.length ? (
             upcomingEvents.map((event, i) => {
               return (
                 <EventCard
@@ -90,11 +91,14 @@ const Page = ({ data }) => {
                   url={event.eventUrl}
                 />
               );
-            })}
+            })
+          ) : (
+            <p>Numatomų renginių kolkas nėra.</p>
+          )}
         </EventCardList>
       </Constraint>
 
-      {previousEvents.length && (
+      {!!previousEvents.length && (
         <Constraint>
           <DetailsWrapper tag="h2" summary="Praėję renginiai">
             <EventCardList>
@@ -102,6 +106,7 @@ const Page = ({ data }) => {
                 return (
                   <EventCard
                     key={i}
+                    className="EventCard--previous"
                     type={event.eventType}
                     title={event.title}
                     organizer={event.eventOrganizer}
