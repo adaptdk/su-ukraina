@@ -55,6 +55,7 @@ fields:
     - image-block
     - company
     - address
+    - text-block
     config:
       min: 
       max: 
