@@ -50,7 +50,10 @@ questions:
   image: "../uploads/623b6f26053b8a9b64d91c55_-p-1080.jpeg"
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    title: Пенсії соціальної допомоги для українців
+    image: "../uploads/623b6f26053b8a9b64d91c55_-p-1080.jpeg"
 - title: Соціальні послуги
   answer: ''
   resources: []
