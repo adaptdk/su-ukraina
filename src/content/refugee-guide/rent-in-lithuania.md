@@ -5,7 +5,7 @@ title: rent-in-lithuania
 slug: "/rent-in-lithuania"
 questions:
 - title: Середні ціни на оренду у великих містах
-  answer: Середні ціни на оренду в житлових районах Вільнюса (2022 р. до н.е.).
+  answer: "<p>Середні ціни на оренду в житлових районах Вільнюса (2022 р. до н.е.).</p>"
   content_blocks:
   - template: image-block
     image: "../uploads/rent-table-1.jpg"
@@ -27,44 +27,37 @@ questions:
   contacts: []
   adresses: []
 - title: Орендувати житло самостійно. Як знайти житло?
-  answer: |-
-    **На короткий час**
-
-    Якщо у вас немає де зупинитися в Литві, поки ви шукаєте довгострокове житло, після прибуття можна скористатися послугами короткострокової оренди, замовивши проживання в готелях або апартаментах через www.airbnb.com або платформу www.booking.com
-
-    **Надовго**
-
-    При самостійному пошуку житла для довгострокової оренди найбільш продуктивним є пошук оголошень в інтернеті і безпосередній контакт з зазначеною контактною особою.
-
-    У пошуках найбільш поширеними і результативними є 2 способи пошуку:
-
-    1) Пошук на популярних сайтах оголошень NT:
-
-    [https://ru.aruodas.lt](https://ru.aruodas.lt "https://ru.aruodas.lt")
-
-    [https://domoplius.lt/ru/](https://ru.aruodas.lt "https://ru.aruodas.lt")
-
-    [https://ru.skelbiu.lt](https://ru.aruodas.lt "https://ru.aruodas.lt")
-
-    2) Пошук у групі Facebook «[https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&sa=D&source=docs&ust=1648811400237652&usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD](https://ru.aruodas.lt "https://ru.aruodas.lt")» (литовською мовою, об 'єднує понад 130 тисяч осіб). Тут найчастіше розміщуються останні пропозиції оренди квартир, які часто навіть не виходять на публіку. Часто орендарі розміщують свої пошукові запити та отримують пропозиції оренди індивідуально. Крім того, у Facebook з' явилася група «[Foreigners in Vilnius](https://www.facebook.com/groups/209733365824002/)».
-
-    Інші групи Facebook:
-
-    **Каунас:**
-
-    [Butu nuoma Kaune | Kaunas Housing, Rooms, Flats, Apartments, Sublets](https://www.facebook.com/groups/butunuomakaune)
-
-    **Клайпеда:**
-
-    [Butu nuoma klaipeda](https://www.facebook.com/groups/501175606582292)
-
-    **Важливо (!):**
-
-    \- Ні в якому разі не переказуйте гроші за житло, яке ви хочете, до тих пір, поки ви не перевірили його і не підписали договір оренди.
-
-    \- Перед тим, як говорити про огляд цікавого житла, обов 'язково з' ясуйте, чи власники будуть схильні оголошувати місце проживання (Іноді за декларацію додатково стягується податок у розмірі 50 євро/місяць). Це важливо для того, щоб отримати доступ до всіх послуг, наданих муніципалітетом.
-
-    \- Інформуйте ще до огляду, якщо у вас є домашні тварини (оскільки не всі власники приймають домашніх тварин в орендовані квартири), скільки людей збираються жити, чи є у вас неповнолітні діти і в якому віці ви хочете взяти в оренду.
+  answer: <p><strong>На короткий час</strong></p><p>Якщо у вас немає де зупинитися
+    в Литві, поки ви шукаєте довгострокове житло, після прибуття можна скористатися
+    послугами короткострокової оренди, замовивши проживання в готелях або апартаментах
+    через www.airbnb.com або платформу www.booking.complatforms.</p><p><strong>Надовго</strong></p><p>При
+    самостійному пошуку житла для довгострокової оренди найбільш продуктивним є пошук
+    оголошень в інтернеті і безпосередній контакт з зазначеною контактною особою.</p><p>У
+    пошуках найбільш поширеними і результативними є 2 способи пошуку:</p><p>1) Пошук
+    на популярних сайтах оголошень NT:</p><p><a href="https://ru.aruodas.lt" title="https://ru.aruodas.lt"
+    target="_blank">https://ru.aruodas.lt</a></p><p><a href="https://domoplius.lt/ru/"
+    title="https://domoplius.lt/ru/" target="_blank">https://domoplius.lt/ru/</a></p><p><a
+    href="https://ru.skelbiu.lt" title="https://ru.skelbiu.lt" target="_blank">https://ru.skelbiu.lt</a></p><p>2)
+    Пошук у групі Facebook «<a href="https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&amp;sa=D&amp;source=docs&amp;ust=1648811400237652&amp;usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD"
+    title="https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&amp;sa=D&amp;source=docs&amp;ust=1648811400237652&amp;usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD"
+    target="_blank">https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&amp;sa=D&amp;source=docs&amp;ust=1648811400237652&amp;usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD</a>»
+    (литовською мовою, об 'єднує понад 130 тисяч осіб). Тут найчастіше розміщуються
+    останні пропозиції оренди квартир, які часто навіть не виходять на публіку. Часто
+    орендарі розміщують свої пошукові запити та отримують пропозиції оренди індивідуально.
+    Крім того, у Facebook з' явилася група «<a href="https://www.facebook.com/groups/209733365824002/"
+    target="_blank">Foreigners in Vilnius</a>».<br></p><p>Інші групи Facebook:</p><p><strong>Каунас:</strong></p><p><a
+    href="https://www.facebook.com/groups/butunuomakaune" target="_blank">Butu nuoma
+    Kaune | Kaunas Housing, Rooms, Flats, Apartments, Sublets</a></p><p><strong>Клайпеда:</strong></p><p><a
+    href="https://www.facebook.com/groups/501175606582292" target="_blank">Butu nuoma
+    klaipeda</a></p><p><strong>Важливо (!):</strong></p><p>- Ні в якому разі не переказуйте
+    гроші за житло, яке ви хочете, до тих пір, поки ви не перевірили його і не підписали
+    договір оренди.</p><p>- Перед тим, як говорити про огляд цікавого житла, обов
+    'язково з' ясуйте, чи власники будуть схильні оголошувати місце проживання (Іноді
+    за декларацію додатково стягується податок у розмірі 50 євро/місяць). Це важливо
+    для того, щоб отримати доступ до всіх послуг, наданих муніципалітетом.</p><p>-
+    Інформуйте ще до огляду, якщо у вас є домашні тварини (оскільки не всі власники
+    приймають домашніх тварин в орендовані квартири), скільки людей збираються жити,
+    чи є у вас неповнолітні діти і в якому віці ви хочете взяти в оренду.</p><p><br></p>
   content_blocks: []
   image: ''
   resources: []
