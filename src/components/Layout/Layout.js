@@ -5,6 +5,7 @@ import { useLocation } from "@reach/router";
 import Header from "../Header";
 import Footer from "../Footer";
 import ContactForm from "../ContactForm";
+import RefugeeForm from "../RefugeeForm";
 import Constraint from "../Constraint";
 import Section from "../Section";
 import PromoLine from "../PromoLine";
@@ -20,7 +21,19 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
     `pagalbos-paieska`,
     `refugee-guide`,
     `help-search`,
+    `privacy-policy`,
   ].includes(splitPathname[1]);
+
+  function RenderForm(props) {
+    const refugeeGuidePath = `refugee-guide`;
+    const helpSearchPath = `help-search`;
+    const path = location.pathname;
+
+    if (path.includes(refugeeGuidePath) || path.includes(helpSearchPath)) {
+      return <RefugeeForm returnDestination={pagePath} />;
+    }
+    return <ContactForm returnDestination={pagePath} />;
+  }
 
   return (
     <div className="Layout">
@@ -56,7 +69,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
 
       <Section className="ContactFormSection" bgColor="blue">
         <Constraint>
-          <ContactForm returnDestination={pagePath} />
+          <RenderForm />,
         </Constraint>
       </Section>
 
@@ -69,6 +82,7 @@ Layout.propTypes = {
   children: PropTypes.node,
   noStickyHeader: PropTypes.bool,
   pagePath: PropTypes.string,
+  currentPath: PropTypes.string,
 };
 
 export default Layout;

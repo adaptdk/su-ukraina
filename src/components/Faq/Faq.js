@@ -135,12 +135,6 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
           <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
 
           {currentItemData.questions?.map((question, i) => {
-            const image = question.image && (
-              <GatsbyImage
-                image={getImage(question.image)}
-                alt="Image inside tab"
-              />
-            );
             const tabId = `tab-${i}`;
 
             return (
@@ -156,8 +150,38 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
                     dangerouslySetInnerHTML={{ __html: question.answer }}
                   />
 
-                  {!!image && (
-                    <div className="Faq__question__image">{image}</div>
+                  {!!question.content_blocks && (
+                    <div className="ContentBlocks">
+                      {question.content_blocks?.map((block, j) => {
+                        const blockClass = block.template
+                          ? `ContentBlock ContentBlock--${block.template}`
+                          : `ContentBlock`;
+
+                        const image = block.image && (
+                          <GatsbyImage
+                            image={getImage(block.image)}
+                            alt={block.title}
+                          />
+                        );
+
+                        return (
+                          <div className={blockClass}>
+                            {!!block.content && (
+                              <div
+                                className="ContentBlock__content"
+                                dangerouslySetInnerHTML={{
+                                  __html: block.content,
+                                }}
+                              />
+                            )}
+
+                            {!!image && (
+                              <div className="ContentBlock__image">{image}</div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
                   )}
 
                   {!!question.resources && (
@@ -219,6 +243,7 @@ Faq.propTypes = {
       PropTypes.shape({
         title: PropTypes.string,
         answer: PropTypes.string,
+        image: PropTypes.object,
         resources: PropTypes.arrayOf(
           PropTypes.shape({
             title: PropTypes.string,
