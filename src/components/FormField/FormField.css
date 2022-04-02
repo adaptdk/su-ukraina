@@ -14,7 +14,7 @@
     }
   }
 
-  input,
+  input:not([type="checkbox"]),
   textarea,
   select {
     appearance: none;

@@ -21,19 +21,17 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
     `pagalbos-paieska`,
     `refugee-guide`,
     `help-search`,
+    `privacy-policy`,
   ].includes(splitPathname[1]);
 
   function RenderForm(props) {
     const refugeeGuidePath = `refugee-guide`;
     const helpSearchPath = `help-search`;
     const path = location.pathname;
-    console.log(location);
 
     if (path.includes(refugeeGuidePath) || path.includes(helpSearchPath)) {
-      console.log("caching");
       return <RefugeeForm returnDestination={pagePath} />;
     }
-    console.log("nocache");
     return <ContactForm returnDestination={pagePath} />;
   }
 

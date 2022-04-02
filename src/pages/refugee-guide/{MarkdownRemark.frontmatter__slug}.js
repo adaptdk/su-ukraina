@@ -56,7 +56,15 @@ Template.propTypes = {
         PropTypes.shape({
           title: PropTypes.string,
           answer: PropTypes.string,
-          image: PropTypes.string,
+          content_blocks: PropTypes.arrayOf(
+            PropTypes.shape({
+              title: PropTypes.string,
+              content: PropTypes.string,
+              template: PropTypes.string,
+              image: PropTypes.object,
+            })
+          ),
+          image: PropTypes.object,
           resources: PropTypes.arrayOf(
             PropTypes.shape({
               title: PropTypes.string,
@@ -86,9 +94,14 @@ export const pageQuery = graphql`
         questions {
           title
           answer
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 800, placeholder: NONE)
+          content_blocks {
+            template
+            title
+            content
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 800, placeholder: NONE)
+              }
             }
           }
           resources {

@@ -76,7 +76,7 @@ const RefugeeForm = ({ returnDestination = `/` }) => {
         ) : (
           <form
             method="POST"
-            action={`https://api.suukraina.lt/v1/submit?destination=${encodeURIComponent(
+            action={`https://api.suukraina.lt/v1/submit/ua?destination=${encodeURIComponent(
               returnDestination
             )}`}
             onSubmit={curriedHandleSubmit}
@@ -112,7 +112,7 @@ const RefugeeForm = ({ returnDestination = `/` }) => {
               />
             </FormField>
 
-            <div className="form-field form-field--type-checkbox">
+            <div className="FormField form-field--type-checkbox">
               <label htmlFor="privacy-policy-accepted" tabIndex="0">
                 <input
                   type="checkbox"
@@ -121,7 +121,7 @@ const RefugeeForm = ({ returnDestination = `/` }) => {
                   required
                 />
                 Я прочитав і погоджуюсь{` `}
-                <a href="/privatumo-politika" title="політика конфіденційності">
+                <a href="/privacy-policy" title="політика конфіденційності">
                   політика конфіденційності
                 </a>
               </label>
