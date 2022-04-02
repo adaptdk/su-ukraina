@@ -1,5 +1,5 @@
 ---
-weight: 140
+weight: 150
 title_override: ГУМАНІТАРНА ДОПОМОГА В ЛИТВІ
 title: humanitarian-help
 slug: "/humanitarian-help"
