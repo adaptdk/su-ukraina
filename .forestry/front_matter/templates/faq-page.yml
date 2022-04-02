@@ -49,6 +49,16 @@ fields:
       schema:
         format: markdown
     label: Answer
+  - name: content_blocks
+    type: blocks
+    template_types:
+    - image-block
+    - company
+    - address
+    config:
+      min: 
+      max: 
+    label: Content blocks
   - name: image
     type: file
     config:
