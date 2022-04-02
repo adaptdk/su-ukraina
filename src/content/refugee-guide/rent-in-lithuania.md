@@ -105,6 +105,16 @@ questions:
   resources: []
   contacts: []
   adresses: []
+- title: Скільки грошей потрібно для оренди житла? Стандартні умови оренди.
+  answer: "<p>Найчастіше стандартні умови оренди такі:</p>"
+  content_blocks:
+  - template: image-block
+    image: "../uploads/rent-table-4.jpg"
+    title: Rent table 4
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 
