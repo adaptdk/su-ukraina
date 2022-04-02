@@ -5,7 +5,7 @@ title: rent-in-lithuania
 slug: "/rent-in-lithuania"
 questions:
 - title: Середні ціни на оренду у великих містах
-  answer: Середні ціни на оренду в житлових районах Вільнюса (2022 р. до н.е.).
+  answer: "<p>Середні ціни на оренду в житлових районах Вільнюса (2022 р. до н.е.).</p>"
   content_blocks:
   - template: image-block
     image: "../uploads/rent-table-1.jpg"
