@@ -30,7 +30,10 @@ questions:
   image: "../uploads/623b6ee261447c6ff58196cc_-p-1080.jpeg"
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    title: Компенсація частини орендної оплати житла для українців
+    image: "../uploads/623b6ee261447c6ff58196cc_-p-1080.jpeg"
 - title: Одноразова допомога для українців при поселенні
   answer: ''
   resources: []
