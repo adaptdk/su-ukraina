@@ -95,12 +95,7 @@ const RefugeeForm = ({ returnDestination = `/` }) => {
             </FormField>
 
             <FormField labelFor="phone" label="Телефон" type="text">
-              <PhoneInput
-                id="phone"
-                name="phone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                required
-              />
+              <PhoneInput id="phone" name="phone" pattern="" required />
             </FormField>
 
             <FormField labelFor="email" label="Е. пошта" type="email">
