@@ -60,21 +60,30 @@ questions:
   image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
+    title: Соціальні послуги
 - title: Встановлення інвалідності. Що важливо знати українцям?
   answer: ''
   resources: []
   image: "../uploads/623b6f80a01bddbc26d36804_-p-1080.jpeg"
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    title: Встановлення інвалідності.
+    image: "../uploads/623b6f80a01bddbc26d36804_-p-1080.jpeg"
 - title: Допомога, виплати та послуги для людей із інвалідністю
   answer: ''
   resources: []
   image: "../uploads/623b6f9ec26286581d28d6e6_-p-1080.jpeg"
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    image: "../uploads/623b6f9ec26286581d28d6e6_-p-1080.jpeg"
+    title: Допомога, виплати та послуги для людей із інвалідністю
 - title: Яка допомога належить українцям, якщо померла близька людина?
   answer: ''
   resources: []
