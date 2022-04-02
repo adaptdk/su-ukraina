@@ -40,7 +40,10 @@ questions:
   image: "../uploads/623b6f09d333773280345d97_-p-1080.jpeg"
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    title: Одноразова допомога для українців при поселенні
+    image: "../uploads/623b6f09d333773280345d97_-p-1080.jpeg"
 - title: Пенсії соціальної допомоги для українців
   answer: ''
   resources: []
