@@ -95,7 +95,12 @@ const RefugeeForm = ({ returnDestination = `/` }) => {
             </FormField>
 
             <FormField labelFor="phone" label="Телефон" type="text">
-              <PhoneInput id="phone" name="phone" />
+              <PhoneInput
+                id="phone"
+                name="phone"
+                pattern="^\+\d{6,14}$"
+                placeholder="+37011111111"
+              />
             </FormField>
 
             <FormField labelFor="email" label="Е. пошта" type="email">
