@@ -90,14 +90,20 @@ questions:
   image: "../uploads/623b6fc928f79c4ac84b997e_-p-1080.jpeg"
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    image: "../uploads/623b6fc928f79c4ac84b997e_-p-1080.jpeg"
+    title: Яка допомога належить українцям, якщо померла близька людина?
 - title: Допомога українським військовим біженцям за особистим статусом
   answer: ''
   resources: []
   image: "../uploads/623b72d4d333774c1f34800a_-1-p-1080.jpeg"
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    title: Допомога українським військовим біженцям за особистим статусом
+    image: "../uploads/623b72d4d333774c1f34800a_-1-p-1080.jpeg"
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
