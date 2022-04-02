@@ -49,6 +49,17 @@ fields:
       schema:
         format: markdown
     label: Answer
+  - name: content_blocks
+    type: blocks
+    template_types:
+    - image-block
+    - company
+    - address
+    - text-block
+    config:
+      min: 
+      max: 
+    label: Content blocks
   - name: image
     type: file
     config:
@@ -110,6 +121,7 @@ pages:
 - src/content/refugee-guide/pets.md
 - src/content/refugee-guide/psychological-assistance.md
 - src/content/refugee-guide/public-transport.md
+- src/content/refugee-guide/rent-in-lithuania.md
 - src/content/refugee-guide/school-kindergarten.md
 - src/content/refugee-guide/social-support.md
 - src/content/refugee-guide/testas.md
