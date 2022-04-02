@@ -17,10 +17,13 @@ questions:
 - title: Грошове соціальне забезпечення для українців
   answer: ''
   resources: []
-  image: "../uploads/623b6e768547e47e25346795_-p-1080.jpeg"
+  image: ''
   contacts: []
   adresses: []
-  content_blocks: []
+  content_blocks:
+  - template: image-block
+    image: "../uploads/623b6e768547e47e25346795_-p-1080.jpeg"
+    title: ''
 - title: Компенсація частини орендної оплати житла для українців
   answer: ''
   resources: []
