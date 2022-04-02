@@ -23,7 +23,7 @@ questions:
   content_blocks:
   - template: image-block
     image: "../uploads/623b6e768547e47e25346795_-p-1080.jpeg"
-    title: ''
+    title: Грошове соціальне забезпечення для українців
 - title: Компенсація частини орендної оплати житла для українців
   answer: ''
   resources: []
