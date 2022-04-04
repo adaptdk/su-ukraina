@@ -8,7 +8,7 @@ import Button from "../../components/Button";
 import "./EventCard.css";
 
 const EventCard = ({
-  className,
+  className = ``,
   title,
   type,
   organizer,
@@ -44,7 +44,7 @@ const EventCard = ({
   };
 
   return (
-    <div className={`EventCard ${className ? className : ``}`}>
+    <div className={`EventCard ${className}`}>
       <div className="EventCard__content-container">
         {type && (
           <div className="EventCard__event-type-wrapper">
