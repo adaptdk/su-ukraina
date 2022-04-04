@@ -20,7 +20,7 @@ const Partner = ({ title, logo, website }) => {
 
 Partner.propTypes = {
   title: PropTypes.node,
-  logo: PropTypes.node,
+  logo: PropTypes.object,
   website: PropTypes.node,
 };
 
