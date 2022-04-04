@@ -27,6 +27,7 @@ fields:
     - informacinis
     - institucinis
     - technologinis
+    - turinio
     source:
       type: simple
       section: 
