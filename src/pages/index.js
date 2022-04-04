@@ -1,5 +1,4 @@
 import * as React from "react";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
 import { Title, Meta } from "react-head";
 import { graphql } from "gatsby";
@@ -14,6 +13,7 @@ import LinkCollectionWithImage from "../components/LinkCollectionWithImage";
 import PartnerList from "../components/PartnerList/PartnerList";
 import Partner from "../components/Partner/Partner";
 import Button from "../components/Button";
+import { StaticImage } from "gatsby-plugin-image";
 
 // Constants.
 import { NAVIGATION_BE_VIGILANT } from "../constants/Navigation";
@@ -26,6 +26,31 @@ const Page = ({ data }) => {
   const partners = data.partners.edges.map((edge) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
+
+  const infoPartners = [];
+  const contentPartners = [];
+  const techPartners = [];
+  const institutionalPartners = [];
+
+  if (partners.length > 0) {
+    partners.forEach((partner) => {
+      const type = partner.category;
+
+      if (type === `informacinis`) {
+        return infoPartners.push(partner);
+      }
+      if (type === `institucinis`) {
+        return institutionalPartners.push(partner);
+      }
+      if (type === "technologinis") {
+        console.log("tech");
+        return techPartners.push(partner);
+      }
+      if (type === `turinio`) {
+        return contentPartners.push(partner);
+      }
+    });
+  }
 
   return (
     <Layout>
@@ -128,27 +153,79 @@ const Page = ({ data }) => {
       {partners.length > 0 && (
         <Section className="PartnerSection">
           <Constraint>
-            <h2 className="Section__title">Prie turinio kūrimo prisideda</h2>
-            <PartnerList>
-              {partners.map((partner, i) => {
-                const logo = partner.logo && (
-                  <GatsbyImage
-                    image={getImage(partner.logo)}
-                    alt={partner.title}
-                    height="80"
-                  />
-                );
+            <h2 className="Section__title">Puslapio partneriai</h2>
 
-                return (
-                  <Partner
-                    key={i}
-                    title={partner.title}
-                    logo={logo}
-                    website={partner.website}
-                  />
-                );
-              })}
-            </PartnerList>
+            {infoPartners.length > 0 && (
+              <div className="PartnerSection__category">
+                <h3>Informaciniai partneriai</h3>
+                <PartnerList>
+                  {infoPartners.map((partner, i) => {
+                    return (
+                      <Partner
+                        key={i}
+                        title={partner.title}
+                        logo={partner.logo}
+                        website={partner.website}
+                      />
+                    );
+                  })}
+                </PartnerList>
+              </div>
+            )}
+
+            {contentPartners.length > 0 && (
+              <div className="PartnerSection__category">
+                <h3>Turinio partneriai</h3>
+                <PartnerList>
+                  {contentPartners.map((partner, i) => {
+                    return (
+                      <Partner
+                        key={i}
+                        title={partner.title}
+                        logo={partner.logo}
+                        website={partner.website}
+                      />
+                    );
+                  })}
+                </PartnerList>
+              </div>
+            )}
+
+            {techPartners.length > 0 && (
+              <div className="PartnerSection__category">
+                <h3>Technologiniai partneriai</h3>
+                <PartnerList>
+                  {techPartners.map((partner, i) => {
+                    return (
+                      <Partner
+                        key={i}
+                        title={partner.title}
+                        logo={partner.logo}
+                        website={partner.website}
+                      />
+                    );
+                  })}
+                </PartnerList>
+              </div>
+            )}
+
+            {institutionalPartners.length > 0 && (
+              <div className="PartnerSection__category">
+                <h3>Instituciniai partneriai</h3>
+                <PartnerList>
+                  {institutionalPartners.map((partner, i) => {
+                    return (
+                      <Partner
+                        key={i}
+                        title={partner.title}
+                        logo={partner.logo}
+                        website={partner.website}
+                      />
+                    );
+                  })}
+                </PartnerList>
+              </div>
+            )}
           </Constraint>
         </Section>
       )}
@@ -165,6 +242,7 @@ export const query = graphql`
             frontmatter {
               title
               website
+              category
               logo {
                 childImageSharp {
                   gatsbyImageData(height: 100, placeholder: NONE)
@@ -188,6 +266,7 @@ Page.propTypes = {
               frontmatter: PropTypes.shape({
                 title: PropTypes.string,
                 website: PropTypes.string,
+                category: PropTypes.string,
                 logo: PropTypes.object,
               }),
             }),
