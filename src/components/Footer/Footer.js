@@ -79,9 +79,7 @@ const Footer = () => {
             2022 | <span title="Героям слава!">Слава Україні!</span>
           </p>
           <p className="Footer__partners">
-            <span className="Footer__partners-intro">
-              Prie puslapio prisidėjo:
-            </span>
+            <span className="Footer__partners-intro">Puslapį koordinuoja:</span>
             {` `}
             <a
               href="https://adaptagency.com/adapt-lithuania"
@@ -98,10 +96,6 @@ const Footer = () => {
                 width="49"
                 height="49"
               />
-            </a>
-            {` `}
-            <a href="https://shift4.lt" rel="noopener" target="_blank">
-              <img src={Shift4} alt="Shift4 logo" width="93" height="40" />
             </a>
           </p>
         </div>
