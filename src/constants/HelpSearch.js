@@ -37,6 +37,11 @@ export const TRANSLATIONS = {
       [LANG_UK]: `Час роботи`,
     },
   },
+  hitsPerPage: {
+    [LANG_LT]: `puslapyje`,
+    [LANG_RU]: `в страницу`,
+    [LANG_UK]: `у сторінці`,
+  },
   langSwitcher: {
     language: {
       [LANG_LT]: `Kalba`,
@@ -45,6 +50,11 @@ export const TRANSLATIONS = {
     },
   },
   refinements: {
+    clearFilters: {
+      [LANG_LT]: `Išvalyti filtrus`,
+      [LANG_RU]: `Очистить фильтры`,
+      [LANG_UK]: `Очистіть фільтри`,
+    },
     languages: {
       [LANG_LT]: `Kalba`,
       [LANG_RU]: `Язык`,

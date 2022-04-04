@@ -1,5 +1,5 @@
 ---
-weight: 3
+weight: 40
 title_override: ОБМІН ВАЛЮТИ
 title: currency-exchange
 slug: "/currency-exchange"
@@ -37,11 +37,10 @@ questions:
     resources: []
   - title: Top exchange
     answer:
-      '<h3><strong>TOP EXCHANGE</strong></h3><p>Українські гривні обмінюються
-      на євро за курсом: 45,00 гривні - 1 євро.</p><p>Кількість валюти, яку потрібно
-      обміняти, не обмежена. До 3000 євро додаткових документів не потрібно.</p><p><a
-      href="https://topexchange.eu/index_ru.html">Інформація російською мовою.</a></p><p></p><p>ТОП
-      обмінних пунктів у Вільнюсі контакти:</p><p><a href="https://www.google.com/maps/place/Gele%C5%BEinkelio+g.+6,+Vilnius+02100,+Lithuania/@54.6696606,25.2804714,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9442151dc5f3:0x986c2670626be9dc!8m2!3d54.6696606!4d25.2826601">Вул.Гележинкельо
+      '<p>Українські гривні обмінюються на євро за курсом: 45,00 гривні - 1 євро.</p><p>Кількість
+      валюти, яку потрібно обміняти, не обмежена. До 3000 євро додаткових документів
+      не потрібно.</p><p><a href="https://topexchange.eu/index_ru.html">Інформація російською
+      мовою.</a></p><p></p><p>ТОП обмінних пунктів у Вільнюсі контакти:</p><p><a href="https://www.google.com/maps/place/Gele%C5%BEinkelio+g.+6,+Vilnius+02100,+Lithuania/@54.6696606,25.2804714,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9442151dc5f3:0x986c2670626be9dc!8m2!3d54.6696606!4d25.2826601">Вул.Гележинкельо
       6</a>, Вільнюс (станція Вільнюс)</p><p>Телефон: +370 5 213 54 54 54.</p><p>Режим
       роботи: I-VII 8:00 - 20:00</p><p>‍</p><p><a href="https://www.google.com/maps/place/Viking%C5%B3+g.+3,+Vilnius+02188,+Lithuania/@54.6525706,25.2747138,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd959be1de2a73:0x29a0809e36c377ec!8m2!3d54.6525706!4d25.2769025">Вікінги
       St. 3</a>, Вільнюс (Prie PC NORDIKA)</p><p>Телефон: +370 655 65544</p><p>Режим

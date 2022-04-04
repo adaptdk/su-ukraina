@@ -56,13 +56,13 @@ export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
 };
 
 export const NAVIGATION_ITEM_HELP = {
-  pathname: `/pagalba`,
+  pathname: `/help-search/`,
   title: `Знайти довідку`,
   altTitle: `Знайти довідку`,
 };
 
 export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
-  pathname: `/refugee-guide`,
+  pathname: `/refugee-guide/`,
   title: `Важлива інформація`,
   altTitle: `Важлива інформація`,
 };

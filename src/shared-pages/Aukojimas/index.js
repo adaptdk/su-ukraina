@@ -86,10 +86,11 @@ const Page = ({ content, organisations, pagePath }) => {
                       icon={`arrow-white`}
                       href={organisation.support_link}
                       color={`primary`}
-                      text={`Paremti`}
                       position={`right`}
                       target="_blank"
-                    />
+                    >
+                      Paremti
+                    </Button>
                   )}
 
                   {!!organisation.website && (
@@ -97,10 +98,11 @@ const Page = ({ content, organisations, pagePath }) => {
                       icon={`arrow-blue`}
                       href={organisation.website}
                       color={`transparent`}
-                      text={`Oficialus puslapis`}
                       position={`right`}
                       target="_blank"
-                    />
+                    >
+                      Oficialus puslapis
+                    </Button>
                   )}
                 </div>
               </Card>

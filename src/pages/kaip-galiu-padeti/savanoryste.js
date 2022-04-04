@@ -92,10 +92,11 @@ const Page = ({ data }) => {
                       icon={`arrow-white`}
                       href={organisation.action}
                       color={`primary`}
-                      text={`Pildyti formą`}
                       position={`right`}
                       target="_blank"
-                    />
+                    >
+                      Pildyti formą
+                    </Button>
                   )}
 
                   {!!organisation.website && (
@@ -103,10 +104,11 @@ const Page = ({ data }) => {
                       icon={`arrow-blue`}
                       href={organisation.website}
                       color={`transparent`}
-                      text={`Oficialus puslapis`}
                       position={`right`}
                       target="_blank"
-                    />
+                    >
+                      Oficialus puslapis
+                    </Button>
                   )}
 
                   {organisation.location}

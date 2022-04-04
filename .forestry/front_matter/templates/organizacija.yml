@@ -3,94 +3,94 @@ label: Organizacija (aukojimui)
 hide_body: true
 display_field: title
 fields:
-  - name: title
-    type: text
-    config:
-      required: false
-    label: Pavadinimas
-  - name: about
-    type: textarea
-    default: ""
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: Apie
-    description: Trumpas organizacijos apibūdinimas
-  - name: cause
-    type: textarea
-    default: ""
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: Paskirtis
-    description: Organizacijos pagrindinė kryptis
-  - name: rekvizitai
-    type: textarea
-    default: ""
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: Kita informacija
-    description: Rekvizitai, registracija, informacija kaip aukoti/prisidėti
-  - name: website
-    type: text
-    config:
-      required: false
-    label: Oficialus puslapis
-  - name: support_link
-    type: text
-    config:
-      required: false
-    label: Paramos nuoroda
-    description: Nuoroda kuri nuveda tiesiai į aukojimo puslapį.
-  - name: weight
-    type: number
-    label: Svoris
-    description:
-      Didesnio svorio organizacijos nusėda sąrašo apačioje, mažesnio – kyla
-      į viršų
-    default: 0
-    required: true
-    config:
-      min:
-      max:
-      step:
-  - name: logo
-    type: file
-    config:
-      maxSize: 64
-    label: Logotipas
-    description: Organization logo (ne svg! Tinka png, jpg)
-  - name: location
-    type: select
-    default: Lietuvoje
-    config:
-      required: false
-      options:
-        - Lietuvoje
-        - Užsienyje
-      source:
-        type: simple
-        section:
-        file:
-        path:
-    label: Vieta
-    description: Kurioje vietoje randasi organizacija.
+- name: title
+  type: text
+  config:
+    required: false
+  label: Pavadinimas
+- name: about
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Apie
+  description: Trumpas organizacijos apibūdinimas
+- name: cause
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Paskirtis
+  description: Organizacijos pagrindinė kryptis
+- name: rekvizitai
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Kita informacija
+  description: Rekvizitai, registracija, informacija kaip aukoti/prisidėti
+- name: website
+  type: text
+  config:
+    required: false
+  label: Oficialus puslapis
+- name: support_link
+  type: text
+  config:
+    required: false
+  label: Paramos nuoroda
+  description: Nuoroda kuri nuveda tiesiai į aukojimo puslapį.
+- name: weight
+  type: number
+  label: Svoris
+  description: Didesnio svorio organizacijos nusėda sąrašo apačioje, mažesnio – kyla
+    į viršų
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: logo
+  type: file
+  config:
+    maxSize: 64
+  label: Logotipas
+  description: Organization logo (ne svg! Tinka png, jpg)
+- name: location
+  type: select
+  default: Lietuvoje
+  config:
+    required: false
+    options:
+    - Lietuvoje
+    - Užsienyje
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Vieta
+  description: Kurioje vietoje randasi organizacija.
 pages:
-  - src/content/organizacijos-aukojimui/come-back-alive.md
-  - src/content/organizacijos-aukojimui/labdaros-ir-paramos-fondas-rugute.md
-  - src/content/organizacijos-aukojimui/laisves-bankas.md
-  - src/content/organizacijos-aukojimui/mazi-bet-stiprus.md
-  - src/content/organizacijos-aukojimui/sos-vaiku-kaimai.md
-  - src/content/organizacijos-aukojimui/tele2.md
-  - src/content/organizacijos-aukojimui/tusti-narvai.md
-  - src/content/organizacijos-aukojimui/un-women.md
-  - src/content/organizacijos-aukojimui/unhcr-the-un-refugee-agency.md
-  - src/content/organizacijos-aukojimui/vaiku-svajones.md
-  - src/content/organizacijos-aukojimui/vytauto-didziojo-universiteto-paramos-fondas.md
+- src/content/organizacijos-aukojimui/1k-paramos-fondas.md
+- src/content/organizacijos-aukojimui/come-back-alive.md
+- src/content/organizacijos-aukojimui/labdaros-ir-paramos-fondas-rugute.md
+- src/content/organizacijos-aukojimui/laisves-bankas.md
+- src/content/organizacijos-aukojimui/mazi-bet-stiprus.md
+- src/content/organizacijos-aukojimui/sos-vaiku-kaimai.md
+- src/content/organizacijos-aukojimui/tele2.md
+- src/content/organizacijos-aukojimui/tusti-narvai.md
+- src/content/organizacijos-aukojimui/un-women.md
+- src/content/organizacijos-aukojimui/unhcr-the-un-refugee-agency.md
+- src/content/organizacijos-aukojimui/vaiku-svajones.md
+- src/content/organizacijos-aukojimui/vytauto-didziojo-universiteto-paramos-fondas.md

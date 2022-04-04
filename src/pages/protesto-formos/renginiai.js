@@ -10,6 +10,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import EventCard from "../../components/EventCard";
 import EventCardList from "../../components/EventCardList";
 import Section from "../../components/Section";
+import DetailsWrapper from "../../components/DetailsWrapper";
 
 const Page = ({ data }) => {
   const crumbs = [`Protesto formos`, `Renginiai`];
@@ -27,6 +28,23 @@ const Page = ({ data }) => {
       ...edge.node.childMarkdownRemark.frontmatter,
       html: edge.node.childMarkdownRemark.html,
     };
+  });
+
+  const currentDate = new Date();
+  const upcomingEvents = [];
+  const previousEvents = [];
+
+  events.forEach((event) => {
+    const startDate = new Date(event.startDate);
+
+    if (event.endDate) {
+      const endDate = new Date(event.endDate);
+      if (currentDate > endDate) {
+        previousEvents.push(event);
+      } else upcomingEvents.push(event);
+    } else if (currentDate > startDate) {
+      previousEvents.push(event);
+    } else upcomingEvents.push(event);
   });
 
   return (
@@ -56,24 +74,54 @@ const Page = ({ data }) => {
       )}
 
       <Constraint>
+        <h2>Organizuojami renginiai</h2>
         <EventCardList>
-          {events.map((event, i) => {
-            return (
-              <EventCard
-                key={i}
-                type={event.eventType}
-                title={event.title}
-                organizer={event.eventOrganizer}
-                startDate={event.startDate}
-                endDate={event.endDate}
-                location={event.location}
-                description={event.html}
-                url={event.eventUrl}
-              />
-            );
-          })}
+          {upcomingEvents.length ? (
+            upcomingEvents.map((event, i) => {
+              return (
+                <EventCard
+                  key={i}
+                  type={event.eventType}
+                  title={event.title}
+                  organizer={event.eventOrganizer}
+                  startDate={event.startDate}
+                  endDate={event.endDate}
+                  location={event.location}
+                  description={event.html}
+                  url={event.eventUrl}
+                />
+              );
+            })
+          ) : (
+            <p>Numatomų renginių kol kas nėra.</p>
+          )}
         </EventCardList>
       </Constraint>
+
+      {!!previousEvents.length && (
+        <Constraint>
+          <DetailsWrapper tag="h2" summary="Praėję renginiai">
+            <EventCardList>
+              {previousEvents.map((event, i) => {
+                return (
+                  <EventCard
+                    key={i}
+                    className="EventCard--previous"
+                    type={event.eventType}
+                    title={event.title}
+                    organizer={event.eventOrganizer}
+                    startDate={event.startDate}
+                    endDate={event.endDate}
+                    location={event.location}
+                    description={event.html}
+                    url={event.eventUrl}
+                  />
+                );
+              })}
+            </EventCardList>
+          </DetailsWrapper>
+        </Constraint>
+      )}
     </Layout>
   );
 };

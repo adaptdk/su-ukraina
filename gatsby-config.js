@@ -154,5 +154,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
+    {
+      resolve: `remove-empty-fields`,
+      options: {
+        fieldsToRemove: [`image`],
+      },
+    },
   ],
 };

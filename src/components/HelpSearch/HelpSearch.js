@@ -338,7 +338,23 @@ const HelpSearch = ({ defaultResultsLang }) => {
           <div className="HelpSearch__body">
             <div className="HelpSearch__top-actions">
               <div className="HelpSearch__refinements">
-                <CurrentRefinements />
+                <CurrentRefinements
+                  transformItems={(items) => {
+                    return items.map((item) => {
+                      return {
+                        ...item,
+                        label: `${
+                          TRANSLATIONS.refinements[
+                            item.attribute
+                              .replace(/tags_../, `typeOfHelp`)
+                              .replace(/region_../, `region`)
+                              .replace(/languages_../, `languages`)
+                          ][resultsLang]
+                        }: `,
+                      };
+                    });
+                  }}
+                />
                 <ClearRefinements
                   translations={{
                     reset: (
@@ -358,7 +374,7 @@ const HelpSearch = ({ defaultResultsLang }) => {
                             />
                           </g>
                         </svg>
-                        Clear filters
+                        {TRANSLATIONS.refinements.clearFilters[resultsLang]}
                       </>
                     ),
                   }}
@@ -370,15 +386,15 @@ const HelpSearch = ({ defaultResultsLang }) => {
                   className="container-option"
                   items={[
                     {
-                      label: `16 hits per page`,
+                      label: `16 ${TRANSLATIONS.hitsPerPage[resultsLang]}`,
                       value: 16,
                     },
                     {
-                      label: `32 hits per page`,
+                      label: `32 ${TRANSLATIONS.hitsPerPage[resultsLang]}`,
                       value: 32,
                     },
                     {
-                      label: `64 hits per page`,
+                      label: `64 ${TRANSLATIONS.hitsPerPage[resultsLang]}`,
                       value: 64,
                     },
                   ]}
@@ -465,8 +481,9 @@ const HelpSearch = ({ defaultResultsLang }) => {
               className="HelpSearch__filters-trigger-button"
               color="secondary"
               pretend
-              text={TRANSLATIONS.refinements.panelTitle[resultsLang]}
-            />
+            >
+              {TRANSLATIONS.refinements.panelTitle[resultsLang]}
+            </Button>
           </label>
           <label
             className="HelpSearch__sidebar-overlay"
@@ -497,8 +514,9 @@ const HelpSearch = ({ defaultResultsLang }) => {
                   className="HelpSearch__filters-close-trigger-button"
                   color="primary"
                   pretend
-                  text={TRANSLATIONS.refinements.doFilter[resultsLang]}
-                />
+                >
+                  {TRANSLATIONS.refinements.doFilter[resultsLang]}
+                </Button>
               </label>
             </div>
           </div>

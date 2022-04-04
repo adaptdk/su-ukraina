@@ -8,6 +8,7 @@ import Button from "../../components/Button";
 import "./EventCard.css";
 
 const EventCard = ({
+  className = ``,
   title,
   type,
   organizer,
@@ -43,7 +44,7 @@ const EventCard = ({
   };
 
   return (
-    <div className="EventCard">
+    <div className={`EventCard ${className}`}>
       <div className="EventCard__content-container">
         {type && (
           <div className="EventCard__event-type-wrapper">
@@ -88,18 +89,16 @@ const EventCard = ({
         )}
       </div>
       {url && (
-        <Button
-          icon="arrow-blue"
-          color="transparent"
-          href={url}
-          text="Renginio Nuoroda"
-        />
+        <Button icon="arrow-blue" color="transparent" href={url}>
+          Renginio Nuoroda
+        </Button>
       )}
     </div>
   );
 };
 
 EventCard.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string,
   type: PropTypes.string,
   organizer: PropTypes.string,

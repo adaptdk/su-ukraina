@@ -22,11 +22,12 @@ const FaqNav = ({ navData, modifier }) => {
             return (
               <li className={activeClass} key={navItem.slug}>
                 <Button
-                  text={navItem.title_override}
                   color="primary"
                   icon={`arrow-white`}
                   to={`/refugee-guide${navItem.slug}/`}
-                />
+                >
+                  {navItem.title_override}
+                </Button>
               </li>
             );
           })}

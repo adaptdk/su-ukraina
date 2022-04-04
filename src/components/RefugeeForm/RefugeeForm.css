@@ -1,0 +1,80 @@
+.RefugeeForm {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  padding: calc(var(--s__unit) * 4) 0;
+
+  &__error-message {
+    color: red;
+  }
+
+  > div {
+    box-sizing: border-box;
+    width: 100%;
+
+    @media (min-width: 40rem) {
+      width: 50%;
+    }
+  }
+
+  &__actions {
+    margin-top: calc(var(--s__unit) * 5);
+    padding-bottom: calc(var(--s__unit) * 5);
+
+    .Button {
+      justify-content: center;
+      margin-top: calc(var(--s__unit) * 5);
+      width: 100%;
+    }
+  }
+
+  &__error {
+    color: red;
+  }
+
+  &__success {
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
+
+  &__text {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(var(--s__unit) * 4) 0;
+
+    &-title {
+      font-size: var(--fs__h4);
+      margin-bottom: calc(var(--s__unit) * 6);
+      margin-top: 0;
+
+      @media and (min-width: 40rem) {
+        font-size: var(--fs__h3);
+      }
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    padding: calc(var(--s__unit) * 8) 0;
+
+    &__actions {
+      .Button {
+        width: unset;
+      }
+    }
+
+    &__text {
+      padding: calc(var(--s__unit) * 15);
+    }
+
+    &__success {
+      justify-content: center;
+    }
+  }
+}

@@ -9,8 +9,8 @@ const CN = `Button`;
 
 const Button = ({
   className = ``,
+  children,
   icon,
-  text,
   color,
   position,
   pretend,
@@ -39,7 +39,7 @@ const Button = ({
       {icon && isIconAlignedLeft() && (
         <span className={`${CN}__icon ${CN}__icon--${icon}`} />
       )}
-      {text}
+      {children}
       {icon && !isIconAlignedLeft() && (
         <span className={`${CN}__icon ${CN}__icon--${icon}`} />
       )}
@@ -49,10 +49,10 @@ const Button = ({
 
 Button.propTypes = {
   className: PropTypes.string,
+  children: PropTypes.node.isRequired,
   href: PropTypes.string,
   to: PropTypes.string,
   icon: PropTypes.string,
-  text: PropTypes.string,
   color: PropTypes.string,
   position: PropTypes.string,
   pretend: PropTypes.bool,

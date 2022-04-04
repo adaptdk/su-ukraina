@@ -1,5 +1,5 @@
 ---
-weight: 9
+weight: 30
 title: mobile-communication
 slug: "/mobile-communication"
 questions:
@@ -9,7 +9,7 @@ questions:
       безкоштовно роздають SIM-картки. Для приватних осіб надається безкоштовний мобільний
       зв'язок. SIM-карти можна отримати в наметах Литовської стрілецької спілки (ЛСС),
       реєстраційних центрах та штаб-квартирі ЛСС, а також у магазинах <a href="https://www.telia.lt/privatiems/pagalba/salonai">Telia</a>
-      на литовсько-польському кордоні.</p>
+      на литовсько-польському кордоні. </p>
     resources:
       - title: Telia
         subtitle: " Провайдер мобільного зв'язку"
@@ -26,5 +26,5 @@ questions:
       - subtitle: Провайдер мобільного зв'язку
         url: https://pildyk.lt
         title: Pildyk.lt
-title_override: МОБІЛЬНЕ ЗВ'ЯЗКУ
+title_override: Мобільний зв 'язок
 ---

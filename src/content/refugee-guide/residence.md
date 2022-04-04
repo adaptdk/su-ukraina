@@ -1,7 +1,7 @@
 ---
-weight: 1
+weight: 20
 title: residence
-slug: /residence
+slug: "/residence"
 questions: []
 title_override: Проживання
 contacts: []

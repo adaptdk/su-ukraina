@@ -8,9 +8,13 @@
   label {
     display: block;
     margin-bottom: calc(var(--s__unit) * 1);
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
 
-  input,
+  input:not([type="checkbox"]),
   textarea,
   select {
     appearance: none;
