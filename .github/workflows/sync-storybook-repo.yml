@@ -6,7 +6,7 @@ jobs:
       - name: git-sync
         uses: wei/git-sync@v3
         with:
-          source_repo: "adaptdk/su-ukraina.git"
+          source_repo: "git@github.com:adaptdk/su-ukraina.git"
           source_branch: "refs/remotes/source/*"
-          destination_repo: "adaptdk/su-ukraina_storybook.git"
+          destination_repo: "git@github.com:adaptdk/su-ukraina_storybook.git"
           destination_branch: "refs/heads/*"
