@@ -2,6 +2,7 @@ import * as React from "react";
 import { Title, Meta } from "react-head";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
+import { useLocation } from "@reach/router";
 
 import Constraint from "../../components/Constraint";
 import { StaticImage } from "gatsby-plugin-image";
@@ -28,6 +29,8 @@ const Page = ({ data }) => {
     };
   });
 
+  const pathname = useLocation().pathname;
+
   return (
     <Layout>
       {(!content || !content.title) && <Title>Gidas Ukrainiečiams</Title>}
@@ -50,7 +53,7 @@ const Page = ({ data }) => {
           <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <FaqNav navData={faqNav} modifier="wide" />
+          <FaqNav navData={faqNav} pathname={pathname} modifier="wide" />
         </Constraint>
       )}
     </Layout>

@@ -93,6 +93,7 @@ Default.args = {
       html: undefined,
     },
   ],
+  pathname: `/currency-exchange`,
 };
 
 export const Wide = Template.bind({});
