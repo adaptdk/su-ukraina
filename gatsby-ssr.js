@@ -16,7 +16,7 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
       <script
         defer
         data-domain="suukraina.lt"
-        src="https://plausible.io/js/plausible.js"
+        src="https://plausible.io/js/script.outbound-links.js"
       ></script>
     );
 
