@@ -48,9 +48,17 @@
     `results[0].hits` and paste it in the Algolia GUI's textarea for new
     records and click "Save".
 5.  Go to the "Configuration" panel for the "Support" index in Algolia;
-6.  Add "Searchable attributes":
+6.  Add `searchableAttributes` "Searchable attributes":
     - `title_lt,title_ru,title_uk`;
     - `tags_lt,tags_ru,tags_uk`;
     - `purpose_lt,purpose_ru,purpose_uk`;
-7.  Add API keys in the `.env` file (from the "API Keys" section in the
+7.  Add `attributesForFaceting` in "Facets":
+    - languages
+    - region_lt
+    - region_ru
+    - region_uk
+    - tags_lt
+    - tags_ru
+    - tags_uk
+8.  Add API keys in the `.env` file (from the "API Keys" section in the
     Algolia application).
