@@ -1,14 +1,11 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { useLocation } from "@reach/router";
 
 import "./FaqNav.css";
 import Button from "../Button";
 
-const FaqNav = ({ navData, modifier }) => {
+const FaqNav = ({ navData, modifier, pathname }) => {
   const modifierClass = modifier ? `FaqNav--${modifier}` : ``;
-  const location = useLocation();
-  const pathname = location.pathname;
 
   return (
     <div className={`FaqNav ${modifierClass}`}>
@@ -46,7 +43,7 @@ FaqNav.propTypes = {
       slug: PropTypes.string,
     })
   ),
-  pagePath: PropTypes.string,
+  pathname: PropTypes.string,
 };
 
 export default FaqNav;

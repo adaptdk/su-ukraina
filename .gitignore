@@ -7,6 +7,9 @@ node_modules/
 .cache/
 public
 
+# storybook
+storybook-static/
+
 # random dev stuff (this should really be included in a  local
 # `core.excludesFile` [defined in `~/.gitconfig`])
 # @see https://git-scm.com/docs/gitignore#_description
