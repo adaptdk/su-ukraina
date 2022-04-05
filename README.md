@@ -53,12 +53,12 @@
     - `tags_lt,tags_ru,tags_uk`;
     - `purpose_lt,purpose_ru,purpose_uk`;
 7.  Add `attributesForFaceting` in "Facets":
-    - languages
-    - region_lt
-    - region_ru
-    - region_uk
-    - tags_lt
-    - tags_ru
-    - tags_uk
+    - `languages`
+    - `region_lt`
+    - `region_ru`
+    - `region_uk`
+    - `tags_lt`
+    - `tags_ru`
+    - `tags_uk`
 8.  Add API keys in the `.env` file (from the "API Keys" section in the
     Algolia application).
