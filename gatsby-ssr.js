@@ -17,7 +17,14 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
         defer
         data-domain="suukraina.lt"
         src="https://plausible.io/js/script.outbound-links.js"
-      ></script>
+      />
+    );
+    headComponents.push(
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`,
+        }}
+      />
     );
 
     if (process.env.POSTHOG_KEY) {

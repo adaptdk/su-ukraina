@@ -48,6 +48,11 @@ const NotFoundPage = () => {
         <br />
         <Link to="/">Go home</Link>.
       </p>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `plausible("404",{ props: { path: document.location.pathname } });`,
+        }}
+      />
     </main>
   );
 };
