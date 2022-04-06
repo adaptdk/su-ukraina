@@ -43,7 +43,6 @@ const Page = ({ data }) => {
         return institutionalPartners.push(partner);
       }
       if (type === "technologinis") {
-        console.log("tech");
         return techPartners.push(partner);
       }
       if (type === `turinio`) {
