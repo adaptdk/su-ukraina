@@ -1,10 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
-import Button from "../Button";
-
-// import SelectInput from "../SelectInput/SelectInput";
-
 import "./ErrorPage.css";
 
 import connectorImage from "../../images/connector.svg";
