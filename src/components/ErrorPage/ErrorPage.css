@@ -1,0 +1,81 @@
+.ErrorPage {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__heading {
+  }
+
+  &__title {
+    color: var(--c__primary);
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    margin-top: 10px;
+
+    @media (min-width: 40rem) {
+      font-size: 7rem;
+    }
+
+    @media (min-width: 90rem) {
+      font-size: 10rem;
+    }
+  }
+
+  &__subtitle {
+    color: #262626;
+    font-size: 2.5rem;
+
+    @media (min-width: 40rem) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: 90rem) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin: 3rem 0 2rem 0;
+
+    @media (min-width: 40rem) {
+      margin: 4rem 0 3rem 0;
+    }
+
+    @media (min-width: 90rem) {
+      margin: 6rem 0 4rem 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__body {
+    font-size: 1.3rem;
+    padding: 0 calc(var(--s__unit) * 3);
+
+    @media (min-width: 40rem) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 90rem) {
+      font-size: 2rem;
+    }
+
+    .Button {
+      max-width: 200px;
+      margin: 0 auto;
+      margin-top: 40px;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+  }
+}

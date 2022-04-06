@@ -43,7 +43,6 @@ const Page = ({ data }) => {
         return institutionalPartners.push(partner);
       }
       if (type === "technologinis") {
-        console.log("tech");
         return techPartners.push(partner);
       }
       if (type === `turinio`) {
@@ -157,7 +156,7 @@ const Page = ({ data }) => {
 
             {infoPartners.length > 0 && (
               <div className="PartnerSection__category">
-                <h3>Informaciniai partneriai</h3>
+                <h3>Informaciniai</h3>
                 <PartnerList>
                   {infoPartners.map((partner, i) => {
                     return (
@@ -175,7 +174,7 @@ const Page = ({ data }) => {
 
             {contentPartners.length > 0 && (
               <div className="PartnerSection__category">
-                <h3>Turinio partneriai</h3>
+                <h3>Turinio</h3>
                 <PartnerList>
                   {contentPartners.map((partner, i) => {
                     return (
@@ -193,7 +192,7 @@ const Page = ({ data }) => {
 
             {techPartners.length > 0 && (
               <div className="PartnerSection__category">
-                <h3>Technologiniai partneriai</h3>
+                <h3>Technologiniai</h3>
                 <PartnerList>
                   {techPartners.map((partner, i) => {
                     return (
@@ -211,7 +210,7 @@ const Page = ({ data }) => {
 
             {institutionalPartners.length > 0 && (
               <div className="PartnerSection__category">
-                <h3>Instituciniai partneriai</h3>
+                <h3>Instituciniai</h3>
                 <PartnerList>
                   {institutionalPartners.map((partner, i) => {
                     return (
