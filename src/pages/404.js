@@ -11,14 +11,10 @@ const codeStyles = {
   borderRadius: 4,
 };
 
-if (process.env.NODE_ENV === `development`) {
-  const plausible = {};
-}
-// markup
 const NotFoundPage = () => {
   return (
     <main>
-      <title>Puslapis nerastas</title>
+      <title>Page not found</title>
       <ErrorPage title="404" subtitle="Page not found">
         <p>Sorry we couldn’t find what you were looking for.</p>
         {process.env.NODE_ENV === `development` ? (
