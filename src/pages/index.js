@@ -16,7 +16,11 @@ import Button from "../components/Button";
 import { StaticImage } from "gatsby-plugin-image";
 
 // Constants.
-import { NAVIGATION_BE_VIGILANT } from "../constants/Navigation";
+import {
+  NAVIGATION_BE_VIGILANT,
+  NAVIGATION_ITEM_HELP,
+  NAVIGATION_ITEM_REFUGEE_GUIDE,
+} from "../constants/Navigation";
 import PromoLine from "../components/PromoLine";
 
 //Meta data, I don't know how to handle this
@@ -90,12 +94,12 @@ const Page = ({ data }) => {
       <Section>
         <PromoLine
           title="Вся важлива інформація для громадян України"
-          titleLink="https://www.withukraine.lt"
+          titleLink={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
           modifier="big"
         >
           <Button
             icon={`arrow-blue`}
-            href="https://www.withukraine.lt"
+            to={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
             color={`secondary`}
             position={`right`}
             target="_blank"
@@ -105,7 +109,7 @@ const Page = ({ data }) => {
           </Button>
           <Button
             icon={`arrow-blue`}
-            href="https://www.withukraine.lt/help-search"
+            to={NAVIGATION_ITEM_HELP.pathname}
             color={`secondary`}
             position={`right`}
             target="_blank"

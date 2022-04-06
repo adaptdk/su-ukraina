@@ -11,6 +11,12 @@ import Section from "../Section";
 import PromoLine from "../PromoLine";
 import Button from "../Button";
 
+// Constants.
+import {
+  NAVIGATION_ITEM_HELP,
+  NAVIGATION_ITEM_REFUGEE_GUIDE,
+} from "../../constants/Navigation";
+
 import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
@@ -41,11 +47,11 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
       {!altHeader && (
         <PromoLine
           title="Вся важлива інформація для громадян України"
-          titleLink="https://www.withukraine.lt"
+          titleLink={NAVIGATION_ITEM_HELP.pathname}
         >
           <Button
             icon={`arrow-blue`}
-            href="https://www.withukraine.lt"
+            to={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
             color={`secondary`}
             position={`right`}
             target="_blank"
@@ -55,7 +61,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
           </Button>
           <Button
             icon={`arrow-blue`}
-            href="https://www.withukraine.lt/help-search"
+            to={NAVIGATION_ITEM_HELP.pathname}
             color={`secondary`}
             position={`right`}
             target="_blank"
