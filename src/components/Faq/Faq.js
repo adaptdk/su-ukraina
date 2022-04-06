@@ -165,7 +165,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
                         );
 
                         return (
-                          <div className={blockClass}>
+                          <div className={blockClass} key={j}>
                             {!!block.content && (
                               <div
                                 className="ContentBlock__content"

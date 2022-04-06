@@ -2,8 +2,8 @@
   display: inline-block;
   margin: 1rem;
   margin-top: 0;
-  overflow: hidden;
   opacity: 0.85;
+  overflow: hidden;
   transition: opacity ease-in-out 0.2s;
 
   &:hover {
@@ -11,9 +11,9 @@
   }
 
   img {
-    max-height: 80px;
-    width: auto;
     height: auto;
+    max-height: 80px;
     max-width: 170px !important;
+    width: auto;
   }
 }

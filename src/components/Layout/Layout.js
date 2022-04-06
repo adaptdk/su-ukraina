@@ -24,7 +24,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
     `privacy-policy`,
   ].includes(splitPathname[1]);
 
-  function RenderForm(props) {
+  function RenderForm() {
     const refugeeGuidePath = `refugee-guide`;
     const helpSearchPath = `help-search`;
     const path = location.pathname;

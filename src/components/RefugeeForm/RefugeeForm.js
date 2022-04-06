@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 import Button from "../Button";
 import FormField from "../FormField";
-import TextInput from "../TextInput";
 import TextArea from "../TextArea";
 import EmailInput from "../EmailInput";
 
