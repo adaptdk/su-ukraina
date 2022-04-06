@@ -81,7 +81,7 @@ const splitHitValueByNewlines = (str) => {
 const getHitWithLanguage = (language) => {
   const Hit = ({ hit }) => {
     const addresses = hit[`addresses_${language}`];
-    const region = hit[`region_${language}`];
+    const regions = hit[`regions_${language}`];
     const urls = hit[`url_${language}`].filter((url) => {
       return !!url;
     });
@@ -194,9 +194,15 @@ const getHitWithLanguage = (language) => {
             }, null)}
           </Panel>
         )}
-        {!!region && (
+        {!!regions?.length && (
           <Panel header={TRANSLATIONS.hit.region[language]}>
-            <SplitHitValue>{region}</SplitHitValue>
+            {regions
+              .map((region, i) => {
+                return <span key={i}>{region}</span>;
+              })
+              .reduce((prev, curr) => {
+                return prev === null ? [curr] : [...prev, `, `, curr];
+              }, null)}
           </Panel>
         )}
         {!!workingHours && (
