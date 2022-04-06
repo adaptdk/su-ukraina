@@ -11,19 +11,20 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
 
   setHtmlAttributes(HtmlAttributes);
 
+  headComponents.push(
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`,
+      }}
+    />
+  );
+
   if (process.env.NODE_ENV === `production`) {
     headComponents.push(
       <script
         defer
         data-domain="suukraina.lt"
         src="https://plausible.io/js/script.outbound-links.js"
-      />
-    );
-    headComponents.push(
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`,
-        }}
       />
     );
 
