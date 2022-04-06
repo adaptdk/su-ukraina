@@ -42,8 +42,7 @@ const Page = ({ data }) => {
       if (type === `institucinis`) {
         return institutionalPartners.push(partner);
       }
-      if (type === "technologinis") {
-        console.log("tech");
+      if (type === `technologinis`) {
         return techPartners.push(partner);
       }
       if (type === `turinio`) {

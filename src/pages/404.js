@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Button from "../components/Button";
 
