@@ -80,13 +80,14 @@ const splitHitValueByNewlines = (str) => {
 
 const getHitWithLanguage = (language) => {
   const Hit = ({ hit }) => {
-    const address = hit[`address_${language}`];
-    const contacts = hit[`contacts_${language}`];
+    const addresses = hit[`addresses_${language}`];
     const region = hit[`region_${language}`];
     const urls = hit[`url_${language}`].filter((url) => {
       return !!url;
     });
     const workingHours = hit[`workingHours_${language}`];
+    const phones = hit[`phones_${language}`] ?? [];
+    const emails = hit[`emails_${language}`] ?? [];
 
     const purposeHighlights = splitHitValueByNewlines(
       hit._highlightResult[`purpose_${language}`].value
@@ -135,14 +136,62 @@ const getHitWithLanguage = (language) => {
         <Panel header={TRANSLATIONS.hit.purpose[language]}>
           {purposeHighlights}
         </Panel>
-        {!!address && (
+        {!!addresses?.length && (
           <Panel header={TRANSLATIONS.hit.address[language]}>
-            <SplitHitValue>{address}</SplitHitValue>
+            {addresses
+              .map((address, i) => {
+                const sanitizedAddress = address.trim();
+                let href;
+                if (
+                  // Check if URL
+                  sanitizedAddress.match(
+                    /[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)?/gi
+                  )
+                ) {
+                  // Check if there's a protocol defined
+                  if (sanitizedAddress.match(/^\w*:*\/\//)) {
+                    href = sanitizedAddress;
+                  } else {
+                    href = `https://${sanitizedAddress}`;
+                  }
+                } else {
+                  href = `https://www.google.com/maps/place/${sanitizedAddress}`;
+                }
+                href = encodeURI(href);
+                return (
+                  <a href={href} target="_blank" rel="noopener" key={i}>
+                    {sanitizedAddress}
+                  </a>
+                );
+              })
+              .reduce((prev, curr) => {
+                return prev === null ? [curr] : [...prev, `, `, curr];
+              }, null)}
           </Panel>
         )}
-        {!!contacts && (
+        {!!(phones.length || emails.length) && (
           <Panel header={TRANSLATIONS.hit.contacts[language]}>
-            <SplitHitValue>{contacts}</SplitHitValue>
+            {[
+              ...phones.map((phone, i) => {
+                return (
+                  <a
+                    href={`tel:${phone.replace(/\s+/g, ``)}`}
+                    key={`email-${i}`}
+                  >
+                    {phone}
+                  </a>
+                );
+              }),
+              ...emails.map((email, i) => {
+                return (
+                  <a href={`mailto:${email}`} key={`phone-${i}`}>
+                    {email}
+                  </a>
+                );
+              }),
+            ].reduce((prev, curr) => {
+              return prev === null ? [curr] : [...prev, `, `, curr];
+            }, null)}
           </Panel>
         )}
         {!!region && (
