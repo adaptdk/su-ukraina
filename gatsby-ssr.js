@@ -23,8 +23,9 @@ export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
     headComponents.push(
       <script
         defer
+        data-api="https://s.adaptlt.workers.dev/api/event"
         data-domain="suukraina.lt"
-        src="https://plausible.io/js/script.outbound-links.js"
+        src="https://s.adaptlt.workers.dev/js/script.outbound-links.js"
       />
     );
 
