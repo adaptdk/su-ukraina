@@ -95,9 +95,3 @@ Default.args = {
   ],
   pathname: `/currency-exchange`,
 };
-
-export const Wide = Template.bind({});
-Wide.args = {
-  ...Default.args,
-  modifier: `wide`,
-};
