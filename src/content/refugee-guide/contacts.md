@@ -6,8 +6,9 @@ slug: "/contacts"
 questions: []
 contacts: []
 adresses: []
----
+icon: phone
 
+---
 Відділ міграції: tel. Nr. [+370 5 271 7112](tel:+37052717112), el. p. [info@migracija.gov.lt](mailto:info@migracija.gov.lt), інформації [www.migracija.lrv.lt](http://www.migracija.lrv.lt/)
 
 Литовський Червоний Хрест (гуманітарна допомога, інформація, відновлення родинних зв'язків): [Juozapavičiaus g. 10A](https://www.google.com/url?q=https://www.google.com/maps/place/A.%2BJuozapavi%25C4%258Diaus%2Bg.%2B10A,%2BVilnius%2B09311/@54.6929873,25.2827813,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd941b458cec77:0xe3886d3e89ceccb!8m2!3d54.6929873!4d25.28497&sa=D&source=docs&ust=1647605155926364&usg=AOvVaw3NnBBf4A-1Ks9vsJaU1Q8_), Vilnius, tel. [+370 5 2127322](tel:+37052127322), el. p. [info@redcross.lt](mailto:info@redcross.lt), [www.redcross.lt](http://www.redcross.lt/)
