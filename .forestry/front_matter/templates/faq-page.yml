@@ -23,11 +23,29 @@ fields:
   description: Used for creating unique path (url) to section. it will be /refugee-guide{whatever
     you enter here} - we recommend entering /filename
 - name: icon
-  type: text
+  type: select
+  default: ''
   config:
     required: false
+    options:
+    - user-police
+    - house
+    - building-columns
+    - brain
+    - paw
+    - mobile-screen-button
+    - children
+    - coins
+    - suitcase-medical
+    - bus-simple
+    - key-skeleton
+    - phone
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: Icon
-  description: Icon name string
 - name: weight
   type: number
   label: Weight
