@@ -19,10 +19,10 @@ Caveats, warnings, etc
 
 # Screenshots
 
-## Desktop
+## Wide layout
 
-## Mobile
+## Narrow layout
 
-# To test locally
+# To test
 
 - [ ] Do this
