@@ -75,6 +75,7 @@
 
   &__icon {
     &::before {
+      background: #fff;
       content: "";
       display: block;
       height: 20px;
@@ -85,203 +86,138 @@
       width: 20px;
     }
 
+    &--end {
+      &::before {
+        margin-left: 10px;
+      }
+    }
+
+    &--start {
+      &::before {
+        margin-right: 10px;
+      }
+    }
+
     &--donate {
       &::before {
         background: #3f51b5;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/donate.svg");
-        width: 20px;
       }
     }
 
     &--volunteer {
       &::before {
         background: #3f51b5;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/volunteer.svg");
-        width: 20px;
       }
     }
 
     &--arrow-white {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-left: 10px;
         mask-image: url("../../images/icons/arrow-white.svg");
-        width: 20px;
       }
     }
 
     &--arrow-blue {
       &::before {
         background: #3f51b5;
-        height: 20px;
-        margin-left: 10px;
         mask-image: url("../../images/icons/arrow-blue.svg");
-        width: 20px;
       }
     }
 
     &--edit {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/edit.svg");
-        width: 20px;
       }
     }
 
     &--brain {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/brain.svg");
-        width: 20px;
       }
     }
 
     &--briefcase {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/briefcase.svg");
-        width: 20px;
       }
     }
 
     &--building-columns {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/building-columns.svg");
-        width: 20px;
       }
     }
 
     &--bus-simple {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/bus-simple.svg");
-        width: 20px;
       }
     }
 
     &--child-reaching {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/child-reaching.svg");
-        width: 20px;
       }
     }
 
     &--coins {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/coins.svg");
-        width: 20px;
       }
     }
 
     &--hands-holding-heart {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/hands-holding-heart.svg");
-        width: 20px;
       }
     }
 
     &--house {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/house.svg");
-        width: 20px;
       }
     }
 
     &--key-skeleton {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/key-skeleton.svg");
-        width: 20px;
       }
     }
 
     &--mobile-screen-button {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/mobile-screen-button.svg");
-        width: 20px;
       }
     }
 
     &--parachute-box {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/parachute-box.svg");
-        width: 20px;
       }
     }
 
     &--paw {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/paw.svg");
-        width: 20px;
       }
     }
 
     &--phone {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/phone.svg");
-        width: 20px;
       }
     }
 
     &--suitcase-medical {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/suitcase-medical.svg");
-        width: 20px;
       }
     }
 
     &--user-police {
       &::before {
-        background: #fff;
-        height: 20px;
-        margin-right: 10px;
         mask-image: url("../../images/icons/user-police.svg");
-        width: 20px;
       }
     }
   }

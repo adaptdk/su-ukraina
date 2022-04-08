@@ -37,10 +37,16 @@ const Button = ({
       {...props}
     >
       {startIcon && (
-        <span className={`Button__icon Button__icon--${startIcon}`} />
+        <span
+          className={`Button__icon Button__icon--start Button__icon--${startIcon}`}
+        />
       )}
       <span className="Button__body">{children}</span>
-      {endIcon && <span className={`Button__icon Button__icon--${endIcon}`} />}
+      {endIcon && (
+        <span
+          className={`Button__icon Button__icon--end Button__icon--${endIcon}`}
+        />
+      )}
     </Tag>
   );
 };
