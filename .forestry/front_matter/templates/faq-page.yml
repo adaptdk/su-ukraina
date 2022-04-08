@@ -27,6 +27,7 @@ fields:
   config:
     required: false
   label: Icon
+  description: Icon name string
 - name: weight
   type: number
   label: Weight
