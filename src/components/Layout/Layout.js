@@ -17,18 +17,13 @@ import {
   NAVIGATION_ITEM_REFUGEE_GUIDE,
 } from "../../constants/Navigation";
 
+// Helpers
+import { isUkrainianPage } from "../../helpers/handlers";
+
 import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
   const location = useLocation();
-  const splitPathname = location.pathname.split(`/`);
-
-  const altHeader = [
-    `pagalbos-paieska`,
-    `refugee-guide`,
-    `help-search`,
-    `privacy-policy`,
-  ].includes(splitPathname[1]);
 
   function RenderForm() {
     const refugeeGuidePath = `refugee-guide`;
@@ -43,8 +38,8 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
 
   return (
     <div className="Layout">
-      <Header noSticky={noStickyHeader} altHeader={altHeader} />
-      {!altHeader && (
+      <Header noSticky={noStickyHeader} />
+      {!isUkrainianPage(location.pathname) && (
         <PromoLine
           title="Вся важлива інформація для громадян України"
           titleLink={NAVIGATION_ITEM_HELP.pathname}

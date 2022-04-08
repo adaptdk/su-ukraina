@@ -28,3 +28,17 @@ export const handlePath = (pseudoLink) => {
       return `/refugee-guide/`;
   }
 };
+
+export const isUkrainianPage = (pathname) => {
+  // pathname is expected as location.pathname from useLocation()
+  const splitPathname = pathname.split(`/`);
+
+  const isUkrainianPathname = [
+    `pagalbos-paieska`,
+    `refugee-guide`,
+    `help-search`,
+    `privacy-policy`,
+  ].includes(splitPathname[1]);
+
+  return isUkrainianPathname;
+};
