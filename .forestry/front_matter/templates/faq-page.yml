@@ -34,12 +34,15 @@ fields:
     - brain
     - paw
     - mobile-screen-button
-    - children
     - coins
     - suitcase-medical
     - bus-simple
     - key-skeleton
     - phone
+    - briefcase
+    - child-reaching
+    - hands-holding-heart
+    - parachute-box
     source:
       type: simple
       section: 
