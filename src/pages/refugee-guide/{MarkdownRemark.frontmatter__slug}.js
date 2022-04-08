@@ -50,28 +50,14 @@ export default function Template({ data }) {
 Template.propTypes = {
   data: PropTypes.shape({
     faq: PropTypes.shape({
-      title: PropTypes.string,
-      title_override: PropTypes.string,
-      questions: PropTypes.arrayOf(
+      edges: PropTypes.arrayOf(
         PropTypes.shape({
-          title: PropTypes.string,
-          answer: PropTypes.string,
-          content_blocks: PropTypes.arrayOf(
-            PropTypes.shape({
-              title: PropTypes.string,
-              content: PropTypes.string,
-              template: PropTypes.string,
-              image: PropTypes.object,
-            })
-          ),
-          image: PropTypes.object,
-          resources: PropTypes.arrayOf(
-            PropTypes.shape({
-              title: PropTypes.string,
-              subtitle: PropTypes.string,
-              url: PropTypes.string,
-            })
-          ),
+          node: PropTypes.shape({
+            childMarkdownRemark: PropTypes.shape({
+              frontmatter: PropTypes.object,
+              html: PropTypes.string,
+            }),
+          }),
         })
       ),
     }),

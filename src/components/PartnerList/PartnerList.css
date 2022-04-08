@@ -6,8 +6,8 @@
   width: 100%;
 
   @media (min-width: 40rem) {
+    align-items: center;
     justify-content: center;
     margin: unset;
-    align-items: center;
   }
 }

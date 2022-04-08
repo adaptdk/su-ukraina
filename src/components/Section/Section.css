@@ -49,8 +49,8 @@
       width: 100%;
 
       @media (min-width: 40rem) {
-        width: 50%;
         text-align: center;
+        width: 50%;
       }
 
       h3 {

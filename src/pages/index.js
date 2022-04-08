@@ -16,7 +16,11 @@ import Button from "../components/Button";
 import { StaticImage } from "gatsby-plugin-image";
 
 // Constants.
-import { NAVIGATION_BE_VIGILANT } from "../constants/Navigation";
+import {
+  NAVIGATION_BE_VIGILANT,
+  NAVIGATION_ITEM_HELP,
+  NAVIGATION_ITEM_REFUGEE_GUIDE,
+} from "../constants/Navigation";
 import PromoLine from "../components/PromoLine";
 
 //Meta data, I don't know how to handle this
@@ -42,8 +46,7 @@ const Page = ({ data }) => {
       if (type === `institucinis`) {
         return institutionalPartners.push(partner);
       }
-      if (type === "technologinis") {
-        console.log("tech");
+      if (type === `technologinis`) {
         return techPartners.push(partner);
       }
       if (type === `turinio`) {
@@ -91,12 +94,12 @@ const Page = ({ data }) => {
       <Section>
         <PromoLine
           title="Вся важлива інформація для громадян України"
-          titleLink="https://www.withukraine.lt"
+          titleLink={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
           modifier="big"
         >
           <Button
             icon={`arrow-blue`}
-            href="https://www.withukraine.lt"
+            to={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
             color={`secondary`}
             position={`right`}
             target="_blank"
@@ -106,7 +109,7 @@ const Page = ({ data }) => {
           </Button>
           <Button
             icon={`arrow-blue`}
-            href="https://www.withukraine.lt/help-search"
+            to={NAVIGATION_ITEM_HELP.pathname}
             color={`secondary`}
             position={`right`}
             target="_blank"
@@ -157,7 +160,7 @@ const Page = ({ data }) => {
 
             {infoPartners.length > 0 && (
               <div className="PartnerSection__category">
-                <h3>Informaciniai partneriai</h3>
+                <h3>Informaciniai</h3>
                 <PartnerList>
                   {infoPartners.map((partner, i) => {
                     return (
@@ -175,7 +178,7 @@ const Page = ({ data }) => {
 
             {contentPartners.length > 0 && (
               <div className="PartnerSection__category">
-                <h3>Turinio partneriai</h3>
+                <h3>Turinio</h3>
                 <PartnerList>
                   {contentPartners.map((partner, i) => {
                     return (
@@ -193,7 +196,7 @@ const Page = ({ data }) => {
 
             {techPartners.length > 0 && (
               <div className="PartnerSection__category">
-                <h3>Technologiniai partneriai</h3>
+                <h3>Technologiniai</h3>
                 <PartnerList>
                   {techPartners.map((partner, i) => {
                     return (
@@ -211,7 +214,7 @@ const Page = ({ data }) => {
 
             {institutionalPartners.length > 0 && (
               <div className="PartnerSection__category">
-                <h3>Instituciniai partneriai</h3>
+                <h3>Instituciniai</h3>
                 <PartnerList>
                   {institutionalPartners.map((partner, i) => {
                     return (

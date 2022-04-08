@@ -9,7 +9,7 @@
     display: block;
     margin-bottom: calc(var(--s__unit) * 1);
 
-    &:first-letter {
+    &::first-letter {
       text-transform: uppercase;
     }
   }
