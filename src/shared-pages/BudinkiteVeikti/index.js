@@ -87,10 +87,9 @@ const Page = ({ content, addressees, pagePath }) => {
                 <div className={`Card__actions`}>
                   {!!addressee.emailOrLink && (
                     <Button
-                      icon={`arrow-blue`}
+                      endIcon={`arrow-blue`}
                       href={`mailto:${addressee.emailOrLink}`}
                       color={`transparent`}
-                      position={`right`}
                       target="_blank"
                     >
                       Rašyti laišką

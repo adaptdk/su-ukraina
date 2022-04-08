@@ -89,10 +89,9 @@ const Page = ({ data }) => {
                 <div className={`Card__actions`}>
                   {!!organisation.action && (
                     <Button
-                      icon={`arrow-white`}
+                      endIcon={`arrow-white`}
                       href={organisation.action}
                       color={`primary`}
-                      position={`right`}
                       target="_blank"
                     >
                       Pildyti formą
@@ -101,10 +100,9 @@ const Page = ({ data }) => {
 
                   {!!organisation.website && (
                     <Button
-                      icon={`arrow-blue`}
+                      endIcon={`arrow-blue`}
                       href={organisation.website}
                       color={`transparent`}
-                      position={`right`}
                       target="_blank"
                     >
                       Oficialus puslapis

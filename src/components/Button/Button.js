@@ -8,9 +8,9 @@ import "./Button.css";
 const Button = ({
   className = ``,
   children,
-  icon,
+  startIcon,
+  endIcon,
   color,
-  position,
   pretend,
   active,
   ...props
@@ -29,10 +29,6 @@ const Button = ({
     Tag = Link;
   }
 
-  const isIconAlignedLeft = () => {
-    return position === `left`;
-  };
-
   return (
     <Tag
       className={`Button Button--${color} ${className} ${
@@ -40,13 +36,11 @@ const Button = ({
       }`}
       {...props}
     >
-      {icon && isIconAlignedLeft() && (
-        <span className={`Button__icon Button__icon--${icon}`} />
+      {startIcon && (
+        <span className={`Button__icon Button__icon--${startIcon}`} />
       )}
-      {children}
-      {icon && !isIconAlignedLeft() && (
-        <span className={`Button__icon Button__icon--${icon}`} />
-      )}
+      <span className="Button__body">{children}</span>
+      {endIcon && <span className={`Button__icon Button__icon--${endIcon}`} />}
     </Tag>
   );
 };
@@ -56,9 +50,9 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string,
   to: PropTypes.string,
-  icon: PropTypes.string,
+  startIcon: PropTypes.string,
+  endIcon: PropTypes.string,
   color: PropTypes.string,
-  position: PropTypes.string,
   pretend: PropTypes.bool,
   active: PropTypes.bool,
 };

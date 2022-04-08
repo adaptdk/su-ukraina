@@ -10,11 +10,12 @@ const FaqNav = ({ navData, pathname }) => {
       <ul className="FaqNav__list">
         {navData.map((navItem) => {
           return (
-            <li className={`FaqNav__list-item`} key={navItem.slug}>
+            <li className="FaqNav__list-item" key={navItem.slug}>
               <Button
                 active={pathname.includes(navItem.slug)}
                 color="primary"
-                icon={`arrow-white`}
+                startIcon={navItem.icon}
+                endIcon={`arrow-white`}
                 to={`/refugee-guide${navItem.slug}/`}
               >
                 {navItem.title_override}

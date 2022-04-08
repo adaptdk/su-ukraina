@@ -34,17 +34,15 @@ const Footer = () => {
           <div className="Footer__cta-section-actions">
             <Button
               to={PATH_HOW_TO_DONATE}
-              icon={ICON_DONATE}
+              startIcon={ICON_DONATE}
               color={`secondary`}
-              position={`left`}
             >
               {TEXT_WANT_TO_DONATE}
             </Button>
             <Button
               to={PATH_HOW_TO_VOLUNTEER}
-              icon={ICON_VOLUNTEER}
+              startIcon={ICON_VOLUNTEER}
               color={`secondary`}
-              position={`left`}
             >
               {TEXT_WANT_TO_VOLUNTEER}
             </Button>

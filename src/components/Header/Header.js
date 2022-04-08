@@ -111,10 +111,9 @@ const Header = ({ noSticky, altHeader }) => {
               <li>
                 <Button
                   className="Header__menu__help-btn"
-                  icon={`edit`}
+                  startIcon={`edit`}
                   href="https://0rs0r9mdix1.typeform.com/to/QXLxIUjt"
                   color={`primary`}
-                  position={`left`}
                   target="_blank"
                   rel="noopener"
                 >

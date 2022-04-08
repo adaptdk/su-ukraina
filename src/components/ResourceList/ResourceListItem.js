@@ -10,10 +10,9 @@ const ResourceListItem = ({ title, subtitle, url, buttonText }) => {
         {!!subtitle && <p>{subtitle}</p>}
       </div>
       <Button
-        icon={`arrow-blue`}
+        endIcon={`arrow-blue`}
         href={url}
         color={`transparent`}
-        position={`right`}
         target="_blank"
       >
         {buttonText}

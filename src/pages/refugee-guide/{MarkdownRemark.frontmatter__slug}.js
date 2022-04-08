@@ -110,6 +110,7 @@ export const pageQuery = graphql`
               title
               title_override
               slug
+              icon
             }
           }
         }
