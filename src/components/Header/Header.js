@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 
 // Components.
 import Constraint from "../Constraint";
@@ -15,11 +16,17 @@ import {
   NAVIGATION_MAIN_MENU_ALT,
 } from "../../constants/Navigation";
 
+// Helpers
+import { isUkrainianPage } from "../../helpers/handlers";
+
 // Style.
 import "./Header.css";
 
-const Header = ({ noSticky, altHeader }) => {
+const Header = ({ noSticky }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
+  const location = useLocation();
+  const altHeader = isUkrainianPage(location.pathname);
+
   const headerRef = React.useRef(null);
   React.useLayoutEffect(() => {
     const resetHeaderHeight = () => {
