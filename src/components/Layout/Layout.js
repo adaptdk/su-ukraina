@@ -23,7 +23,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
   const location = useLocation();
   const splitPathname = location.pathname.split(`/`);
 
-  const altHeader = [
+  const altLayout = [
     `pagalbos-paieska`,
     `refugee-guide`,
     `help-search`,
@@ -43,8 +43,8 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
 
   return (
     <div className="Layout">
-      <Header noSticky={noStickyHeader} altHeader={altHeader} />
-      {!altHeader && (
+      <Header noSticky={noStickyHeader} altHeader={altLayout} />
+      {!altLayout && (
         <PromoLine
           title="Вся важлива інформація для громадян України"
           titleLink={NAVIGATION_ITEM_HELP.pathname}
@@ -77,7 +77,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
         </Constraint>
       </Section>
 
-      <Footer />
+      <Footer altFooter={altLayout} />
     </div>
   );
 };
