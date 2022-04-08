@@ -40,7 +40,7 @@ export const NAVIGATION_ITEM_BE_VIGILANT = {
 };
 
 export const NAVIGATION_ITEM_BE_VIGILANT_CITIZEN_HANDBOOK = {
-  pathname: `/bukime-budrus/piliecio-atmintine/`,
+  pathname: `/piliecio-atmintine/`,
   title: `Piliečio atmintinė`,
 };
 

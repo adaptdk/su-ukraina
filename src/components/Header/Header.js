@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 
 // Components.
 import Constraint from "../Constraint";
@@ -21,6 +22,9 @@ import "./Header.css";
 const Header = ({ noSticky, altHeader }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
   const headerRef = React.useRef(null);
+  const location = useLocation();
+  const pathname = location.pathname;
+
   React.useLayoutEffect(() => {
     const resetHeaderHeight = () => {
       const newHeight = headerRef.current?.offsetHeight;
@@ -76,7 +80,14 @@ const Header = ({ noSticky, altHeader }) => {
           <ul className="Header__menu">
             {mainMenu().map((item) => {
               return (
-                <li key={item.pathname}>
+                <li
+                  key={item.pathname}
+                  className={
+                    pathname.includes(item.pathname)
+                      ? `Header__menu-link is-active`
+                      : "Header__menu-link"
+                  }
+                >
                   <Link
                     aria-haspopup={!!item.children}
                     to={item.pathname}

@@ -4,12 +4,12 @@ import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Constraint from "../../components/Constraint";
-import Layout from "../../components/Layout";
-import NavigationGroup from "../../components/NavigationGroup";
-import { ResourceList, ResourceListItem } from "../../components/ResourceList";
-import SubPage from "../../components/SubPage";
-import Section from "../../components/Section";
+import Constraint from "../components/Constraint";
+import Layout from "../components/Layout";
+import NavigationGroup from "../components/NavigationGroup";
+import { ResourceList, ResourceListItem } from "../components/ResourceList";
+import SubPage from "../components/SubPage";
+import Section from "../components/Section";
 
 const Page = ({ data }) => {
   const crumbs = [`Piliečio atmintinė`];
@@ -27,7 +27,7 @@ const Page = ({ data }) => {
   });
 
   return (
-    <Layout pagePath="/bukime-budrus/piliecio-atmintine/">
+    <Layout pagePath="/piliecio-atmintine/">
       <Title>Piliečio atmintinė</Title>
 
       <Section className="HeroSectionB">

@@ -21,6 +21,7 @@
       text-align: center;
       text-decoration: none;
       width: 100%;
+      transition: color 0.2s ease-in-out;
 
       @media (min-width: 40rem) {
         font-size: 1.5rem;
@@ -103,6 +104,23 @@
 
     > li {
       margin: var(--s__main-padding) 0;
+
+      > a {
+        font-weight: var(--fw__bold);
+      }
+
+      &.is-active {
+        > a {
+          display: inline-block;
+
+          &:after {
+            content: "";
+            border-bottom: 2px solid var(--c__primary);
+            display: block;
+            margin-top: 3px;
+          }
+        }
+      }
     }
 
     /* @TODO solve the problem with !important */
@@ -132,9 +150,15 @@
       }
     }
 
-    a {
+    a:not(.Button) {
       display: block;
       padding: calc(var(--s__unit) * 2);
+      transition: color 0.2s ease-in-out;
+      color: black;
+
+      &:hover {
+        color: var(--c__primary);
+      }
     }
   }
 
@@ -305,6 +329,7 @@
 
         > a {
           padding: calc(var(--s__main-padding) / 2) var(--s__main-padding);
+          font-weight: var(--fw__medium);
         }
 
         > ul {
@@ -326,6 +351,8 @@
             display: block;
             margin: 0 calc(var(--s__main-padding) - 1);
             padding: var(--s__main-padding);
+            background: transparent;
+            transition: background 0.2s ease-in-out;
 
             &:hover {
               background-color: #eaf1ff;
