@@ -22,7 +22,7 @@ const NotFoundPage = () => {
             Try creating a page in <code style={codeStyles}>src/pages/</code>.
           </>
         ) : null}
-        <Button color={`secondary`} position={`left`} to="/">
+        <Button color={`secondary`} to="/">
           Go home
         </Button>
       </ErrorPage>

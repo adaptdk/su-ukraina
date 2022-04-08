@@ -83,10 +83,9 @@ const Page = ({ content, organisations, pagePath }) => {
                 <div className={`Card__actions`}>
                   {!!organisation.support_link && (
                     <Button
-                      icon={`arrow-white`}
+                      endIcon={`arrow-white`}
                       href={organisation.support_link}
                       color={`primary`}
-                      position={`right`}
                       target="_blank"
                     >
                       Paremti
@@ -95,10 +94,9 @@ const Page = ({ content, organisations, pagePath }) => {
 
                   {!!organisation.website && (
                     <Button
-                      icon={`arrow-blue`}
+                      endIcon={`arrow-blue`}
                       href={organisation.website}
                       color={`transparent`}
-                      position={`right`}
                       target="_blank"
                     >
                       Oficialus puslapis

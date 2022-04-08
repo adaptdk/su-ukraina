@@ -98,20 +98,18 @@ const Page = ({ data }) => {
           modifier="big"
         >
           <Button
-            icon={`arrow-blue`}
+            endIcon={`arrow-blue`}
             to={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
             color={`secondary`}
-            position={`right`}
             target="_blank"
             rel="noopener"
           >
             Інформація
           </Button>
           <Button
-            icon={`arrow-blue`}
+            endIcon={`arrow-blue`}
             to={NAVIGATION_ITEM_HELP.pathname}
             color={`secondary`}
-            position={`right`}
             target="_blank"
             rel="noopener"
           >
@@ -139,10 +137,9 @@ const Page = ({ data }) => {
               return (
                 <li key={item.pathname}>
                   <Button
-                    icon={`arrow-blue`}
+                    endIcon={`arrow-blue`}
                     to={item.pathname}
                     color={`transparent`}
-                    position={`right`}
                   >
                     {item.altTitle || item.title}
                   </Button>

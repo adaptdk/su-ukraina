@@ -50,20 +50,18 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
           titleLink={NAVIGATION_ITEM_HELP.pathname}
         >
           <Button
-            icon={`arrow-blue`}
+            endIcon={`arrow-blue`}
             to={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
             color={`secondary`}
-            position={`right`}
             target="_blank"
             rel="noopener"
           >
             Інформація
           </Button>
           <Button
-            icon={`arrow-blue`}
+            endIcon={`arrow-blue`}
             to={NAVIGATION_ITEM_HELP.pathname}
             color={`secondary`}
-            position={`right`}
             target="_blank"
             rel="noopener"
           >
