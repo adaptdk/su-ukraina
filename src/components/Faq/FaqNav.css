@@ -1,116 +1,26 @@
 .FaqNav {
-  flex-direction: row;
   font-size: 1.2rem;
-  justify-content: space-between;
-  margin-bottom: calc(var(--s__unit) * 4);
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
-  width: 100%;
 
-  @media (min-width: 40rem) {
-    flex-basis: 18.75rem;
-    margin-right: calc(var(--s__unit) * 8);
-    min-width: 18.75rem;
-    width: 18.75rem;
-
-    &--wide {
-      flex-basis: 100%;
-      width: 100%;
-    }
-  }
-
-  ul {
+  &__list {
     align-items: stretch;
     display: flex;
-    list-style-type: none;
-    margin: 0;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: stretch;
     padding: 0;
-
-    li {
-      width: 100%;
-
-      + li {
-        margin-left: 2px;
-      }
-
-      .Button {
-        border-radius: 0;
-        justify-content: space-between;
-        white-space: nowrap;
-      }
-
-      &.is-active {
-        .Button {
-          background: var(--c__secondary);
-          color: var(--c__primary);
-
-          .Button__icon {
-            display: none;
-          }
-
-          &:hover {
-            &::after {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-
-    @media (min-width: 40rem) {
-      display: block;
-
-      li {
-        + li {
-          margin-left: 0;
-          margin-top: 10px;
-        }
-
-        .Button {
-          border-radius: var(--s__main-border-radius);
-          white-space: normal;
-        }
-      }
-    }
   }
 
-  &--wide {
-    margin-bottom: calc(var(--s__unit) * 12);
+  &__list-item {
+    align-items: stretch;
+    display: flex;
+    flex: 1 1 36ch;
+    margin: 0;
     width: 100%;
+  }
 
-    ul {
-      display: block;
-      width: 100%;
-
-      li {
-        display: flex;
-        width: 100%;
-
-        .Button {
-          border-radius: var(--s__main-border-radius);
-          justify-content: space-between;
-          white-space: normal;
-          width: 100%;
-        }
-
-        + li {
-          margin-left: 0;
-          margin-top: 10px;
-        }
-      }
-
-      @media (min-width: 40rem) {
-        display: grid;
-        grid-auto-rows: 1fr;
-        grid-gap: 10px;
-        grid-template-columns: repeat(3, 1fr);
-
-        li {
-          + li {
-            margin-top: 0;
-          }
-        }
-      }
+  .FaqNavCollapsible & {
+    &__list {
+      margin: 0;
     }
   }
 }

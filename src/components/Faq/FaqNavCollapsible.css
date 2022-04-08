@@ -4,7 +4,6 @@
   border-top-right-radius: var(--s__main-border-radius);
   bottom: 0;
   box-shadow: 0 4px 48px 0 rgb(0 0 0 / 60%);
-  font-size: 1.2rem;
   height: 0;
   left: calc(var(--s__main-padding) / 2);
   overflow: hidden;
@@ -30,110 +29,15 @@
     border-radius: 0;
     box-shadow: none;
     flex-basis: 18.75rem;
+    flex-shrink: 0;
     height: auto;
     margin-right: calc(var(--s__unit) * 8);
-    min-width: 18.75rem;
     overflow: visible;
     position: static;
-    width: 18.75rem;
     z-index: 0;
 
     &__close-trigger {
       display: none;
-    }
-
-    &--wide {
-      flex-basis: 100%;
-      width: 100%;
-    }
-  }
-
-  ul {
-    align-items: stretch;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      width: 100%;
-
-      + li {
-        margin-top: 5px;
-      }
-
-      .Button {
-        border-radius: 0;
-        justify-content: space-between;
-      }
-
-      &.is-active {
-        .Button {
-          background: var(--c__secondary);
-          color: var(--c__primary);
-
-          .Button__icon {
-            display: none;
-          }
-
-          &:hover {
-            &::after {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-
-    @media (min-width: 40rem) {
-      li {
-        + li {
-          margin-top: 10px;
-        }
-
-        .Button {
-          border-radius: var(--s__main-border-radius);
-          white-space: normal;
-        }
-      }
-    }
-  }
-
-  &--wide {
-    margin-bottom: calc(var(--s__unit) * 12);
-    width: 100%;
-
-    ul {
-      display: block;
-      width: 100%;
-
-      li {
-        display: flex;
-        width: 100%;
-
-        .Button {
-          border-radius: var(--s__main-border-radius);
-          justify-content: space-between;
-          white-space: normal;
-          width: 100%;
-        }
-
-        + li {
-          margin-top: 10px;
-        }
-      }
-
-      @media (min-width: 40rem) {
-        display: grid;
-        grid-auto-rows: 1fr;
-        grid-gap: 10px;
-        grid-template-columns: repeat(3, 1fr);
-
-        li {
-          + li {
-            margin-top: 0;
-          }
-        }
-      }
     }
   }
 }

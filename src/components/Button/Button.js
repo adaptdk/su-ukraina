@@ -5,8 +5,6 @@ import { Link } from "gatsby";
 // Styles.
 import "./Button.css";
 
-const CN = `Button`;
-
 const Button = ({
   className = ``,
   children,
@@ -14,6 +12,7 @@ const Button = ({
   color,
   position,
   pretend,
+  active,
   ...props
 }) => {
   let Tag = `button`;
@@ -35,13 +34,18 @@ const Button = ({
   };
 
   return (
-    <Tag className={`${CN} ${CN}--${color} ${className}`} {...props}>
+    <Tag
+      className={`Button Button--${color} ${className} ${
+        active ? `Button--active` : ``
+      }`}
+      {...props}
+    >
       {icon && isIconAlignedLeft() && (
-        <span className={`${CN}__icon ${CN}__icon--${icon}`} />
+        <span className={`Button__icon Button__icon--${icon}`} />
       )}
       {children}
       {icon && !isIconAlignedLeft() && (
-        <span className={`${CN}__icon ${CN}__icon--${icon}`} />
+        <span className={`Button__icon Button__icon--${icon}`} />
       )}
     </Tag>
   );
@@ -56,6 +60,7 @@ Button.propTypes = {
   color: PropTypes.string,
   position: PropTypes.string,
   pretend: PropTypes.bool,
+  active: PropTypes.bool,
 };
 
 export default Button;

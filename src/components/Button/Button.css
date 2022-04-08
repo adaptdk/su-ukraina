@@ -135,4 +135,24 @@
       }
     }
   }
+
+  &--active {
+    background: var(--c__secondary);
+    color: var(--c__primary);
+
+    .Button__icon {
+      display: none;
+    }
+
+    &:hover {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .FaqNav & {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
