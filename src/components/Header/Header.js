@@ -28,7 +28,6 @@ const Header = ({ noSticky }) => {
   const altHeader = isUkrainianPage(location.pathname);
 
   const headerRef = React.useRef(null);
-  const location = useLocation();
   const pathname = location.pathname;
 
   React.useLayoutEffect(() => {
