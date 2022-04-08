@@ -150,11 +150,15 @@
       }
     }
 
-    a:not(.Button) {
+    a {
       display: block;
       padding: calc(var(--s__unit) * 2);
       transition: color 0.2s ease-in-out;
       color: black;
+
+      &.Button {
+        color: white;
+      }
 
       &:hover {
         color: var(--c__primary);
