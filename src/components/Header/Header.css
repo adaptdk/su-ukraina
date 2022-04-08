@@ -123,9 +123,8 @@
       }
     }
 
-    /* @TODO solve the problem with !important */
-    &__help-btn {
-      display: flex !important;
+    &-help-btn {
+      display: flex;
       max-width: 16rem;
     }
   }
@@ -151,13 +150,16 @@
     }
 
     a {
-      display: block;
       padding: calc(var(--s__unit) * 2);
       transition: color 0.2s ease-in-out;
       color: black;
 
       &.Button {
         color: white;
+      }
+
+      &:not(.Button) {
+        display: block;
       }
 
       &:hover {

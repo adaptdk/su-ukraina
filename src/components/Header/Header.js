@@ -14,6 +14,7 @@ import Logo from "../../images/logos/su-ukraina--original.svg";
 import {
   NAVIGATION_MAIN_MENU,
   NAVIGATION_MAIN_MENU_ALT,
+  NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP,
 } from "../../constants/Navigation";
 
 // Helpers
@@ -126,14 +127,14 @@ const Header = ({ noSticky }) => {
             {altHeader && (
               <li>
                 <Button
-                  className="Header__menu__help-btn"
+                  className="Header__menu-help-btn"
                   startIcon={`edit`}
-                  href="https://0rs0r9mdix1.typeform.com/to/QXLxIUjt"
+                  href={NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.url}
                   color={`primary`}
                   target="_blank"
                   rel="noopener"
                 >
-                  Noriu suteikti pagalbą
+                  {NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.title}
                 </Button>
               </li>
             )}
