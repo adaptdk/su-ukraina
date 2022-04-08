@@ -134,6 +134,156 @@
         width: 20px;
       }
     }
+
+    &--brain {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/brain.svg");
+        width: 20px;
+      }
+    }
+
+    &--briefcase {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/briefcase.svg");
+        width: 20px;
+      }
+    }
+
+    &--building-columns {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/building-columns.svg");
+        width: 20px;
+      }
+    }
+
+    &--bus-simple {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/bus-simple.svg");
+        width: 20px;
+      }
+    }
+
+    &--child-reaching {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/child-reaching.svg");
+        width: 20px;
+      }
+    }
+
+    &--coins {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/coins.svg");
+        width: 20px;
+      }
+    }
+
+    &--hands-holding-heart {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/hands-holding-heart.svg");
+        width: 20px;
+      }
+    }
+
+    &--house {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/house.svg");
+        width: 20px;
+      }
+    }
+
+    &--key-skeleton {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/key-skeleton.svg");
+        width: 20px;
+      }
+    }
+
+    &--mobile-screen-button {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/mobile-screen-button.svg");
+        width: 20px;
+      }
+    }
+
+    &--parachute-box {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/parachute-box.svg");
+        width: 20px;
+      }
+    }
+
+    &--paw {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/paw.svg");
+        width: 20px;
+      }
+    }
+
+    &--phone {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/phone.svg");
+        width: 20px;
+      }
+    }
+
+    &--suitcase-medical {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/suitcase-medical.svg");
+        width: 20px;
+      }
+    }
+
+    &--user-police {
+      &::before {
+        background: #fff;
+        height: 20px;
+        margin-right: 10px;
+        mask-image: url("../../images/icons/user-police.svg");
+        width: 20px;
+      }
+    }
   }
 
   &--active {
@@ -141,7 +291,13 @@
     color: var(--c__primary);
 
     .Button__icon {
-      display: none;
+      &::before {
+        background: var(--c__primary);
+      }
+
+      &--arrow-white {
+        display: none;
+      }
     }
 
     &:hover {
@@ -152,7 +308,10 @@
   }
 
   .FaqNav & {
-    justify-content: space-between;
     width: 100%;
+
+    &__body {
+      flex: 1;
+    }
   }
 }
