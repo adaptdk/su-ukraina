@@ -29,7 +29,7 @@ questions:
     Online</a><br><a href="https://www.cvmarket.lt" title="">CV market</a><br><a href="https://www.dirba.lt/paieska/ukrainieciai">Dirba.lt</a><br><a
     href="https://scobo.lt/ru/about-scobo/">Scobo.lt</a><br><a href="https://workinlithuania.lt/">Work
     in Lithuania</a><br><a href="https://buildingbridges.lt/building-bridges-ukraine/">Building
-    Bridges</a></p>
+    Bridges</a><br><a href="https://unicorns.lt/en/jobs." title="">Unicorns</a></p>
   content_blocks: []
   resources: []
   contacts: []
