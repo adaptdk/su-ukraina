@@ -154,16 +154,16 @@
       transition: color 0.2s ease-in-out;
       color: black;
 
-      &.Button {
-        color: white;
-      }
-
       &:not(.Button) {
         display: block;
       }
 
       &:hover {
         color: var(--c__primary);
+      }
+
+      &.Button {
+        color: white;
       }
     }
   }
