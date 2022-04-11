@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -35
 location: Lietuvoje
 title: "„Helping Wing“ - Pagalbos sparnas"
 about: 'Tarptautinis labdaros fondas „Helping wing” (liet.: „Pagalbos sparnas“) buvo
