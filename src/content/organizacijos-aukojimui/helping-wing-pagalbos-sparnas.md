@@ -21,6 +21,6 @@ rekvizitai: |-
   Norintys prisidėti ne tik finansine ar humanitarine pagalba susisiekite el.paštu: pagalbos.sparnas@gmail.com
 website: https://helpingwing.lt/
 support_link: https://www.paypal.com/paypalme/algirdasstonys
-logo: ''
+logo: "../uploads/helpingwing-suukraina-lt.png"
 
 ---
