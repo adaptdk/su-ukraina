@@ -1,6 +1,6 @@
 ---
 category: informacinis
-title: ''
+title: Gediminas Markevičius
 logo: "../uploads/gediminas-markevicius-logo.png"
 website: ''
 
