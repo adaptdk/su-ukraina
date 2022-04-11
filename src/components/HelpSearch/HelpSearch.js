@@ -549,15 +549,27 @@ const HelpSearch = ({ defaultResultsLang }) => {
               {TRANSLATIONS.refinements.panelTitle[resultsLang]}
             </p>
             <Panel header={TRANSLATIONS.refinements.typeOfHelp[resultsLang]}>
-              <RefinementList attribute={`tags_${resultsLang}`} />
+              <RefinementList
+                attribute={`tags_${resultsLang}`}
+                limit={50}
+                showMore={true}
+              />
             </Panel>
 
             <Panel header={TRANSLATIONS.refinements.region[resultsLang]}>
-              <RefinementList attribute={`region_${resultsLang}`} />
+              <RefinementList
+                attribute={`region_${resultsLang}`}
+                limit={50}
+                showMore={true}
+              />
             </Panel>
 
             <Panel header={TRANSLATIONS.refinements.languages[resultsLang]}>
-              <RefinementList attribute={`languages`} />
+              <RefinementList
+                attribute={`languages`}
+                limit={50}
+                showMore={true}
+              />
             </Panel>
 
             <div className="HelpSearch__sidebar-actions">
