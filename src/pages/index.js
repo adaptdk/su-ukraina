@@ -17,9 +17,11 @@ import { StaticImage } from "gatsby-plugin-image";
 
 // Constants.
 import {
-  NAVIGATION_BE_VIGILANT,
-  NAVIGATION_ITEM_HELP,
+  NAVIGATION_HOW_CAN_I_HELP,
+  NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP,
   NAVIGATION_ITEM_REFUGEE_GUIDE,
+  NAVIGATION_MAIN_MENU_ALT,
+  NAVIGATION_BE_VIGILANT,
 } from "../constants/Navigation";
 import PromoLine from "../components/PromoLine";
 
@@ -72,20 +74,17 @@ const Page = ({ data }) => {
         />
         <HeroBanner title="Su Ukraina iki pergalės!">
           <Constraint className="HeroBanner__inner">
+            {NAVIGATION_HOW_CAN_I_HELP.map((item) => (
+              <CtaCard
+                title={item.title}
+                link={item.pathname}
+                iconHandle={item.iconHandle}
+              />
+            ))}
             <CtaCard
-              title="Aukojimas"
-              link="/kaip-galiu-padeti/aukojimas/lietuvoje/"
-              iconHandle="donate"
-            />
-            <CtaCard
-              title="Savanorystė"
-              link="/kaip-galiu-padeti/savanoryste/"
-              iconHandle="volunteer"
-            />
-            <CtaCard
-              title="Pasiūlyk pagalbą ukrainiečiams"
-              link="https://0rs0r9mdix1.typeform.com/to/QXLxIUjt"
-              iconHandle="ua-flag"
+              title={NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.title}
+              link={NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.url}
+              iconHandle={NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.iconHandle}
               target="_blank"
             />
           </Constraint>
@@ -97,24 +96,17 @@ const Page = ({ data }) => {
           titleLink={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
           modifier="big"
         >
-          <Button
-            endIcon={`arrow-blue`}
-            to={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
-            color={`secondary`}
-            target="_blank"
-            rel="noopener"
-          >
-            Інформація
-          </Button>
-          <Button
-            endIcon={`arrow-blue`}
-            to={NAVIGATION_ITEM_HELP.pathname}
-            color={`secondary`}
-            target="_blank"
-            rel="noopener"
-          >
-            Послуги
-          </Button>
+          {NAVIGATION_MAIN_MENU_ALT.map((item) => (
+            <Button
+              endIcon={`arrow-blue`}
+              to={item.pathname}
+              color={`secondary`}
+              target="_blank"
+              rel="noopener"
+            >
+              {item.altTitle || item.title}
+            </Button>
+          ))}
         </PromoLine>
       </Section>
       {/* <Section className="ProtestFormsSection">

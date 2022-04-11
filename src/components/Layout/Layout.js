@@ -14,7 +14,7 @@ import Button from "../Button";
 // Constants.
 import {
   NAVIGATION_ITEM_HELP,
-  NAVIGATION_ITEM_REFUGEE_GUIDE,
+  NAVIGATION_MAIN_MENU_ALT,
 } from "../../constants/Navigation";
 
 // Helpers
@@ -44,24 +44,17 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
           title="Вся важлива інформація для громадян України"
           titleLink={NAVIGATION_ITEM_HELP.pathname}
         >
-          <Button
-            endIcon={`arrow-blue`}
-            to={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
-            color={`secondary`}
-            target="_blank"
-            rel="noopener"
-          >
-            Інформація
-          </Button>
-          <Button
-            endIcon={`arrow-blue`}
-            to={NAVIGATION_ITEM_HELP.pathname}
-            color={`secondary`}
-            target="_blank"
-            rel="noopener"
-          >
-            Послуги
-          </Button>
+          {NAVIGATION_MAIN_MENU_ALT.map((item) => (
+            <Button
+              endIcon={`arrow-blue`}
+              to={item.pathname}
+              color={`secondary`}
+              target="_blank"
+              rel="noopener"
+            >
+              {item.altTitle || item.title}
+            </Button>
+          ))}
         </PromoLine>
       )}
       <main>{children}</main>

@@ -7,11 +7,13 @@ export const NAVIGATION_ITEM_HOW_CAN_I_HELP = {
 export const NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA = {
   pathname: `/kaip-galiu-padeti/aukojimas/lietuvoje/`,
   title: `Aukojimas`,
+  iconHandle: `donate`,
 };
 
 export const NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER = {
   pathname: `/kaip-galiu-padeti/savanoryste/`,
   title: `Savanorystė`,
+  iconHandle: `volunteer`,
 };
 
 export const NAVIGATION_ITEM_PROTEST_FORMS = {
@@ -58,13 +60,13 @@ export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
 export const NAVIGATION_ITEM_HELP = {
   pathname: `/help-search/`,
   title: `Знайти довідку`,
-  altTitle: `Знайти довідку`,
+  altTitle: `Послуги`,
 };
 
 export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
   pathname: `/refugee-guide/`,
   title: `Важлива інформація`,
-  altTitle: `Важлива інформація`,
+  altTitle: `Інформація`,
 };
 
 // Navigation of how can I help page.
@@ -112,3 +114,10 @@ export const NAVIGATION_MAIN_MENU_ALT = [
   NAVIGATION_ITEM_HELP,
   NAVIGATION_ITEM_REFUGEE_GUIDE,
 ];
+
+// External links.
+export const NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP = {
+  url: `https://0rs0r9mdix1.typeform.com/to/QXLxIUjt`,
+  title: `Noriu suteikti pagalbą`,
+  iconHandle: `ua-flag`,
+};
