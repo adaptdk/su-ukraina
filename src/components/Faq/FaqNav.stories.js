@@ -95,3 +95,10 @@ Default.args = {
   ],
   pathname: `/currency-exchange`,
 };
+
+Default.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=982%3A15206`,
+  },
+};

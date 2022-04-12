@@ -12,3 +12,10 @@ const Template = () => {
 };
 
 export const Primary = Template.bind({});
+
+Primary.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=76%3A14952`,
+  },
+};

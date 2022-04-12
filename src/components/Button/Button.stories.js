@@ -18,6 +18,13 @@ Primary.args = {
   disabled: false,
 };
 
+Primary.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=351%3A102080`,
+  },
+};
+
 export const Secondary = Template.bind({});
 Secondary.args = {
   text: `Secondary`,
@@ -25,9 +32,23 @@ Secondary.args = {
   disabled: false,
 };
 
+Secondary.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=351%3A102052`,
+  },
+};
+
 export const Transparent = Template.bind({});
 Transparent.args = {
   text: `Transparent`,
   color: `transparent`,
   disabled: false,
+};
+
+Transparent.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=351%3A102088`,
+  },
 };

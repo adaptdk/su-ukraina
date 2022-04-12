@@ -31,3 +31,10 @@ Primary.args = {
     buttonText: `Šaltinis`,
   },
 };
+
+Primary.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=126%3A13011`,
+  },
+};

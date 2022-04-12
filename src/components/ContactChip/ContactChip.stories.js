@@ -29,3 +29,10 @@ Primary.args = {
   twitter: `https://twitter.com/ZelenskyyUa`,
   weight: -2000,
 };
+
+Primary.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=51%3A13415`,
+  },
+};

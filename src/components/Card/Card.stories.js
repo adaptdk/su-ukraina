@@ -24,3 +24,10 @@ Primary.args = {
   about: `Apie`,
   rekvizitai: `Rekvizitai`,
 };
+
+Primary.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=18%3A10128`,
+  },
+};

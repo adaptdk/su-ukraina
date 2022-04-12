@@ -16,3 +16,10 @@ Primary.args = {
   tag: `h2`,
   summary: `Praėję renginiai`,
 };
+
+Primary.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=1068%3A19665`,
+  },
+};
