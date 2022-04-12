@@ -74,13 +74,16 @@ const Page = ({ data }) => {
         />
         <HeroBanner title="Su Ukraina iki pergalės!">
           <Constraint className="HeroBanner__inner">
-            {NAVIGATION_HOW_CAN_I_HELP.map((item) => (
-              <CtaCard
-                title={item.title}
-                link={item.pathname}
-                iconHandle={item.iconHandle}
-              />
-            ))}
+            {NAVIGATION_HOW_CAN_I_HELP.map((item) => {
+              return (
+                <CtaCard
+                  key={item.pathname}
+                  title={item.title}
+                  link={item.pathname}
+                  iconHandle={item.iconHandle}
+                />
+              );
+            })}
             <CtaCard
               title={NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.title}
               link={NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.url}
@@ -96,17 +99,20 @@ const Page = ({ data }) => {
           titleLink={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
           modifier="big"
         >
-          {NAVIGATION_MAIN_MENU_ALT.map((item) => (
-            <Button
-              endIcon={`arrow-blue`}
-              to={item.pathname}
-              color={`secondary`}
-              target="_blank"
-              rel="noopener"
-            >
-              {item.altTitle || item.title}
-            </Button>
-          ))}
+          {NAVIGATION_MAIN_MENU_ALT.map((item) => {
+            return (
+              <Button
+                key={item.pathname}
+                endIcon={`arrow-blue`}
+                to={item.pathname}
+                color={`secondary`}
+                target="_blank"
+                rel="noopener"
+              >
+                {item.altTitle || item.title}
+              </Button>
+            );
+          })}
         </PromoLine>
       </Section>
       {/* <Section className="ProtestFormsSection">

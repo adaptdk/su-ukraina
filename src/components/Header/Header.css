@@ -20,8 +20,8 @@
       font-size: 1.2rem;
       text-align: center;
       text-decoration: none;
-      width: 100%;
       transition: color 0.2s ease-in-out;
+      width: 100%;
 
       @media (min-width: 40rem) {
         font-size: 1.5rem;
@@ -113,9 +113,9 @@
         > a {
           display: inline-block;
 
-          &:after {
-            content: "";
+          &::after {
             border-bottom: 2px solid var(--c__primary);
+            content: "";
             display: block;
             margin-top: 3px;
           }
@@ -150,9 +150,9 @@
     }
 
     a {
+      color: black;
       padding: calc(var(--s__unit) * 2);
       transition: color 0.2s ease-in-out;
-      color: black;
 
       &:not(.Button) {
         display: block;
@@ -334,8 +334,8 @@
         z-index: 10;
 
         > a {
-          padding: calc(var(--s__main-padding) / 2) var(--s__main-padding);
           font-weight: var(--fw__medium);
+          padding: calc(var(--s__main-padding) / 2) var(--s__main-padding);
         }
 
         > ul {
@@ -354,10 +354,10 @@
           list-style: none;
 
           a {
+            background: transparent;
             display: block;
             margin: 0 calc(var(--s__main-padding) - 1);
             padding: var(--s__main-padding);
-            background: transparent;
             transition: background 0.2s ease-in-out;
 
             &:hover {

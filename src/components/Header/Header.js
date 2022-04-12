@@ -91,7 +91,7 @@ const Header = ({ noSticky }) => {
                   className={
                     pathname.includes(item.pathname)
                       ? `Header__menu-link is-active`
-                      : "Header__menu-link"
+                      : `Header__menu-link`
                   }
                 >
                   <Link

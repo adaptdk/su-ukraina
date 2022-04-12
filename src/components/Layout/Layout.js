@@ -44,17 +44,20 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
           title="Вся важлива інформація для громадян України"
           titleLink={NAVIGATION_ITEM_HELP.pathname}
         >
-          {NAVIGATION_MAIN_MENU_ALT.map((item) => (
-            <Button
-              endIcon={`arrow-blue`}
-              to={item.pathname}
-              color={`secondary`}
-              target="_blank"
-              rel="noopener"
-            >
-              {item.altTitle || item.title}
-            </Button>
-          ))}
+          {NAVIGATION_MAIN_MENU_ALT.map((item) => {
+            return (
+              <Button
+                key={item.pathname}
+                endIcon={`arrow-blue`}
+                to={item.pathname}
+                color={`secondary`}
+                target="_blank"
+                rel="noopener"
+              >
+                {item.altTitle || item.title}
+              </Button>
+            );
+          })}
         </PromoLine>
       )}
       <main>{children}</main>
