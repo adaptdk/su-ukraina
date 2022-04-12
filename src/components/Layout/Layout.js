@@ -64,7 +64,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
 
       <Section className="ContactFormSection" bgColor="blue">
         <Constraint>
-          <RenderForm />,
+          <RenderForm />
         </Constraint>
       </Section>
 
