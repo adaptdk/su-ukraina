@@ -10,8 +10,8 @@ export default {
 const Template = (args) => {
   return <EventCard {...args}>{args.text}</EventCard>;
 };
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   title: `Kaunas už laisvę! (kovo 10-11 d.)`,
   type: `Palaikymo akcija`,
   organizer: `Kauno miesto savivaldybė`,
@@ -21,9 +21,22 @@ Primary.args = {
   eventUrl: `https://www.facebook.com/events/531861561580728/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22your_upcoming_events_unit%22%2C%22surface%22%3A%22bookmark%22%7D]%2C%22ref_notif_type%22%3Anull%7D`,
 };
 
-Primary.parameters = {
+Default.parameters = {
   design: {
     type: `figma`,
     url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=1068%3A19658`,
+  },
+};
+
+export const Previous = Template.bind({});
+Previous.args = {
+  ...Default.args,
+  className: `EventCard--previous`,
+};
+
+Previous.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=1068%3A19668`,
   },
 };
