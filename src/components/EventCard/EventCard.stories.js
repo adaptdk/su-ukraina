@@ -31,6 +31,12 @@ Default.parameters = {
 export const Previous = Template.bind({});
 Previous.args = {
   ...Default.args,
-  ...Default.parameters,
   className: `EventCard--previous`,
+};
+
+Previous.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=1068%3A19668`,
+  },
 };
