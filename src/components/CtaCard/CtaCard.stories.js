@@ -19,3 +19,10 @@ Primary.args = {
   link: `/kaip-galiu-padeti/aukojimas/lietuvoje/`,
   iconHandle: `donate`,
 };
+
+Primary.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=351%3A10773`,
+  },
+};
