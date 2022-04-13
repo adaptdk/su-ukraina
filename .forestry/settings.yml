@@ -10,6 +10,7 @@ sections:
   create: all
   match: "**/*"
   templates:
+  - faq-page
   - puslapis
 - type: directory
   path: src/content/partners
