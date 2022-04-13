@@ -18,6 +18,8 @@ export const handlePath = (pseudoLink) => {
       return `/bukime-budrus/piliecio-atmintine/`;
     case `sukčiai ir dezinformacija`:
       return `/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`;
+    case `informacija lietuvos gyventojams`:
+      return `/informacija-lietuvos-gyventojams/`;
     case `kaip galiu padėti`:
       return `/kaip-galiu-padeti/`;
     case `protesto formos`:

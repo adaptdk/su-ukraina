@@ -291,7 +291,7 @@
     }
   }
 
-  @media (min-width: 46rem) {
+  @media (min-width: 66rem) {
     &__menu-trigger,
     #menu-sensor {
       display: none;

@@ -127,7 +127,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
           id="faqnav-sensor"
           onChange={handleFaqNavSensorChange}
         />
-        <FaqNavCollapsible navData={navData} />
+        {!!navData && <FaqNavCollapsible navData={navData} />}
 
         <div className="Faq__content">
           <Breadcrumb crumbs={crumbs} />
