@@ -51,6 +51,11 @@ export const NAVIGATION_ITEM_BE_VIGILANT_RELIABLE_INFORMATION = {
   title: `Patikima informacija`,
 };
 
+export const NAVIGATION_ITEM_INFORMATION_FOR_LITHUANIAN_CITIZENS = {
+  pathname: `/informacija-lietuvos-gyventojams/`,
+  title: `Informacija Lietuvos gyventojams`,
+};
+
 export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
   pathname: `/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`,
   title: `Sukčiai ir dezinformacija`,
@@ -102,6 +107,7 @@ export const NAVIGATION_MAIN_MENU = [
   //     NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY,
   //   ],
   // },
+  //NAVIGATION_ITEM_INFORMATION_FOR_LITHUANIAN_CITIZENS,
   NAVIGATION_ITEM_BE_VIGILANT_CITIZEN_HANDBOOK,
   {
     ...NAVIGATION_ITEM_BE_VIGILANT,
