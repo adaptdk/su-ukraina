@@ -1,7 +1,7 @@
 .SubPage {
   margin: calc(var(--s__unit) * 8) 0;
 
-  &.has-image {
+  &--with-image {
     .SubPage__content {
       align-items: center;
       display: flex;
@@ -12,43 +12,49 @@
         flex-wrap: nowrap;
       }
     }
+  }
 
-    &.has-image--left {
-      .SubPage__content {
-        flex-direction: row-reverse;
+  &--image-left-aligned,
+  &--image-right-aligned {
+    .SubPage__content-text {
+      width: 100%;
+
+      @media (min-width: 40rem) {
+        width: 50%;
       }
+    }
+  }
 
-      .SubPage__content-image {
-        @media (min-width: 40rem) {
-          margin-right: 20px;
-        }
-      }
+  &--image-left-aligned {
+    .SubPage__content {
+      flex-direction: row-reverse;
+    }
 
-      .SubPage__content-text {
-        text-align: left;
-        width: 100%;
-
-        @media (min-width: 40rem) {
-          text-align: right;
-          width: 50%;
-        }
+    .SubPage__content-image {
+      @media (min-width: 40rem) {
+        margin-right: 20px;
       }
     }
 
-    &.has-image--right {
-      .SubPage__content-image {
-        @media (min-width: 40rem) {
-          margin-left: 20px;
-        }
+    .SubPage__content-text {
+      text-align: left;
+
+      @media (min-width: 40rem) {
+        text-align: right;
       }
+    }
+  }
 
-      .SubPage__content-text {
-        width: 100%;
+  &--image-right-aligned {
+    .SubPage__content-image {
+      @media (min-width: 40rem) {
+        margin-left: 20px;
+      }
+    }
 
-        @media (min-width: 40rem) {
-          margin-right: 20px;
-          width: 50%;
-        }
+    .SubPage__content-text {
+      @media (min-width: 40rem) {
+        margin-right: 20px;
       }
     }
   }

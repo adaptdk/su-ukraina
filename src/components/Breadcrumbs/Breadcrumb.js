@@ -5,20 +5,20 @@ import { handlePath } from "../../helpers/handlers";
 
 import "./Breadcrumb.css";
 
-const Breadcrumb = ({ crumbs, className = `` }) => {
+const Breadcrumb = ({ crumbs }) => {
   return (
-    <nav className={`breadcrumb${className}`}>
-      <ol className="breadcrumb__container">
-        <li className="breadcrumb__item">
+    <nav className="Breadcrumb">
+      <ol className="Breadcrumb__container">
+        <li className="Breadcrumb__item">
           <Link to="/">Titulinis</Link>
         </li>
         {crumbs.map((crumb, index) => {
           return crumbs.length !== index + 1 ? (
-            <li key={index} className="breadcrumb__item">
+            <li key={index} className="Breadcrumb__item">
               <Link to={handlePath(crumb)}>{crumb}</Link>
             </li>
           ) : (
-            <li key={index} className="breadcrumb__item">
+            <li key={index} className="Breadcrumb__item">
               <span>{crumb}</span>
             </li>
           );
@@ -29,6 +29,7 @@ const Breadcrumb = ({ crumbs, className = `` }) => {
 };
 
 Breadcrumb.propTypes = {
+  isSolo: PropTypes.bool,
   crumbs: PropTypes.arrayOf(PropTypes.string),
   className: PropTypes.string,
 };

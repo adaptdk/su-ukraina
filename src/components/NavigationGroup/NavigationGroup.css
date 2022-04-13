@@ -1,17 +1,17 @@
-.navigation-group {
+.NavigationGroup {
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: calc(var(--s__unit) * 4);
 
-  .additional-navigation {
+  & .AdditionalNavigation {
     margin-top: calc(var(--s__unit) * 2);
     width: 100%;
   }
 
   @media (min-width: 40rem) {
-    .additional-navigation {
+    & .AdditionalNavigation {
       margin-top: 0;
       width: auto;
     }

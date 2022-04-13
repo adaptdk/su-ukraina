@@ -7,9 +7,9 @@ import "./NavigationGroup.css";
 
 const NavigationGroup = ({ crumbs, additionalNav }) => {
   return (
-    <container className="navigation-group">
-      <Breadcrumb crumbs={crumbs} />
-      <AdditionalNavigation additionalNav={additionalNav} />
+    <container className="NavigationGroup">
+      {crumbs && <Breadcrumb crumbs={crumbs} />}
+      {additionalNav && <AdditionalNavigation additionalNav={additionalNav} />}
     </container>
   );
 };

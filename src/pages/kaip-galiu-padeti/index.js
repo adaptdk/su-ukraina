@@ -6,10 +6,10 @@ import { Title, Meta } from "react-head";
 // Components.
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
-import Breadcrumb from "../../components/Breadcrumbs";
 import Section from "../../components/Section";
 import LinkCollection from "../../components/LinkCollection";
 import LinkCollectionItem from "../../components/LinkCollection/LinkCollectionItem";
+import NavigationGroup from "../../components/NavigationGroup";
 
 // Constants.
 import { NAVIGATION_HOW_CAN_I_HELP } from "../../constants/Navigation";
@@ -30,7 +30,7 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          <Breadcrumb className="__solo" crumbs={crumbs} />
+          <NavigationGroup crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <Meta name="description" content={content.excerpt} />

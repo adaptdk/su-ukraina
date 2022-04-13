@@ -7,13 +7,13 @@ import "./AdditionalNavigation.css";
 
 const AdditionalNavigation = ({ additionalNav }) => {
   return (
-    <nav className="additional-navigation">
-      <ol className="additional-navigation__container">
+    <nav className="AdditionalNavigation">
+      <ol className="AdditionalNavigation__container">
         {additionalNav.map((additionalEl, index) => {
           let path = handlePath(additionalEl);
           return (
             <li key={index}>
-              <Link className="additional-navigation__item" to={path}>
+              <Link className="AdditionalNavigation__item" to={path}>
                 {additionalEl}
               </Link>
             </li>
