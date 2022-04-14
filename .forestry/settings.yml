@@ -111,6 +111,13 @@ sections:
   match: "**/*"
   templates:
   - faq-page
+- type: directory
+  path: src/content/refugee-guide-lt
+  label: Guide pages (LT)
+  create: documents
+  match: "**/*"
+  templates:
+  - faq-page
 upload_dir: src/content/uploads
 public_path: "/uploads"
 front_matter_path: "../uploads"
