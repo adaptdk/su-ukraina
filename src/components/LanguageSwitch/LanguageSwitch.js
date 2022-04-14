@@ -9,6 +9,7 @@ const LanguageSwitch = () => {
 
   return (
     <div className="LanguageSwitch">
+      {/* @TODO use classnames library here */}
       <div
         className={`LanguageSwitch__language ${
           currentLanguage === `ua` ? `LanguageSwitch__language--active` : ``
