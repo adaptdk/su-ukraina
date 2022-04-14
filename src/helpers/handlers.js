@@ -1,3 +1,5 @@
+import { useLocation } from "@reach/router";
+
 export const handlePath = (pseudoLink) => {
   switch (pseudoLink.toLowerCase()) {
     case `savanorystė`:
@@ -33,16 +35,7 @@ export const handlePath = (pseudoLink) => {
   }
 };
 
-export const isUkrainianPage = (pathname) => {
-  // pathname is expected as location.pathname from useLocation()
-  const splitPathname = pathname.split(`/`);
-
-  const isUkrainianPathname = [
-    `pagalbos-paieska`,
-    `refugee-guide`,
-    `help-search`,
-    `privacy-policy`,
-  ].includes(splitPathname[1]);
-
-  return isUkrainianPathname;
+export const isUkrainianPage = () => {
+  const pathname = useLocation().pathname;
+  return pathname.includes(`/ua/`);
 };
