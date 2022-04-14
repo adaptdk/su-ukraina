@@ -6,6 +6,7 @@ import { useLocation } from "@reach/router";
 // Components.
 import Constraint from "../Constraint";
 import Button from "../Button";
+import LanguageSwitch from "../LanguageSwitch";
 
 // SVGs.
 import Logo from "../../images/logos/su-ukraina--original.svg";
@@ -140,6 +141,7 @@ const Header = ({ noSticky }) => {
             )}
           </ul>
         </nav>
+        <LanguageSwitch />
       </Constraint>
     </div>
   );

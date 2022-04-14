@@ -1,0 +1,50 @@
+.LanguageSwitch {
+  display: flex;
+  gap: 1.5rem;
+
+  &__language {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding-bottom: 0.5rem;
+    transition: box-shadow 0.2s ease;
+
+    &--active,
+    &:hover {
+      box-shadow: inset 0 -2px var(--c__primary);
+    }
+  }
+
+  &__language-icon {
+    &::before {
+      --icon-width: 24px;
+
+      background: var(--c__primary);
+      content: "";
+      display: block;
+      height: 15px;
+      margin-right: calc(var(--s__unit) * 2);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: relative;
+      width: var(--icon-width);
+    }
+
+    &--ua-flag-alt {
+      &::before {
+        background: url("../../images/icons/ua-flag-alt.svg") center center
+          no-repeat;
+        width: var(--icon-width);
+      }
+    }
+
+    &--lt-flag {
+      &::before {
+        background: url("../../images/icons/lt-flag.svg") center center
+          no-repeat;
+        width: var(--icon-width);
+      }
+    }
+  }
+}
