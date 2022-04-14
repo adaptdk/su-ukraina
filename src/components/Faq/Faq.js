@@ -263,6 +263,7 @@ Faq.propTypes = {
   ),
   pagePath: PropTypes.string,
   crumbs: PropTypes.array,
+  lang: PropTypes.string,
 };
 
 export default Faq;

@@ -7,10 +7,10 @@ import Button from "../Button";
 const FaqNav = ({ navData, pathname, lang }) => {
   let pathRoot = `/refugee-guide`;
   switch (lang) {
-    case "lt":
+    case `lt`:
       pathRoot = `/informacija-ukrainieciams`;
       break;
-    case "ua":
+    case `ua`:
       pathRoot = `/refugee-guide`;
       break;
     //...
@@ -48,6 +48,7 @@ FaqNav.propTypes = {
     })
   ),
   pathname: PropTypes.string,
+  lang: PropTypes.string,
 };
 
 export default FaqNav;
