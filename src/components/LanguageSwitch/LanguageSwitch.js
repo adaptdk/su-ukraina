@@ -1,5 +1,4 @@
 import * as React from "react";
-// import PropTypes from "prop-types";
 import { useLocation } from "@reach/router";
 
 import "./LanguageSwitch.css";
@@ -29,7 +28,5 @@ const LanguageSwitch = () => {
     </div>
   );
 };
-
-// LanguageSwitch.propTypes = {};
 
 export default LanguageSwitch;
