@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Title, Meta } from "react-head";
 
-import HelpSearch from "../components/HelpSearch";
-import Layout from "../components/Layout";
-import { LANG_UK } from "../constants/HelpSearch";
+import HelpSearch from "../../components/HelpSearch";
+import Layout from "../../components/Layout";
+import { LANG_UK } from "../../constants/HelpSearch";
 
 const Page = () => {
   return (

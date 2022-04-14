@@ -5,13 +5,13 @@ import "./FaqNav.css";
 import Button from "../Button";
 
 const FaqNav = ({ navData, pathname, lang }) => {
-  let pathRoot = `/refugee-guide`;
+  let pathRoot = `/ua/refugee-guide`;
   switch (lang) {
     case `lt`:
       pathRoot = `/informacija-ukrainieciams`;
       break;
     case `ua`:
-      pathRoot = `/refugee-guide`;
+      pathRoot = `/ua/refugee-guide`;
       break;
     default:
       break;

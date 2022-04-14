@@ -4,13 +4,13 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import { useLocation } from "@reach/router";
 
-import Constraint from "../../components/Constraint";
+import Constraint from "../../../components/Constraint";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Layout from "../../components/Layout";
-import FaqNav from "../../components/Faq/FaqNav";
-import Section from "../../components/Section";
-import Breadcrumb from "../../components/Breadcrumbs";
+import Layout from "../../../components/Layout";
+import FaqNav from "../../../components/Faq/FaqNav";
+import Section from "../../../components/Section";
+import Breadcrumb from "../../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
   const crumbs = [`Важлива інформація`];

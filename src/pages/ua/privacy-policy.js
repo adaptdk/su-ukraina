@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Title } from "react-head";
 
-import Constraint from "../components/Constraint";
-import ContentLayout from "../components/ContentLayout";
-import Breadcrumb from "../components/Breadcrumbs";
+import Constraint from "../../components/Constraint";
+import ContentLayout from "../../components/ContentLayout";
+import Breadcrumb from "../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
   const crumbs = [`ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ`];

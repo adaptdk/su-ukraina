@@ -27,7 +27,7 @@ export const handlePath = (pseudoLink) => {
     case `būkime budrūs`:
       return `/bukime-budrus/`;
     case `важлива інформація`:
-      return `/refugee-guide/`;
+      return `/ua/refugee-guide/`;
     case `informacija ukrainiečiams`:
       return `/informacija-ukrainieciams/`;
   }
