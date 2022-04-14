@@ -5,8 +5,16 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: src/content/ua/pages
+  label: Pages (UA)
+  create: all
+  match: "**/*"
+  templates:
+  - puslapis
+  - faq-page
+- type: directory
   path: src/content/pages
-  label: Puslapiai
+  label: Pages
   create: all
   match: "**/*"
   templates:
