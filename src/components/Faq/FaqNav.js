@@ -13,7 +13,8 @@ const FaqNav = ({ navData, pathname, lang }) => {
     case `ua`:
       pathRoot = `/refugee-guide`;
       break;
-    //...
+    default:
+      break;
   }
 
   return (
