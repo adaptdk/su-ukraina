@@ -77,7 +77,11 @@ const Footer = () => {
                   </li>
                 )}
                 <li>
-                  <Link to="/privatumo-politika/">
+                  <Link
+                    to={
+                      altFooter ? `/ua/privacy-policy/` : `/privatumo-politika`
+                    }
+                  >
                     {altFooter
                       ? `Політика конфіденційності`
                       : `Privatumo politika`}
