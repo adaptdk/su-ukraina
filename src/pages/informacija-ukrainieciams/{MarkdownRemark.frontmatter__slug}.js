@@ -13,7 +13,7 @@ export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
-  const crumbs = [`Важлива інформація`, frontmatter.title_override];
+  const crumbs = [`Informacija Ukrainiečiams`, frontmatter.title_override];
 
   const faq = data.faq.edges.map((edge) => {
     return {
@@ -41,7 +41,7 @@ export default function Template({ data }) {
           navData={faq}
           faqHtml={html}
           crumbs={crumbs}
-          lang="ua"
+          lang="lt"
         />
       )}
     </Layout>
@@ -100,7 +100,7 @@ export const pageQuery = graphql`
       }
     }
     faq: allFile(
-      filter: { sourceInstanceName: { eq: "refugee-guide" } }
+      filter: { sourceInstanceName: { eq: "refugee-guide-lt" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {

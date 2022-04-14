@@ -99,6 +99,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `refugee-guide-lt`,
+        path: `${__dirname}/src/content/refugee-guide-lt`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `uploads`,
         path: `${__dirname}/src/content/uploads`,
       },

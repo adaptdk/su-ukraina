@@ -6,13 +6,13 @@ import "./FaqNavCollapsible.css";
 import Button from "../Button";
 import FaqNav from "./FaqNav";
 
-const FaqNavCollapsible = ({ navData }) => {
+const FaqNavCollapsible = ({ navData, lang }) => {
   const location = useLocation();
   const pathname = location.pathname;
 
   return (
     <div className="FaqNavCollapsible">
-      <FaqNav navData={navData} pathname={pathname} />
+      <FaqNav navData={navData} pathname={pathname} lang={lang} />
       <div className="FaqNavCollapsible__actions">
         <label
           className="FaqNavCollapsible__close-trigger"
@@ -39,6 +39,7 @@ FaqNavCollapsible.propTypes = {
       slug: PropTypes.string,
     })
   ),
+  lang: PropTypes.string,
   pagePath: PropTypes.string,
 };
 

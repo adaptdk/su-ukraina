@@ -90,7 +90,7 @@ const handleAnchorClick = (e) => {
   e.preventDefault();
 };
 
-const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
+const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
   React.useEffect(() => {
     window.addEventListener(`hashchange`, openTarget);
     openTarget();
@@ -127,7 +127,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs }) => {
           id="faqnav-sensor"
           onChange={handleFaqNavSensorChange}
         />
-        {!!navData && <FaqNavCollapsible navData={navData} />}
+        {!!navData && <FaqNavCollapsible lang={lang} navData={navData} />}
 
         <div className="Faq__content">
           <Breadcrumb crumbs={crumbs} />
