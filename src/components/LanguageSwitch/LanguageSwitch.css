@@ -9,6 +9,10 @@
     padding-bottom: 0.5rem;
     transition: box-shadow 0.2s ease;
 
+    &--active {
+      pointer-events: none;
+    }
+
     &--active,
     &:hover {
       box-shadow: inset 0 -2px var(--c__primary);
