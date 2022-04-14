@@ -1,8 +1,8 @@
 ---
 weight: 0
-title: Ukrainiečių gidas
-slug: ukrainieciu-gidas
+title: Informacija Ukrainiečiams
+slug: informacija-ukrainieciams
 short_description: ""
 ---
 
-Kažkoks aprašymas
+Visa svarbiausia informacija apie pagalbą Ukrainos pabėgėliams, atvykusiems į Lietuvą, surinkta vienoje vietoje.

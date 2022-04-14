@@ -4,7 +4,19 @@ import PropTypes from "prop-types";
 import "./FaqNav.css";
 import Button from "../Button";
 
-const FaqNav = ({ navData, pathname }) => {
+const FaqNav = ({ navData, pathname, lang }) => {
+  let pathRoot = `/refugee-guide`;
+  switch (lang) {
+    case `lt`:
+      pathRoot = `/informacija-ukrainieciams`;
+      break;
+    case `ua`:
+      pathRoot = `/refugee-guide`;
+      break;
+    default:
+      break;
+  }
+
   return (
     <nav className="FaqNav">
       <ul className="FaqNav__list">
@@ -16,7 +28,7 @@ const FaqNav = ({ navData, pathname }) => {
                 color="primary"
                 startIcon={navItem.icon}
                 endIcon={`arrow-white`}
-                to={`/refugee-guide${navItem.slug}/`}
+                to={`${pathRoot}${navItem.slug}/`}
               >
                 {navItem.title_override}
               </Button>
@@ -37,6 +49,7 @@ FaqNav.propTypes = {
     })
   ),
   pathname: PropTypes.string,
+  lang: PropTypes.string,
 };
 
 export default FaqNav;

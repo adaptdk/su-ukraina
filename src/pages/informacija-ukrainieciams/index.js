@@ -13,7 +13,7 @@ import Section from "../../components/Section";
 import Breadcrumb from "../../components/Breadcrumbs";
 
 const Page = ({ data }) => {
-  const crumbs = [`Важлива інформація`];
+  const crumbs = [`Aktuali informacija`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -53,7 +53,7 @@ const Page = ({ data }) => {
           <Breadcrumb crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <FaqNav navData={faqNav} pathname={pathname} lang="ua" />
+          <FaqNav navData={faqNav} pathname={pathname} lang="lt" />
         </Constraint>
       )}
     </Layout>
@@ -65,7 +65,9 @@ export const query = graphql`
     contents: allFile(
       filter: {
         sourceInstanceName: { eq: "page-contents" }
-        absolutePath: { regex: "//src/content/pages/refugee-guide.md$/" }
+        absolutePath: {
+          regex: "//src/content/pages/informacija-ukrainieciams.md$/"
+        }
       }
     ) {
       edges {
@@ -81,7 +83,7 @@ export const query = graphql`
       }
     }
     faq: allFile(
-      filter: { sourceInstanceName: { eq: "refugee-guide" } }
+      filter: { sourceInstanceName: { eq: "refugee-guide-lt" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {

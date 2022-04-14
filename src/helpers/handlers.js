@@ -28,6 +28,8 @@ export const handlePath = (pseudoLink) => {
       return `/bukime-budrus/`;
     case `важлива інформація`:
       return `/refugee-guide/`;
+    case `informacija ukrainiečiams`:
+      return `/informacija-ukrainieciams/`;
   }
 };
 
