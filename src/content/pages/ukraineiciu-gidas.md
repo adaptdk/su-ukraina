@@ -1,6 +1,6 @@
 ---
 weight: 0
-title: Ukraineičių gidas
+title: Ukrainiečių gidas
 slug: ukrainieciu-gidas
 short_description: ''
 
