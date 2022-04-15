@@ -26,11 +26,10 @@ import "./Header.css";
 
 const Header = ({ noSticky }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
-  const location = useLocation();
-  const altHeader = isUkrainianPage(location.pathname);
+  const { pathname } = useLocation();
+  const altHeader = isUkrainianPage();
 
   const headerRef = React.useRef(null);
-  const pathname = location.pathname;
 
   React.useLayoutEffect(() => {
     const resetHeaderHeight = () => {

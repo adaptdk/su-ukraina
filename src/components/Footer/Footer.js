@@ -1,7 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { useLocation } from "@reach/router";
 
 // Styles.
 import "./Footer.css";
@@ -29,8 +28,7 @@ import Adapt from "../../images/logos/adapt.svg";
 import LaisvesTv from "../../images/logos/laisves-tv.svg";
 
 const Footer = () => {
-  const location = useLocation();
-  const altFooter = isUkrainianPage(location.pathname);
+  const altFooter = isUkrainianPage();
 
   return (
     <footer className="Footer">

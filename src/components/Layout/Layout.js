@@ -39,7 +39,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
   return (
     <div className="Layout">
       <Header noSticky={noStickyHeader} />
-      {!isUkrainianPage(location.pathname) && (
+      {!isUkrainianPage() && (
         <PromoLine
           title="Вся важлива інформація для громадян України"
           titleLink={NAVIGATION_ITEM_HELP.pathname}
