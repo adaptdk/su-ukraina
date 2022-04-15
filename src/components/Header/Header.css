@@ -184,6 +184,10 @@
     }
   }
 
+  #menu-sensor:checked ~ .LanguageSwitch {
+    display: none;
+  }
+
   #menu-sensor:checked + &__menu-trigger + &__nav {
     /* 70px -- magic number. height of header */
     height: calc(100vh - 70px);

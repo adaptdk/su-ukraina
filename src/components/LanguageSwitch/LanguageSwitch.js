@@ -36,15 +36,9 @@ const LanguageSwitch = () => {
   return (
     <div className="LanguageSwitch">
       <div className="LanguageSwitch__wrapper">
-        <input
-          type="checkbox"
-          id="lang-sensor"
-          name="lang-sensor"
-          aria-hidden="true"
-        />
-        <label
-          htmlFor="lang-sensor"
+        <div
           aria-haspopup="true"
+          tabIndex={0}
           className="LanguageSwitch__language LanguageSwitch__language--active"
         >
           <div
@@ -57,7 +51,7 @@ const LanguageSwitch = () => {
           <div className="LanguageSwitch__language-title">
             {isUa ? `UA` : `LT`}
           </div>
-        </label>
+        </div>
         <ul className="LanguageSwitch__list">
           <li className="LanguageSwitch__list-item">
             <Link

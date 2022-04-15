@@ -1,8 +1,8 @@
 .LanguageSwitch {
   /* 40px menu width + 1rem "gap" */
-  --absolute-positioning: calc(var(--s__main-padding) + 40px + 1rem);
+  --side-offset: calc(var(--s__main-padding) + 40px + 1rem);
 
-  left: var(--absolute-positioning);
+  left: var(--side-offset);
   position: absolute;
 
   &__wrapper {
@@ -90,29 +90,20 @@
     }
   }
 
-  #lang-sensor {
-    display: none;
-  }
-
-  #lang-sensor:checked ~ .LanguageSwitch__list {
+  &__wrapper:hover > ul,
+  &__wrapper:focus-within > ul,
+  &__wrapper > ul:hover,
+  &__wrapper > ul:focus {
     opacity: 1;
     visibility: visible;
   }
 
   @media (min-width: 46rem) {
     left: auto;
-    right: var(--absolute-positioning);
+    right: var(--side-offset);
   }
 
   @media (min-width: 66rem) {
     position: static;
-
-    &__wrapper:hover > ul,
-    &__wrapper:focus-within > ul,
-    &__wrapper > ul:hover,
-    &__wrapper > ul:focus {
-      opacity: 1;
-      visibility: visible;
-    }
   }
 }
