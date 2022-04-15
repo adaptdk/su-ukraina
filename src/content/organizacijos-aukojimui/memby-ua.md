@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: -35
 location: Lietuvoje
 title: Memby UA
 about: "Suvienijus jėgas su privačia Ukrainos švietimo  įstaiga, buvo skubiai įkurta
