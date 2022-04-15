@@ -4,74 +4,71 @@ title_override: Įdarbininimas
 title: idarbinimas
 slug: "/idarbinimas"
 questions:
-  - title:
-      "Інформація про допомогу та послуги в окремих регіонах та містах доступна
-      за номерами:"
-    answer:
-      <p><a href="tel:+37065826755"><strong>+370 658 26 755</strong></a><strong>
-      <em>(Вільнюс)<br></em></strong><a href="tel:%E2%80%8D+37065825471"><strong><em>‍</em>+370
-      658 25 471</strong></a><strong> (<em>Каунас</em>)<br></strong><a href="tel:+37067228204"><strong>+370
-      672 28 204</strong></a><strong> (<em>Йонава</em>)<br></strong><a href="tel:+37061807602"><strong>+370
-      618 07 602</strong></a><strong> (<em>Алітус</em>)<br></strong><a href="tel:+37065824346"><strong>+370
-      658 24 346</strong></a><strong> (<em>Клайпеда</em>)<br></strong><a href="tel:+37061038727"><strong>+370
-      610 38 727</strong></a><strong> (<em>Паневежис</em>)<br></strong><a href="tel:+37061646608"><strong>+370
-      616 46 608</strong></a><strong> (<em>Шяуляй</em>)<br></strong><a href="tel:+37061400179"><strong>+370
-      614 00 179</strong></a><strong> (<em>Маріямполє</em>)<br><br>інформація про </strong><a
-      href="https://uzt.lt/ua/registration/"><strong>РЕЄСТРАЦІЯ</strong></a><strong><br>інформація
-      про </strong><a href="https://uzt.lt/ua/services/"><strong>ДЛЯ ОСІБ, ЩО ЗДІЙСНЮЮТЬ
-      ПОШУК ПРАЦІ</strong></a></p>
-    content_blocks: []
-    resources: []
-    contacts: []
-    adresses: []
-  - title: "Самостійно шукати роботу можна тут:"
-    answer:
-      <p><a href="https://www.idarbinimocentras.lt/uzsienieciu-idarbinimas-lietuvoje/darbuotojai-is-ukrainos/">Įdarbinimo
-      centras</a><a href="https://www.dirba.lt/paieska/ukrainieciai"><br></a><a href="https://ua.cvbankas.lt/"
-      title="">CV Bankas</a><a href="https://scobo.lt/ru/about-scobo/"><br></a><a href="https://cvonline.lt/lt/search?limit=20&amp;offset=0&amp;suitableForRefugees=true">CV
-      Online</a><br><a href="https://www.cvmarket.lt" title="">CV market</a><br><a href="https://www.dirba.lt/paieska/ukrainieciai">Dirba.lt</a><br><a
-      href="https://scobo.lt/ru/about-scobo/">Scobo.lt</a><br><a href="https://workinlithuania.lt/">Work
-      in Lithuania</a><br><a href="https://buildingbridges.lt/building-bridges-ukraine/">Building
-      Bridges</a><br><a href="https://unicorns.lt/en/jobs." title="">Unicorns</a></p>
-    content_blocks: []
-    resources: []
-    contacts: []
-    adresses: []
+- title: Informaciją apie pagalbą ir paslaugas kai kuriuose regionuose ir miestuose
+    rasite adresu
+  answer: <p><a href="tel:+37065826755"><strong>+370 658 26 755</strong></a><strong>
+    <em>(Вільнюс)<br></em></strong><a href="tel:%E2%80%8D+37065825471"><strong><em>‍</em>+370
+    658 25 471</strong></a><strong> (<em>Каунас</em>)<br></strong><a href="tel:+37067228204"><strong>+370
+    672 28 204</strong></a><strong> (<em>Йонава</em>)<br></strong><a href="tel:+37061807602"><strong>+370
+    618 07 602</strong></a><strong> (<em>Алітус</em>)<br></strong><a href="tel:+37065824346"><strong>+370
+    658 24 346</strong></a><strong> (<em>Клайпеда</em>)<br></strong><a href="tel:+37061038727"><strong>+370
+    610 38 727</strong></a><strong> (<em>Паневежис</em>)<br></strong><a href="tel:+37061646608"><strong>+370
+    616 46 608</strong></a><strong> (<em>Шяуляй</em>)<br></strong><a href="tel:+37061400179"><strong>+370
+    614 00 179</strong></a><strong> (<em>Маріямполє</em>)<br><br>інформація про </strong><a
+    href="https://uzt.lt/ua/registration/"><strong>РЕЄСТРАЦІЯ</strong></a><strong><br>інформація
+    про </strong><a href="https://uzt.lt/ua/services/"><strong>ДЛЯ ОСІБ, ЩО ЗДІЙСНЮЮТЬ
+    ПОШУК ПРАЦІ</strong></a></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
+- title: Darbo galite ieškoti čia
+  answer: <p><a href="https://www.idarbinimocentras.lt/uzsienieciu-idarbinimas-lietuvoje/darbuotojai-is-ukrainos/">Įdarbinimo
+    centras</a><a href="https://www.dirba.lt/paieska/ukrainieciai"><br></a><a href="https://ua.cvbankas.lt/"
+    title="">CV Bankas</a><a href="https://scobo.lt/ru/about-scobo/"><br></a><a href="https://cvonline.lt/lt/search?limit=20&amp;offset=0&amp;suitableForRefugees=true">CV
+    Online</a><br><a href="https://www.cvmarket.lt" title="">CV market</a><br><a href="https://www.dirba.lt/paieska/ukrainieciai">Dirba.lt</a><br><a
+    href="https://scobo.lt/ru/about-scobo/">Scobo.lt</a><br><a href="https://workinlithuania.lt/">Work
+    in Lithuania</a><br><a href="https://buildingbridges.lt/building-bridges-ukraine/">Building
+    Bridges</a><br><a href="https://unicorns.lt/en/jobs." title="">Unicorns</a></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 contacts: []
 adresses: []
 icon: briefcase
+
 ---
+Ukrainos piliečiai, jų šeimų nariai ir asmenys be pilietybės, gyvenantys Ukrainoje, išvykę iš Ukrainos į Lietuvos Respubliką dėl Rusijos Federacijos karinių veiksmų Ukrainos teritorijoje, atleidžiami nuo pareigos gauti dokumentą, leidžiantį dirbti šalyje. ketinantiems įdarbinti tokius asmenis, nereikės kreiptis į Užimtumo tarnybą dėl leidimo dirbti ir/ar sprendimų dėl tinkamumo darbui.
 
-Громадяни України, члени їх сімей та особи без громадянства, що проживають в Україні, які виїхали з України до Литовської Республіки через військові дії Російської Федерації на території України, звільняютьсявід обов’язку отримання документу, який дає дозвіл працювати в Литві, тому роботодавцям, які мають намір працевлаштувати таких осіб, не потрібно буде звертатися до Служби зайнятості для отримання дозволу працювати та/або рішень щодо відповідності праці.
+Su Ukrainos piliečiams taikomomis buvimo Lietuvoje sąlygomis ir migracijos procedūromis galima susipažinti Migracijos departamento svetainėje [www.migracija.lt](http://www.migracija.lt/) .
 
-Умови перебування в Литві та міграційні процедури, які застосовуються до громадян України, доступні на сайті Департаменту Міграції: [www.migracija.lt](http://www.migracija.lt/).
+* Atvykę ir užsiregistravę Migracijos departamente, galite iš karto įsidarbinti, nelaukdami leidimo laikinai gyventi (LLG);
+* Įsidarbinti su biometriniais pasais (be vizų) galite iškart atvykę.
 
-- Після того, як ви приїхали та зареєструвалися в Департаменті міграції, ви можете влаштовуватись на роботу одразу, не чекаючи тимчасової посвідки на проживання (LLG);
-- Працевлаштовуватись з біометричними паспортами (безвіз) можна відразу після прибуття.
+Paslaugos teikiamos anglų ir rusų kalbomis.
 
-Послуги надаються англійською та російською мовами.
+Jei esate užsiregistravę Migracijos departamente ir turite bevizį režimą, turite Šengeno vizą arba pateikėte prašymą dėl leidimo gyventi Lietuvoje, kviečiame registruotis Užimtumo tarnyboje:
 
-Якщо ви перебуваєте на обліку в Департаменті міграції та користуєтесь безвізовим режимом, маєте шенгенську візу або подали заявку на отримання дозволу на проживання в Литві, запрошуємо вас зареєструватися в Службі зайнятості:
+* Jums bus pasiūlytas darbas per vieną darbo dieną.
+* Jei norite mokytis ar persikvalifikuoti, galite pasirinkti jums tinkančią mokymo programą.
+* Jei turite profesiją, bet neturite diplomo, galėsite dalyvauti kompetencijų vertinimo ir pripažinimo programoje.
+* Jums bus teikiamos konsultavimo, karjeros planavimo ar psichologinės paslaugos.
 
-- Вам запропонують роботу протягом одного робочого дня.
-- Якщо ви хочете навчатися чи перекваліфікуватися, ви зможете обрати програму навчання, яка вам підходить.
-- Якщо ви маєте професію, але не маєте диплома, ви зможете взяти участь у програмі оцінки та визнання компетентностей.
-- Вам нададуть консультації, планування кар’єри або психологічні послуги.
+Jei turite leidimą laikinai gyventi Lietuvos Respublikoje (dėl humanitarinių priežasčių), galite:
 
-Якщо у Вас є посвідка на тимчасове проживання в Литовській Республіці (з гуманітарних міркувань), Ви можете:
+Registruotis galima bet kuriame Užimtumo tarnybos padalinyje arba telefonu (žr. žemiau). Po registracijos Užimtumo tarnyboje procedūros Jums bus paskirtas konkretus specialistas, kuris suteiks visą reikiamą informaciją apie Užimtumo tarnybos teikiamas paslaugas.
 
-Зареєструватися можливо у будь-якому відділенні Служби зайнятості або за телефоном (див. нижче). Після процедури реєстрації в Службі зайнятості, за Вами буде закріплено конкретного спеціаліста, який надаватиме Вам всю необхідну інформацію про послуги, які надає Служба зайнятості.
+Įdarbinimo tarnyba teiks nemokamas darbo rinkos paslaugas, susijusias su darbo paieška ir profesiniu mokymu.
 
-Служба зайнятості надаватиме безкоштовні послуги на ринку праці, пов’язані з пошуком роботи та професійним навчанням.
+Prašyti dalyvauti aktyvios darbo rinkos politikos priemonėse:
 
-Претендувати на участь у заходах активної політики ринку праці:
+* mokymosi pagalba;
+* mobilumo palaikymas;
+* subsidijuojamas darbas.
 
-- підтримка навчання;
-- підтримка мобільності;
-- субсидоване працевлаштування.
+Išsamią ir naujausią informaciją rasite Užimtumo tarnybos portale [www.uzt.lt. ](https://www.uzt.lt/)Informacija teikiama lietuvių, anglų, rusų ir ukrainiečių kalbomis.
 
-Детальна та актуальна інформація доступна на порталі Служби зайнятості: [www.uzt.lt](https://www.uzt.lt/). Інформація надається литовською, англійською, російською та українською мовами.
-
-Ви можете зв’язатися з нами за номером: [+370 661 10885](tel:+37066110885), також [1883](tel:1883) або електронною поштою [info@uzt.lt](mailto:info@uzt.lt).
+Su mumis galite susisiekti: [+370 661 10885](tel:+37066110885) , taip pat [1883](tel:1883) arba el.paštu [info@uzt.lt](mailto:info@uzt.lt) .
 
 ## ‍
