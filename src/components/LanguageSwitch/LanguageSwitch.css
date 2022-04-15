@@ -1,0 +1,109 @@
+.LanguageSwitch {
+  /* 40px menu width + 1rem "gap" */
+  --side-offset: calc(var(--s__main-padding) + 40px + 1rem);
+
+  left: var(--side-offset);
+  position: absolute;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__language {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding-bottom: 0.5rem;
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active-list-item {
+      pointer-events: none;
+    }
+
+    &--active {
+      box-shadow: inset 0 -2px var(--c__primary);
+    }
+  }
+
+  &__language-icon {
+    &::before {
+      --icon-width: 24px;
+
+      background: var(--c__primary);
+      content: "";
+      display: block;
+      height: 15px;
+      margin-right: calc(var(--s__unit) * 2);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      position: relative;
+      width: var(--icon-width);
+    }
+
+    &--ua-flag-alt {
+      &::before {
+        background: url("../../images/icons/ua-flag-alt.svg") center center
+          no-repeat;
+        width: var(--icon-width);
+      }
+    }
+
+    &--lt-flag {
+      &::before {
+        background: url("../../images/icons/lt-flag.svg") center center
+          no-repeat;
+        width: var(--icon-width);
+      }
+    }
+  }
+
+  ul {
+    background: var(--c__main-bg);
+    border-radius: var(--s__main-border-radius);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 16px;
+    transition: all 0.2s ease;
+    visibility: hidden;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      background: transparent;
+      margin: 0 calc(var(--s__main-padding) - 1);
+      padding: var(--s__main-padding);
+      transition: background 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #eaf1ff;
+      }
+    }
+  }
+
+  &__wrapper:hover > ul,
+  &__wrapper:focus-within > ul,
+  &__wrapper > ul:hover,
+  &__wrapper > ul:focus {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (min-width: 46rem) {
+    left: auto;
+    right: var(--side-offset);
+  }
+
+  @media (min-width: 66rem) {
+    position: static;
+  }
+}

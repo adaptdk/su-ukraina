@@ -66,11 +66,11 @@
     padding: calc(var(--s__unit) * 3) 0;
     width: auto;
 
-    @media (min-width: 18rem) {
+    @media (min-width: 22rem) {
       height: 32px;
     }
 
-    @media (min-width: 22rem) {
+    @media (min-width: 46rem) {
       height: 40px;
     }
   }
@@ -91,6 +91,7 @@
     display: flex;
     flex-flow: row-reverse wrap;
     justify-content: space-between;
+    position: relative;
 
     @media (min-width: 46rem) {
       flex-direction: row;
@@ -168,55 +169,6 @@
     }
   }
 
-  &__languages {
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  &__language {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    padding-bottom: 0.5rem;
-    transition: box-shadow 0.2s ease;
-
-    &--active,
-    &:hover {
-      box-shadow: inset 0 -2px var(--c__primary);
-    }
-
-    &__icon {
-      &::before {
-        background: var(--c__primary);
-        content: "";
-        display: block;
-        height: 15px;
-        margin-right: calc(var(--s__unit) * 2);
-        mask-position: center;
-        mask-repeat: no-repeat;
-        mask-size: cover;
-        position: relative;
-        width: 24px;
-      }
-
-      &--ua-flag-alt {
-        &::before {
-          background: url("../../images/icons/ua-flag-alt.svg") center center
-            no-repeat;
-          width: 24px;
-        }
-      }
-
-      &--lt-flag {
-        &::before {
-          background: url("../../images/icons/lt-flag.svg") center center
-            no-repeat;
-          width: 24px;
-        }
-      }
-    }
-  }
-
   #menu-sensor:focus + &__menu-trigger {
     outline: 1px solid;
   }
@@ -230,6 +182,10 @@
     &::after {
       width: 100%;
     }
+  }
+
+  #menu-sensor:checked ~ .LanguageSwitch {
+    display: none;
   }
 
   #menu-sensor:checked + &__menu-trigger + &__nav {
@@ -302,7 +258,13 @@
       overflow: visible;
     }
 
+    &__content {
+      gap: 1rem;
+      justify-content: flex-start;
+    }
+
     &__nav {
+      flex: 1;
       height: initial;
       overflow: visible;
       width: initial;
@@ -325,6 +287,7 @@
     &__menu {
       display: flex;
       gap: var(--s__main-padding);
+      justify-content: flex-end;
       list-style: none;
       margin: calc(var(--s__main-padding) * 1.5) 0;
 

@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 import { Title } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Layout from "../../components/Layout";
-import Faq from "../../components/Faq";
+import Layout from "../../../components/Layout";
+import Faq from "../../../components/Faq";
 
-import Section from "../../components/Section";
+import Section from "../../../components/Section";
 
 export default function Template({ data }) {
   const { markdownRemark } = data;

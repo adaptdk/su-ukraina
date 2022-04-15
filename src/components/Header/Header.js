@@ -6,6 +6,7 @@ import { useLocation } from "@reach/router";
 // Components.
 import Constraint from "../Constraint";
 import Button from "../Button";
+import LanguageSwitch from "../LanguageSwitch";
 
 // SVGs.
 import Logo from "../../images/logos/su-ukraina--original.svg";
@@ -25,11 +26,10 @@ import "./Header.css";
 
 const Header = ({ noSticky }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
-  const location = useLocation();
-  const altHeader = isUkrainianPage(location.pathname);
+  const { pathname } = useLocation();
+  const altHeader = isUkrainianPage();
 
   const headerRef = React.useRef(null);
-  const pathname = location.pathname;
 
   React.useLayoutEffect(() => {
     const resetHeaderHeight = () => {
@@ -69,7 +69,7 @@ const Header = ({ noSticky }) => {
       ref={headerRef}
     >
       <Constraint className="Header__content">
-        <Link to="/">
+        <Link className="Header__logo-wrapper" to="/">
           <img
             className="Header__logo"
             src={Logo}
@@ -140,6 +140,7 @@ const Header = ({ noSticky }) => {
             )}
           </ul>
         </nav>
+        <LanguageSwitch />
       </Constraint>
     </div>
   );

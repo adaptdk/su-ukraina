@@ -63,13 +63,13 @@ export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
 };
 
 export const NAVIGATION_ITEM_HELP = {
-  pathname: `/help-search/`,
+  pathname: `/ua/help-search/`,
   title: `Знайти довідку`,
   altTitle: `Послуги`,
 };
 
 export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
-  pathname: `/refugee-guide/`,
+  pathname: `/ua/refugee-guide/`,
   title: `Важлива інформація`,
   altTitle: `Інформація`,
 };
