@@ -42,6 +42,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
       {!isUkrainianPage() && (
         <PromoLine
           title="Вся важлива інформація для громадян України"
+          subtitle="Svarbiausia informacija Ukrainos piliečiams"
           titleLink={NAVIGATION_ITEM_HELP.pathname}
         >
           {NAVIGATION_MAIN_MENU_ALT.map((item) => {
@@ -55,6 +56,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
                 rel="noopener"
               >
                 {item.altTitle || item.title}
+                <span>{item.translation}</span>
               </Button>
             );
           })}

@@ -10,6 +10,7 @@ import "./PromoLine.css";
 
 const PromoLine = ({
   title,
+  subtitle,
   titleLink,
   className = ``,
   modifier,
@@ -31,6 +32,7 @@ const PromoLine = ({
         <Constraint className="PromoLine__content">
           <a href={titleLink} rel="noopener" target="_blank">
             {title}
+            {!!subtitle && <span>{subtitle}</span>}
           </a>
           <div className="PromoLine__actions">{children}</div>
         </Constraint>
@@ -48,6 +50,7 @@ const PromoLine = ({
 PromoLine.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
+  subtitle: PropTypes.string,
   titleLink: PropTypes.string,
   modifier: PropTypes.string,
   children: PropTypes.node,

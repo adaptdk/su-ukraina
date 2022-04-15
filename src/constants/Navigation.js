@@ -66,12 +66,14 @@ export const NAVIGATION_ITEM_HELP = {
   pathname: `/ua/help-search/`,
   title: `Знайти довідку`,
   altTitle: `Послуги`,
+  translation: "Pagalba",
 };
 
 export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
   pathname: `/ua/refugee-guide/`,
   title: `Важлива інформація`,
   altTitle: `Інформація`,
+  translation: "Informacija",
 };
 
 // Navigation of how can I help page.

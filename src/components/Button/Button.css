@@ -19,6 +19,13 @@
     margin-left: calc(var(--s__unit) * 2);
   }
 
+  &__body {
+    > span {
+      display: block;
+      font-size: 0.65rem;
+    }
+  }
+
   &::after {
     border-radius: 100%;
     bottom: -50px;
