@@ -13,15 +13,15 @@ questions:
   - title: Telia
     subtitle: Mobiliojo ryšio paslaugų teikėjas
     url: https://www.telia.lt/privatiems/pagalba/salonai
-- title: На який термін видається безкоштовна картка?
-  answer: "<p>Карти надаються компаніями Bitė та Tele2. Вони безкоштовні протягом
-    3 місяців, оскільки існує передоплата, після чого ви можете поповнювати їх самостійно.
-    Карту можна поповнити у супермаркетах або онлайн.</p>"
+- title: Kiek laiko išduodama nemokama kortelė?
+  answer: "<p>Korteles suteikia „Bitė“ ir „Tele2“. Jos nemokamos 3 mėn., nes yra išankstinis
+    apmokėjimas, po kurio galėsite pasipildyti patys. Kortelę galima papildyti prekybos
+    centruose arba internetu.</p>"
   resources:
   - title: Labas.lt
-    subtitle: Провайдер мобільного зв'язку
+    subtitle: Mobiliojo ryšio paslaugų teikėjas
     url: https://labas.lt
-  - subtitle: Провайдер мобільного зв'язку
+  - subtitle: Mobiliojo ryšio paslaugų teikėjas
     url: https://pildyk.lt
     title: Pildyk.lt
 title_override: Mobilusis ryšys
