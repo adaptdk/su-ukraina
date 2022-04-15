@@ -4,228 +4,200 @@ title_override: Sveikatos apsauga
 title: sveikatos-apsauga
 slug: "/sveikatos-apsauga"
 questions:
-  - title: З чого почати і як зареєструватися в Литві?
-    answer:
-      <p>Зверніться до Департаменту міграції при Міністерстві внутрішніх справ
-      Литовської Республіки або до найближчого центру реєстрації осіб у Вільнюсі, Алітусі,
-      Клайпеді чи Маріямполі (<a href="http://migracija.lrv.lt/">детальніше</a>).</p>
-    resources: []
-    contacts: []
-    adresses: []
-    image: ""
-    content_blocks: []
-  - title: Які мої дані знадобляться для системі охорони здоров'я?
-    answer:
-      "<p>У реєстраційному центрі Вам видадуть реєстраційну картку. Там буде вказаний
-      Ваш персональний код електронної історії здоров’я ESI. Цей код є унікальним та
-      призначається Вам, щоб вас могли ідентифікувати, коли Ви отримуєте послуги з охорони
-      здоров’я, ліки, що відпускаються за рецептом. Під час відвідування медичних закладів
-      або аптек надайте спеціалістам присвоєний код електронної історії здоров’я (ESI).</p>"
-    resources: []
-    contacts: []
-    adresses: []
-    image: ""
-    content_blocks: []
-  - title: "Чи можете визвати швидку медичну допомогу? "
-    answer:
-      <p>Так. Невідкладна медична допомога по всій Литві набирається за номером
-      <a href="tel:112">112</a>. Невідкладна медична допомога надається всім безкоштовно.</p>
-    resources: []
-    contacts: []
-    adresses: []
-    image: ""
-    content_blocks: []
-  - title: Чи оплачують лікарняні каси необхідну медичну допомогу?
-    answer:
-      "<p>Так. Невідкладна медична допомога включає надання першої медичної допомоги
-      в закладах охорони здоров’я особи (з надання амбулаторних та/або стаціонарних
-      послуг). При зверненні до закладу охорони здоров’я особи, направлення лікаря не
-      є обов’язковим.</p>"
-    resources: []
-    contacts: []
-    adresses: []
-    image: ""
-    content_blocks: []
-  - title: Чи належать безкоштовні послуги сімейного лікаря загальної практики?
-    answer:
-      "<p>Так. Необхідно звернутися до спеціально відведеного медичного закладу
-      на території самоврядування, де зареєстрована особа. В інших випадках, якщо особа
-      вже застрахована обов’язковим медичним страхуванням у Литві, то вона може зареєструватися
-      у вибраній ній медичній установі. Важливо, для отримання безкоштовних послуг:
-      медичний заклад має підписати договір з територіальною лікарняною касою.</p>"
-    resources: []
-    contacts: []
-    adresses: []
-    image: ""
-    content_blocks: []
-  - title: Де та як отримати безкоштовну емоційно-психологічну допомогу?
-    answer:
-      <p>Безкоштовна емоційна підтримка російською мовою надається за телефоном
-      <a href="tel:1809">1809</a>, лінія відкрита I–V, 18–21 год., VI–VII, 12–15 год.
-      Відеоконсультації психологів та психотерапевтів для дорослих і дітей доступні
-      безкоштовно в інтернеті на онлайн-<a href="https://www.manodaktaras.lt/">платформі</a></p>
-    resources: []
-    contacts: []
-    adresses: []
-    image: ""
-    content_blocks: []
-  - title: Де я можу отримати безкоштовну медичну допомогу від психіатра?
-    answer:
-      "<p>Вам потрібно звернутися до центру психіатричного здоров’я, де цю допомогу
-      оплачують лікарняні каси, платити за неї не доведеться.</p>"
-    resources: []
-    contacts: []
-    adresses: []
-    image: ""
-    content_blocks: []
-  - title: "Чи належить неповнолітній дитині профілактичний огляд здоров’я? "
-    answer: "<p>Так. Зверніться до сімейного лікаря.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title:
-      Чи належить отримати дитині щеплення згідно з Календарем профілактичних щеплень
-      для дітей (наприклад, проти гепатиту, кору, ротавірусу тощо)?
-    answer: "<p>Так. Зверніться до сімейного лікаря.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Як отримати стоматологічні послуги?
-    answer:
-      "<p>Необхідно звернутися до спеціально відведеного медичного закладу на
-      території самоврядування, де зареєстрована особа.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Як потрапити до лікаря-спеціаліста?
-    answer:
-      "<p>Зверніться до сімейного лікаря. Якщо це необхідно, він видасть направлення
-      або сам надасть допомогу.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Чи доступні послуги догляду для вагітних?
-    answer:
-      <p>Так. Зверніться до сімейного лікаря. У разі, якщо почалися пологи, негайно
-      телефонуйте за номером <a href="tel:112">112</a>.</p>
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Як отримати необхідні ліки?
-    answer:
-      "<p>Якщо особа перебуває на лікуванні в стаціонарі, лікар, який її лікує,
-      надасть усі необхідні ліки та медичні препарати. В інших випадках рецептурні ліки
-      для амбулаторного лікування призначає лікар, який лікує хворого.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Як купити ліки чи засоби медичної допомоги в аптеці?
-    answer:
-      "<p>Ліки за рецептом можна придбати в аптеках за рецептом лікаря. Усі ліки,
-      що відпускаються за рецептом, надаються безкоштовно для тих, хто зареєстрований
-      в реєстраційному центрі. 3 Засоби медичної допомоги, що компенсуються, надаються
-      в аптеках лише застрахованим особам. Для цього потрібен рецепт, виданий лікарем.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title:
-      "Куди звернутися за засобами медичної допомоги (ортопедичними шинами, підгузками,
-      діагностичними стрічками)? "
-    answer:
-      "<p>Зверніться безпосередньо до аптеки чи іншого підприємства, щоб отримати
-      засіб медичної допомоги за свій рахунок, або, якщо ви застраховані обов’язковим
-      медичним страхуванням, до сімейного лікаря, який видасть направлення чи рецепт.
-      Потім за направленням або рецептом від лікаря зверніться в підприємство, що займається
-      продажем та має договір із лікарняною касою, чи аптеку.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Де можна отримати послуги з лікування онкологічних хворих?
-    answer:
-      "<p>Спочатку проконсультуйтеся з сімейним лікарем. Він оцінить стан та наявну
-      медичну документацію та дасть направлення до відповідного спеціаліста для подальшого
-      лікування.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Куди звернутися щодо медичної реабілітації?
-    answer:
-      "<p>Зверніться до сімейного лікаря. Він видасть направлення на консультацію
-      до лікаря-реабілітолога, який пояснить, яким пацієнтам воно належить, і вирішить,
-      яка саме реабілітація потрібна пацієнту.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title:
-      "Куди звернутися, якщо вам потрібні медичні прилади (апарат штучної вентиляції
-      легень та кисневий апарат, прості чи розумні інсулінові помпи, інфузійні насоси)? "
-    answer:
-      "<p>Спочатку проконсультуйтеся з сімейним лікарем. Оцінивши стан і потребу,
-      він направить вас до відповідного лікаря, який прийме рішення про призначення
-      того чи іншого засобу.</p>"
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Чи доступне безкоштовне щеплення від COVID-19?
-    answer:
-      <p>Так, телефонуйте за номером <a href="tel:1808">1808</a>. Якщо телефонний
-      оператор не з Литви, телефонуйте за номером <a href="tel:+37066011808">+370 66
-      01 1808</a>. <a href="http://www.koronastop.lrv.lt/">Детальніше</a>.</p>
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title:
-      Де я можу дізнатися більше про послуги з охорони здоров’я в Литві, що підлягають
-      відшкодуванню?
-    answer:
-      '<p>Цю інформацію надає лікарняні каси по загальному безкоштовному номеру
-      <a href="tel:852322222">8 5 232 2222</a>, якщо телефонний оператор не литовський,
-      телефонуйте +370 5 232 2222, пишіть на електронну пошту: <a href="mailto:info@vlk.lt">info@vlk.lt
-      </a>або після прибуття наживо по всій Литві. 4 Консультації надаються литовською,
-      а також англійською та російською мовами. Більш детальну інформацію можна отримати
-      самостійно на веб-сайті лікарняних кас <a href="http://ligoniukasa.lrv.lt/">ligoniukasa.lrv.lt</a>литовською,
-      а також <a href="http://www.ligoniukasa.lrv.lt/en">англійською</a>.</p>'
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Де я можу знайти іншу актуальну інформацію?
-    answer:
-      <p>Ви знайдете стоматологів та професіоналів з догляду за порожниною <a
-      href="https://www.withukraine.lt/help-search?tipas=Odontologin%C4%97+pagalba">рота.</a></p>
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
+- title: Nuo ko pradėti ir kaip užsiregistruoti Lietuvoje?
+  answer: <p>Kreipkitės į Migracijos departamentą prie Lietuvos Respublikos vidaus
+    reikalų ministerijos arba artimiausią registracijos centrą Vilniuje, Alytuje,
+    Klaipėdoje ar Marijampolėje ( <a href="http://migracija.lrv.lt/">plačiau</a> ).</p>
+  resources: []
+  contacts: []
+  adresses: []
+  image: ''
+  content_blocks: []
+- title: Kokių duomenų man reikės sveikatos priežiūros sistemai?
+  answer: "<p>Registracijos centre jums bus išduota registracijos kortelė. Ten bus
+    nurodytas jūsų asmeninis ESI el. sveikatos kodas. Šis kodas yra unikalus ir skirtas
+    jums, kad galėtumėte atpažinti, kai gaunate sveikatos priežiūros paslaugas, receptinius
+    vaistus. Lankydamiesi gydymo įstaigose ar vaistinėse specialistams pateikite Elektroninės
+    sveikatos istorijos (ESI) kodą.</p>"
+  resources: []
+  contacts: []
+  adresses: []
+  image: ''
+  content_blocks: []
+- title: Ar galite iškviesti greitąją pagalbą?
+  answer: <p>Taigi. Greitoji medicinos pagalba teikiama visoje Lietuvoje telefonu
+    <a href="tel:112">112</a> . Greitoji medicinos pagalba visiems teikiama nemokamai.</p>
+  resources: []
+  contacts: []
+  adresses: []
+  image: ''
+  content_blocks: []
+- title: Ar ligonių kasos moka už būtinąją medicinos pagalbą?
+  answer: "<p>Taip. Greitoji medicinos pagalba apima pirmosios pagalbos teikimą asmens
+    sveikatos priežiūros įstaigose (ambulatorinėms ir (ar) stacionarinėms paslaugoms).
+    Kreipiantis į asmens sveikatos priežiūros įstaigą, gydytojo siuntimo nereikia.</p>"
+  resources: []
+  contacts: []
+  adresses: []
+  image: ''
+  content_blocks: []
+- title: Ar yra nemokamos šeimos gydytojo paslaugos?
+  answer: "<p>Taip. Būtina kreiptis į specialiai tam skirtą gydymo įstaigą savivaldos
+    teritorijoje, kurioje asmuo registruotas. Kitais atvejais, jei asmuo jau yra apdraustas
+    privalomuoju sveikatos draudimu Lietuvoje, jis gali užsiregistruoti pasirinktoje
+    gydymo įstaigoje. Svarbu gauti nemokamas paslaugas: gydymo įstaiga turi pasirašyti
+    sutartį su teritorine ligonių kasa.</p>"
+  resources: []
+  contacts: []
+  adresses: []
+  image: ''
+  content_blocks: []
+- title: Kur ir kaip gauti nemokamos emocinės ir psichologinės pagalbos?
+  answer: <p>Nemokama emocinė pagalba rusų kalba teikiama telefonu <a href="tel:1809">1809</a>
+    , linija dirba I-V, 18-21 val., VI-VII, 12-15 val. Psichologų ir psichoterapeutų
+    vaizdo konsultacijos suaugusiems ir vaikams yra prieinamos nemokamai internete,
+    internetinėje <a href="https://www.manodaktaras.lt/">platformoje</a></p>
+  resources: []
+  contacts: []
+  adresses: []
+  image: ''
+  content_blocks: []
+- title: Kur galiu gauti nemokamą psichiatro medicininę priežiūrą?
+  answer: "<p>Reikia kreiptis į psichikos sveikatos centrą, kur šią priežiūrą apmoka
+    ligonių kasos, už tai mokėti nereikia.</p>"
+  resources: []
+  contacts: []
+  adresses: []
+  image: ''
+  content_blocks: []
+- title: Ar profilaktiškai tikrinasi nepilnamečio vaiko sveikatą?
+  answer: "<p>Taip. Kreipkitės į šeimos gydytoją.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Ar vaiką reikia skiepyti pagal Vaikų profilaktinių skiepų kalendorių (pvz.,
+    nuo hepatito, tymų, rotaviruso ir kt.)?
+  answer: "<p>Taip. Kreipkitės į šeimos gydytoją.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kaip gauti odontologijos paslaugas?
+  answer: "<p>Būtina kreiptis į specialiai tam skirtą gydymo įstaigą savivaldos teritorijoje,
+    kurioje asmuo registruotas.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kaip patekti pas specialistą?
+  answer: "<p>Kreipkitės į šeimos gydytoją. Jei reikia, jis išduos siuntimą arba suteiks
+    pagalbą pats.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Ar galimos motinystės priežiūros paslaugos?
+  answer: <p>Taip. Kreipkitės į šeimos gydytoją. Jei gimdymas prasidėjo, nedelsdami
+    skambinkite <a href="tel:112">112</a> .</p>
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kaip gauti reikiamus vaistus?
+  answer: "<p>Jei žmogus gydomas ligoninėje, jį gydantis gydytojas parūpins visus
+    reikalingus vaistus ir vaistus. Kitais atvejais receptinius vaistus ambulatoriniam
+    gydymui išrašo pacientą gydantis gydytojas.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kaip vaistinėje nusipirkti vaistų ar medicininės priežiūros?
+  answer: "<p>Receptinių vaistų galima įsigyti vaistinėse su gydytojo receptu. Registracijos
+    centre užsiregistravusiems visi receptiniai vaistai išduodami nemokamai. 3 Kompensuojamoji
+    medicinos pagalba vaistinėse teikiama tik apdraustiesiems asmenims. Tam reikalingas
+    gydytojo receptas.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kur kreiptis dėl medicininės pagalbos (ortopedinių įtvarų, sauskelnių, diagnostinių
+    juostų)?
+  answer: "<p>Norėdami gauti medicininę priežiūrą savo lėšomis, kreipkitės tiesiogiai
+    į vaistinę ar kitą įmonę arba, jei esate apdraustas privalomuoju sveikatos draudimu,
+    į šeimos gydytoją, kuris išrašys siuntimą ar receptą. Tada, norėdami gauti gydytojo
+    siuntimą ar receptą, kreipkitės į įmonę, kuri parduoda ir turi sutartį su ligonių
+    kasa ar vaistine.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kur galėčiau gauti vėžio gydymo paslaugas?
+  answer: "<p>Pirmiausia kreipkitės į savo šeimos gydytoją. Jis įvertins būklę ir
+    turimus medicininius įrašus bei nukreips pas specialistą tolesniam gydymui.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kur kreiptis medicininės reabilitacijos?
+  answer: "<p>Kreipkitės į šeimos gydytoją. Jis nukreips jus pas gydytoją reabilitologą,
+    kuris paaiškins, kuriems pacientams tai priklauso ir nuspręs, kokios reabilitacijos
+    pacientui reikia.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kur kreiptis, jei reikia medicininių priemonių (ventiliatoriaus ir deguonies
+    aparato, paprastų ar išmaniųjų insulino pompų, infuzinių pompų)?
+  answer: "<p>Pirmiausia kreipkitės į savo šeimos gydytoją. Įvertinęs būklę ir poreikį
+    nukreips pas atitinkamą gydytoją, kuris nuspręs dėl konkretaus įrankio paskyrimo.</p>"
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Ar galima nemokamai pasiskiepyti nuo COVID-19?
+  answer: <p>Taip, skambinkite <a href="tel:1808">1808</a> . Jei telefono operatorius
+    ne iš Lietuvos, skambinkite <a href="tel:+37066011808">+370 66 01 1808</a> . <a
+    href="http://www.koronastop.lrv.lt/">Skaityti daugiau</a> .</p>
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kur galiu sužinoti daugiau apie kompensuojamas sveikatos paslaugas Lietuvoje?
+  answer: '<p>Šią informaciją ligonių kasos teikia bendruoju nemokamu numeriu <a href="tel:852322222">8
+    5 232 2222</a> , jei telefono operatorius ne lietuvis, skambinkite +370 5 232
+    2222, rašykite el.paštu: <a href="mailto:info@vlk.lt">info@vlk.lt</a> arba atvykus
+    gyvai visoje Lietuvoje. 4 Konsultacijos teikiamos lietuvių, taip pat anglų ir
+    rusų kalbomis. Išsamesnė informacija pateikiama ligonių kasų svetainėje <a href="http://ligoniukasa.lrv.lt/">ligoniukasa.lrv.lt</a>
+    lietuvių ir <a href="http://www.ligoniukasa.lrv.lt/en">anglų kalbomis</a> .</p>'
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Kur galiu rasti kitos svarbios informacijos?
+  answer: <p><a href="https://www.withukraine.lt/help-search?tipas=Odontologin%C4%97+pagalba"
+    title="">Čia rasite</a> odontologų ir burnos priežiūros specialistų</p>
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
 contacts: []
 adresses: []
 icon: suitcase-medical
----
 
-Міністерство охорони здоров’я та Державна лікарняна каса підготували цю пам’ятку, яка допоможе людям, які виїхали з України в Литву через військові дії Російської Федерації в Україні, отримувати концентровану та точну інформацію про послуги з охорони здоров’я в Литві. Усім цим особам гарантовано медичні послуги з охорони здоров’я в Литовській Республіці, які оплачуватимуть лікарняні каси. Запрошуємо вас ознайомитися з найпоширенішими запитаннями та відповідями.
+---
+Sveikatos apsaugos ministerija ir Valstybinė ligonių kasa parengė šį vadovą, kuris padės žmonėms, išvykusiems iš Ukrainos į Lietuvą dėl Rusijos Federacijos karinių veiksmų Ukrainoje, gauti koncentruotą ir tikslią informaciją apie sveikatos priežiūros paslaugas Lietuvoje. Visiems šiems asmenims Lietuvos Respublikoje yra garantuotos medicinos paslaugos, kurias apmokės ligonių kasos. Kviečiame perskaityti dažniausiai užduodamus klausimus ir atsakymus.
