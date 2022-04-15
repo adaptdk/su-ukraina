@@ -6,6 +6,6 @@ questions: []
 title_override: Gyvenamoji vieta
 contacts: []
 icon: house
----
 
-Для тих, хто не має житла, вся інформація буде надана в центрах реєстрації та [stipruskartu.lt](https://stipruskartu.lt/) Якщо у вас немає житла, після реєстрації вас направлять до пункту тимчасового розміщення (у муніципалітетах або приватних осіб).
+---
+Neturintiems būsto visa informacija bus suteikta registracijos centruose ir [stipruskartu.lt](https://stipruskartu.lt/) Jei būsto neturite, užsiregistravę būsite išsiųsti į laikiną būstą (savivaldybėse ar pavieniams asmenims).
