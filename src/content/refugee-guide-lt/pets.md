@@ -4,100 +4,95 @@ title_override: Augintiniai
 title: augintiniai
 slug: "/augintiniai"
 questions:
-  - title: " Як поводитися з твариною після прибуття (кішка, собака, тхір)"
-    answer:
-      <ul><li><p>Чіпована та щеплена від сказу тварина - повідомити на <a href="mailto:ukrainapets@vmvt.lt">ukrainapets@vmvt.lt</a>
-      для цілей моніторингу.</p></li><li><p>Тварина була вакцинована під час поїздки
-      до Литви - 21 добу після щеплення тварина має бути поміщена на карантин за місцем
-      знаходження власника.</p></li><li><p>Невакцинована тварина – повідомте. Потрібен
-      намордник чи ні, повинен вирішити власник тварини. Вакцинація та чіпування нещепленої
-      тварини проводитиметься безкоштовно.</p></li><li><p>В даний час не існує затвердженої
-      процедури передачі/перезапису вашого вихованця на іншу людину. Ми оновимо інформацію,
-      як тільки вона зміниться.</p></li></ul>
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Актуальні поради та інформація для вашого перебування в Литві
-    answer:
-      '<p>- Знайдіть найближчий до вашої оселі зоомагазин. Практично у всіх продовольчих
-      супермаркетах ви знайдете найнеобхідніші товари для тварин. <br><br>- Знайдіть
-      найближчу до вас ветеринарну клініку. Також зв''яжіться із цілодобовою клінікою.
-      <br><br>- У Литві дуже небезпечні кліщі . Подбайте про захист тварин від них.
-      Ваш ветеринарний лікар допоможе вам вибрати найбільш підходящий метод захисту
-      для вашої тварини - краплі, пігулки, нашийник і т.п.<br><br>- Не забудьте прищепити
-      вихованця від сказу. Ви можете зробити щеплення своїй тварині у будь-якій ветеринарній
-      клініці або звернутися за безкоштовною вакцинацією у VMVT: <a href="mailto:ukrainapets@vmvt.lt">ukrainapets@vmvt.lt</a><br><br>-
-      Не забувайте давати вихованцю антигельмінтні засоби (рекомендується раз на 3 місяці
-      для дорослих тварин ).<br><br>- Позначте свого вихованця чіпом. Маркування є обов''язковим
-      для кожної тварини відповідно до законодавства Литовської Республіки. Це також
-      допоможе швидше знайти господаря, якщо ваш вихованець загубиться. Чіпувати тварину
-      можна в будь-якій ветеринарній клініці або звернутися за безкоштовним маркуванням
-      у VMVT: <a href="mailto:ukrainapets@vmvt.lt">ukrainapets@vmvt.lt</a><br><br>-
-      Надягніть на нашийник тварини підвіску з ім''ям і контактами, щоб у разі втрати
-      її було легше повернути власнику <br><br>- Не забувайте збирати екскременти тварин
-      під час транспортування. Невиконання цієї вимоги може призвести до штрафувідповідно
-      до законодавства Литовської Республіки.<br><br>- Не залишайте вихованця в машині,
-      особливо коли на вулиці спека, оскільки тварина може перегрітися і навіть загинути
-      <br><br>- 5 хвилин у розпеченій машині навіть зі справними вікнами можуть бути
-      вирішальними для вашого вихованця.<br><br>- У громадських місцях собак необхідно
-      водити на повідку. Використання намордника визначається кожним муніципалітетом
-      окремо, тому уточнюйте інформацію: <a href="https://ggi.lt/gyvunu-laikymo-taisyklos/"
-      title="https://ggi.lt/gyvunu-laikymo-taisyklos/">https://ggi.lt/gyvunu-laikymo-taisyklos/</a><br><br>-
-      У Литві немає розвиненої мережі напувалок для тварин у містах, тому завжди майте
-      достатньо води, коли вирушаєте з твариною у тривалі прогулянки.<br><br>– У Литві
-      багато місць для тварин – ресторани, кафе, готелі. Список сприятливих для тварин
-      місць можна знайти тут (але завжди перевіряйте його самостійно): <a href="https://draugiskigyvunams.lt/"
-      title="https://draugiskigyvunams.lt/">https://draugiskigyvunams.lt/</a><a href="https://draugiskigyvunams.lt/"><br><br>‍</a>-
-      Власник тварини карається відповідно до законодавства Литовської Республіки за
-      неналежний догляд за твариною або невиконання інших обов''язків.<br><br>- Любителі
-      тварин, ви можете стати волонтерами у притулках для тварин. Це не лише допоможе
-      тваринам, а й ви знайдетенових друзів та однодумців. <br><br>- Використовуйте
-      спеціальні транспортні клітини для перевезення домашніх тварин.- Якщо ваш вихованець
-      загубився, повідомте про це до найближчих притулків, ветеринарних клінік. Пошук
-      зниклих тварин у Литві дуже популярний у спеціалізованих групах на Facebook. Запитайте
-      у своїх знайомих литовців – вони обов''язково порадять. Детальнішу інформацію
-      про те, як впоратися з втратою домашньої тварини, можна знайти тут: <a href="https://ggi.lt/paklydo-augintinis-kreipkis/"
-      title="https://ggi.lt/paklydo-augintinis-kreipkis/">https://ggi.lt/paklydo-augintinis-kreipkis/</a><a
-      href="https://ggi.lt/paklydo-augintinis-kreipkis/"><em> </em></a><em><br><br>Бажаємо
-      вам та вашим вихованцям гарного відпочинку в Литві!</em></p>'
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
-  - title: Організації, які надають допомогу прибулим тваринам
-    answer:
-      '<p><strong>Ініціатива добробуту тварин</strong> (Gyvūnų Gerovės Inciatyvos
-      GGI) – ви завжди можете зв’язатися з нашими волонтерами, щоб проконсультуватися
-      щодо поселення в нашій країні з домашнім улюбленцем. Ви можете зробити це в нашому
-      акаунті у Facebook: facebook.com/GyvunuGerovesInitiatives<br><br>Більше інформації
-      про утримання тварин у Литві можна знайти тут: <a href="https://ggi.lt/duk/" title="https://ggi.lt/duk/">https://ggi.lt/duk/</a>
-      <br><br>‍<strong>GATO</strong> - запрошує українців або осіб, які їм допомагають,
-      звернутися за допомогою, якщо:<br>– Ви зареєструвалися для надання притулку в
-      Литві, але не маєте способу прихистити домашнього улюбленця<br>- Ваш вихованець
-      залишився в Україні, і ви хочете взяти його до себе у Литву<br>- Ви знаходитеся
-      в Литві з домашнім улюбленцем і потребуєте ветеринарної допомоги (безкоштовно)
-      Ви можете звернутися за допомогою, заповнивши форму: <a href="https://ggi.lt/duk/"
-      title="https://ggi.lt/duk/">https://bit.ly/3is04Yb</a> <br><br>Після отримання
-      ваших даних представники організації зв’яжуться з вами, щоб детально з’ясувати
-      вашу ситуацію та потреби, надати необхідну інформацію, допомогти знайти матеріально-технічну
-      та іншу необхідну допомогу з урахуванням індивідуальної ситуації кожної людини.
-      <br><br>‍<strong>Державна продовольство-ветеринарна служба</strong> (<strong>Valstybinė
-      maisto ir veterinarijos tarnyba (VMVT)</strong>) надаватиме актуальну інформацію
-      українцям, які прибули з тваринами - <a href="mailto:ukrainepets@vmvt.lt">ukrainepets@vmvt.lt<br><br></a>Перелік
-      компаній, які надають ветеринарні послуги, можна знайти <a href="https://www.withukraine.lt/help-search?tipas=Veterinarin%C4%97+pagalba">тут</a>.</p>'
-    image: ""
-    resources: []
-    contacts: []
-    adresses: []
-    content_blocks: []
+- title: " Kaip elgtis su gyvūnu atvykus (katė, šuo, šeškas)"
+  answer: <ul><li><p>Gyvūnai čipuoti ir vakcinuoti nuo pasiutligės – stebėjimo tikslais
+    pranešti <a href="mailto:ukrainapets@vmvt.lt">adresu ukrainapets@vmvt.lt .</a></p></li><li><p>Gyvūnas
+    buvo paskiepytas kelionės į Lietuvą metu – praėjus 21 dienai po vakcinacijos,
+    gyvūnas turi būti karantinuotas šeimininko vietoje.</p></li><li><p>Nevakcinuotas
+    gyvūnas – pranešimas. Ar antsnukis reikalingas, ar ne, priklauso nuo augintinio
+    šeimininko. Nevakcinuoto gyvūno skiepijimas ir čipavimas bus nemokamas.</p></li><li><p>Šiuo
+    metu nėra patvirtintos jūsų augintinio perdavimo/perrašymo kitam asmeniui tvarkos.
+    Informaciją atnaujinsime, kai tik ji pasikeis.</p></li></ul>
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Aktualūs patarimai ir informacija jūsų viešnagei Lietuvoje
+  answer: '<p>- Raskite artimiausią naminių gyvūnėlių parduotuvę. Beveik visuose maisto
+    prekybos centruose rasite būtiniausių produktų gyvūnams.<br><br>- Raskite artimiausią
+    veterinarijos kliniką. Taip pat kreipkitės į visą parą dirbančią kliniką.<br><br>–
+    Lietuvoje erkės labai pavojingos. Saugokite gyvūnus nuo jų. Veterinarijos gydytojas
+    padės išsirinkti tinkamiausią jūsų augintinio apsaugos būdą – lašus, piliules,
+    antkaklius ir kt.<br><br>– Nepamirškite paskiepyti savo augintinio nuo pasiutligės.
+    Skiepyti savo augintinį galite bet kurioje veterinarijos klinikoje arba kreiptis
+    dėl nemokamos vakcinacijos VMVT: <a href="mailto:ukrainapets@vmvt.lt">ukrainapets@vmvt.lt</a><br><br>-
+    Nepamirškite augintiniui duoti vaistų nuo kirmėlių (rekomenduojama kartą per 3
+    mėnesius suaugusiems gyvūnams).<br><br>- Pažymėkite savo augintinį lustu. Ženklinimas
+    yra privalomas kiekvienam gyvūnui pagal Lietuvos Respublikos teisės aktus. Tai
+    taip pat padės greičiau surasti šeimininką, jei jūsų augintinis pasiklys. Gyvūną
+    galite čipuoti bet kurioje veterinarijos klinikoje arba kreiptis dėl nemokamo
+    ženklinimo VMVT: <a href="mailto:ukrainapets@vmvt.lt">ukrainapets@vmvt.lt</a><br><br>-
+    Uždėkite gyvūno antkaklio pakabuką su vardu ir kontaktais, kad praradus būtų lengviau
+    grąžinti šeimininkui<br><br>- Nepamirškite transportavimo metu surinkti gyvūnų
+    ekskrementų. Už šio reikalavimo nesilaikymą Lietuvos Respublikos įstatymų nustatyta
+    tvarka gali būti skirta bauda.<br><br>- Nepalikite savo augintinio automobilyje,
+    ypač kai lauke karšta, nes gyvūnas gali perkaisti ir net mirti<br><br>- 5 minutės
+    karštame automobilyje net su veikiančiais langais gali būti labai svarbios jūsų
+    augintiniui.<br><br>– Viešose vietose šunys turi būti vedžiojami su pavadėliu.
+    Antsnukio naudojimą nustato kiekviena savivaldybė atskirai, tad pasitikrinkite
+    informaciją: <a href="https://ggi.lt/gyvunu-laikymo-taisyklos/" title="https://ggi.lt/gyvunu-laikymo-taisyklos/">https://ggi.lt/gyvunu-laikymo-taisyklos/</a><br><br>-
+    Lietuva neturi išplėtoto girdyklų tinklo miestuose, todėl visada turėkite pakankamai
+    vandens, kai eini su gyvūnu į ilgus pasivaikščiojimus.<br><br>– Lietuvoje yra
+    daug vietų gyvūnams – restoranų, kavinių, viešbučių. Gyvūnams tinkamų vietų sąrašą
+    rasite čia (bet visada pasitikrinkite patys): <a href="https://ggi.lt/gyvunu-laikymo-taisyklos/"
+    title="https://ggi.lt/gyvunu-laikymo-taisyklos/">https://draugiskigyvunams.lt/</a><a
+    href="https://draugiskigyvunams.lt/" title="https://draugiskigyvunams.lt/"> (</a><a
+    href="https://draugiskigyvunams.lt/"><br><br></a>- Už netinkamą gyvūno priežiūrą
+    ar kitų pareigų neatlikimą gyvūno savininkas baudžiamas Lietuvos Respublikos teisės
+    aktų nustatyta tvarka.<br><br>– Gyvūnų mylėtojai, galite tapti savanoriu gyvūnų
+    prieglaudose. Taip ne tik padėsite gyvūnams, bet ir rasite naujų draugų bei bendraminčių.<br><br>-
+    Gyvūnams vežti naudokite specialius transportavimo narvus.- Jei gyvūnas pasiklydo,
+    praneškite artimiausioms prieglaudoms, veterinarijos klinikoms. Dingusių gyvūnų
+    paieška Lietuvoje itin populiari specializuotose „Facebook“ grupėse. Paklauskite
+    savo pažįstamų lietuvių – jie tikrai patars. Daugiau informacijos, kaip elgtis
+    netekus augintinio, rasite čia: <a href="https://ggi.lt/gyvunu-laikymo-taisyklos/"
+    title="https://ggi.lt/gyvunu-laikymo-taisyklos/">https://ggi.lt/paklydo-augintinis-kreipkis/</a><em><br><br>Linkime
+    Jums ir Jūsų augintiniams gerų atostogų Lietuvoje!</em></p>'
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
+- title: Organizacijos, teikiančios pagalbą atvykusiems gyvūnams
+  answer: '<p><strong>Gyvūnų gerovės iniciatyva</strong> (Gyvūnų Gerovės Inciatyvos
+    GGI) - visada galite susisiekti su mūsų savanoriais pasikonsultuoti dėl apsigyvenimo
+    mūsų šalyje su augintiniu. Tai galite padaryti mūsų Facebook paskyroje: facebook.com/GyvunuGerovesInitiatives<br><br>Daugiau
+    informacijos apie gyvūnų laikymą Lietuvoje rasite čia: <a href="https://ggi.lt/duk/"
+    title="https://ggi.lt/duk/">https://ggi.lt/duk/</a><a href="https://ggi.lt/duk/"
+    title="https://ggi.lt/duk/"> </a><strong>‍ GATO</strong><br><br>- kviečia ukrainiečius
+    ar jiems padedančius asmenis kreiptis pagalbos jei: - Užsiregistravote prieglobsčiui
+    gauti Lietuvoje, bet neturite galimybės priglausti savo augintinio - Jūsų augintinis
+    liko Ukrainoje ir norite jį parvežti į Lietuvą<br><br><br>- Esate Lietuvoje su
+    augintiniu ir reikalinga veterinarinė pagalba (nemokama) Pagalbos galite paprašyti
+    užpildę formą: <a href="https://ggi.lt/duk/" title="https://ggi.lt/duk/">https://bit.ly/3is04Yb</a><br><br>Gavę
+    Jūsų duomenis, organizacijos atstovai susisieks su Jumis el. detaliai išsiaiškinti
+    savo situaciją ir poreikius, suteikti reikiamą informaciją, padėti surasti logistikos
+    ir kitą reikalingą pagalbą, atsižvelgiant į kiekvieno žmogaus individualią situaciją.
+    <strong>‍ Valstybinė</strong><br><br><strong>maisto ir veterinarijos tarnyba (VMVT)</strong>
+    su gyvūnais atvykusiems ukrainiečiams suteiks naujausią informaciją - <a href="mailto:ukrainepets@vmvt.lt">ukrainepets@vmvt.lt</a>
+    Veterinarines paslaugas teikiančių įmonių sąrašą rasite <a href="https://www.withukraine.lt/help-search?tipas=Veterinarin%C4%97+pagalba">čia</a>
+    .</p>'
+  image: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks: []
 contacts: []
 adresses: []
 icon: paw
+
 ---
+Sveiki atvykę į Lietuvą, draugišką gyvūnams šalį. Jūsų augintiniui paruošėme atmintinę su reikalinga informacija.
 
-Ласкаво просимо до Литви, країни, сприятливої ​​для тварин. Ми підготували пам'ятку з необхідною інформацією для вашого улюбленця.
-
-Державна продовольчо-ветеринарна служба (Valstybinė maisto ir veterinarijos tarnyba (VMVT)) інформує, що тварини, які прибувають до Литви з України, підлягають оформленню по спрощеній процедурі (приймаються тварини нечіповані, невакциновані проти сказу, без титру антитіл або без відповідних проїзних документів). Спрощена процедура поширюється виключно на громадян України, але не на юридичних осіб, таких як продавці або заводчики — порядок комерційного ввезення домашніх тварин до ЄС поки що залишається без змін.
+Valstybinė maisto ir veterinarijos tarnyba (VMVT) informuoja, kad iš Ukrainos į Lietuvą atvežamiems gyvūnams taikoma supaprastinta tvarka. Supaprastinta tvarka taikoma tik Ukrainos piliečiams, bet ne juridiniams asmenims, tokiems kaip pardavėjai ar veisėjai – komercinio augintinių įvežimo į ES tvarka nesikeičia.
