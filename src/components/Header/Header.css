@@ -113,12 +113,16 @@
       &.is-active {
         > a {
           display: inline-block;
+          position: relative;
 
           &::after {
-            border-bottom: 2px solid var(--c__primary);
+            background-color: var(--c__primary);
+            bottom: 0;
             content: "";
             display: block;
-            margin-top: 3px;
+            height: 2px;
+            position: absolute;
+            width: calc(100% - var(--s__main-padding) * 2);
           }
         }
       }
