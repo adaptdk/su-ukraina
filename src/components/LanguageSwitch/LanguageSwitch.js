@@ -8,12 +8,12 @@ import "./LanguageSwitch.css";
 
 const LanguageSwitch = () => {
   const pathname = useLocation().pathname;
-  const currentLanguage = pathname.includes(`/ua/`) ? `ua` : `lt`;
+  const isUa = pathname.includes(`/ua/`);
 
   // @TODO think of a better name
   const findPageLanguageSibling = () => {
     const splitPathname = pathname.split(`/`);
-    if (currentLanguage === `ua`) {
+    if (isUa) {
       const found = PATHNAMES.find((object) => {
         return object.ua === splitPathname[2];
       });
@@ -32,27 +32,57 @@ const LanguageSwitch = () => {
     }
   };
 
+  /* @TODO use classnames library here */
   return (
     <div className="LanguageSwitch">
-      {/* @TODO use classnames library here */}
-      <Link
-        to={findPageLanguageSibling()}
-        className={`LanguageSwitch__language ${
-          currentLanguage === `ua` ? `LanguageSwitch__language--active` : ``
-        }`}
-      >
-        <div className="LanguageSwitch__language-icon LanguageSwitch__language-icon--ua-flag-alt" />
-        <div className="LanguageSwitch__language-title">UA</div>
-      </Link>
-      <Link
-        to={findPageLanguageSibling()}
-        className={`LanguageSwitch__language ${
-          currentLanguage === `lt` ? `LanguageSwitch__language--active` : ``
-        }`}
-      >
-        <div className="LanguageSwitch__language-icon LanguageSwitch__language-icon--lt-flag" />
-        <div className="LanguageSwitch__language-title">LT</div>
-      </Link>
+      <div className="LanguageSwitch__wrapper">
+        <input
+          type="checkbox"
+          id="lang-sensor"
+          name="lang-sensor"
+          aria-hidden="true"
+        />
+        <label
+          htmlFor="lang-sensor"
+          aria-haspopup="true"
+          className="LanguageSwitch__language LanguageSwitch__language--active"
+        >
+          <div
+            className={`LanguageSwitch__language-icon ${
+              isUa
+                ? `LanguageSwitch__language-icon--ua-flag-alt`
+                : `LanguageSwitch__language-icon--lt-flag`
+            }`}
+          ></div>
+          <div className="LanguageSwitch__language-title">
+            {isUa ? `UA` : `LT`}
+          </div>
+        </label>
+        <ul className="LanguageSwitch__list">
+          <li className="LanguageSwitch__list-item">
+            <Link
+              to={findPageLanguageSibling()}
+              className={`LanguageSwitch__language ${
+                isUa ? `LanguageSwitch__language--active-list-item` : ``
+              }`}
+            >
+              <div className="LanguageSwitch__language-icon LanguageSwitch__language-icon--ua-flag-alt" />
+              <div className="LanguageSwitch__language-title">UA</div>
+            </Link>
+          </li>
+          <li className="LanguageSwitch__list-item">
+            <Link
+              to={findPageLanguageSibling()}
+              className={`LanguageSwitch__language ${
+                !isUa ? `LanguageSwitch__language--active-list-item` : ``
+              }`}
+            >
+              <div className="LanguageSwitch__language-icon LanguageSwitch__language-icon--lt-flag" />
+              <div className="LanguageSwitch__language-title">LT</div>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

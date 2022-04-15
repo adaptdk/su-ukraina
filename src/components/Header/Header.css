@@ -66,11 +66,11 @@
     padding: calc(var(--s__unit) * 3) 0;
     width: auto;
 
-    @media (min-width: 18rem) {
+    @media (min-width: 22rem) {
       height: 32px;
     }
 
-    @media (min-width: 22rem) {
+    @media (min-width: 46rem) {
       height: 40px;
     }
   }
@@ -91,6 +91,7 @@
     display: flex;
     flex-flow: row-reverse wrap;
     justify-content: space-between;
+    position: relative;
 
     @media (min-width: 46rem) {
       flex-direction: row;
@@ -253,7 +254,13 @@
       overflow: visible;
     }
 
+    &__content {
+      gap: 1rem;
+      justify-content: flex-start;
+    }
+
     &__nav {
+      flex: 1;
       height: initial;
       overflow: visible;
       width: initial;
@@ -276,6 +283,7 @@
     &__menu {
       display: flex;
       gap: var(--s__main-padding);
+      justify-content: flex-end;
       list-style: none;
       margin: calc(var(--s__main-padding) * 1.5) 0;
 

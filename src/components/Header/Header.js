@@ -69,7 +69,7 @@ const Header = ({ noSticky }) => {
       ref={headerRef}
     >
       <Constraint className="Header__content">
-        <Link to="/">
+        <Link className="Header__logo-wrapper" to="/">
           <img
             className="Header__logo"
             src={Logo}
