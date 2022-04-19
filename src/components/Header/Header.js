@@ -91,11 +91,9 @@ const Header = ({ noSticky }) => {
               return (
                 <li
                   key={item.pathname}
-                  className={
-                    pathname.includes(item.pathname)
-                      ? `Header__menu-link is-active`
-                      : `Header__menu-link`
-                  }
+                  className={classNames(`Header__menu-link`, {
+                    "is-active": pathname.includes(item.pathname),
+                  })}
                 >
                   <Link
                     aria-haspopup={!!item.children}
