@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import { useLocation } from "@reach/router";
+import classNames from "classnames";
 
 // Components.
 import Constraint from "../Constraint";
@@ -65,7 +66,9 @@ const Header = ({ noSticky }) => {
 
   return (
     <div
-      className={`Header ${noSticky ? `Header--no-sticky` : ``}`}
+      className={classNames(`Header`, {
+        "Header--no-sticky": noSticky,
+      })}
       ref={headerRef}
     >
       <Constraint className="Header__content">

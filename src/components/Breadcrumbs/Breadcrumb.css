@@ -1,4 +1,4 @@
-.breadcrumb {
+.Breadcrumb {
   width: fit-content;
 
   &__container {
@@ -26,11 +26,6 @@
     padding: 0;
   }
 
-  &__solo {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
   a {
     text-decoration: none;
   }
@@ -47,6 +42,6 @@
 }
 
 /* Edge case */
-.Constraint > .breadcrumb {
+.Constraint > .Breadcrumb {
   margin-top: calc(var(--s__unit) * 3);
 }

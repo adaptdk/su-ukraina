@@ -1,11 +1,10 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import classNames from "classnames";
 
 // Styles.
 import "./TabsButton.css";
-
-const CN = `TabsButton`;
 
 const TabsButton = ({ text, active, pagePath, ...props }) => {
   let Tag = `button`;
@@ -20,9 +19,9 @@ const TabsButton = ({ text, active, pagePath, ...props }) => {
 
   return (
     <Tag
-      className={`${CN} ${
-        !!active || props.to === pagePath ? `${CN}--active` : ``
-      }`}
+      className={classNames(`TabsButton`, {
+        "TabsButton--active": !!active || props.to === pagePath,
+      })}
       {...props}
     >
       {text}

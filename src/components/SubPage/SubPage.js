@@ -1,16 +1,20 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import classNames from "classnames";
 
 import "./SubPage.css";
 
 const SubPage = ({ title, intro, children, image, imageIsLeft }) => {
-  const imageSide = imageIsLeft ? `left` : `right`;
-  const contentClass = image ? `has-image has-image--${imageSide}` : ``;
-
   return (
-    <section className={`SubPage ${contentClass}`}>
-      <div className={`SubPage__content`}>
+    <section
+      className={classNames(`SubPage`, {
+        "SubPage--with-image": image,
+        "SubPage--image-left-aligned": !!imageIsLeft,
+        "SubPage--image-right-aligned": !imageIsLeft,
+      })}
+    >
+      <div className="SubPage__content">
         <div className="SubPage__content-text">
           <h2 className="SubPage__title">{title}</h2>
           <div dangerouslySetInnerHTML={{ __html: intro }} />
