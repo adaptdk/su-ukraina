@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -36,6 +36,7 @@ const fallbackCopyTextToClipboard = (text) => {
 
   document.body.removeChild(textArea);
 };
+
 function copyTextToClipboard(text) {
   if (!navigator.clipboard) {
     fallbackCopyTextToClipboard(text);
@@ -90,8 +91,32 @@ const handleAnchorClick = (e) => {
   e.preventDefault();
 };
 
+const generateLdMetadataArr = (currentItemData) => {
+  const { questions } = currentItemData;
+  if (questions && questions.length) {
+    const questionsMetadataLdArray = questions.map((question) => {
+      let questionObj = {};
+      (questionObj[`@type`] = `Question`),
+        (questionObj[`name`] = question.title),
+        (questionObj[`acceptedAnswer`] = {
+          "@type": `Answer`,
+          text: question.answer,
+        });
+      return questionObj;
+    });
+    const metadataLDObj = {
+      "@context": `https://schema.org`,
+      "@type": `FAQPage`,
+      mainEntity: questionsMetadataLdArray,
+    };
+    return metadataLDObj;
+  } else {
+    return false;
+  }
+};
+
 const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(`hashchange`, openTarget);
     openTarget();
 
@@ -100,11 +125,27 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
     };
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     return () => {
       document.body.removeAttribute(`data-filters`);
     };
   }, []);
+
+  useEffect(() => {
+    const metadataLdContent = generateLdMetadataArr(currentItemData);
+    let script;
+    if (metadataLdContent) {
+      script = document.createElement(`script`);
+      script.type = `application/ld+json`;
+      script.innerText = JSON.stringify(metadataLdContent);
+      document.body.appendChild(script);
+    }
+    return () => {
+      if (script) {
+        document.body.removeChild(script);
+      }
+    };
+  }, [currentItemData]);
 
   const handleFaqNavSensorChange = (e) => {
     if (typeof window === `undefined`) {
