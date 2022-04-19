@@ -9,7 +9,7 @@
   overflow: hidden;
   padding: 0;
   position: fixed;
-  transition: height 0.2s ease;
+  transition: height 0.2s ease, padding 0.2s ease;
   width: calc(100% - (var(--s__main-padding) * 2));
   z-index: 1002; /* 1 above faqnav-overlay */
 
