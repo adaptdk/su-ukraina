@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { useLocation } from "@reach/router";
+import classNames from "classnames";
 
 import { PATHNAMES } from "../../constants/LanguageSwitch";
 
@@ -32,21 +33,19 @@ const LanguageSwitch = () => {
     }
   };
 
-  /* @TODO use classnames library here */
   return (
     <div className="LanguageSwitch">
       <div className="LanguageSwitch__wrapper">
         <div
           aria-haspopup="true"
           tabIndex={0}
-          className="LanguageSwitch__language LanguageSwitch__language--active"
+          className="LanguageSwitch__language"
         >
           <div
-            className={`LanguageSwitch__language-icon ${
-              isUa
-                ? `LanguageSwitch__language-icon--ua-flag-alt`
-                : `LanguageSwitch__language-icon--lt-flag`
-            }`}
+            className={classNames(`LanguageSwitch__language-icon`, {
+              "LanguageSwitch__language-icon--ua-flag-alt": isUa,
+              "LanguageSwitch__language-icon--lt-flag": !isUa,
+            })}
           ></div>
           <div className="LanguageSwitch__language-title">
             {isUa ? `UA` : `LT`}
@@ -56,9 +55,9 @@ const LanguageSwitch = () => {
           <li className="LanguageSwitch__list-item">
             <Link
               to={findPageLanguageSibling()}
-              className={`LanguageSwitch__language ${
-                isUa ? `LanguageSwitch__language--active-list-item` : ``
-              }`}
+              className={classNames(`LanguageSwitch__language`, {
+                "LanguageSwitch__language--active-list-item": isUa,
+              })}
             >
               <div className="LanguageSwitch__language-icon LanguageSwitch__language-icon--ua-flag-alt" />
               <div className="LanguageSwitch__language-title">UA</div>
@@ -67,9 +66,9 @@ const LanguageSwitch = () => {
           <li className="LanguageSwitch__list-item">
             <Link
               to={findPageLanguageSibling()}
-              className={`LanguageSwitch__language ${
-                !isUa ? `LanguageSwitch__language--active-list-item` : ``
-              }`}
+              className={classNames(`LanguageSwitch__language`, {
+                "LanguageSwitch__language--active-list-item": !isUa,
+              })}
             >
               <div className="LanguageSwitch__language-icon LanguageSwitch__language-icon--lt-flag" />
               <div className="LanguageSwitch__language-title">LT</div>

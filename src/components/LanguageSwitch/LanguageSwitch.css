@@ -23,10 +23,6 @@
     &--active-list-item {
       pointer-events: none;
     }
-
-    &--active {
-      box-shadow: inset 0 -2px var(--c__primary);
-    }
   }
 
   &__language-icon {
