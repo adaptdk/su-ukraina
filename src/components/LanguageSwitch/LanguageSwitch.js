@@ -39,7 +39,7 @@ const LanguageSwitch = () => {
         <div
           aria-haspopup="true"
           tabIndex={0}
-          className="LanguageSwitch__language LanguageSwitch__language--active"
+          className="LanguageSwitch__language"
         >
           <div
             className={`LanguageSwitch__language-icon ${
