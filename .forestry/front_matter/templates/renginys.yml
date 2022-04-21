@@ -48,6 +48,7 @@ fields:
   label: Renginio tiklalapis
 pages:
 - src/content/events/ateik-barsciu-paremk-ukraina-kaunas.md
+- src/content/events/didysis-koncertas-ukrainai-paremti.md
 - src/content/events/k11-ingrida-sveciuose-ukraina-sirdyse.md
 - src/content/events/kaunas-uz-laisve.md
 - src/content/events/koncertas-ukraina-mes-esame-su-tavimi.md
