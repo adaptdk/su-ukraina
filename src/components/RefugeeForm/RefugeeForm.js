@@ -120,7 +120,7 @@ const RefugeeForm = ({ returnDestination = `/` }) => {
                   required
                 />
                 Я прочитав і погоджуюсь{` `}
-                <a href="/privacy-policy" title="політика конфіденційності">
+                <a href="/ua/privacy-policy" title="політика конфіденційності">
                   політика конфіденційності
                 </a>
               </label>
