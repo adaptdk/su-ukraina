@@ -1,4 +1,4 @@
-import { useLocation } from "@reach/router";
+import { useLocation } from "@gatsbyjs/reach-router";
 
 export const handlePath = (pseudoLink) => {
   switch (pseudoLink.toLowerCase()) {

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { useLocation } from "@reach/router";
+import { useLocation } from "@gatsbyjs/reach-router";
 import classNames from "classnames";
 
 import { PATHNAMES } from "../../constants/LanguageSwitch";

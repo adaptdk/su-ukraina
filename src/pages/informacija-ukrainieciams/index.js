@@ -2,7 +2,7 @@ import * as React from "react";
 import { Title, Meta } from "react-head";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
-import { useLocation } from "@reach/router";
+import { useLocation } from "@gatsbyjs/reach-router";
 
 import Constraint from "../../components/Constraint";
 import { StaticImage } from "gatsby-plugin-image";
