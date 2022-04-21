@@ -47,9 +47,11 @@ fields:
     required: false
   label: Renginio tiklalapis
 pages:
+- src/content/events/ateik-barsciu-paremk-ukraina-kaunas.md
 - src/content/events/k11-ingrida-sveciuose-ukraina-sirdyse.md
 - src/content/events/kaunas-uz-laisve.md
 - src/content/events/koncertas-ukraina-mes-esame-su-tavimi.md
+- src/content/events/oleg-ir-evaldas-ukraina-vilnius.md
 - src/content/events/palaikome-ukraina-ant-batutu.md
 - src/content/events/paveikslo-ukraina-aukcionas.md
 - src/content/events/po-baznycios-skliautais-gloria-ukraina.md
