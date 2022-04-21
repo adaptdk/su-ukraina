@@ -36,6 +36,7 @@ fields:
   label: Kategorija
 pages:
 - src/content/partners/Gediminas.md
+- src/content/partners/capital-real-estate.md
 - src/content/partners/https-lrv.lt-lt-aktuali-informacija-informacija-apie-kara-ukrainoje-aktuali-informacija-1.md
 - src/content/partners/nova-media.md
 - src/content/partners/shift4.md
