@@ -34,8 +34,8 @@ questions:
     самостійному пошуку житла для довгострокової оренди найбільш продуктивним є пошук
     оголошень в інтернеті і безпосередній контакт з зазначеною контактною особою.</p><p>У
     пошуках найбільш поширеними і результативними є 2 способи пошуку:</p><p>1) Пошук
-    на популярних сайтах оголошень NT:</p><p><a href="https://www.aruodas.lt/butu-nuoma/?help_ukraine=1"
-    title="https://www.aruodas.lt/butu-nuoma/?help_ukraine=1">https://www.aruodas.lt/butu-nuoma/?help_ukraine=1</a></p><p><a
+    на популярних сайтах оголошень NT:</p><p><a href="https://ru.aruodas.lt/butu-nuoma/"
+    title="https://ru.aruodas.lt/butu-nuoma/">https://ru.aruodas.lt/butu-nuoma/</a></p><p><a
     href="https://domoplius.lt/ru/" title="https://domoplius.lt/ru/">https://domoplius.lt/ru/</a></p><p><a
     href="https://ru.skelbiu.lt" title="https://ru.skelbiu.lt">https://ru.skelbiu.lt</a></p><p>2)
     Пошук у групі Facebook «<a href="https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&amp;sa=D&amp;source=docs&amp;ust=1648811400237652&amp;usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD"
