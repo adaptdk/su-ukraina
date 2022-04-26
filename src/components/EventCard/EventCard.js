@@ -56,23 +56,23 @@ const EventCard = ({
         {startDate && (
           <div className="EventCard__event-info-wrapper">
             <div className="EventCard__icon EventCard__icon--calendar" />
-            <p className="EventCard__event-info-text">
+            <time className="EventCard__event-info-text" dateTime={startDate}>
               {getEventDate(startDate)}
               {endDate &&
                 !datesAreOnSameDay(startDate, endDate) &&
                 ` - ${getEventDate(endDate)}`}
-            </p>
+            </time>
           </div>
         )}
         {startDate && (
           <div className="EventCard__event-info-wrapper">
             <div className="EventCard__icon EventCard__icon--clock" />
-            <p className="EventCard__event-info-text">
+            <time className="EventCard__event-info-text" dateTime={startDate}>
               {getEventTime(startDate)}
               {endDate &&
                 datesAreOnSameDay(startDate, endDate) &&
                 ` - ${getEventTime(endDate)}`}
-            </p>
+            </time>
           </div>
         )}
         {location && (
