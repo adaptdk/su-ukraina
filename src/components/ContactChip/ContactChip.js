@@ -11,8 +11,8 @@ const ContactChip = ({
   url,
 }) => {
   return (
-    <article className="ContactChip">
-      <div className="ContactChip__heading">
+    <article className="ContactChip h-card">
+      <div className="ContactChip__heading p-name">
         <div className="ContactChip__title">{children}</div>
         <div>{description}</div>
       </div>
@@ -21,7 +21,7 @@ const ContactChip = ({
           <a
             href={url}
             rel="noopener"
-            className="ContactChip__actions-web"
+            className="ContactChip__actions-web p-name p-org u-url"
             target="_blank"
           >
             WWW
@@ -31,7 +31,7 @@ const ContactChip = ({
           <a
             href={facebookUrl}
             rel="noopener"
-            className="ContactChip__actions-facebook"
+            className="ContactChip__actions-facebook p-name p-org u-url"
             target="_blank"
           >
             Facebook
@@ -41,7 +41,7 @@ const ContactChip = ({
           <a
             href={twitterUrl}
             rel="noopener"
-            className="ContactChip__actions-twitter"
+            className="ContactChip__actions-twitter p-name p-org u-url"
             target="_blank"
           >
             twitter
