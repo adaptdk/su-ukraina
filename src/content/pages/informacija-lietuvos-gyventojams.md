@@ -5,6 +5,16 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kaip padėti Ukrainos vaikams integruotis į ugdymo procesą?
+  answer: "<p>Vaikui pradėjus lankyti mokyklą, taikomas individualus adaptacinis laikotarpis,
+    kuris priklauso nuo vaiko emocinės būsenos. Vaikai gali mokytis klasėse kartu
+    su kitais bendraamžiais arba išlyginamosiose klasėse. Taip pat, atvykę mokiniai
+    gali nuotoliniu būdu jungtis prie Ukrainos mokyklų ar bendro portalo ir mokytis
+    pagal ukrainiečių programą.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Jei vaikas kalba tik rusiškai, arba ukrainietiškai, ar jis vis tiek gali
     būti priimamas į ikimokyklinio ugdymo įstaigą?
   answer: "<p>Taip. Kalba nesudarys problemų priimti vaiką į įstaigą, kuri vykdo ikimokyklinio
