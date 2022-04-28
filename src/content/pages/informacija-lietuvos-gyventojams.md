@@ -5,6 +5,15 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Ar Lietuvos aukštosios mokyklos galėtų priimti ir leisti čia baigti bakalauro
+    / magistro studijas ukrainiečiams? Kur reikėtų kreiptis?
+  answer: <p>Taip, tokia galimybė yra. Tikslesnė informacija skelbiama <a href="https://studyin.lt/"
+    title="https://studyin.lt/">https://studyin.lt/</a> tinklalapyje. Šiame tinklalapyje
+    suformuotas atskiras skyrius Ukrainos piliečiams anglų ir ukrainiečių kalbomis.</p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Ar iš Ukrainos atvykęs abiturientas galės šiais mokslo metais Lietuvoje gauti
     brandos atestatą?
   answer: "<p>Taip. Lietuvoje brandos atestatui įgyti reikia turėti patenkinamus metinius
