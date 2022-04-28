@@ -11,8 +11,10 @@ import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
 import Section from "../../components/Section";
 
-const Page = ({ data }) => {
-  const crumbs = [`Būkime budrūs`, `Patikima informacija`];
+const Page = ({ data, pageContext }) => {
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
   const additionalNavigation = [`sukčiai ir dezinformacija`];
   const content = data.contents.edges.map((edge) => {
     return {
@@ -215,6 +217,11 @@ export const query = graphql`
 `;
 
 Page.propTypes = {
+  pageContext: PropTypes.shape({
+    breadcrumb: PropTypes.shape({
+      crumbs: PropTypes.array,
+    }),
+  }),
   data: PropTypes.shape({
     contents: PropTypes.shape({
       edges: PropTypes.arrayOf(

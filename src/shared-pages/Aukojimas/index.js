@@ -15,8 +15,7 @@ import CardSection from "../../components/Card/CardSection";
 import Section from "../../components/Section";
 import TabsButton from "../../components/TabsButton";
 
-const Page = ({ content, organisations, pagePath }) => {
-  const crumbs = [`Kaip galiu padėti`, `Aukojimas`];
+const Page = ({ content, organisations, pagePath, crumbs }) => {
   const additionalNavigation = [`Savanorystė`];
 
   return (
@@ -113,6 +112,7 @@ const Page = ({ content, organisations, pagePath }) => {
 };
 
 Page.propTypes = {
+  crumbs: PropTypes.array,
   content: PropTypes.shape({
     title: PropTypes.string,
     html: PropTypes.string,

@@ -14,9 +14,8 @@ const navigationGroup = [
   `kaip galiu padėti?`,
 ];
 
-const crumbs = [`Potesto formos`, `Renginiai`];
-
 const Template = () => {
-  return <NavigationGroup additionalNav={navigationGroup} crumbs={crumbs} />;
+  return <NavigationGroup additionalNav={navigationGroup} />;
 };
+
 export const Primary = Template.bind({});

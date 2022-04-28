@@ -13,8 +13,7 @@ import Button from "../../components/Button";
 import Section from "../../components/Section";
 import TabsButton from "../../components/TabsButton";
 
-const Page = ({ content, addressees, pagePath }) => {
-  const crumbs = [`Protesto formos`, `Budinkite veikti`];
+const Page = ({ content, addressees, pagePath, crumbs }) => {
   const additionalNavigation = [`akcijos`, `renginiai`];
 
   return (
@@ -106,6 +105,7 @@ const Page = ({ content, addressees, pagePath }) => {
 };
 
 Page.propTypes = {
+  crumbs: PropTypes.array,
   content: PropTypes.shape({
     title: PropTypes.string,
     html: PropTypes.string,

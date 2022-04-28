@@ -1,10 +1,20 @@
 require(`dotenv`).config();
+const { breadcrumbLabels } = require(`./src/constants/breadcrumbLabels`);
 
 module.exports = {
   siteMetadata: {
     siteUrl: `https://suukraina.lt`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        useAutoGen: true,
+        autoGenHomeLabel: `Titulinis`,
+        crumbLabelUpdates: breadcrumbLabels,
+        trailingSlashes: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

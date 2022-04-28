@@ -14,8 +14,11 @@ import NavigationGroup from "../../components/NavigationGroup";
 // Constants.
 import { NAVIGATION_BE_VIGILANT } from "../../constants/Navigation";
 
-const Page = ({ data }) => {
-  const crumbs = [`Būkime budrūs`];
+const Page = ({ data, pageContext }) => {
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
+
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -80,6 +83,11 @@ export const query = graphql`
 `;
 
 Page.propTypes = {
+  pageContext: PropTypes.shape({
+    breadcrumb: PropTypes.shape({
+      crumbs: PropTypes.array,
+    }),
+  }),
   data: PropTypes.shape({
     contents: PropTypes.shape({
       edges: PropTypes.arrayOf(

@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import * as React from "react";
+import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 import { Title } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
@@ -9,18 +9,24 @@ import Faq from "../../../components/Faq";
 
 import Section from "../../../components/Section";
 
-export default function Template({ data }) {
+import { modifyCrumbs } from "../../../utils/modifyCrumbs";
+
+export default function Template({ data, pageContext }) {
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-
-  const crumbs = [`Важлива інформація`, frontmatter.title_override];
-
   const faq = data.faq.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
       html: edge.node.childMarkdownRemark.html,
     };
   });
+
+  const modifiedCrumbs = useMemo(() => {
+    return modifyCrumbs(crumbs, frontmatter.title_override);
+  }, [frontmatter.title_override]);
 
   return (
     <Layout pagePath="/apie-mus/">
@@ -40,7 +46,7 @@ export default function Template({ data }) {
           currentItemData={frontmatter}
           navData={faq}
           faqHtml={html}
-          crumbs={crumbs}
+          crumbs={modifiedCrumbs}
           lang="ua"
         />
       )}
@@ -49,6 +55,11 @@ export default function Template({ data }) {
 }
 
 Template.propTypes = {
+  pageContext: PropTypes.shape({
+    breadcrumb: PropTypes.shape({
+      crumbs: PropTypes.array,
+    }),
+  }),
   data: PropTypes.shape({
     faq: PropTypes.shape({
       edges: PropTypes.arrayOf(

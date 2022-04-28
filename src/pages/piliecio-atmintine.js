@@ -11,8 +11,10 @@ import { ResourceList, ResourceListItem } from "../components/ResourceList";
 import SubPage from "../components/SubPage";
 import Section from "../components/Section";
 
-const Page = ({ data }) => {
-  const crumbs = [`Piliečio atmintinė`];
+const Page = ({ data, pageContext }) => {
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
   const additionalNavigation = [];
   const content = data.contents.edges.map((edge) => {
     return {
@@ -122,6 +124,11 @@ export const query = graphql`
 `;
 
 Page.propTypes = {
+  pageContext: PropTypes.shape({
+    breadcrumb: PropTypes.shape({
+      crumbs: PropTypes.array,
+    }),
+  }),
   data: PropTypes.shape({
     contents: PropTypes.shape({
       edges: PropTypes.arrayOf(
