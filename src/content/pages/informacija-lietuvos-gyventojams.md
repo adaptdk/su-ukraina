@@ -5,6 +5,15 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kaip turi elgtis darbdavys, kuris nori įdarbinti karo pabėgėlį iš Ukrainos?
+  answer: <ul><li><p>Įdarbinamas asmuo (ukrainietis), turi kreiptis į <a href="https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informacija-ukrainos-pilieciams-1"
+    title="">Migracijos departamentą</a> dėl teisėto buvimo šalyje.</p></li><li><p>Po
+    registracijos Migracijos departamente darbdavys gali įdarbinti asmenį laikydamasis
+    įprastos įdarbinimo tvarkos, kurią numato galiojantys teisės aktai.</p></li></ul>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: 'Priėmiau Ukrainos pabėgėlius per “Stiprūs kartu”. Ar reikia juos reikia
     registruoti migracijos tarnyboje, ar ši informacija automatiškai pasiekia migracijos
     skyrių?  '
