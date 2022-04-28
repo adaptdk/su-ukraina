@@ -1,10 +1,18 @@
 ---
-weight: 0
+weight: 
 title_override: Informacija Lietuvos gyventojams
 title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kur kreiptis dėl būsto kompensacijos apgyvendinus Ukrainos karo pabėgėlius?
+  answer: <p>Dėl kompensacijos reikia kreiptis į savivaldybės administraciją, kurioje
+    registruotas būstas ar kitos gyventi tinkamos sąlygos. <br>Savivaldybių kontaktus
+    rasite <a href="https://www.lrvalstybe.lt/savivaldybes" title="">čia</a>. </p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kaip galiu padėti ukrainiečiams?
   answer: '<p><strong>Padėti į Lietuvą atvykstantiems Ukrainos karo pabėgeliams galite
     savanoriaudami, remdami finansiškai ar apgyvendinant</strong></p><p><strong>Prie
@@ -79,6 +87,10 @@ contacts: []
 adresses: []
 
 ---
-Aprašymas didysis, tiesiog tekstas, kurį pakeis mūsų redaktoriai.
+**Svarbi informacija dėl ukrainiečių priėmimo Lietuvoje**
 
-Tiek žinių.
+  
+Šioje skiltyje pateikiami dažniausiai užduodami lietuvių klausimai, dėl ukrainiečių priėmimo Lietuvoje.
+
+Nerandate Jums rūpimo klausimo?   
+Rašykite mums: freedom@laisves.tv
