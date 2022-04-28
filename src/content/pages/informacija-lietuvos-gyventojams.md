@@ -5,6 +5,17 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: " Kur galima rasti informaciją apie ikimokyklinio ugdymo įstaigas, esančias
+    netoli priskirtos gyvenamosios vietos?"
+  answer: <p>Informaciją apie ikimokyklinio ugdymo įstaigas galite rasti to miesto
+    ar rajono savivaldybės interneto svetainėje. Taip pat ją galite gauti toje savivaldybėje,
+    kurioje gyvenate, apsilankę joje ar paskambinę savivaldybės interneto svetainėje
+    nurodytu telefonu.</p><p>Savivaldybių kontaktus rasite <a href="https://www.lrvalstybe.lt/savivaldybes"
+    title="">čia</a>.</p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kur kreiptis norint Ukrainos vaikus leisti į ikimokyklinio ugdymo įstaigas?
   answer: <p>Reikėtų kreiptis į to miesto ar rajono, kuriame gyvenate, savivaldybės
     administracijos švietimo padalinį, kuris ​ir yra atsakingas už ikimokyklinį ugdymą.
