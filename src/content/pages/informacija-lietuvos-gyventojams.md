@@ -5,6 +5,15 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kur kreiptis norint Ukrainos vaikus leisti į ikimokyklinio ugdymo įstaigas?
+  answer: <p>Reikėtų kreiptis į to miesto ar rajono, kuriame gyvenate, savivaldybės
+    administracijos švietimo padalinį, kuris ​ir yra atsakingas už ikimokyklinį ugdymą.
+    </p><p>Kontaktinę informaciją apie atsakingus asmenis galite rasti <a href="https://smsm.lrv.lt/uploads/smsm/documents/files/Ukrain%201%20Koordinatori%C5%B3%20savivaldyb%C4%97se%20kontaktai%20LT.pdf)"
+    title="">čia</a>. </p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Ar Lietuvos aukštosios mokyklos galėtų priimti ir leisti čia baigti bakalauro
     / magistro studijas ukrainiečiams? Kur reikėtų kreiptis?
   answer: <p>Taip, tokia galimybė yra. Tikslesnė informacija skelbiama <a href="https://studyin.lt/"
