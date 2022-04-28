@@ -5,6 +5,21 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Pagal kokius kriterijus yra suteikiama parama Ukrainos karo pabėgėliams?
+  answer: <p>Ukrainos pabėgėliai, kurie yra savarankiškai įsikūrę nuomojamame būste
+    gali kreiptis į gyvenamosios vietos savivaldybę dėl vienkartinės išmokos įsigyti
+    būtiniausius reikmenis. Išmoką gali gauti asmenys:</p><ul><li><p>Vyresni kaip
+    18 metų, dirbantys pagal darbo sutartį ar savarankiškai, užsiregistravę Užimtumo
+    tarnyboje, besimokantys pagal bendrojo ugdymo programą ar pagal formaliojo profesinio
+    mokymo programą, studijuojantys aukštojoje mokykloje.</p></li><li><p>Taip pat
+    pensinio amžiaus žmonės, nėščios moterys ir vaikus iki 3 metų auginantys vieniši
+    tėvai, globėjai, seneliai, negalintys dirbti žmonės su negalia.</p></li></ul><p>Savivaldybių
+    kontaktus rasite <a href="https://www.lrvalstybe.lt/savivaldybes" title="">čia.</a>
+    </p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kokią paramą gali gauti ukrainiečiai norintys įsikurti Lietuvoje?
   answer: <p>Nuo karo Ukrainoje pabėgę ir mūsų šalyje norintys įsikurti žmonės, kuriems
     suteiktas laikinosios apsaugos statusas, gali kreiptis į deklaruotos ar gyvenamosios
