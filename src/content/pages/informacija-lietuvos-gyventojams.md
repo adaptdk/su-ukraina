@@ -5,6 +5,17 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kaip teisingai užpildyti nuomos sutartį apgyvendinant ukrainiečius?
+  answer: "<p>Išnuomojant būstą Ukrainos karo pabėgėliams, lygiai taip pat, kaip ir
+    išnuomojant vietiniams gyventojams, nuomos sutartyje būtina tiksliai aprašyti
+    nuomojamą turtą: išnuomojamų patalpų adresą, kambarių ir kitokių patalpų skaičių,
+    bendrą plotą, patalpose esančią įrangą, priklausinius ir naudojimosi bendromis
+    patalpomis sąlygas, nuomos mokesčio dydį ir šio mokesčio mokėjimo tvarką (įskaitant
+    terminus), atsiskaitymų už komunalinius patarnavimus tvarką.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Ar prašymą dėl Ukrainos karo pabėgėlio priėmimo kompensacijos galima pildyti
     internetu?
   answer: '<ul><li><p>Prašymai gali būti siunčiami savivaldybėms elektroniniu paštu
