@@ -5,6 +5,18 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kur kreiptis norint suteikti galimybę Ukrainos vaikams lankyti mokyklas Lietuvoje?
+  answer: <p>Ukrainiečių vaikai gali būti priimami į visas Lietuvos mokyklas, kuriose
+    yra vietų. Dėl priėmimo tėvai (globėjai) gali kreiptis tiesiai į mokyklą arba
+    savivaldybės, kurioje apsistojo, švietimo padalinį. Informaciją apie ukrainiečių
+    vaikų priėmimą į ugdymo įstaigas teikiama savivaldybių švietimo skyriuose, kuriuose
+    paskirti koordinatoriai. Jie suteikia visą reikalingą informaciją apie priėmimą
+    į mokyklą ar darželį.</p><p>Koordinatorių kontaktus rasite <a href="https://smsm.lrv.lt/uploads/smsm/documents/files/Ukrain%201%20Koordinatori%C5%B3%20savivaldyb%C4%97se%20kontaktai%20LT.pdf"
+    title="">čia.</a></p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kokie dokumentai yra reikalingi ukrainiečiams norintiems gauti vienkartinę
     įsikūrimo išmoką Lietuvoje?
   answer: <p>Būtina turėti oficialiai registruotą būsto nuomos sutartį bent 6 mėnesiams.
