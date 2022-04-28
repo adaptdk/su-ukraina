@@ -5,6 +5,14 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kiek laiko bus mokama kompensacija už Ukrainos karo pabėgėlio priėmimą?
+  answer: "<p>Pirmąjį mėnesį nuo karo pabėgusius ukrainiečius būstų ir patalpų savininkai
+    turėtų priimti neatlygintinai. Kompensacija būtų mokama nuo antro mėnesio, tačiau
+    ne daugiau kaip už 3 mėnesius.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kokią kompensaciją už Ukrainos karo pabėgėlio apgyvendinimą galima gauti?
   answer: "<p>Kompensacijos dydis už būsto suteikimą ukrainiečiams priklauso nuo to,
     kiek patalpose apsigyveno asmenų:</p><ul><li><p>Už vieną apgyvendintą asmenį iš
