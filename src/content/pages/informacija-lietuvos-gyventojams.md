@@ -5,6 +5,16 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kaip gauti nemokamą paramą mokykloje ukrainiečiams?
+  answer: <p>Norint gauti mėnesinę kompensaciją vaiko ugdymo išlaidoms apmokėti, ukrainietis
+    turi pateikti nustatytos formos prašymą, savivaldybei, kurios teritorijoje jis
+    yra deklaravęs gyvenamąją vietą arba faktiškai gyvena.</p><p>Prašymų formas galite
+    rasti <a href="https://socmin.lrv.lt/lt/veiklos-sritys/seima-ir-vaikai/prasymu-formos-socialinei-paramai-gauti."
+    title="">čia</a>.</p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kaip padėti Ukrainos vaikams integruotis į ugdymo procesą?
   answer: "<p>Vaikui pradėjus lankyti mokyklą, taikomas individualus adaptacinis laikotarpis,
     kuris priklauso nuo vaiko emocinės būsenos. Vaikai gali mokytis klasėse kartu
