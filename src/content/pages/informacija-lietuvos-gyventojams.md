@@ -5,6 +5,14 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kas gali pasinaudoti kompensacija už Ukrainos karo pabėgėlių apgyvendinimą?
+  answer: "<p>Kompensacija gali pasinaudoti šalies gyventojai ar verslas, kurie leido
+    arba leis karo pabėgėliams laikinai neatlygintinai apsigyventi būstuose, viešbučių,
+    poilsio, gydymo, sodų paskirties patalpose.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kokie dokumentai yra reikalingi norint gauti kompensaciją apgyvendinus Ukrainos
     karo pabėgėlius?
   answer: '<ul><li><p>Kompensacija yra skiriama fiziniams ir juridiniams asmenims
