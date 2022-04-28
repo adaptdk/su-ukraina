@@ -5,6 +5,15 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: 'Priėmiau Ukrainos pabėgėlius per “Stiprūs kartu”. Ar reikia juos reikia
+    registruoti migracijos tarnyboje, ar ši informacija automatiškai pasiekia migracijos
+    skyrių?  '
+  answer: "<p>Taip, registruoti reikia, nes tik tuomet bus išduotas laikinas leidimas
+    gyventi Lietuvoje, atsiras galimybė gauti priklausančias lengvatas.</p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Ar yra galimybė ukrainiečiams užsiregistruoti pas gydytoją, jei migracijos
     tarnyba dar nėra išdavusi asmens tapatybės dokumentų?
   answer: "<p>Taip. Atvykusiems ir užsiregistravusiems Migracijos tarnyboje ukrainiečiams,
