@@ -5,6 +5,19 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Jei vaikas turi negalią ar specialiųjų ugdymosi poreikių, kur reikėtų kreiptis
+    dėl ugdymo galimybių?
+  answer: <p>Reikėtų kreiptis į savivaldybės, kurioje apsistojo ukrainiečiai, švietimo
+    padalinį. Kreipdamiesi į savivaldybės švietimo skyrių informuokite, jei vaikas
+    turi negalią, specialiųjų ugdymosi poreikių, patiria emocinę krizę ar jums kelia
+    nerimą vaiko emocinė savijauta. Savivaldybės administracijos švietimo padalinio
+    specialistai padės vaikui rasti geriausią jo poreikius atitinkančią ugdymo įstaigą.</p><p>Savivaldybių
+    švietimo skyriaus koordinatorių kontaktus rasite <a href="https://smsm.lrv.lt/uploads/smsm/documents/files/Ukrain%201%20Koordinatori%C5%B3%20savivaldyb%C4%97se%20kontaktai%20LT.pdf"
+    title="">čia. </a><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Ar būtų galimybė ukrainiečiui Lietuvoje tęsti mokymąsi pagal specializuotas
     menų programas?
   answer: "<p>Lietuvoje tęsti mokymąsi su menine pakraipa galima gimnazijos tipo menų
