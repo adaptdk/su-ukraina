@@ -5,6 +5,21 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Ar prašymą dėl Ukrainos karo pabėgėlio priėmimo kompensacijos galima pildyti
+    internetu?
+  answer: '<ul><li><p>Prašymai gali būti siunčiami savivaldybėms elektroniniu paštu
+    (savivaldybių kontaktus galite rasti čia: <a href="https://www.lrvalstybe.lt/savivaldybes"
+    title="https://www.lrvalstybe.lt/savivaldybes">https://www.lrvalstybe.lt/savivaldybes</a>)</p></li><li><p>Prie
+    prašymo turi būti pridedamos visų reikiamų dokumentų kopijos, patvirtintos notaro
+    ar kito subjekto (turinčio teisę, vadovaujantis Lietuvos Respublikos notariato
+    įstatymu) taip pat asmens tapatybę patvirtinančio dokumento kopija. Reikiamų dokumentų
+    sąrašas pateikiamas skiltyje: <strong>Kokie dokumentai yra reikalingi norint gauti
+    kompensaciją apgyvendinus Ukrainos karo pabėgėlius?</strong></p></li><li><p>Prašymas
+    turi būti pasirašytas kvalifikuotu elektroniniu parašu.</p></li></ul>'
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: 'Jei ukrainiečius priėmiau gyventi dar prieš įsigaliojant kompensacijų tvarkai,
     t,y. iki balandžio 1 d.,  ar vis tiek galėsiu gauti kompensaciją? '
   answer: "<p>Taip. Kompensacija nuo balandžio 1 d. bus suteikiama visiems šalies
