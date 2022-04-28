@@ -5,6 +5,12 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Ar ukrainiečiai turi mokėti už bendrojo ugdymo paslaugas Lietuvoje?
+  answer: "<p>Ne, šios paslaugos yra nemokamos.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: 'Ar vaikas gali lankyti mokyklą Lietuvoje ir tuo pačiu metu mokytis nuotoliniu
     būdu Ukrainos mokykloje? '
   answer: "<p>Taip, gali. Mokykla Lietuvoje turi turėti raštišką patvirtinimą iš mokyklos,
