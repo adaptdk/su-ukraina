@@ -5,6 +5,14 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Ar galima ukrainiečius vaikus leisti į mokykla dabar, ar reikia laukti naujų
+    mokslų metų pradžios?
+  answer: "<p>Vaikams geriau pradėti lankyti mokyklą neatidėliojant, nereikia laukti
+    kitų mokslo metų pradžios.</p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kur kreiptis norint suteikti galimybę Ukrainos vaikams lankyti mokyklas Lietuvoje?
   answer: <p>Ukrainiečių vaikai gali būti priimami į visas Lietuvos mokyklas, kuriose
     yra vietų. Dėl priėmimo tėvai (globėjai) gali kreiptis tiesiai į mokyklą arba
