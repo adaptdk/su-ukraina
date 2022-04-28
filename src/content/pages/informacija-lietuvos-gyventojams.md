@@ -5,6 +5,15 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: 'Jei ukrainiečius priėmiau gyventi dar prieš įsigaliojant kompensacijų tvarkai,
+    t,y. iki balandžio 1 d.,  ar vis tiek galėsiu gauti kompensaciją? '
+  answer: "<p>Taip. Kompensacija nuo balandžio 1 d. bus suteikiama visiems šalies
+    gyventojams ar verslams, kurie leido pabėgėliams laikinai neatlygintinai apsigyventi
+    gyvenamuosiuose būstuose.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kiek laiko bus mokama kompensacija už Ukrainos karo pabėgėlio priėmimą?
   answer: "<p>Pirmąjį mėnesį nuo karo pabėgusius ukrainiečius būstų ir patalpų savininkai
     turėtų priimti neatlygintinai. Kompensacija būtų mokama nuo antro mėnesio, tačiau
