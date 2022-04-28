@@ -5,6 +5,14 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Jei vaikas kalba tik rusiškai, arba ukrainietiškai, ar jis vis tiek gali
+    būti priimamas į ikimokyklinio ugdymo įstaigą?
+  answer: "<p>Taip. Kalba nesudarys problemų priimti vaiką į įstaigą, kuri vykdo ikimokyklinio
+    ugdymo programą.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: " Kur galima rasti informaciją apie ikimokyklinio ugdymo įstaigas, esančias
     netoli priskirtos gyvenamosios vietos?"
   answer: <p>Informaciją apie ikimokyklinio ugdymo įstaigas galite rasti to miesto
