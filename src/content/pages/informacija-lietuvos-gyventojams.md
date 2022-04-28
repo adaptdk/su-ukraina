@@ -5,6 +5,20 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Ar yra galimybė ukrainiečiams užsiregistruoti pas gydytoją, jei migracijos
+    tarnyba dar nėra išdavusi asmens tapatybės dokumentų?
+  answer: "<p>Taip. Atvykusiems ir užsiregistravusiems Migracijos tarnyboje ukrainiečiams,
+    iki bus išspręstas jų statuso klausimas, sveikatos priežiūros paslaugos teikiamos
+    Lietuvos Respublikos vidaus reikalų ministro įsakymu - asmenims, neapdraustiems
+    privalomuoju sveikatos draudimu – užtikrinama <strong>skubioji medicinos pagalba,</strong>
+    nėštumo priežiūra, pagalba prasidėjus gimdymui bei kiti būtini sveikatos priežiūros
+    aptarnavimai, kurių nesuteikus sveikatos būklė galėtų pablogėti tiek, kad jiems
+    prireiktų skubiosios medicinos pagalbos paslaugų.</p><p>Apie tai, kokios apimties
+    pagalba yra reikalinga, sprendžia pacientą apžiūrintis gydytojas.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Ar galima įdarbintam karo pabėgėliui iš Ukrainos mokėti darbo užmokestį grynaisiais
     pinigais?
   answer: <p>Ne. Lietuvos Respublikos Darbo kodekso 139 straipsnio 3 dalis numato,
