@@ -5,6 +5,17 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kokią paramą gali gauti ukrainiečiai norintys įsikurti Lietuvoje?
+  answer: <p>Nuo karo Ukrainoje pabėgę ir mūsų šalyje norintys įsikurti žmonės, kuriems
+    suteiktas laikinosios apsaugos statusas, gali kreiptis į deklaruotos ar gyvenamosios
+    vietos savivaldybes su prašymu dėl:</p><p>- Vienkartinės išmokos įsikurti (vienkartinė
+    įsikūrimo išmoka gali būti skirta ir būsto nuomos depozitui sumokėti).</p><p>-
+    Mėnesinės kompensacijos vaiko iki 6 metų ugdymui gauti.</p><p>Savivaldybių kontaktus
+    rasite <a href="https://www.lrvalstybe.lt/savivaldybes" title="">čia</a>. </p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kaip teisingai užpildyti nuomos sutartį apgyvendinant ukrainiečius?
   answer: "<p>Išnuomojant būstą Ukrainos karo pabėgėliams, lygiai taip pat, kaip ir
     išnuomojant vietiniams gyventojams, nuomos sutartyje būtina tiksliai aprašyti
