@@ -5,6 +5,18 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: 'Ar yra galimybė mokytis ukrainiečių kalbos Lietuvos savivaldybių ir valstybinėse
+    mokyklose? '
+  answer: <p>Jei mokykla gali sudaryti sąlygas mokytis gimtosios kalbos, tuomet, iš
+    Ukrainos atvykusiam mokiniui pasirinkus mokytis ukrainiečių kalbą tam bus skiriamos
+    5 pamokos per savaitę. Tokią informaciją galite rasti kreipiantis į jūsų gyvenamosios
+    vietos savivaldybės švietimo skyrių. Švietimo skyrių kontaktus galite rasti<a
+    href="https://smsm.lrv.lt/uploads/smsm/documents/files/Ukrain%201%20Koordinatori%C5%B3%20savivaldyb%C4%97se%20kontaktai%20LT.pdf
+    " title=""> čia. </a> </p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Vaikas kalba tik rusiškai arba ukrainietiškai, ar jis vis tiek gali pradėti
     lankyti mokyklą Lietuvoje?
   answer: "<p>Taip. Mokykla sudaro individualų ugdymo planą, kuriame numatomas mokinio
