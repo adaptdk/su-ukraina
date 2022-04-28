@@ -5,6 +5,24 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kokie dokumentai yra reikalingi norint gauti kompensaciją apgyvendinus Ukrainos
+    karo pabėgėlius?
+  answer: '<ul><li><p>Kompensacija yra skiriama fiziniams ir juridiniams asmenims
+    sudarius su ukrainiečiais būsto panaudos sutartį (panaudos sutarties pavyzdys:
+    <a href="https://teisesvartai.lt/dokumentai/panaudos-sutartis/" title="https://teisesvartai.lt/dokumentai/panaudos-sutartis/">https://teisesvartai.lt/dokumentai/panaudos-sutartis/</a>)
+    Panaudos sutartyje turėtų būti įrašyta sąlyga, kad su būsto išlaikymu susijusius
+    mokesčius apmoka panaudos davėjas (būsto savininkas).</p></li><li><p>Siekiant
+    gauti kompensaciją reikia kreiptis į savivaldybės, kurioje registruotas būstas,
+    administraciją ir pateikti laisvos formos arba savivaldybės nustatytos formos
+    prašymą dėl kompensacijos skyrimo.</p></li><li><p>Kartu su prašymu reikia pateikti
+    pagal Civilinio kodekso reikalavimus sudarytą būsto panaudos sutartį ar jos kopiją,
+    kurioje nurodytas panaudos gavėjo: vardas, pavardė, asmens kodas arba interesų
+    Lietuvoje turinčio užsieniečio kodas (ILTU kodas), gimimo data (jei asmens kodo
+    panaudos gavėjas neturi).</p></li></ul>'
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kur kreiptis dėl būsto kompensacijos apgyvendinus Ukrainos karo pabėgėlius?
   answer: <p>Dėl kompensacijos reikia kreiptis į savivaldybės administraciją, kurioje
     registruotas būstas ar kitos gyventi tinkamos sąlygos. <br>Savivaldybių kontaktus
