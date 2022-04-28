@@ -5,6 +5,17 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kokią kompensaciją už Ukrainos karo pabėgėlio apgyvendinimą galima gauti?
+  answer: "<p>Kompensacijos dydis už būsto suteikimą ukrainiečiams priklauso nuo to,
+    kiek patalpose apsigyveno asmenų:</p><ul><li><p>Už vieną apgyvendintą asmenį iš
+    Ukrainos bus mokama 150 eurų.</p></li><li><p>Už kiekvieną kitą, apgyvendintą tame
+    pačiame būste, po 50 eurų per mėnesį. Pvz.: jeigu apgyvendinta 4 asmenų šeima,
+    kompensacijos dydis skaičiuojamas taip: 150+50+50+50= 300 eurų.</p></li><li><p>Išmokos
+    dydis nepriklauso nuo to, kurioje Lietuvos vietovėje yra būstas.</p></li></ul>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kas gali pasinaudoti kompensacija už Ukrainos karo pabėgėlių apgyvendinimą?
   answer: "<p>Kompensacija gali pasinaudoti šalies gyventojai ar verslas, kurie leido
     arba leis karo pabėgėliams laikinai neatlygintinai apsigyventi būstuose, viešbučių,
