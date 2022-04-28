@@ -5,6 +5,17 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: 'Ar vaikas gali lankyti mokyklą Lietuvoje ir tuo pačiu metu mokytis nuotoliniu
+    būdu Ukrainos mokykloje? '
+  answer: "<p>Taip, gali. Mokykla Lietuvoje turi turėti raštišką patvirtinimą iš mokyklos,
+    veikiančios Ukrainoje, kad mokinys joje mokosi nuotoliniu būdu. Mokiniui mokykloje
+    Lietuvoje turi būti užtikrinamas lietuvių kalbos mokymasis mokyklos siūlomu būdu
+    – gyvai ar nuotoliu. Taip pat mokiniui gali būti siūloma dalyvauti mokyklos veiklose,
+    pavyzdžiui, neformaliojo švietimo užsiėmimuose (būreliuose).</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: 'Ar yra galimybė mokytis ukrainiečių kalbos Lietuvos savivaldybių ir valstybinėse
     mokyklose? '
   answer: <p>Jei mokykla gali sudaryti sąlygas mokytis gimtosios kalbos, tuomet, iš
