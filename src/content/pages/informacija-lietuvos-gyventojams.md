@@ -5,6 +5,21 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Vaikas kalba tik rusiškai arba ukrainietiškai, ar jis vis tiek gali pradėti
+    lankyti mokyklą Lietuvoje?
+  answer: "<p>Taip. Mokykla sudaro individualų ugdymo planą, kuriame numatomas mokinio
+    tolesnis mokymasis bei reikalinga pagalba. Lietuvių kalbos mokysis ne tik su klase,
+    bet ir papildomai. Lietuvių kalbos mokymasis bus labai individualizuotas, pritaikytas
+    mokiniui. <br>Lietuvos mokyklose nuo šeštos klasės jau yra privalomas antrosios
+    užsienio kalbos mokymasis. Pasirinkus rusų kalbą (tikėtina, kad ją moka pakankamai
+    gerai), mokiniui antrosios užsienio kalbos pamokos gali būti skirtos mokytis lietuvių
+    kalbos. Jeigu mokykloje atvykusių mokinių iš Ukrainos bus daugiau, gali būti sudarytos
+    mokinių grupės, kuriose bus mokomasi nustatytą laiką tik lietuvių kalbos, vėliau
+    mokiniai bus nukreipti mokytis su bendraamžiais.</p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Ar galima ukrainiečius vaikus leisti į mokykla dabar, ar reikia laukti naujų
     mokslų metų pradžios?
   answer: "<p>Vaikams geriau pradėti lankyti mokyklą neatidėliojant, nereikia laukti
