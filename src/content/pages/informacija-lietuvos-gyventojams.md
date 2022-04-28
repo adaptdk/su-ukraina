@@ -5,6 +5,25 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Ar galima įdarbintam karo pabėgėliui iš Ukrainos mokėti darbo užmokestį grynaisiais
+    pinigais?
+  answer: <p>Ne. Lietuvos Respublikos Darbo kodekso 139 straipsnio 3 dalis numato,
+    kad darbo užmokestis ir kitos su darbo santykiais susijusios išmokos, taip pat
+    dienpinigiai ir komandiruotės išlaidų kompensacijos privalo būti mokami pavedimu
+    į darbuotojo nurodytą darbuotojo mokėjimo sąskaitą.</p><p>Šiuo metu karo pabėgėliams
+    banko paslaugas teikia:</p><ul><li><p><a href="https://www.citadele.lt/en/international/"
+    title="">AS „Citadele banka“ Lithuanian branch</a></p></li><li><p><a href="https://www.luminor.lt/en/private"
+    title="">Luminor Bank AS Lithuanian branch</a>,</p></li><li><p><a href="https://www.paysera.lt/v2/en-LT/index"
+    title="">Paysera LT, UAB</a></p></li><li><p><a href="https://www.revolut.com/en-LT"
+    title="">Revolut Payments, UAB</a>,</p></li><li><p><a href="https://satchel.eu/"
+    title="">SatchelPay, UAB</a>,</p></li><li><p><a href="https://www.seb.lt/en" title="">AB
+    SEB bankas</a>,</p></li><li><p><a href="https://www.swedbank.lt/private/d2d/start">„Swedbank“,
+    AB</a></p></li><li><p><a href="https://sb.lt/en" title="">Šiaulių bankas, AB</a></p></li><li><p><a
+    href="https://bankera.com/" title="">Bankera (Pervesk, UAB)</a></p></li></ul>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Per kiek laiko bus priimtas sprendimas dėl mėnesinės kompensacijos gavimo
     vaiko ugdymo išlaidoms apmokėti?
   answer: "<p>Savivaldybės administracija sprendimą dėl mėnesinės kompensacijos vaiko
