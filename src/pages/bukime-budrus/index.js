@@ -6,7 +6,6 @@ import { Title, Meta } from "react-head";
 // Components.
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
-import Breadcrumb from "../../components/Breadcrumbs";
 import Section from "../../components/Section";
 import LinkCollection from "../../components/LinkCollection";
 import LinkCollectionItem from "../../components/LinkCollection/LinkCollectionItem";

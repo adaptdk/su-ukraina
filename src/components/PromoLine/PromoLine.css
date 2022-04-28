@@ -70,8 +70,8 @@
       width: 100%;
 
       span {
-        font-size: 1rem;
         display: block;
+        font-size: 1rem;
       }
     }
 
