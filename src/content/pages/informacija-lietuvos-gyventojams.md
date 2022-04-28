@@ -5,6 +5,26 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Ar iš Ukrainos atvykęs abiturientas galės šiais mokslo metais Lietuvoje gauti
+    brandos atestatą?
+  answer: "<p>Taip. Lietuvoje brandos atestatui įgyti reikia turėti patenkinamus metinius
+    pažymius ir išlaikytą lietuvių kalbos ir literatūros brandos egzaminą bei dar
+    bent vieną pasirinktą brandos egzaminą, tačiau nuo lietuvių kalbos ir literatūros
+    brandos egzamino ukrainiečiai bus atleisti, jeigu gyvena Lietuvoje mažiau nei
+    dvejus metus.</p><ul><li><p>Prašymą dėl atleidimo nuo lietuvių kalbos egzamino,
+    kitų brandos egzaminų pasirinkimų ir laikymo reikia pateikti mokyklos vadovui
+    iki 2022 m. gegužės 24 d.</p></li><li><p>Galima rinktis laikyti šiuos valstybinius
+    brandos egzaminus: biologijos, geografijos, matematikos, informacinių technologijų,
+    fizikos, chemijos, užsienio (anglų, prancūzų, rusų, vokiečių) kalbos, istorijos.</p></li><li><p>Egzaminų,
+    išskyrus užsienio kalbos (anglų, prancūzų, rusų, vokiečių), užduotys bus išverstos
+    į ukrainiečių kalbą kartu su brandos egzaminų vykdymo instrukcijomis.</p></li><li><p>Geografijos
+    ir istorijos brandos egzaminų užduotys ir vertinimai bus pritaikomi, atsižvelgiant
+    į tai, kokia dalis užduočių egzamino metu bus skirtos Lietuvos geografijai ar
+    Lietuvos istorijai, kurios ukrainiečiai nėra mokęsi.</p></li></ul>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Jei vaikas turi negalią ar specialiųjų ugdymosi poreikių, kur reikėtų kreiptis
     dėl ugdymo galimybių?
   answer: <p>Reikėtų kreiptis į savivaldybės, kurioje apsistojo ukrainiečiai, švietimo
