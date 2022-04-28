@@ -5,6 +5,15 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Per kiek laiko bus priimtas sprendimas dėl mėnesinės kompensacijos gavimo
+    vaiko ugdymo išlaidoms apmokėti?
+  answer: "<p>Savivaldybės administracija sprendimą dėl mėnesinės kompensacijos vaiko
+    ugdymo išlaidoms apmokėti mokėjimo dažniausiai priima per 5 darbo dienas nuo prašymo
+    ir visų reikalingų dokumentų gavimo.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Kaip gauti nemokamą paramą mokykloje ukrainiečiams?
   answer: <p>Norint gauti mėnesinę kompensaciją vaiko ugdymo išlaidoms apmokėti, ukrainietis
     turi pateikti nustatytos formos prašymą, savivaldybei, kurios teritorijoje jis
