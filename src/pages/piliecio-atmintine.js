@@ -33,7 +33,7 @@ const Page = ({ data }) => {
       <Section className="HeroSectionB">
         <StaticImage
           className="HeroSectionB__background"
-          src="../../images/hero/piliecio_atmintine.jpg"
+          src="../images/hero/piliecio_atmintine.jpg"
           alt="Budinkite veikti"
           layout="fullWidth"
         />
