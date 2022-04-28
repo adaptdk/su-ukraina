@@ -5,6 +5,17 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Ar būtų galimybė ukrainiečiui Lietuvoje tęsti mokymąsi pagal specializuotas
+    menų programas?
+  answer: "<p>Lietuvoje tęsti mokymąsi su menine pakraipa galima gimnazijos tipo menų
+    mokyklose, kuriose ugdomi išskirtinių gabumų menui, muzikai, choreografijai turintys
+    mokiniai. Jie ugdomi pagal specializuoto ugdymo krypties programas, t. y. bendrojo
+    ugdymo programos su muzikos, dailės ugdymu, baleto artisto profesinio mokymo programa.
+    Gimnazijos tipo menų mokyklos įsikūrusios didžiuosiuose Lietuvos miestuose.</p><p><br></p>"
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Ar ukrainiečiai turi mokėti už bendrojo ugdymo paslaugas Lietuvoje?
   answer: "<p>Ne, šios paslaugos yra nemokamos.</p><p><br></p>"
   content_blocks: []
