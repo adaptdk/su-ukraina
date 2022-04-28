@@ -42,7 +42,7 @@ const Page = ({ data }) => {
       <Section className="HeroSectionB">
         <StaticImage
           className="HeroSectionB__background"
-          src="../../images/hero/refugee_guide.jpg"
+          src="../../../images/hero/refugee_guide.jpg"
           alt="Refugee Guide"
           layout="fullWidth"
         />
