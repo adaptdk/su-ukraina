@@ -5,6 +5,22 @@ title: informacija-lietuvos-gyventojams
 slug: "/informacija-lietuvos-gyventojams"
 icon: ''
 questions:
+- title: Kokie dokumentai yra reikalingi ukrainiečiams norintiems gauti vienkartinę
+    įsikūrimo išmoką Lietuvoje?
+  answer: <p>Būtina turėti oficialiai registruotą būsto nuomos sutartį bent 6 mėnesiams.
+    (Prašymas įregistruoti/ išregistruoti juridinį faktą (pavyzdinę prašymo formą
+    rasite<strong> </strong><a href="https://www.registrucentras.lt/p/774">čia)</a>
+    gali būti pateikiamas teritoriniame <a href="http://www.registrucentras.lt/p/81"><strong>Registrų
+    centro klientų aptarnavimo padalinyje</strong></a> asmeniškai (išankstinę vizito
+    registraciją atlikti galite<a href="https://www.registrucentras.lt/"><strong>
+    čia</strong></a>), siunčiant <a href="https://www.registrucentras.lt/p/1218"><strong>paštu</strong></a>
+    ar elektroninių ryšių priemonėmis. Elektroninių ryšių priemonėmis teikiamą prašymą
+    asmuo turi pasirašyti saugiu elektroniniu parašu, patvirtintu kvalifikuotu sertifikatu,
+    ir siųsti el. paštu <a href="mailto:info@registrucentras.lt">info@registrucentras.lt</a>.)</p><p><br></p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Pagal kokius kriterijus yra suteikiama parama Ukrainos karo pabėgėliams?
   answer: <p>Ukrainos pabėgėliai, kurie yra savarankiškai įsikūrę nuomojamame būste
     gali kreiptis į gyvenamosios vietos savivaldybę dėl vienkartinės išmokos įsigyti
