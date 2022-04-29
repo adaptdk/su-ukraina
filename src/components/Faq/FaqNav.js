@@ -6,12 +6,16 @@ import Button from "../Button";
 
 const FaqNav = ({ navData, pathname, lang }) => {
   let pathRoot = `/ua/refugee-guide`;
-  switch (lang) {
-    case `lt`:
+
+  switch (true) {
+    case pathname.includes(`/informacija-ukrainieciams`):
       pathRoot = `/informacija-ukrainieciams`;
       break;
-    case `ua`:
+    case pathname.includes(`/ua/refugee-guide`):
       pathRoot = `/ua/refugee-guide`;
+      break;
+    case pathname.includes(`/informacija-lietuviams`):
+      pathRoot = `/informacija-lietuviams`;
       break;
     default:
       break;
