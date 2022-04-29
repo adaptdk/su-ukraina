@@ -65,8 +65,8 @@ module.exports = {
       crumbLabel: `Apie mus`,
     },
     {
-      pathname: `/informacija-lietuvos-gyventojams`,
-      crumbLabel: `Informacija Lietuvos gyventojams`,
+      pathname: `/informacija-lietuviams`,
+      crumbLabel: `Informacija Lietuviams`,
     },
     {
       pathname: `/piliecio-atmintine`,

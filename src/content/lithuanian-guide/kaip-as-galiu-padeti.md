@@ -1,50 +1,50 @@
 ---
 weight: 0
-title_override: Kaip galiu padėti?
-title: kaip-galiu-padeti
-slug: "/kaip-galiu-padeti"
+title_override: Kaip aš galiu padėti?
+title: kaip-as-galiu-padeti
+slug: "/kaip-as-galiu-padeti"
 icon: hands-holding-heart
 questions: []
 contacts: []
 adresses: []
-
 ---
+
 **Padėti į Lietuvą atvykstantiems Ukrainos karo pabėgeliams galite savanoriaudami, remdami finansiškai ar apgyvendinant**
 
 **Prie šių organizacijų veiklos galite prisidėti tiek savanoriaujant, tiek paremiant finansiškai:**
 
-* [**Lietuvos Raudonasis Kryžius**](https://www.redcross.lt/)
-* [**Lietuvos Caritas**](https://www.caritas.lt/)
-* [**Maltiečiai**](https://maltieciai.lt/pagalba-ukrainai/)
-* [**Maisto bankas**](https://www.maistobankas.lt/ukraina/)
-* [**Gelbėkit vaikus**](https://gelbekitvaikus.lt/)
-* [**Stiprūs kartu**](http://www.stipruskartu.lt/)
+- [**Lietuvos Raudonasis Kryžius**](https://www.redcross.lt/)
+- [**Lietuvos Caritas**](https://www.caritas.lt/)
+- [**Maltiečiai**](https://maltieciai.lt/pagalba-ukrainai/)
+- [**Maisto bankas**](https://www.maistobankas.lt/ukraina/)
+- [**Gelbėkit vaikus**](https://gelbekitvaikus.lt/)
+- [**Stiprūs kartu**](http://www.stipruskartu.lt/)
 
 Lėšos humanitarinei pagalbai nuo karo Ukrainoje besitraukiantiems ukrainiečiams renkamos numeriu **1485** arba puslapyje [**www.aukok.lt**](https://www.aukok.lt/)**.**
 
 [**Stiprūs kartu **](http://www.stipruskartu.lt/)renka lėšas ukraniečių apgyvendinimui Lietuvoje organizuoti.
 
-* Įmonės kodas: 305674792
-* Gavėjas: VšĮ „Stiprūs kartu“
-* Adresas: P. Vileišio g. 18A, Vilnius
-* Banko sąskaita: LT387044090101401806
-* Bankas: AB SEB bankas
+- Įmonės kodas: 305674792
+- Gavėjas: VšĮ „Stiprūs kartu“
+- Adresas: P. Vileišio g. 18A, Vilnius
+- Banko sąskaita: LT387044090101401806
+- Bankas: AB SEB bankas
 
 [**Blue / Yellow**](http://www.blue-yellow.lt/lt) renka lėšas Ukrainos ginkluotosioms pajėgoms ir nuo karo nukentėjusiems civiliams.
 
-* Banko sąskaita: LT17 7300 0101 4089 4869
-* Bankas: Swedbank
-* Gavėjas: VšĮ Mėlyna ir geltona
-* Mokėjimo paskirtis: PARAMA
+- Banko sąskaita: LT17 7300 0101 4089 4869
+- Bankas: Swedbank
+- Gavėjas: VšĮ Mėlyna ir geltona
+- Mokėjimo paskirtis: PARAMA
 
 **LDK Birutės karininkų šeimų moterų sąjunga** renka paramą Ukrainos karių šeimoms.
 
-* Paremti galite skambindami arba siųsdami žinutę numeriu **1484** (auka – 2 Eur) arba lėšų pervedimu:
-* Gavėjas: Lietuvos didžiosios kunigaikštienės Birutės karininkų šeimų moterų sąjunga
-* Banko sąskaita: Nr. LT367300010002469222
-* Paramos paskirtis: „Parama Ukrainos karių šeimoms“
-* PayPal.me/Birutietes (parama@birutietes.lt)
-* Kontaktinė informacija: [**parama@birutietes.lt**](mailto:parama@birutietes.lt), mob. tel. nr. +370 630 21434
+- Paremti galite skambindami arba siųsdami žinutę numeriu **1484** (auka – 2 Eur) arba lėšų pervedimu:
+- Gavėjas: Lietuvos didžiosios kunigaikštienės Birutės karininkų šeimų moterų sąjunga
+- Banko sąskaita: Nr. LT367300010002469222
+- Paramos paskirtis: „Parama Ukrainos karių šeimoms“
+- PayPal.me/Birutietes (parama@birutietes.lt)
+- Kontaktinė informacija: [**parama@birutietes.lt**](mailto:parama@birutietes.lt), mob. tel. nr. +370 630 21434
 
 **Kita svarbi informacija**
 
@@ -82,5 +82,5 @@ Lietuvos piliečiai, neatsižvelgiantys į ministerijų rekomendacijas ir vis ti
 
 Juridiniai asmenys, norintys teikti paramą vaistais, gali naudotis trišalės sutarties pavydžiu:
 
-* trišalės sutarties bendrąsias sąlygas rasite [**čia**](https://lrv.lt/uploads/main/documents/files/00_%20Tri%C5%A1al%C4%97%20vaist%C5%B3%20tiekimo%20sutartis%20(LT-EN)%20(BS)%20(1_3)%20acc(1).docx).
-* trišalės sutarties specialiąsias sąlygas rasite [**čia**](https://lrv.lt/uploads/main/documents/files/01_%20Tri%C5%A1al%C4%97%20vaist%C5%B3%20tiekimo%20sutartis%20(LT-EN)%20(SS)%20(1_3)acc(1).docx).
+- trišalės sutarties bendrąsias sąlygas rasite [**čia**](<https://lrv.lt/uploads/main/documents/files/00_%20Tri%C5%A1al%C4%97%20vaist%C5%B3%20tiekimo%20sutartis%20(LT-EN)%20(BS)%20(1_3)%20acc(1).docx>).
+- trišalės sutarties specialiąsias sąlygas rasite [**čia**](<https://lrv.lt/uploads/main/documents/files/01_%20Tri%C5%A1al%C4%97%20vaist%C5%B3%20tiekimo%20sutartis%20(LT-EN)%20(SS)%20(1_3)acc(1).docx>).

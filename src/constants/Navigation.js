@@ -52,8 +52,8 @@ export const NAVIGATION_ITEM_BE_VIGILANT_RELIABLE_INFORMATION = {
 };
 
 export const NAVIGATION_ITEM_INFORMATION_FOR_LITHUANIAN_CITIZENS = {
-  pathname: `/informacija-lietuvos-gyventojams/`,
-  title: `Informacija Lietuvos gyventojams`,
+  pathname: `/informacija-lietuviams/`,
+  title: `Informacija Lietuviams`,
 };
 
 export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {

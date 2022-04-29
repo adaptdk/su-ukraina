@@ -116,6 +116,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `lithuanian-guide`,
+        path: `${__dirname}/src/content/lithuanian-guide`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `uploads`,
         path: `${__dirname}/src/content/uploads`,
       },
