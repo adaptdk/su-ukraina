@@ -424,12 +424,6 @@ questions:
   resources: []
   contacts: []
   adresses: []
-- title: Test
-  answer: "<p>Veikia</p>"
-  content_blocks: []
-  resources: []
-  contacts: []
-  adresses: []
 contacts: []
 adresses: []
 
