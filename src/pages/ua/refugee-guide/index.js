@@ -76,6 +76,7 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
+              title_override
             }
             html
             excerpt(format: PLAIN, pruneLength: 160)
