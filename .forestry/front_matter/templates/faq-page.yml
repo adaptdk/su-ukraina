@@ -136,6 +136,7 @@ fields:
   template: address
   label: Addresses
 pages:
+- src/content/lithuanian-guide/kaip-galiu-padeti.md
 - src/content/pages/informacija-lietuvos-gyventojams.md
 - src/content/refugee-guide/contacts.md
 - src/content/refugee-guide/employment.md
