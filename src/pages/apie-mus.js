@@ -5,10 +5,13 @@ import { Title } from "react-head";
 
 import Constraint from "../components/Constraint";
 import ContentLayout from "../components/ContentLayout";
-import Breadcrumb from "../components/Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs";
 
-const Page = ({ data }) => {
-  const crumbs = [`Apie mus`];
+const Page = ({ data, pageContext }) => {
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
+
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -22,7 +25,7 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          <Breadcrumb crumbs={crumbs} />
+          <Breadcrumbs crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </Constraint>
@@ -54,6 +57,11 @@ export const query = graphql`
 `;
 
 Page.propTypes = {
+  pageContext: PropTypes.shape({
+    breadcrumb: PropTypes.shape({
+      crumbs: PropTypes.array,
+    }),
+  }),
   data: PropTypes.shape({
     contents: PropTypes.shape({
       edges: PropTypes.arrayOf(

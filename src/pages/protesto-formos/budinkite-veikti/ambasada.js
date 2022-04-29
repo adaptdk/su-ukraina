@@ -4,7 +4,10 @@ import { graphql } from "gatsby";
 
 import BudinkiteVeikti from "../../../shared-pages/BudinkiteVeikti";
 
-const Page = ({ data }) => {
+const Page = ({ data, pageContext }) => {
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -19,6 +22,7 @@ const Page = ({ data }) => {
 
   return (
     <BudinkiteVeikti
+      crumbs={crumbs}
       addressees={addressees}
       content={content}
       pagePath="/protesto-formos/budinkite-veikti/ambasada/"
@@ -74,6 +78,11 @@ export const query = graphql`
 `;
 
 Page.propTypes = {
+  pageContext: PropTypes.shape({
+    breadcrumb: PropTypes.shape({
+      crumbs: PropTypes.array,
+    }),
+  }),
   data: PropTypes.shape({
     contents: PropTypes.shape({
       edges: PropTypes.arrayOf(

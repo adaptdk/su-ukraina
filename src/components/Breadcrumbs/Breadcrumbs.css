@@ -1,0 +1,37 @@
+.Breadcrumbs {
+  width: fit-content;
+
+  & .breadcrumb__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  & .breadcrumb__list__item {
+    display: flex;
+    list-style-type: none;
+  }
+
+  & .breadcrumb__separator {
+    font-size: 14px;
+    padding: 0 8px;
+  }
+
+  & .breadcrumb__link {
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  & .breadcrumb__link__active {
+    color: inherit;
+    cursor: unset;
+    font-size: 14px;
+    text-decoration: none;
+    text-decoration: inherit;
+  }
+}
+
+/* Edge case */
+.Constraint > .Breadcrumbs {
+  margin-top: calc(var(--s__unit) * 3);
+}

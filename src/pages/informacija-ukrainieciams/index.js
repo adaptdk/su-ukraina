@@ -10,10 +10,12 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../../components/Layout";
 import FaqNav from "../../components/Faq/FaqNav";
 import Section from "../../components/Section";
-import Breadcrumb from "../../components/Breadcrumbs";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
-const Page = ({ data }) => {
-  const crumbs = [`Aktuali informacija`];
+const Page = ({ data, pageContext }) => {
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -50,7 +52,7 @@ const Page = ({ data }) => {
 
       {!!content && (
         <Constraint>
-          <Breadcrumb crumbs={crumbs} />
+          <Breadcrumbs crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <FaqNav navData={faqNav} pathname={pathname} lang="lt" />
@@ -103,6 +105,11 @@ export const query = graphql`
 `;
 
 Page.propTypes = {
+  pageContext: PropTypes.shape({
+    breadcrumb: PropTypes.shape({
+      crumbs: PropTypes.array,
+    }),
+  }),
   data: PropTypes.shape({
     contents: PropTypes.shape({
       edges: PropTypes.arrayOf(

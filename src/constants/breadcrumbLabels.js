@@ -1,0 +1,92 @@
+module.exports = {
+  breadcrumbLabels: [
+    {
+      pathname: `/kaip-galiu-padeti`,
+      crumbLabel: `Kaip galiu padėti?`,
+    },
+    {
+      pathname: `/kaip-galiu-padeti/aukojimas`,
+      crumbLabel: `Aukojimas`,
+    },
+    {
+      pathname: `/kaip-galiu-padeti/savanoryste`,
+      crumbLabel: `Savanorystė`,
+    },
+    {
+      pathname: `/kaip-galiu-padeti/aukojimas/lietuvoje`,
+      crumbLabel: `Lietuvoje`,
+    },
+    {
+      pathname: `/kaip-galiu-padeti/aukojimas/uzsienyje`,
+      crumbLabel: `Užsienyje`,
+    },
+    {
+      pathname: `/bukime-budrus`,
+      crumbLabel: `Būkime budrūs`,
+    },
+    {
+      pathname: `/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos`,
+      crumbLabel: `Kaip saugotis nuo sukčių ir dezinformacijos`,
+    },
+    {
+      pathname: `/bukime-budrus/patikima-informacija`,
+      crumbLabel: `Patikima informacija`,
+    },
+    {
+      pathname: `/informacija-ukrainieciams`,
+      crumbLabel: `Informacija Ukrainiečiams`,
+    },
+    {
+      pathname: `/protesto-formos`,
+      crumbLabel: `Protesto formos`,
+    },
+    {
+      pathname: `/protesto-formos/akcijos`,
+      crumbLabel: `Akcijos`,
+    },
+    {
+      pathname: `/protesto-formos/renginiai`,
+      crumbLabel: `Renginiai`,
+    },
+    {
+      pathname: `/protesto-formos/budinkite-veikti`,
+      crumbLabel: `Budinkite veikti`,
+    },
+    {
+      pathname: `/protesto-formos/budinkite-veikti/imone`,
+      crumbLabel: `Įmonė`,
+    },
+    {
+      pathname: `/protesto-formos/budinkite-veikti/ambasada`,
+      crumbLabel: `Ambasada`,
+    },
+    {
+      pathname: `/apie-mus`,
+      crumbLabel: `Apie mus`,
+    },
+    {
+      pathname: `/informacija-lietuvos-gyventojams`,
+      crumbLabel: `Informacija Lietuvos gyventojams`,
+    },
+    {
+      pathname: `/piliecio-atmintine`,
+      crumbLabel: `Piliečio atmintinė`,
+    },
+    {
+      pathname: `/privatumo-politika`,
+      crumbLabel: `Privatumo politika`,
+    },
+    {
+      pathname: `/ua/refugee-guide`,
+      crumbLabel: `Важлива інформація`,
+    },
+    {
+      pathname: `/ua/help-search`,
+      crumbLabel: `Privatumo politika`,
+    },
+    {
+      pathname: `/ua/privacy-policy`,
+      crumbLabel: `Політика конфіденційності`,
+    },
+  ],
+};

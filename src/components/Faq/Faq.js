@@ -6,7 +6,7 @@ import { ResourceList, ResourceListItem } from "../ResourceList";
 import FaqNavCollapsible from "./FaqNavCollapsible";
 import Constraint from "../Constraint";
 import Button from "../Button";
-import Breadcrumb from "../Breadcrumbs";
+import Breadcrumbs from "../Breadcrumbs";
 
 import "./Faq.css";
 
@@ -171,7 +171,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
         {!!navData && <FaqNavCollapsible lang={lang} navData={navData} />}
 
         <div className="Faq__content">
-          <Breadcrumb crumbs={crumbs} />
+          <Breadcrumbs crumbs={crumbs} />
           <h1>{currentItemData.title_override}</h1>
           <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
 
