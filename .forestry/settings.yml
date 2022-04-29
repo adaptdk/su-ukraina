@@ -126,6 +126,15 @@ sections:
   match: "**/*"
   templates:
   - faq-page
+- type: heading
+  label: National guide
+- type: directory
+  path: src/content/lithuanian-guide
+  label: LT Guide pages
+  create: documents
+  match: "**/*"
+  templates:
+  - faq-page
 upload_dir: src/content/uploads
 public_path: "/uploads"
 front_matter_path: "../uploads"
