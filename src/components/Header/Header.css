@@ -262,6 +262,10 @@
       overflow: visible;
     }
 
+    #menu-sensor:checked ~ .LanguageSwitch {
+      display: block;
+    }
+
     &__content {
       justify-content: flex-start;
     }
