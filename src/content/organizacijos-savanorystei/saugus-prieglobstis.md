@@ -1,13 +1,15 @@
 ---
-forma: []
+forma:
+- 'Savanorystė   '
 weight: 0
 title: Saugus prieglobstis
-about: 'Ši organizacija nuo pat karo pradžios operatyviai tarpininkaujama pervežant
+about: 'Saugus prieglobstis savanorių komanda padėda nuo karo kenčiantiems ir bėgantiems
+  ukrainiečiams saugiau jaustis Lietuvoje. '
+cause: 'Ši organizacija nuo pat karo pradžios operatyviai tarpininkaujama pervežant
   žmones iš įvairiausių taškų Ukrainoje, padeda kuo greičiau ir efektyviau suvesti
   pagalbos prašančius su pagalbą siūlančiais žmonėmis apgyvendinimo, transportavimo,
   įsidarbinimo ir kitais klausimais, leidžiančiais kuo greičiau ir sklandžiau Lietuvoje
   pasijusti saugiai. '
-cause: Pagalba Ukrainos žmonėms
 rekvizitai: |-
   Labdaros ir paramos fondas Safehaven LT
   Įmonės kodas: 306045674
