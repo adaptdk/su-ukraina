@@ -3,7 +3,7 @@ forma:
 - 'Savanorystė   '
 weight: 0
 title: Saugus prieglobstis
-about: 'Saugus prieglobstis savanorių komanda padėda nuo karo kenčiantiems ir bėgantiems
+about: 'Saugus prieglobstis savanorių komanda padeda nuo karo kenčiantiems ir bėgantiems
   ukrainiečiams saugiau jaustis Lietuvoje. '
 cause: 'Ši organizacija nuo pat karo pradžios operatyviai tarpininkaujama pervežant
   žmones iš įvairiausių taškų Ukrainoje, padeda kuo greičiau ir efektyviau suvesti
