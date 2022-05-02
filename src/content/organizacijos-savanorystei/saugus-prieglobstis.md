@@ -4,7 +4,7 @@ forma:
 - Apgyvendinimas
 - " Pavežėjimas"
 weight: 0
-title: Saugus prieglobstis
+title: „Saugus prieglobstis"
 about: 'Saugus prieglobstis savanorių komanda padeda nuo karo kenčiantiems ir bėgantiems
   ukrainiečiams saugiau jaustis Lietuvoje. '
 cause: 'Ši organizacija nuo pat karo pradžios operatyviai tarpininkaujama pervežant
