@@ -1,6 +1,8 @@
 ---
 forma:
 - 'Savanorystė   '
+- Apgyvendinimas
+- " Pavežėjimas"
 weight: 0
 title: Saugus prieglobstis
 about: 'Saugus prieglobstis savanorių komanda padeda nuo karo kenčiantiems ir bėgantiems
