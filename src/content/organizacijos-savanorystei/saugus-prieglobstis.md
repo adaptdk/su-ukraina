@@ -20,8 +20,8 @@ rekvizitai: |-
   Paskirtis: Humanitarinei pagalbai
 
   Taip pat galima prisijungti prie savanorių aktyvios ir norinčios kitiems pagelbėti bėdoje komandos užpildžius registracijos anketą tiklalapyje: saugusprieglobstis.lt
-website: saugusprieglobstis.lt
-action: https://saugusprieglobstis.lt/
+website: https://saugusprieglobstis.lt/
+action: ''
 logo: "../uploads/capture.PNG"
 
 ---
