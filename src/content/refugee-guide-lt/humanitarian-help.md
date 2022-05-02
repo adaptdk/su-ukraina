@@ -23,13 +23,12 @@ questions:
 - title: Maltos ordinas
   answer: '<p><a href="https://maltieciai.lt" title="https://maltieciai.lt">https://maltieciai.lt</a></p><p>Yra
     speciali „karštoji linija ukrainiečiams“.</p><p>+370 600 232 20</p><p><em>Valandos:</em></p><p><em>Pirmadienį
-    – nuo ​​10 iki 17 val</em></p><p><em>Penktadienį nuo 10 iki 16 val.</em></p><p><em>Šeštadienis
-    yra sekmadienis laisvas</em></p><p>Padovanokite humanitarines pakuotes: būtiniausių
-    reikmenų rinkinį – higieną (šampūnas, dušo želė, dantų šepetėlis). Bet geriau
-    prieš ateinant pasiskambinti ir pasiteirauti ar jų yra ir kas šiuo metu platinama,
-    o svarbiausia – ar atitinka Jūsų poreikius. Kas yra, jums tikrai bus suteikta,
-    bet jei šio produkto šiuo metu trūksta, tada ne. Produktų prieinamumas priklauso
-    nuo partnerių: pristatymai reguliarūs, tačiau pildymas skiriasi.</p>'
+    - penktadienį,  nuo ​​9 iki 18 val</em></p><p>Padovanokite humanitarines pakuotes:
+    būtiniausių reikmenų rinkinį – higieną (šampūnas, dušo želė, dantų šepetėlis).
+    Bet geriau prieš ateinant pasiskambinti ir pasiteirauti ar jų yra ir kas šiuo
+    metu platinama, o svarbiausia – ar atitinka Jūsų poreikius. Kas yra, jums tikrai
+    bus suteikta, bet jei šio produkto šiuo metu trūksta, tada ne. Produktų prieinamumas
+    priklauso nuo partnerių: pristatymai reguliarūs, tačiau pildymas skiriasi.</p>'
   content_blocks: []
   image: ''
   resources: []
