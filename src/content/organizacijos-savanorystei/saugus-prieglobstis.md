@@ -6,8 +6,7 @@ forma:
 weight: 0
 title: "„Saugus prieglobstis“"
 about: 'Saugus prieglobstis savanorių komanda padeda nuo karo kenčiantiems ir bėgantiems
-  ukrainiečiams  pasijusti Lietuvoje saugesniais suteikiant operatyvią ir greitą pagalbą
-  šiems atvykus į Lietuvą. '
+  ukrainiečiams suteikdami operatyvią ir greitą pagalbą šiems atvykus į Lietuvą. '
 cause: 'Ši organizacija nuo pat karo pradžios operatyviai tarpininkaujama pervežant
   žmones iš įvairiausių taškų Ukrainoje, padeda kuo greičiau ir efektyviau suvesti
   pagalbos prašančius su pagalbą siūlančiais žmonėmis apgyvendinimo, transportavimo,
