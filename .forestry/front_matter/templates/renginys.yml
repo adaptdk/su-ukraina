@@ -47,6 +47,7 @@ fields:
     required: false
   label: Renginio tiklalapis
 pages:
+- src/content/events/alyona-alyona-koncertas.md
 - src/content/events/amber-food-blokada.md
 - src/content/events/as-priklausau-tik-sau.md
 - src/content/events/ateik-barsciu-paremk-ukraina-kaunas.md
