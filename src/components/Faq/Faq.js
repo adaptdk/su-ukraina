@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { getTranslatedText } from "../../helpers/handlers";
 
 import { ResourceList, ResourceListItem } from "../ResourceList";
 import FaqNavCollapsible from "./FaqNavCollapsible";
@@ -26,10 +27,7 @@ const fallbackCopyTextToClipboard = (text) => {
   textArea.select();
 
   try {
-    var successful = document.execCommand(`copy`);
-    var msg = successful ? `successful` : `unsuccessful`;
-
-    //console.log(`Fallback: Copying text command was ` + msg);
+    document.execCommand(`copy`);
   } catch (err) {
     //console.error(`Fallback: Oops, unable to copy`, err);
   }
@@ -251,7 +249,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
                         }}
                         className="copy"
                       >
-                        Kопіювати посилання
+                        {getTranslatedText(`actions.copyLink`)}
                       </a>
                     </div>
                   </div>
