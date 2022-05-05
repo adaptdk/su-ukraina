@@ -1,0 +1,15 @@
+{
+  "actions": {
+    "copyLink": "Kopijuoti nuorodą",
+    "close": "Uždaryti"
+  },
+  "labels": {
+    "navigation": "Navigacija"
+  },
+  "generic": {
+    "privacyPolicy": "Privatumo politika"
+  },
+  "footer": {
+    "pageCoordinate": "Puslapį koordinuoja"
+  }
+}

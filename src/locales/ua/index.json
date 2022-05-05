@@ -1,0 +1,15 @@
+{
+  "actions": {
+    "copyLink": "Kопіювати посилання",
+    "close": "Закрити"
+  },
+  "labels": {
+    "navigation": "Навігація"
+  },
+  "generic": {
+    "privacyPolicy": "Політика конфіденційності"
+  },
+  "footer": {
+    "pageCoordinate": "Внесла внесок на сторінку"
+  }
+}

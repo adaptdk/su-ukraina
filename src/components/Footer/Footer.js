@@ -26,6 +26,7 @@ import { isUkrainianPage } from "../../helpers/handlers";
 import SuUkrainaWhite from "../../images/logos/su-ukraina--secondary.svg";
 import Adapt from "../../images/logos/adapt.svg";
 import LaisvesTv from "../../images/logos/laisves-tv.svg";
+import { getTranslatedText } from "../../utils/getTranslatedText";
 
 const Footer = () => {
   const altFooter = isUkrainianPage();
@@ -80,9 +81,7 @@ const Footer = () => {
                       altFooter ? `/ua/privacy-policy/` : `/privatumo-politika`
                     }
                   >
-                    {altFooter
-                      ? `Політика конфіденційності`
-                      : `Privatumo politika`}
+                    {getTranslatedText(`generic.privacyPolicy`)}
                   </Link>
                 </li>
               </ul>
@@ -95,9 +94,7 @@ const Footer = () => {
           </p>
           <p className="Footer__partners">
             <span className="Footer__partners-intro">
-              {altFooter
-                ? `Внесла внесок на сторінку:`
-                : `Puslapį koordinuoja:`}
+              {getTranslatedText(`footer.pageCoordinate`)}:
             </span>
             {` `}
             <a
