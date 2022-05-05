@@ -23,14 +23,16 @@ import { isUkrainianPage } from "../../helpers/handlers";
 import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   function RenderForm() {
     const refugeeGuidePath = `refugee-guide`;
     const helpSearchPath = `help-search`;
-    const path = location.pathname;
 
-    if (path.includes(refugeeGuidePath) || path.includes(helpSearchPath)) {
+    if (
+      pathname.includes(refugeeGuidePath) ||
+      pathname.includes(helpSearchPath)
+    ) {
       return <RefugeeForm returnDestination={pagePath} />;
     }
     return <ContactForm returnDestination={pagePath} />;
