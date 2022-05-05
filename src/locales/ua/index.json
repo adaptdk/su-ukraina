@@ -1,5 +1,9 @@
 {
   "actions": {
-    "copyLink": "Kопіювати посилання"
+    "copyLink": "Kопіювати посилання",
+    "close": "Закрити"
+  },
+  "labels": {
+    "navigation": "Навігація"
   }
 }

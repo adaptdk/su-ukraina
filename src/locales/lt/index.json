@@ -1,5 +1,9 @@
 {
   "actions": {
-    "copyLink": "Kopijuoti nuorodą"
+    "copyLink": "Kopijuoti nuorodą",
+    "close": "Uždaryti"
+  },
+  "labels": {
+    "navigation": "Navigacija"
   }
 }

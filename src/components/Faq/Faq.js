@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { getTranslatedText } from "../../helpers/handlers";
+import { getTranslatedText } from "../../utils/getTranslatedText";
 
 import { ResourceList, ResourceListItem } from "../ResourceList";
 import FaqNavCollapsible from "./FaqNavCollapsible";
@@ -265,7 +265,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
             color="secondary"
             pretend
           >
-            Навігація
+            {getTranslatedText(`labels.navigation`)}
           </Button>
         </label>
         <label className="Faq__inner__faqnav-overlay" htmlFor="faqnav-sensor" />
