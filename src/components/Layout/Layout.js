@@ -1,11 +1,9 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { useLocation } from "@gatsbyjs/reach-router";
 
 import Header from "../Header";
 import Footer from "../Footer";
 import ContactForm from "../ContactForm";
-import RefugeeForm from "../RefugeeForm";
 import Constraint from "../Constraint";
 import Section from "../Section";
 import PromoLine from "../PromoLine";
@@ -23,19 +21,6 @@ import { isUkrainianPage } from "../../helpers/handlers";
 import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
-  const location = useLocation();
-
-  function RenderForm() {
-    const refugeeGuidePath = `refugee-guide`;
-    const helpSearchPath = `help-search`;
-    const path = location.pathname;
-
-    if (path.includes(refugeeGuidePath) || path.includes(helpSearchPath)) {
-      return <RefugeeForm returnDestination={pagePath} />;
-    }
-    return <ContactForm returnDestination={pagePath} />;
-  }
-
   return (
     <div className="Layout">
       <Header noSticky={noStickyHeader} />
@@ -66,7 +51,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
 
       <Section className="ContactFormSection" bgColor="blue">
         <Constraint>
-          <RenderForm />
+          <ContactForm returnDestination={pagePath} />
         </Constraint>
       </Section>
 

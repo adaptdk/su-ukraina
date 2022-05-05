@@ -1,6 +1,14 @@
 import React from "react";
+import {
+  createMemorySource,
+  createHistory,
+  LocationProvider,
+} from "@gatsbyjs/reach-router";
 
 import ContactForm from "./ContactForm";
+
+let source = createMemorySource(`/starting/url`);
+let history = createHistory(source);
 
 export default {
   component: ContactForm,
@@ -8,7 +16,11 @@ export default {
 };
 
 const Template = () => {
-  return <ContactForm />;
+  return (
+    <LocationProvider history={history}>
+      <ContactForm />
+    </LocationProvider>
+  );
 };
 
 export const Primary = Template.bind({});
