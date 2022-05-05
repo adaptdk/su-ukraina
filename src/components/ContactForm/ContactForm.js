@@ -1,6 +1,8 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+
 import { getTranslatedText } from "../../utils/getTranslatedText";
+import { isUkrainianPage } from "../../helpers/handlers";
 
 import Button from "../Button";
 import FormField from "../FormField";
@@ -10,7 +12,6 @@ import PhoneInput from "../PhoneInput";
 import EmailInput from "../EmailInput";
 
 import "./ContactForm.css";
-import { isUkrainianPage } from "../../helpers/handlers";
 
 const handleSubmit = (setFormState) => {
   return (event) => {
