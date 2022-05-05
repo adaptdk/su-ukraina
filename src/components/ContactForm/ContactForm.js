@@ -60,6 +60,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
     success: false,
   });
 
+  const isUa = isUkrainianPage();
   const curriedHandleSubmit = React.useCallback(handleSubmit(setFormState), []);
 
   return (
@@ -140,7 +141,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
               type="hidden"
               id="category"
               name="category"
-              value={isUkrainianPage() ? `UA` : `LT`}
+              value={isUa ? `UA` : `LT`}
             />
 
             <div className="form-field form-field--type-checkbox">
@@ -154,11 +155,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
                 {getTranslatedText(`contactForm.tacAgree`)}
                 {` `}
                 <a
-                  href={
-                    isUkrainianPage()
-                      ? `/ua/privacy-policy`
-                      : `/privatumo-politika`
-                  }
+                  href={isUa ? `/ua/privacy-policy` : `/privatumo-politika`}
                   title={getTranslatedText(`generic.privacyPolicy`)}
                   style={{ textTransform: `lowercase` }}
                 >
