@@ -149,7 +149,6 @@ const Header = ({ noSticky }) => {
 
 Header.propTypes = {
   noSticky: PropTypes.bool,
-  altHeader: PropTypes.bool,
 };
 
 export default Header;
