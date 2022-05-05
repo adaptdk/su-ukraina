@@ -94,9 +94,7 @@ const Footer = () => {
           </p>
           <p className="Footer__partners">
             <span className="Footer__partners-intro">
-              {altFooter
-                ? `Внесла внесок на сторінку:`
-                : `Puslapį koordinuoja:`}
+              {getTranslatedText(`footer.pageCoordinate`)}:
             </span>
             {` `}
             <a

@@ -8,5 +8,8 @@
   },
   "generic": {
     "privacyPolicy": "Privatumo politika"
+  },
+  "footer": {
+    "pageCoordinate": "Puslapį koordinuoja"
   }
 }

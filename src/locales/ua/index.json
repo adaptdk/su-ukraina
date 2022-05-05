@@ -8,5 +8,8 @@
   },
   "generic": {
     "privacyPolicy": "Політика конфіденційності"
+  },
+  "footer": {
+    "pageCoordinate": "Внесла внесок на сторінку"
   }
 }
