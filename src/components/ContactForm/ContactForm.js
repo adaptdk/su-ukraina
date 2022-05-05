@@ -135,7 +135,12 @@ const ContactForm = ({ returnDestination = `/` }) => {
               />
             </FormField>
 
-            <input type="hidden" value={isUkrainianPage() ? `UA` : `LT`} />
+            <input
+              type="hidden"
+              id="category"
+              name="category"
+              value={isUkrainianPage() ? `UA` : `LT`}
+            />
 
             <div className="form-field form-field--type-checkbox">
               <label htmlFor="privacy-policy-accepted" tabIndex="0">
