@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { useLocation } from "@gatsbyjs/reach-router";
+import classNames from "classnames";
 
 // Components.
 import Constraint from "../Constraint";
@@ -8,51 +8,29 @@ import Constraint from "../Constraint";
 // Style.
 import "./PromoLine.css";
 
-const PromoLine = ({
-  title,
-  subtitle,
-  titleLink,
-  className = ``,
-  modifier,
-  children,
-}) => {
-  const location = useLocation();
-  const path = location.pathname;
-
-  function ConditionalRender(props) {
-    if (props.currentPath.includes(`refugee-guide`)) {
-      return null;
-    }
-    return (
-      <div
-        className={`PromoLine ${
-          modifier ? `PromoLine--${modifier}` : ``
-        } ${className}`}
-      >
-        <Constraint className="PromoLine__content">
-          <a href={titleLink} rel="noopener" target="_blank">
-            {title}
-            {!!subtitle && <span>{subtitle}</span>}
-          </a>
-          <div className="PromoLine__actions">{children}</div>
-        </Constraint>
-      </div>
-    );
-  }
-
-  ConditionalRender.propTypes = {
-    currentPath: PropTypes.string,
-  };
-
-  return <ConditionalRender currentPath={path} />;
+const PromoLine = ({ title, subtitle, titleLink, large, children }) => {
+  return (
+    <div
+      className={classNames(`PromoLine`, {
+        "PromoLine--large": large,
+      })}
+    >
+      <Constraint className="PromoLine__content">
+        <a href={titleLink} rel="noopener" target="_blank">
+          {title}
+          {!!subtitle && <span>{subtitle}</span>}
+        </a>
+        <div className="PromoLine__actions">{children}</div>
+      </Constraint>
+    </div>
+  );
 };
 
 PromoLine.propTypes = {
-  className: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   titleLink: PropTypes.string,
-  modifier: PropTypes.string,
+  large: PropTypes.bool,
   children: PropTypes.node,
 };
 
