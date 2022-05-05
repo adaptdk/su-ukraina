@@ -1,6 +1,5 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { useLocation } from "@gatsbyjs/reach-router";
 
 import Header from "../Header";
 import Footer from "../Footer";
@@ -23,16 +22,10 @@ import { isUkrainianPage } from "../../helpers/handlers";
 import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
-  const { pathname } = useLocation();
+  const isUa = isUkrainianPage();
 
   function RenderForm() {
-    const refugeeGuidePath = `refugee-guide`;
-    const helpSearchPath = `help-search`;
-
-    if (
-      pathname.includes(refugeeGuidePath) ||
-      pathname.includes(helpSearchPath)
-    ) {
+    if (isUa) {
       return <RefugeeForm returnDestination={pagePath} />;
     }
     return <ContactForm returnDestination={pagePath} />;
@@ -41,7 +34,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
   return (
     <div className="Layout">
       <Header noSticky={noStickyHeader} />
-      {!isUkrainianPage() && (
+      {!isUa && (
         <PromoLine
           title="Вся важлива інформація для громадян України"
           subtitle="Svarbiausia informacija Ukrainos piliečiams"
