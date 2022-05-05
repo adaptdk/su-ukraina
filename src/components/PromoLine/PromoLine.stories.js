@@ -22,7 +22,7 @@ const Template = (args) => {
         title={args.title}
         subtitle={args.subtitle}
         titleLink="/"
-        modifier={args.modifier}
+        large={args.large}
       >
         {args.children}
       </PromoLine>
@@ -30,10 +30,15 @@ const Template = (args) => {
   );
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   title: `Вся важлива інформація для громадян України`,
   subtitle: `Svarbiausia informacija Ukrainos piliečiams`,
-  modifier: `big`,
   children: `Some kind of content`,
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  ...Default.args,
+  large: true,
 };

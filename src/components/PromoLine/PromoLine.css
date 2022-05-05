@@ -2,7 +2,7 @@
   background: var(--c__primary);
   padding: calc(var(--s__unit) * 3) 0;
 
-  &--big {
+  &--large {
     padding: calc(var(--s__unit) * 10) 0;
 
     .PromoLine__content {
