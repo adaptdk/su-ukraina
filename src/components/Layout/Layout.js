@@ -74,7 +74,6 @@ Layout.propTypes = {
   children: PropTypes.node,
   noStickyHeader: PropTypes.bool,
   pagePath: PropTypes.string,
-  currentPath: PropTypes.string,
 };
 
 export default Layout;
