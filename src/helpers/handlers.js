@@ -1,6 +1,4 @@
 import { useLocation } from "@gatsbyjs/reach-router";
-import LT from "../locales/lt";
-import UA from "../locales/ua";
 
 export const handlePath = (pseudoLink) => {
   switch (pseudoLink.toLowerCase()) {
@@ -40,13 +38,4 @@ export const handlePath = (pseudoLink) => {
 export const isUkrainianPage = () => {
   const pathname = useLocation().pathname;
   return pathname.includes(`/ua/`);
-};
-
-export const getTranslatedText = (path) => {
-  const translations = isUkrainianPage() ? UA : LT;
-  // reduce() referenced from stackoverflow
-  // https://stackoverflow.com/a/43849204
-  return path.split(`.`).reduce((prevValue, currValue) => {
-    return (prevValue && prevValue[currValue]) || null;
-  }, translations);
 };
