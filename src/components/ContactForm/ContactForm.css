@@ -75,6 +75,7 @@
 
     &__actions {
       .Button {
+        padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 12);
         width: unset;
       }
     }
