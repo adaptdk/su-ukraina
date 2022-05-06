@@ -1,4 +1,24 @@
 ---
 label: Resources block
 hide_body: true
-fields: []
+fields:
+- name: resources
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Subtitle
+  - name: url
+    type: text
+    config:
+      required: true
+    label: URL
+  label: Resources
