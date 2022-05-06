@@ -1,15 +1,34 @@
 {
   "actions": {
     "copyLink": "Kopijuoti nuorodą",
-    "close": "Uždaryti"
+    "close": "Uždaryti",
+    "send": "Siųsti"
   },
   "labels": {
-    "navigation": "Navigacija"
+    "navigation": "Navigacija",
+    "name": "Vardas",
+    "phone": "Tel. numeris",
+    "email": "El. paštas",
+    "message": "Žinutė"
+  },
+  "placeholders": {
+    "name": "Vardenis Pavardenis",
+    "phone": "+37061111111",
+    "email": "vardas@post.lt",
+    "message": "Žinutė"
   },
   "generic": {
     "privacyPolicy": "Privatumo politika"
   },
   "footer": {
     "pageCoordinate": "Puslapį koordinuoja"
+  },
+  "contactForm": {
+    "title": "Turite klausimų ar pasiūlymų?",
+    "text": "Šio puslapio tikslas pateikti svarbiausią informaciją susijusią su pagalba Ukrainai ir jos žmonėms.",
+    "subtext": "Jeigu turite idėjų kaip galėtume pagerinti Jūsų patirtį ir papildyti svetainės turinį, kviečiame susisiekti.",
+    "tacAgree": "Susipažinau ir sutinku su",
+    "success": "Jūsų žinutė išsiųsta. Ačiū!",
+    "error": "Išsiųsti nepavyko. Bandykite dar kartą arba praneškite apie technines problemas"
   }
 }

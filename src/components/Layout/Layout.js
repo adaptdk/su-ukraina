@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import Header from "../Header";
 import Footer from "../Footer";
 import ContactForm from "../ContactForm";
-import RefugeeForm from "../RefugeeForm";
 import Constraint from "../Constraint";
 import Section from "../Section";
 import PromoLine from "../PromoLine";
@@ -23,13 +22,6 @@ import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
   const isUa = isUkrainianPage();
-
-  function RenderForm() {
-    if (isUa) {
-      return <RefugeeForm returnDestination={pagePath} />;
-    }
-    return <ContactForm returnDestination={pagePath} />;
-  }
 
   return (
     <div className="Layout">
@@ -61,7 +53,7 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
 
       <Section className="ContactFormSection" bgColor="blue">
         <Constraint>
-          <RenderForm />
+          <ContactForm returnDestination={pagePath} />
         </Constraint>
       </Section>
 

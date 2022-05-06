@@ -22,9 +22,14 @@
     padding-bottom: calc(var(--s__unit) * 5);
 
     .Button {
+      cursor: pointer;
       justify-content: center;
       margin-top: calc(var(--s__unit) * 5);
       width: 100%;
+
+      &::after {
+        background: rgba(15 68 174 / 5%); /* rgb(15 68 174) - primary color */
+      }
     }
   }
 
@@ -46,7 +51,9 @@
     padding: calc(var(--s__unit) * 4) 0;
 
     &-title {
-      font-size: var(--fs__h4);
+      color: var(--c__primary);
+      font-size: var(--fs__h3);
+      font-weight: var(--fw__medium);
       margin-bottom: calc(var(--s__unit) * 6);
       margin-top: 0;
 
@@ -60,11 +67,20 @@
     }
   }
 
+  &__privacy-policy-text {
+    margin-left: var(--s__small-padding);
+  }
+
+  &__privacy-policy-text-link {
+    text-transform: lowercase;
+  }
+
   @media (min-width: 40rem) {
     padding: calc(var(--s__unit) * 8) 0;
 
     &__actions {
       .Button {
+        padding: calc(var(--s__unit) * 2) calc(var(--s__unit) * 12);
         width: unset;
       }
     }

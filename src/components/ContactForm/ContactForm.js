@@ -1,12 +1,15 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
+import { getTranslatedText } from "../../utils/getTranslatedText";
+import { isUkrainianPage } from "../../helpers/handlers";
+
 import Button from "../Button";
 import FormField from "../FormField";
 import TextInput from "../TextInput";
 import TextArea from "../TextArea";
+import PhoneInput from "../PhoneInput";
 import EmailInput from "../EmailInput";
-// import SelectInput from "../SelectInput/SelectInput";
 
 import "./ContactForm.css";
 
@@ -18,6 +21,7 @@ const handleSubmit = (setFormState) => {
 
     const body = {
       name: formData.get(`name`) || ``,
+      phone: formData.get(`phone`) || ``,
       email: formData.get(`email`) || ``,
       category: formData.get(`category`) || ``,
       description: formData.get(`description`) || ``,
@@ -56,22 +60,26 @@ const ContactForm = ({ returnDestination = `/` }) => {
     success: false,
   });
 
+  const categoryValue = isUkrainianPage() ? `UA` : `LT`;
+  const privacyPolicyUrl = isUkrainianPage()
+    ? `/ua/privacy-policy`
+    : `/privatumo-politika`;
+
   const curriedHandleSubmit = React.useCallback(handleSubmit(setFormState), []);
 
   return (
     <div className="ContactForm">
       <div className="ContactForm__text">
-        <div className="ContactForm__text-title">Turi idėjų? Pasidalink</div>
-        <p>
-          Šis puslapis skirtas pateikti svarbiausią informaciją apie pagalbą
-          Ukrainai.
-        </p>
-        <p>Jeigu turite idėjų kaip papildyti turinį, kviečiame susisiekti.</p>
+        <div className="ContactForm__text-title">
+          {getTranslatedText(`contactForm.title`)}
+        </div>
+        <p>{getTranslatedText(`contactForm.text`)}</p>
+        <p>{getTranslatedText(`contactForm.subtext`)}</p>
       </div>
       <div className="ContactForm__form">
         {formState.success ? (
           <div className="ContactForm__success">
-            <p>Jūsų žinutė išsiųsta. Ačiū!</p>
+            <p>{getTranslatedText(`contactForm.success`)}</p>
           </div>
         ) : (
           <form
@@ -81,41 +89,64 @@ const ContactForm = ({ returnDestination = `/` }) => {
             )}`}
             onSubmit={curriedHandleSubmit}
           >
-            <FormField labelFor="name" label="Vardas" type="text">
+            <FormField
+              labelFor="name"
+              label={getTranslatedText(`labels.name`)}
+              type="text"
+            >
               <TextInput
                 id="name"
-                placeholder="Vardenis Pavardenis"
+                placeholder={getTranslatedText(`placeholders.name`)}
                 name="name"
                 required
               />
             </FormField>
 
-            <FormField labelFor="email" label="El. paštas" type="email">
+            <FormField
+              labelFor="email"
+              label={getTranslatedText(`labels.email`)}
+              type="email"
+            >
               <EmailInput
                 id="email"
-                placeholder="vardas@post.lt"
+                placeholder={getTranslatedText(`placeholders.email`)}
                 name="email"
                 required
               />
             </FormField>
 
-            {/*
-          <FormField labelFor="category" label="Kategorija" type="select">
-            <SelectInput id="category" name="category">
-              <option value="A">A</option>
-              <option value="B">B</option>
-            </SelectInput>
-          </FormField>
-          */}
+            <FormField
+              labelFor="phone"
+              label={getTranslatedText(`labels.phone`)}
+              type="text"
+            >
+              <PhoneInput
+                id="phone"
+                name="phone"
+                pattern="\+\d{6,14}$"
+                placeholder={getTranslatedText(`placeholders.phone`)}
+              />
+            </FormField>
 
-            <FormField labelFor="description" label="Žinutė" type="textarea">
+            <FormField
+              labelFor="description"
+              label={getTranslatedText(`labels.message`)}
+              type="textarea"
+            >
               <TextArea
                 id="description"
-                placeholder="Žinutė"
+                placeholder={getTranslatedText(`placeholders.message`)}
                 name="description"
                 required
               />
             </FormField>
+
+            <input
+              type="hidden"
+              id="category"
+              name="category"
+              value={categoryValue}
+            />
 
             <div className="form-field form-field--type-checkbox">
               <label htmlFor="privacy-policy-accepted" tabIndex="0">
@@ -125,17 +156,26 @@ const ContactForm = ({ returnDestination = `/` }) => {
                   name="privacy-policy-accepted"
                   required
                 />
-                Susipažinau ir sutinku su{` `}
-                <a href="/privatumo-politika" title="Privatumo politika">
-                  privatumo politika
+                <span className="ContactForm__privacy-policy-text">
+                  {getTranslatedText(`contactForm.tacAgree`)}
+                  {` `}
+                </span>
+                <a
+                  href={privacyPolicyUrl}
+                  target="_blank"
+                  className="ContactForm__privacy-policy-text-link"
+                  title={getTranslatedText(`generic.privacyPolicy`)}
+                  rel="noopener"
+                >
+                  {getTranslatedText(`generic.privacyPolicy`)}
                 </a>
               </label>
             </div>
 
             {!!formState.error && (
               <p className="ContactForm__error">
-                Išsiųsti nepavyko. Bandykite dar kartą arba praneškite apie
-                technines problemas{` `}
+                {getTranslatedText(`contactForm.error`)}
+                {` `}
                 <a href="mailto:suukraina@adaptagency.com">
                   suukraina@adaptagency.com
                 </a>
@@ -145,11 +185,12 @@ const ContactForm = ({ returnDestination = `/` }) => {
 
             <div className="ContactForm__actions">
               <Button
-                color="transparent"
+                color="primary-outline"
                 disabled={formState.loading}
                 type="submit"
+                endIcon={`arrow-blue`}
               >
-                Siųsti
+                {getTranslatedText(`actions.send`)}
               </Button>
             </div>
           </form>
