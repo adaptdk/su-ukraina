@@ -23,13 +23,6 @@ import "./Layout.css";
 const Layout = ({ children, noStickyHeader, pagePath }) => {
   const isUa = isUkrainianPage();
 
-  function RenderForm() {
-    if (isUa) {
-      return <RefugeeForm returnDestination={pagePath} />;
-    }
-    return <ContactForm returnDestination={pagePath} />;
-  }
-
   return (
     <div className="Layout">
       <Header noSticky={noStickyHeader} />
