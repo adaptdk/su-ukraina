@@ -26,8 +26,8 @@ export const NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS = {
   title: `Akcijos`,
 };
 
-export const NAVIGATION_ITEM_PROTEST_FORMS_EVENTS = {
-  pathname: `/protesto-formos/renginiai/`,
+export const NAVIGATION_ITEM_EVENTS = {
+  pathname: `/renginiai/`,
   title: `Renginiai`,
 };
 
@@ -46,8 +46,8 @@ export const NAVIGATION_ITEM_BE_VIGILANT_CITIZEN_HANDBOOK = {
   title: `Piliečio atmintinė`,
 };
 
-export const NAVIGATION_ITEM_BE_VIGILANT_RELIABLE_INFORMATION = {
-  pathname: `/bukime-budrus/patikima-informacija/`,
+export const NAVIGATION_ITEM_RELIABLE_INFORMATION = {
+  pathname: `/patikima-informacija/`,
   title: `Patikima informacija`,
 };
 
@@ -85,15 +85,18 @@ export const NAVIGATION_HOW_CAN_I_HELP = [
 // Navigation of protest forms page.
 export const NAVIGATION_PROTEST_FORMS = [
   NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS,
-  NAVIGATION_ITEM_PROTEST_FORMS_EVENTS,
+  NAVIGATION_ITEM_EVENTS,
   NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY,
 ];
 
 // Navigation of be vigilant page.
 export const NAVIGATION_BE_VIGILANT = [
-  NAVIGATION_ITEM_BE_VIGILANT_RELIABLE_INFORMATION,
+  NAVIGATION_ITEM_RELIABLE_INFORMATION,
   NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION,
 ];
+
+// Navigation of citizen guide
+export const NAVIGATION_CITIZEN_GUIDE = [NAVIGATION_ITEM_RELIABLE_INFORMATION];
 
 // Navigation of main menu.
 export const NAVIGATION_MAIN_MENU = [
@@ -105,12 +108,15 @@ export const NAVIGATION_MAIN_MENU = [
   //   ...NAVIGATION_ITEM_PROTEST_FORMS,
   //   children: [
   //     NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS,
-  //     NAVIGATION_ITEM_PROTEST_FORMS_EVENTS,
+  //     NAVIGATION_ITEM_EVENTS,
   //     NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY,
   //   ],
   // },
-  NAVIGATION_ITEM_INFORMATION_FOR_LITHUANIAN_CITIZENS,
-  NAVIGATION_ITEM_BE_VIGILANT_CITIZEN_HANDBOOK,
+  {
+    ...NAVIGATION_ITEM_INFORMATION_FOR_LITHUANIAN_CITIZENS,
+    //children: [...NAVIGATION_CITIZEN_GUIDE],
+  },
+  NAVIGATION_ITEM_EVENTS,
   {
     ...NAVIGATION_ITEM_BE_VIGILANT,
     children: [...NAVIGATION_BE_VIGILANT],

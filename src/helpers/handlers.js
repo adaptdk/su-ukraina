@@ -13,7 +13,7 @@ export const handlePath = (pseudoLink) => {
     case `akcijos`:
       return `/protesto-formos/akcijos/`;
     case `renginiai`:
-      return `/protesto-formos/renginiai/`;
+      return `/renginiai/`;
     case `patikima informacija`:
       return `/bukime-budrus/patikima-informacija/`;
     case `piliečio atmintinė`:

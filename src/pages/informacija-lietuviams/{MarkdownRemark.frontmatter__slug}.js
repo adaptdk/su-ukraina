@@ -91,6 +91,11 @@ export const pageQuery = graphql`
       frontmatter {
         title
         title_override
+        resources {
+          title
+          subtitle
+          url
+        }
         questions {
           title
           answer

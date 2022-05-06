@@ -257,6 +257,24 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
               </div>
             );
           })}
+
+          {!!currentItemData.resources && (
+            <div className="ContentBlocks">
+              <ResourceList title="Nuorodos">
+                {currentItemData.resources?.map((resource, j) => {
+                  return (
+                    <ResourceListItem
+                      key={j}
+                      title={resource.title}
+                      subtitle={resource.subtitle}
+                      url={resource.url}
+                      buttonText={`Šaltinis`}
+                    />
+                  );
+                })}
+              </ResourceList>
+            </div>
+          )}
         </div>
 
         <label className="Faq__inner__faqnav-trigger" htmlFor="faqnav-sensor">
@@ -278,6 +296,13 @@ Faq.propTypes = {
   currentItemData: PropTypes.shape({
     title: PropTypes.string,
     title_override: PropTypes.string,
+    resources: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        subtitle: PropTypes.string,
+        url: PropTypes.string,
+      })
+    ),
     questions: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,

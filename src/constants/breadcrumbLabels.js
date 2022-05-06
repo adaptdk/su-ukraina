@@ -45,7 +45,7 @@ module.exports = {
       crumbLabel: `Akcijos`,
     },
     {
-      pathname: `/protesto-formos/renginiai`,
+      pathname: `/renginiai/`,
       crumbLabel: `Renginiai`,
     },
     {
