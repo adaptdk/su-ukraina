@@ -24,9 +24,9 @@
     "pageCoordinate": "Puslapį koordinuoja"
   },
   "contactForm": {
-    "title": "Turi idėjų? Pasidalink",
-    "text": "Šis puslapis skirtas pateikti svarbiausią informaciją apie pagalbą Ukrainai.",
-    "subtext": "Jeigu turite idėjų kaip papildyti turinį, kviečiame susisiekti.",
+    "title": "Turite klausimų ar pasiūlymų?",
+    "text": "Šio puslapio tikslas pateikti svarbiausią informaciją susijusią su pagalba Ukrainai ir jos žmonėms.",
+    "subtext": "Jeigu turite idėjų kaip galėtume pagerinti Jūsų patirtį ir papildyti svetainės turinį, kviečiame susisiekti.",
     "tacAgree": "Susipažinau ir sutinku su",
     "success": "Jūsų žinutė išsiųsta. Ačiū!",
     "error": "Išsiųsti nepavyko. Bandykite dar kartą arba praneškite apie technines problemas"
