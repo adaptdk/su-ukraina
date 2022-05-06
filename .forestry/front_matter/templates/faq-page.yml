@@ -135,6 +135,11 @@ fields:
   config: {}
   template: address
   label: Addresses
+- name: resources_list
+  type: include
+  config: {}
+  template: resources-block
+  label: Resources list
 pages:
 - src/content/lithuanian-guide/lietuvos-respublikos-vyriausybes-informacija.md
 - src/content/refugee-guide/contacts.md
