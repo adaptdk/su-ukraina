@@ -60,10 +60,10 @@ const ContactForm = ({ returnDestination = `/` }) => {
     success: false,
   });
 
+  const categoryValue = isUkrainianPage() ? `UA` : `LT`;
   const privacyPolicyUrl = isUkrainianPage()
     ? `/ua/privacy-policy`
     : `/privatumo-politika`;
-  const categoryValue = isUkrainianPage() ? `UA` : `LT`;
 
   const curriedHandleSubmit = React.useCallback(handleSubmit(setFormState), []);
 
