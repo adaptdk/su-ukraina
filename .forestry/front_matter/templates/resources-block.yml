@@ -3,13 +3,12 @@ label: Resources list
 hide_body: true
 fields:
 - name: resources
-  type: field_group
-  config: {}
+  type: field_group_list
   fields:
   - name: title
     type: text
     config:
-      required: true
+      required: false
     label: Title
   - name: subtitle
     type: text
@@ -19,6 +18,10 @@ fields:
   - name: url
     type: text
     config:
-      required: true
+      required: false
     label: URL
+  config:
+    min: 
+    max: 
+    labelField: 
   label: Resources
