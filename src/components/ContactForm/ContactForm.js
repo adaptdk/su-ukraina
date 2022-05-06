@@ -156,12 +156,14 @@ const ContactForm = ({ returnDestination = `/` }) => {
                   name="privacy-policy-accepted"
                   required
                 />
-                {getTranslatedText(`contactForm.tacAgree`)}
-                {` `}
+                <span className="ContactForm__privacy-policy-text">
+                  {getTranslatedText(`contactForm.tacAgree`)}
+                  {` `}
+                </span>
                 <a
                   href={privacyPolicyUrl}
+                  className="ContactForm__privacy-policy-text-link"
                   title={getTranslatedText(`generic.privacyPolicy`)}
-                  style={{ textTransform: `lowercase` }}
                 >
                   {getTranslatedText(`generic.privacyPolicy`)}
                 </a>
@@ -181,9 +183,10 @@ const ContactForm = ({ returnDestination = `/` }) => {
 
             <div className="ContactForm__actions">
               <Button
-                color="transparent"
+                color="primary-outline"
                 disabled={formState.loading}
                 type="submit"
+                endIcon={`arrow-blue`}
               >
                 {getTranslatedText(`actions.send`)}
               </Button>

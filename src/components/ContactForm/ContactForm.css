@@ -46,7 +46,9 @@
     padding: calc(var(--s__unit) * 4) 0;
 
     &-title {
-      font-size: var(--fs__h4);
+      color: var(--c__primary);
+      font-size: var(--fs__h3);
+      font-weight: var(--fw__medium);
       margin-bottom: calc(var(--s__unit) * 6);
       margin-top: 0;
 
@@ -58,6 +60,14 @@
     p {
       margin-top: 0;
     }
+  }
+
+  &__privacy-policy-text {
+    margin-left: var(--s__small-padding);
+  }
+
+  &__privacy-policy-text-link {
+    text-transform: lowercase;
   }
 
   @media (min-width: 40rem) {

@@ -59,6 +59,16 @@
     }
   }
 
+  &--primary-outline {
+    background: transparent;
+    border: 1px solid var(--c__primary);
+    color: var(--c__primary);
+
+    &::after {
+      background: ;
+    }
+  }
+
   &--secondary {
     background: var(--c__secondary);
     box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%),
