@@ -32,7 +32,7 @@ const Page = ({ data, pageContext }) => {
     };
   });
 
-  const pathname = useLocation().pathname;
+  const { pathname } = useLocation();
 
   return (
     <Layout>

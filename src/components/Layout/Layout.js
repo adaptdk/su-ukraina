@@ -21,10 +21,19 @@ import { isUkrainianPage } from "../../helpers/handlers";
 import "./Layout.css";
 
 const Layout = ({ children, noStickyHeader, pagePath }) => {
+  const isUa = isUkrainianPage();
+
+  function RenderForm() {
+    if (isUa) {
+      return <RefugeeForm returnDestination={pagePath} />;
+    }
+    return <ContactForm returnDestination={pagePath} />;
+  }
+
   return (
     <div className="Layout">
       <Header noSticky={noStickyHeader} />
-      {!isUkrainianPage() && (
+      {!isUa && (
         <PromoLine
           title="Вся важлива інформація для громадян України"
           subtitle="Svarbiausia informacija Ukrainos piliečiams"
@@ -64,7 +73,6 @@ Layout.propTypes = {
   children: PropTypes.node,
   noStickyHeader: PropTypes.bool,
   pagePath: PropTypes.string,
-  currentPath: PropTypes.string,
 };
 
 export default Layout;

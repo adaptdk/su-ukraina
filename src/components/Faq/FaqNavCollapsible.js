@@ -8,8 +8,7 @@ import Button from "../Button";
 import FaqNav from "./FaqNav";
 
 const FaqNavCollapsible = ({ navData, lang }) => {
-  const location = useLocation();
-  const pathname = location.pathname;
+  const { pathname } = useLocation();
 
   return (
     <div className="FaqNavCollapsible">

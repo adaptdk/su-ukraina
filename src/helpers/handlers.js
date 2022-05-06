@@ -36,6 +36,6 @@ export const handlePath = (pseudoLink) => {
 };
 
 export const isUkrainianPage = () => {
-  const pathname = useLocation().pathname;
+  const { pathname } = useLocation();
   return pathname.includes(`/ua/`);
 };

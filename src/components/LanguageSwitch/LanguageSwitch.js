@@ -4,12 +4,13 @@ import { useLocation } from "@gatsbyjs/reach-router";
 import classNames from "classnames";
 
 import { PATHNAMES } from "../../constants/LanguageSwitch";
+import { isUkrainianPage } from "../../helpers/handlers";
 
 import "./LanguageSwitch.css";
 
 const LanguageSwitch = () => {
-  const pathname = useLocation().pathname;
-  const isUa = pathname.includes(`/ua/`);
+  const { pathname } = useLocation();
+  const isUa = isUkrainianPage();
 
   // @TODO think of a better name
   const findPageLanguageSibling = () => {

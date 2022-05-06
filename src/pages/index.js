@@ -97,7 +97,7 @@ const Page = ({ data }) => {
         <PromoLine
           title="Вся важлива інформація для громадян України"
           titleLink={NAVIGATION_ITEM_REFUGEE_GUIDE.pathname}
-          modifier="big"
+          large={true}
         >
           {NAVIGATION_MAIN_MENU_ALT.map((item) => {
             return (
