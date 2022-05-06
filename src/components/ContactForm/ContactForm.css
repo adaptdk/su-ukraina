@@ -22,9 +22,14 @@
     padding-bottom: calc(var(--s__unit) * 5);
 
     .Button {
+      cursor: pointer;
       justify-content: center;
       margin-top: calc(var(--s__unit) * 5);
       width: 100%;
+
+      &::after {
+        background: rgba(15 68 174 / 5%); /* rgb(15 68 174) - primary color */
+      }
     }
   }
 
