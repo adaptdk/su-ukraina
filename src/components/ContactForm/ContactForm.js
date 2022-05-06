@@ -162,8 +162,10 @@ const ContactForm = ({ returnDestination = `/` }) => {
                 </span>
                 <a
                   href={privacyPolicyUrl}
+                  target="_blank"
                   className="ContactForm__privacy-policy-text-link"
                   title={getTranslatedText(`generic.privacyPolicy`)}
+                  rel="noopener"
                 >
                   {getTranslatedText(`generic.privacyPolicy`)}
                 </a>
