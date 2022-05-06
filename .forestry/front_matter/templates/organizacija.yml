@@ -83,6 +83,7 @@ fields:
   description: Kurioje vietoje randasi organizacija.
 pages:
 - src/content/organizacijos-aukojimui/1k-paramos-fondas.md
+- src/content/organizacijos-aukojimui/asociacija-lygiai.md
 - src/content/organizacijos-aukojimui/come-back-alive.md
 - src/content/organizacijos-aukojimui/helping-wing-pagalbos-sparnas.md
 - src/content/organizacijos-aukojimui/labdaros-ir-paramos-fondas-rugute.md
