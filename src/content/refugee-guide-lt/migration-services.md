@@ -4,6 +4,9 @@ title: migracijos-paslaugos
 title_override: Мigracijos paslaugos
 slug: "/migracijos-paslaugos"
 questions:
+- title: Per kur išvykti iš Ukrainos neturint biometrinio paso?
+  answer: "<p>Lenkija leidžia kirsti sieną Ukrainos piliečiams, neturintiems biometrinio
+    paso.</p>"
 - title: Ar į Lietuvos teritoriją leidžiama atvykti su įprastu Ukrainos pasu, o ne
     biometriniu pasu?
   answer: "<p>Taip, su įprastu Ukrainos pasu galima atvykti į Lietuvą.</p><p><br></p>"
