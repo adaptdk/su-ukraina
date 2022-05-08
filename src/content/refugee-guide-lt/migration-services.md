@@ -4,6 +4,12 @@ title: migracijos-paslaugos
 title_override: Мigracijos paslaugos
 slug: "/migracijos-paslaugos"
 questions:
+- title: Noriu išvykti iš Ukrainos kartu su savo sutuoktiniu - Ukrainos piliečiu.
+    Ukrainos pasieniečiai neleidžia mano vyrui išvykti iš šalies, ar Lietuvos institucijos
+    gali kaip nors pagelbėti?
+  answer: "<p>Deja, Lietuvos institucijos šiuo klausimu padėti negali. Ukraina yra
+    paskelbusi visuotinę mobilizaciją, todėl šaukiamojo amžiaus vyrams neleidžiama
+    palikti šalies.</p>"
 - title: Esu Ukrainos pilietis, atvykau į Lietuvą ir noriu išvykti į kitą šalį, kur
     galėčiau kreiptis gauti informacijos apie įvažiavimo į kitas valstybes sąlygas?
   answer: "<p>Dėl įvažiavimo į kitas valstybes sąlygų rekomenduojame kreiptis į valstybės,
