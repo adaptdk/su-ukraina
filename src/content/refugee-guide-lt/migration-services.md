@@ -4,6 +4,11 @@ title: migracijos-paslaugos
 title_override: Мigracijos paslaugos
 slug: "/migracijos-paslaugos"
 questions:
+- title: Esu Ukrainos pilietis, atvykau į Lietuvą ir noriu išvykti į kitą šalį, kur
+    galėčiau kreiptis gauti informacijos apie įvažiavimo į kitas valstybes sąlygas?
+  answer: "<p>Dėl įvažiavimo į kitas valstybes sąlygų rekomenduojame kreiptis į valstybės,
+    į kurią žadama vykti kompetentingas institucijas - diplomatines atstovybes, konsulines
+    įstaigas ar migracijos tarnybas.</p><p><br></p>"
 - title: Kas gali man padėti sugrįžti atgal į Ukrainą?
   answer: '<p>Sugrįžti į Ukrainą galima bandyti viešuoju transportu:</p><ul><li><p>Autobusų
     bilietų Ukrainos pabėgėliams valstybė nekompensuoja, tačiau nusipirkus bilietus
