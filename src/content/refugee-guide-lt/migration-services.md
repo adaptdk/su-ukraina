@@ -4,6 +4,9 @@ title: migracijos-paslaugos
 title_override: Мigracijos paslaugos
 slug: "/migracijos-paslaugos"
 questions:
+- title: Ar į Lietuvos teritoriją leidžiama atvykti su įprastu Ukrainos pasu, o ne
+    biometriniu pasu?
+  answer: "<p>Taip, su įprastu Ukrainos pasu galima atvykti į Lietuvą.</p><p><br></p>"
 - title: Jei Ukrainos pilietis neskiepytas nuo COVID-19, ar jis gali įvažiuoti į Lietuvą?
   answer: "<p>Taip. Į Lietuvą galima atvykti ir be skiepų.</p><p><br></p>"
 - title: Kaip užsiregistruoti atvykus į Lietuvą?
