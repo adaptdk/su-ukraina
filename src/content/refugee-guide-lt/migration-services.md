@@ -4,6 +4,8 @@ title: migracijos-paslaugos
 title_override: Мigracijos paslaugos
 slug: "/migracijos-paslaugos"
 questions:
+- title: Jei Ukrainos pilietis neskiepytas nuo COVID-19, ar jis gali įvažiuoti į Lietuvą?
+  answer: "<p>Taip. Į Lietuvą galima atvykti ir be skiepų.</p><p><br></p>"
 - title: Kaip užsiregistruoti atvykus į Lietuvą?
   answer: '<ul><li><p>Jei neturite kur apsistoti, savarankiškai, arba su pilietiškų
     gyventojų pagalba atvykti į artimiausią Migracijos departamento teritorinį skyrių,
