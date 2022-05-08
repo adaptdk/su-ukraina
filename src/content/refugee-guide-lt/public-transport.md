@@ -4,6 +4,13 @@ title_override: Viešasis - nemokamas - transportas
 title: viesas-transportas
 slug: "/viesas-transportas"
 questions:
+- title: Ar ukrainiečiams Lietuvoje yra galimybė nemokamai naudotis viešuoju transportu?
+  answer: <p>Tokia galimybė yra suteikiama keliaujant viešuoju transportu Vilniuje
+    arba tarpmiestiniais traukiniais Lietuvoje. Norint nemokamai keliauti traukiniu,
+    užtenka pateikti asmens dokumentą (daugiau informacijos rasite <a href="http://www.litrail.lt/naujienos/-/asset_publisher/cMsMMw6BALEl/content/%E2%80%9Eltg-link-ukrainos-pilieciai-lietuvoje-traukiniais-gales-vykti-nemokamai?redirect=https%3A%2F%2Fwww.litrail.lt%2Fnaujienos%3Fp_p_id%3D101_INSTANCE_cMsMMw6BALEl%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D2"
+    title="">čia</a>).</p><p>Troleibusuose - kontrolieriams ukrainiečiai turės pateikti
+    tik savo asmens dokumentą – jokių bilietų ar kitų dokumentų nereikės.</p><p>Tarpmiestiniams
+    autobusams šios nuolaidos netaikomos.</p><p><br></p>
 - title: Vilnius
   answer: "<p>Iš karo zonos pasitraukusiems ir Vilnių pasirinkusiems ukrainiečiams
     sostinė siūlo nemokamą naudotis viešuoju transportu. Ukrainiečiai kontrolieriams
