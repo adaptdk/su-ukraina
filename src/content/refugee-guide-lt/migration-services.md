@@ -4,6 +4,19 @@ title: migracijos-paslaugos
 title_override: Мigracijos paslaugos
 slug: "/migracijos-paslaugos"
 questions:
+- title: Kas gali man padėti sugrįžti atgal į Ukrainą?
+  answer: '<p>Sugrįžti į Ukrainą galima bandyti viešuoju transportu:</p><ul><li><p>Autobusų
+    bilietų Ukrainos pabėgėliams valstybė nekompensuoja, tačiau nusipirkus bilietus
+    galima grįžti iš didmiesčių (Kauno, Vilniaus ir etc) į Varšuvą, o iš Varšuvos
+    į Kijevą. Informacija apie bilietus: <a href="https://www.autobusubilietai.lt/"
+    title="https://www.autobusubilietai.lt/">https://www.autobusubilietai.lt/</a></p></li><li><p>Taip
+    pat galima keliauti traukiniais. Lietuvos teritorijoje keliaujant, traukinių bilietus
+    valstybė kompensuoja. Čia taip pat galima išvykti iš didmiesčių į Varšuvą, o iš
+    jos į Kijevą. Informacija apie bilietus: <a href="https://www.autobusubilietai.lt/"
+    title="https://www.autobusubilietai.lt/">https://ltglink.lt/en</a></p></li></ul><p>Taip
+    pat galite bandyti kreiptis į stipruskartu.lt. Ši organizacija inicijuoja humanitarinės
+    pagalbos tiekimą, dėl ko gali pavykti susiorganizuoti kelionę kartu su į Ukrainą
+    vykstančiais asmenimis.</p><p><br></p>'
 - title: Per kur išvykti iš Ukrainos neturint biometrinio paso?
   answer: "<p>Lenkija leidžia kirsti sieną Ukrainos piliečiams, neturintiems biometrinio
     paso.</p>"
