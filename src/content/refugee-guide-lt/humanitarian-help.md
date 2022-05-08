@@ -4,6 +4,14 @@ title_override: Humanitarinė pagalba
 title: humanitarine-pagalba
 slug: "/humanitarine-pagalba"
 questions:
+- title: 'Ar pabėgėliams iš Ukrainos tiekiamas maistas? '
+  answer: '<p>Labdaros organizacija „Maisto bankas“ Ukrainos karo pabėgėliams, kuriems
+    trūksta maisto, skirs 115 eurų vertės „Maisto banko“ korteles, su kuriomis galėsite
+    nusipirkti maisto produktų viename iš Lietuvos prekybos tinklų.</p><p>Kortelės
+    bus skiriamos žmonėms, kurie į Lietuvą atvyko ir <strong>prisiregistravo</strong>
+    ne anksčiau, kaip 2022 m. vasario 24 dieną.</p><p>Daugiau informacijos ir prašymą
+    kortelei gauti galite rasti čia: <a href="https://www.maistobankas.lt/ukraina/"
+    title="https://www.maistobankas.lt/ukraina/">https://www.maistobankas.lt/ukraina/</a></p><p><br></p>'
 - title: Lietuvos Raudonasis Kryžius
   answer: <p><a href="https://redcross.lt" title="https://redcross.lt">https://redcross.lt</a></p><p>Negalėjo
     likti nuošalyje ir Raudonojo kryžiaus draugijos, vienos seniausių pasaulyje humanitarinių
