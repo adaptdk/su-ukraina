@@ -4,6 +4,29 @@ title_override: Augintiniai
 title: augintiniai
 slug: "/augintiniai"
 questions:
+- title: Kokios yra taisyklės norint į Lietuvos teritoriją iš Ukrainos atgabenti naminį
+    gyvūną?
+  answer: '<p>Iš Ukrainos atvykstantys gyvūnai augintiniai neretai būna ne tik neženklinti,
+    bet ir nepaskiepyti nuo pasiutligės, o epidemiologinė situacija toje šalyje nėra
+    tokia palanki kaip Lietuvoje. <strong>Todėl atvykusių ukrainiečių apie kartu atkeliavusius
+    jų augintinius prašoma pranešti VMVT el. paštu </strong><a href="mailto:ukrainepets@vmvt.lt"
+    title=""><strong>ukrainepets@vmvt.lt</strong></a><strong> arba numeriu 8 800 40403.</strong></p><p>Augintiniams,
+    atvykusiems kartu su savo šeimininkais, VMVT yra sudariusi galimybes nemokamam
+    augintinio skiepui nuo pasiutligės ir paženklinimui, sukurtos ir palankesnės sąlygos
+    karantinavimui, kad augintiniai būtų saugūs ir nesukeltų pasiutligės išplitimo
+    grėsmės.</p><p>Jei augintinis jau peženklintas ir vakcinuotas:</p><ul><li><p>Jei
+    augintinis atkeliauja jau paženklintas mikroschema, vakcinuotas nuo pasiutligės
+    bei su atliktu antikūnių titro tyrimu (ne mažesniu kaip 0,5 TV/ml rezultatu),
+    jis Lietuvoje VMVT teritorinių padalinių užregistruojamas Gyvūnų augintinių registre
+    (GAR).</p></li><li><p>Jei gyvūnas buvo vakcinuotas ir / ar paženklintas ES teritorijoje
+    kelionės į Lietuvą metu, jis 21 d. po vakcinacijos turi būti karantinuojamas ten,
+    kur apsistoja jo savininkas. VMVT teritorinis padalinys atlieka gyvūno registraciją
+    GAR.</p></li></ul><p>Tuo atveju, jei gyvūnas atvyko nepaženklintas ir nevakcinuotas,
+    VMVT organizuoja nemokamą gyvūno ženklinimą pas privatų veterinarijos gydytoją
+    arba ženklintoją, taip pat nemokamą gyvūno vakcinavimą nuo pasiutligės pas privatų
+    veterinarijos gydytoją. Registraciją GAR atliks VMVT teritorinis padalinys.</p><p>Daugiau
+    informacijos rasite: <a href="https://vmvt.lt/informaciya-ukrayinskoyu-movoyu"
+    title="https://vmvt.lt/informaciya-ukrayinskoyu-movoyu">https://vmvt.lt/informaciya-ukrayinskoyu-movoyu</a></p>'
 - title: " Kaip elgtis su gyvūnu atvykus (katė, šuo, šeškas)"
   answer: <ul><li><p>Gyvūnai čipuoti ir vakcinuoti nuo pasiutligės – stebėjimo tikslais
     pranešti <a href="mailto:ukrainapets@vmvt.lt">adresu ukrainapets@vmvt.lt .</a></p></li><li><p>Gyvūnas
