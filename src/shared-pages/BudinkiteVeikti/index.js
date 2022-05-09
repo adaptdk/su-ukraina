@@ -14,8 +14,6 @@ import Section from "../../components/Section";
 import TabsButton from "../../components/TabsButton";
 
 const Page = ({ content, addressees, pagePath, crumbs }) => {
-  const additionalNavigation = [`akcijos`, `renginiai`];
-
   return (
     <Layout pagePath={pagePath}>
       {(!content || !content.title) && <Title>Budinkite veikti</Title>}
@@ -31,10 +29,7 @@ const Page = ({ content, addressees, pagePath, crumbs }) => {
 
       {!!content && (
         <Constraint>
-          <NavigationGroup
-            crumbs={crumbs}
-            additionalNav={additionalNavigation}
-          />
+          <NavigationGroup crumbs={crumbs} />
           <Title>{content.title}</Title>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
