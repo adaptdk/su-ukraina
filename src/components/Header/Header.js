@@ -71,6 +71,9 @@ const Header = ({ noSticky }) => {
       })}
       ref={headerRef}
     >
+      {!!headerHeight && (
+        <style>{`:root { --header-height: ${headerHeight}px; }`}</style>
+      )}
       <Constraint className="Header__content">
         <Link className="Header__logo-wrapper" to="/">
           <img
