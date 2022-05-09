@@ -10,7 +10,8 @@
     "phone": "Tel. numeris",
     "email": "El. paštas",
     "message": "Žinutė",
-    "source": "Šaltinis"
+    "source": "Šaltinis",
+    "links": "Nuorodos"
   },
   "placeholders": {
     "name": "Vardenis Pavardenis",

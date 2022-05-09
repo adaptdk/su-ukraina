@@ -10,6 +10,7 @@
   --c__neutral-black: hsl(var(--hue__ua-blue) 100% 12%);
   --c__neutral-white: hsl(var(--hue__ua-blue) 100% 100%);
   --c__light-blue: hsl(var(--hue__ua-blue) 100% 96%);
+  --c__red: #b10d01;
 
   /* Use directly */
   --c__primary: var(--c__ua-blue);
@@ -21,4 +22,5 @@
   --c__footer-bg: var(--c__primary);
   --c__footer-color: var(--c__neutral-white);
   --c__form-bg: var(--c__light-blue);
+  --c__blockquote: var(--c__red);
 }

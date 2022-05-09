@@ -261,7 +261,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
           {!!currentItemData.resources && (
             <div className="ContentBlocks">
               {currentItemData.resources.length > 0 && (
-                <ResourceList title="Nuorodos">
+                <ResourceList title={getTranslatedText(`labels.links`)}>
                   {currentItemData.resources?.map((resource, j) => {
                     return (
                       <ResourceListItem
