@@ -1,6 +1,6 @@
 ---
 weight: 99
-title_override: Dezinformacija ir sukčiai
+title_override: Sukčiai ir dezinformacija
 title: sukciai-ir-dezinformacija
 slug: "/sukciai-ir-dezinformacija"
 icon: ""
