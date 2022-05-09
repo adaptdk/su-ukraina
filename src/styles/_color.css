@@ -1,6 +1,7 @@
 :root {
   --hue__ua-blue: 220deg;
   --hue__ua-yellow: 50deg;
+  --hue__red: 0deg;
 
   /* Do not use directly, only reference as other names */
   --c__ua-blue: hsl(var(--hue__ua-blue) 84% 37%);
@@ -10,7 +11,7 @@
   --c__neutral-black: hsl(var(--hue__ua-blue) 100% 12%);
   --c__neutral-white: hsl(var(--hue__ua-blue) 100% 100%);
   --c__light-blue: hsl(var(--hue__ua-blue) 100% 96%);
-  --c__red: #b10d01;
+  --c__red: hsl(var(--hue__red) 100% 34%);
 
   /* Use directly */
   --c__primary: var(--c__ua-blue);
