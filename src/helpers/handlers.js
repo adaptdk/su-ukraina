@@ -14,8 +14,8 @@ export const handlePath = (pseudoLink) => {
       return `/protesto-formos/akcijos/`;
     case `renginiai`:
       return `/renginiai/`;
-    case `patikima informacija`:
-      return `/bukime-budrus/patikima-informacija/`;
+    case `patikimi šaltiniai`:
+      return `/patikima-saltiniai/`;
     case `piliečio atmintinė`:
       return `/bukime-budrus/piliecio-atmintine/`;
     case `sukčiai ir dezinformacija`:

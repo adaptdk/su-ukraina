@@ -81,6 +81,28 @@
       margin-top: calc(var(--s__unit) * 4);
     }
 
+    &__answer {
+      blockquote {
+        border: 1px solid #b10d01;
+        border-radius: 6px;
+        color: #b10d01;
+        margin: 0;
+        margin-bottom: calc(var(--s__unit) * 3);
+        padding: calc(var(--s__unit) * 2);
+        text-align: center;
+      }
+
+      ul {
+        padding-left: 20px;
+
+        li {
+          + li {
+            margin-top: calc(var(--s__unit) * 2);
+          }
+        }
+      }
+    }
+
     &__image {
       margin: calc(var(--s__unit) * 4) 0;
     }

@@ -15,7 +15,7 @@ const Page = ({ data, pageContext }) => {
   const {
     breadcrumb: { crumbs },
   } = pageContext;
-  const additionalNavigation = [`sukčiai ir dezinformacija`];
+  const additionalNavigation = [];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -37,7 +37,7 @@ const Page = ({ data, pageContext }) => {
   });
 
   return (
-    <Layout pagePath="/bukime-budrus/patikima-informacija/">
+    <Layout pagePath="/patikimi-saltiniai/">
       <Title>Patikima informacija</Title>
 
       <Section className="HeroSectionB">
@@ -139,9 +139,7 @@ export const query = graphql`
     contents: allFile(
       filter: {
         sourceInstanceName: { eq: "page-contents" }
-        absolutePath: {
-          regex: "//src/content/pages/bukime-budrus/patikima-informacija.md$/"
-        }
+        absolutePath: { regex: "//src/content/pages/patikimi-saltiniai.md$/" }
       }
     ) {
       edges {

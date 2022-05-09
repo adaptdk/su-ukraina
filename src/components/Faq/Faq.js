@@ -232,7 +232,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
                             title={resource.title}
                             subtitle={resource.subtitle}
                             url={resource.url}
-                            buttonText={`Джерело`}
+                            buttonText={getTranslatedText(`labels.source`)}
                           />
                         );
                       })}
@@ -260,19 +260,21 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
 
           {!!currentItemData.resources && (
             <div className="ContentBlocks">
-              <ResourceList title="Nuorodos">
-                {currentItemData.resources?.map((resource, j) => {
-                  return (
-                    <ResourceListItem
-                      key={j}
-                      title={resource.title}
-                      subtitle={resource.subtitle}
-                      url={resource.url}
-                      buttonText={`Šaltinis`}
-                    />
-                  );
-                })}
-              </ResourceList>
+              {currentItemData.resources.length > 0 && (
+                <ResourceList title="Nuorodos">
+                  {currentItemData.resources?.map((resource, j) => {
+                    return (
+                      <ResourceListItem
+                        key={j}
+                        title={resource.title}
+                        subtitle={resource.subtitle}
+                        url={resource.url}
+                        buttonText={getTranslatedText(`labels.source`)}
+                      />
+                    );
+                  })}
+                </ResourceList>
+              )}
             </div>
           )}
         </div>

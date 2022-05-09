@@ -47,8 +47,8 @@ export const NAVIGATION_ITEM_BE_VIGILANT_CITIZEN_HANDBOOK = {
 };
 
 export const NAVIGATION_ITEM_RELIABLE_INFORMATION = {
-  pathname: `/patikima-informacija/`,
-  title: `Patikima informacija`,
+  pathname: `/patikimi-saltiniai/`,
+  title: `Patikimi šaltiniai`,
 };
 
 export const NAVIGATION_ITEM_INFORMATION_FOR_LITHUANIAN_CITIZENS = {
@@ -57,7 +57,7 @@ export const NAVIGATION_ITEM_INFORMATION_FOR_LITHUANIAN_CITIZENS = {
 };
 
 export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
-  pathname: `/bukime-budrus/kaip-saugotis-nuo-sukciu-ir-dezinformacijos/`,
+  pathname: `/informacija-lietuviams/sukciai-ir-dezinformacija/`,
   title: `Sukčiai ir dezinformacija`,
   altTitle: `Kaip apsisaugoti nuo sukčių ir dezinformacijos?`,
 };
@@ -117,10 +117,7 @@ export const NAVIGATION_MAIN_MENU = [
     //children: [...NAVIGATION_CITIZEN_GUIDE],
   },
   NAVIGATION_ITEM_EVENTS,
-  {
-    ...NAVIGATION_ITEM_BE_VIGILANT,
-    children: [...NAVIGATION_BE_VIGILANT],
-  },
+  NAVIGATION_ITEM_RELIABLE_INFORMATION,
 ];
 
 // Navigation of alternative main menu.

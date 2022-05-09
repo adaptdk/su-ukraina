@@ -29,8 +29,8 @@ module.exports = {
       crumbLabel: `Kaip saugotis nuo sukčių ir dezinformacijos`,
     },
     {
-      pathname: `/bukime-budrus/patikima-informacija`,
-      crumbLabel: `Patikima informacija`,
+      pathname: `/patikimi-saltiniai`,
+      crumbLabel: `Patikimi šaltiniai`,
     },
     {
       pathname: `/informacija-ukrainieciams`,
@@ -45,7 +45,7 @@ module.exports = {
       crumbLabel: `Akcijos`,
     },
     {
-      pathname: `/renginiai/`,
+      pathname: `/renginiai`,
       crumbLabel: `Renginiai`,
     },
     {
