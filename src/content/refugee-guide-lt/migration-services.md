@@ -4,6 +4,38 @@ title: migracijos-paslaugos
 title_override: Мigracijos paslaugos
 slug: "/migracijos-paslaugos"
 questions:
+- title: Noriu išvykti iš Ukrainos kartu su savo sutuoktiniu - Ukrainos piliečiu.
+    Ukrainos pasieniečiai neleidžia mano vyrui išvykti iš šalies, ar Lietuvos institucijos
+    gali kaip nors pagelbėti?
+  answer: "<p>Deja, Lietuvos institucijos šiuo klausimu padėti negali. Ukraina yra
+    paskelbusi visuotinę mobilizaciją, todėl šaukiamojo amžiaus vyrams neleidžiama
+    palikti šalies.</p>"
+- title: Esu Ukrainos pilietis, atvykau į Lietuvą ir noriu išvykti į kitą šalį, kur
+    galėčiau kreiptis gauti informacijos apie įvažiavimo į kitas valstybes sąlygas?
+  answer: "<p>Dėl įvažiavimo į kitas valstybes sąlygų rekomenduojame kreiptis į valstybės,
+    į kurią žadama vykti kompetentingas institucijas - diplomatines atstovybes, konsulines
+    įstaigas ar migracijos tarnybas.</p><p><br></p>"
+- title: Kas gali man padėti sugrįžti atgal į Ukrainą?
+  answer: '<p>Sugrįžti į Ukrainą galima bandyti viešuoju transportu:</p><ul><li><p>Autobusų
+    bilietų Ukrainos pabėgėliams valstybė nekompensuoja, tačiau nusipirkus bilietus
+    galima grįžti iš didmiesčių (Kauno, Vilniaus ir etc) į Varšuvą, o iš Varšuvos
+    į Kijevą. Informacija apie bilietus: <a href="https://www.autobusubilietai.lt/"
+    title="https://www.autobusubilietai.lt/">https://www.autobusubilietai.lt/</a></p></li><li><p>Taip
+    pat galima keliauti traukiniais. Lietuvos teritorijoje keliaujant, traukinių bilietus
+    valstybė kompensuoja. Čia taip pat galima išvykti iš didmiesčių į Varšuvą, o iš
+    jos į Kijevą. Informacija apie bilietus: <a href="https://www.autobusubilietai.lt/"
+    title="https://www.autobusubilietai.lt/">https://ltglink.lt/en</a></p></li></ul><p>Taip
+    pat galite bandyti kreiptis į stipruskartu.lt. Ši organizacija inicijuoja humanitarinės
+    pagalbos tiekimą, dėl ko gali pavykti susiorganizuoti kelionę kartu su į Ukrainą
+    vykstančiais asmenimis.</p><p><br></p>'
+- title: Per kur išvykti iš Ukrainos neturint biometrinio paso?
+  answer: "<p>Lenkija leidžia kirsti sieną Ukrainos piliečiams, neturintiems biometrinio
+    paso.</p>"
+- title: Ar į Lietuvos teritoriją leidžiama atvykti su įprastu Ukrainos pasu, o ne
+    biometriniu pasu?
+  answer: "<p>Taip, su įprastu Ukrainos pasu galima atvykti į Lietuvą.</p><p><br></p>"
+- title: Jei Ukrainos pilietis neskiepytas nuo COVID-19, ar jis gali įvažiuoti į Lietuvą?
+  answer: "<p>Taip. Į Lietuvą galima atvykti ir be skiepų.</p><p><br></p>"
 - title: Kaip užsiregistruoti atvykus į Lietuvą?
   answer: '<ul><li><p>Jei neturite kur apsistoti, savarankiškai, arba su pilietiškų
     gyventojų pagalba atvykti į artimiausią Migracijos departamento teritorinį skyrių,
