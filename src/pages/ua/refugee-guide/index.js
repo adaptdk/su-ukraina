@@ -36,7 +36,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      {(!content || !content.title) && <Title>Gidas Ukrainiečiams</Title>}
+      {(!content || !content.title) && <Title>Важлива інформація</Title>}
       <Meta
         name="description"
         content="Sąrašas iniciatyvų vykdomų Lietuvoje, kurios skirtos pagelbėti Ukrainos žmonėms"
@@ -54,6 +54,7 @@ const Page = ({ data, pageContext }) => {
       {!!content && (
         <Constraint>
           <Breadcrumbs crumbs={crumbs} />
+          <Title>{content.title_override}</Title>
           <h1>{content.title_override}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <FaqNav navData={faqNav} pathname={pathname} lang="ua" />

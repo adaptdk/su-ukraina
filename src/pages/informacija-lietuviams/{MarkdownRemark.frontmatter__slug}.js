@@ -31,8 +31,10 @@ export default function Template({ data, pageContext }) {
 
   return (
     <Layout pagePath="/apie-mus/">
-      {(!frontmatter || !frontmatter.title_override) && (
+      {frontmatter && frontmatter.title_override ? (
         <Title>{frontmatter.title_override}</Title>
+      ) : (
+        <Title>Informacija Lietuviams</Title>
       )}
       <Section className="HeroSectionB">
         <StaticImage
