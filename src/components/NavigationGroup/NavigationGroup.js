@@ -5,11 +5,11 @@ import AdditionalNavigation from "../AdditionalNavigation";
 
 import "./NavigationGroup.css";
 
-const NavigationGroup = ({ crumbs, additionalNav }) => {
+const NavigationGroup = ({ crumbs }) => {
   return (
     <container className="NavigationGroup">
       {crumbs && <Breadcrumbs crumbs={crumbs} />}
-      {additionalNav && <AdditionalNavigation additionalNav={additionalNav} />}
+      <AdditionalNavigation />
     </container>
   );
 };

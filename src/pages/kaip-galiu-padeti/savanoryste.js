@@ -17,7 +17,6 @@ const Page = ({ data, pageContext }) => {
   const {
     breadcrumb: { crumbs },
   } = pageContext;
-  const additionalNavigation = [`Aukojimas`];
   const content = data.contents.edges.map((edge) => {
     return {
       ...edge.node.childMarkdownRemark.frontmatter,
@@ -45,10 +44,7 @@ const Page = ({ data, pageContext }) => {
 
       {!!content && (
         <Constraint>
-          <NavigationGroup
-            crumbs={crumbs}
-            additionalNav={additionalNavigation}
-          />
+          <NavigationGroup crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <Meta name="description" content={content.excerpt} />

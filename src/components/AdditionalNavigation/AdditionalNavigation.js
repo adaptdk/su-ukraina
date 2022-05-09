@@ -1,26 +1,37 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { handlePath } from "../../helpers/handlers";
+import { useLocation } from "@gatsbyjs/reach-router";
+
+import { ADDITIONAL_NAVIGATION } from "../../constants/Navigation";
 
 import "./AdditionalNavigation.css";
 
-const AdditionalNavigation = ({ additionalNav }) => {
+const AdditionalNavigation = () => {
+  const { pathname } = useLocation();
+  const additionalNavigationArray = ADDITIONAL_NAVIGATION[pathname];
+
   return (
-    <nav className="AdditionalNavigation">
-      <ol className="AdditionalNavigation__container">
-        {additionalNav.map((additionalEl, index) => {
-          let path = handlePath(additionalEl);
-          return (
-            <li key={index}>
-              <Link className="AdditionalNavigation__item" to={path}>
-                {additionalEl}
-              </Link>
-            </li>
-          );
-        })}
-      </ol>
-    </nav>
+    <>
+      {additionalNavigationArray ? (
+        <nav className="AdditionalNavigation">
+          <ol className="AdditionalNavigation__container">
+            {additionalNavigationArray.map((navigationItem, index) => {
+              return (
+                <li key={index}>
+                  <Link
+                    className="AdditionalNavigation__item"
+                    to={navigationItem.pathname}
+                  >
+                    {navigationItem.title}
+                  </Link>
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
+      ) : null}
+    </>
   );
 };
 

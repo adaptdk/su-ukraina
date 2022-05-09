@@ -10,6 +10,12 @@ export const NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA = {
   iconHandle: `donate`,
 };
 
+export const NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_ABROAD = {
+  pathname: `/kaip-galiu-padeti/aukojimas/uzsienyje/`,
+  title: `Aukojimas`,
+  iconHandle: `donate`,
+};
+
 export const NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER = {
   pathname: `/kaip-galiu-padeti/savanoryste/`,
   title: `Savanorystė`,
@@ -33,6 +39,11 @@ export const NAVIGATION_ITEM_EVENTS = {
 
 export const NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY = {
   pathname: `/protesto-formos/budinkite-veikti/ambasada/`,
+  title: `Budinkite veikti`,
+};
+
+export const NAVIGATION_ITEM_PROTEST_WAKE_UP_COMPANY = {
+  pathname: `/protesto-formos/budinkite-veikti/imone/`,
   title: `Budinkite veikti`,
 };
 
@@ -131,4 +142,33 @@ export const NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP = {
   url: `https://0rs0r9mdix1.typeform.com/to/QXLxIUjt`,
   title: `Noriu suteikti pagalbą`,
   iconHandle: `ua-flag`,
+};
+
+export const ADDITIONAL_NAVIGATION = {
+  [NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION.pathname]: [
+    NAVIGATION_ITEM_RELIABLE_INFORMATION,
+  ],
+  [NAVIGATION_ITEM_RELIABLE_INFORMATION.pathname]: [
+    //NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION,
+  ],
+  [NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER.pathname]: [
+    NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA,
+  ],
+  [NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS.pathname]: [
+    NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY,
+    NAVIGATION_ITEM_EVENTS,
+  ],
+  [NAVIGATION_ITEM_EVENTS.pathname]: [],
+  [NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA.pathname]: [
+    NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER,
+  ],
+  [NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_ABROAD.pathname]: [
+    NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER,
+  ],
+  [NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY.pathname]: [
+    NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS,
+  ],
+  [NAVIGATION_ITEM_PROTEST_WAKE_UP_COMPANY.pathname]: [
+    NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS,
+  ],
 };
