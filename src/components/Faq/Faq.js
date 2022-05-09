@@ -180,12 +180,12 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
               <div className="Faq__question" id={tabId} key={tabId}>
                 <details>
                   <summary>
-                    <div className="Faq__question__summary">
+                    <div className="Faq__summary">
                       <h2>{question.title}</h2>
                     </div>
                   </summary>
                   <div
-                    className="Faq__question__answer"
+                    className="Faq__answer"
                     dangerouslySetInnerHTML={{ __html: question.answer }}
                   />
 
@@ -239,8 +239,8 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
                     </ResourceList>
                   )}
 
-                  <div className="Faq__question__actions">
-                    <div className="Faq__question__actions-copy">
+                  <div className="Faq__actions">
+                    <div className="Faq__copy-action">
                       <a
                         href={`#${tabId}`}
                         data-copied="Скопійовано"
@@ -279,16 +279,16 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
           )}
         </div>
 
-        <label className="Faq__inner__faqnav-trigger" htmlFor="faqnav-sensor">
+        <label className="Faq__faqnav-trigger" htmlFor="faqnav-sensor">
           <Button
-            className="Faq__inner__faqnav-trigger-button"
+            className="Faq__faqnav-trigger-button"
             color="secondary"
             pretend
           >
             {getTranslatedText(`labels.navigation`)}
           </Button>
         </label>
-        <label className="Faq__inner__faqnav-overlay" htmlFor="faqnav-sensor" />
+        <label className="Faq__faqnav-overlay" htmlFor="faqnav-sensor" />
       </Constraint>
     </div>
   );

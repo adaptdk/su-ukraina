@@ -24,20 +24,7 @@
       width: 1px;
     }
 
-    &__faqnav-overlay {
-      background: rgb(0 0 0 / 20%);
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      pointer-events: none;
-      position: fixed;
-      top: 0;
-      transition: opacity 0.2s ease;
-      width: 100%;
-      z-index: 1001; /* 1 above `.Header` */
-    }
-
-    #faqnav-sensor:checked ~ &__faqnav-trigger ~ &__faqnav-overlay {
+    #faqnav-sensor:checked ~ .Faq__faqnav-trigger ~ .Faq__faqnav-overlay {
       opacity: 1;
       pointer-events: all;
     }
@@ -47,23 +34,32 @@
       overflow: auto;
       padding: var(--s__small-padding);
     }
+  }
 
-    &__faqnav-trigger {
-      bottom: 2rem;
-      left: 50%;
-      position: sticky;
-      z-index: 2;
-    }
+  &__faqnav-overlay {
+    background: rgb(0 0 0 / 20%);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.2s ease;
+    width: 100%;
+    z-index: 1001; /* 1 above `.Header` */
+  }
 
-    &__faqnav-trigger-button {
-      border-radius: var(--s__alt-border-radius);
-      display: inline-flex;
-      transform: translateX(-50%);
-    }
+  &__faqnav-trigger {
+    bottom: 2rem;
+    left: 50%;
+    position: sticky;
+    z-index: 2;
+  }
 
-    @media (min-width: 40rem) {
-      flex-wrap: nowrap;
-    }
+  &__faqnav-trigger-button {
+    border-radius: var(--s__alt-border-radius);
+    display: inline-flex;
+    transform: translateX(-50%);
   }
 
   &__content {
@@ -81,101 +77,6 @@
       margin-top: calc(var(--s__unit) * 4);
     }
 
-    &__answer {
-      blockquote {
-        border: 1px solid var(--c__blockquote);
-        border-radius: 6px;
-        color: var(--c__blockquote);
-        margin: 0;
-        margin-bottom: calc(var(--s__unit) * 3);
-        padding: calc(var(--s__unit) * 2);
-        text-align: center;
-      }
-
-      ul {
-        padding-left: calc(var(--s__unit) * 5);
-
-        li {
-          + li {
-            margin-top: calc(var(--s__unit) * 2);
-          }
-        }
-      }
-    }
-
-    &__image {
-      margin: calc(var(--s__unit) * 4) 0;
-    }
-
-    &__actions {
-      color: var(--c__primary);
-      margin-bottom: calc(var(--s__unit) * 4);
-      position: relative;
-      text-align: right;
-
-      .copy {
-        font-size: 0.9rem;
-
-        &::after {
-          background-color: var(--c__primary);
-          content: "";
-          display: inline-block;
-          height: 20px;
-          margin-left: 10px;
-          mask-image: url("../../images/icons/copy.svg");
-          mask-position: center;
-          mask-repeat: no-repeat;
-          mask-size: contain;
-          position: relative;
-          vertical-align: middle;
-          width: 20px;
-        }
-
-        &:hover {
-          color: var(--c__primary);
-          cursor: pointer;
-
-          &::after {
-            background-color: var(--c__primary);
-            content: "";
-            display: inline-block;
-            height: 20px;
-            margin-left: 10px;
-            mask-image: url("../../images/icons/copy.svg");
-            mask-position: center;
-            mask-repeat: no-repeat;
-            mask-size: contain;
-            position: relative;
-            vertical-align: middle;
-            width: 20px;
-          }
-
-          &:hover {
-            color: var(--c__primary);
-            cursor: pointer;
-
-            &::before {
-              background-color: var(--c__primary);
-            }
-          }
-        }
-      }
-
-      .copy-popup {
-        opacity: 0;
-        position: absolute;
-        right: 30px; /* icon width + margin */
-        text-transform: uppercase;
-        top: 0;
-        transition: transform 0.2s ease-in, opacity 0.5s;
-
-        &--active {
-          opacity: 1;
-          transform: translateY(-2em);
-        }
-      }
-    }
-
     .ResourceList {
       margin-bottom: calc(var(--s__unit) * 4);
     }
@@ -189,35 +90,11 @@
       &[open] > summary {
         border-bottom: 1px solid #ececec;
 
-        .Faq__question__summary {
+        .Faq__summary {
           &::after {
             transform: rotate(135deg);
           }
         }
-      }
-    }
-
-    /* This DIV was introduced because on IOS flex on summary tag does not work */
-    &__summary {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: var(--s__main-padding) 0;
-
-      &::after {
-        border-style: solid;
-        border-width: 0.15em 0.15em 0 0;
-        content: "";
-        display: inline-block;
-        height: 0.45em;
-        left: -0.5em;
-        position: relative;
-        transform: rotate(45deg);
-        transform-origin: center;
-        transition: transform 0.2s ease;
-        vertical-align: middle;
-        width: 0.45em;
       }
     }
 
@@ -243,8 +120,140 @@
         padding-right: 1.2rem;
       }
     }
+  }
 
-    @media (min-width: 50rem) {
+  /* This DIV was introduced because on IOS flex on summary tag does not work */
+  &__summary {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--s__main-padding) 0;
+
+    &::after {
+      border-style: solid;
+      border-width: 0.15em 0.15em 0 0;
+      content: "";
+      display: inline-block;
+      height: 0.45em;
+      left: -0.5em;
+      position: relative;
+      transform: rotate(45deg);
+      transform-origin: center;
+      transition: transform 0.2s ease;
+      vertical-align: middle;
+      width: 0.45em;
+    }
+  }
+
+  &__actions {
+    color: var(--c__primary);
+    margin-bottom: calc(var(--s__unit) * 4);
+    position: relative;
+    text-align: right;
+
+    .copy {
+      font-size: 0.9rem;
+
+      &::after {
+        background-color: var(--c__primary);
+        content: "";
+        display: inline-block;
+        height: 20px;
+        margin-left: 10px;
+        mask-image: url("../../images/icons/copy.svg");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        position: relative;
+        vertical-align: middle;
+        width: 20px;
+      }
+
+      &:hover {
+        color: var(--c__primary);
+        cursor: pointer;
+
+        &::after {
+          background-color: var(--c__primary);
+          content: "";
+          display: inline-block;
+          height: 20px;
+          margin-left: 10px;
+          mask-image: url("../../images/icons/copy.svg");
+          mask-position: center;
+          mask-repeat: no-repeat;
+          mask-size: contain;
+          position: relative;
+          vertical-align: middle;
+          width: 20px;
+        }
+
+        &:hover {
+          color: var(--c__primary);
+          cursor: pointer;
+
+          &::before {
+            background-color: var(--c__primary);
+          }
+        }
+      }
+    }
+
+    .copy-popup {
+      opacity: 0;
+      position: absolute;
+      right: 30px; /* icon width + margin */
+      text-transform: uppercase;
+      top: 0;
+      transition: transform 0.2s ease-in, opacity 0.5s;
+
+      &--active {
+        opacity: 1;
+        transform: translateY(-2em);
+      }
+    }
+  }
+
+  &__answer {
+    blockquote {
+      border: 1px solid var(--c__red);
+      border-radius: 6px;
+      color: var(--c__red);
+      margin: 0;
+      margin-bottom: calc(var(--s__unit) * 3);
+      padding: calc(var(--s__unit) * 2);
+      text-align: center;
+    }
+
+    ul {
+      padding-left: calc(var(--s__unit) * 5);
+
+      li {
+        + li {
+          margin-top: calc(var(--s__unit) * 2);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 40rem) {
+    &__inner {
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+
+    &__faqnav-trigger {
+      display: none;
+    }
+
+    &__faqnav-overlay {
+      display: none;
+    }
+  }
+
+  @media (min-width: 50rem) {
+    &__question {
       align-items: flex-start;
       display: flex;
       gap: var(--s__alt-padding);
@@ -264,20 +273,6 @@
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
-      }
-    }
-  }
-
-  @media (min-width: 40rem) {
-    &__inner {
-      gap: 0;
-
-      &__faqnav-trigger {
-        display: none;
-      }
-
-      &__faqnav-overlay {
-        display: none;
       }
     }
   }
