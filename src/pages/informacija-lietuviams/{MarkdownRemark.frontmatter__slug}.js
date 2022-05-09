@@ -10,7 +10,6 @@ import Faq from "../../components/Faq";
 import Section from "../../components/Section";
 
 import { modifyCrumbs } from "../../utils/modifyCrumbs";
-
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
@@ -91,6 +90,11 @@ export const pageQuery = graphql`
       frontmatter {
         title
         title_override
+        resources {
+          title
+          subtitle
+          url
+        }
         questions {
           title
           answer

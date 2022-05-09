@@ -82,9 +82,9 @@
       }
 
       blockquote {
-        border: 1px solid #b10d01;
+        border: 1px solid var(--c__blockquote);
         border-radius: 6px;
-        color: #b10d01;
+        color: var(--c__blockquote);
         margin: 0;
         margin-bottom: calc(var(--s__unit) * 3);
         padding: calc(var(--s__unit) * 2);

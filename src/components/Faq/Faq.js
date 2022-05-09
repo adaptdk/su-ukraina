@@ -232,7 +232,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
                             title={resource.title}
                             subtitle={resource.subtitle}
                             url={resource.url}
-                            buttonText={`Джерело`}
+                            buttonText={getTranslatedText(`labels.source`)}
                           />
                         );
                       })}
@@ -257,6 +257,26 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
               </div>
             );
           })}
+
+          {!!currentItemData.resources && (
+            <div className="ContentBlocks">
+              {currentItemData.resources.length > 0 && (
+                <ResourceList title={getTranslatedText(`labels.links`)}>
+                  {currentItemData.resources?.map((resource, j) => {
+                    return (
+                      <ResourceListItem
+                        key={j}
+                        title={resource.title}
+                        subtitle={resource.subtitle}
+                        url={resource.url}
+                        buttonText={getTranslatedText(`labels.source`)}
+                      />
+                    );
+                  })}
+                </ResourceList>
+              )}
+            </div>
+          )}
         </div>
 
         <label className="Faq__inner__faqnav-trigger" htmlFor="faqnav-sensor">
@@ -278,6 +298,13 @@ Faq.propTypes = {
   currentItemData: PropTypes.shape({
     title: PropTypes.string,
     title_override: PropTypes.string,
+    resources: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        subtitle: PropTypes.string,
+        url: PropTypes.string,
+      })
+    ),
     questions: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,

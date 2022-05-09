@@ -9,7 +9,9 @@
     "name": "Vardas",
     "phone": "Tel. numeris",
     "email": "El. paštas",
-    "message": "Žinutė"
+    "message": "Žinutė",
+    "source": "Šaltinis",
+    "links": "Nuorodos"
   },
   "placeholders": {
     "name": "Vardenis Pavardenis",

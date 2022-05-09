@@ -4,12 +4,12 @@ import { graphql } from "gatsby";
 import { Title, Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import ContactChip from "../../components/ContactChip";
-import ContactChipSections from "../../components/ContactChipSections";
-import Constraint from "../../components/Constraint";
-import Layout from "../../components/Layout";
-import NavigationGroup from "../../components/NavigationGroup";
-import Section from "../../components/Section";
+import ContactChip from "../components/ContactChip";
+import ContactChipSections from "../components/ContactChipSections";
+import Constraint from "../components/Constraint";
+import Layout from "../components/Layout";
+import NavigationGroup from "../components/NavigationGroup";
+import Section from "../components/Section";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -36,13 +36,13 @@ const Page = ({ data, pageContext }) => {
   });
 
   return (
-    <Layout pagePath="/bukime-budrus/patikima-informacija/">
+    <Layout pagePath="/patikimi-saltiniai/">
       <Title>Patikima informacija</Title>
 
       <Section className="HeroSectionB">
         <StaticImage
           className="HeroSectionB__background"
-          src="../../images/hero/patikima_informacija.jpg"
+          src="../images/hero/patikima_informacija.jpg"
           alt="Budinkite veikti"
           layout="fullWidth"
         />
@@ -135,9 +135,7 @@ export const query = graphql`
     contents: allFile(
       filter: {
         sourceInstanceName: { eq: "page-contents" }
-        absolutePath: {
-          regex: "//src/content/pages/bukime-budrus/patikima-informacija.md$/"
-        }
+        absolutePath: { regex: "//src/content/pages/patikimi-saltiniai.md$/" }
       }
     ) {
       edges {
