@@ -1,0 +1,75 @@
+.SlidingNavigation {
+  background: var(--c__neutral-12);
+  display: flex;
+  overflow-x: auto;
+  position: sticky;
+
+  /* need that 1px otherwise there's a gap between navigation and header */
+  top: calc(var(--header-height) - 1px);
+  white-space: nowrap;
+  z-index: 10;
+
+  &__item {
+    border-bottom: 1px solid #c0c0c0;
+    display: inline-flex;
+    flex: 1;
+    justify-content: center;
+    padding: var(--s__main-padding);
+
+    > a {
+      align-items: center;
+      color: #6b6b6b;
+      display: flex;
+      font-weight: var(--fw__bold);
+      text-decoration: none;
+
+      > span {
+        background-color: #6b6b6b;
+      }
+    }
+
+    &--active {
+      border-bottom: 3px solid var(--c__secondary);
+
+      > a {
+        color: var(--c__primary);
+
+        > span {
+          background-color: var(--c__primary);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    content: "";
+    display: block;
+    display: inline-block;
+    height: 24px;
+    margin-right: 10px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    position: relative;
+    width: 24px;
+
+    &--people {
+      background: var(--c__primary);
+      mask-image: url("../../images/icons/people.svg");
+    }
+
+    &--institutions {
+      background: var(--c__primary);
+      mask-image: url("../../images/icons/institutions.svg");
+    }
+
+    &--foreign {
+      background: var(--c__primary);
+      mask-image: url("../../images/icons/web.svg");
+    }
+  }
+
+  @media (min-width: 66rem) {
+    display: none;
+  }
+}
