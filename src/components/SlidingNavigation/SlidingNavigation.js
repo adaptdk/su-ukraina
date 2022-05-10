@@ -13,15 +13,15 @@ const SlidingNavigation = ({ data, options }) => {
     threshold: 0.2,
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && activeNode !== entry.target) {
-        setActiveNode(entry.target.id);
-      }
-    });
-  }, observerOptions);
-
   React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && activeNode !== entry.target) {
+          setActiveNode(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
     data.forEach((item) => {
       observer.observe(document.getElementById(item.linkId));
     });
