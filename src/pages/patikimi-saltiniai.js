@@ -10,6 +10,7 @@ import Constraint from "../components/Constraint";
 import Layout from "../components/Layout";
 import NavigationGroup from "../components/NavigationGroup";
 import Section from "../components/Section";
+import SlidingNavigation from "../components/SlidingNavigation";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -35,6 +36,26 @@ const Page = ({ data, pageContext }) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
 
+  const wrapperClass = `ContactChipSections__wrapper`;
+
+  const slidingNavData = [
+    {
+      title: `Asmenybės`,
+      linkId: `${wrapperClass}-1`,
+      icon: `people`,
+    },
+    {
+      title: `Institucijos`,
+      linkId: `${wrapperClass}-2`,
+      icon: `institutions`,
+    },
+    {
+      title: `Užsienio šaltiniai`,
+      linkId: `${wrapperClass}-3`,
+      icon: `foreign`,
+    },
+  ];
+
   return (
     <Layout pagePath="/patikimi-saltiniai/">
       <Title>Patikimi šaltiniai</Title>
@@ -57,73 +78,79 @@ const Page = ({ data, pageContext }) => {
         </Constraint>
       )}
 
-      <Constraint>
+      <Constraint className="Constraint--contact-chip-sections">
         <ContactChipSections>
-          <details open>
-            <summary>
-              <h2>
+          <SlidingNavigation data={slidingNavData} />
+
+          <div id={`${wrapperClass}-1`} className={wrapperClass}>
+            <div className="ContactChipSections__title-wrapper">
+              <h2 className="ContactChipSections__title">
                 <span className="ContactChipSections__icon ContactChipSections__icon--people"></span>
                 Asmenybės
               </h2>
-            </summary>
-            {infoPeople.map((person, i) => {
-              return (
-                <ContactChip
-                  description={person.description}
-                  url={person.url}
-                  facebookUrl={person.facebook}
-                  twitterUrl={person.twitter}
-                  key={i}
-                >
-                  {person.title}
-                </ContactChip>
-              );
-            })}
-          </details>
-          <details open>
-            <summary>
-              <h2>
+            </div>
+            <div className="ContactChipSections__articles">
+              {infoPeople.map((person, i) => {
+                return (
+                  <ContactChip
+                    description={person.description}
+                    url={person.url}
+                    facebookUrl={person.facebook}
+                    twitterUrl={person.twitter}
+                    key={i}
+                  >
+                    {person.title}
+                  </ContactChip>
+                );
+              })}
+            </div>
+          </div>
+          <div id={`${wrapperClass}-2`} className={wrapperClass}>
+            <div className="ContactChipSections__title-wrapper">
+              <h2 className="ContactChipSections__title">
                 <span className="ContactChipSections__icon ContactChipSections__icon--institutions"></span>
                 Institucijos
               </h2>
-            </summary>
-            {infoOrgs.map((org, i) => {
-              return (
-                <ContactChip
-                  description={org.description}
-                  url={org.url}
-                  facebookUrl={org.facebook}
-                  twitterUrl={org.twitter}
-                  key={i}
-                >
-                  {org.title}
-                </ContactChip>
-              );
-            })}
-          </details>
-        </ContactChipSections>
-        <ContactChipSections>
-          <details open>
-            <summary>
-              <h2>
+            </div>
+            <div className="ContactChipSections__articles">
+              {infoOrgs.map((org, i) => {
+                return (
+                  <ContactChip
+                    description={org.description}
+                    url={org.url}
+                    facebookUrl={org.facebook}
+                    twitterUrl={org.twitter}
+                    key={i}
+                  >
+                    {org.title}
+                  </ContactChip>
+                );
+              })}
+            </div>
+          </div>
+          <div id={`${wrapperClass}-3`} className={wrapperClass}>
+            <div className="ContactChipSections__title-wrapper">
+              <h2 className="ContactChipSections__title">
                 <span className="ContactChipSections__icon ContactChipSections__icon--foreign"></span>
                 Užsienio šaltiniai
               </h2>
-            </summary>
-            {infoForeign.map((foreignSource, i) => {
-              return (
-                <ContactChip
-                  description={foreignSource.description}
-                  url={foreignSource.url}
-                  facebookUrl={foreignSource.facebook}
-                  twitterUrl={foreignSource.twitter}
-                  key={i}
-                >
-                  {foreignSource.title}
-                </ContactChip>
-              );
-            })}
-          </details>
+            </div>
+            <div className="ContactChipSections__articles">
+              {infoForeign.map((foreignSource, i) => {
+                return (
+                  <ContactChip
+                    description={foreignSource.description}
+                    url={foreignSource.url}
+                    facebookUrl={foreignSource.facebook}
+                    twitterUrl={foreignSource.twitter}
+                    key={i}
+                  >
+                    {foreignSource.title}
+                  </ContactChip>
+                );
+              })}
+            </div>
+          </div>
         </ContactChipSections>
       </Constraint>
     </Layout>

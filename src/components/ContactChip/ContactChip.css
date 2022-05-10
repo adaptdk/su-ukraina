@@ -68,4 +68,11 @@
   & + & {
     margin-top: calc(var(--s__main-padding) * -1);
   }
+
+  @media (min-width: 66rem) {
+    &__actions > a {
+      height: 36px;
+      width: 36px;
+    }
+  }
 }
