@@ -37,7 +37,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/patikimi-saltiniai/">
-      <Title>Patikima informacija</Title>
+      <Title>Patikimi šaltiniai</Title>
 
       <Section className="HeroSectionB">
         <StaticImage

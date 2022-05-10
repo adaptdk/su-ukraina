@@ -53,6 +53,7 @@ const Page = ({ data, pageContext }) => {
       {!!content && (
         <Constraint>
           <Breadcrumbs crumbs={crumbs} />
+          <Title>{content.title_override}</Title>
           <h1>{content.title_override}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <FaqNav navData={faqNav} pathname={pathname} lang="lt" />

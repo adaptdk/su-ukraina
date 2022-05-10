@@ -46,6 +46,7 @@ const Page = ({ data, pageContext }) => {
       {!!content && (
         <Constraint>
           <NavigationGroup crumbs={crumbs} />
+          <Title>{content.title}</Title>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <Meta name="description" content={content.excerpt} />
