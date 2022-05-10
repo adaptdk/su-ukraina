@@ -12,7 +12,6 @@
   &__item {
     border-bottom: 1px solid #c0c0c0;
     display: inline-flex;
-    flex: 1;
     justify-content: center;
     padding: var(--s__main-padding);
 
