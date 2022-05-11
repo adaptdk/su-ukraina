@@ -2,13 +2,10 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import Link from "../Link";
-
 import "./SlidingNavigation.css";
 
 const SlidingNavigation = ({ data, options }) => {
-  const [activeNode, setActiveNode] = React.useState(null);
-
+  const activeItemClassName = `SlidingNavigation__item--active`;
   const observerOptions = options || {
     threshold: 0.2,
   };
@@ -16,8 +13,42 @@ const SlidingNavigation = ({ data, options }) => {
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && activeNode !== entry.target) {
-          setActiveNode(entry.target.id);
+        if (
+          entry.isIntersecting &&
+          !window.location.hash.includes(entry.target.id)
+        ) {
+          window.history.replaceState({}, ``, `#${entry.target.id}`);
+          const currentActiveElement = document.querySelector(
+            `.${activeItemClassName}`
+          );
+
+          // Remove current active className
+          if (currentActiveElement) {
+            currentActiveElement.classList.remove(activeItemClassName);
+          }
+
+          const nextActiveElement = document.getElementById(
+            `${entry.target.id}-sn`
+          );
+
+          // Add an active className
+          if (nextActiveElement) {
+            nextActiveElement.classList.add(activeItemClassName);
+          }
+
+          // Scroll to current active navigation item
+          // in the SlidingNavigation
+          const navigationWrapper =
+            document.querySelector(`.SlidingNavigation`);
+          if (navigationWrapper) {
+            navigationWrapper.scrollTo({
+              top: 0,
+              left:
+                nextActiveElement.offsetLeft -
+                nextActiveElement.offsetWidth / 2,
+              behavior: `smooth`,
+            });
+          }
         }
       });
     }, observerOptions);
@@ -27,33 +58,37 @@ const SlidingNavigation = ({ data, options }) => {
     });
   }, []);
 
-  React.useEffect(() => {
-    const activeNavigationItem = document.querySelector(
-      `.SlidingNavigation__item--active`
-    );
-    if (activeNavigationItem) {
-      activeNavigationItem.scrollIntoView();
-    }
-  }, [activeNode]);
-
   return (
     <div className="SlidingNavigation">
       {data.map((item) => {
         return (
           <div
+            id={`${item.linkId}-sn`}
             className={classNames(`SlidingNavigation__item`, {
-              "SlidingNavigation__item--active": item.linkId === activeNode,
+              "SlidingNavigation__item--active": window.location.hash.includes(
+                item.linkId
+              ),
             })}
             key={item.linkId}
           >
-            <Link to={`#${item.linkId}`}>
+            <div
+              onClick={() => {
+                const element = document.getElementById(item.linkId);
+                // @TODO: need to make dynamic values and not hardcoded numbers
+                window.scrollTo({
+                  top: element.offsetTop - 66 - 63, // minus header and navbar
+                  left: 0,
+                  behavior: `smooth`,
+                });
+              }}
+            >
               {!!item.icon && (
                 <span
                   className={`SlidingNavigation__icon SlidingNavigation__icon--${item.icon}`}
                 ></span>
               )}
               {item.title}
-            </Link>
+            </div>
           </div>
         );
       })}
