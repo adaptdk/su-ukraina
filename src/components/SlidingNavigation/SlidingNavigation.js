@@ -65,9 +65,10 @@ const SlidingNavigation = ({ data, options }) => {
           <div
             id={`${item.linkId}-sn`}
             className={classNames(`SlidingNavigation__item`, {
-              "SlidingNavigation__item--active": window.location.hash.includes(
-                item.linkId
-              ),
+              "SlidingNavigation__item--active":
+                typeof window !== `undefined`
+                  ? window.location.hash.includes(item.linkId)
+                  : false,
             })}
             key={item.linkId}
           >
