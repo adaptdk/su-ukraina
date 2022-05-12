@@ -75,9 +75,14 @@ const SlidingNavigation = ({ data, options }) => {
             <div
               onClick={() => {
                 const element = document.getElementById(item.linkId);
-                // @TODO: need to make dynamic values and not hardcoded numbers
+                const headerHeight =
+                  document.querySelector(`.Header`).offsetHeight || 66; // 66 fallback
+                const navbarHeight =
+                  document.querySelector(`.SlidingNavigation`).offsetHeight ||
+                  63; // 63 fallback
+
                 window.scrollTo({
-                  top: element.offsetTop - 66 - 63, // minus header and navbar
+                  top: element.offsetTop - headerHeight - navbarHeight,
                   left: 0,
                   behavior: `smooth`,
                 });
