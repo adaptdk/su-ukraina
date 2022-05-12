@@ -9,8 +9,18 @@
   white-space: nowrap;
   z-index: 10;
 
+  &::after {
+    background-color: #c0c0c0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+  }
+
   &__item {
-    border-bottom: 1px solid #c0c0c0;
+    align-items: center;
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
@@ -29,7 +39,17 @@
     }
 
     &--active {
-      border-bottom: 3px solid var(--c__secondary);
+      position: relative;
+
+      &::after {
+        background-color: var(--c__secondary);
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        width: 100%;
+      }
 
       > a {
         color: var(--c__primary);
