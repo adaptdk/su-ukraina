@@ -91,7 +91,7 @@ const SlidingNavigation = ({ data, options }) => {
               {!!item.icon && (
                 <span
                   className={`SlidingNavigation__icon SlidingNavigation__icon--${item.icon}`}
-                ></span>
+                />
               )}
               {item.title}
             </div>
