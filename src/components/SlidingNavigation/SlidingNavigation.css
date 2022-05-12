@@ -88,8 +88,4 @@
       mask-image: url("../../images/icons/web.svg");
     }
   }
-
-  @media (min-width: 66rem) {
-    display: none;
-  }
 }

@@ -54,7 +54,10 @@ const SlidingNavigation = ({ data, options }) => {
     }, observerOptions);
 
     data.forEach((item) => {
-      observer.observe(document.getElementById(item.linkId));
+      const element = document.getElementById(item.linkId);
+      if (element) {
+        observer.observe(element);
+      }
     });
   }, []);
 
