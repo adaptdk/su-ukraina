@@ -91,9 +91,11 @@ const Page = ({ data, pageContext }) => {
               >
                 <div className="ContactChipSections__title-wrapper">
                   <h2 className="ContactChipSections__title">
-                    <span
-                      className={`ContactChipSections__icon ContactChipSections__icon--${item.icon}`}
-                    />
+                    {!!item.icon && (
+                      <span
+                        className={`ContactChipSections__icon ContactChipSections__icon--${item.icon}`}
+                      />
+                    )}
                     {item.title}
                   </h2>
                 </div>
