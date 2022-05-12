@@ -40,7 +40,7 @@ const SlidingNavigation = ({ data, options }) => {
           // in the SlidingNavigation
           const navigationWrapper =
             document.querySelector(`.SlidingNavigation`);
-          if (navigationWrapper) {
+          if (navigationWrapper && nextActiveElement) {
             navigationWrapper.scrollTo({
               top: 0,
               left:
