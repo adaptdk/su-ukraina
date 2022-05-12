@@ -30,10 +30,6 @@ Default.args = {
       icon: `foreign`,
     },
   ],
-  options: {
-    threshold: 0.2,
-  },
-  isStorybook: true,
 };
 
 Default.parameters = {

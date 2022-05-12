@@ -4,60 +4,61 @@ import classNames from "classnames";
 
 import "./SlidingNavigation.css";
 
-const SlidingNavigation = ({ data, options, isStorybook = false }) => {
+const SlidingNavigation = ({ data, options }) => {
   const activeItemClassName = `SlidingNavigation__item--active`;
   const observerOptions = options || {
     threshold: 0.2,
   };
 
   React.useEffect(() => {
-    if (!isStorybook) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (
-            entry.isIntersecting &&
-            !window.location.hash.includes(entry.target.id)
-          ) {
-            window.history.replaceState({}, ``, `#${entry.target.id}`);
-            const currentActiveElement = document.querySelector(
-              `.${activeItemClassName}`
-            );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (
+          entry.isIntersecting &&
+          !window.location.hash.includes(entry.target.id)
+        ) {
+          window.history.replaceState({}, ``, `#${entry.target.id}`);
+          const currentActiveElement = document.querySelector(
+            `.${activeItemClassName}`
+          );
 
-            // Remove current active className
-            if (currentActiveElement) {
-              currentActiveElement.classList.remove(activeItemClassName);
-            }
-
-            const nextActiveElement = document.getElementById(
-              `${entry.target.id}-sn`
-            );
-
-            // Add an active className
-            if (nextActiveElement) {
-              nextActiveElement.classList.add(activeItemClassName);
-            }
-
-            // Scroll to current active navigation item
-            // in the SlidingNavigation
-            const navigationWrapper =
-              document.querySelector(`.SlidingNavigation`);
-            if (navigationWrapper) {
-              navigationWrapper.scrollTo({
-                top: 0,
-                left:
-                  nextActiveElement.offsetLeft -
-                  nextActiveElement.offsetWidth / 2,
-                behavior: `smooth`,
-              });
-            }
+          // Remove current active className
+          if (currentActiveElement) {
+            currentActiveElement.classList.remove(activeItemClassName);
           }
-        });
-      }, observerOptions);
 
-      data.forEach((item) => {
-        observer.observe(document.getElementById(item.linkId));
+          const nextActiveElement = document.getElementById(
+            `${entry.target.id}-sn`
+          );
+
+          // Add an active className
+          if (nextActiveElement) {
+            nextActiveElement.classList.add(activeItemClassName);
+          }
+
+          // Scroll to current active navigation item
+          // in the SlidingNavigation
+          const navigationWrapper =
+            document.querySelector(`.SlidingNavigation`);
+          if (navigationWrapper) {
+            navigationWrapper.scrollTo({
+              top: 0,
+              left:
+                nextActiveElement.offsetLeft -
+                nextActiveElement.offsetWidth / 2,
+              behavior: `smooth`,
+            });
+          }
+        }
       });
-    }
+    }, observerOptions);
+
+    data.forEach((item) => {
+      const element = document.getElementById(item.linkId);
+      if (element) {
+        observer.observe(element);
+      }
+    });
   }, []);
 
   const handleNavigationClick = (linkId) => {
@@ -114,7 +115,6 @@ SlidingNavigation.propTypes = {
   options: PropTypes.shape({
     threshold: PropTypes.number,
   }),
-  isStorybook: PropTypes.boolean,
 };
 
 export default SlidingNavigation;
