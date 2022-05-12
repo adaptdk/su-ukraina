@@ -4,19 +4,29 @@
   overflow-x: auto;
   position: sticky;
 
-  /* need that 1px otherwise there's a gap between navigation and header */
+  /* need that 1px otherwise there's a gap between navigation and header on mobile */
   top: calc(var(--header-height) - 1px);
   white-space: nowrap;
   z-index: 10;
 
-  &::after {
-    background-color: #c0c0c0;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 1px;
-    position: absolute;
-    width: 100%;
+  /*
+    This wrapper div is necessary because of
+    overflow-x parent + 100% width children behavior
+  */
+  &__wrapper {
+    display: flex;
+    flex: 1;
+    position: relative;
+
+    &::after {
+      background-color: #c0c0c0;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 1px;
+      position: absolute;
+      width: 100%;
+    }
   }
 
   &__item {

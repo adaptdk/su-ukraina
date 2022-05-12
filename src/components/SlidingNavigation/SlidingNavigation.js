@@ -68,7 +68,7 @@ const SlidingNavigation = ({ data, options }) => {
       document.querySelector(`.SlidingNavigation`).offsetHeight || 63; // 63 fallback
     if (element) {
       window.scrollTo({
-        top: element.offsetTop - headerHeight - navbarHeight,
+        top: element.offsetTop - headerHeight - navbarHeight + 1, // +1 because of css top: header - 1px;
         left: 0,
         behavior: `smooth`,
       });
@@ -77,30 +77,32 @@ const SlidingNavigation = ({ data, options }) => {
 
   return (
     <div className="SlidingNavigation">
-      {data.map((item) => {
-        return (
-          <div
-            id={`${item.linkId}-sn`}
-            className={classNames(`SlidingNavigation__item`, {
-              "SlidingNavigation__item--active":
-                typeof window !== `undefined`
-                  ? window.location.hash.includes(item.linkId)
-                  : false,
-            })}
-            onClick={() => {
-              return handleNavigationClick(item.linkId);
-            }}
-            key={item.linkId}
-          >
-            {!!item.icon && (
-              <span
-                className={`SlidingNavigation__icon SlidingNavigation__icon--${item.icon}`}
-              />
-            )}
-            {item.title}
-          </div>
-        );
-      })}
+      <div className="SlidingNavigation__wrapper">
+        {data.map((item) => {
+          return (
+            <div
+              id={`${item.linkId}-sn`}
+              className={classNames(`SlidingNavigation__item`, {
+                "SlidingNavigation__item--active":
+                  typeof window !== `undefined`
+                    ? window.location.hash.includes(item.linkId)
+                    : false,
+              })}
+              onClick={() => {
+                return handleNavigationClick(item.linkId);
+              }}
+              key={item.linkId}
+            >
+              {!!item.icon && (
+                <span
+                  className={`SlidingNavigation__icon SlidingNavigation__icon--${item.icon}`}
+                />
+              )}
+              {item.title}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
