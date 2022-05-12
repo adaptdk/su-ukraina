@@ -66,12 +66,13 @@ const SlidingNavigation = ({ data, options }) => {
     const headerHeight = document.querySelector(`.Header`).offsetHeight || 66; // 66 fallback
     const navbarHeight =
       document.querySelector(`.SlidingNavigation`).offsetHeight || 63; // 63 fallback
-
-    window.scrollTo({
-      top: element.offsetTop - headerHeight - navbarHeight,
-      left: 0,
-      behavior: `smooth`,
-    });
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - headerHeight - navbarHeight,
+        left: 0,
+        behavior: `smooth`,
+      });
+    }
   };
 
   return (
