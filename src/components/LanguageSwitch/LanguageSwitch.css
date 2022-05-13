@@ -62,11 +62,12 @@
     background: var(--c__main-bg);
     border-radius: var(--s__main-border-radius);
     box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    margin: 0;
     opacity: 0;
     overflow: hidden;
     padding: 0;
     position: absolute;
-    top: 16px;
+    right: auto;
     transition: all 0.2s ease;
     visibility: hidden;
   }
@@ -102,5 +103,9 @@
   @media (min-width: 66rem) {
     margin-left: 1rem;
     position: static;
+
+    ul {
+      right: 0;
+    }
   }
 }
