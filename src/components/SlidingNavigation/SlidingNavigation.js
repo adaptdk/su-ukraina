@@ -79,7 +79,7 @@ const SlidingNavigation = ({ data, options }) => {
 
   return (
     <div ref={navigationRef} className="SlidingNavigation">
-      <div className="SlidingNavigation__wrapper">
+      <div className="SlidingNavigation__container">
         {data.map((item) => {
           return (
             <div

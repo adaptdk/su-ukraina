@@ -13,7 +13,7 @@
     This wrapper div is necessary because of
     overflow-x parent + 100% width children behavior
   */
-  &__wrapper {
+  &__container {
     display: flex;
     flex: 1;
     position: relative;
