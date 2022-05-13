@@ -87,7 +87,7 @@ const Page = ({ data, pageContext }) => {
               <div
                 key={item.title}
                 id={item.linkId}
-                className="ContactChipSections__wrapper"
+                className="ContactChipSections__container"
               >
                 <div className="ContactChipSections__title-wrapper">
                   <h2 className="ContactChipSections__title">

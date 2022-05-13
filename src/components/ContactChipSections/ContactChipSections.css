@@ -1,5 +1,5 @@
 .ContactChipSections {
-  &__wrapper {
+  &__container {
     margin: var(--s__main-padding) 0;
   }
 
@@ -71,7 +71,7 @@
       flex: 1;
     }
 
-    &__wrapper {
+    &__container {
       border-radius: var(--s__alt-border-radius);
       box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
     }
