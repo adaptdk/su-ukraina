@@ -52,6 +52,10 @@
     }
   }
 
+  &__heading {
+    font-size: 14px;
+  }
+
   &__title {
     font-weight: var(--fw__bold);
   }
@@ -62,10 +66,18 @@
   }
 
   &:last-child {
+    border-bottom: none;
     margin-bottom: 0;
   }
 
   & + & {
     margin-top: calc(var(--s__main-padding) * -1);
+  }
+
+  @media (min-width: 66rem) {
+    &__actions > a {
+      height: 36px;
+      width: 36px;
+    }
   }
 }

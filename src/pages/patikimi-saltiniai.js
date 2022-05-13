@@ -10,6 +10,7 @@ import Constraint from "../components/Constraint";
 import Layout from "../components/Layout";
 import NavigationGroup from "../components/NavigationGroup";
 import Section from "../components/Section";
+import SlidingNavigation from "../components/SlidingNavigation";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -35,6 +36,27 @@ const Page = ({ data, pageContext }) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
 
+  const slidingNavData = [
+    {
+      title: `Asmenybės`,
+      linkId: `people`,
+      icon: `people`,
+      data: infoPeople,
+    },
+    {
+      title: `Institucijos`,
+      linkId: `institutions`,
+      icon: `institutions`,
+      data: infoOrgs,
+    },
+    {
+      title: `Užsienio šaltiniai`,
+      linkId: `foreign`,
+      icon: `foreign`,
+      data: infoForeign,
+    },
+  ];
+
   return (
     <Layout pagePath="/patikimi-saltiniai/">
       <Title>Patikimi šaltiniai</Title>
@@ -57,73 +79,44 @@ const Page = ({ data, pageContext }) => {
         </Constraint>
       )}
 
-      <Constraint>
+      <Constraint className="Constraint--contact-chip-sections">
         <ContactChipSections>
-          <details open>
-            <summary>
-              <h2>
-                <span className="ContactChipSections__icon ContactChipSections__icon--people"></span>
-                Asmenybės
-              </h2>
-            </summary>
-            {infoPeople.map((person, i) => {
-              return (
-                <ContactChip
-                  description={person.description}
-                  url={person.url}
-                  facebookUrl={person.facebook}
-                  twitterUrl={person.twitter}
-                  key={i}
-                >
-                  {person.title}
-                </ContactChip>
-              );
-            })}
-          </details>
-          <details open>
-            <summary>
-              <h2>
-                <span className="ContactChipSections__icon ContactChipSections__icon--institutions"></span>
-                Institucijos
-              </h2>
-            </summary>
-            {infoOrgs.map((org, i) => {
-              return (
-                <ContactChip
-                  description={org.description}
-                  url={org.url}
-                  facebookUrl={org.facebook}
-                  twitterUrl={org.twitter}
-                  key={i}
-                >
-                  {org.title}
-                </ContactChip>
-              );
-            })}
-          </details>
-        </ContactChipSections>
-        <ContactChipSections>
-          <details open>
-            <summary>
-              <h2>
-                <span className="ContactChipSections__icon ContactChipSections__icon--foreign"></span>
-                Užsienio šaltiniai
-              </h2>
-            </summary>
-            {infoForeign.map((foreignSource, i) => {
-              return (
-                <ContactChip
-                  description={foreignSource.description}
-                  url={foreignSource.url}
-                  facebookUrl={foreignSource.facebook}
-                  twitterUrl={foreignSource.twitter}
-                  key={i}
-                >
-                  {foreignSource.title}
-                </ContactChip>
-              );
-            })}
-          </details>
+          <SlidingNavigation data={slidingNavData} />
+          {slidingNavData.map((item) => {
+            return (
+              <div
+                key={item.title}
+                id={item.linkId}
+                className="ContactChipSections__container"
+              >
+                <div className="ContactChipSections__title-wrapper">
+                  <h2 className="ContactChipSections__title">
+                    {!!item.icon && (
+                      <span
+                        className={`ContactChipSections__icon ContactChipSections__icon--${item.icon}`}
+                      />
+                    )}
+                    {item.title}
+                  </h2>
+                </div>
+                <div className="ContactChipSections__articles">
+                  {item.data.map((unit) => {
+                    return (
+                      <ContactChip
+                        key={unit.title + unit.description}
+                        description={unit.description}
+                        url={unit.url}
+                        facebookUrl={unit.facebook}
+                        twitterUrl={unit.twitter}
+                      >
+                        {unit.title}
+                      </ContactChip>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </ContactChipSections>
       </Constraint>
     </Layout>

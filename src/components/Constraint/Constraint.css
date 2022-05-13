@@ -1,5 +1,17 @@
 .Constraint {
+  --constraint-padding: 0 var(--s__main-padding);
+
   margin: 0 auto;
   max-width: var(--s__constraint);
-  padding: 0 var(--s__main-padding);
+  padding: var(--constraint-padding);
+
+  &--contact-chip-sections {
+    padding: 0;
+  }
+
+  @media (min-width: 66rem) {
+    &--contact-chip-sections {
+      padding: var(--constraint-padding);
+    }
+  }
 }

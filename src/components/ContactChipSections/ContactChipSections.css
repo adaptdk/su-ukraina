@@ -1,50 +1,28 @@
 .ContactChipSections {
-  details {
+  &__container {
     margin: var(--s__main-padding) 0;
-
-    &[open] > summary {
-      &::after {
-        transform: rotate(135deg) translateX(-0.25em) translateY(-0.75em);
-      }
-    }
   }
 
-  summary {
+  &__title-wrapper {
     background: var(--c__secondary);
-    border-radius: var(--s__alt-border-radius);
     color: var(--c__primary);
-    cursor: pointer;
     display: flex;
     font-weight: var(--fw__bold);
     justify-content: space-between;
     list-style: none;
     padding: var(--s__main-padding);
+  }
 
-    &::-webkit-details-marker {
-      display: none;
-    }
+  &__title {
+    align-items: center;
+    display: inline-flex;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+  }
 
-    &::after {
-      border-style: solid;
-      border-width: 0.15em 0.15em 0 0;
-      content: "";
-      display: inline-block;
-      height: 0.45em;
-      left: -0.5em;
-      position: relative;
-      transform: rotate(45deg) translateX(0.625em);
-      transition: transform 0.2s ease;
-      vertical-align: top;
-      width: 0.45em;
-    }
-
-    > h2 {
-      align-items: center;
-      display: inline-flex;
-      font: inherit;
-      margin: 0;
-      padding: 0;
-    }
+  &__articles {
+    padding: 0 var(--s__main-padding);
   }
 
   &__icon {
@@ -84,7 +62,7 @@
     }
   }
 
-  @media (min-width: 50rem) {
+  @media (min-width: 66rem) {
     align-items: flex-start;
     display: flex;
     gap: var(--s__alt-padding);
@@ -93,20 +71,19 @@
       flex: 1;
     }
 
-    details {
+    &__container {
       border-radius: var(--s__alt-border-radius);
       box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
-      padding: 0 var(--s__main-padding);
+    }
 
-      > summary {
-        margin-left: calc(var(--s__main-padding) * -1);
-        margin-right: calc(var(--s__main-padding) * -1);
-      }
+    &__title-wrapper {
+      border-radius: var(--s__alt-border-radius);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
 
-      &[open] > summary {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
+    .SlidingNavigation {
+      display: none;
     }
   }
 }
