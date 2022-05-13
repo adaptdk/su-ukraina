@@ -9,6 +9,7 @@ const SlidingNavigation = ({ data, options }) => {
   const observerOptions = options || {
     threshold: 0.2,
   };
+  const navigationItemsRef = React.useRef(new Array());
 
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -18,8 +19,10 @@ const SlidingNavigation = ({ data, options }) => {
           !window.location.hash.includes(entry.target.id)
         ) {
           window.history.replaceState({}, ``, `#${entry.target.id}`);
-          const currentActiveElement = document.querySelector(
-            `.${activeItemClassName}`
+          const currentActiveElement = navigationItemsRef.current.find(
+            (item) => {
+              return item.className.includes(activeItemClassName);
+            }
           );
 
           // Remove current active className
@@ -27,9 +30,9 @@ const SlidingNavigation = ({ data, options }) => {
             currentActiveElement.classList.remove(activeItemClassName);
           }
 
-          const nextActiveElement = document.getElementById(
-            `${entry.target.id}-sn`
-          );
+          const nextActiveElement = navigationItemsRef.current.find((item) => {
+            return item.id.includes(entry.target.id);
+          });
 
           // Add an active className
           if (nextActiveElement) {
@@ -81,6 +84,9 @@ const SlidingNavigation = ({ data, options }) => {
         {data.map((item) => {
           return (
             <div
+              ref={(element) => {
+                return navigationItemsRef.current.push(element);
+              }}
               id={`${item.linkId}-sn`}
               className={classNames(`SlidingNavigation__item`, {
                 "SlidingNavigation__item--active":
