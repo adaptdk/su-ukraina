@@ -42,8 +42,7 @@ const SlidingNavigation = ({ data, options }) => {
 
           // Scroll to current active navigation item
           // in the SlidingNavigation
-          const navigationWrapper =
-            document.querySelector(`.SlidingNavigation`);
+          const navigationWrapper = navigationRef.current;
           if (navigationWrapper && nextActiveElement) {
             navigationWrapper.scrollTo({
               top: 0,
