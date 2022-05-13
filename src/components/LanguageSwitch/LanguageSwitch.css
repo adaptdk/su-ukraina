@@ -98,14 +98,14 @@
   @media (min-width: 46rem) {
     left: auto;
     right: var(--side-offset);
-
-    ul {
-      right: 0;
-    }
   }
 
   @media (min-width: 66rem) {
     margin-left: 1rem;
     position: static;
+
+    ul {
+      right: 0;
+    }
   }
 }
