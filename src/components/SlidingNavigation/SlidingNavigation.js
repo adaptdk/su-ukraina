@@ -9,6 +9,7 @@ const SlidingNavigation = ({ data, options }) => {
   const observerOptions = options || {
     threshold: 0.2,
   };
+  const navigationRef = React.useRef(null);
   const navigationItemsRef = React.useRef(new Array());
 
   React.useEffect(() => {
@@ -67,8 +68,7 @@ const SlidingNavigation = ({ data, options }) => {
   const handleNavigationClick = (linkId) => {
     const element = document.getElementById(linkId);
     const headerHeight = document.querySelector(`.Header`).offsetHeight || 66; // 66 fallback
-    const navbarHeight =
-      document.querySelector(`.SlidingNavigation`).offsetHeight || 63; // 63 fallback
+    const navbarHeight = navigationRef.current.offsetHeight || 63; // 63 fallback
     if (element) {
       window.scrollTo({
         top: element.offsetTop - headerHeight - navbarHeight + 1, // +1 because of css top: header - 1px;
@@ -79,7 +79,7 @@ const SlidingNavigation = ({ data, options }) => {
   };
 
   return (
-    <div className="SlidingNavigation">
+    <div ref={navigationRef} className="SlidingNavigation">
       <div className="SlidingNavigation__wrapper">
         {data.map((item) => {
           return (
