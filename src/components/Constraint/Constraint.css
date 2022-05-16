@@ -8,10 +8,4 @@
   &--contact-chip-sections {
     padding: 0;
   }
-
-  @media (min-width: 66rem) {
-    &--contact-chip-sections {
-      padding: var(--constraint-padding);
-    }
-  }
 }
