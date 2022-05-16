@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import "./SlidingNavigation.css";
+import Icon from "../Icon";
 
 const SlidingNavigation = ({ data, options }) => {
   const activeItemClassName = `SlidingNavigation__item--active`;
@@ -98,11 +99,7 @@ const SlidingNavigation = ({ data, options }) => {
               }}
               key={item.linkId}
             >
-              {!!item.icon && (
-                <span
-                  className={`SlidingNavigation__icon SlidingNavigation__icon--${item.icon}`}
-                />
-              )}
+              {!!item.icon && <Icon type={item.icon} />}
               {item.title}
             </div>
           );
