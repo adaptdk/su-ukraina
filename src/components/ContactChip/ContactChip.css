@@ -1,9 +1,13 @@
 .ContactChip {
-  border-bottom: 1px solid var(--c__neutral-10);
+  border-bottom: 1px solid var(--c__alt-bg);
   display: flex;
   justify-content: space-between;
   margin: var(--s__main-padding) 0;
-  padding: var(--s__main-padding) 0;
+  padding: var(--s__main-padding);
+
+  &:hover {
+    background-color: var(--c__alt-bg);
+  }
 
   &__actions {
     display: flex;
@@ -27,12 +31,9 @@
       }
 
       &:hover,
-      &:active {
-        background: #545454;
-      }
-
+      &:active,
       &:focus {
-        background: #545454;
+        background: var(--c__primary);
       }
     }
 
@@ -72,12 +73,5 @@
 
   & + & {
     margin-top: calc(var(--s__main-padding) * -1);
-  }
-
-  @media (min-width: 66rem) {
-    &__actions > a {
-      height: 36px;
-      width: 36px;
-    }
   }
 }

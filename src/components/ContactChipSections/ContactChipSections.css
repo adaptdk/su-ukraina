@@ -21,10 +21,6 @@
     padding: 0;
   }
 
-  &__articles {
-    padding: 0 var(--s__main-padding);
-  }
-
   &__icon {
     content: "";
     display: block;
@@ -39,51 +35,17 @@
 
     &--people {
       background: var(--c__primary);
-      height: 24px;
-      margin-right: 10px;
       mask-image: url("../../images/icons/people.svg");
-      width: 24px;
     }
 
     &--institutions {
       background: var(--c__primary);
-      height: 24px;
-      margin-right: 10px;
       mask-image: url("../../images/icons/institutions.svg");
-      width: 24px;
     }
 
     &--foreign {
       background: var(--c__primary);
-      height: 24px;
-      margin-right: 10px;
       mask-image: url("../../images/icons/web.svg");
-      width: 24px;
-    }
-  }
-
-  @media (min-width: 66rem) {
-    align-items: flex-start;
-    display: flex;
-    gap: var(--s__alt-padding);
-
-    > * {
-      flex: 1;
-    }
-
-    &__container {
-      border-radius: var(--s__alt-border-radius);
-      box-shadow: 0 3px 20px -1px rgb(0 0 0 / 10%);
-    }
-
-    &__title-wrapper {
-      border-radius: var(--s__alt-border-radius);
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    .SlidingNavigation {
-      display: none;
     }
   }
 }
