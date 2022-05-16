@@ -10,7 +10,7 @@ cause: "2/3 pinigų bus skirta teritorinei ginybai, tiesiogiai Ukrainai. 1/3 hum
 rekvizitai: "LT847300010171415974 \nVŠĮ Vienas k paramos fondas \nĮmonės kodas: 306036141\nAdresas:
   Vilnius, Peteliškių g. 9-10\nDirektorius: Oleg Šurajev"
 website: https://1kfund.org/
-support_link: ''
+support_link: https://donate.1kfund.org/
 logo: "../uploads/unnamed.jpg"
 
 ---
