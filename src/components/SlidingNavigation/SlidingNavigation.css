@@ -1,5 +1,5 @@
 .SlidingNavigation {
-  background: var(--c__neutral-12);
+  background: var(--c__main-bg);
   display: flex;
   overflow-x: auto;
   position: sticky;

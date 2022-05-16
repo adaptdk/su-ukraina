@@ -1,12 +1,12 @@
 .ContactChip {
-  border-bottom: 1px solid var(--c__neutral-10);
+  border-bottom: 1px solid var(--c__alt-bg);
   display: flex;
   justify-content: space-between;
   margin: var(--s__main-padding) 0;
   padding: var(--s__main-padding);
 
   &:hover {
-    background-color: var(--c__neutral-10);
+    background-color: var(--c__alt-bg);
   }
 
   &__actions {
