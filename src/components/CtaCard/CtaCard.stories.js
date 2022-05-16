@@ -16,7 +16,7 @@ const Template = (args) => {
 export const Primary = Template.bind({});
 Primary.args = {
   title: `Aukojimas`,
-  link: `/kaip-galiu-padeti/aukojimas/lietuvoje/`,
+  link: `/kaip-galiu-padeti/aukojimas/`,
   iconHandle: `donate`,
 };
 

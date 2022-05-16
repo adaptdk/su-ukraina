@@ -13,9 +13,83 @@ import NavigationGroup from "../../components/NavigationGroup";
 import Button from "../../components/Button";
 import CardSection from "../../components/Card/CardSection";
 import Section from "../../components/Section";
-import TabsButton from "../../components/TabsButton";
+import SlidingNavigation from "../../components/SlidingNavigation";
+import TitledSection from "../../components/TitledSection/TitledSection";
+
+const CardListSection = ({ organisations }) => {
+  return (
+    <CardList>
+      {organisations.map((organisation, i) => {
+        const logo = organisation.logo && (
+          <GatsbyImage
+            image={getImage(organisation.logo)}
+            alt={organisation.title}
+          />
+        );
+        return (
+          <Card title={organisation.title} logo={logo} key={i}>
+            {!!organisation.about && (
+              <CardSection title="Apie" content={organisation.about} />
+            )}
+            {!!organisation.cause && (
+              <CardSection title="Paskirtis" content={organisation.cause} />
+            )}
+            {!!organisation.rekvizitai && (
+              <CardSection
+                title="Kita informacija"
+                content={organisation.rekvizitai}
+              />
+            )}
+
+            <div className={`Card__actions`}>
+              {!!organisation.support_link && (
+                <Button
+                  endIcon={`arrow-white`}
+                  href={organisation.support_link}
+                  color={`primary`}
+                  target="_blank"
+                >
+                  Paremti
+                </Button>
+              )}
+
+              {!!organisation.website && (
+                <Button
+                  endIcon={`arrow-blue`}
+                  href={organisation.website}
+                  color={`transparent`}
+                  target="_blank"
+                >
+                  Oficialus puslapis
+                </Button>
+              )}
+            </div>
+          </Card>
+        );
+      })}
+    </CardList>
+  );
+};
 
 const Page = ({ content, organisations, pagePath, crumbs }) => {
+  const lithuanianOrganisations = organisations.filter((organisation) => {
+    return organisation.location === `Lietuvoje`;
+  });
+  const foreignOrganisations = organisations.filter((organisation) => {
+    return organisation.location !== `Lietuvoje`;
+  });
+
+  const slidingNavData = [
+    {
+      title: `Lietuvoje`,
+      linkId: `lietuvoje`,
+    },
+    {
+      title: `Užsienyje`,
+      linkId: `uzsienyje`,
+    },
+  ];
+
   return (
     <Layout pagePath={pagePath}>
       <Title>Aukojimas</Title>
@@ -39,68 +113,13 @@ const Page = ({ content, organisations, pagePath, crumbs }) => {
       )}
 
       <Constraint>
-        <section className="TabsContainer">
-          <TabsButton
-            pagePath={pagePath}
-            text={`Lietuvoje`}
-            to={`/kaip-galiu-padeti/aukojimas/lietuvoje/`}
-          />
-          <TabsButton
-            pagePath={pagePath}
-            text={`Užsienyje`}
-            to={`/kaip-galiu-padeti/aukojimas/uzsienyje/`}
-          />
-        </section>
-        <CardList>
-          {organisations.map((organisation, i) => {
-            const logo = organisation.logo && (
-              <GatsbyImage
-                image={getImage(organisation.logo)}
-                alt={organisation.title}
-              />
-            );
-            return (
-              <Card title={organisation.title} logo={logo} key={i}>
-                {!!organisation.about && (
-                  <CardSection title="Apie" content={organisation.about} />
-                )}
-                {!!organisation.cause && (
-                  <CardSection title="Paskirtis" content={organisation.cause} />
-                )}
-                {!!organisation.rekvizitai && (
-                  <CardSection
-                    title="Kita informacija"
-                    content={organisation.rekvizitai}
-                  />
-                )}
-
-                <div className={`Card__actions`}>
-                  {!!organisation.support_link && (
-                    <Button
-                      endIcon={`arrow-white`}
-                      href={organisation.support_link}
-                      color={`primary`}
-                      target="_blank"
-                    >
-                      Paremti
-                    </Button>
-                  )}
-
-                  {!!organisation.website && (
-                    <Button
-                      endIcon={`arrow-blue`}
-                      href={organisation.website}
-                      color={`transparent`}
-                      target="_blank"
-                    >
-                      Oficialus puslapis
-                    </Button>
-                  )}
-                </div>
-              </Card>
-            );
-          })}
-        </CardList>
+        <SlidingNavigation data={slidingNavData} options={{ threshold: 0.1 }} />
+        <TitledSection id="lietuvoje" title="Lietuvoje">
+          <CardListSection organisations={lithuanianOrganisations} />
+        </TitledSection>
+        <TitledSection id="uzsienyje" title="Užsienyje">
+          <CardListSection organisations={foreignOrganisations} />
+        </TitledSection>
       </Constraint>
     </Layout>
   );
@@ -126,6 +145,21 @@ Page.propTypes = {
     })
   ),
   pagePath: PropTypes.string,
+};
+
+CardListSection.propTypes = {
+  organisations: PropTypes.arrayOf(
+    PropTypes.shape({
+      about: PropTypes.string,
+      cause: PropTypes.string,
+      rekvizitai: PropTypes.string,
+      title: PropTypes.string,
+      website: PropTypes.string,
+      support_link: PropTypes.string,
+      logo: PropTypes.object,
+      location: PropTypes.string,
+    })
+  ),
 };
 
 export default Page;

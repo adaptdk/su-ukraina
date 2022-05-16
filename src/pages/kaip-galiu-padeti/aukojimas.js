@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import Aukojimas from "../../../shared-pages/Aukojimas";
+import Aukojimas from "../../shared-pages/Aukojimas";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -19,13 +19,12 @@ const Page = ({ data, pageContext }) => {
   const organisations = data.organisations.edges.map((edge) => {
     return edge.node.childMarkdownRemark.frontmatter;
   });
-
   return (
     <Aukojimas
       crumbs={crumbs}
       content={content}
       organisations={organisations}
-      pagePath="/kaip-galiu-padeti/aukojimas/lietuvoje/"
+      pagePath="/kaip-galiu-padeti/aukojimas/"
     />
   );
 };
@@ -53,10 +52,7 @@ export const query = graphql`
       }
     }
     organisations: allFile(
-      filter: {
-        sourceInstanceName: { eq: "orgs-for-donating" }
-        childMarkdownRemark: { frontmatter: { location: { eq: "Lietuvoje" } } }
-      }
+      filter: { sourceInstanceName: { eq: "orgs-for-donating" } }
       sort: { fields: childMarkdownRemark___frontmatter___weight }
     ) {
       edges {

@@ -1,4 +1,4 @@
-export const PATH_HOW_TO_DONATE = `/kaip-galiu-padeti/aukojimas/lietuvoje/`;
+export const PATH_HOW_TO_DONATE = `/kaip-galiu-padeti/aukojimas/`;
 export const PATH_HOW_TO_VOLUNTEER = `/kaip-galiu-padeti/savanoryste/`;
 export const ICON_DONATE = `donate`;
 export const ICON_VOLUNTEER = `volunteer`;
