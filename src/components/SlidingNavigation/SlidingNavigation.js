@@ -65,7 +65,7 @@ const SlidingNavigation = ({ data, options }) => {
     });
   }, []);
 
-  const handleNavigationClick = (linkId) => {
+  const handleNavigationClick = (e, linkId) => {
     const element = document.getElementById(linkId);
     const headerHeight = document.querySelector(`.Header`).offsetHeight || 66; // 66 fallback
     const navbarHeight = navigationRef.current.offsetHeight || 63; // 63 fallback
@@ -76,6 +76,7 @@ const SlidingNavigation = ({ data, options }) => {
         behavior: `smooth`,
       });
     }
+    e.preventDefault();
   };
 
   return (
@@ -83,25 +84,26 @@ const SlidingNavigation = ({ data, options }) => {
       <div className="SlidingNavigation__container">
         {data.map((item) => {
           return (
-            <div
+            <a
               ref={(element) => {
                 return navigationItemsRef.current.push(element);
               }}
               id={`${item.linkId}-sn`}
+              href={`#${item.linkId}`}
               className={classNames(`SlidingNavigation__item`, {
                 "SlidingNavigation__item--active":
                   typeof window !== `undefined`
                     ? window.location.hash.includes(item.linkId)
                     : false,
               })}
-              onClick={() => {
-                return handleNavigationClick(item.linkId);
+              onClick={(e) => {
+                return handleNavigationClick(e, item.linkId);
               }}
               key={item.linkId}
             >
               {!!item.icon && <Icon type={item.icon} />}
               {item.title}
-            </div>
+            </a>
           );
         })}
       </div>
