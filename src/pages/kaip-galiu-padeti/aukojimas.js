@@ -90,7 +90,7 @@ const Page = ({ data, pageContext }) => {
     return organisation.location === `Lietuvoje`;
   });
   const foreignOrganisations = organisations.filter((organisation) => {
-    return organisation.location !== `Lietuvoje`;
+    return organisation.location === `Užsienyje`;
   });
 
   const slidingNavData = [
