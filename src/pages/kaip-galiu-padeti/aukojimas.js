@@ -97,10 +97,14 @@ const Page = ({ data, pageContext }) => {
     {
       title: `Lietuvoje`,
       linkId: `lietuvoje`,
+      icon: `house`,
+      data: lithuanianOrganisations,
     },
     {
       title: `Užsienyje`,
       linkId: `uzsienyje`,
+      icon: `foreign`,
+      data: foreignOrganisations,
     },
   ];
 
@@ -128,12 +132,18 @@ const Page = ({ data, pageContext }) => {
 
       <Constraint>
         <SlidingNavigation data={slidingNavData} options={{ threshold: 0.1 }} />
-        <TitledSection id="lietuvoje" title="Lietuvoje">
-          <CardListSection organisations={lithuanianOrganisations} />
-        </TitledSection>
-        <TitledSection id="uzsienyje" title="Užsienyje">
-          <CardListSection organisations={foreignOrganisations} />
-        </TitledSection>
+        {slidingNavData.map((item) => {
+          return (
+            <TitledSection
+              key={item.linkId}
+              id={item.linkId}
+              title={item.title}
+              icon={item.icon}
+            >
+              <CardListSection organisations={item.data} />
+            </TitledSection>
+          );
+        })}
       </Constraint>
     </Layout>
   );

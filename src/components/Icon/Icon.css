@@ -24,4 +24,9 @@
     background: var(--c__primary);
     mask-image: url("../../images/icons/web.svg");
   }
+
+  &--house {
+    background: var(--c__primary);
+    mask-image: url("../../images/icons/house.svg");
+  }
 }
