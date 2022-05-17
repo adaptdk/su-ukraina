@@ -7,13 +7,20 @@ import Icon from "../Icon";
 
 const SlidingNavigation = ({ data, options }) => {
   const activeItemClassName = `SlidingNavigation__item--active`;
-  const observerOptions = options || {
-    threshold: 0.2,
-  };
   const navigationRef = React.useRef(null);
   const navigationItemsRef = React.useRef(new Array());
 
+  const defaultObserverOptions = () => {
+    const headerHeight = document.querySelector(`.Header`).offsetHeight || 88; // 88 fallback
+    const navbarHeight = navigationRef.current.offsetHeight || 56; // 56 fallback
+    return {
+      threshold: 0,
+      rootMargin: `-${headerHeight + navbarHeight}px 0px`,
+    };
+  };
+
   React.useEffect(() => {
+    const observerOptions = options || defaultObserverOptions();
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (
@@ -67,8 +74,8 @@ const SlidingNavigation = ({ data, options }) => {
 
   const handleNavigationClick = (e, linkId) => {
     const element = document.getElementById(linkId);
-    const headerHeight = document.querySelector(`.Header`).offsetHeight || 66; // 66 fallback
-    const navbarHeight = navigationRef.current.offsetHeight || 63; // 63 fallback
+    const headerHeight = document.querySelector(`.Header`).offsetHeight || 88; // 88 fallback
+    const navbarHeight = navigationRef.current.offsetHeight || 56; // 56 fallback
     if (element) {
       window.scrollTo({
         top: element.offsetTop - headerHeight - navbarHeight + 1, // +1 because of css top: header - 1px;
@@ -121,6 +128,7 @@ SlidingNavigation.propTypes = {
   ),
   options: PropTypes.shape({
     threshold: PropTypes.number,
+    rootMargin: PropTypes.string,
   }),
 };
 
