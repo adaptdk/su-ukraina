@@ -79,7 +79,7 @@ const Page = ({ data, pageContext }) => {
         </Constraint>
       )}
 
-      <Constraint className="Constraint--contact-chip-sections">
+      <Constraint className="Constraint--sliding-nav">
         <SlidingNavigation data={slidingNavData} />
         {slidingNavData.map((item) => {
           return (

@@ -130,7 +130,7 @@ const Page = ({ data, pageContext }) => {
         </Constraint>
       )}
 
-      <Constraint>
+      <Constraint className="Constraint--sliding-nav">
         <SlidingNavigation data={slidingNavData} options={{ threshold: 0.1 }} />
         {slidingNavData.map((item) => {
           return (
