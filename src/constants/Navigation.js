@@ -4,14 +4,8 @@ export const NAVIGATION_ITEM_HOW_CAN_I_HELP = {
   title: `Kaip galiu padėti?`,
 };
 
-export const NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA = {
-  pathname: `/kaip-galiu-padeti/aukojimas/lietuvoje/`,
-  title: `Aukojimas`,
-  iconHandle: `donate`,
-};
-
-export const NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_ABROAD = {
-  pathname: `/kaip-galiu-padeti/aukojimas/uzsienyje/`,
+export const NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION = {
+  pathname: `/kaip-galiu-padeti/aukojimas/`,
   title: `Aukojimas`,
   iconHandle: `donate`,
 };
@@ -89,7 +83,7 @@ export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
 
 // Navigation of how can I help page.
 export const NAVIGATION_HOW_CAN_I_HELP = [
-  NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA,
+  NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION,
   NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER,
 ];
 
@@ -152,17 +146,14 @@ export const ADDITIONAL_NAVIGATION = {
     //NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION,
   ],
   [NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER.pathname]: [
-    NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA,
+    NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION,
   ],
   [NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS.pathname]: [
     NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY,
     NAVIGATION_ITEM_EVENTS,
   ],
   [NAVIGATION_ITEM_EVENTS.pathname]: [],
-  [NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_LITHUANIA.pathname]: [
-    NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER,
-  ],
-  [NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION_ABROAD.pathname]: [
+  [NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION.pathname]: [
     NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER,
   ],
   [NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY.pathname]: [

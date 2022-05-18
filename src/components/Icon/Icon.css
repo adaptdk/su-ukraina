@@ -1,0 +1,32 @@
+.Icon {
+  content: "";
+  display: block;
+  display: inline-block;
+  height: 24px;
+  margin-right: 10px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  position: relative;
+  width: 24px;
+
+  &--people {
+    background: var(--c__primary);
+    mask-image: url("../../images/icons/people.svg");
+  }
+
+  &--institutions {
+    background: var(--c__primary);
+    mask-image: url("../../images/icons/institutions.svg");
+  }
+
+  &--foreign {
+    background: var(--c__primary);
+    mask-image: url("../../images/icons/web.svg");
+  }
+
+  &--house {
+    background: var(--c__primary);
+    mask-image: url("../../images/icons/house.svg");
+  }
+}

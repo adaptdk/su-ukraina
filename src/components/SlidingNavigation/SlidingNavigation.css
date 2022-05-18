@@ -30,25 +30,23 @@
   }
 
   &__item {
+    --grey-color: #6b6b6b;
+
     align-items: center;
+    color: var(--grey-color);
     cursor: pointer;
-    display: inline-flex;
+    display: flex;
+    font-weight: var(--fw__bold);
     justify-content: center;
     padding: var(--s__main-padding);
+    text-decoration: none;
 
-    > a {
-      align-items: center;
-      color: #6b6b6b;
-      display: flex;
-      font-weight: var(--fw__bold);
-      text-decoration: none;
-
-      > span {
-        background-color: #6b6b6b;
-      }
+    > span {
+      background-color: var(--grey-color);
     }
 
     &--active {
+      color: var(--c__primary);
       position: relative;
 
       &::after {
@@ -62,41 +60,9 @@
         z-index: 1;
       }
 
-      > a {
-        color: var(--c__primary);
-
-        > span {
-          background-color: var(--c__primary);
-        }
+      > span {
+        background-color: var(--c__primary);
       }
-    }
-  }
-
-  &__icon {
-    content: "";
-    display: block;
-    display: inline-block;
-    height: 24px;
-    margin-right: 10px;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    position: relative;
-    width: 24px;
-
-    &--people {
-      background: var(--c__primary);
-      mask-image: url("../../images/icons/people.svg");
-    }
-
-    &--institutions {
-      background: var(--c__primary);
-      mask-image: url("../../images/icons/institutions.svg");
-    }
-
-    &--foreign {
-      background: var(--c__primary);
-      mask-image: url("../../images/icons/web.svg");
     }
   }
 }

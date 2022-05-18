@@ -3,8 +3,16 @@
 @import "./_typography.css";
 
 :root {
-  /* Mobile header height that's later overriden with JS */
-  --header-height: 71px;
+  /* Header height fallbacks that are later overriden with JS */
+  --header-height: 63px;
+
+  @media (min-width: 46rem) {
+    --header-height: 71px;
+  }
+
+  @media (min-width: 66rem) {
+    --header-height: 88px;
+  }
 }
 
 body,

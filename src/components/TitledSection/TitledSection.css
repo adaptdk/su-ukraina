@@ -1,0 +1,23 @@
+.TitledSection {
+  &__container {
+    margin: var(--s__main-padding) 0;
+  }
+
+  &__title-wrapper {
+    background: var(--c__secondary);
+    color: var(--c__primary);
+    display: flex;
+    font-weight: var(--fw__bold);
+    justify-content: space-between;
+    list-style: none;
+    padding: var(--s__main-padding);
+  }
+
+  &__title {
+    align-items: center;
+    display: inline-flex;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+  }
+}

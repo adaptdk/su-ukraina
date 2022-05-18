@@ -12,14 +12,7 @@ module.exports = {
       pathname: `/kaip-galiu-padeti/savanoryste`,
       crumbLabel: `Savanorystė`,
     },
-    {
-      pathname: `/kaip-galiu-padeti/aukojimas/lietuvoje`,
-      crumbLabel: `Lietuvoje`,
-    },
-    {
-      pathname: `/kaip-galiu-padeti/aukojimas/uzsienyje`,
-      crumbLabel: `Užsienyje`,
-    },
+
     {
       pathname: `/bukime-budrus`,
       crumbLabel: `Būkime budrūs`,

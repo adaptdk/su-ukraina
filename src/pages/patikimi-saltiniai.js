@@ -5,7 +5,7 @@ import { Title, Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import ContactChip from "../components/ContactChip";
-import ContactChipSections from "../components/ContactChipSections";
+import TitledSection from "../components/TitledSection";
 import Constraint from "../components/Constraint";
 import Layout from "../components/Layout";
 import NavigationGroup from "../components/NavigationGroup";
@@ -79,45 +79,32 @@ const Page = ({ data, pageContext }) => {
         </Constraint>
       )}
 
-      <Constraint className="Constraint--contact-chip-sections">
-        <ContactChipSections>
-          <SlidingNavigation data={slidingNavData} />
-          {slidingNavData.map((item) => {
-            return (
-              <div
-                key={item.title}
-                id={item.linkId}
-                className="ContactChipSections__container"
-              >
-                <div className="ContactChipSections__title-wrapper">
-                  <h2 className="ContactChipSections__title">
-                    {!!item.icon && (
-                      <span
-                        className={`ContactChipSections__icon ContactChipSections__icon--${item.icon}`}
-                      />
-                    )}
-                    {item.title}
-                  </h2>
-                </div>
-                <div className="ContactChipSections__articles">
-                  {item.data.map((unit) => {
-                    return (
-                      <ContactChip
-                        key={unit.title + unit.description}
-                        description={unit.description}
-                        url={unit.url}
-                        facebookUrl={unit.facebook}
-                        twitterUrl={unit.twitter}
-                      >
-                        {unit.title}
-                      </ContactChip>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </ContactChipSections>
+      <Constraint className="Constraint--sliding-nav">
+        <SlidingNavigation data={slidingNavData} />
+        {slidingNavData.map((item) => {
+          return (
+            <TitledSection
+              key={item.title}
+              id={item.linkId}
+              title={item.title}
+              icon={item.icon}
+            >
+              {item.data.map((unit) => {
+                return (
+                  <ContactChip
+                    key={unit.title + unit.description}
+                    description={unit.description}
+                    url={unit.url}
+                    facebookUrl={unit.facebook}
+                    twitterUrl={unit.twitter}
+                  >
+                    {unit.title}
+                  </ContactChip>
+                );
+              })}
+            </TitledSection>
+          );
+        })}
       </Constraint>
     </Layout>
   );
