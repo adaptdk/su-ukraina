@@ -10,9 +10,14 @@ const SlidingNavigation = ({ data, options }) => {
   const navigationRef = React.useRef(null);
   const navigationItemsRef = React.useRef(new Array());
 
-  const defaultObserverOptions = () => {
+  const getOffsetHeights = () => {
     const headerHeight = document.querySelector(`.Header`).offsetHeight || 88; // 88 fallback
     const navbarHeight = navigationRef.current.offsetHeight || 56; // 56 fallback
+    return { headerHeight, navbarHeight };
+  };
+
+  const getDefaultObserverOptions = () => {
+    const { headerHeight, navbarHeight } = getOffsetHeights();
     return {
       threshold: [0, 1],
       rootMargin: `-${headerHeight + navbarHeight}px 0px`,
@@ -53,7 +58,7 @@ const SlidingNavigation = ({ data, options }) => {
   };
 
   React.useEffect(() => {
-    const observerOptions = options || defaultObserverOptions();
+    const observerOptions = options || getDefaultObserverOptions();
     const visible = [];
 
     const observer = new IntersectionObserver((entries) => {
@@ -82,8 +87,7 @@ const SlidingNavigation = ({ data, options }) => {
 
   const handleNavigationClick = (e, linkId) => {
     const element = document.getElementById(linkId);
-    const headerHeight = document.querySelector(`.Header`).offsetHeight || 88; // 88 fallback
-    const navbarHeight = navigationRef.current.offsetHeight || 56; // 56 fallback
+    const { headerHeight, navbarHeight } = getOffsetHeights();
     if (element) {
       window.scrollTo({
         top: element.offsetTop - headerHeight - navbarHeight + 1, // +1 because of css top: header - 1px;
