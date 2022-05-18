@@ -14,54 +14,58 @@ const SlidingNavigation = ({ data, options }) => {
     const headerHeight = document.querySelector(`.Header`).offsetHeight || 88; // 88 fallback
     const navbarHeight = navigationRef.current.offsetHeight || 56; // 56 fallback
     return {
-      threshold: 0,
+      threshold: [0, 1],
       rootMargin: `-${headerHeight + navbarHeight}px 0px`,
     };
   };
 
+  const setActiveNavigation = (id) => {
+    window.history.replaceState({}, ``, `#${id}`);
+
+    const currentActiveElement = navigationItemsRef.current.find((item) => {
+      return item.className.includes(activeItemClassName);
+    });
+
+    // Remove current active className
+    if (currentActiveElement) {
+      currentActiveElement.classList.remove(activeItemClassName);
+    }
+
+    const nextActiveElement = navigationItemsRef.current.find((item) => {
+      return item.id.includes(id);
+    });
+
+    // Add an active className
+    if (nextActiveElement) {
+      nextActiveElement.classList.add(activeItemClassName);
+    }
+
+    // Scroll to current active navigation item
+    // in the SlidingNavigation
+    const navigationWrapper = navigationRef.current;
+    if (navigationWrapper && nextActiveElement) {
+      navigationWrapper.scrollTo({
+        top: 0,
+        left: nextActiveElement.offsetLeft - nextActiveElement.offsetWidth / 2,
+        behavior: `smooth`,
+      });
+    }
+  };
+
   React.useEffect(() => {
     const observerOptions = options || defaultObserverOptions();
+    const visible = [];
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (
-          entry.isIntersecting &&
-          !window.location.hash.includes(entry.target.id)
-        ) {
-          window.history.replaceState({}, ``, `#${entry.target.id}`);
-          const currentActiveElement = navigationItemsRef.current.find(
-            (item) => {
-              return item.className.includes(activeItemClassName);
-            }
-          );
-
-          // Remove current active className
-          if (currentActiveElement) {
-            currentActiveElement.classList.remove(activeItemClassName);
-          }
-
-          const nextActiveElement = navigationItemsRef.current.find((item) => {
-            return item.id.includes(entry.target.id);
-          });
-
-          // Add an active className
-          if (nextActiveElement) {
-            nextActiveElement.classList.add(activeItemClassName);
-          }
-
-          // Scroll to current active navigation item
-          // in the SlidingNavigation
-          const navigationWrapper = navigationRef.current;
-          if (navigationWrapper && nextActiveElement) {
-            navigationWrapper.scrollTo({
-              top: 0,
-              left:
-                nextActiveElement.offsetLeft -
-                nextActiveElement.offsetWidth / 2,
-              behavior: `smooth`,
-            });
-          }
+        if (visible.includes(entry.target.id) && !entry.isIntersecting) {
+          return visible.splice(visible.indexOf(entry.target.id), 1);
+        }
+        if (!visible.includes(entry.target.id) && entry.isIntersecting) {
+          return visible.push(entry.target.id);
         }
       });
+      setActiveNavigation(visible[visible.length - 1]);
     }, observerOptions);
 
     data.forEach((item) => {
@@ -127,7 +131,10 @@ SlidingNavigation.propTypes = {
     })
   ),
   options: PropTypes.shape({
-    threshold: PropTypes.number,
+    threshold: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.arrayOf(PropTypes.number),
+    ]),
     rootMargin: PropTypes.string,
   }),
 };
