@@ -20,7 +20,7 @@ const TitledSection = ({ id = ``, children, title, icon }) => {
 
 TitledSection.propTypes = {
   id: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   icon: PropTypes.string,
   children: PropTypes.node,
 };
