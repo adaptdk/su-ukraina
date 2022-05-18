@@ -74,6 +74,10 @@ const SlidingNavigation = ({ data, options }) => {
         observer.observe(element);
       }
     });
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   const handleNavigationClick = (e, linkId) => {
