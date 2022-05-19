@@ -11,15 +11,23 @@
     --icon-size: 48px;
   }
 
+  background: #fff;
   content: "";
   display: inline-block;
   height: var(--icon-size);
-  margin-right: 10px;
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: contain;
   position: relative;
   width: var(--icon-size);
+
+  &--start {
+    margin-right: 10px;
+  }
+
+  &--end {
+    margin-left: 10px;
+  }
 
   &--people {
     mask-image: url("../../images/icons/people.svg");
@@ -35,5 +43,82 @@
 
   &--house {
     mask-image: url("../../images/icons/house.svg");
+  }
+
+  &--donate {
+    mask-image: url("../../images/icons/donate.svg");
+  }
+
+  &--volunteer {
+    mask-image: url("../../images/icons/volunteer.svg");
+  }
+
+  &--arrow-white {
+    mask-image: url("../../images/icons/arrow-white.svg");
+  }
+
+  &--arrow-blue {
+    background: #3f51b5;
+    mask-image: url("../../images/icons/arrow-blue.svg");
+  }
+
+  &--edit {
+    mask-image: url("../../images/icons/edit.svg");
+  }
+
+  &--brain {
+    mask-image: url("../../images/icons/brain.svg");
+  }
+
+  &--briefcase {
+    mask-image: url("../../images/icons/briefcase.svg");
+  }
+
+  &--building-columns {
+    mask-image: url("../../images/icons/building-columns.svg");
+  }
+
+  &--bus-simple {
+    mask-image: url("../../images/icons/bus-simple.svg");
+  }
+
+  &--child-reaching {
+    mask-image: url("../../images/icons/child-reaching.svg");
+  }
+
+  &--coins {
+    mask-image: url("../../images/icons/coins.svg");
+  }
+
+  &--hands-holding-heart {
+    mask-image: url("../../images/icons/hands-holding-heart.svg");
+  }
+
+  &--key-skeleton {
+    mask-image: url("../../images/icons/key-skeleton.svg");
+  }
+
+  &--mobile-screen-button {
+    mask-image: url("../../images/icons/mobile-screen-button.svg");
+  }
+
+  &--parachute-box {
+    mask-image: url("../../images/icons/parachute-box.svg");
+  }
+
+  &--paw {
+    mask-image: url("../../images/icons/paw.svg");
+  }
+
+  &--phone {
+    mask-image: url("../../images/icons/phone.svg");
+  }
+
+  &--suitcase-medical {
+    mask-image: url("../../images/icons/suitcase-medical.svg");
+  }
+
+  &--user-police {
+    mask-image: url("../../images/icons/user-police.svg");
   }
 }

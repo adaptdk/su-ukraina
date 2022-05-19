@@ -2,6 +2,8 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
+import Icon from "../Icon";
+
 // Styles.
 import "./Button.css";
 
@@ -36,17 +38,9 @@ const Button = ({
       }`}
       {...props}
     >
-      {startIcon && (
-        <span
-          className={`Button__icon Button__icon--start Button__icon--${startIcon}`}
-        />
-      )}
+      {startIcon && <Icon type={startIcon} align="start" />}
       <span className="Button__body">{children}</span>
-      {endIcon && (
-        <span
-          className={`Button__icon Button__icon--end Button__icon--${endIcon}`}
-        />
-      )}
+      {endIcon && <Icon type={endIcon} align="end" />}
     </Tag>
   );
 };
