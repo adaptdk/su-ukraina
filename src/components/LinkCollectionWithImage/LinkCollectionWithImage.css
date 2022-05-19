@@ -48,12 +48,10 @@
     padding: 0;
     text-transform: none;
 
-    &__icon {
-      &::before {
-        height: 32px;
-        margin-left: var(--s__main-padding);
-        width: 32px;
-      }
+    .Icon {
+      --icon-size: 32px;
+
+      margin-left: var(--s__main-padding);
     }
 
     &:hover {

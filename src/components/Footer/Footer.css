@@ -53,6 +53,10 @@
     .Button {
       justify-content: center;
 
+      .Icon {
+        background: #3f51b5;
+      }
+
       + .Button {
         margin-left: 0;
       }
