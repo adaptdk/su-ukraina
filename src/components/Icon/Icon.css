@@ -22,22 +22,18 @@
   width: var(--icon-size);
 
   &--people {
-    background: var(--c__primary);
     mask-image: url("../../images/icons/people.svg");
   }
 
   &--institutions {
-    background: var(--c__primary);
     mask-image: url("../../images/icons/institutions.svg");
   }
 
   &--foreign {
-    background: var(--c__primary);
     mask-image: url("../../images/icons/web.svg");
   }
 
   &--house {
-    background: var(--c__primary);
     mask-image: url("../../images/icons/house.svg");
   }
 }
