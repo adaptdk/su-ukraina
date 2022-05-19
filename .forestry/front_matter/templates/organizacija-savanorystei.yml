@@ -71,5 +71,6 @@ fields:
     maxSize: 64
   label: Logo
 pages:
+- src/content/organizacijos-savanorystei/dienos-stovyklos-ir-bureliai-ukrainos-vaikams.md
 - src/content/organizacijos-savanorystei/niekieno-vaikai.md
 - src/content/organizacijos-savanorystei/saugus-prieglobstis.md
