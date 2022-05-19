@@ -1,6 +1,6 @@
 ---
 title: Dienos stovyklos ir būreliai Ukrainos vaikams
-startDate: 2022-05-20T21:00:00Z
+startDate: 2022-05-21T09:00:00Z
 location: Vilnius
 endDate: 
 eventType: Nemokami užsiėmimai ir pagalba vaikams, atvykusiems iš Ukrainos
