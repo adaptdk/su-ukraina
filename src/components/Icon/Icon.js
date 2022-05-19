@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 
 import "./Icon.css";
 
-const Icon = ({ type }) => {
-  return <span className={`Icon Icon--${type}`} />;
+const Icon = ({ type, size = `small` }) => {
+  return <span className={`Icon Icon--${size} Icon--${type}`} />;
 };
 
 Icon.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  size: PropTypes.string,
 };
 
 export default Icon;

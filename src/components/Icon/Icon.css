@@ -1,14 +1,25 @@
 .Icon {
+  &--small {
+    --icon-size: 24px;
+  }
+
+  &--medium {
+    --icon-size: 36px;
+  }
+
+  &--large {
+    --icon-size: 48px;
+  }
+
   content: "";
-  display: block;
   display: inline-block;
-  height: 24px;
+  height: var(--icon-size);
   margin-right: 10px;
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: contain;
   position: relative;
-  width: 24px;
+  width: var(--icon-size);
 
   &--people {
     background: var(--c__primary);
