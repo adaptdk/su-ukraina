@@ -1,4 +1,6 @@
 .Icon {
+  --icon-margin: 10px;
+
   &--small {
     --icon-size: 24px;
   }
@@ -21,14 +23,16 @@
   position: relative;
   width: var(--icon-size);
 
+  /* Alignment */
   &--start {
-    margin-right: 10px;
+    margin-right: var(--icon-margin);
   }
 
   &--end {
-    margin-left: 10px;
+    margin-left: var(--icon-margin);
   }
 
+  /* Icon Types */
   &--people {
     mask-image: url("../../images/icons/people.svg");
   }

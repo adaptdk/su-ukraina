@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 import "./Icon.css";
 
-const Icon = ({ type, size = `small`, align = `start`, className = `` }) => {
+const Icon = ({ type, className = ``, align = `start`, size = `small` }) => {
   return (
     <span
-      className={`Icon ${className} Icon--${align} Icon--${size} Icon--${type}`}
+      className={`Icon Icon--${type} ${className} Icon--${align} Icon--${size}`}
     />
   );
 };
