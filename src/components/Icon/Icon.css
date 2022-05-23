@@ -23,13 +23,19 @@
   position: relative;
   width: var(--icon-size);
 
-  /* Alignment */
-  &--start {
-    margin-right: var(--icon-margin);
+  .Button > & {
+    &:first-child {
+      margin-right: var(--icon-margin);
+    }
+
+    &:last-child {
+      margin-left: var(--icon-margin);
+    }
   }
 
-  &--end {
-    margin-left: var(--icon-margin);
+  .SlidingNavigation__item > &,
+  .TitledSection__title > & {
+    margin-right: var(--icon-margin);
   }
 
   /* Icon Types */

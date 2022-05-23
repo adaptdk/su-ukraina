@@ -38,9 +38,9 @@ const Button = ({
       }`}
       {...props}
     >
-      {startIcon && <Icon type={startIcon} align="start" />}
+      {startIcon && <Icon type={startIcon} />}
       <span className="Button__body">{children}</span>
-      {endIcon && <Icon type={endIcon} align="end" />}
+      {endIcon && <Icon type={endIcon} />}
     </Tag>
   );
 };
