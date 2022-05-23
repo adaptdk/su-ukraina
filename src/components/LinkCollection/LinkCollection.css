@@ -28,18 +28,16 @@
       text-transform: none;
       width: 100%;
 
+      &::after {
+        display: none;
+      }
+
       &:hover,
       &:focus {
         color: var(--c__secondary);
 
-        .Button__icon {
-          &::before {
-            background-color: var(--c__secondary);
-          }
-        }
-
-        &::after {
-          display: none;
+        .Icon {
+          background-color: var(--c__secondary);
         }
       }
     }
@@ -69,7 +67,7 @@
       box-shadow: none;
       justify-content: center;
 
-      &__icon {
+      .Icon {
         display: none;
       }
     }
