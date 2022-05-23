@@ -42,11 +42,17 @@ export default {
 const Template = (args) => {
   return <Icon {...args} />;
 };
-
 export const Small = Template.bind({});
 Small.args = {
   type: `house`,
   size: `small`,
+};
+
+Small.parameters = {
+  design: {
+    type: `figma`,
+    url: `https://www.figma.com/file/SbHEfVWgFSozSl1m5oJdmd/Suukraina.lt?node-id=51%3A12590`,
+  },
 };
 
 export const Medium = Template.bind({});
@@ -55,8 +61,16 @@ Medium.args = {
   size: `medium`,
 };
 
+Medium.parameters = {
+  ...Small.parameters,
+};
+
 export const Large = Template.bind({});
 Large.args = {
   ...Small.args,
   size: `large`,
+};
+
+Large.parameters = {
+  ...Small.parameters,
 };
