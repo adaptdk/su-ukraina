@@ -1,32 +1,135 @@
 .Icon {
+  --icon-margin: 10px;
+
+  &--small {
+    --icon-size: 24px;
+  }
+
+  &--medium {
+    --icon-size: 36px;
+  }
+
+  &--large {
+    --icon-size: 48px;
+  }
+
+  background: currentcolor;
   content: "";
-  display: block;
   display: inline-block;
-  height: 24px;
-  margin-right: 10px;
+  height: var(--icon-size);
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: contain;
   position: relative;
-  width: 24px;
+  width: var(--icon-size);
 
+  .Button > & {
+    &:first-child {
+      margin-right: var(--icon-margin);
+    }
+
+    &:last-child {
+      margin-left: var(--icon-margin);
+    }
+  }
+
+  .SlidingNavigation__item > &,
+  .TitledSection__title > & {
+    margin-right: var(--icon-margin);
+  }
+
+  /* Icon Types */
   &--people {
-    background: var(--c__primary);
     mask-image: url("../../images/icons/people.svg");
   }
 
   &--institutions {
-    background: var(--c__primary);
     mask-image: url("../../images/icons/institutions.svg");
   }
 
   &--foreign {
-    background: var(--c__primary);
     mask-image: url("../../images/icons/web.svg");
   }
 
   &--house {
-    background: var(--c__primary);
     mask-image: url("../../images/icons/house.svg");
+  }
+
+  &--donate {
+    mask-image: url("../../images/icons/donate.svg");
+  }
+
+  &--volunteer {
+    mask-image: url("../../images/icons/volunteer.svg");
+  }
+
+  &--arrow-white {
+    background: #fff;
+    mask-image: url("../../images/icons/arrow-white.svg");
+  }
+
+  &--arrow-blue {
+    background: #3f51b5;
+    mask-image: url("../../images/icons/arrow-blue.svg");
+  }
+
+  &--edit {
+    mask-image: url("../../images/icons/edit.svg");
+  }
+
+  &--brain {
+    mask-image: url("../../images/icons/brain.svg");
+  }
+
+  &--briefcase {
+    mask-image: url("../../images/icons/briefcase.svg");
+  }
+
+  &--building-columns {
+    mask-image: url("../../images/icons/building-columns.svg");
+  }
+
+  &--bus-simple {
+    mask-image: url("../../images/icons/bus-simple.svg");
+  }
+
+  &--child-reaching {
+    mask-image: url("../../images/icons/child-reaching.svg");
+  }
+
+  &--coins {
+    mask-image: url("../../images/icons/coins.svg");
+  }
+
+  &--hands-holding-heart {
+    mask-image: url("../../images/icons/hands-holding-heart.svg");
+  }
+
+  &--key-skeleton {
+    mask-image: url("../../images/icons/key-skeleton.svg");
+  }
+
+  &--mobile-screen-button {
+    mask-image: url("../../images/icons/mobile-screen-button.svg");
+  }
+
+  &--parachute-box {
+    mask-image: url("../../images/icons/parachute-box.svg");
+  }
+
+  &--paw {
+    mask-image: url("../../images/icons/paw.svg");
+  }
+
+  &--phone {
+    mask-image: url("../../images/icons/phone.svg");
+  }
+
+  &--suitcase-medical {
+    mask-image: url("../../images/icons/suitcase-medical.svg");
+  }
+
+  &--user-police {
+    mask-image: url("../../images/icons/user-police.svg");
   }
 }

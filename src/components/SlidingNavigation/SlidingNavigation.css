@@ -41,7 +41,7 @@
     padding: var(--s__main-padding);
     text-decoration: none;
 
-    > span {
+    .Icon {
       background-color: var(--grey-color);
     }
 
@@ -60,7 +60,7 @@
         z-index: 1;
       }
 
-      > span {
+      .Icon {
         background-color: var(--c__primary);
       }
     }

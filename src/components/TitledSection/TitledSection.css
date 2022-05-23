@@ -19,5 +19,9 @@
     font: inherit;
     margin: 0;
     padding: 0;
+
+    .Icon {
+      background: var(--c__primary);
+    }
   }
 }

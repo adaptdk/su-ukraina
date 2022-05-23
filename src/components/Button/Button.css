@@ -90,163 +90,16 @@
     }
   }
 
-  &__icon {
-    &::before {
-      background: #fff;
-      content: "";
-      display: block;
-      height: 20px;
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: contain;
-      position: relative;
-      width: 20px;
-    }
-
-    &--end {
-      &::before {
-        margin-left: 10px;
-      }
-    }
-
-    &--start {
-      &::before {
-        margin-right: 10px;
-      }
-    }
-
-    &--donate {
-      &::before {
-        background: #3f51b5;
-        mask-image: url("../../images/icons/donate.svg");
-      }
-    }
-
-    &--volunteer {
-      &::before {
-        background: #3f51b5;
-        mask-image: url("../../images/icons/volunteer.svg");
-      }
-    }
-
-    &--arrow-white {
-      &::before {
-        mask-image: url("../../images/icons/arrow-white.svg");
-      }
-    }
-
-    &--arrow-blue {
-      &::before {
-        background: #3f51b5;
-        mask-image: url("../../images/icons/arrow-blue.svg");
-      }
-    }
-
-    &--edit {
-      &::before {
-        mask-image: url("../../images/icons/edit.svg");
-      }
-    }
-
-    &--brain {
-      &::before {
-        mask-image: url("../../images/icons/brain.svg");
-      }
-    }
-
-    &--briefcase {
-      &::before {
-        mask-image: url("../../images/icons/briefcase.svg");
-      }
-    }
-
-    &--building-columns {
-      &::before {
-        mask-image: url("../../images/icons/building-columns.svg");
-      }
-    }
-
-    &--bus-simple {
-      &::before {
-        mask-image: url("../../images/icons/bus-simple.svg");
-      }
-    }
-
-    &--child-reaching {
-      &::before {
-        mask-image: url("../../images/icons/child-reaching.svg");
-      }
-    }
-
-    &--coins {
-      &::before {
-        mask-image: url("../../images/icons/coins.svg");
-      }
-    }
-
-    &--hands-holding-heart {
-      &::before {
-        mask-image: url("../../images/icons/hands-holding-heart.svg");
-      }
-    }
-
-    &--house {
-      &::before {
-        mask-image: url("../../images/icons/house.svg");
-      }
-    }
-
-    &--key-skeleton {
-      &::before {
-        mask-image: url("../../images/icons/key-skeleton.svg");
-      }
-    }
-
-    &--mobile-screen-button {
-      &::before {
-        mask-image: url("../../images/icons/mobile-screen-button.svg");
-      }
-    }
-
-    &--parachute-box {
-      &::before {
-        mask-image: url("../../images/icons/parachute-box.svg");
-      }
-    }
-
-    &--paw {
-      &::before {
-        mask-image: url("../../images/icons/paw.svg");
-      }
-    }
-
-    &--phone {
-      &::before {
-        mask-image: url("../../images/icons/phone.svg");
-      }
-    }
-
-    &--suitcase-medical {
-      &::before {
-        mask-image: url("../../images/icons/suitcase-medical.svg");
-      }
-    }
-
-    &--user-police {
-      &::before {
-        mask-image: url("../../images/icons/user-police.svg");
-      }
-    }
+  .Icon {
+    --icon-size: 20px;
   }
 
   &--active {
     background: var(--c__secondary);
     color: var(--c__primary);
 
-    .Button__icon {
-      &::before {
-        background: var(--c__primary);
-      }
+    .Icon {
+      background: var(--c__primary);
 
       &--arrow-white {
         display: none;
