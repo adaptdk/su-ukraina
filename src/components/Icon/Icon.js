@@ -1,10 +1,18 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import "./Icon.css";
 
-const Icon = ({ type, className = ``, size = `small` }) => {
-  return <span className={`Icon Icon--${type} ${className} Icon--${size}`} />;
+const Icon = ({ type, className, size = `small` }) => {
+  return (
+    <span
+      className={classNames(`Icon`, className, {
+        [`Icon--${type}`]: type,
+        [`Icon--${size}`]: size,
+      })}
+    />
+  );
 };
 
 Icon.propTypes = {
