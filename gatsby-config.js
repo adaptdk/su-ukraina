@@ -184,5 +184,6 @@ module.exports = {
         fieldsToRemove: [`image`],
       },
     },
+    `create-redirects`,
   ],
 };
