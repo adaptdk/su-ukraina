@@ -2,7 +2,22 @@ exports.createPages = async ({ actions }) => {
   const { createRedirect } = actions;
 
   createRedirect({
-    fromPath: `/kaip-galiu-padeti/aukojimas`,
+    fromPath: `/kaip-galiu-padeti/aukojimas/lietuvoje/`,
+    toPath: `/kaip-galiu-padeti/aukojimas/`,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: `/kaip-galiu-padeti/aukojimas/lietuvoje`,
+    toPath: `/kaip-galiu-padeti/aukojimas/`,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: `/kaip-galiu-padeti/aukojimas/uzsienyje/`,
+    toPath: `/kaip-galiu-padeti/aukojimas/`,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: `/kaip-galiu-padeti/aukojimas/uzsienyje`,
     toPath: `/kaip-galiu-padeti/aukojimas/`,
     isPermanent: true,
   });
