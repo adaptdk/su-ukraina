@@ -2,11 +2,6 @@ exports.createPages = async ({ actions }) => {
   const { createRedirect } = actions;
 
   createRedirect({
-    fromPath: `/kaip-galiu-padeti/aukojimas/*`,
-    toPath: `/kaip-galiu-padeti/aukojimas/`,
-    isPermanent: true,
-  });
-  createRedirect({
     fromPath: `/kaip-galiu-padeti/aukojimas`,
     toPath: `/kaip-galiu-padeti/aukojimas/`,
     isPermanent: true,
