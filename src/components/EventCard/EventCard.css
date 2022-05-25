@@ -82,42 +82,13 @@
     align-items: center;
     display: flex;
     margin-bottom: calc(var(--s__unit) * 2);
-  }
 
-  &__icon {
-    margin-right: 10px;
+    .Icon {
+      --icon-size: 16px;
 
-    &::before {
       background: var(--c__primary);
-      content: "";
-      display: block;
-      height: 16px;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      margin-right: 10px;
       mask-size: cover;
-      position: relative;
-      width: 16px;
-    }
-
-    &--calendar {
-      &::before {
-        mask-image: url("../../images/icons/calendar.svg");
-        width: 16px;
-      }
-    }
-
-    &--clock {
-      &::before {
-        mask-image: url("../../images/icons/clock.svg");
-        width: 16px;
-      }
-    }
-
-    &--location {
-      &::before {
-        mask-image: url("../../images/icons/location.svg");
-        width: 12px;
-      }
     }
   }
 
