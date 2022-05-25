@@ -90,7 +90,12 @@ const EventCard = ({
         )}
       </div>
       {url && (
-        <Button endIcon="arrow-blue" color="transparent" href={url}>
+        <Button
+          endIcon="arrow-blue"
+          color="transparent"
+          target="_blank"
+          href={url}
+        >
           Renginio Nuoroda
         </Button>
       )}
