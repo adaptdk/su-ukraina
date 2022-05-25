@@ -143,6 +143,5 @@
 
   &--location {
     mask-image: url("../../images/icons/location.svg");
-    width: calc(var(--icon-size) / 4 * 3);
   }
 }
