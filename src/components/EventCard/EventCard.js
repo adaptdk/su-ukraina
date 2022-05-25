@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 // Components.
 import Button from "../../components/Button";
+import Icon from "../Icon";
 
 // Styles.
 import "./EventCard.css";
@@ -55,7 +56,7 @@ const EventCard = ({
         {organizer && <p className="EventCard__event-organizer">{organizer}</p>}
         {startDate && (
           <div className="EventCard__event-info-wrapper">
-            <div className="EventCard__icon EventCard__icon--calendar" />
+            <Icon type="calendar" />
             <time className="EventCard__event-info-text" dateTime={startDate}>
               {getEventDate(startDate)}
               {endDate &&
@@ -66,7 +67,7 @@ const EventCard = ({
         )}
         {startDate && (
           <div className="EventCard__event-info-wrapper">
-            <div className="EventCard__icon EventCard__icon--clock" />
+            <Icon type="clock" />
             <time className="EventCard__event-info-text" dateTime={startDate}>
               {getEventTime(startDate)}
               {endDate &&
@@ -77,7 +78,7 @@ const EventCard = ({
         )}
         {location && (
           <div className="EventCard__event-info-wrapper">
-            <div className="EventCard__icon EventCard__icon--location" />
+            <Icon type="location" />
             <p className="EventCard__event-info-text">{location}</p>
           </div>
         )}
@@ -89,7 +90,13 @@ const EventCard = ({
         )}
       </div>
       {url && (
-        <Button endIcon="arrow-blue" color="transparent" href={url}>
+        <Button
+          endIcon="arrow-blue"
+          color="transparent"
+          target="_blank"
+          rel="noopener"
+          href={url}
+        >
           Renginio Nuoroda
         </Button>
       )}

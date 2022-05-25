@@ -41,11 +41,15 @@ const Page = ({ data, pageContext }) => {
     if (event.endDate) {
       const endDate = new Date(event.endDate);
       if (currentDate > endDate) {
-        previousEvents.push(event);
-      } else upcomingEvents.push(event);
+        previousEvents.unshift(event);
+      } else {
+        upcomingEvents.push(event);
+      }
     } else if (currentDate > startDate) {
-      previousEvents.push(event);
-    } else upcomingEvents.push(event);
+      previousEvents.unshift(event);
+    } else {
+      upcomingEvents.push(event);
+    }
   });
 
   return (

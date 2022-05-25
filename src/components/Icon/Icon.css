@@ -132,4 +132,17 @@
   &--user-police {
     mask-image: url("../../images/icons/user-police.svg");
   }
+
+  &--calendar {
+    mask-image: url("../../images/icons/calendar.svg");
+  }
+
+  &--clock {
+    mask-image: url("../../images/icons/clock.svg");
+  }
+
+  &--location {
+    mask-image: url("../../images/icons/location.svg");
+    width: calc(var(--icon-size) / 4 * 3);
+  }
 }
