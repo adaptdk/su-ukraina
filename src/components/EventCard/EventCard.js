@@ -94,6 +94,7 @@ const EventCard = ({
           endIcon="arrow-blue"
           color="transparent"
           target="_blank"
+          rel="noopener"
           href={url}
         >
           Renginio Nuoroda
