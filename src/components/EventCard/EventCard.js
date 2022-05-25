@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 // Components.
 import Button from "../../components/Button";
+import Icon from "../Icon";
 
 // Styles.
 import "./EventCard.css";
-import Icon from "../Icon";
 
 const EventCard = ({
   className = ``,
