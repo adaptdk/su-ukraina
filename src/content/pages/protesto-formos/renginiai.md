@@ -5,4 +5,4 @@ slug: renginiai
 short_description: ''
 
 ---
-Šiuo ir artimu metų vykstantys Ukrainos palaikymo renginiai.
+Šiuo ir artimu metu vykstantys Ukrainos palaikymo renginiai.
