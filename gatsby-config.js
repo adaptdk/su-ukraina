@@ -185,5 +185,6 @@ module.exports = {
       },
     },
     `create-redirects`,
+    `@mediacurrent/gatsby-plugin-silence-css-order-warning`,
   ],
 };
