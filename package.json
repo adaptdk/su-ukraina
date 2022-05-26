@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^4.5.5",
+    "@mediacurrent/gatsby-plugin-silence-css-order-warning": "^1.0.0",
     "algoliasearch": "^4.13.0",
     "caniuse-lite": "^1.0.30001327",
     "classnames": "^2.3.1",
