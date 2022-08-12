@@ -54,38 +54,17 @@
 }
 
 .HeroBanner {
+  display: flex;
+  flex-direction: column;
   grid-area: 1 / 1;
-
-  &__content {
-    margin-bottom: calc(var(--s__unit) * 10);
-    position: relative;
-    z-index: 10;
-
-    @media (min-width: 40rem) {
-      bottom: 0;
-      left: 50%;
-      margin-bottom: 0;
-      position: absolute;
-      transform: translateX(-50%) translateY(40%);
-      width: 100%;
-    }
-  }
+  transform: translateY(10%);
+  z-index: 10;
 
   &__text {
     color: white;
-    margin-bottom: calc(var(--s__unit) * 10);
-    position: relative;
+    flex: 1;
     text-align: left;
     z-index: 10;
-
-    @media (min-width: 40rem) {
-      bottom: 0;
-      left: 50%;
-      margin-bottom: 0;
-      position: absolute;
-      transform: translateX(-50%) translateY(-20%);
-      width: 100%;
-    }
 
     h1 {
       font-size: 3rem;
@@ -97,7 +76,6 @@
     }
 
     @media (min-width: 40rem) {
-      margin-bottom: calc(var(--s__unit) * 20);
       text-align: center;
 
       h1 {
@@ -112,9 +90,19 @@
     }
   }
 
+  &__content {
+    margin-bottom: var(--s__main-padding);
+  }
+
   &__content .Constraint {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @media (min-width: 40rem) {
+    &__content {
+      margin-bottom: 0;
+    }
   }
 }
