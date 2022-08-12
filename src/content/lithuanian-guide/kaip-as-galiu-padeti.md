@@ -1,6 +1,6 @@
 ---
 weight: 0
-title_override: "Noriu padėti Ukrainai ir jos piliečiams \U0001F1FA\U0001F1E6 Suukraina.lt"
+title_override: Kaip aš galiu padėti?
 title: kaip-as-galiu-padeti
 slug: "/kaip-as-galiu-padeti"
 icon: hands-holding-heart
