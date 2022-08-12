@@ -1,14 +1,14 @@
 ---
 weight: 0
-title_override: Kaip aš galiu padėti?
+title_override: "Noriu padėti Ukrainai ir jos piliečiams \U0001F1FA\U0001F1E6 Suukraina.lt"
 title: kaip-as-galiu-padeti
 slug: "/kaip-as-galiu-padeti"
 icon: hands-holding-heart
 questions: []
 contacts: []
 adresses: []
----
 
+---
 **Padėti į Lietuvą atvykstantiems Ukrainos karo pabėgeliams galite savanoriaudami, remdami finansiškai ar apgyvendinant**
 
 **Prie šių organizacijų veiklos galite prisidėti tiek savanoriaujant, tiek paremiant finansiškai:**
