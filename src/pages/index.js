@@ -72,7 +72,7 @@ const Page = ({ data }) => {
           alt="Su Ukraina!"
           layout="fullWidth"
         />
-        <HeroBanner title="Su Ukraina iki pergalės!">
+        <HeroBanner title="Parama Ukrainai iki pergalės!">
           <Constraint className="HeroBanner__inner">
             {NAVIGATION_HOW_CAN_I_HELP.map((item) => {
               return (
