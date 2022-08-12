@@ -8,10 +8,10 @@ import { LANG_LT } from "../constants/HelpSearch";
 const Page = () => {
   return (
     <Layout noStickyHeader>
-      <Title>Pagalba</Title>
+      <Title>Pagalba Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt</Title>
       <Meta
         name="description"
-        content="Sąrašas iniciatyvų vykdomų Lietuvoje, kurios skirtos pagelbėti Ukrainos žmonėms"
+        content="Pagalba Ukrainai ir jos piliečiams. Parama daiktais, pinigais, savanorystės galimybės. Svarbiausi šaltiniai ir kontaktai. Kviečiame padėti ➔"
       />
       <HelpSearch defaultResultsLang={LANG_LT} />
     </Layout>

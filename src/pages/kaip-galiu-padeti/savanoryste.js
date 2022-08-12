@@ -31,7 +31,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/savanoryste/">
-      <Title>Savanorystė</Title>
+      <Title>Noriu tapti savanoriu ir padėti Ukrainai 🇺🇦 Suukraina.lt</Title>
 
       <Section className="HeroSectionB">
         <StaticImage

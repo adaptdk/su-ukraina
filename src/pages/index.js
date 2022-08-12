@@ -59,10 +59,10 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      <Title>Привіт!</Title>
+      <Title>Parama Ukrainai | Kartu iki pergalės! 🇺🇦 suukraina.lt</Title>
       <Meta
         name="description"
-        content="Visa svarbiausia informacija apie Lietuvos pagalbą Ukrainai ir jos piliečiams Lietuvoje"
+        content="Parama Ukrainai ir jos piliečiams Lietuvoje. Svarbiausia informacija apie finansinę, emocinę pagalba Ukrainai. Savanorystės galimybės. Kviečiame padėti ➔"
       />
       <Meta property="og:image" content={OgImage} />
       <Section className="HeroSection">

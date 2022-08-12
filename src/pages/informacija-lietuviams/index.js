@@ -35,10 +35,12 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      {(!content || !content.title) && <Title>Informacija Lietuviams</Title>}
+      {(!content || !content.title) && (
+        <Title>Svarbi informacija dėl ukrainiečių priėmimo Lietuvoje 🇺🇦</Title>
+      )}
       <Meta
         name="description"
-        content="Sąrašas iniciatyvų vykdomų Lietuvoje, kurios skirtos pagelbėti Ukrainos žmonėms"
+        content="Ukrainiečių darbo galimybės Lietuvoje, ukrainiečių apgyvendinimas, ugdymas, išmokos ir kompensacijos. Visa svarbi informacija vienoje vietoje ➔"
       />
 
       <Section className="HeroSectionB">

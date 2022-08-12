@@ -110,7 +110,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/aukojimas/">
-      <Title>Aukojimas</Title>
+      <Title>Aukojimas Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt</Title>
 
       <Section className="HeroSectionB">
         <StaticImage

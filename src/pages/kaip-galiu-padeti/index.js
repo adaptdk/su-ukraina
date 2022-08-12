@@ -29,7 +29,9 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/">
-      <Title>Kaip galiu padėti?</Title>
+      <Title>
+        Kaip galiu padėti Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt
+      </Title>
 
       {!!content && (
         <Constraint>

@@ -34,7 +34,7 @@ export default function Template({ data, pageContext }) {
       {frontmatter && frontmatter.title_override ? (
         <Title>{frontmatter.title_override}</Title>
       ) : (
-        <Title>Informacija Lietuviams</Title>
+        <Title>Svarbi informacija dėl ukrainiečių priėmimo Lietuvoje 🇺🇦</Title>
       )}
       <Section className="HeroSectionB">
         <StaticImage
