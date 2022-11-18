@@ -16,5 +16,7 @@ questions:
   contacts: []
   adresses: []
 page_title: "Ukrainiečių apgyvendinimas Lietuvoje \U0001F1FA\U0001F1E6 Suukraina.lt"
+page_description: Ukrainiečių apgyvendinimas Lietuvoje- nuo ko pradėti? Svarbiausi
+  klausimai ir informacija. Norite padėti? Kviečiame susisiekti ➔
 
 ---
