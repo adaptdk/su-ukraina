@@ -111,6 +111,10 @@ const Page = ({ data, pageContext }) => {
   return (
     <Layout pagePath="/kaip-galiu-padeti/aukojimas/">
       <Title>Aukojimas Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt</Title>
+      <Meta
+        name="description"
+        content="Aukojimas Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt"
+      />
 
       <Section className="HeroSectionB">
         <StaticImage
@@ -126,7 +130,6 @@ const Page = ({ data, pageContext }) => {
           <NavigationGroup crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 
