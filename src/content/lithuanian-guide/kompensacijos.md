@@ -95,6 +95,6 @@ questions:
   adresses: []
 page_description: Kokios kompensacijos skiriamos? Kur kreiptis, norint gauti kompensaciją?
   Reikalingi dokumentai, nuomos sutarties pavyzdys ir kt. aktuali informacija ➔
-page_title: dummy title
+page_title: "Kompensacijos už karo pabėgėlių apgyvendinimą \U0001F1FA\U0001F1E6 Suukraina.lt"
 
 ---
