@@ -32,13 +32,16 @@ const Page = ({ data, pageContext }) => {
       <Title>
         Kaip galiu padėti Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt
       </Title>
+      <Meta
+        name="description"
+        content="Kaip galiu padėti Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt"
+      />
 
       {!!content && (
         <Constraint>
           <NavigationGroup crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 
