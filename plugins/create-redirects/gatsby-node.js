@@ -81,4 +81,9 @@ exports.createPages = async ({ actions }) => {
     toPath: `/ua/help-search:splat`,
     isPermanent: true,
   });
+  createRedirect({
+    fromPath: `/pagalbos-paieska`,
+    toPath: `/pagalba-ukrainai`,
+    isPermanent: true,
+  });
 };
