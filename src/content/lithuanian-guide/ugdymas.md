@@ -190,5 +190,9 @@ questions:
   resources: []
   contacts: []
   adresses: []
+page_description: Kur kreiptis, norint suteikti galimybę Ukrainos vaikams lankyti
+  mokyklas Lietuvoje? Visi svarbiausi klausimai apie ukrainiečių ugdymą Lietuvoje
+  ➔
+page_title: dummy title
 
 ---
