@@ -9,6 +9,16 @@ fields:
     required: false
   label: Page Title
   description: The SEO title for the page
+- name: page_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Page Description
+  description: SEO Description for a page
 - name: title_override
   type: text
   config:
