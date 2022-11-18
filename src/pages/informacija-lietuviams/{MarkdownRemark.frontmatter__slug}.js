@@ -1,15 +1,16 @@
 import { graphql } from "gatsby";
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
-import { Meta, Title } from "react-head";
+import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/Layout";
 import Faq from "../../components/Faq";
-
 import Section from "../../components/Section";
+import PageTitle from "../../components/PageTitle";
 
 import { modifyCrumbs } from "../../utils/modifyCrumbs";
+
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
@@ -32,9 +33,9 @@ export default function Template({ data, pageContext }) {
   return (
     <Layout pagePath="/apie-mus/">
       {frontmatter && frontmatter.page_title ? (
-        <Title>{frontmatter.page_title}</Title>
+        <PageTitle title={frontmatter.page_title} />
       ) : (
-        <Title>Svarbi informacija dėl ukrainiečių priėmimo Lietuvoje 🇺🇦</Title>
+        <PageTitle title="Svarbi informacija dėl ukrainiečių priėmimo Lietuvoje" />
       )}
       {frontmatter && frontmatter.page_description && (
         <Meta name="description" content={frontmatter.page_description} />

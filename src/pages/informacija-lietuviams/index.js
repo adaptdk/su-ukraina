@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import { useLocation } from "@gatsbyjs/reach-router";
@@ -11,6 +11,7 @@ import Layout from "../../components/Layout";
 import FaqNav from "../../components/Faq/FaqNav";
 import Section from "../../components/Section";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import PageTitle from "../../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -36,7 +37,7 @@ const Page = ({ data, pageContext }) => {
   return (
     <Layout>
       {(!content || !content.title) && (
-        <Title>Svarbi informacija dėl ukrainiečių priėmimo Lietuvoje 🇺🇦</Title>
+        <PageTitle title="Svarbi informacija dėl ukrainiečių priėmimo Lietuvoje" />
       )}
       <Meta
         name="description"
@@ -55,7 +56,7 @@ const Page = ({ data, pageContext }) => {
       {!!content && (
         <Constraint>
           <Breadcrumbs crumbs={crumbs} />
-          <Title>{content.title_override}</Title>
+          <PageTitle title={content.title_override} />
           <h1>{content.title_override}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <FaqNav navData={faqNav} pathname={pathname} lang="lt" />

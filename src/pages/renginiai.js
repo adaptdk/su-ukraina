@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Constraint from "../components/Constraint";
@@ -11,6 +11,7 @@ import EventCard from "../components/EventCard";
 import EventCardList from "../components/EventCardList";
 import Section from "../components/Section";
 import DetailsWrapper from "../components/DetailsWrapper";
+import PageTitle from "../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -54,7 +55,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/renginiai/">
-      <Title>Ukrainos palaikymo renginiai Lietuvoje 🇺🇦 Suukraina.lt</Title>
+      <PageTitle title="Ukrainos palaikymo renginiai Lietuvoje" />
       <Meta
         name="description"
         content="Šiuo ir artimu metų vykstantys Ukrainos ir jos piliečių palaikymo renginiai. Koncertai, parodos, palaikymo akcijos, protmūšiai ir kt. Norite padėti? ➔"

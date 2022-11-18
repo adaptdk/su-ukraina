@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import ContactChip from "../components/ContactChip";
@@ -11,6 +11,7 @@ import Layout from "../components/Layout";
 import NavigationGroup from "../components/NavigationGroup";
 import Section from "../components/Section";
 import SlidingNavigation from "../components/SlidingNavigation";
+import PageTitle from "../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -59,7 +60,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/patikimi-saltiniai/">
-      <Title>Patikimi šaltiniai dėl karo Ukrainoje 🇺🇦 Suukraina.lt</Title>
+      <PageTitle title="Patikimi šaltiniai dėl karo Ukrainoje" />
       <Meta
         name="description"
         content="Karas Ukrainoje išsiskiria iš kitų savo informacijos gausa, tad svarbu ją atsirinkti teisingai. Svarbiausios asmenybės, institucijos, užsienio šaltiniai. ➔"

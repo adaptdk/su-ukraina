@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
@@ -12,6 +12,7 @@ import NavigationGroup from "../../components/NavigationGroup";
 import CardSection from "../../components/Card/CardSection";
 import Button from "../../components/Button";
 import Section from "../../components/Section";
+import PageTitle from "../../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -31,7 +32,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/savanoryste/">
-      <Title>Noriu tapti savanoriu ir padėti Ukrainai 🇺🇦 Suukraina.lt</Title>
+      <PageTitle title="Noriu tapti savanoriu ir padėti Ukrainai" />
       <Meta
         name="description"
         content="Savanorytės galimybės ir pagalba į Lietuvą atvykstantiems karo pabėgėliams. „Stiprūs kartu“, „Savanoriai vaikams“, „GGI“, „Saugus prieglobstis“ ir kt. Kviečiame padėti ➔"

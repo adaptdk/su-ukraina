@@ -1,7 +1,8 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 import { graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 // Components.
 import Constraint from "../components/Constraint";
@@ -13,7 +14,7 @@ import LinkCollectionWithImage from "../components/LinkCollectionWithImage";
 import PartnerList from "../components/PartnerList/PartnerList";
 import Partner from "../components/Partner/Partner";
 import Button from "../components/Button";
-import { StaticImage } from "gatsby-plugin-image";
+import PageTitle from "../components/PageTitle";
 
 // Constants.
 import {
@@ -59,7 +60,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      <Title>Parama Ukrainai | Kartu iki pergalės! 🇺🇦 suukraina.lt</Title>
+      <PageTitle title="Parama Ukrainai | Kartu iki pergalės! 🇺🇦 Suukraina.lt" />
       <Meta
         name="description"
         content="Parama Ukrainai ir jos piliečiams Lietuvoje. Svarbiausia informacija apie finansinę, emocinę pagalba Ukrainai. Savanorystės galimybės. Kviečiame padėti ➔"

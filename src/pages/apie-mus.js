@@ -1,11 +1,12 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Meta, Title } from "react-head";
+import { Meta } from "react-head";
 
 import Constraint from "../components/Constraint";
 import ContentLayout from "../components/ContentLayout";
 import Breadcrumbs from "../components/Breadcrumbs";
+import PageTitle from "../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -21,7 +22,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <ContentLayout pagePath="/apie-mus/">
-      <Title>Apie projektą 🇺🇦 Suukraina.lt</Title>
+      <PageTitle title="Apie projektą" />
       <Meta
         name="description"
         content="Reaguodami į koncentruotos informacijos stygių pagalbos Ukrainai klausimu, Laisvės TV kartu su Adapt Agency iniciavo projektą suukraina.lt."

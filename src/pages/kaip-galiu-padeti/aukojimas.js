@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import Card from "../../components/Card";
@@ -14,6 +14,7 @@ import CardSection from "../../components/Card/CardSection";
 import Section from "../../components/Section";
 import SlidingNavigation from "../../components/SlidingNavigation";
 import TitledSection from "../../components/TitledSection/TitledSection";
+import PageTitle from "../../components/PageTitle";
 
 const CardListSection = ({ organisations }) => {
   return (
@@ -110,7 +111,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/aukojimas/">
-      <Title>Aukojimas Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt</Title>
+      <PageTitle title="Aukojimas Ukrainai ir jos piliečiams" />
       <Meta
         name="description"
         content="Aukojimas Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt"
