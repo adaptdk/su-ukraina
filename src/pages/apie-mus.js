@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Title } from "react-head";
+import { Meta, Title } from "react-head";
 
 import Constraint from "../components/Constraint";
 import ContentLayout from "../components/ContentLayout";
@@ -21,12 +21,15 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <ContentLayout pagePath="/apie-mus/">
-      {(!content || !content.title) && <Title>Apie Mus</Title>}
+      <Title>Apie projektą 🇺🇦 Suukraina.lt</Title>
+      <Meta
+        name="description"
+        content="Reaguodami į koncentruotos informacijos stygių pagalbos Ukrainai klausimu, Laisvės TV kartu su Adapt Agency iniciavo projektą suukraina.lt."
+      />
 
       {!!content && (
         <Constraint>
           <Breadcrumbs crumbs={crumbs} />
-          <Title>{content.title}</Title>
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </Constraint>
