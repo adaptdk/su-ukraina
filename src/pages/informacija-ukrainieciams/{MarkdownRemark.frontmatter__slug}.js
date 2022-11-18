@@ -1,7 +1,6 @@
 import { graphql } from "gatsby";
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
-import { Title } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/Layout";
@@ -10,6 +9,7 @@ import Faq from "../../components/Faq";
 import Section from "../../components/Section";
 
 import { modifyCrumbs } from "../../utils/modifyCrumbs";
+import PageTitle from "../../components/PageTitle";
 
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data;
@@ -33,9 +33,9 @@ export default function Template({ data, pageContext }) {
   return (
     <Layout pagePath="/apie-mus/">
       {frontmatter && frontmatter.title_override ? (
-        <Title>{frontmatter.title_override}</Title>
+        <PageTitle title={frontmatter.title_override} />
       ) : (
-        <Title>Informacija Ukrainiečiams</Title>
+        <PageTitle title="Informacija Ukrainiečiams" />
       )}
       <Section className="HeroSectionB">
         <StaticImage

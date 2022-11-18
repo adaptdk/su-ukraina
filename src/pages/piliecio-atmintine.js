@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Constraint from "../components/Constraint";
@@ -10,6 +10,7 @@ import NavigationGroup from "../components/NavigationGroup";
 import { ResourceList, ResourceListItem } from "../components/ResourceList";
 import SubPage from "../components/SubPage";
 import Section from "../components/Section";
+import PageTitle from "../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -29,7 +30,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/piliecio-atmintine/">
-      <Title>Piliečio atmintinė</Title>
+      <PageTitle title="Piliečio atmintinė" />
 
       <Section className="HeroSectionB">
         <StaticImage

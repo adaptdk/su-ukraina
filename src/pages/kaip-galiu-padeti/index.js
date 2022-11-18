@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 
 // Components.
 import Constraint from "../../components/Constraint";
@@ -10,6 +10,7 @@ import Section from "../../components/Section";
 import LinkCollection from "../../components/LinkCollection";
 import LinkCollectionItem from "../../components/LinkCollection/LinkCollectionItem";
 import NavigationGroup from "../../components/NavigationGroup";
+import PageTitle from "../../components/PageTitle";
 
 // Constants.
 import { NAVIGATION_HOW_CAN_I_HELP } from "../../constants/Navigation";
@@ -29,14 +30,17 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/kaip-galiu-padeti/">
-      <Title>Kaip galiu padėti?</Title>
+      <PageTitle title="Kaip galiu padėti Ukrainai ir jos piliečiams" />
+      <Meta
+        name="description"
+        content="Kaip galiu padėti Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt"
+      />
 
       {!!content && (
         <Constraint>
           <NavigationGroup crumbs={crumbs} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
-          <Meta name="description" content={content.excerpt} />
         </Constraint>
       )}
 

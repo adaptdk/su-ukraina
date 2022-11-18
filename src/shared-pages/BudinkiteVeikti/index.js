@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Card from "../../components/Card";
@@ -12,11 +12,12 @@ import CardSection from "../../components/Card/CardSection";
 import Button from "../../components/Button";
 import Section from "../../components/Section";
 import TabsButton from "../../components/TabsButton";
+import PageTitle from "../../components/PageTitle";
 
 const Page = ({ content, addressees, pagePath, crumbs }) => {
   return (
     <Layout pagePath={pagePath}>
-      {(!content || !content.title) && <Title>Budinkite veikti</Title>}
+      {(!content || !content.title) && <PageTitle title="Budinkite veikti" />}
 
       <Section className="HeroSectionB">
         <StaticImage
@@ -30,7 +31,7 @@ const Page = ({ content, addressees, pagePath, crumbs }) => {
       {!!content && (
         <Constraint>
           <NavigationGroup crumbs={crumbs} />
-          <Title>{content.title}</Title>
+          <PageTitle title={content.title} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <Meta name="description" content={content.excerpt} />

@@ -1,11 +1,11 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Title } from "react-head";
 
 import Constraint from "../components/Constraint";
 import ContentLayout from "../components/ContentLayout";
 import Breadcrumbs from "../components/Breadcrumbs";
+import PageTitle from "../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -20,12 +20,12 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <ContentLayout pagePath="/privatumo-politika/">
-      {(!content || !content.title) && <Title>Privatumo Politika</Title>}
+      {(!content || !content.title) && <PageTitle title="Privatumo Politika" />}
 
       {!!content && (
         <Constraint>
           <Breadcrumbs crumbs={crumbs} />
-          <Title>{content.title}</Title>
+          <PageTitle title={content.title} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
         </Constraint>

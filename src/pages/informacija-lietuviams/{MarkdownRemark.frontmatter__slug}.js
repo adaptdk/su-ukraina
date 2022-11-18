@@ -1,15 +1,16 @@
 import { graphql } from "gatsby";
 import React, { useMemo } from "react";
 import PropTypes from "prop-types";
-import { Title } from "react-head";
+import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/Layout";
 import Faq from "../../components/Faq";
-
 import Section from "../../components/Section";
+import PageTitle from "../../components/PageTitle";
 
 import { modifyCrumbs } from "../../utils/modifyCrumbs";
+
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
@@ -31,10 +32,13 @@ export default function Template({ data, pageContext }) {
 
   return (
     <Layout pagePath="/apie-mus/">
-      {frontmatter && frontmatter.title_override ? (
-        <Title>{frontmatter.title_override}</Title>
+      {frontmatter && frontmatter.page_title ? (
+        <PageTitle title={frontmatter.page_title} />
       ) : (
-        <Title>Informacija Lietuviams</Title>
+        <PageTitle title="Svarbi informacija dėl ukrainiečių priėmimo Lietuvoje" />
+      )}
+      {frontmatter && frontmatter.page_description && (
+        <Meta name="description" content={frontmatter.page_description} />
       )}
       <Section className="HeroSectionB">
         <StaticImage
@@ -79,6 +83,8 @@ Template.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.shape({
         title_override: PropTypes.string,
+        page_title: PropTypes.string,
+        page_description: PropTypes.string,
       }),
       html: PropTypes.string,
     }),
@@ -91,6 +97,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        page_title
+        page_description
         title_override
         resources {
           title

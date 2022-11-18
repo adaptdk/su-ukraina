@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Title, Meta } from "react-head";
+import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Card from "../../components/Card";
@@ -10,6 +10,7 @@ import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
 import Section from "../../components/Section";
+import PageTitle from "../../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -32,7 +33,7 @@ const Page = ({ data, pageContext }) => {
 
   return (
     <Layout pagePath="/protesto-formos/akcijos/">
-      {(!content || !content.title) && <Title>Akcijos</Title>}
+      {(!content || !content.title) && <PageTitle title="Akcijos" />}
 
       <Section className="HeroSectionB">
         <StaticImage
@@ -46,7 +47,7 @@ const Page = ({ data, pageContext }) => {
       {!!content && (
         <Constraint>
           <NavigationGroup crumbs={crumbs} />
-          <Title>{content.title}</Title>
+          <PageTitle title={content.title} />
           <h1>{content.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: content.html }} />
           <Meta name="description" content={content.excerpt} />

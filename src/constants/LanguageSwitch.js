@@ -5,7 +5,7 @@ export const PATHNAMES = [
   },
   {
     ua: `help-search`,
-    lt: `pagalbos-paieska`,
+    lt: `pagalba-ukrainai`,
   },
   {
     ua: `privacy-policy`,
