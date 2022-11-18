@@ -193,6 +193,6 @@ questions:
 page_description: Kur kreiptis, norint suteikti galimybę Ukrainos vaikams lankyti
   mokyklas Lietuvoje? Visi svarbiausi klausimai apie ukrainiečių ugdymą Lietuvoje
   ➔
-page_title: dummy title
+page_title: "Ukrainos piliečių ugdymas Lietuvoje \U0001F1FA\U0001F1E6 Suukraina.lt"
 
 ---
