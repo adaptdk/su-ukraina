@@ -60,7 +60,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      <PageTitle title="Parama Ukrainai | Kartu iki pergalės! 🇺🇦 Suukraina.lt" />
+      <PageTitle title="Parama Ukrainai | Kartu iki pergalės!" />
       <Meta
         name="description"
         content="Parama Ukrainai ir jos piliečiams Lietuvoje. Svarbiausia informacija apie finansinę, emocinę pagalba Ukrainai. Savanorystės galimybės. Kviečiame padėti ➔"
