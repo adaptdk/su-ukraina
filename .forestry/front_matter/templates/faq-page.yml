@@ -3,6 +3,12 @@ label: FAQ page
 hide_body: false
 display_field: title_override
 fields:
+- name: page_title
+  type: text
+  config:
+    required: false
+  label: Page Title
+  description: The SEO title for the page
 - name: title_override
   type: text
   config:
