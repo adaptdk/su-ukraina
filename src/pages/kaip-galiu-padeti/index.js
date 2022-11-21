@@ -33,7 +33,7 @@ const Page = ({ data, pageContext }) => {
       <PageTitle title="Kaip galiu padėti Ukrainai ir jos piliečiams" />
       <Meta
         name="description"
-        content="Kaip galiu padėti Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt"
+        content="Pagalba ir parama daiktais, pinigais, savanorystės, įsidarbinimo galimybės. Svarbiausi šaltiniai ir kontaktai, norintiems prisidėti. Kviečiame padėti ➔"
       />
 
       {!!content && (

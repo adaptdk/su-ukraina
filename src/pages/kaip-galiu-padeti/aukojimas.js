@@ -114,7 +114,7 @@ const Page = ({ data, pageContext }) => {
       <PageTitle title="Aukojimas Ukrainai ir jos piliečiams" />
       <Meta
         name="description"
-        content="Aukojimas Ukrainai ir jos piliečiams 🇺🇦 Suukraina.lt"
+        content="Aukojimas Ukrainai Lietuvoje ir užsienyje. Finansinė parama, parama daiktais, psichologinė pagalba ukrainiečiams Lietuvoje. Kviečiame padėti ➔"
       />
 
       <Section className="HeroSectionB">
