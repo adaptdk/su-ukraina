@@ -186,5 +186,13 @@ module.exports = {
     },
     `create-redirects`,
     `@mediacurrent/gatsby-plugin-silence-css-order-warning`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `k2j44tmw694j`,
+        accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
+      },
+    },
+    `gatsby-plugin-image`,
   ],
 };
