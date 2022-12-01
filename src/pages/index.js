@@ -59,7 +59,12 @@ const Page = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <Layout
+      seo={{
+        pageTitle: `Parama Ukrainai | Kartu iki pergalės!`,
+        description: `Parama Ukrainai ir jos piliečiams Lietuvoje. Svarbiausia informacija apie finansinę, emocinę pagalba Ukrainai. Savanorystės galimybės. Kviečiame padėti ➔`,
+      }}
+    >
       <PageTitle title="Parama Ukrainai | Kartu iki pergalės!" />
       <Meta
         name="description"

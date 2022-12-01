@@ -1,5 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { Meta } from "react-head";
 
 import Header from "../Header";
 import Footer from "../Footer";
@@ -19,12 +20,16 @@ import {
 import { isUkrainianPage } from "../../helpers/handlers";
 
 import "./Layout.css";
+import { seoPropTypes } from "../../helpers/genericPropTypes";
+import PageTitle from "../PageTitle";
 
-const Layout = ({ children, noStickyHeader, pagePath }) => {
+const Layout = ({ children, noStickyHeader, pagePath, seo }) => {
   const isUa = isUkrainianPage();
 
   return (
     <div className="Layout">
+      <PageTitle title={seo.pageTitle} />
+      <Meta name="description" content={seo.description} />
       <Header noSticky={noStickyHeader} />
       {!isUa && (
         <PromoLine
@@ -63,9 +68,14 @@ const Layout = ({ children, noStickyHeader, pagePath }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   noStickyHeader: PropTypes.bool,
-  pagePath: PropTypes.string,
+  pagePath: PropTypes.string.isRequired,
+  seo: PropTypes.shape(seoPropTypes).isRequired,
+};
+
+Layout.defaultProps = {
+  noStickyHeader: false,
 };
 
 export default Layout;
