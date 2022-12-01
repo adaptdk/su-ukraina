@@ -28,8 +28,8 @@ const Layout = ({ children, noStickyHeader, pagePath, seo }) => {
 
   return (
     <div className="Layout">
-      <PageTitle title={seo.pageTitle} />
-      <Meta name="description" content={seo.description} />
+      <PageTitle title={seo?.pageTitle || ``} />
+      <Meta name="description" content={seo?.description || ``} />
       <Header noSticky={noStickyHeader} />
       {!isUa && (
         <PromoLine
