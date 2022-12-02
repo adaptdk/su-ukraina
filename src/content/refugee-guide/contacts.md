@@ -20,7 +20,37 @@ resources: []
 
 Офіційна сторінка: [www.migracija.lrv.lt](http://www.migracija.lrv.lt/)
 
-**Товариство Червоного Хреста в Литві (гуманітарна допомога)**: 
+**Посольство України в Литві:**
+
+Тел.: [+370 521 21 536](tel:+37052121536) (загальний номер); [+370 523 307 82](tel:+37052330782) (консульський відділ); [+370 655 501 94](tel:+37065550194) (для надзвичайних ситуацій)
+
+Адреса: [Teatro g. 4](https://www.google.com/url?q=https://www.google.com/maps/place/Teatro%2Bg.%2B4,%2BVilnius%2B03107/@54.6813198,25.2714532,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd94128ee80c7d:0x719bc25d92788d9a!8m2!3d54.6813198!4d25.2736419&sa=D&source=docs&ust=1647605238983823&usg=AOvVaw2u6MN32HosibMaa2fuey7V) (Вільнюс)
+
+Електронна пошта: emb_lt@mfa.gov.ua
+
+Офіційна сторінка:  [https://lithuania.mfa.gov.ua/](https://lithuania.mfa.gov.ua/ "https://lithuania.mfa.gov.ua/")
+
+Сторінка у Фейсбуці: [https://www.facebook.com/ukr.embassy.Lithuania/?ref=bookmarks](https://lithuania.mfa.gov.ua/ "https://lithuania.mfa.gov.ua/")
+
+**"Сильні разом" (допомога з житлом):**
+
+Гаряча лінія [1827](tel:1827) (з Литви), [+370 677 22222](tel:+37067722222) (з-за кордону)
+
+Офіційна сторінка: [https://stipruskartu.lt/ua/](https://stipruskartu.lt/ua/ "https://stipruskartu.lt/ua/")
+
+**Продовольчий банк (продовольча підтримка):**
+
+тел. [+370 686 44244](tel:+37068644244)
+
+Адреса:  [Vytenio g. 54](https://www.google.com/url?q=https://www.google.com/maps/place/Vytenio%2Bg.%2B54,%2BVilnius%2B03202/@54.6699177,25.264896,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd946f0cf55377:0xd60ec13258a4e65a!8m2!3d54.6699177!4d25.2670847&sa=D&source=docs&ust=1647605203541636&usg=AOvVaw304U823IcEVekIpDf_DAX1) (Вільнюс, центральний офіс)
+
+Електронна пошта: info@maistobankas.lt
+
+Офіційна сторінка: [https://www.maistobankas.lt/ukraina/](https://www.maistobankas.lt/ukraina/ "https://www.maistobankas.lt/ukraina/")
+
+Сторінка організації у Фейсбуці: [https://www.facebook.com/maistobankas](https://www.maistobankas.lt/ukraina/ "https://www.maistobankas.lt/ukraina/")
+
+**Товариство Червоного Хреста в Литві (гуманітарна допомога)**:
 
 Головна лінія довіри [+370 659 71 598](tel:+37065971598)
 
@@ -34,12 +64,12 @@ resources: []
 * Алітус - [Ligoninės g. 3-19](https://www.google.com/maps/place/Lietuvos+raudonojo+kryziaus+draugija,+Alytaus+skyrius/@54.397646,24.0417914,17z/data=!4m13!1m7!3m6!1s0x46e0b150100e0b73:0x7066b71d8d3fb72f!2sLigonin%C4%97s+g.+3,+62114+Alytus!3b1!8m2!3d54.397646!4d24.0439801!3m4!1s0x46e0b15011ec9cf9:0xe05ecf729f1b118d!8m2!3d54.3976909!4d24.0439876?hl=ru) (тел. [+370 620 10 150](tel:+37062010150), пн-пт 08:00-16:00)
 * Електренай - [Draugystės g. 20](https://www.google.com/maps/place/Draugyst%C4%97s+g.+20,+26115+Elektr%C4%97nai/@54.7835635,24.6643394,17z/data=!3m1!4b1!4m5!3m4!1s0x46e7671ed75c4f4d:0x8e1497f1a75834a4!8m2!3d54.7835635!4d24.6665281)
 * Висагінас - [Vilties g. 1](https://www.google.com/maps/place/Lietuvos+Raudonojo+Kry%C5%BEiaus+Draugija+Visagino+skyrius/@55.6009856,26.4225314,17z/data=!4m13!1m7!3m6!1s0x46c2c997dd734355:0xb69bd7846a8d4b2c!2sVilties+g.+1,+31118+Visaginas!3b1!8m2!3d55.6009856!4d26.4247201!3m4!1s0x46c2c94adf6deacd:0x18965c778dc8bba2!8m2!3d55.6006813!4d26.4247668) (тел. [+370 652 98 773](tel:+37065298773), пн-пт 09:00-15:00)
-* Таураге - [V. Kudirkos g. 2A](https://www.google.com/maps/place/V.+Kudirkos+g.+2A,+72214+Taurag%C4%97/@55.2538599,22.2818593,17z/data=!3m1!4b1!4m5!3m4!1s0x46e43e6cf22cea79:0x921fbf5f68c791e7!8m2!3d55.2538599!4d22.284048) 
+* Таураге - [V. Kudirkos g. 2A](https://www.google.com/maps/place/V.+Kudirkos+g.+2A,+72214+Taurag%C4%97/@55.2538599,22.2818593,17z/data=!3m1!4b1!4m5!3m4!1s0x46e43e6cf22cea79:0x921fbf5f68c791e7!8m2!3d55.2538599!4d22.284048)
 * Утена - [Taikos g. 6](https://www.google.com/maps/place/Lietuvos+raudonojo+kryziaus+draugija,+Utenos+skyrius/@55.5094942,25.5829636,17z/data=!4m13!1m7!3m6!1s0x46e7f872f8e775a9:0x47bdcc7e3bb7843d!2sTaikos+g.+6,+28159+Utena!3b1!8m2!3d55.5094942!4d25.5851523!3m4!1s0x46dd57c2dae79e19:0x5b4492f0c2af561a!8m2!3d55.5096263!4d25.585217) (пн-пт 14:00-18:00)
-* Рокишкіс - [Vytauto g. 25](https://www.google.com/maps/place/Roki%C5%A1kio+Socialin%C4%97s+Paramos+Centras/@55.9681866,25.5829548,17z/data=!4m13!1m7!3m6!1s0x46e816af29c82b19:0x2f1138fc795a9054!2sVytauto+g.+25,+42113+Roki%C5%A1kis!3b1!8m2!3d55.9681866!4d25.5851435!3m4!1s0x46e816af290a2303:0x265472744e604eff!8m2!3d55.9683034!4d25.5852609) 
+* Рокишкіс - [Vytauto g. 25](https://www.google.com/maps/place/Roki%C5%A1kio+Socialin%C4%97s+Paramos+Centras/@55.9681866,25.5829548,17z/data=!4m13!1m7!3m6!1s0x46e816af29c82b19:0x2f1138fc795a9054!2sVytauto+g.+25,+42113+Roki%C5%A1kis!3b1!8m2!3d55.9681866!4d25.5851435!3m4!1s0x46e816af290a2303:0x265472744e604eff!8m2!3d55.9683034!4d25.5852609)
 * Вількавішкіс - [Kęstučio g. 5](https://www.google.com/maps/place/K%C4%99stu%C4%8Dio+g.+5,+70190+Vilkavi%C5%A1kis/@54.6509477,23.0328424,17z/data=!3m1!4b1!4m5!3m4!1s0x46e1338fffe1473f:0x642e728105a5f4c5!8m2!3d54.6509477!4d23.0350311)
 
-Електронна пошта: [info@redcross.lt](mailto:info@redcross.lt) 
+Електронна пошта: [info@redcross.lt](mailto:info@redcross.lt)
 
 Офіційна сторінка: [www.redcross.lt](http://www.redcross.lt/)
 
@@ -78,18 +108,6 @@ resources: []
 * м.Расейняй, Аґне Науйокаітіте, [+370 620 15 585](tel:+37062015585); вул. [Яунімо 10, м.Расейняй](https://www.google.com/maps/place/Jaunimo+g.+10,+Raseiniai+60150,+Lithuania/@55.3827149,23.1138926,17z/data=!3m1!4b1!4m5!3m4!1s0x46e686fafa558695:0xc6dcb33260c02396!8m2!3d55.3827149!4d23.1160813)
 * м.Зарасей, Лаймуте Лумбієне, [+370 610 19 978](tel:+37061019978); вул. [Бажнічіос 2, м. Зарасей](https://www.google.com/maps/place/Ba%C5%BEny%C4%8Dios+g.+2,+Zarasai+32131,+Lithuania/@55.7305618,26.2444737,17z/data=!3m1!4b1!4m5!3m4!1s0x46c2ba89bfb50901:0x6d28535ab5635cb7!8m2!3d55.7305618!4d26.2466624)
 
-**Продовольчий банк (продовольча підтримка):**
-
-тел. [+370 686 44244](tel:+37068644244)
-
-Адреса:  [Vytenio g. 54](https://www.google.com/url?q=https://www.google.com/maps/place/Vytenio%2Bg.%2B54,%2BVilnius%2B03202/@54.6699177,25.264896,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd946f0cf55377:0xd60ec13258a4e65a!8m2!3d54.6699177!4d25.2670847&sa=D&source=docs&ust=1647605203541636&usg=AOvVaw304U823IcEVekIpDf_DAX1) (Вільнюс, центральний офіс)
-
-Електронна пошта: info@maistobankas.lt
-
-Офіційна сторінка: [https://www.maistobankas.lt/ukraina/](https://www.maistobankas.lt/ukraina/ "https://www.maistobankas.lt/ukraina/")
-
-Сторінка організації у Фейсбуці: [https://www.facebook.com/maistobankas](https://www.facebook.com/maistobankas "https://www.facebook.com/maistobankas")
-
 **"Врятуйте дітей" (допомога дітям та вагітним):**
 
 тел: [+370 5 261 0815](tel:+37052610815)
@@ -99,21 +117,3 @@ resources: []
 Електронна пошта: informacija@savethechildren.org
 
 Сторінка у Фейсбуці: [https://www.facebook.com/savethechildrenlithuania/](https://www.facebook.com/savethechildrenlithuania/ "https://www.facebook.com/savethechildrenlithuania/")
-
-**"Сильні разом" (допомога з житлом):**
-
-Гаряча лінія [1827](tel:1827) (з Литви), [+370 677 22222](tel:+37067722222) (з-за кордону)
-
-Офіційна сторінка: [https://stipruskartu.lt/ua/](https://stipruskartu.lt/ua/ "https://stipruskartu.lt/ua/")
-
-**Посольство України в Литві:**
-
-Тел.: [+370 521 21 536](tel:+37052121536) (загальний номер); [+370 523 307 82](tel:+37052330782) (консульський відділ); [+370 655 501 94](tel:+37065550194) (для надзвичайних ситуацій)
-
-Адреса: [Teatro g. 4](https://www.google.com/url?q=https://www.google.com/maps/place/Teatro%2Bg.%2B4,%2BVilnius%2B03107/@54.6813198,25.2714532,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd94128ee80c7d:0x719bc25d92788d9a!8m2!3d54.6813198!4d25.2736419&sa=D&source=docs&ust=1647605238983823&usg=AOvVaw2u6MN32HosibMaa2fuey7V) (Вільнюс)
-
-Електронна пошта: emb_lt@mfa.gov.ua
-
-Офіційна сторінка:  [https://lithuania.mfa.gov.ua/](https://lithuania.mfa.gov.ua/ "https://lithuania.mfa.gov.ua/")
-
-Сторінка у Фейсбуці: [https://www.facebook.com/ukr.embassy.Lithuania/?ref=bookmarks](https://www.facebook.com/ukr.embassy.Lithuania/?ref=bookmarks "https://www.facebook.com/ukr.embassy.Lithuania/?ref=bookmarks")
