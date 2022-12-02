@@ -12,15 +12,38 @@ page_description: ''
 resources: []
 
 ---
-**Відділ міграції:** 
+**Відділ міграції:**
 
-номер телефону: [+370 5 271 7112](tel:+37052717112) (працює в пн-чт 07:30-16:30, пт 07:30-15:15)
+тел.: [+370 5 271 7112](tel:+37052717112) (працює в пн-чт 07:30-16:30, пт 07:30-15:15)
 
 eлектронна пошта: [info@migracija.gov.lt](mailto:info@migracija.gov.lt)
 
 офіційна сторінка: [www.migracija.lrv.lt](http://www.migracija.lrv.lt/)
 
-Литовський Червоний Хрест (гуманітарна допомога, інформація, відновлення родинних зв'язків): [Juozapavičiaus g. 10A](https://www.google.com/url?q=https://www.google.com/maps/place/A.%2BJuozapavi%25C4%258Diaus%2Bg.%2B10A,%2BVilnius%2B09311/@54.6929873,25.2827813,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd941b458cec77:0xe3886d3e89ceccb!8m2!3d54.6929873!4d25.28497&sa=D&source=docs&ust=1647605155926364&usg=AOvVaw3NnBBf4A-1Ks9vsJaU1Q8_), Vilnius, tel. [+370 5 2127322](tel:+37052127322), el. p. [info@redcross.lt](mailto:info@redcross.lt), [www.redcross.lt](http://www.redcross.lt/)
+**Товариство Червоного Хреста в Литві (гуманітарна допомога)**: 
+
+Головна лінія довіри [+370 659 71 598](tel: +370 659 71 598)
+
+Пункти видачі гуманітарної допомоги:
+
+* Вільнюс - [Konstitucijos pr. 3A](https://www.google.com/maps/place/Konstitucijos+pr.+3A,+09307+Vilnius/@54.6953741,25.2746382,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9403f8a439f9:0xc450b70de9b3d02a!8m2!3d54.6953741!4d25.2768269), ТЦ "Європа", підземний перехід (тел. [8 679 19 510](tel:8 679 19 510), пн-пт 10:00-17:00)
+* Каунас - [Statybininkų g. 12](https://www.google.com/maps/place/Lietuvos+Raudonojo+Kry%C5%BEiaus,+Kauno+Centras/@54.918769,23.9449233,17z/data=!3m1!4b1!4m5!3m4!1s0x46e7220ea88253eb:0x37fa2b8111ef5075!8m2!3d54.9187938!4d23.9470784) (тел. [8 656 96 766](tel:8 656 96 766), пн-сб 10:00-20:00)
+* Клайпеда - [Turgaus a. 2](https://www.google.com/maps/place/Turgaus+a.+2,+91246+Klaip%C4%97da/@55.706805,21.135901,17z/data=!3m1!4b1!4m5!3m4!1s0x46e4dbf6cab0fdd5:0xd29116d2dae00cf9!8m2!3d55.706805!4d21.1380897)
+* Шауляй - [Vasario 16-osios g. 46](https://www.google.com/maps/place/Lietuvos+raudonojo+kryziaus+draugija,+Siauliu+skyrius/@55.9307388,23.314769,17z/data=!4m13!1m7!3m6!1s0x46e5e31d80eb4f1f:0x1181e6bb4e4741f5!2sVasario+16-osios+g.+46,+76291+%C5%A0iauliai!3b1!8m2!3d55.9307388!4d23.3169577!3m4!1s0x46e5e2fcd08328e7:0x4cacc1f71e9abce3!8m2!3d55.9307635!4d23.3168296) (тел. 8 609 76 158, пн-пт 09:00-17:00)
+* Паневежис - [Vienybės a. 38](https://www.google.com/maps/place/Vienyb%C4%97s+a.+38,+35128+Panev%C4%97%C5%BEys/@55.7431864,24.3612587,17z/data=!3m1!4b1!4m5!3m4!1s0x46e6320143ecb19b:0x446f84a6188edde7!8m2!3d55.7431834!4d24.3638336)
+* Алітус - [Ligoninės g. 3-19](https://www.google.com/maps/place/Lietuvos+raudonojo+kryziaus+draugija,+Alytaus+skyrius/@54.397646,24.0417914,17z/data=!4m13!1m7!3m6!1s0x46e0b150100e0b73:0x7066b71d8d3fb72f!2sLigonin%C4%97s+g.+3,+62114+Alytus!3b1!8m2!3d54.397646!4d24.0439801!3m4!1s0x46e0b15011ec9cf9:0xe05ecf729f1b118d!8m2!3d54.3976909!4d24.0439876?hl=ru) (тел. 8 620 10 150, пн-пт 08:00-16:00)
+* Електренай - [Draugystės g. 20](https://www.google.com/maps/place/Draugyst%C4%97s+g.+20,+26115+Elektr%C4%97nai/@54.7835635,24.6643394,17z/data=!3m1!4b1!4m5!3m4!1s0x46e7671ed75c4f4d:0x8e1497f1a75834a4!8m2!3d54.7835635!4d24.6665281)
+* Висагінас - [Vilties g. 1](https://www.google.com/maps/place/Lietuvos+Raudonojo+Kry%C5%BEiaus+Draugija+Visagino+skyrius/@55.6009856,26.4225314,17z/data=!4m13!1m7!3m6!1s0x46c2c997dd734355:0xb69bd7846a8d4b2c!2sVilties+g.+1,+31118+Visaginas!3b1!8m2!3d55.6009856!4d26.4247201!3m4!1s0x46c2c94adf6deacd:0x18965c778dc8bba2!8m2!3d55.6006813!4d26.4247668) (тел. 8 652 98 773, пн-пт 09:00-15:00)
+* Таураге - [V. Kudirkos g. 2A](https://www.google.com/maps/place/V.+Kudirkos+g.+2A,+72214+Taurag%C4%97/@55.2538599,22.2818593,17z/data=!3m1!4b1!4m5!3m4!1s0x46e43e6cf22cea79:0x921fbf5f68c791e7!8m2!3d55.2538599!4d22.284048) 
+* Утена - [Taikos g. 6](https://www.google.com/maps/place/Lietuvos+raudonojo+kryziaus+draugija,+Utenos+skyrius/@55.5094942,25.5829636,17z/data=!4m13!1m7!3m6!1s0x46e7f872f8e775a9:0x47bdcc7e3bb7843d!2sTaikos+g.+6,+28159+Utena!3b1!8m2!3d55.5094942!4d25.5851523!3m4!1s0x46dd57c2dae79e19:0x5b4492f0c2af561a!8m2!3d55.5096263!4d25.585217) (пн-пт 14:00-18:00)
+* Рокишкіс - [Vytauto g. 25](https://www.google.com/maps/place/Roki%C5%A1kio+Socialin%C4%97s+Paramos+Centras/@55.9681866,25.5829548,17z/data=!4m13!1m7!3m6!1s0x46e816af29c82b19:0x2f1138fc795a9054!2sVytauto+g.+25,+42113+Roki%C5%A1kis!3b1!8m2!3d55.9681866!4d25.5851435!3m4!1s0x46e816af290a2303:0x265472744e604eff!8m2!3d55.9683034!4d25.5852609) 
+* Вількавішкіс - [Kęstučio g. 5](https://www.google.com/maps/place/K%C4%99stu%C4%8Dio+g.+5,+70190+Vilkavi%C5%A1kis/@54.6509477,23.0328424,17z/data=!3m1!4b1!4m5!3m4!1s0x46e1338fffe1473f:0x642e728105a5f4c5!8m2!3d54.6509477!4d23.0350311)
+
+Електронна пошта: [info@redcross.lt](mailto:info@redcross.lt) 
+
+Офіційна сторінка: [www.redcross.lt](http://www.redcross.lt/)
+
+Сторінка товариства в Фейсбук: [https://www.facebook.com/redcross.lt](https://www.facebook.com/redcross.lt "https://www.facebook.com/redcross.lt")
 
 Карітас Вільнюської архієпархії (гуманітарна допомога): [Kalvarijų g. 39](https://www.google.com/url?q=https://www.google.com/maps/place/Kalvarij%25C5%25B3%2Bg.%2B39,%2BVilnius%2B09313/@54.6968049,25.2798479,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9403a623c795:0x3fc23c8393bae375!8m2!3d54.6968049!4d25.2820366&sa=D&source=docs&ust=1647605173611724&usg=AOvVaw1qdSCoUaaW8oNqIWTE967E), Vilnius, tel. [+370 673 24 225](tel:+37067324225), el. p. [kulturunamai@vilnius.caritas.lt](mailto:kulturunamai@vilnius.caritas.lt)
 
