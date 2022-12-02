@@ -49,20 +49,23 @@ eлектронна пошта: [info@migracija.gov.lt](mailto:info@migracija.go
 
 тел.:  [+370 673 24 225](tel:+37067324225) (Вільнюс)
 
-адреса: [Kalvarijų g. 39](https://www.google.com/url?q=https://www.google.com/maps/place/Kalvarij%25C5%25B3%2Bg.%2B39,%2BVilnius%2B09313/@54.6968049,25.2798479,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9403a623c795:0x3fc23c8393bae375!8m2!3d54.6968049!4d25.2820366&sa=D&source=docs&ust=1647605173611724&usg=AOvVaw1qdSCoUaaW8oNqIWTE967E)
+адреса: [Kalvarijų g. 39](https://www.google.com/url?q=https://www.google.com/maps/place/Kalvarij%25C5%25B3%2Bg.%2B39,%2BVilnius%2B09313/@54.6968049,25.2798479,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9403a623c795:0x3fc23c8393bae375!8m2!3d54.6968049!4d25.2820366&sa=D&source=docs&ust=1647605173611724&usg=AOvVaw1qdSCoUaaW8oNqIWTE967E) (Вільнюс)
 
 електронна пошта: [kulturunamai@vilnius.caritas.lt](mailto:kulturunamai@vilnius.caritas.lt)
 
 **Мальтійський орден (гуманітарна допомога):**
 
-тел. [+370 600 23 220](+370 600 23 220), 
+Гаряча лінія [+370 600 23 220](+370 600 23 220) (пн-пт 09:00-19:00, російською,  англійською, литовською мовами)
 
- [Gedimino pr. 56B, Vilnius](https://www.google.com/maps/place/Gedimino+pr.+56B,+Vilnius+01110/@54.6888431,25.2619019,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906), Tel. [+370 600 23 220](+370 600 23 220), www.maltieciai.lt; facebook.com/maltieciai
+Адреса: [Gedimino pr. 56B, Vilnius](https://www.google.com/maps/place/Gedimino+pr.+56B,+Vilnius+01110/@54.6888431,25.2619019,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906)
 
-ГАРЯЧА ЛІНІЯ МАЛЬТІЙЦІВ ([+370 600 23 220](+370 600 23 220))  
-Графік роботи: I–V 09:00–19:00 год. (литовською, англійською та російською мовами).
+Електронна пошта: info@maltieciai.lt
 
-Мальтійці координують добровільну допомогу українцям у 10 містах Литви:
+Офіційна сторінка: [https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY](https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY "https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY")
+
+Сторінка організації на Фейсбук: [https://www.facebook.com/maltieciai/](https://www.facebook.com/maltieciai/ "https://www.facebook.com/maltieciai/")
+
+Мальтійський орден координує добровільну допомогу українцям у 10 містах Литви:
 
 * м.Каішядоріс, Аудроне Петрашкієне, тел. [+370 640 36 592](tel:864036592); вул. [Ґірелєс, 1, м.Каішядоріс](https://www.google.com/maps/place/Girel%C4%97s+g.+1,+Kai%C5%A1iadorys+56133,+Lithuania/@54.8641332,24.4476954,17z/data=!3m1!4b1!4m5!3m4!1s0x46e76be8ae269d65:0x2dcc511c9df8e6e9!8m2!3d54.8641332!4d24.4498841).
 * м.Казлу Руда, Рамуте Вінікієне, тел. [+370 698 40 147;](tel:+37069840147;) вул. [Атґімімо 8А, м. Казлу Руда](https://www.google.com/maps/place/Atgimimo+g.+8,+Kazl%C5%B3+R%C5%ABda+69443,+Lithuania/@54.751947,23.4951314,17z/data=!3m1!4b1!4m5!3m4!1s0x46e6d65578c1ce3d:0xebbf037bddb01c7e!8m2!3d54.751947!4d23.4973201)
@@ -75,9 +78,17 @@ eлектронна пошта: [info@migracija.gov.lt](mailto:info@migracija.go
 * м.Расейняй, Аґне Науйокаітіте, [+370 620 15 585](tel:+37062015585); вул. [Яунімо 10, м.Расейняй](https://www.google.com/maps/place/Jaunimo+g.+10,+Raseiniai+60150,+Lithuania/@55.3827149,23.1138926,17z/data=!3m1!4b1!4m5!3m4!1s0x46e686fafa558695:0xc6dcb33260c02396!8m2!3d55.3827149!4d23.1160813)
 * м.Зарасей, Лаймуте Лумбієне, [+370 610 19 978](tel:+37061019978); вул. [Бажнічіос 2, м. Зарасей](https://www.google.com/maps/place/Ba%C5%BEny%C4%8Dios+g.+2,+Zarasai+32131,+Lithuania/@55.7305618,26.2444737,17z/data=!3m1!4b1!4m5!3m4!1s0x46c2ba89bfb50901:0x6d28535ab5635cb7!8m2!3d55.7305618!4d26.2466624)
 
-‍
+**Продовольчий банк (продовольча підтримка):**
 
-Продовольчий банк (продовольча підтримка): [Vytenio g. 54](https://www.google.com/url?q=https://www.google.com/maps/place/Vytenio%2Bg.%2B54,%2BVilnius%2B03202/@54.6699177,25.264896,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd946f0cf55377:0xd60ec13258a4e65a!8m2!3d54.6699177!4d25.2670847&sa=D&source=docs&ust=1647605203541636&usg=AOvVaw304U823IcEVekIpDf_DAX1), Vilnius, tel. [+370 686 44244](tel:+37068644244), el. p. info@maistobankas.lt, [facebook.com/maistobankas](http://facebook.com/maistobankas)
+тел. [+370 686 44244](tel:+37068644244)
+
+Адреса:  [Vytenio g. 54](https://www.google.com/url?q=https://www.google.com/maps/place/Vytenio%2Bg.%2B54,%2BVilnius%2B03202/@54.6699177,25.264896,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd946f0cf55377:0xd60ec13258a4e65a!8m2!3d54.6699177!4d25.2670847&sa=D&source=docs&ust=1647605203541636&usg=AOvVaw304U823IcEVekIpDf_DAX1) (Вільнюс, центральний офіс)
+
+Електронна пошта: info@maistobankas.lt
+
+Офіційна сторінка: [https://www.maistobankas.lt/ukraina/](https://www.maistobankas.lt/ukraina/ "https://www.maistobankas.lt/ukraina/")
+
+Сторінка організації на Фейсбук: [https://www.facebook.com/maistobankas](https://www.facebook.com/maistobankas "https://www.facebook.com/maistobankas")
 
 Врятувати дітей (допомога дітям та вагітним): [Vilniaus g. 39](https://www.google.com/maps/place/Vilniaus+g.+39,+Vilnius+01119/data=!4m2!3m1!1s0x46dd9413c623b5e1:0xfd09c302e27ed0f9?sa=X&ved=2ahUKEwjWscKTy8_2AhXpkIsKHcfLDPUQ8gF6BAgdEAE), Vilnius, tel. [+370 5 261 0815](tel:+37052610815), el. p. [informacija@savethechildren.org](mailto:informacija@savethechildren.org)
 
