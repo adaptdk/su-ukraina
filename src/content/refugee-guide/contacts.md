@@ -22,7 +22,7 @@ eлектронна пошта: [info@migracija.gov.lt](mailto:info@migracija.go
 
 **Товариство Червоного Хреста в Литві (гуманітарна допомога)**: 
 
-Головна лінія довіри +370 659 71 598
+Головна лінія довіри [+370 659 71 598](tel:+37065971598)
 
 Пункти видачі гуманітарної допомоги:
 
@@ -47,11 +47,17 @@ eлектронна пошта: [info@migracija.gov.lt](mailto:info@migracija.go
 
 **Карітас Вільнюської архієпархії (гуманітарна допомога):**
 
-тел.:  [+370 673 24 225](tel:+37067324225)
+тел.:  [+370 673 24 225](tel:+37067324225) (Вільнюс)
 
-адреса: [Kalvarijų g. 39](https://www.google.com/url?q=https://www.google.com/maps/place/Kalvarij%25C5%25B3%2Bg.%2B39,%2BVilnius%2B09313/@54.6968049,25.2798479,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9403a623c795:0x3fc23c8393bae375!8m2!3d54.6968049!4d25.2820366&sa=D&source=docs&ust=1647605173611724&usg=AOvVaw1qdSCoUaaW8oNqIWTE967E), Vilnius, tel. [+370 673 24 225](tel:+37067324225), el. p. [kulturunamai@vilnius.caritas.lt](mailto:kulturunamai@vilnius.caritas.lt)
+адреса: [Kalvarijų g. 39](https://www.google.com/url?q=https://www.google.com/maps/place/Kalvarij%25C5%25B3%2Bg.%2B39,%2BVilnius%2B09313/@54.6968049,25.2798479,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9403a623c795:0x3fc23c8393bae375!8m2!3d54.6968049!4d25.2820366&sa=D&source=docs&ust=1647605173611724&usg=AOvVaw1qdSCoUaaW8oNqIWTE967E)
 
-Служба підтримки Мальтійського ордену (гуманітарна допомога): [Gedimino pr. 56B, Vilnius](https://www.google.com/maps/place/Gedimino+pr.+56B,+Vilnius+01110/@54.6888431,25.2619019,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906), Tel. [+370 600 23 220](+370 600 23 220), www.maltieciai.lt; facebook.com/maltieciai
+електронна пошта: [kulturunamai@vilnius.caritas.lt](mailto:kulturunamai@vilnius.caritas.lt)
+
+**Мальтійський орден (гуманітарна допомога):**
+
+тел. [+370 600 23 220](+370 600 23 220), 
+
+ [Gedimino pr. 56B, Vilnius](https://www.google.com/maps/place/Gedimino+pr.+56B,+Vilnius+01110/@54.6888431,25.2619019,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906), Tel. [+370 600 23 220](+370 600 23 220), www.maltieciai.lt; facebook.com/maltieciai
 
 ГАРЯЧА ЛІНІЯ МАЛЬТІЙЦІВ ([+370 600 23 220](+370 600 23 220))  
 Графік роботи: I–V 09:00–19:00 год. (литовською, англійською та російською мовами).
