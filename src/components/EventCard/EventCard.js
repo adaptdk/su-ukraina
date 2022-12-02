@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 import Button from "../../components/Button";
 import Icon from "../Icon";
 
+import { formatRichText } from "../../helpers/formatting";
+
 // Styles.
 import "./EventCard.css";
 
@@ -82,12 +84,7 @@ const EventCard = ({
             <p className="EventCard__event-info-text">{location}</p>
           </div>
         )}
-        {description && (
-          <div
-            dangerouslySetInnerHTML={{ __html: description }}
-            className="EventCard__event-information"
-          />
-        )}
+        {description?.raw && formatRichText(description.raw)}
       </div>
       {url && (
         <Button
@@ -97,6 +94,7 @@ const EventCard = ({
           rel="noopener"
           href={url}
         >
+          {/* @todo: translate this */}
           Renginio Nuoroda
         </Button>
       )}

@@ -43,9 +43,33 @@ const organisation = `
   }
 `;
 
+const eventItem = `
+  id
+  eventType
+  title
+  organizer
+  startDate
+  endDate
+  location
+  description {
+    raw
+  }
+  eventUrl
+`;
+
+const eventsModule = `
+  events {
+    ... on ContentfulEventItem {
+      ${eventItem}
+    }
+  }
+`;
+
 module.exports = {
   cta,
   hero,
   seo,
   organisation,
+  eventItem,
+  eventsModule,
 };

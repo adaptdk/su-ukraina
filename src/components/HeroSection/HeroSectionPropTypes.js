@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 
+// @todo: fix hero section proptypes
 const HeroSectionPropTypes = {
-  url: PropTypes.string,
+  image: PropTypes.object,
 };
 
 export { HeroSectionPropTypes };

@@ -24,11 +24,20 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const promises = [];
 
-  // Process Programs
+  // Process Help Pages
   promises.push(
     processPage({
       pageQuery: PAGE_UTILS.helpPage.query(graphql),
       createFunction: PAGE_UTILS.helpPage.createHelpPages,
+      createPage,
+    })
+  );
+
+  // Process Modular Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.modularPage.query(graphql),
+      createFunction: PAGE_UTILS.modularPage.createModularPages,
       createPage,
     })
   );
