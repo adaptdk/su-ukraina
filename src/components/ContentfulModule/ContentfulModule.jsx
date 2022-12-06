@@ -5,12 +5,9 @@ import EventsModule from "./EventsModule";
 import ChipModule from "./ChipModule";
 import { SlidingNavBlock } from "../SlidingNavBlock";
 
-const ContentfulModule = ({
-  module,
-  module: {
-    internal: { type },
-  },
-}) => {
+const ContentfulModule = ({ module }) => {
+  const type = module?.internal?.type || ``;
+
   if (type === `ContentfulEventsModule`) {
     return <EventsModule {...module} />;
   }
