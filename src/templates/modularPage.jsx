@@ -12,6 +12,9 @@ import {
   ContentfulModule,
   ContentfulModulePropTypes,
 } from "../components/ContentfulModule";
+import SlidingNavigation from "../components/SlidingNavigation";
+import classNames from "classnames";
+import { SlidingNavBlockPropTypes } from "../components/SlidingNavBlock/SlidingNavBlockPropTypes";
 
 const ModularPage = ({ path, pageContext }) => {
   const {
@@ -20,8 +23,12 @@ const ModularPage = ({ path, pageContext }) => {
     pageHeading,
     pageDescription,
     modules,
+    slidingNavData,
     breadcrumb: { crumbs },
   } = pageContext;
+
+  console.log({ modules });
+  console.log(`tihs: `, slidingNavData);
 
   return (
     <Layout pagePath={path} seo={seo}>
@@ -33,10 +40,17 @@ const ModularPage = ({ path, pageContext }) => {
         {pageDescription?.raw && formatRichText(pageDescription.raw)}
       </Constraint>
 
-      {!!modules.at(0) &&
-        modules.map((module) => {
-          return <ContentfulModule key={module.id} module={module} />;
+      <Constraint
+        className={classNames({
+          "Constraint--sliding-nav": slidingNavData,
         })}
+      >
+        {slidingNavData && <SlidingNavigation data={slidingNavData} />}
+        {!!modules.at(0) &&
+          modules.map((module) => {
+            return <ContentfulModule key={module.id} module={module} />;
+          })}
+      </Constraint>
     </Layout>
   );
 };
@@ -61,6 +75,12 @@ ModularPage.propTypes = {
       raw: PropTypes.string,
     }),
     modules: PropTypes.arrayOf(ContentfulModulePropTypes),
+    slidingNavData: PropTypes.arrayOf(
+      PropTypes.shape({
+        ...SlidingNavBlockPropTypes,
+        linkId: PropTypes.string.isRequired,
+      })
+    ),
   }),
 };
 

@@ -65,6 +65,45 @@ const eventsModule = `
   }
 `;
 
+const linkIcon = `
+  id
+  iconType
+  url
+`;
+
+const chip = `
+  id
+  heading
+  subheading
+  links {
+    ... on ContentfulLinkIcon {
+      ${linkIcon}
+    }
+  }
+`;
+
+const chipModule = `
+  chips {
+    ... on ContentfulChip {
+      ${chip}
+    }
+  }
+`;
+
+const slidingNavBlock = `
+  title
+  icon
+  data {
+    ... on ContentfulChipModule {
+      id
+      internal {
+        type
+      }
+      ${chipModule}
+    }
+  }
+`;
+
 module.exports = {
   cta,
   hero,
@@ -72,4 +111,6 @@ module.exports = {
   organisation,
   eventItem,
   eventsModule,
+  slidingNavBlock,
+  chipModule,
 };

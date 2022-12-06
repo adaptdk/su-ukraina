@@ -1,63 +1,50 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 
 import "./ContactChip.css";
+import { ChipPropTypes } from "../ContentfulModule/ChipModulePropTypes";
 
-const ContactChip = ({
-  children,
-  description,
-  facebookUrl,
-  twitterUrl,
-  url,
-}) => {
+const ContactChip = ({ heading, subheading, links }) => {
+  const getLabelByType = (type) => {
+    if (type === `web`) {
+      return `WWW`;
+    }
+
+    if (type === `facebook`) {
+      return `Facebook`;
+    }
+
+    if (type === `twitter`) {
+      return `Twitter`;
+    }
+
+    return null;
+  };
+
   return (
     <article className="ContactChip">
       <div className="ContactChip__heading">
-        <div className="ContactChip__title">{children}</div>
-        <div>{description}</div>
+        <div className="ContactChip__title">{heading}</div>
+        <div>{subheading}</div>
       </div>
       <div className="ContactChip__actions">
-        {!!url && (
-          <a
-            href={url}
-            rel="noopener"
-            className="ContactChip__actions-web"
-            target="_blank"
-          >
-            WWW
-          </a>
-        )}
-        {!!facebookUrl && (
-          <a
-            href={facebookUrl}
-            rel="noopener"
-            className="ContactChip__actions-facebook"
-            target="_blank"
-          >
-            Facebook
-          </a>
-        )}
-        {!!twitterUrl && (
-          <a
-            href={twitterUrl}
-            rel="noopener"
-            className="ContactChip__actions-twitter"
-            target="_blank"
-          >
-            twitter
-          </a>
-        )}
+        {links.map((link) => {
+          return (
+            <a
+              key={link.id}
+              href={link.url}
+              rel="noopener"
+              className={`ContactChip__actions-${link.iconType}`}
+              target="_blank"
+            >
+              {getLabelByType(link.iconType)}
+            </a>
+          );
+        })}
       </div>
     </article>
   );
 };
 
-ContactChip.propTypes = {
-  children: PropTypes.node,
-  description: PropTypes.node,
-  facebookUrl: PropTypes.string,
-  twitterUrl: PropTypes.string,
-  url: PropTypes.string,
-};
+ContactChip.propTypes = ChipPropTypes;
 
 export default ContactChip;

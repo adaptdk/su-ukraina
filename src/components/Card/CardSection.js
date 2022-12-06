@@ -18,7 +18,9 @@ const CardSection = ({ content, title }) => {
 
 CardSection.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.shape({
+    raw: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default CardSection;

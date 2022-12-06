@@ -2,6 +2,8 @@ import React from "react";
 
 import ContentfulModulePropTypes from "./ContentfulModulePropTypes";
 import EventsModule from "./EventsModule";
+import ChipModule from "./ChipModule";
+import { SlidingNavBlock } from "../SlidingNavBlock";
 
 const ContentfulModule = ({
   module,
@@ -11,6 +13,14 @@ const ContentfulModule = ({
 }) => {
   if (type === `ContentfulEventsModule`) {
     return <EventsModule {...module} />;
+  }
+
+  if (type === `ContentfulSlidingNavBlock`) {
+    return <SlidingNavBlock />;
+  }
+
+  if (type === `ContentfulChipModule`) {
+    return <ChipModule {...module} />;
   }
 
   return null;

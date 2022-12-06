@@ -1,6 +1,7 @@
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
+const { getSlidingNavData } = require(`../helpers/hooks`);
 
 const query = (graphql) => {
   return graphql(`
@@ -25,6 +26,9 @@ const query = (graphql) => {
               ... on ContentfulEventsModule {
                 ${contentModel.eventsModule}
               }
+              ... on ContentfulSlidingNavBlock {
+                ${contentModel.slidingNavBlock}
+              }
             }
           }
         }
@@ -42,11 +46,13 @@ const createModularPages = (result, createPage) => {
   );
 
   modularPages.forEach((modularPage) => {
+    const slidingNavData = getSlidingNavData(modularPage.modules);
     createPage({
       path: `${modularPage.slug}`,
       component: path.resolve(`./src/templates/modularPage.jsx`),
       context: {
         ...modularPage,
+        slidingNavData,
       },
     });
   });

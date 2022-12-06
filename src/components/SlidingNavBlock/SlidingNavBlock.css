@@ -1,4 +1,4 @@
-.TitledSection {
+.SlidingNavBlock {
   &__container {
     margin: var(--s__main-padding) 0;
   }

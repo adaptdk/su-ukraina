@@ -7,7 +7,7 @@ import HeroSection, { HeroSectionPropTypes } from "../components/HeroSection";
 import Constraint from "../components/Constraint";
 import NavigationGroup from "../components/NavigationGroup";
 import SlidingNavigation from "../components/SlidingNavigation";
-import TitledSection from "../components/TitledSection";
+import { SlidingNavBlock } from "../components/SlidingNavBlock";
 import CardList from "../components/CardList";
 import Card from "../components/Card";
 import Button from "../components/Button";
@@ -121,14 +121,14 @@ const HelpPage = ({ path, pageContext }) => {
             <SlidingNavigation data={slidingNavData} />
             {slidingNavData.map((item) => {
               return (
-                <TitledSection
+                <SlidingNavBlock
                   key={item.linkId}
                   id={item.linkId}
                   title={item.title}
                   icon={item.icon}
                 >
                   <CardListSection organisations={item.data} />
-                </TitledSection>
+                </SlidingNavBlock>
               );
             })}
           </>
