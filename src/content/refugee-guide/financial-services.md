@@ -4,6 +4,24 @@ title_override: Банки та фінансові послуги
 title: financial-services
 slug: "/financial-services"
 questions:
+- title: Revolut
+  answer: <p>Для відкриття особистого раунку необхідно:</p><ul><li><p><strong>Завантажити
+    мобільний додаток </strong><a href="https://www.revolut.com/gettheapp/" title=""><strong>Revolut</strong></a><strong>
+    (App Store, Google Play Store). Додаток англійською мовою. </strong></p></li><li><p>Обрати
+    “Sign up” і ввести Ваш номер телефону. Це може бути номер будь-якої країни, головне
+    щоб ви могли отримати SMS повідомлення на цей номер</p></li><li><p>Обрати країну
+    в якій ви знаходитесь, наприклад, Польща чи Литва - в секції “Country of residence”</p></li><li><p>Введіть
+    свою поточну адресу за межами України, наприклад, адресу вашого житла/тимчасового
+    притулку, та інші особові дані</p></li><li><p>Виберіть та завантажте фото українського
+    паспорту* або ID-картки для підтвердження особи</p><p>Документ про реєстрацію,
+    виданий міграційною службою, надсилати відразу необов'язково. </p><p>Детальна
+    інформація українською за <a href="https://blog.revolut.com/payment-services-to-ukrainian-refugees/"
+    title="">посиланням.</a> </p><p>Детальна інформація англійською за <a href="https://help.revolut.com/help/more/support-for-ukrainian-refugees"
+    title="">посиланням</a>.</p><p></p></li></ul>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: SEB
   answer: <p>Якщо Ви є громадянином України, який залишив країну через війну, Ви можете
     відкрити рахунок у банку SEB безкоштовно. Для візиту до відділення банку SEB реєструйтеся
