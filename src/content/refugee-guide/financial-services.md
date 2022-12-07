@@ -11,7 +11,7 @@ questions:
     інтернет</a> (форма англійською мовою) або за телефоном <a href="tel:+37052682800">+370
     5 268 2800</a> (пн-пт 8:00-20:00).</p><p>Детальна інформація (необхідні документи
     для відкриття рахунку, адреси відділень та банкоматів, відповіді на поширені запитання,
-    тощо) за <a href="https://www.seb.lt/informaciya-dlya-gromadyan-ukraini-yaki-zalishili-krainu-cherez-viynu#yaki-dokumenti-povinen-nadati-gromadyanin-ukraini"
+    тощо) за <a href="https://www.seb.lt/informaciya-dlya-gromadyan-ukraini-yaki-zalishili-krainu-cherez-viynu"
     title="">посиланням</a>.</p>
   resources: []
   contacts: []
