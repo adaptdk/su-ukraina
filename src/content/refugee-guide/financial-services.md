@@ -69,13 +69,13 @@ questions:
     Luminor <a href="https://www.luminor.lt/lt/stat-klientom-luminor">російською</a>
     або <a href="https://www.luminor.lt/en/become-our-customer-ukraine#customer-information"
     title="">англійською</a> або завантажити <a href="https://www.luminor.lt/sites/default/files/dokumentai/bendri/private-person-questionnaire.pdf">спеціальну
-    форму даних клієнта</a>, та зберегти її після заповнення (англійською). Цю форму
-    та додану копію вашого паспорта треба надіслати на електронну адресу <a href="mailto:paraiskos@luminorgroup.com">paraiskos@luminorgroup.com</a></p><p>Після
+    форму даних клієнта</a>, та зберегти її після заповнення. Цю форму та додану копію
+    вашого паспорта треба надіслати на електронну адресу <a href="mailto:paraiskos@luminorgroup.com">paraiskos@luminorgroup.com</a></p><p>Після
     отримання форми працівники банку зателефонують Вам щоб омовитись про час, коли
     ви зможете прийти у <a href="https://www.luminor.lt/en/bank-network">відділення
     банку</a> (сторінка англійською) для підписання документів на відкриття рахунку.</p><p>Детальна
     інформація щодо послуг, філій, робочих годин тощо <a href="https://www.luminor.lt/lt/privatiems/vidkrittya-rahunku-dlya-gromadyan-ukrayini"
-    title="">за посиланням.</a> </p>
+    title="">за посиланням.</a></p>
   resources: []
   contacts: []
   adresses: []
