@@ -8,10 +8,8 @@ import NavigationGroup from "../components/NavigationGroup";
 
 import { seoPropTypes } from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
-import {
-  ContentfulModule,
-  ContentfulModulePropTypes,
-} from "../components/ContentfulModule";
+import ContentfulModule from "../components/ContentfulModule/ContentfulModule";
+import ContentfulModulePropTypes from "../components/ContentfulModule/ContentfulModulePropTypes";
 import SlidingNavigation from "../components/SlidingNavigation";
 import classNames from "classnames";
 import { SlidingNavBlockPropTypes } from "../components/SlidingNavBlock/SlidingNavBlockPropTypes";

@@ -3,7 +3,7 @@ import React from "react";
 import ContentfulModulePropTypes from "./ContentfulModulePropTypes";
 import EventsModule from "./EventsModule";
 import ChipModule from "./ChipModule";
-import { SlidingNavBlock } from "../SlidingNavBlock";
+import SlidingNavBlock from "../SlidingNavBlock/SlidingNavBlock";
 
 const ContentfulModule = ({ module }) => {
   const type = module?.internal?.type || ``;
@@ -13,7 +13,7 @@ const ContentfulModule = ({ module }) => {
   }
 
   if (type === `ContentfulSlidingNavBlock`) {
-    return <SlidingNavBlock />;
+    return <SlidingNavBlock {...module} />;
   }
 
   if (type === `ContentfulChipModule`) {
