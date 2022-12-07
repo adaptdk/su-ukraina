@@ -31,13 +31,16 @@ questions:
   image: ''
   content_blocks: []
 - title: Šiaulių bankas
-  answer: <p>Для громадян України банківський рахунок відкривається безкоштовно, на
-    12 місяців. За план обслуговування "Традиційний для громадян України" плата не
-    стягується. Українців запрошують завітати до будь-якого відділу обслуговування
-    клієнтів Šiaulių bankas. Записатися на візит можна за телефоном <a href="tel:1813">1813</a>
-    або <a href="https://sb.lt/lt/registracija-vizitui?filter=locations&amp;searchForLocation=&amp;works-weekends=false&amp;deposit-money=false&amp;service-type=branchAndBank&amp;works-full-day=falseby">онлайн</a>,
-    вибравши найближче відділення. Для входу в аккаунт буде видано пін-код, що генерується.
-    Список відділень банку можна знайти <a href="https://sb.lt/lt/registracija-vizitui?filter=locations&amp;searchForLocation=&amp;works-weekends=false&amp;deposit-money=false&amp;service-type=branchAndBank&amp;works-full-day=false">тут.</a></p>
+  answer: <p>Якщо Ви є громадянином України, який залишив країну через війну, Ви можете
+    відкрити рахунок у банку Šiaulių bankas безкоштовно. Також громадяни України можуть
+    користуватись сервісним планом "Традиційний для громадян України" без комісії
+    протягом 12 місяців. </p><p>Для відкриття банківського рахунку громадянам України
+    пропонується прийти до будь-якого відділу обслуговування клієнтів Šiaulių bankas.
+    Список відділень банку можна знайти <a href="https://sb.lt/lt/registracija-vizitui?filter=locations&amp;searchForLocation=&amp;works-weekends=false&amp;deposit-money=false&amp;service-type=branchAndBank&amp;works-full-day=false">тут</a>
+    (сторінка доступна литовською, англійською та російською). </p><p>Записатися на
+    візит можна за телефоном <a href="tel:1813">1813</a> або <a href="https://sb.lt/lt/registracija-vizitui?filter=locations&amp;searchForLocation=&amp;works-weekends=false&amp;deposit-money=false&amp;service-type=branchAndBank&amp;works-full-day=falseby">онлайн</a>
+    вибравши найближче відділення (сторінка доступна литовською, англійською та російською).
+    </p><p>Детальна інформація за <a href="https://www.sb.lt/en/faq/ukraina-ua" title="">посиланням</a>.</p>
   resources: []
   contacts: []
   adresses: []
