@@ -1,6 +1,6 @@
 ---
 weight: 50
-title_override: Банки - фінансові сервіси
+title_override: Банки та фінансові послуги
 title: financial-services
 slug: "/financial-services"
 questions:
