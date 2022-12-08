@@ -5,6 +5,10 @@ import "./FaqNav.css";
 import Button from "../Button";
 
 const FaqNav = ({ pages, pathname }) => {
+  if (!pages) {
+    return null;
+  }
+
   let pathRoot = `/ua/refugee-guide`;
 
   switch (true) {
