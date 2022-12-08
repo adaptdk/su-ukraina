@@ -1,15 +1,36 @@
 ---
 weight: 50
-title_override: Банки - фінансові сервіси
+title_override: Банки та фінансові послуги
 title: financial-services
 slug: "/financial-services"
 questions:
+- title: Revolut
+  answer: <p>Для відкриття особистого раунку необхідно:</p><ul><li><p><strong>Завантажити
+    мобільний додаток </strong><a href="https://www.revolut.com/gettheapp/" title=""><strong>Revolut</strong></a><strong>
+    (App Store, Google Play Store). Додаток англійською мовою. </strong></p></li><li><p>Обрати
+    “Sign up” і ввести Ваш номер телефону. Це може бути номер будь-якої країни, головне
+    щоб ви могли отримати SMS повідомлення на цей номер</p></li><li><p>Обрати країну
+    в якій ви знаходитесь, наприклад, Польща чи Литва - в секції “Country of residence”</p></li><li><p>Введіть
+    свою поточну адресу за межами України, наприклад, адресу вашого житла/тимчасового
+    притулку, та інші особові дані</p></li><li><p>Виберіть та завантажте фото українського
+    паспорту* або ID-картки для підтвердження особи</p><p>Документ про реєстрацію,
+    виданий міграційною службою, надсилати відразу необов'язково. </p><p>Детальна
+    інформація українською за <a href="https://blog.revolut.com/payment-services-to-ukrainian-refugees/"
+    title="">посиланням.</a> </p><p>Детальна інформація англійською за <a href="https://help.revolut.com/help/more/support-for-ukrainian-refugees"
+    title="">посиланням</a>.</p><p></p></li></ul>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: SEB
-  answer: <p>Для відкриття банківського рахунку громадянам України пропонується записатися
-    на відвідування відділення банку SEB онлайн або за телефоном <a href="tel:+37052682800">+370
-    52682800</a> (пн-пт 8.00-20.00). Плата за тарифний план обслуговування Sumanu
-    не стягуватиметься. Для входу до свого облікового запису буде видано згенерований
-    пін-код. Адреси відділень ви можете знайти <a href="https://www.bankai.lt/adresai/seb">тут.</a></p>
+  answer: <p>Якщо Ви є громадянином України, який залишив країну через війну, Ви можете
+    відкрити рахунок у банку SEB безкоштовно. Для візиту до відділення банку SEB реєструйтеся
+    <a href="https://www.seb.lt/en/private/daily-banking/service-plans/book-meeting-time">через
+    інтернет</a> (форма англійською мовою) або за телефоном <a href="tel:+37052682800">+370
+    5 268 2800</a> (пн-пт 8:00-20:00).</p><p>Детальна інформація (необхідні документи
+    для відкриття рахунку, адреси відділень та банкоматів, відповіді на поширені запитання,
+    тощо) за <a href="https://www.seb.lt/informaciya-dlya-gromadyan-ukraini-yaki-zalishili-krainu-cherez-viynu"
+    title="">посиланням</a>.</p>
   resources: []
   contacts: []
   adresses: []
@@ -28,50 +49,63 @@ questions:
   image: ''
   content_blocks: []
 - title: Šiaulių bankas
-  answer: <p>Для громадян України банківський рахунок відкривається безкоштовно, на
-    12 місяців. За план обслуговування "Традиційний для громадян України" плата не
-    стягується. Українців запрошують завітати до будь-якого відділу обслуговування
-    клієнтів Šiaulių bankas. Записатися на візит можна за телефоном <a href="tel:1813">1813</a>
-    або <a href="https://sb.lt/lt/registracija-vizitui?filter=locations&amp;searchForLocation=&amp;works-weekends=false&amp;deposit-money=false&amp;service-type=branchAndBank&amp;works-full-day=falseby">онлайн</a>,
-    вибравши найближче відділення. Для входу в аккаунт буде видано пін-код, що генерується.
-    Список відділень банку можна знайти <a href="https://sb.lt/lt/registracija-vizitui?filter=locations&amp;searchForLocation=&amp;works-weekends=false&amp;deposit-money=false&amp;service-type=branchAndBank&amp;works-full-day=false">тут.</a></p>
+  answer: <p>Якщо Ви є громадянином України, який залишив країну через війну, Ви можете
+    відкрити рахунок у банку Šiaulių bankas безкоштовно. Також громадяни України можуть
+    користуватись сервісним планом "Традиційний для громадян України" без комісії
+    протягом 12 місяців. </p><p>Для відкриття банківського рахунку громадянам України
+    пропонується прийти до будь-якого відділу обслуговування клієнтів Šiaulių bankas.
+    Список відділень банку можна знайти <a href="https://sb.lt/lt/registracija-vizitui?filter=locations&amp;searchForLocation=&amp;works-weekends=false&amp;deposit-money=false&amp;service-type=branchAndBank&amp;works-full-day=false">тут</a>
+    (сторінка доступна литовською, англійською та російською). </p><p>Записатися на
+    візит можна за телефоном <a href="tel:1813">1813</a> або <a href="https://sb.lt/lt/registracija-vizitui?filter=locations&amp;searchForLocation=&amp;works-weekends=false&amp;deposit-money=false&amp;service-type=branchAndBank&amp;works-full-day=falseby">онлайн</a>
+    вибравши найближче відділення (сторінка доступна литовською, англійською та російською).
+    </p><p>Детальна інформація за <a href="https://www.sb.lt/en/faq/ukraina-ua" title="">посиланням</a>.</p>
   resources: []
   contacts: []
   adresses: []
   image: ''
   content_blocks: []
 - title: Luminor
-  answer: <p>Зареєструйтесь онлайн у відділенні <a href="https://www.luminor.lt/lt/stat-klientom-luminor#dannie-klienta">банку</a>,
-    заповнивши цю форму, з вами зв'яжуться та призначать зустріч. При собі мати документ,
-    що засвідчує особу, рахунок відкривається безкоштовно, для входу до системи буде
-    надано генератор кодів. Адреси <a href="https://www.luminor.lt/en/opening-account-ukrainian-citizens">філій</a>.</p>
+  answer: <p>Для вікриття рахунку в Luminor банку, необхідно заповнити заявку на веб-сторінці
+    Luminor <a href="https://www.luminor.lt/lt/stat-klientom-luminor">російською</a>
+    або <a href="https://www.luminor.lt/en/become-our-customer-ukraine#customer-information"
+    title="">англійською</a> або завантажити <a href="https://www.luminor.lt/sites/default/files/dokumentai/bendri/private-person-questionnaire.pdf">спеціальну
+    форму даних клієнта</a>, та зберегти її після заповнення. Цю форму та додану копію
+    вашого паспорта треба надіслати на електронну адресу <a href="mailto:paraiskos@luminorgroup.com">paraiskos@luminorgroup.com</a></p><p>Після
+    отримання форми працівники банку зателефонують Вам щоб омовитись про час, коли
+    ви зможете прийти у <a href="https://www.luminor.lt/en/bank-network">відділення
+    банку</a> (сторінка англійською) для підписання документів на відкриття рахунку.</p><p>Детальна
+    інформація щодо послуг, філій, робочих годин тощо <a href="https://www.luminor.lt/lt/privatiems/vidkrittya-rahunku-dlya-gromadyan-ukrayini"
+    title="">за посиланням.</a></p>
   resources: []
   contacts: []
   adresses: []
   image: ''
   content_blocks: []
 - title: Bankera
-  answer: '<p>Громадянам України пропонується скористатися послугами, які надає <a
-    href="https://bankera.com/ru-RU/" title="">Бангера</a>, тобто банківським рахунком,
-    платіжними послугами та картками Visa на тих самих умовах, що й громадянам ЄС
-    – фізичним особам відкривання рахунку, внутрішні перекази та перекази в інші країни
-    ЄС здійснюватимуться безкоштовно. Разом з юридичними партнерами Bankera пропонує
-    свою допомогу у створенні в Литві або іншій країні компаній, відкриваючи рахунки,
-    а також надаючи юридичні та інші послуги, необхідні для початку або перенесення
-    бізнесу. Для отримання додаткової інформації по телефону або по електронній пошті:
-    </p><p><a href="tel:+37052456682">+370 52 456682</a></p><p><a href="mailto: info@bankera.lt">
-    info@bankera.lt</a></p>'
+  answer: '<p>Громадянам України можуть вікрити банківський рахунок, користуватись
+    платіжними послугами та картками Visa на тих самих умовах, що й громадяни ЄС –
+    фізичним особам відкривання рахунку, внутрішні перекази та перекази в інші країни
+    ЄС здійснюватимуться безкоштовно. Також Bankera пропонує свою допомогу у створенні
+    в Литві або іншій країні компаній, відкриваючи рахунки, а також надаючи юридичні
+    та інші послуги, необхідні для початку або перенесення бізнесу.  </p><p>Детальна
+    інформація про відкриття банківського рахунку за <a href="https://bankera.com/uk-UA/%D0%BE%D1%81%D0%BE%D0%B1%D0%B8%D1%81%D1%82%D0%B5/%D0%BA%D0%B0%D1%80%D1%82%D0%BA%D0%B0/"
+    title="">посиланням</a>.</p><p>Для отримання додаткової інформації:</p><p> <a
+    href="tel:+37052456682">+370 52 456682</a> </p><p><a href="mailto: info@bankera.lt">info@bankera.lt</a></p>'
   image: ''
   resources: []
   contacts: []
   adresses: []
   content_blocks: []
 - title: Medicinos bankas
-  answer: '<p>Рахунок відкривається безкоштовно, телефонуйте за тел: <a href="tel:19300">19300</a>.
-    Для відкриття рахунку необхідний документ, що посвідчує особу, та дозвіл на проживання
-    у Литві. Для входу до облікового запису видається Smart ID та/або доступ до електронної
-    пошти. Вхід до акаунту здійснюється шляхом отримання SMS-коду на телефон. Філії
-    банку можна знайти <a href="https://www.medbank.lt/lt/banko-padaliniai">тут.</a></p>'
+  answer: <p>Рахунок відкривається безкоштовно (банківські картки не надаються). Для
+    консультації щодо тарифних планів та процедури відкриття рахунку телефонуйте <a
+    href="tel:19300">19300</a> (литовською, англійською, російською) або заходьте
+    на сайт <a href="https://www.medbank.lt/en/private/daily-banking/become-a-customer"
+    title="">Medicinos bankas</a>. </p><p>Для відкриття рахунку необхідно звернутись
+    до відділення банку (за <a href="https://www.medbank.lt/en/bank-branches" title="">посиланням</a>)
+    і мати при собі документ, що посвідчує особу, та дозвіл на проживання у Литві.  </p><p>Детальна
+    інформація за <a href="https://www.medbank.lt/en/private/daily-banking/become-a-customer"
+    title="">посиланням</a> (литовською та англійськими мовами). </p>
   resources: []
   contacts: []
   adresses: []
@@ -105,10 +139,15 @@ questions:
 contacts: []
 adresses: []
 icon: building-columns
+page_title: ''
+page_description: ''
+resources: []
 
 ---
 Банки в Литві готові безкоштовно відкривати рахунки і надавати основні банківські послуги військовим біженцям з України.
 
-При зверненні в кредитну установу для відкриття рахунку для ідентифікації особи досить паспорта громадянина України - біометричного або звичайного.
+При зверненні в кредитну установу для відкриття рахунку для ідентифікації особи достатньо паспорта громадянина України - біометричного або звичайного.
 
 Однак банки просять вас показати документ, виданий вам в міграційному центрі і ваш ідентифікаційний номер (ІПН). Рекомендуємо мати його з собою.
+
+Детальна інформаця щодо інших фінансових послуг для українців в Литві за [посиланням](https://www.lb.lt/en/information-for-ukrainian-citizens-about-financial-services-in-lithuania) (англійською мовою). 
