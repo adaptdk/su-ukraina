@@ -4,6 +4,18 @@ title_override: Банки та фінансові послуги
 title: financial-services
 slug: "/financial-services"
 questions:
+- title: Citadele bankas
+  answer: <p>Відкриття банківського рахунку, а також грошові перекази на рахунки українських
+    банків безкоштовно. Відкрити рахунок можна онлайн через застосунок, або у відділенні
+    банку. Зареєструватись на візит до відділення банку можна за телефоном <a href="+37052219091"
+    title="">+370 5 221 9091</a> (литовською, англійською, російською), або онлайн
+    (за <a href="https://www.citadele.lt/lt/contacts/booking/" title="">посиланням</a>).  </p><p>Детальна
+    інформація за <a href="https://www.citadele.lt/lt/support/citizens-of-ukraine/"
+    title="">посиланням</a> (литовською).</p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Revolut
   answer: <p>Для відкриття особистого раунку необхідно:</p><ul><li><p><strong>Завантажити
     мобільний додаток </strong><a href="https://www.revolut.com/gettheapp/" title=""><strong>Revolut</strong></a><strong>
