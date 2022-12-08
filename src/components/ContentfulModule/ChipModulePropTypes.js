@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 const ChipPropTypes = {
-  id: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   subheading: PropTypes.string,
   links: PropTypes.arrayOf(
