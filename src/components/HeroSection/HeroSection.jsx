@@ -7,11 +7,14 @@ import { HeroSectionPropTypes } from "./HeroSectionPropTypes";
 const HeroSection = ({ image }) => {
   return (
     <Section className="HeroSectionB">
+      {/* @todo: investigate why src is required */}
+      {/* src="" required because otherwise console throws an error, even though it doesn't make sense here */}
       {image && (
         <GatsbyImage
           className="HeroSectionB__background"
           image={getImage(image)}
           alt="Su Ukraina!"
+          src=""
         />
       )}
     </Section>
