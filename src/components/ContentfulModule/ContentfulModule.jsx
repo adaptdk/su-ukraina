@@ -1,10 +1,10 @@
 import React from "react";
 
 import ContentfulModulePropTypes from "./ContentfulModulePropTypes";
-import EventsModule from "./EventsModule";
+import { EventsModule } from "./EventsModule";
 import ChipModule from "./ChipModule/ChipModule";
 import { SlidingNavBlock } from "./SlidingNavBlock";
-import FaqNav from "../Faq/FaqNav";
+import { FaqNav } from "../Faq";
 
 const ContentfulModule = ({ module }) => {
   const type = module?.internal?.type || ``;

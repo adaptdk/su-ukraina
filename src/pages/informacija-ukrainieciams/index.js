@@ -8,7 +8,7 @@ import Constraint from "../../components/Constraint";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/Layout";
-import FaqNav from "../../components/Faq/FaqNav";
+import { FaqNav } from "../../components/Faq";
 import Section from "../../components/Section";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import PageTitle from "../../components/PageTitle";
