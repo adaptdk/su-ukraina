@@ -3,11 +3,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
 
 import Layout from "../components/Layout";
-import HeroSection, { HeroSectionPropTypes } from "../components/HeroSection";
+import { HeroSection, HeroSectionPropTypes } from "../components/HeroSection";
 import Constraint from "../components/Constraint";
 import NavigationGroup from "../components/NavigationGroup";
 import SlidingNavigation from "../components/SlidingNavigation";
-import { SlidingNavBlock } from "../components/SlidingNavBlock";
+import { SlidingNavBlock } from "../components/ContentfulModule/SlidingNavBlock";
 import CardList from "../components/CardList";
 import Card from "../components/Card";
 import Button from "../components/Button";

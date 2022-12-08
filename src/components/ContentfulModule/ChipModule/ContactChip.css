@@ -38,17 +38,17 @@
     }
 
     &-web {
-      mask-image: url("../../images/icons/web.svg");
+      mask-image: url("../../../images/icons/web.svg");
       width: 20px;
     }
 
     &-facebook {
-      mask-image: url("../../images/icons/facebook.svg");
+      mask-image: url("../../../images/icons/facebook.svg");
       width: 20px;
     }
 
     &-twitter {
-      mask-image: url("../../images/icons/twitter.svg");
+      mask-image: url("../../../images/icons/twitter.svg");
       width: 20px;
     }
   }

@@ -1,18 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import Layout from "../components/Layout";
-import HeroSection, { HeroSectionPropTypes } from "../components/HeroSection";
 import Constraint from "../components/Constraint";
 import NavigationGroup from "../components/NavigationGroup";
+import { HeroSection, HeroSectionPropTypes } from "../components/HeroSection";
+import {
+  ContentfulModule,
+  ContentfulModulePropTypes,
+} from "../components/ContentfulModule";
+import SlidingNavigation from "../components/SlidingNavigation";
+import { SlidingNavBlockPropTypes } from "../components/ContentfulModule/SlidingNavBlock";
 
 import { seoPropTypes } from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
-import ContentfulModule from "../components/ContentfulModule/ContentfulModule";
-import ContentfulModulePropTypes from "../components/ContentfulModule/ContentfulModulePropTypes";
-import SlidingNavigation from "../components/SlidingNavigation";
-import classNames from "classnames";
-import { SlidingNavBlockPropTypes } from "../components/SlidingNavBlock/SlidingNavBlockPropTypes";
 
 const ModularPage = ({ path, pageContext }) => {
   const {

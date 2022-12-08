@@ -1,5 +1,5 @@
 import React from "react";
-import ContactChip from "../ContactChip";
+import ContactChip from "./ContactChip";
 import { ChipModulePropTypes } from "./ChipModulePropTypes";
 
 const ChipModule = ({ chips }) => {

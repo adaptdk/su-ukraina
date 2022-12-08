@@ -1,7 +1,7 @@
 import * as React from "react";
+import { ChipPropTypes } from "./ChipModulePropTypes";
 
 import "./ContactChip.css";
-import { ChipPropTypes } from "../ContentfulModule/ChipModulePropTypes";
 
 const ContactChip = ({ heading, subheading, links }) => {
   const getLabelByType = (type) => {

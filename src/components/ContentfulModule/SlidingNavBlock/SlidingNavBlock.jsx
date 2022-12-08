@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import "./SlidingNavBlock.css";
-import Icon from "../Icon";
-import ContentfulModule from "../ContentfulModule/ContentfulModule";
+import Icon from "../../Icon";
+import ContentfulModule from "../ContentfulModule";
 import { SlidingNavBlockPropTypes } from "./SlidingNavBlockPropTypes";
 
 const SlidingNavBlock = ({ id = ``, children, title, icon, data }) => {

@@ -1,8 +1,8 @@
 import React from "react";
 import { EventsModulePropTypes } from "./EventsModulePropTypes";
-import EventCardList from "../EventCardList";
-import EventCard from "../EventCard";
-import DetailsWrapper from "../DetailsWrapper";
+import EventCardList from "../../EventCardList";
+import EventCard from "../../EventCard";
+import DetailsWrapper from "../../DetailsWrapper";
 
 const EventsModule = ({ events }) => {
   const currentDate = new Date();

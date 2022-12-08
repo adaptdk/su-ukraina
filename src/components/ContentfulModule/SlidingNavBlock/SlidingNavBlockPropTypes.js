@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import ContentfulModulePropTypes from "../ContentfulModule/ContentfulModulePropTypes";
+import ContentfulModulePropTypes from "../ContentfulModulePropTypes";
 
 const SlidingNavBlockPropTypes = {
   id: PropTypes.string.isRequired,

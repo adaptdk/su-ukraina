@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-import { ChipModulePropTypes } from "./ChipModulePropTypes";
-import { EventsModulePropTypes } from "./EventsModulePropTypes";
-import { SlidingNavBlockPropTypes } from "../SlidingNavBlock/SlidingNavBlockPropTypes";
+import { ChipModulePropTypes } from "./ChipModule";
+import { EventsModulePropTypes } from "./EventsModule";
+import { SlidingNavBlockPropTypes } from "./SlidingNavBlock";
 
 const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(EventsModulePropTypes),
