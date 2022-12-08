@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./FaqNav.css";
 import Button from "../Button";
 
-const FaqNav = ({ navData, pathname, lang }) => {
+const FaqNav = ({ pages, pathname }) => {
   let pathRoot = `/ua/refugee-guide`;
 
   switch (true) {
@@ -24,17 +24,17 @@ const FaqNav = ({ navData, pathname, lang }) => {
   return (
     <nav className="FaqNav">
       <ul className="FaqNav__list">
-        {navData.map((navItem) => {
+        {pages.map((page) => {
           return (
-            <li className="FaqNav__list-item" key={navItem.slug}>
+            <li className="FaqNav__list-item" key={page.id}>
               <Button
-                active={pathname.includes(navItem.slug)}
+                active={pathname.includes(page.slug)}
                 color="primary"
-                startIcon={navItem.icon}
+                startIcon={page.iconType}
                 endIcon={`arrow-white`}
-                to={`${pathRoot}${navItem.slug}/`}
+                to={`${pathRoot}/${page.slug}/`}
               >
-                {navItem.title_override}
+                {page.pageHeading}
               </Button>
             </li>
           );
@@ -45,11 +45,12 @@ const FaqNav = ({ navData, pathname, lang }) => {
 };
 
 FaqNav.propTypes = {
-  navData: PropTypes.arrayOf(
+  pages: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string,
-      title_override: PropTypes.string,
-      slug: PropTypes.string,
+      id: PropTypes.string.isRequired,
+      pageHeading: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired,
+      iconType: PropTypes.string.isRequired,
     })
   ),
   pathname: PropTypes.string,

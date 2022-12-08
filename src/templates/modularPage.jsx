@@ -30,6 +30,20 @@ const ModularPage = ({ path, pageContext }) => {
   console.log({ modules });
   console.log(`tihs: `, slidingNavData);
 
+  // in some cases you want to add extra props to a module
+  // this function does exactly that
+  const supplementModule = (module) => {
+    const type = module?.internal?.type;
+    if (type === `ContentfulFaqNavigation`) {
+      return {
+        ...module,
+        pathname: path,
+      };
+    }
+
+    return module;
+  };
+
   return (
     <Layout pagePath={path} seo={seo}>
       {hero && <HeroSection {...hero} />}
@@ -48,7 +62,12 @@ const ModularPage = ({ path, pageContext }) => {
         {slidingNavData && <SlidingNavigation data={slidingNavData} />}
         {!!modules.at(0) &&
           modules.map((module) => {
-            return <ContentfulModule key={module.id} module={module} />;
+            return (
+              <ContentfulModule
+                key={module.id}
+                module={supplementModule(module)}
+              />
+            );
           })}
       </Constraint>
     </Layout>

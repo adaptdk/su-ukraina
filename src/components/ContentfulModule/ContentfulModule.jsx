@@ -4,6 +4,7 @@ import ContentfulModulePropTypes from "./ContentfulModulePropTypes";
 import EventsModule from "./EventsModule";
 import ChipModule from "./ChipModule/ChipModule";
 import { SlidingNavBlock } from "./SlidingNavBlock";
+import FaqNav from "../Faq/FaqNav";
 
 const ContentfulModule = ({ module }) => {
   const type = module?.internal?.type || ``;
@@ -18,6 +19,10 @@ const ContentfulModule = ({ module }) => {
 
   if (type === `ContentfulChipModule`) {
     return <ChipModule {...module} />;
+  }
+
+  if (type === `ContentfulFaqNavigation`) {
+    return <FaqNav {...module} />;
   }
 
   return null;

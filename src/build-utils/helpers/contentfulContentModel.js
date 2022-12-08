@@ -104,6 +104,17 @@ const slidingNavBlock = `
   }
 `;
 
+const faqNavigation = `
+  pages {
+    ... on ContentfulFaqPage {
+      id
+      slug
+      pageHeading
+      iconType
+    }
+  }
+`;
+
 module.exports = {
   cta,
   hero,
@@ -113,4 +124,5 @@ module.exports = {
   eventsModule,
   slidingNavBlock,
   chipModule,
+  faqNavigation,
 };
