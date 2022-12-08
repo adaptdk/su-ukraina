@@ -42,5 +42,14 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
+  // Process FAQ Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.faqPage.query(graphql),
+      createFunction: PAGE_UTILS.faqPage.createFaqPages,
+      createPage,
+    })
+  );
+
   return Promise.all(promises);
 };

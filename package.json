@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.0",
+    "@contentful/rich-text-types": "^16.0.2",
     "@fontsource/roboto": "^4.5.5",
     "@mediacurrent/gatsby-plugin-silence-css-order-warning": "^1.0.0",
     "algoliasearch": "^4.13.0",

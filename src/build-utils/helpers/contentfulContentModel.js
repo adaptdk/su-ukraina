@@ -115,6 +115,30 @@ const faqNavigation = `
   }
 `;
 
+const faqItem = `
+  question
+  answer {
+    raw
+  }
+`;
+
+const resourceItem = `
+  id
+  label
+  cta {
+    ${cta}
+  }
+`;
+
+const resourceListModule = `
+  heading
+  resources {
+    ... on ContentfulResourceItem {
+      ${resourceItem}
+    }
+  }
+`;
+
 module.exports = {
   cta,
   hero,
@@ -125,4 +149,6 @@ module.exports = {
   slidingNavBlock,
   chipModule,
   faqNavigation,
+  faqItem,
+  resourceListModule,
 };

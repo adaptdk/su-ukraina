@@ -7,7 +7,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import Constraint from "../components/Constraint";
 import Layout from "../components/Layout";
 import NavigationGroup from "../components/NavigationGroup";
-import { ResourceList, ResourceListItem } from "../components/ResourceList";
 import SubPage from "../components/SubPage";
 import Section from "../components/Section";
 import PageTitle from "../components/PageTitle";
@@ -52,22 +51,13 @@ const Page = ({ data, pageContext }) => {
 
       <Constraint>
         {handbooks.map((handbook, i) => {
+          // @todo: fix this page
           return (
-            <SubPage key={i} title={handbook.title} intro={handbook.intro}>
-              <ResourceList>
-                {handbook.resources?.map((resource, j) => {
-                  return (
-                    <ResourceListItem
-                      key={j}
-                      title={resource.title}
-                      subtitle={resource.subtitle}
-                      url={resource.link}
-                      buttonText={`Šaltinis`}
-                    />
-                  );
-                })}
-              </ResourceList>
-            </SubPage>
+            <SubPage
+              key={i}
+              title={handbook.title}
+              intro={handbook.intro}
+            ></SubPage>
           );
         })}
       </Constraint>

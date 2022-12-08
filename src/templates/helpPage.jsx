@@ -13,7 +13,7 @@ import Card from "../components/Card";
 import Button from "../components/Button";
 import CardSection from "../components/Card/CardSection";
 
-import { seoPropTypes } from "../helpers/genericPropTypes";
+import { ctaPropTypes, seoPropTypes } from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
 
 const CardListSection = ({ organisations }) => {
@@ -153,14 +153,7 @@ const organisationsProp = PropTypes.arrayOf(
     otherInformation: PropTypes.shape({
       raw: PropTypes.string,
     }),
-    ctaList: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        isPrimary: PropTypes.bool.isRequired,
-        label: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-      })
-    ),
+    ctaList: PropTypes.arrayOf(PropTypes.shape(ctaPropTypes)),
   })
 );
 

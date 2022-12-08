@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 
 import "./FaqNav.css";
-import Button from "../Button";
+import Button from "../../Button";
 
 const FaqNav = ({ pages, pathname }) => {
   if (!pages) {
@@ -34,11 +34,11 @@ const FaqNav = ({ pages, pathname }) => {
               <Button
                 active={pathname.includes(page.slug)}
                 color="primary"
-                startIcon={page.iconType}
+                startIcon={page.iconType || page.icon}
                 endIcon={`arrow-white`}
                 to={`${pathRoot}/${page.slug}/`}
               >
-                {page.pageHeading}
+                {page.pageHeading || page.title_override}
               </Button>
             </li>
           );
@@ -58,7 +58,6 @@ FaqNav.propTypes = {
     })
   ),
   pathname: PropTypes.string,
-  lang: PropTypes.string,
 };
 
 export default FaqNav;

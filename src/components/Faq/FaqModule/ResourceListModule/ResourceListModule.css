@@ -1,4 +1,4 @@
-.ResourceList {
+.ResourceListModule {
   &__list {
     list-style-type: none;
     margin: 0;
@@ -6,6 +6,7 @@
   }
 }
 
+/* @todo: variable for color */
 .ResourceListItem {
   align-items: center;
   background: #f9f9f9;
@@ -26,7 +27,7 @@
   &__content {
     width: 100%;
 
-    h3 {
+    h4 {
       color: var(--c__primary);
       font-size: 1.25rem;
       margin-bottom: calc(var(--s_unit) * 2);

@@ -1,54 +1,17 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { getTranslatedText } from "../../utils/getTranslatedText";
 
-import { ResourceList, ResourceListItem } from "../ResourceList";
-import FaqNavCollapsible from "./FaqNavCollapsible";
+import { FaqNavCollapsible } from "./FaqNav";
 import Constraint from "../Constraint";
 import Button from "../Button";
 import Breadcrumbs from "../Breadcrumbs";
 
 import "./Faq.css";
-
-// Just took this from stackoverflow
-// https://stackoverflow.com/a/30810322
-const fallbackCopyTextToClipboard = (text) => {
-  var textArea = document.createElement(`textarea`);
-  textArea.value = text;
-
-  // Avoid scrolling to bottom
-  textArea.style.top = `0`;
-  textArea.style.left = `0`;
-  textArea.style.position = `fixed`;
-
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-
-  try {
-    document.execCommand(`copy`);
-  } catch (err) {
-    //console.error(`Fallback: Oops, unable to copy`, err);
-  }
-
-  document.body.removeChild(textArea);
-};
-
-function copyTextToClipboard(text) {
-  if (!navigator.clipboard) {
-    fallbackCopyTextToClipboard(text);
-    return;
-  }
-  navigator.clipboard.writeText(text).then(
-    function () {
-      console.log(`Async: Copying to clipboard was successful!`);
-    },
-    function (err) {
-      console.error(`Async: Could not copy text: `, err);
-    }
-  );
-}
+import { formatRichText } from "../../helpers/formatting";
+import { FaqModule } from "./FaqModule";
+import { ResourceListModulePropTypes } from "./FaqModule/ResourceListModule/ResourceListModulePropTypes";
+import { FaqItemPropTypes } from "./FaqModule/FaqItem/FaqItemPropTypes";
 
 // Used stackoverflow as reference
 // Not a 1:1 copy
@@ -67,53 +30,35 @@ const openTarget = () => {
   }
 };
 
-const handleAnchorClick = (e) => {
-  const el = document.createElement(`span`);
-  el.className = `copy-popup`;
-  el.ariaHidden = true;
-  el.innerText = e.target.dataset.copied;
-  e.target.parentNode.appendChild(el);
-  setTimeout(() => {
-    el.classList.add(`copy-popup--active`);
-  }, 1);
+/** @todo: don't know currently how to generate the answer for metadata
+ * because the answer comes as a JSON string
+ */
 
-  setTimeout(() => {
-    el.classList.remove(`copy-popup--active`);
-    setTimeout(() => {
-      el.parentNode.removeChild(el);
-    }, 500);
-  }, 1001);
+// const generateLdMetadataArr = (currentItemData) => {
+//   const { questions } = currentItemData;
+//   if (questions && questions.length) {
+//     const questionsMetadataLdArray = questions.map((question) => {
+//       let questionObj = {};
+//       (questionObj[`@type`] = `Question`),
+//         (questionObj[`name`] = question.title),
+//         (questionObj[`acceptedAnswer`] = {
+//           "@type": `Answer`,
+//           text: question.answer,
+//         });
+//       return questionObj;
+//     });
+//     const metadataLDObj = {
+//       "@context": `https://schema.org`,
+//       "@type": `FAQPage`,
+//       mainEntity: questionsMetadataLdArray,
+//     };
+//     return metadataLDObj;
+//   } else {
+//     return false;
+//   }
+// };
 
-  copyTextToClipboard(e.target.href);
-
-  e.preventDefault();
-};
-
-const generateLdMetadataArr = (currentItemData) => {
-  const { questions } = currentItemData;
-  if (questions && questions.length) {
-    const questionsMetadataLdArray = questions.map((question) => {
-      let questionObj = {};
-      (questionObj[`@type`] = `Question`),
-        (questionObj[`name`] = question.title),
-        (questionObj[`acceptedAnswer`] = {
-          "@type": `Answer`,
-          text: question.answer,
-        });
-      return questionObj;
-    });
-    const metadataLDObj = {
-      "@context": `https://schema.org`,
-      "@type": `FAQPage`,
-      mainEntity: questionsMetadataLdArray,
-    };
-    return metadataLDObj;
-  } else {
-    return false;
-  }
-};
-
-const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
+const Faq = ({ title, description, navData, content, crumbs }) => {
   useEffect(() => {
     window.addEventListener(`hashchange`, openTarget);
     openTarget();
@@ -129,21 +74,22 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
     };
   }, []);
 
-  useEffect(() => {
-    const metadataLdContent = generateLdMetadataArr(currentItemData);
-    let script;
-    if (metadataLdContent) {
-      script = document.createElement(`script`);
-      script.type = `application/ld+json`;
-      script.innerText = JSON.stringify(metadataLdContent);
-      document.body.appendChild(script);
-    }
-    return () => {
-      if (script) {
-        document.body.removeChild(script);
-      }
-    };
-  }, [currentItemData]);
+  // SEE NOTE ABOVE FOR generateLdMetadataArr
+  // useEffect(() => {
+  //   const metadataLdContent = generateLdMetadataArr(currentItemData);
+  //   let script;
+  //   if (metadataLdContent) {
+  //     script = document.createElement(`script`);
+  //     script.type = `application/ld+json`;
+  //     script.innerText = JSON.stringify(metadataLdContent);
+  //     document.body.appendChild(script);
+  //   }
+  //   return () => {
+  //     if (script) {
+  //       document.body.removeChild(script);
+  //     }
+  //   };
+  // }, [currentItemData]);
 
   const handleFaqNavSensorChange = (e) => {
     if (typeof window === `undefined`) {
@@ -166,117 +112,19 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
           id="faqnav-sensor"
           onChange={handleFaqNavSensorChange}
         />
-        {!!navData && <FaqNavCollapsible lang={lang} navData={navData} />}
+        {!!navData && <FaqNavCollapsible navData={navData} />}
 
         <div className="Faq__content">
           <Breadcrumbs crumbs={crumbs} />
-          <h1>{currentItemData.title_override}</h1>
-          <div dangerouslySetInnerHTML={{ __html: faqHtml }} />
+          <h1>{title}</h1>
+          {description?.raw && formatRichText(description.raw)}
 
-          {currentItemData.questions?.map((question, i) => {
-            const tabId = `tab-${i}`;
-
-            return (
-              <div className="Faq__question" id={tabId} key={tabId}>
-                <details>
-                  <summary>
-                    <div className="Faq__summary">
-                      <h2>{question.title}</h2>
-                    </div>
-                  </summary>
-                  <div
-                    className="Faq__answer"
-                    dangerouslySetInnerHTML={{ __html: question.answer }}
-                  />
-
-                  {!!question.content_blocks && (
-                    <div className="ContentBlocks">
-                      {question.content_blocks?.map((block, j) => {
-                        const blockClass = block.template
-                          ? `ContentBlock ContentBlock--${block.template}`
-                          : `ContentBlock`;
-
-                        const image = block.image && (
-                          <GatsbyImage
-                            image={getImage(block.image)}
-                            alt={block.title}
-                          />
-                        );
-
-                        return (
-                          <div className={blockClass} key={j}>
-                            {!!block.content && (
-                              <div
-                                className="ContentBlock__content"
-                                dangerouslySetInnerHTML={{
-                                  __html: block.content,
-                                }}
-                              />
-                            )}
-
-                            {!!image && (
-                              <div className="ContentBlock__image">{image}</div>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
-
-                  {!!question.resources && (
-                    <ResourceList>
-                      {question.resources?.map((resource, j) => {
-                        return (
-                          <ResourceListItem
-                            key={j}
-                            title={resource.title}
-                            subtitle={resource.subtitle}
-                            url={resource.url}
-                            buttonText={getTranslatedText(`labels.source`)}
-                          />
-                        );
-                      })}
-                    </ResourceList>
-                  )}
-
-                  <div className="Faq__actions">
-                    <div className="Faq__copy-action">
-                      <a
-                        href={`#${tabId}`}
-                        data-copied="Скопійовано"
-                        onClick={(e) => {
-                          handleAnchorClick(e);
-                        }}
-                        className="copy"
-                      >
-                        {getTranslatedText(`actions.copyLink`)}
-                      </a>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            );
-          })}
-
-          {!!currentItemData.resources && (
-            <div className="ContentBlocks">
-              {currentItemData.resources.length > 0 && (
-                <ResourceList title={getTranslatedText(`labels.links`)}>
-                  {currentItemData.resources?.map((resource, j) => {
-                    return (
-                      <ResourceListItem
-                        key={j}
-                        title={resource.title}
-                        subtitle={resource.subtitle}
-                        url={resource.url}
-                        buttonText={getTranslatedText(`labels.source`)}
-                      />
-                    );
-                  })}
-                </ResourceList>
-              )}
-            </div>
-          )}
+          {content?.at(0) &&
+            content.map((module, index) => {
+              return (
+                <FaqModule key={module.id} module={module} index={index} />
+              );
+            })}
         </div>
 
         <label className="Faq__faqnav-trigger" htmlFor="faqnav-sensor">
@@ -294,42 +142,29 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
   );
 };
 
+export const FaqNavDataPropTypes = {
+  id: PropTypes.string,
+  pageHeading: PropTypes.string,
+  slug: PropTypes.string,
+  iconType: PropTypes.string,
+};
+
 Faq.propTypes = {
-  currentItemData: PropTypes.shape({
-    title: PropTypes.string,
-    title_override: PropTypes.string,
-    resources: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        subtitle: PropTypes.string,
-        url: PropTypes.string,
-      })
-    ),
-    questions: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        answer: PropTypes.string,
-        image: PropTypes.object,
-        resources: PropTypes.arrayOf(
-          PropTypes.shape({
-            title: PropTypes.string,
-            subtitle: PropTypes.string,
-            url: PropTypes.string,
-          })
-        ),
-      })
-    ),
+  title: PropTypes.string.isRequired,
+  description: PropTypes.shape({
+    raw: PropTypes.string,
   }),
-  faqHtml: PropTypes.string.isRequired,
-  navData: PropTypes.arrayOf(
+  navData: PropTypes.arrayOf(PropTypes.shape(FaqNavDataPropTypes)).isRequired,
+  crumbs: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string,
-      title_override: PropTypes.string,
+      pathname: PropTypes.string.isRequired,
+      crumbLabel: PropTypes.string.isRequired,
     })
-  ),
-  pagePath: PropTypes.string,
-  crumbs: PropTypes.array,
-  lang: PropTypes.string,
+  ).isRequired,
+  content: PropTypes.oneOfType([
+    PropTypes.shape(ResourceListModulePropTypes),
+    PropTypes.shape(FaqItemPropTypes),
+  ]),
 };
 
 export default Faq;
