@@ -4,6 +4,18 @@ title_override: Банки та фінансові послуги
 title: financial-services
 slug: "/financial-services"
 questions:
+- title: Citadele bankas
+  answer: <p>Відкриття банківського рахунку, а також грошові перекази на рахунки українських
+    банків безкоштовно. Відкрити рахунок можна онлайн через застосунок, або у відділенні
+    банку. Зареєструватись на візит до відділення банку можна за телефоном <a href="+37052219091"
+    title="">+370 5 221 9091</a> (литовською, англійською, російською), або онлайн
+    (за <a href="https://www.citadele.lt/lt/contacts/booking/" title="">посиланням</a>).  </p><p>Детальна
+    інформація за <a href="https://www.citadele.lt/lt/support/citizens-of-ukraine/"
+    title="">посиланням</a> (литовською).</p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Revolut
   answer: <p>Для відкриття особистого раунку необхідно:</p><ul><li><p><strong>Завантажити
     мобільний додаток </strong><a href="https://www.revolut.com/gettheapp/" title=""><strong>Revolut</strong></a><strong>
@@ -36,12 +48,14 @@ questions:
   adresses: []
   image: ''
   content_blocks: []
-- answer: <p>Для відкриття банківського рахунку громадянам України пропонується зареєструватися
-    у відділенні Swedbank онлайн або за телефоном <a href="tel:+37052684444">+370
-    5 268 4444</a> Рахунки для громадян України відкриваються безкоштовно та не обкладаються
-    платою за план обслуговування. плата за обслуговування не стягується. Для входу
-    в обліковий запис буде виданий генератор пін-коду. Адреси відділень можна знайти
-    <a href="https://www.bankai.lt/adresai/swedbank">тут.</a></p>
+- answer: <p>Громадяни України можуть безкоштовно відкрити банківській рахунок (плата
+    за обслуговування рахунку не стягується) в одному з віділень Swedbank. Адреси
+    віділень за <a href="https://www.swedbank.lt/private/home/contacts" title="">посиланням</a>.
+    Для отримання консультації необхідна попередня рестрація - онлайн (за <a href="https://www.swedbank.lt/private/home/more/appointments"
+    title="">посиланням</a> "Зареєструватись без логіну"), або за телефоном <a href="tel:+37052684444">+370
+    5 268 4444</a> (литовською, англійською, російською мовою).</p><p>Детальна інформація
+    за <a href="https://www.swedbank.lt/private/d2d/start" title="">посиланням</a>.
+    </p>
   resources: []
   contacts: []
   title: Swedbank
@@ -127,11 +141,10 @@ questions:
     хочете скористатися послугами, вам потрібно:</p><p>- Створіть обліковий запис
     WISE: <a href="https://wise.com/register/?redirectUrl=%2Fsend%23%3Famount%3D1000%26sourceCurrency%3DGBP%26targetCurrency%3DEUR%26fixedTarget%3Dfalse%26guaranteedFixedTarget%3Dfalse%26paymentOptionType%3DREGULAR&amp;country=LT&amp;fbclid=IwAR2ltUyX2SYoV_KBsBwpv6CxXL-YI5nIn1aJmwIH3ws4dc1QryST_rsYemY#/email">РЕЄСТРАЦІЯ</a></p><p>-
     Підтвердити свою особу за допомогою паспорта або водійського посвідчення;</p><p>-
-    Здійснити переказ згідно з інструкцією, наданою банком.</p><p><br></p>'
-  resources:
-  - subtitle: ''
-    url: https://wise.com/register/?redirectUrl=%2Fsend%23%3Famount%3D1000%26sourceCurrency%3DGBP%26targetCurrency%3DEUR%26fixedTarget%3Dfalse%26guaranteedFixedTarget%3Dfalse%26paymentOptionType%3DREGULAR&country=LT&fbclid=IwAR2ltUyX2SYoV_KBsBwpv6CxXL-YI5nIn1aJmwIH3ws4dc1QryST_rsYemY#/email
-    title: " РЕЄСТРАЦІЯ"
+    Здійснити переказ згідно з інструкцією, наданою банком.</p><p>Детальна інформація
+    за <a href="https://wise.com/ua/blog/wise-dlya-bizhenciv-z-ukrayiny" title="">посиланням</a>.
+    </p><p><br></p>'
+  resources: []
   contacts: []
   adresses: []
   image: ''
@@ -141,13 +154,16 @@ adresses: []
 icon: building-columns
 page_title: ''
 page_description: ''
-resources: []
+resources:
+- title: важлива інформація "як відкрити банківський рахунок в Литві?"
+  subtitle: ''
+  url: https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini/finansovi-poslugi
 
 ---
 Банки в Литві готові безкоштовно відкривати рахунки і надавати основні банківські послуги військовим біженцям з України.
 
-При зверненні в кредитну установу для відкриття рахунку для ідентифікації особи достатньо паспорта громадянина України - біометричного або звичайного.
+При зверненні в кредитну установу для відкриття рахунку для ідентифікації особи достатньо паспорта громадянина України - біометричного або звичайного. Окрім цього, необхідно надати документ, виданий вам в міграційному центрі, а також Ваш ідентифікаційний номер (ІПН). Рекомендуємо мати його з собою.
 
-Однак банки просять вас показати документ, виданий вам в міграційному центрі і ваш ідентифікаційний номер (ІПН). Рекомендуємо мати його з собою.
+Відкрити банківський рахунок можна як фізично (у відділенні банку), так і онлайн. 
 
-Детальна інформаця щодо інших фінансових послуг для українців в Литві за [посиланням](https://www.lb.lt/en/information-for-ukrainian-citizens-about-financial-services-in-lithuania) (англійською мовою). 
+Детальна інформаця щодо інших фінансових послуг для українців в Литві за [посиланням](https://www.lb.lt/en/information-for-ukrainian-citizens-about-financial-services-in-lithuania) (англійською мовою).
