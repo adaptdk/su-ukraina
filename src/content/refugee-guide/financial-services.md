@@ -141,11 +141,10 @@ questions:
     хочете скористатися послугами, вам потрібно:</p><p>- Створіть обліковий запис
     WISE: <a href="https://wise.com/register/?redirectUrl=%2Fsend%23%3Famount%3D1000%26sourceCurrency%3DGBP%26targetCurrency%3DEUR%26fixedTarget%3Dfalse%26guaranteedFixedTarget%3Dfalse%26paymentOptionType%3DREGULAR&amp;country=LT&amp;fbclid=IwAR2ltUyX2SYoV_KBsBwpv6CxXL-YI5nIn1aJmwIH3ws4dc1QryST_rsYemY#/email">РЕЄСТРАЦІЯ</a></p><p>-
     Підтвердити свою особу за допомогою паспорта або водійського посвідчення;</p><p>-
-    Здійснити переказ згідно з інструкцією, наданою банком.</p><p><br></p>'
-  resources:
-  - subtitle: ''
-    url: https://wise.com/register/?redirectUrl=%2Fsend%23%3Famount%3D1000%26sourceCurrency%3DGBP%26targetCurrency%3DEUR%26fixedTarget%3Dfalse%26guaranteedFixedTarget%3Dfalse%26paymentOptionType%3DREGULAR&country=LT&fbclid=IwAR2ltUyX2SYoV_KBsBwpv6CxXL-YI5nIn1aJmwIH3ws4dc1QryST_rsYemY#/email
-    title: " РЕЄСТРАЦІЯ"
+    Здійснити переказ згідно з інструкцією, наданою банком.</p><p>Детальна інформація
+    за <a href="https://wise.com/ua/blog/wise-dlya-bizhenciv-z-ukrayiny" title="">посиланням</a>.
+    </p><p><br></p>'
+  resources: []
   contacts: []
   adresses: []
   image: ''
