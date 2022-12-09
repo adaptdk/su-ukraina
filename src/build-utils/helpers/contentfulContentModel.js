@@ -125,6 +125,7 @@ const faqItem = `
 const resourceItem = `
   id
   label
+  subtext
   cta {
     ${cta}
   }
@@ -132,6 +133,9 @@ const resourceItem = `
 
 const resourceListModule = `
   heading
+  subheading {
+    raw
+  }
   resources {
     ... on ContentfulResourceItem {
       ${resourceItem}

@@ -1,4 +1,6 @@
 .ResourceListModule {
+  margin-bottom: calc(var(--s__unit) * 8);
+
   &__list {
     list-style-type: none;
     margin: 0;
@@ -27,7 +29,7 @@
   &__content {
     width: 100%;
 
-    h4 {
+    h3 {
       color: var(--c__primary);
       font-size: 1.25rem;
       margin-bottom: calc(var(--s_unit) * 2);

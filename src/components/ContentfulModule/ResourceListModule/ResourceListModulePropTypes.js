@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { ctaPropTypes } from "../../../../helpers/genericPropTypes";
+import { ctaPropTypes } from "../../../helpers/genericPropTypes";
 
 const ResourceItemPropTypes = {
   id: PropTypes.string.isRequired,
@@ -10,11 +10,17 @@ const ResourceItemPropTypes = {
 const ResourceListModulePropTypes = {
   id: PropTypes.string.isRequired,
   heading: PropTypes.string,
+  subheading: PropTypes.shape({
+    raw: PropTypes.string,
+  }),
   resources: PropTypes.arrayOf(PropTypes.shape(ResourceItemPropTypes)),
 };
 
 const ResourceListModuleDefaultProps = {
   heading: ``,
+  subheading: {
+    raw: ``,
+  },
 };
 
 export {

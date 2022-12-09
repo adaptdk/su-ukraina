@@ -1,20 +1,26 @@
 import React from "react";
 
 import "./ResourceListModule.css";
-import Button from "../../../Button";
-import { ResourceListModulePropTypes } from "./ResourceListModulePropTypes";
+import Button from "../../Button";
+import {
+  ResourceListModuleDefaultProps,
+  ResourceListModulePropTypes,
+} from "./ResourceListModulePropTypes";
+import { formatRichText } from "../../../helpers/formatting";
 
-const ResourceListModule = ({ heading, resources }) => {
+const ResourceListModule = ({ heading, subheading, resources }) => {
   return (
     <section className="ResourceListModule">
-      {!!heading && <h3 className="ResourceListModule__title">{heading}</h3>}
+      {!!heading && <h2 className="ResourceListModule__title">{heading}</h2>}
+      {subheading?.raw && formatRichText(subheading.raw)}
       <ul className="ResourceListModule__list">
         {resources?.at(0) &&
-          resources.map(({ id, label, cta }) => {
+          resources.map(({ id, label, subtext, cta }) => {
             return (
               <li key={id} className="ResourceListItem">
                 <div className="ResourceListItem__content">
-                  <h4>{label}</h4>
+                  <h3>{label}</h3>
+                  {!!subtext && <p>{subtext}</p>}
                 </div>
                 <Button
                   endIcon={`arrow-blue`}
@@ -33,5 +39,7 @@ const ResourceListModule = ({ heading, resources }) => {
 };
 
 ResourceListModule.propTypes = ResourceListModulePropTypes;
+
+ResourceListModule.defaultProps = ResourceListModuleDefaultProps;
 
 export default ResourceListModule;

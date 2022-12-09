@@ -14,6 +14,7 @@ const SlidingNavBlock = ({ id = ``, children, title, icon, data }) => {
 
     return null;
   };
+
   return (
     <div id={id} className="SlidingNavBlock">
       <div className="SlidingNavBlock__title-wrapper">

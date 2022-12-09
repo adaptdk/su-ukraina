@@ -10,7 +10,7 @@ import Breadcrumbs from "../Breadcrumbs";
 import "./Faq.css";
 import { formatRichText } from "../../helpers/formatting";
 import { FaqModule } from "./FaqModule";
-import { ResourceListModulePropTypes } from "./FaqModule/ResourceListModule/ResourceListModulePropTypes";
+import { ResourceListModulePropTypes } from "../ContentfulModule/ResourceListModule";
 import { FaqItemPropTypes } from "./FaqModule/FaqItem/FaqItemPropTypes";
 
 // Used stackoverflow as reference

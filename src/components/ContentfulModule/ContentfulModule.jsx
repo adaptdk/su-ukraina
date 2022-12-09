@@ -2,8 +2,9 @@ import React from "react";
 
 import ContentfulModulePropTypes from "./ContentfulModulePropTypes";
 import { EventsModule } from "./EventsModule";
-import ChipModule from "./ChipModule/ChipModule";
+import { ChipModule } from "./ChipModule";
 import { SlidingNavBlock } from "./SlidingNavBlock";
+import { ResourceListModule } from "./ResourceListModule";
 import { FaqNav } from "../Faq";
 
 const ContentfulModule = ({ module }) => {
@@ -23,6 +24,10 @@ const ContentfulModule = ({ module }) => {
 
   if (type === `ContentfulFaqNavigation`) {
     return <FaqNav {...module} />;
+  }
+
+  if (type === `ContentfulResourceListModule`) {
+    return <ResourceListModule {...module} />;
   }
 
   return null;

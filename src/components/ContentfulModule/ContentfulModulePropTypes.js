@@ -2,12 +2,14 @@ import PropTypes from "prop-types";
 
 import { ChipModulePropTypes } from "./ChipModule";
 import { EventsModulePropTypes } from "./EventsModule";
-// import { SlidingNavBlockPropTypes } from "./SlidingNavBlock";
+import { ResourceListModulePropTypes } from "../Faq/FaqModule";
+import { SlidingNavBlockPropTypes } from "./SlidingNavBlock/SlidingNavBlockPropTypes";
 
 const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(EventsModulePropTypes),
   PropTypes.shape(ChipModulePropTypes),
-  // PropTypes.shape(SlidingNavBlockPropTypes),
+  PropTypes.shape(ResourceListModulePropTypes),
+  PropTypes.shape(SlidingNavBlockPropTypes),
 ]);
 
 export default ContentfulModulePropTypes;

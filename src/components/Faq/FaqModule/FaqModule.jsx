@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ResourceListModule } from "./ResourceListModule";
+import { ResourceListModule } from "../../ContentfulModule/ResourceListModule";
 import { FaqItem } from "./FaqItem";
 import { FaqModulePropTypes } from "./FaqModulePropTypes";
 

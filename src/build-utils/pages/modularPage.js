@@ -33,6 +33,9 @@ const query = (graphql) => {
               ... on ContentfulFaqNavigation {
                 ${contentModel.faqNavigation}
               }
+              ... on ContentfulResourceListModule {
+                ${contentModel.resourceListModule}
+              }
             }
           }
           includeContactForm
