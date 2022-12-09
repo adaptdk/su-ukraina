@@ -24,6 +24,7 @@ const ModularPage = ({ path, pageContext }) => {
     pageDescription,
     modules,
     slidingNavData,
+    includeContactForm,
     breadcrumb: { crumbs },
   } = pageContext;
 
@@ -45,7 +46,7 @@ const ModularPage = ({ path, pageContext }) => {
   };
 
   return (
-    <Layout pagePath={path} seo={seo}>
+    <Layout pagePath={path} includeContactForm={includeContactForm} seo={seo}>
       {hero && <HeroSection {...hero} />}
 
       <Constraint>
@@ -60,7 +61,7 @@ const ModularPage = ({ path, pageContext }) => {
         })}
       >
         {slidingNavData && <SlidingNavigation data={slidingNavData} />}
-        {!!modules.at(0) &&
+        {!!modules?.at(0) &&
           modules.map((module) => {
             return (
               <ContentfulModule
@@ -100,15 +101,19 @@ ModularPage.propTypes = {
         linkId: PropTypes.string.isRequired,
       })
     ),
+    includeContactForm: PropTypes.bool,
   }),
 };
 
 ModularPage.defaultProps = {
-  pageTitle: ``,
-  pageDescription: {
-    raw: ``,
+  pageContext: {
+    pageTitle: ``,
+    pageDescription: {
+      raw: ``,
+    },
+    organisations: [],
+    includeContactForm: true,
   },
-  organisations: [],
 };
 
 export default ModularPage;

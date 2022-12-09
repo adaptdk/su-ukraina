@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
-const { getFaqNavDataByLocale } = require(`../helpers/hooks`);
+const { getFaqNavDataByLocale, getPathByLocale } = require(`../helpers/hooks`);
 
 const query = (graphql) => {
   return graphql(`
@@ -49,12 +49,13 @@ const createFaqPages = (result, createPage) => {
   const ltNavData = getFaqNavDataByLocale(faqPages, `lt-LT`);
 
   faqPages.forEach((faqPage) => {
-    const pathRoot =
-      faqPage.node_locale === `lt-LT`
-        ? `informacija-lietuviams/`
-        : `ua/refugee-guide/`;
+    const pagePath = getPathByLocale(faqPage?.node_locale, faqPage?.slug, {
+      lt: `informacija-lietuviams`,
+      ua: `refugee-guide`,
+    });
+
     createPage({
-      path: `${pathRoot}${faqPage.slug}`,
+      path: pagePath,
       component: path.resolve(`./src/templates/faqPage.jsx`),
       context: {
         ...faqPage,

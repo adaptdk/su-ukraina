@@ -23,7 +23,13 @@ import "./Layout.css";
 import { seoPropTypes } from "../../helpers/genericPropTypes";
 import PageTitle from "../PageTitle";
 
-const Layout = ({ children, noStickyHeader, pagePath, seo }) => {
+const Layout = ({
+  children,
+  noStickyHeader,
+  pagePath,
+  seo,
+  includeContactForm,
+}) => {
   const isUa = isUkrainianPage();
 
   return (
@@ -56,11 +62,13 @@ const Layout = ({ children, noStickyHeader, pagePath, seo }) => {
       )}
       <main>{children}</main>
 
-      <Section className="ContactFormSection" bgColor="blue">
-        <Constraint>
-          <ContactForm returnDestination={pagePath} />
-        </Constraint>
-      </Section>
+      {includeContactForm && (
+        <Section className="ContactFormSection" bgColor="blue">
+          <Constraint>
+            <ContactForm returnDestination={pagePath} />
+          </Constraint>
+        </Section>
+      )}
 
       <Footer />
     </div>
@@ -72,10 +80,12 @@ Layout.propTypes = {
   noStickyHeader: PropTypes.bool,
   pagePath: PropTypes.string.isRequired,
   seo: PropTypes.shape(seoPropTypes).isRequired,
+  includeContactForm: PropTypes.bool,
 };
 
 Layout.defaultProps = {
   noStickyHeader: false,
+  includeContactForm: true,
 };
 
 export default Layout;

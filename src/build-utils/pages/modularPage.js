@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
-const { getSlidingNavData } = require(`../helpers/hooks`);
+const { getSlidingNavData, getPathByLocale } = require(`../helpers/hooks`);
 
 const query = (graphql) => {
   return graphql(`
@@ -11,6 +11,7 @@ const query = (graphql) => {
         node {
           id
           slug
+          node_locale
           ${contentModel.seo}
           ${contentModel.hero}
           pageHeading
@@ -34,6 +35,7 @@ const query = (graphql) => {
               }
             }
           }
+          includeContactForm
         }
       }
     }
@@ -50,8 +52,13 @@ const createModularPages = (result, createPage) => {
 
   modularPages.forEach((modularPage) => {
     const slidingNavData = getSlidingNavData(modularPage.modules);
+    const pagePath = getPathByLocale(
+      modularPage?.node_locale,
+      modularPage?.slug
+    );
+
     createPage({
-      path: `${modularPage.slug}`,
+      path: pagePath,
       component: path.resolve(`./src/templates/modularPage.jsx`),
       context: {
         ...modularPage,
