@@ -48,6 +48,7 @@ fields:
     required: false
   label: Renginio tiklalapis (Event website)
 pages:
+- src/content/events-ua/lorem-ipsum-event.md
 - src/content/events/alyona-alyona-koncertas.md
 - src/content/events/amber-food-blokada.md
 - src/content/events/as-priklausau-tik-sau.md
