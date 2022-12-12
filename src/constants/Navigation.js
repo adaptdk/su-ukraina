@@ -81,6 +81,13 @@ export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
   translation: `Informacija`,
 };
 
+export const NAVIGATION_ITEM_EVENTS_UA = {
+  pathname: `/ua/events/`,
+  title: `Події`,
+  altTitle: `Події`,
+  translation: `Renginiai`,
+};
+
 // Navigation of how can I help page.
 export const NAVIGATION_HOW_CAN_I_HELP = [
   NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION,
@@ -129,6 +136,7 @@ export const NAVIGATION_MAIN_MENU = [
 export const NAVIGATION_MAIN_MENU_ALT = [
   NAVIGATION_ITEM_HELP,
   NAVIGATION_ITEM_REFUGEE_GUIDE,
+  NAVIGATION_ITEM_EVENTS_UA,
 ];
 
 // External links.

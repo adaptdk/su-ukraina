@@ -74,6 +74,10 @@ module.exports = {
       crumbLabel: `Важлива інформація`,
     },
     {
+      pathname: `/ua/events`,
+      crumbLabel: `Події`,
+    },
+    {
       pathname: `/ua/help-search`,
       crumbLabel: `Privatumo politika`,
     },

@@ -11,4 +11,8 @@ export const PATHNAMES = [
     ua: `privacy-policy`,
     lt: `privatumo-politika`,
   },
+  {
+    ua: `events`,
+    lt: `renginiai`,
+  },
 ];

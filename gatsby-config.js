@@ -46,6 +46,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `events-ua`,
+        path: `${__dirname}/src/content/events-ua`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `addressees`,
         path: `${__dirname}/src/content/addressees`,
       },
