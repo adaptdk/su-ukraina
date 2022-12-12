@@ -98,7 +98,8 @@ const EventCard = ({
           rel="noopener"
           href={url}
         >
-          Renginio Nuoroda
+          {locale === `lt-LT` && `Renginio Nuoroda`}
+          {locale === `uk-UA` && `Посилання на подію`}
         </Button>
       )}
     </div>
