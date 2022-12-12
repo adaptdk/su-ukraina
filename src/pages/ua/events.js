@@ -4,14 +4,14 @@ import { graphql } from "gatsby";
 import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Constraint from "../components/Constraint";
-import Layout from "../components/Layout";
-import NavigationGroup from "../components/NavigationGroup";
-import EventCard from "../components/EventCard";
-import EventCardList from "../components/EventCardList";
-import Section from "../components/Section";
-import DetailsWrapper from "../components/DetailsWrapper";
-import PageTitle from "../components/PageTitle";
+import Constraint from "../../components/Constraint";
+import Layout from "../../components/Layout";
+import NavigationGroup from "../../components/NavigationGroup";
+import EventCard from "../../components/EventCard";
+import EventCardList from "../../components/EventCardList";
+import Section from "../../components/Section";
+import DetailsWrapper from "../../components/DetailsWrapper";
+import PageTitle from "../../components/PageTitle";
 
 const Page = ({ data, pageContext }) => {
   const {
@@ -54,11 +54,11 @@ const Page = ({ data, pageContext }) => {
   });
 
   return (
-    <Layout pagePath="/renginiai/">
-      <PageTitle title="Ukrainos palaikymo renginiai Lietuvoje" />
+    <Layout pagePath="/ua/events/">
+      <PageTitle title="Заходи підтримки України в Литві" />
       <Meta
         name="description"
-        content="Šiuo ir artimu metų vykstantys Ukrainos ir jos piliečių palaikymo renginiai. Koncertai, parodos, palaikymo akcijos, protmūšiai ir kt. Norite padėti? ➔"
+        content="Акції підтримки України та її громадян, які відбуваються цього та наступного року. Концерти, виставки, акції підтримки, мозковий штурм тощо. Хочете допомогти? ➔"
       />
 
       <Section className="HeroSectionB">
@@ -79,7 +79,7 @@ const Page = ({ data, pageContext }) => {
       )}
 
       <Constraint>
-        <h2>Organizuojami renginiai</h2>
+        <h2>Організовані заходи</h2>
         <EventCardList>
           {upcomingEvents.length ? (
             upcomingEvents.map((event, i) => {
@@ -94,19 +94,19 @@ const Page = ({ data, pageContext }) => {
                   location={event.location}
                   description={event.html}
                   url={event.eventUrl}
-                  locale="lt-LT"
+                  locale="uk-UA"
                 />
               );
             })
           ) : (
-            <p>Numatomų renginių kol kas nėra.</p>
+            <p>Ще немає запланованих подій.</p>
           )}
         </EventCardList>
       </Constraint>
 
       {!!previousEvents.length && (
         <Constraint>
-          <DetailsWrapper tag="h2" summary="Praėję renginiai">
+          <DetailsWrapper tag="h2" summary="Минулі події">
             <EventCardList>
               {previousEvents.map((event, i) => {
                 return (
@@ -121,7 +121,7 @@ const Page = ({ data, pageContext }) => {
                     location={event.location}
                     description={event.html}
                     url={event.eventUrl}
-                    locale="lt-LT"
+                    locale="uk-UA"
                   />
                 );
               })}
@@ -139,7 +139,7 @@ export const query = graphql`
       filter: {
         sourceInstanceName: { eq: "page-contents" }
         absolutePath: {
-          regex: "//src/content/pages/protesto-formos/renginiai.md$/"
+          regex: "//src/content/pages/protesto-formos/events.md$/"
         }
       }
     ) {
@@ -156,7 +156,7 @@ export const query = graphql`
       }
     }
     events: allFile(
-      filter: { sourceInstanceName: { eq: "events" } }
+      filter: { sourceInstanceName: { eq: "events-ua" } }
       sort: { fields: childMarkdownRemark___frontmatter___startDate }
     ) {
       edges {
