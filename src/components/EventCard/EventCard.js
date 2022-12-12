@@ -73,7 +73,7 @@ const EventCard = ({
               {getEventTime(startDate)}
               {endDate &&
                 datesAreOnSameDay(startDate, endDate) &&
-                ` - ${getEventTime(endDate, locale)}`}
+                ` - ${getEventTime(endDate)}`}
             </time>
           </div>
         )}
