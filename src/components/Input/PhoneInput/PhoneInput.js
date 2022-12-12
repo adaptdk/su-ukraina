@@ -1,7 +1,7 @@
 import * as React from "react";
 
-const TextInput = (props) => {
+const PhoneInput = (props) => {
   return <input type="tel" {...props} />;
 };
 
-export default TextInput;
+export default PhoneInput;
