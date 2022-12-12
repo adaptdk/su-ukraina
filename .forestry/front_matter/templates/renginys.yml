@@ -6,10 +6,10 @@ fields:
   type: text
   config:
     required: false
-  label: Pavadinimas
+  label: Pavadinimas (Title)
 - name: startDate
   type: datetime
-  label: Renginio pradžia
+  label: Renginio pradžia (Start date)
   description: ''
   config:
     required: false
@@ -20,10 +20,10 @@ fields:
   type: text
   config:
     required: false
-  label: Vieta
+  label: Vieta (Location)
 - name: endDate
   type: datetime
-  label: Renginio pabaiga
+  label: Renginio pabaiga (End date)
   description: ''
   config:
     required: false
@@ -34,18 +34,19 @@ fields:
   type: text
   config:
     required: false
-  label: Renginio tipas
-  description: 'pavyzdžiai: Protestas, Paramos renginys, Paramos koncertas ir t.t...'
+  label: Renginio tipas (Event type)
+  description: 'pavyzdžiai: Protestas, Paramos renginys, Paramos koncertas ir t.t...<br>for
+    example: Protest, charity event, charity concert etc.'
 - name: eventOrganizer
   type: text
   config:
     required: false
-  label: Renginio Organizatorius
+  label: Renginio Organizatorius (Event organizer)
 - name: eventUrl
   type: text
   config:
     required: false
-  label: Renginio tiklalapis
+  label: Renginio tiklalapis (Event website)
 pages:
 - src/content/events/alyona-alyona-koncertas.md
 - src/content/events/amber-food-blokada.md
