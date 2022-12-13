@@ -58,8 +58,7 @@ questions:
     у своїх знайомих литовців – вони обов''язково порадять. Детальнішу інформацію
     про те, як впоратися з втратою домашньої тварини, можна знайти тут: <a href="https://ggi.lt/paklydo-augintinis-kreipkis/"
     title="https://ggi.lt/paklydo-augintinis-kreipkis/">https://ggi.lt/paklydo-augintinis-kreipkis/</a><a
-    href="https://ggi.lt/paklydo-augintinis-kreipkis/"><em> </em></a><em><br><br>Бажаємо
-    вам та вашим вихованцям гарного відпочинку в Литві!</em></p>'
+    href="https://ggi.lt/paklydo-augintinis-kreipkis/"><em> </em></a></p>'
   image: ''
   resources: []
   contacts: []
