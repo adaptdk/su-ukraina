@@ -158,7 +158,7 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
   };
 
   return (
-    <div className="Faq">
+    <div className="Faq" itemscope itemtype="https://schema.org/FAQPage">
       <Constraint className="Faq__inner">
         <input
           type="checkbox"
@@ -177,17 +177,31 @@ const Faq = ({ currentItemData, navData, faqHtml, crumbs, lang }) => {
             const tabId = `tab-${i}`;
 
             return (
-              <div className="Faq__question" id={tabId} key={tabId}>
+              <div
+                className="Faq__question"
+                id={tabId}
+                key={tabId}
+                itemscope
+                itemprop="mainEntity"
+                itemtype="https://schema.org/Question"
+              >
                 <details>
                   <summary>
                     <div className="Faq__summary">
-                      <h2>{question.title}</h2>
+                      <h2 itemprop="name">{question.title}</h2>
                     </div>
                   </summary>
                   <div
                     className="Faq__answer"
-                    dangerouslySetInnerHTML={{ __html: question.answer }}
-                  />
+                    itemscope
+                    itemprop="acceptedAnswer"
+                    itemtype="https://schema.org/Answer"
+                  >
+                    <div
+                      itemprop="text"
+                      dangerouslySetInnerHTML={{ __html: question.answer }}
+                    />
+                  </div>
 
                   {!!question.content_blocks && (
                     <div className="ContentBlocks">
