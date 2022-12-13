@@ -76,14 +76,14 @@ questions:
     Литві, але не маєте способу прихистити домашнього улюбленця<br>- Ваш вихованець
     залишився в Україні, і ви хочете взяти його до себе у Литву<br>- Ви знаходитеся
     в Литві з домашнім улюбленцем і потребуєте ветеринарної допомоги (безкоштовно)
-    Ви можете звернутися за допомогою, заповнивши форму: <a href="https://ggi.lt/duk/"
-    title="https://ggi.lt/duk/">https://bit.ly/3is04Yb</a> <br><br>Після отримання
-    ваших даних представники організації зв’яжуться з вами, щоб детально з’ясувати
-    вашу ситуацію та потреби, надати необхідну інформацію, допомогти знайти матеріально-технічну
-    та іншу необхідну допомогу з урахуванням індивідуальної ситуації кожної людини.
-    <br><br>‍<strong>Державна продовольство-ветеринарна служба</strong> (<strong>Valstybinė
-    maisto ir veterinarijos tarnyba (VMVT)</strong>) надаватиме актуальну інформацію
-    українцям, які прибули з тваринами - <a href="mailto:ukrainepets@vmvt.lt">ukrainepets@vmvt.lt<br><br></a>Перелік
+    Ви можете звернутися за допомогою, заповнивши форму: <a href="https://docs.google.com/forms/d/e/1FAIpQLSduuLNjL1tgv_uBYz5wv1BMILSEts8Knvn9Wgro0bqhVg3G2w/viewform"
+    title="https://docs.google.com/forms/d/e/1FAIpQLSduuLNjL1tgv_uBYz5wv1BMILSEts8Knvn9Wgro0bqhVg3G2w/viewform">https://docs.google.com/forms/d/e/1FAIpQLSduuLNjL1tgv_uBYz5wv1BMILSEts8Knvn9Wgro0bqhVg3G2w/viewform</a><br><br>Після
+    отримання ваших даних представники організації зв’яжуться з вами, щоб детально
+    з’ясувати вашу ситуацію та потреби, надати необхідну інформацію, допомогти знайти
+    матеріально-технічну та іншу необхідну допомогу з урахуванням індивідуальної ситуації
+    кожної людини. <br><br>‍<strong>Державна продовольство-ветеринарна служба</strong>
+    (<strong>Valstybinė maisto ir veterinarijos tarnyba (VMVT)</strong>) надаватиме
+    актуальну інформацію українцям, які прибули з тваринами - <a href="mailto:ukrainepets@vmvt.lt">ukrainepets@vmvt.lt<br><br></a>Перелік
     компаній, які надають ветеринарні послуги, можна знайти <a href="https://www.withukraine.lt/help-search?tipas=Veterinarin%C4%97+pagalba">тут</a>.</p>'
   image: ''
   resources: []
