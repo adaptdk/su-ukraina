@@ -46,7 +46,7 @@ exports.createPages = async function ({ actions, graphql }) {
   data.lithuanianGuide.edges.forEach((edge) => {
     const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
     actions.createPage({
-      path: `/informacija-lietuviams/${slug}`,
+      path: `/informacija-lietuviams/${slug}/`,
       component: require.resolve(`./src/templates/guide-page.js`),
       context: {
         slug: `/${slug}`,
@@ -59,7 +59,7 @@ exports.createPages = async function ({ actions, graphql }) {
   data.refugeeGuideLt.edges.forEach((edge) => {
     const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
     actions.createPage({
-      path: `/informacija-ukrainieciams/${slug}`,
+      path: `/informacija-ukrainieciams/${slug}/`,
       component: require.resolve(`./src/templates/guide-page.js`),
       context: {
         slug: `/${slug}`,
@@ -72,7 +72,7 @@ exports.createPages = async function ({ actions, graphql }) {
   data.refugeeGuideUa.edges.forEach((edge) => {
     const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
     actions.createPage({
-      path: `/ua/refugee-guide/${slug}`,
+      path: `/ua/refugee-guide/${slug}/`,
       component: require.resolve(`./src/templates/guide-page.js`),
       context: {
         slug: `/${slug}`,
