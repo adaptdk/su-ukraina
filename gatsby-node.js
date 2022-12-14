@@ -45,12 +45,10 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data.lithuanianGuide.edges.forEach((edge) => {
     const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
-    const path = `/informacija-lietuviams/${slug}`;
     actions.createPage({
-      path,
+      path: `/informacija-lietuviams/${slug}`,
       component: require.resolve(`./src/templates/guide-page.js`),
       context: {
-        path,
         slug: `/${slug}`,
         sourceInstanceName: `lithuanian-guide`,
         title: `Informacija lietuviams`,
@@ -60,12 +58,10 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data.refugeeGuideLt.edges.forEach((edge) => {
     const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
-    const path = `/informacija-ukrainieciams/${slug}`;
     actions.createPage({
-      path,
+      path: `/informacija-ukrainieciams/${slug}`,
       component: require.resolve(`./src/templates/guide-page.js`),
       context: {
-        path,
         slug: `/${slug}`,
         sourceInstanceName: `refugee-guide-lt`,
         title: `Informacija ukrainiečiams`,
@@ -75,12 +71,10 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data.refugeeGuideUa.edges.forEach((edge) => {
     const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
-    const path = `/ua/refugee-guide/${slug}`;
     actions.createPage({
-      path,
+      path: `/ua/refugee-guide/${slug}`,
       component: require.resolve(`./src/templates/guide-page.js`),
       context: {
-        path,
         slug: `/${slug}`,
         sourceInstanceName: `refugee-guide`,
         title: `Важлива інформація`,

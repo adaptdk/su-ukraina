@@ -11,9 +11,6 @@ import Section from "../components/Section";
 import { modifyCrumbs } from "../utils/modifyCrumbs";
 
 export default function Template({ data, pageContext }) {
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext;
   const post = data.post.edges[0].node.childMarkdownRemark;
   const { html, frontmatter } = post;
 
@@ -25,11 +22,14 @@ export default function Template({ data, pageContext }) {
   });
 
   const modifiedCrumbs = useMemo(() => {
-    return modifyCrumbs(crumbs, frontmatter.title_override);
+    return modifyCrumbs(
+      pageContext.breadcrumb.crumbs,
+      frontmatter.title_override
+    );
   }, [frontmatter.title_override]);
 
   return (
-    <Layout pagePath={pageContext.path}>
+    <Layout pagePath={pageContext.breadcrumb.location}>
       {frontmatter && frontmatter.title_override ? (
         <PageTitle title={frontmatter.title_override} />
       ) : (
@@ -60,6 +60,7 @@ Template.propTypes = {
   pageContext: PropTypes.shape({
     breadcrumb: PropTypes.shape({
       crumbs: PropTypes.array,
+      location: PropTypes.string,
     }),
     path: PropTypes.string,
     title: PropTypes.string,
