@@ -33,6 +33,15 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
+  // Process Organisation Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.organisationPage.query(graphql),
+      createFunction: PAGE_UTILS.organisationPage.createOrganisationPages,
+      createPage,
+    })
+  );
+
   // Process Modular Pages
   promises.push(
     processPage({

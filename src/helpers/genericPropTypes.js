@@ -12,4 +12,6 @@ const ctaPropTypes = {
   url: PropTypes.string.isRequired,
 };
 
-export { seoPropTypes, ctaPropTypes };
+const localePropType = PropTypes.oneOf([`lt-LT`, `uk-UA`]);
+
+export { seoPropTypes, ctaPropTypes, localePropType };

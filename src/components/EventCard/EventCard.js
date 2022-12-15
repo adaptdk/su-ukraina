@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import Icon from "../Icon";
 
 import { formatRichText } from "../../helpers/formatting";
+import { localePropType } from "../../helpers/genericPropTypes";
 
 // Styles.
 import "./EventCard.css";
@@ -113,7 +114,7 @@ EventCard.propTypes = {
   endDate: PropTypes.string,
   description: PropTypes.node,
   url: PropTypes.string,
-  locale: PropTypes.oneOf([`lt-LT`, `uk-UA`]).isRequired,
+  locale: localePropType.isRequired,
 };
 
 export default EventCard;

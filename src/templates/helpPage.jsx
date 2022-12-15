@@ -1,5 +1,4 @@
 import React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
 
 import Layout from "../components/Layout";
@@ -8,74 +7,19 @@ import Constraint from "../components/Constraint";
 import NavigationGroup from "../components/NavigationGroup";
 import SlidingNavigation from "../components/SlidingNavigation";
 import { SlidingNavBlock } from "../components/ContentfulModule/SlidingNavBlock";
-import CardList from "../components/CardList";
-import Card from "../components/Card";
-import Button from "../components/Button";
-import CardSection from "../components/Card/CardSection";
+import {
+  CardListSection,
+  OrganisationPropTypes,
+} from "../components/Organisation";
 
-import { ctaPropTypes, seoPropTypes } from "../helpers/genericPropTypes";
+import { localePropType, seoPropTypes } from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
-
-const CardListSection = ({ organisations }) => {
-  return (
-    <CardList>
-      {organisations.map(
-        ({
-          id,
-          name,
-          organisationLogo,
-          description,
-          purpose,
-          otherInformation,
-          ctaList,
-        }) => {
-          const logo = organisationLogo && (
-            <GatsbyImage image={getImage(organisationLogo)} alt={name} />
-          );
-          return (
-            <Card title={name} logo={logo} key={id}>
-              {!!description?.raw && (
-                <CardSection title="Apie" content={description} />
-              )}
-              {!!purpose?.raw && (
-                <CardSection title="Paskirtis" content={purpose} />
-              )}
-              {!!otherInformation?.raw && (
-                <CardSection
-                  title="Kita informacija"
-                  content={otherInformation}
-                />
-              )}
-
-              {!!ctaList.length && (
-                <div className={`Card__actions`}>
-                  {ctaList.map((cta) => {
-                    return (
-                      <Button
-                        key={cta.id}
-                        endIcon={cta.isPrimary ? `arrow-white` : `arrow-blue`}
-                        href={cta.url}
-                        color={cta.isPrimary ? `primary` : `transparent`}
-                        target="_blank"
-                      >
-                        {cta.label}
-                      </Button>
-                    );
-                  })}
-                </div>
-              )}
-            </Card>
-          );
-        }
-      )}
-    </CardList>
-  );
-};
 
 const HelpPage = ({ path, pageContext }) => {
   const {
     seo,
     hero,
+    node_locale,
     pageHeading,
     pageDescription,
     organisations,
@@ -127,7 +71,10 @@ const HelpPage = ({ path, pageContext }) => {
                   title={item.title}
                   icon={item.icon}
                 >
-                  <CardListSection organisations={item.data} />
+                  <CardListSection
+                    organisations={item.data}
+                    locale={node_locale}
+                  />
                 </SlidingNavBlock>
               );
             })}
@@ -137,28 +84,6 @@ const HelpPage = ({ path, pageContext }) => {
       </Constraint>
     </Layout>
   );
-};
-
-const organisationsProp = PropTypes.arrayOf(
-  PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    location: PropTypes.oneOf([`Lithuania`, `Foreign`]).isRequired,
-    description: PropTypes.shape({
-      raw: PropTypes.string.isRequired,
-    }).isRequired,
-    purpose: PropTypes.shape({
-      raw: PropTypes.string.isRequired,
-    }).isRequired,
-    otherInformation: PropTypes.shape({
-      raw: PropTypes.string,
-    }),
-    ctaList: PropTypes.arrayOf(PropTypes.shape(ctaPropTypes)),
-  })
-);
-
-CardListSection.propTypes = {
-  organisations: organisationsProp,
 };
 
 HelpPage.propTypes = {
@@ -177,11 +102,12 @@ HelpPage.propTypes = {
     slidingNav: PropTypes.bool.isRequired,
     seo: PropTypes.shape(seoPropTypes).isRequired,
     hero: PropTypes.shape(HeroSectionPropTypes),
+    node_locale: localePropType.isRequired,
     pageHeading: PropTypes.string,
     pageDescription: PropTypes.shape({
       raw: PropTypes.string,
     }),
-    organisations: organisationsProp,
+    organisations: PropTypes.arrayOf(PropTypes.shape(OrganisationPropTypes)),
   }),
 };
 

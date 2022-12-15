@@ -23,6 +23,7 @@ const seo = `
 const organisation = `
   id
   name
+  organisationType
   organisationLogo {
     gatsbyImageData(height: 30, placeholder: BLURRED, formats: WEBP)
   }
@@ -36,11 +37,8 @@ const organisation = `
   otherInformation {
     raw
   }
-  ctaList {
-    ... on ContentfulCta {
-      ${cta}
-    }
-  }
+  websiteUrl
+  actionUrl
 `;
 
 const eventItem = `

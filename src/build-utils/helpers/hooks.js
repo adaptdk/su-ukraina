@@ -1,3 +1,5 @@
+const slugify = require(`slugify`);
+
 /**
  * Finds all the SlidingNavBlocks in your modules array and injects them with the `linkId`.
  *
@@ -72,8 +74,28 @@ const getFaqNavDataByLocale = (faqPages, locale) => {
     });
 };
 
+/**
+ * @param {String} name Name of the organisation.
+ * @param {String} locale Queried locale, `lt-LT` or `uk-UA`.
+ * @returns {String} Full path, eg.: `ua/organisation/blueyellow`.
+ */
+const getOrganisationPagePath = (name, locale) => {
+  const slug =
+    slugify(name, {
+      lower: true,
+      strip: true,
+      remove: /[*+~.()/'"!:@]/g,
+    }) || null;
+
+  return getPathByLocale(locale, slug, {
+    lt: `kaip-galiu-padeti/aukojimas`,
+    ua: `ua/help`,
+  });
+};
+
 module.exports = {
   getSlidingNavData,
   getPathByLocale,
   getFaqNavDataByLocale,
+  getOrganisationPagePath,
 };

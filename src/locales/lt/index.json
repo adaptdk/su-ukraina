@@ -2,7 +2,10 @@
   "actions": {
     "copyLink": "Kopijuoti nuorodą",
     "close": "Uždaryti",
-    "send": "Siųsti"
+    "send": "Siųsti",
+    "donate": "Paremti",
+    "officialPage": "Oficialus Puslapis",
+    "applyForm": "Pildyti formą"
   },
   "labels": {
     "navigation": "Navigacija",
@@ -12,6 +15,11 @@
     "message": "Žinutė",
     "source": "Šaltinis",
     "links": "Nuorodos"
+  },
+  "organisation": {
+    "about": "Apie organizaciją",
+    "purpose": "Paskirtis",
+    "otherInfo": "Kita informacija"
   },
   "placeholders": {
     "name": "Vardenis Pavardenis",

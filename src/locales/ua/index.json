@@ -2,7 +2,10 @@
   "actions": {
     "copyLink": "Kопіювати посилання",
     "close": "Закрити",
-    "send": "Надіслати"
+    "send": "Надіслати",
+    "donate": "<need to translate>",
+    "officialPage": "<need to translate>",
+    "applyForm": "<need to translate>"
   },
   "labels": {
     "navigation": "Навігація",
@@ -12,6 +15,11 @@
     "message": "Повідомлення",
     "source": "Джерело",
     "links": "Посилання"
+  },
+  "organisation": {
+    "about": "Про організацію",
+    "purpose": "Призначення",
+    "otherInfo": "Інша інформація"
   },
   "placeholders": {
     "name": "Ім'я прізвище",

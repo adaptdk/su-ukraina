@@ -57,6 +57,7 @@
     "react-head": "^3.4.0",
     "react-instantsearch-dom": "^6.23.0",
     "react-linkify": "^1.0.0-alpha",
+    "slugify": "^1.6.5",
     "stylelint": "^14.6.1",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0"
