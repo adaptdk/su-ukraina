@@ -46,6 +46,13 @@ sections:
 - type: heading
   label: Protestas
 - type: directory
+  path: src/content/events-ua
+  label: Events (UA)
+  create: documents
+  match: "**/*"
+  templates:
+  - renginys
+- type: directory
   path: src/content/events
   label: Renginiai
   create: documents

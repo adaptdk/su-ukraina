@@ -20,11 +20,12 @@ const EventCard = ({
   endDate,
   description,
   url,
+  locale,
 }) => {
-  const getEventDate = (date) => {
-    return `${new Date(date).toLocaleString(`lt`, {
+  const getEventDate = (date, locale) => {
+    return `${new Date(date).toLocaleString(locale, {
       month: `long`,
-    })} ${new Date(date).getDate()} d.`;
+    })} ${new Date(date).getDate()} ${locale === `uk-UA` ? `д.` : `d.`}`;
   };
   const getEventTime = (date) => {
     const hours = new Date(date).getHours();
@@ -60,10 +61,10 @@ const EventCard = ({
           <div className="EventCard__event-info-wrapper">
             <Icon type="calendar" />
             <time className="EventCard__event-info-text" dateTime={startDate}>
-              {getEventDate(startDate)}
+              {getEventDate(startDate, locale)}
               {endDate &&
                 !datesAreOnSameDay(startDate, endDate) &&
-                ` - ${getEventDate(endDate)}`}
+                ` - ${getEventDate(endDate, locale)}`}
             </time>
           </div>
         )}
@@ -94,8 +95,8 @@ const EventCard = ({
           rel="noopener"
           href={url}
         >
-          {/* @todo: translate this */}
-          Renginio Nuoroda
+          {locale === `lt-LT` && `Renginio Nuoroda`}
+          {locale === `uk-UA` && `Посилання на подію`}
         </Button>
       )}
     </div>
@@ -112,6 +113,7 @@ EventCard.propTypes = {
   endDate: PropTypes.string,
   description: PropTypes.node,
   url: PropTypes.string,
+  locale: PropTypes.oneOf([`lt-LT`, `uk-UA`]).isRequired,
 };
 
 export default EventCard;
