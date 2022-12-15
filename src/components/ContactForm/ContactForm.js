@@ -6,10 +6,8 @@ import { isUkrainianPage } from "../../helpers/handlers";
 
 import Button from "../Button";
 import FormField from "../FormField";
-import TextInput from "../TextInput";
+import { TextInput, PhoneInput, EmailInput } from "../Input";
 import TextArea from "../TextArea";
-import PhoneInput from "../PhoneInput";
-import EmailInput from "../EmailInput";
 
 import "./ContactForm.css";
 
