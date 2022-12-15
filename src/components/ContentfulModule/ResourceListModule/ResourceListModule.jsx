@@ -7,6 +7,7 @@ import {
   ResourceListModulePropTypes,
 } from "./ResourceListModulePropTypes";
 import { formatRichText } from "../../../helpers/formatting";
+import { getTranslatedText } from "../../../utils/getTranslatedText";
 
 const ResourceListModule = ({ heading, subheading, resources }) => {
   return (
@@ -15,7 +16,7 @@ const ResourceListModule = ({ heading, subheading, resources }) => {
       {subheading?.raw && formatRichText(subheading.raw)}
       <ul className="ResourceListModule__list">
         {resources?.at(0) &&
-          resources.map(({ id, label, subtext, cta }) => {
+          resources.map(({ id, label, subtext, sourceUrl }) => {
             return (
               <li key={id} className="ResourceListItem">
                 <div className="ResourceListItem__content">
@@ -24,11 +25,11 @@ const ResourceListModule = ({ heading, subheading, resources }) => {
                 </div>
                 <Button
                   endIcon={`arrow-blue`}
-                  href={cta.url}
+                  href={sourceUrl}
                   color={`transparent`}
                   target="_blank"
                 >
-                  {cta.label}
+                  {getTranslatedText(`labels.source`)}
                 </Button>
               </li>
             );

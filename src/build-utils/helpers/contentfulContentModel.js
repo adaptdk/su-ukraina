@@ -1,10 +1,3 @@
-const cta = `
-  id
-  label
-  url
-  isPrimary
-`;
-
 const hero = `
   hero {
     image {
@@ -124,9 +117,7 @@ const resourceItem = `
   id
   label
   subtext
-  cta {
-    ${cta}
-  }
+  sourceUrl
 `;
 
 const resourceListModule = `
@@ -142,7 +133,6 @@ const resourceListModule = `
 `;
 
 module.exports = {
-  cta,
   hero,
   seo,
   organisation,

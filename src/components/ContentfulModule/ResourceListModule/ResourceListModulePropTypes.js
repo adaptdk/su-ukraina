@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
-import { ctaPropTypes } from "../../../helpers/genericPropTypes";
 
 const ResourceItemPropTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  cta: PropTypes.shape(ctaPropTypes).isRequired,
+  sourceUrl: PropTypes.string.isRequired,
 };
 
 const ResourceListModulePropTypes = {
