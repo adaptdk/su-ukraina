@@ -64,7 +64,7 @@ const Page = ({ data, pageContext }) => {
       <Section className="HeroSectionB">
         <StaticImage
           className="HeroSectionB__background"
-          src="../images/hero/akcijos_ir_renginiai.jpg"
+          src="../../images/hero/akcijos_ir_renginiai.jpg"
           alt="Su Ukraina!"
           layout="fullWidth"
         />
