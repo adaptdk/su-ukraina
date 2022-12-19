@@ -1,6 +1,6 @@
 ---
 weight: 60
-title_override: Школа - дитячий садок
+title_override: Школа та дитячий садок
 title: school-kindergarten
 slug: "/school-kindergarten"
 questions:
@@ -31,6 +31,8 @@ contacts: []
 adresses: []
 icon: child-reaching
 resources: []
+page_title: ''
+page_description: ''
 
 ---
 Муніципалітети дбають про освіту українських дітей.
