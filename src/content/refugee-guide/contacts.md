@@ -5,18 +5,19 @@ title: contacts
 slug: "/contacts"
 questions:
 - title: Гуманітарна допомога
-  answer: '<p><strong>"Сильні разом" (допомога з житлом):</strong></p><p>Гаряча лінія
-    <a href="tel:1827">1827</a> (з Литви), <a href="tel:+37067722222">+370 677 22222</a>
-    (з-за кордону)</p><p>Офіційна сторінка: <a href="https://stipruskartu.lt/ua/"
-    title="https://stipruskartu.lt/ua/">https://stipruskartu.lt/ua/</a></p><p><strong>Продовольчий
-    банк (продовольча підтримка):</strong></p><p>тел. <a href="tel:+37068644244">+370
-    686 44244</a></p><p>Адреса:  <a href="https://www.google.com/url?q=https://www.google.com/maps/place/Vytenio%2Bg.%2B54,%2BVilnius%2B03202/@54.6699177,25.264896,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd946f0cf55377:0xd60ec13258a4e65a!8m2!3d54.6699177!4d25.2670847&amp;sa=D&amp;source=docs&amp;ust=1647605203541636&amp;usg=AOvVaw304U823IcEVekIpDf_DAX1">Vytenio
-    g. 54</a> (Вільнюс, центральний офіс)</p><p>Електронна пошта: info@maistobankas.lt</p><p>Офіційна
-    сторінка: <a href="https://www.maistobankas.lt/ukraina/" title="https://www.maistobankas.lt/ukraina/">https://www.maistobankas.lt/ukraina/</a></p><p>Сторінка
-    організації у Фейсбуці: <a href="https://www.facebook.com/maistobankas" title="https://www.facebook.com/maistobankas">https://www.facebook.com/maistobankas</a></p><p><strong>Товариство
-    Червоного Хреста в Литві (гуманітарна допомога)</strong>:</p><p>Головна лінія
-    довіри <a href="tel:+37065971598">+370 659 71 598</a></p><p>Пункти видачі гуманітарної
-    допомоги:</p><ul><li><p>Вільнюс - <a href="https://www.google.com/maps/place/Konstitucijos+pr.+3A,+09307+Vilnius/@54.6953741,25.2746382,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9403f8a439f9:0xc450b70de9b3d02a!8m2!3d54.6953741!4d25.2768269">Konstitucijos
+  answer: '<p><strong>Stiprūs kartu,</strong> <strong>"Сильні разом" (допомога з житлом):</strong></p><p>Гаряча
+    лінія <a href="tel:1827">1827</a> (з Литви), <a href="tel:+37067722222">+370 677
+    22222</a> (з-за кордону)</p><p>Офіційна сторінка: <a href="https://stipruskartu.lt/ua/"
+    title="https://stipruskartu.lt/ua/">https://stipruskartu.lt/ua/</a></p><p><strong>Maisto
+    bankas, "Продовольчий банк" (картки для прибання продуктів харчування):</strong></p><p>тел.
+    <a href="tel:+37068644244">+370 686 44244</a></p><p>Адреса: <a href="https://www.google.com/url?q=https://www.google.com/maps/place/Vytenio%2Bg.%2B54,%2BVilnius%2B03202/@54.6699177,25.264896,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd946f0cf55377:0xd60ec13258a4e65a!8m2!3d54.6699177!4d25.2670847&amp;sa=D&amp;source=docs&amp;ust=1647605203541636&amp;usg=AOvVaw304U823IcEVekIpDf_DAX1">Vytenio
+    g. 54</a> (Вільнюс, центральний офіс)</p><p>Електронна пошта: <a href="info@maistobankas.lt"
+    title="">info@maistobankas.lt</a></p><p>Офіційна сторінка: <a href="https://www.maistobankas.lt/ukraina/"
+    title="https://www.maistobankas.lt/ukraina/">https://www.maistobankas.lt/ukraina/</a></p><p>Сторінка
+    організації у Фейсбуці: <a href="https://www.facebook.com/maistobankas" title="https://www.facebook.com/maistobankas">https://www.facebook.com/maistobankas</a></p><p><strong>Red
+    Cross, Товариство Червоного Хреста в Литві (гуманітарна допомога)</strong>:</p><p>Головна
+    лінія довіри <a href="tel:+37065971598">+370 659 71 598</a></p><p>Пункти видачі
+    гуманітарної допомоги:</p><ul><li><p>Вільнюс - <a href="https://www.google.com/maps/place/Konstitucijos+pr.+3A,+09307+Vilnius/@54.6953741,25.2746382,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9403f8a439f9:0xc450b70de9b3d02a!8m2!3d54.6953741!4d25.2768269">Konstitucijos
     pr. 3A</a>, ТЦ "Європа", підземний перехід (тел. <a href="tel:+37067919510">+370
     679 19 510</a>, пн-пт 10:00-17:00)</p></li><li><p>Каунас - <a href="https://www.google.com/maps/place/Lietuvos+Raudonojo+Kry%C5%BEiaus,+Kauno+Centras/@54.918769,23.9449233,17z/data=!3m1!4b1!4m5!3m4!1s0x46e7220ea88253eb:0x37fa2b8111ef5075!8m2!3d54.9187938!4d23.9470784">Statybininkų
     g. 12</a> (тел. <a href="tel:+37065696766">+370 656 96 766</a>, пн-сб 10:00-20:00)</p></li><li><p>Клайпеда
@@ -35,13 +36,13 @@ questions:
     g. 25</a></p></li><li><p>Вількавішкіс - <a href="https://www.google.com/maps/place/K%C4%99stu%C4%8Dio+g.+5,+70190+Vilkavi%C5%A1kis/@54.6509477,23.0328424,17z/data=!3m1!4b1!4m5!3m4!1s0x46e1338fffe1473f:0x642e728105a5f4c5!8m2!3d54.6509477!4d23.0350311">Kęstučio
     g. 5</a></p></li></ul><p>Електронна пошта: <a href="mailto:info@redcross.lt">info@redcross.lt</a></p><p>Офіційна
     сторінка: <a href="http://www.redcross.lt/">www.redcross.lt</a></p><p>Сторінка
-    у Фейсбуці: <a href="https://www.facebook.com/redcross.lt" title="https://www.facebook.com/redcross.lt">https://www.facebook.com/redcross.lt</a></p><p><strong>Карітас
-    Вільнюської архієпархії (гуманітарна допомога):</strong></p><p>тел.:  <a href="tel:+37067324225">+370
-    673 24 225</a> (Вільнюс)</p><p>адреса: <a href="https://www.google.com/url?q=https://www.google.com/maps/place/Kalvarij%25C5%25B3%2Bg.%2B39,%2BVilnius%2B09313/@54.6968049,25.2798479,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9403a623c795:0x3fc23c8393bae375!8m2!3d54.6968049!4d25.2820366&amp;sa=D&amp;source=docs&amp;ust=1647605173611724&amp;usg=AOvVaw1qdSCoUaaW8oNqIWTE967E">Kalvarijų
-    g. 39</a> (Вільнюс)</p><p>електронна пошта: <a href="mailto:kulturunamai@vilnius.caritas.lt">kulturunamai@vilnius.caritas.lt</a></p><p><strong>Мальтійський
-    орден (гуманітарна допомога):</strong></p><p>Гаряча лінія <a href="tel:+37060023220">+370
-    600 23 220</a> (пн-пт 09:00-19:00, російською,  англійською, литовською мовами)</p><p>Адреса:
-    <a href="https://www.google.com/maps/place/Gedimino+pr.+56B,+Vilnius+01110/@54.6888431,25.2619019,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906">Gedimino
+    у Фейсбуці: <a href="https://www.facebook.com/redcross.lt" title="https://www.facebook.com/redcross.lt">https://www.facebook.com/redcross.lt</a></p><p><strong>Caritas,
+    Карітас Вільнюської архієпархії (гуманітарна допомога):</strong></p><p>тел.: <a
+    href="tel:+37067324225">+370 673 24 225</a> (Вільнюс)</p><p>адреса: <a href="https://www.google.com/url?q=https://www.google.com/maps/place/Kalvarij%25C5%25B3%2Bg.%2B39,%2BVilnius%2B09313/@54.6968049,25.2798479,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd9403a623c795:0x3fc23c8393bae375!8m2!3d54.6968049!4d25.2820366&amp;sa=D&amp;source=docs&amp;ust=1647605173611724&amp;usg=AOvVaw1qdSCoUaaW8oNqIWTE967E">Kalvarijų
+    g. 39</a> (Вільнюс)</p><p>електронна пошта: <a href="mailto:kulturunamai@vilnius.caritas.lt">kulturunamai@vilnius.caritas.lt</a></p><p><strong>Maltos
+    Ordino,</strong> <strong>Мальтійський орден (гуманітарна допомога):</strong></p><p>Гаряча
+    лінія <a href="tel:+37060023220">+370 600 23 220</a> (пн-пт 09:00-19:00, російською,
+    англійською, литовською мовами)</p><p>Адреса: <a href="https://www.google.com/maps/place/Gedimino+pr.+56B,+Vilnius+01110/@54.6888431,25.2619019,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906">Gedimino
     pr. 56B, Vilnius</a></p><p>Електронна пошта: info@maltieciai.lt</p><p>Офіційна
     сторінка: <a href="https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY"
     title="https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY">https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY</a></p><p>Сторінка
@@ -67,9 +68,9 @@ questions:
     620 15 585</a>; вул. <a href="https://www.google.com/maps/place/Jaunimo+g.+10,+Raseiniai+60150,+Lithuania/@55.3827149,23.1138926,17z/data=!3m1!4b1!4m5!3m4!1s0x46e686fafa558695:0xc6dcb33260c02396!8m2!3d55.3827149!4d23.1160813">Яунімо
     10, м.Расейняй</a></p></li><li><p>м.Зарасей, Лаймуте Лумбієне, <a href="tel:+37061019978">+370
     610 19 978</a>; вул. <a href="https://www.google.com/maps/place/Ba%C5%BEny%C4%8Dios+g.+2,+Zarasai+32131,+Lithuania/@55.7305618,26.2444737,17z/data=!3m1!4b1!4m5!3m4!1s0x46c2ba89bfb50901:0x6d28535ab5635cb7!8m2!3d55.7305618!4d26.2466624">Бажнічіос
-    2, м. Зарасей</a></p></li></ul><p><strong>"Врятуйте дітей" (допомога дітям та
-    вагітним):</strong></p><p>тел: <a href="tel:+37052610815">+370 5 261 0815</a></p><p>Адреса:  <a
-    href="https://www.google.com/maps/place/Vilniaus+g.+39,+Vilnius+01119/data=!4m2!3m1!1s0x46dd9413c623b5e1:0xfd09c302e27ed0f9?sa=X&amp;ved=2ahUKEwjWscKTy8_2AhXpkIsKHcfLDPUQ8gF6BAgdEAE">Vilniaus
+    2, м. Зарасей</a></p></li></ul><p><strong>Save the Chidren, "Врятуйте дітей" (допомога
+    дітям та вагітним):</strong></p><p>тел: <a href="tel:+37052610815">+370 5 261
+    0815</a></p><p>Адреса: <a href="https://www.google.com/maps/place/Vilniaus+g.+39,+Vilnius+01119/data=!4m2!3m1!1s0x46dd9413c623b5e1:0xfd09c302e27ed0f9?sa=X&amp;ved=2ahUKEwjWscKTy8_2AhXpkIsKHcfLDPUQ8gF6BAgdEAE">Vilniaus
     g. 39</a> (Вільнюс)</p><p>Електронна пошта: informacija@savethechildren.org</p><p>Сторінка
     у Фейсбуці: <a href="https://www.facebook.com/savethechildrenlithuania/" title="https://www.facebook.com/savethechildrenlithuania/">https://www.facebook.com/savethechildrenlithuania/</a></p>'
   content_blocks: []
