@@ -3,7 +3,7 @@ weight: 20
 title: residence
 slug: "/residence"
 questions: []
-title_override: Житло
+title_override: Безкоштовне житло
 contacts: []
 icon: house
 
