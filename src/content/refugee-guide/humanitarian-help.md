@@ -1,6 +1,6 @@
 ---
 weight: 150
-title_override: ГУМАНІТАРНА ДОПОМОГА В ЛИТВІ
+title_override: Гуманітарна допомога
 title: humanitarian-help
 slug: "/humanitarian-help"
 questions:
@@ -39,6 +39,9 @@ questions:
 contacts: []
 adresses: []
 icon: parachute-box
+page_title: ''
+page_description: ''
+resources: []
 
 ---
 **ГАРЯЧА ЛІНІЯ ГУМАНІТАРНОЇ ДОПОМОГИ**
