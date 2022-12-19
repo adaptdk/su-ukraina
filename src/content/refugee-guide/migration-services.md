@@ -8,13 +8,13 @@ questions:
   answer: <p>З початку 2023 р. дозвіл на тимчасове проживання для всіх українських
     біженців війни в Литві буде лише в цифровому форматі. Українські біженці, які
     раніше отримували дозволи у вигляді пластикових карток, тепер можуть розпочати
-    спрощену процедуру оформлення цих документів.</p><p>Подати заяву на отримання\проовження
-    дозволу на тимчасове проживання в Литві на сторінці Департаменту міграції:</p><p><a
-    href="https://www.migracija.lt/" title="https://www.migracija.lt/">https://www.migracija.lt/</a></p><p>Інструкція,
-    як<strong> подати заяву на продовження дозволу на тимчасове проживання в Литві</strong>
-    (англійською) за посиланням:</p><p> <a href="https://www.youtube.com/watch?v=6U7tieijizw"
-    title="https://www.youtube.com/watch?v=6U7tieijizw">https://www.youtube.com/watch?v=6U7tieijizw</a></p><p>Інструкція,
-    як <strong>подати заяву на отримання посвідки на тимчасове проживання в Литві
+    спрощену процедуру оформлення цих документів.</p><p><strong>Подати заяву на отримання\продовження
+    дозволу на тимчасове проживання в Литві</strong> на сторінці Департаменту міграції:</p><p><a
+    href="https://www.migracija.lt/" title="https://www.migracija.lt/">https://www.migracija.lt/</a></p><p><strong>Інструкція,
+    </strong>як подати заяву на<strong> продовження дозволу на тимчасове проживання
+    в Литві</strong> (англійською) за посиланням:</p><p><a href="https://www.youtube.com/watch?v=6U7tieijizw"
+    title="https://www.youtube.com/watch?v=6U7tieijizw">https://www.youtube.com/watch?v=6U7tieijizw</a></p><p><strong>Інструкція,</strong>
+    як подати заяву на<strong> отримання посвідки на тимчасове проживання в Литві
     </strong>(англійською) за посиланням:</p><p><a href="https://www.youtube.com/watch?v=rUjOaauUl_g"
     title="https://www.youtube.com/watch?v=rUjOaauUl_g">https://www.youtube.com/watch?v=rUjOaauUl_g</a></p>
   content_blocks:
