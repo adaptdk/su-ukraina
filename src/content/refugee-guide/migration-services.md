@@ -1,7 +1,7 @@
 ---
 weight: 10
 title: migration-office
-title_override: Міграційні служби
+title_override: Міграційні послуги
 slug: "/migration-office"
 questions:
 - title: Як продовжити\отримати дозвіл на тимчасове проживання в Литві?
