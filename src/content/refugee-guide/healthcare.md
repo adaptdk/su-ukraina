@@ -4,6 +4,15 @@ title_override: Медичні послуги
 title: healthcare
 slug: "/healthcare"
 questions:
+- title: Як потрапити на прийом до лікаря?
+  answer: ''
+  content_blocks:
+  - template: image-block
+    image: "../uploads/sveikatos-paslaugu-gavimo-tvarka_ua.png"
+    title: ''
+  resources: []
+  contacts: []
+  adresses: []
 - title: З чого почати?
   answer: <p>Вам необідно звернутись до Департаменту міграції при Міністерстві внутрішніх
     справ Литовської Республіки або до найближчого до Вас реєстраційного центру (<a
