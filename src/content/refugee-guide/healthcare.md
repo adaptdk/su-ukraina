@@ -209,9 +209,18 @@ questions:
   contacts: []
   adresses: []
   content_blocks: []
-- title: Де я можу знайти іншу актуальну інформацію?
-  answer: <p>Ви знайдете стоматологів та професіоналів з догляду за порожниною <a
-    href="https://www.withukraine.lt/help-search?tipas=Odontologin%C4%97+pagalba">рота.</a></p>
+- title: Інша актуальна інформація
+  answer: <ul><li><p><strong>Безкоштовне медичне страхування для неповнолітніх</strong>
+    <a href="https://www.ld.lt/dovanojame-draudima-ukrainos-vaikams" title="https://www.ld.lt/dovanojame-draudima-ukrainos-vaikams"><strong>https://www.ld.lt/dovanojame-draudima-ukrainos-vaikams</strong></a>,
+    тел. <a href="1828" title="">1828</a>.</p></li><li><p><strong>Спільнота стоматологів
+    та фахівців по догляду за порожниною рота, також підтримує Україну у боротьбі
+    з агресором - Росією, допомагають українському народу, який постраждав від війни
+    та прибув до Литви, шляхом надання безкоштовної необхідною стоматологічною допомогою</strong>.
+    Таку допомогу, надаватимуть стоматологічні заклади в різних містах Литви, як дітям,
+    так і дорослим біженцям від війни. Список надавачів послуг можна знайти <a href="https://odontologurumai.lt/lt/apie-rumus/naujienos/1859-%C4%AFstaigos,-teikian%C4%8Dios-nemokam%C4%85-b%C5%ABtin%C4%85j%C4%85-pagalb%C4%85-nukent%C4%97jusiems-nuo-karo-ukrainoje"><strong>тут</strong></a>.</p></li><li><p><strong>Diabeto
+    IQ Club надає безкоштовні інструменти для лікування захворювань </strong>(інсулін,
+    голки, смужки для вимірювання рівня глюкози тощо) людям з діабетом 1 типу по всій
+    Литві. Більше інформації можна знайти <a href="https://migracija.lrv.lt/uploads/migracija/documents/files/Cukrinis%20diabetas(2).pdf"><strong>тут.</strong></a></p></li></ul>
   image: ''
   resources: []
   contacts: []
