@@ -3,7 +3,7 @@ weight: 20
 title: residence
 slug: "/residence"
 questions: []
-title_override: Проживання
+title_override: Житло
 contacts: []
 icon: house
 
