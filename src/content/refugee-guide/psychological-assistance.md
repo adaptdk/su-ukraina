@@ -1,6 +1,6 @@
 ---
 weight: 80
-title_override: ПСИХОЛОГІЧНА ДОПОМОГА
+title_override: Психологічна допомога
 title: psychological-assistance
 slug: "/psychological-assistance"
 questions:
@@ -65,5 +65,8 @@ questions:
 contacts: []
 adresses: []
 icon: brain
+page_title: ''
+page_description: ''
+resources: []
 
 ---
