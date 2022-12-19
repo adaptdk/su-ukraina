@@ -61,7 +61,8 @@ questions:
   answer: <p>Безкоштовна емоційна підтримка російською мовою надається за телефоном
     <a href="tel:1809">1809</a>, лінія відкрита I–V, 18–21 год., VI–VII, 12–15 год.
     Відеоконсультації психологів та психотерапевтів для дорослих і дітей доступні
-    безкоштовно в інтернеті на онлайн-<a href="https://www.manodaktaras.lt/">платформі</a></p>
+    безкоштовно в інтернеті на <a href="https://www.manodaktaras.lt/klinika/psichologine-pagalba-ukrainos-zmonems/2405"
+    title="">онлайн-платформі</a></p>
   resources: []
   contacts: []
   adresses: []
