@@ -175,9 +175,19 @@ questions:
   adresses: []
   content_blocks: []
 - title: Чи доступне безкоштовне щеплення від COVID-19?
-  answer: <p>Так, телефонуйте за номером <a href="tel:1808">1808</a>. Якщо телефонний
-    оператор не з Литви, телефонуйте за номером <a href="tel:+37066011808">+370 66
-    01 1808</a>. <a href="http://www.koronastop.lrv.lt/">Детальніше</a>.</p>
+  answer: '<p><strong>Так.</strong></p><p>Литва надає можливість біженцям, які покинули
+    зруйновану війною країну та оселилися в Литві, зробити щеплення від COVID-19.
+    Для реєстрації на вакцинацію проти хвороби COVID-19: короткий номер <a href="1808"
+    title="">1808</a> (за нелитовським номером <a href="+37066011808" title="">+370
+    66 01 1808</a>). Наразі оператори гарячої лінії можуть спілкуватися англійською
+    та російською мовами. У Литві наявні чотири вакцини на вибір, для первинної вакцинації
+    проти COVID-19: Comirnaty, Spikevax, Vaxzevria та Nuvaxovid. Доступна бустерна
+    доза Comirnaty або Spikevax, а особи, які були вакциновані Janssen, також можуть
+    отримати бустерну дозу тієї ж вакцини. Більше інформації про вакцини та процес
+    вакцинації, литовською, англійською, російською та польською мовами можна знайти
+    тут: <a href="https://koronastop.lrv.lt/ru/" title="https://koronastop.lrv.lt/ru/">https://koronastop.lrv.lt/ru/</a></p><p>Зареєструватись
+    на вакцінацію можна за посиланням: <a href="https://vakcina.myhybridlab.com/selfregister/vaccine"
+    title="https://vakcina.myhybridlab.com/selfregister/vaccine">https://vakcina.myhybridlab.com/selfregister/vaccine</a></p>'
   image: ''
   resources: []
   contacts: []
