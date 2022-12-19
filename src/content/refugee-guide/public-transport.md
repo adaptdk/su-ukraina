@@ -1,6 +1,6 @@
 ---
 weight: 100
-title_override: ГРОМАДСЬКИЙ ТРАНСПОРТ – БЕЗКОШТОВНО
+title_override: Безкоштовний громадський транспорт
 title: public-transport
 slug: "/public-transport"
 questions:
@@ -79,6 +79,9 @@ questions:
 contacts: []
 adresses: []
 icon: bus-simple
+page_title: ''
+page_description: ''
+resources: []
 
 ---
 Безкоштовний громадський транспорт:
