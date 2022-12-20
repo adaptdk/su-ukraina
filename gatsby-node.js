@@ -82,3 +82,23 @@ exports.createPages = async function ({ actions, graphql }) {
     });
   });
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter!
+    }
+    type Frontmatter {
+      questions: [MarkdownRemarkFrontmatterQuestions]
+    }
+    type MarkdownRemarkFrontmatterQuestions {
+      content_blocks: [MarkdownRemarkFrontmatterQuestionsContent_blocks]
+    }
+    type MarkdownRemarkFrontmatterQuestionsContent_blocks {
+      image: File @fileByRelativePath
+    }
+  `;
+
+  createTypes(typeDefs);
+};
