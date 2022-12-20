@@ -5,7 +5,7 @@ title: humanitarian-help
 slug: "/humanitarian-help"
 questions:
 - title: Литовський «Червоний Хрест»
-  answer: <p><a href="https://redcross.lt" title="https://redcross.lt" target="_blank">https://redcross.lt</a></p><p>Товариство
+  answer: <p><a href="https://redcross.lt" title="https://redcross.lt">https://redcross.lt</a></p><p>Товариство
     Червоного Хреста, одна з найстарших гуманітарних місій у світі, не могла залишатися
     осторонь. Організація допомагає українцям гуманітарною допомогою.</p><p>При реєстрації
     в міграційному центрі вашого міста надається купон, який можна обміняти на набір
@@ -14,8 +14,8 @@ questions:
     чи іншому місті.</p><p>У разі потреби уточнюйте волонтерам склад родини, якого
     віку є ваші діти (зубні пасти та щітки), та чи є старші люди, чоловіки (приладдя
     для гоління)</p><p>Ви можете взяти пакет в реєстраційному або завітавши за адресою
-    Червоного Хреста у вашому місті. <a href="https://redcross.lt" title="https://redcross.lt"
-    target="_blank">https://www.redcross.lt/informacija-karo-pabegeliams-ukrainos</a></p>
+    Червоного Хреста у вашому місті <a href="https://suukraina.lt/ua/refugee-guide/contacts/#tab-0"
+    title="">за посиланням. </a></p>
   content_blocks: []
   image: ''
   resources: []
@@ -46,6 +46,4 @@ resources: []
 ---
 **ГАРЯЧА ЛІНІЯ ГУМАНІТАРНОЇ ДОПОМОГИ**
 
-\+370 684 98 688
-
-(працює цілодобово)
+[+370 684 98 688](+37068498688) (працює цілодобово)
