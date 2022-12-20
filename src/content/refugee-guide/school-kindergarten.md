@@ -21,7 +21,7 @@ questions:
   image: ''
   content_blocks: []
 - title: Чи треба платити за загальноосвітні послуги в Литві?
-  answer: "<p>Ці послуги безкоштовні.</p>"
+  answer: "<p><strong>Ні. </strong>Ці послуги безкоштовні.</p>"
   content_blocks: []
   resources: []
   contacts: []
