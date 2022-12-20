@@ -15,10 +15,7 @@ questions:
     title="">за посиланням</a>. </p><p><strong>ВАЖЛИВО</strong>: Школи можуть приймати
     студентів і тих, хто не має дозволу на тимчасове проживання в Литві та національної
     візи для навчання та реєстрації.</p>'
-  resources:
-  - title: Контакти муніципальних координаторів
-    subtitle: ''
-    url: https://assets.website-files.com/621a7bebd3960e6d990edd9b/62363df436eb487863ce62ce_Kontaktai_koordinatoriai_S%CC%8CMSM_UA.docx
+  resources: []
   contacts: []
   adresses: []
   image: ''
@@ -31,4 +28,3 @@ page_title: ''
 page_description: ''
 
 ---
-Муніципалітети дбають про освіту українських дітей.
