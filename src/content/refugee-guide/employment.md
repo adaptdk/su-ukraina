@@ -4,30 +4,6 @@ title_override: Пошук роботи
 title: employment
 slug: "/employment"
 questions:
-- title: Важлива інформація щодо трудових відносин в Литві
-  answer: <ul><li><p>Інформація про заробітню плату - <a href="" title="" editing=""
-    creating="">за посиланням</a></p></li><li><p>Укладення трудового договору й умови
-    праці - <a href="https://www.vdi.lt/PdfUploads/ukr.pdf" title="" editing="" creating="">за
-    посиланням</a></p></li><li><p>Зразок трудового договору - <a href="https://docs.google.com/document/d/1mhK3DrG3XzPakIGqFFxhLvvYPzd-rhb2/edit"
-    title="" editing="" creating="">за посиланням </a></p></li><li><p>Трудові відносини,
-    найпоширеніші запитання - <a href="https://www.vdi.lt/PdfUploads/DUK_FAQ_UK.pdf"
-    title="" editing="" creating="">за посиланням</a> </p></li><li><p>Підтримка біженців
-    війни відповідно до статусу особи -<a href="https://www.vdi.lt/PdfUploads/Parama_UKR.pdf"
-    title="" editing="" creating=""> за посиланням </a></p></li><li><p>Виплата добових
-    працівникам - <a href="https://www.vdi.lt/PdfUploads/Del_dienpinigiu_UK.pdf" title=""
-    editing="" creating="">за посиланням </a></p></li><li><p>Якщо роботодавець порушує
-    Трудовий кодекс - <a href="https://www.vdi.lt/PdfUploads/Skundo_pildymo_tvarka_UK.pdf"
-    title="" editing="" creating="">за посиланням </a></p></li><li><p>Розгляд трудових
-    спорів - <a href="https://www.vdi.lt/PdfUploads/DGK_pildymo_tvarka_LDC_UK.pdf"
-    title="" editing="" creating="">за посиланням</a> </p></li><li><p>Зразок подання
-    скарги - <a href="https://docs.google.com/document/d/1xixoE4NmcGaaExP70hsykn3_9WAglJcc/edit"
-    title="" editing="" creating="">за посиланням</a></p></li><li><p>Заповнений зразок
-    подання скарги - <a href="https://docs.google.com/document/d/1BOg8m_aWZg7z3QNKUOJRAHzrc28OnInK/edit"
-    title="" editing="" creating="">за посиланням</a></p></li></ul>
-  content_blocks: []
-  resources: []
-  contacts: []
-  adresses: []
 - title: З чого почати?
   answer: <p>Якщо ви перебуваєте на обліку в Департаменті міграції та користуєтесь
     безвізовим режимом, маєте шенгенську візу або подали заявку на отримання дозволу
@@ -79,6 +55,30 @@ questions:
     title="" editing="" creating="">реєстрації STI</a>, а якщо це неможливо зробити
     онлайн, час прибуття можна зарезервувати за телефоном <a href="+37052191777" title=""
     editing="" creating=""><strong>+370 5 2191 777</strong></a>.</p>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
+- title: Важлива інформація щодо трудових відносин в Литві
+  answer: <ul><li><p>Інформація про заробітню плату - <a href="" title="" editing=""
+    creating="">за посиланням</a></p></li><li><p>Укладення трудового договору й умови
+    праці - <a href="https://www.vdi.lt/PdfUploads/ukr.pdf" title="" editing="" creating="">за
+    посиланням</a></p></li><li><p>Зразок трудового договору - <a href="https://docs.google.com/document/d/1mhK3DrG3XzPakIGqFFxhLvvYPzd-rhb2/edit"
+    title="" editing="" creating="">за посиланням </a></p></li><li><p>Трудові відносини,
+    найпоширеніші запитання - <a href="https://www.vdi.lt/PdfUploads/DUK_FAQ_UK.pdf"
+    title="" editing="" creating="">за посиланням</a> </p></li><li><p>Підтримка біженців
+    війни відповідно до статусу особи -<a href="https://www.vdi.lt/PdfUploads/Parama_UKR.pdf"
+    title="" editing="" creating=""> за посиланням </a></p></li><li><p>Виплата добових
+    працівникам - <a href="https://www.vdi.lt/PdfUploads/Del_dienpinigiu_UK.pdf" title=""
+    editing="" creating="">за посиланням </a></p></li><li><p>Якщо роботодавець порушує
+    Трудовий кодекс - <a href="https://www.vdi.lt/PdfUploads/Skundo_pildymo_tvarka_UK.pdf"
+    title="" editing="" creating="">за посиланням </a></p></li><li><p>Розгляд трудових
+    спорів - <a href="https://www.vdi.lt/PdfUploads/DGK_pildymo_tvarka_LDC_UK.pdf"
+    title="" editing="" creating="">за посиланням</a> </p></li><li><p>Зразок подання
+    скарги - <a href="https://docs.google.com/document/d/1xixoE4NmcGaaExP70hsykn3_9WAglJcc/edit"
+    title="" editing="" creating="">за посиланням</a></p></li><li><p>Заповнений зразок
+    подання скарги - <a href="https://docs.google.com/document/d/1BOg8m_aWZg7z3QNKUOJRAHzrc28OnInK/edit"
+    title="" editing="" creating="">за посиланням</a></p></li></ul>
   content_blocks: []
   resources: []
   contacts: []
