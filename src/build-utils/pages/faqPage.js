@@ -2,6 +2,7 @@ const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
 const { getFaqNavDataByLocale, getPathByLocale } = require(`../helpers/hooks`);
+const { logContentfulWarning } = require(`../helpers/utils`);
 
 const query = (graphql) => {
   return graphql(`
@@ -9,6 +10,7 @@ const query = (graphql) => {
     allContentfulFaqPage {
       edges {
         node {
+          contentful_id
           id
           slug
           node_locale
@@ -49,19 +51,28 @@ const createFaqPages = (result, createPage) => {
   const ltNavData = getFaqNavDataByLocale(faqPages, `lt-LT`);
 
   faqPages.forEach((faqPage) => {
-    const pagePath = getPathByLocale(faqPage?.node_locale, faqPage?.slug, {
-      lt: `informacija-lietuviams`,
-      ua: `refugee-guide`,
-    });
+    if (faqPage?.slug && faqPage?.node_locale) {
+      const pagePath = getPathByLocale(faqPage?.node_locale, faqPage?.slug, {
+        lt: `informacija-lietuviams`,
+        ua: `refugee-guide`,
+        en: `faq`,
+      });
 
-    createPage({
-      path: pagePath,
-      component: path.resolve(`./src/templates/faqPage.jsx`),
-      context: {
-        ...faqPage,
-        navData: faqPage.node_locale === `lt-LT` ? ltNavData : null,
-      },
-    });
+      createPage({
+        path: pagePath,
+        component: path.resolve(`./src/templates/faqPage.jsx`),
+        context: {
+          ...faqPage,
+          navData: faqPage.node_locale === `lt-LT` ? ltNavData : null,
+        },
+      });
+    } else {
+      logContentfulWarning(
+        `FAQ Page`,
+        faqPage.contentful_id,
+        faqPage.node_locale
+      );
+    }
   });
 };
 

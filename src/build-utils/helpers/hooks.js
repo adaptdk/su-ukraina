@@ -35,7 +35,7 @@ const getSlidingNavData = (modules) => {
  * @param {lt: String, ua: String} prefix Optional prefix object for generating page/subpage. No trailing slashes
  * @returns Returns full `path`, eg: `"ua/privacy-policy"`
  */
-const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: `` }) => {
+const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   if (locale === `lt-LT`) {
     if (prefix?.lt) {
       return `${prefix.lt}/${slug}`;
@@ -50,6 +50,14 @@ const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: `` }) => {
     return `ua/${slug}`;
   }
 
+  if (locale === `en`) {
+    if (prefix?.en) {
+      return `en/${prefix.en}/${slug}`;
+    }
+    return `en/${slug}`;
+  }
+
+  // This will break the build and we want that
   return null;
 };
 
@@ -89,7 +97,7 @@ const getOrganisationPagePath = (name, locale) => {
 
   return getPathByLocale(locale, slug, {
     lt: `kaip-galiu-padeti/aukojimas`,
-    ua: `ua/help`,
+    ua: `help`,
   });
 };
 
