@@ -4,6 +4,23 @@ title_override: Пошук роботи
 title: employment
 slug: "/employment"
 questions:
+- title: Якщо у Вас є запитання
+  answer: '<p>Якщо у вас виникли запитання щодо умов трудового договору, оплати праці,
+    безпеки, здоров’я чи інших питань, що стосуються трудових відносин, будь ласка,
+    для консультації звертайтеся:</p><ul><li><p>тел: <a href="852139772" title=""
+    editing="" creating="">8 5 213 9772</a> (для дзвінків із закордону <a href="+37052139772"
+    title="" editing="" creating="">+ 370 5 213 9772</a>);</p></li><li><p>ел. поштою:
+    <a href="info@vdi.lt" title="" editing="" creating="">info@vdi.lt</a>;</p></li><li><p>приватним
+    повідомленням у Facebook <a href="https://www.facebook.com/ValstybineDarboInspekcija"
+    title="" editing="" creating="">Valstybinė darbo inspekcija</a> (Державна інспекція
+    праці);</p></li><li><p>через мобільний додаток <a href="https://zinokteises.delfi.lt/"
+    title="" editing="" creating="">«Žinok teises»</a> («Знай права»);</p></li><li><p>безпосередньо
+    у територіальних відділеннях установи - <a href="http://www.vdi.lt/Personalas/Index"
+    title="" editing="" creating="">за посиланням</a>.</p></li></ul>'
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: З чого почати?
   answer: <p>Якщо ви перебуваєте на обліку в Департаменті міграції та користуєтесь
     безвізовим режимом, маєте шенгенську візу або подали заявку на отримання дозволу
