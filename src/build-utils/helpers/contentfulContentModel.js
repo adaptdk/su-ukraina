@@ -121,6 +121,28 @@ const resourceListModule = `
   }
 `;
 
+const globalNavigation = `
+  allContentfulNavigation {
+    edges {
+      node {
+        node_locale
+        items {
+          id
+          title
+          slug
+          items {
+            ... on ContentfulNavigationItem {
+              id
+              title
+              slug
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 module.exports = {
   hero,
   seo,
@@ -132,4 +154,5 @@ module.exports = {
   faqNavigation,
   faqItem,
   resourceListModule,
+  globalNavigation,
 };

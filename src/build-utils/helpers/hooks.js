@@ -37,6 +37,9 @@ const getSlidingNavData = (modules) => {
  */
 const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   if (locale === `lt-LT`) {
+    if (slug === `homepage`) {
+      return `/`;
+    }
     if (prefix?.lt) {
       return `${prefix.lt}/${slug}`;
     }
@@ -44,6 +47,9 @@ const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   }
 
   if (locale === `uk-UA`) {
+    if (slug === `homepage`) {
+      return `ua`;
+    }
     if (prefix?.ua) {
       return `ua/${prefix.ua}/${slug}`;
     }
@@ -51,6 +57,9 @@ const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   }
 
   if (locale === `en`) {
+    if (slug === `homepage`) {
+      return `en`;
+    }
     if (prefix?.en) {
       return `en/${prefix.en}/${slug}`;
     }

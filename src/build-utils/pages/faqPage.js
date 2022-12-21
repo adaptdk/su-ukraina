@@ -7,6 +7,7 @@ const { logContentfulWarning } = require(`../helpers/utils`);
 const query = (graphql) => {
   return graphql(`
   {
+    ${contentModel.globalNavigation}
     allContentfulFaqPage {
       edges {
         node {
@@ -46,12 +47,23 @@ const createFaqPages = (result, createPage) => {
   const faqPages = result.data.allContentfulFaqPage.edges.map((edge) => {
     return edge.node;
   });
+  const globalNavigation = result.data.allContentfulNavigation.edges.map(
+    (edge) => {
+      return edge.node;
+    }
+  );
 
   // gather all the LT pages data
   const ltNavData = getFaqNavDataByLocale(faqPages, `lt-LT`);
 
   faqPages.forEach((faqPage) => {
     if (faqPage?.slug && faqPage?.node_locale) {
+      const navigation = globalNavigation
+        .filter((item) => {
+          return item.node_locale === faqPage.node_locale;
+        })
+        .shift();
+
       const pagePath = getPathByLocale(faqPage?.node_locale, faqPage?.slug, {
         lt: `informacija-lietuviams`,
         ua: `refugee-guide`,
@@ -64,6 +76,7 @@ const createFaqPages = (result, createPage) => {
         context: {
           ...faqPage,
           navData: faqPage.node_locale === `lt-LT` ? ltNavData : null,
+          navigation,
         },
       });
     } else {

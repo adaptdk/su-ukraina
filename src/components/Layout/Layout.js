@@ -21,6 +21,7 @@ import { isUkrainianPage } from "../../helpers/handlers";
 
 import "./Layout.css";
 import PageTitle from "../PageTitle";
+import { navigationPropTypes } from "../../helpers/genericPropTypes";
 
 const Layout = ({
   children,
@@ -29,6 +30,7 @@ const Layout = ({
   metaTitle,
   metaDescription,
   includeContactForm,
+  navigation,
 }) => {
   const isUa = isUkrainianPage();
 
@@ -36,7 +38,7 @@ const Layout = ({
     <div className="Layout">
       <PageTitle title={metaTitle || ``} />
       <Meta name="description" content={metaDescription || ``} />
-      <Header noSticky={noStickyHeader} />
+      <Header navigation={navigation} noSticky={noStickyHeader} />
       {!isUa && (
         <PromoLine
           title="Вся важлива інформація для громадян України"
@@ -82,6 +84,7 @@ Layout.propTypes = {
   metaDescription: PropTypes.string.isRequired,
   noStickyHeader: PropTypes.bool,
   includeContactForm: PropTypes.bool,
+  navigation: navigationPropTypes.isRequired,
 };
 
 Layout.defaultProps = {

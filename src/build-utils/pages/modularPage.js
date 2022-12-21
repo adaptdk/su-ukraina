@@ -7,6 +7,7 @@ const { logContentfulWarning } = require(`../helpers/utils`);
 const query = (graphql) => {
   return graphql(`
   {
+    ${contentModel.globalNavigation}
     allContentfulModularPage {
       edges {
         node {
@@ -54,21 +55,37 @@ const createModularPages = (result, createPage) => {
       return edge.node;
     }
   );
+  const globalNavigation = result.data.allContentfulNavigation.edges.map(
+    (edge) => {
+      return edge.node;
+    }
+  );
 
   modularPages.forEach((modularPage) => {
     if (modularPage?.slug && modularPage?.node_locale) {
+      const navigation = globalNavigation
+        .filter((item) => {
+          return item.node_locale === modularPage.node_locale;
+        })
+        .shift();
+
       const slidingNavData = getSlidingNavData(modularPage.modules);
       const pagePath = getPathByLocale(
         modularPage?.node_locale,
         modularPage?.slug
       );
 
+      const isHomepage =
+        pagePath === `/` || pagePath === `ua` || pagePath === `en`;
+
       createPage({
         path: pagePath,
         component: path.resolve(`./src/templates/modularPage.jsx`),
         context: {
           ...modularPage,
+          navigation,
           slidingNavData,
+          isHomepage,
         },
       });
     } else {

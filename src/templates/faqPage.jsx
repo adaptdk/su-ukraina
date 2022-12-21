@@ -6,10 +6,14 @@ import { HeroSection } from "../components/HeroSection";
 
 import { Faq, FaqNavDataPropTypes } from "../components/Faq";
 import { FaqModulePropTypes } from "../components/Faq/FaqModule/FaqModulePropTypes";
-import { gatsbyImagePropType } from "../helpers/genericPropTypes";
+import {
+  gatsbyImagePropType,
+  navigationPropTypes,
+} from "../helpers/genericPropTypes";
 
 const FaqPage = ({ path, pageContext }) => {
   const {
+    navigation,
     metaTitle,
     metaDescription,
     heroImage,
@@ -24,6 +28,7 @@ const FaqPage = ({ path, pageContext }) => {
       pagePath={path}
       metaTitle={metaTitle}
       metaDescription={metaDescription}
+      navigation={navigation}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -49,6 +54,7 @@ FaqPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
+    navigation: navigationPropTypes.isRequired,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     metaTitle: PropTypes.string.isRequired,

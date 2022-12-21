@@ -11,9 +11,11 @@ import { formatRichText } from "../helpers/formatting";
 import { getTranslatedText } from "../utils/getTranslatedText";
 
 import "../components/Organisation/OrganisationPage.css";
+import { navigationPropTypes } from "../helpers/genericPropTypes";
 
 const OrganisationPage = ({ path, pageContext }) => {
   const {
+    navigation,
     name,
     description,
     purpose,
@@ -25,7 +27,12 @@ const OrganisationPage = ({ path, pageContext }) => {
   } = pageContext;
 
   return (
-    <Layout pagePath={path} metaTitle={name || ``} metaDescription={``}>
+    <Layout
+      pagePath={path}
+      metaTitle={name || ``}
+      metaDescription={``}
+      navigation={navigation}
+    >
       <Constraint className="OrganisationPage">
         <NavigationGroup crumbs={crumbs} />
         {name && <h1>{name}</h1>}
@@ -59,6 +66,7 @@ const OrganisationPage = ({ path, pageContext }) => {
 
 const organisationPageContext = {
   ...OrganisationPropTypes,
+  navigation: navigationPropTypes.isRequired,
   breadcrumb: PropTypes.shape({
     crumbs: PropTypes.arrayOf(
       PropTypes.shape({

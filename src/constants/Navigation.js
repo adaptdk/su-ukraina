@@ -1,88 +1,88 @@
 // All of the available navigation items.
 export const NAVIGATION_ITEM_HOW_CAN_I_HELP = {
-  pathname: `/kaip-galiu-padeti/`,
+  slug: `kaip-galiu-padeti/`,
   title: `Kaip galiu padėti?`,
 };
 
 export const NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION = {
-  pathname: `/kaip-galiu-padeti/aukojimas/`,
+  slug: `kaip-galiu-padeti/aukojimas/`,
   title: `Aukojimas`,
   iconHandle: `donate`,
 };
 
 export const NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER = {
-  pathname: `/kaip-galiu-padeti/savanoryste/`,
+  slug: `kaip-galiu-padeti/savanoryste/`,
   title: `Savanorystė`,
   iconHandle: `volunteer`,
 };
 
 export const NAVIGATION_ITEM_PROTEST_FORMS = {
-  pathname: `/protesto-formos/`,
+  slug: `protesto-formos/`,
   title: `Protesto formos`,
 };
 
 export const NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS = {
-  pathname: `/protesto-formos/akcijos/`,
+  slug: `protesto-formos/akcijos/`,
   title: `Akcijos`,
 };
 
 export const NAVIGATION_ITEM_EVENTS = {
-  pathname: `/renginiai/`,
+  slug: `renginiai/`,
   title: `Renginiai`,
 };
 
 export const NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY = {
-  pathname: `/protesto-formos/budinkite-veikti/ambasada/`,
+  slug: `protesto-formos/budinkite-veikti/ambasada/`,
   title: `Budinkite veikti`,
 };
 
 export const NAVIGATION_ITEM_PROTEST_WAKE_UP_COMPANY = {
-  pathname: `/protesto-formos/budinkite-veikti/imone/`,
+  slug: `protesto-formos/budinkite-veikti/imone/`,
   title: `Budinkite veikti`,
 };
 
 export const NAVIGATION_ITEM_BE_VIGILANT = {
-  pathname: `/bukime-budrus/`,
+  slug: `bukime-budrus/`,
   title: `Būkime budrūs`,
 };
 
 export const NAVIGATION_ITEM_BE_VIGILANT_CITIZEN_HANDBOOK = {
-  pathname: `/piliecio-atmintine/`,
+  slug: `piliecio-atmintine/`,
   title: `Piliečio atmintinė`,
 };
 
 export const NAVIGATION_ITEM_RELIABLE_INFORMATION = {
-  pathname: `/patikimi-saltiniai/`,
+  slug: `patikimi-saltiniai/`,
   title: `Patikimi šaltiniai`,
 };
 
 export const NAVIGATION_ITEM_INFORMATION_FOR_LITHUANIAN_CITIZENS = {
-  pathname: `/informacija-lietuviams/`,
+  slug: `informacija-lietuviams/`,
   title: `Informacija Lietuviams`,
 };
 
 export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
-  pathname: `/informacija-lietuviams/sukciai-ir-dezinformacija/`,
+  slug: `informacija-lietuviams/sukciai-ir-dezinformacija/`,
   title: `Sukčiai ir dezinformacija`,
   altTitle: `Kaip apsisaugoti nuo sukčių ir dezinformacijos?`,
 };
 
 export const NAVIGATION_ITEM_HELP = {
-  pathname: `/ua/help-search/`,
+  slug: `ua/help-search/`,
   title: `Знайти довідку`,
   altTitle: `Послуги`,
   translation: `Pagalba`,
 };
 
 export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
-  pathname: `/ua/refugee-guide/`,
+  slug: `ua/refugee-guide/`,
   title: `Важлива інформація`,
   altTitle: `Інформація`,
   translation: `Informacija`,
 };
 
 export const NAVIGATION_ITEM_EVENTS_UA = {
-  pathname: `/ua/events/`,
+  slug: `ua/events/`,
   title: `Події`,
   altTitle: `Події`,
   translation: `Renginiai`,
@@ -147,27 +147,27 @@ export const NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP = {
 };
 
 export const ADDITIONAL_NAVIGATION = {
-  [NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION.pathname]: [
+  [NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION.slug]: [
     NAVIGATION_ITEM_RELIABLE_INFORMATION,
   ],
-  [NAVIGATION_ITEM_RELIABLE_INFORMATION.pathname]: [
+  [NAVIGATION_ITEM_RELIABLE_INFORMATION.slug]: [
     //NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION,
   ],
-  [NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER.pathname]: [
+  [NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER.slug]: [
     NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION,
   ],
-  [NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS.pathname]: [
+  [NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS.slug]: [
     NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY,
     NAVIGATION_ITEM_EVENTS,
   ],
-  [NAVIGATION_ITEM_EVENTS.pathname]: [],
-  [NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION.pathname]: [
+  [NAVIGATION_ITEM_EVENTS.slug]: [],
+  [NAVIGATION_ITEM_HOW_CAN_I_HELP_DONATION.slug]: [
     NAVIGATION_ITEM_HOW_CAN_I_HELP_VOLUNTEER,
   ],
-  [NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY.pathname]: [
+  [NAVIGATION_ITEM_PROTEST_WAKE_UP_EMBASSY.slug]: [
     NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS,
   ],
-  [NAVIGATION_ITEM_PROTEST_WAKE_UP_COMPANY.pathname]: [
+  [NAVIGATION_ITEM_PROTEST_WAKE_UP_COMPANY.slug]: [
     NAVIGATION_ITEM_PROTEST_FORMS_ACTIONS,
   ],
 };

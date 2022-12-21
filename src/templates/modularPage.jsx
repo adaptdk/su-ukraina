@@ -17,10 +17,13 @@ import { formatRichText } from "../helpers/formatting";
 import {
   gatsbyImagePropType,
   localePropType,
+  navigationPropTypes,
 } from "../helpers/genericPropTypes";
 
 const ModularPage = ({ path, pageContext }) => {
   const {
+    isHomepage,
+    navigation,
     node_locale,
     metaTitle,
     metaDescription,
@@ -60,14 +63,17 @@ const ModularPage = ({ path, pageContext }) => {
       includeContactForm={includeContactForm}
       metaTitle={metaTitle}
       metaDescription={metaDescription}
+      navigation={navigation}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
-      <Constraint>
-        <NavigationGroup crumbs={crumbs} />
-        {pageHeading && <h1>{pageHeading}</h1>}
-        {pageDescription?.raw && formatRichText(pageDescription.raw)}
-      </Constraint>
+      {!isHomepage && (
+        <Constraint>
+          <NavigationGroup crumbs={crumbs} />
+          {pageHeading && <h1>{pageHeading}</h1>}
+          {pageDescription?.raw && formatRichText(pageDescription.raw)}
+        </Constraint>
+      )}
 
       <Constraint
         className={classNames({
@@ -100,6 +106,8 @@ ModularPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
+    isHomepage: PropTypes.bool.isRequired,
+    navigation: navigationPropTypes.isRequired,
     node_locale: localePropType.isRequired,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,

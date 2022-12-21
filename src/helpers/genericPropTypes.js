@@ -22,4 +22,22 @@ const gatsbyImagePropType = PropTypes.shape({
   }),
 });
 
-export { localePropType, gatsbyImagePropType };
+const navigationPropTypes = PropTypes.shape({
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      items: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          slug: PropTypes.string.isRequired,
+          title: PropTypes.string.isRequired,
+        })
+      ),
+      slug: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ),
+  node_locale: localePropType.isRequired,
+});
+
+export { localePropType, gatsbyImagePropType, navigationPropTypes };

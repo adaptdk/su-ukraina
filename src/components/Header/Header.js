@@ -24,8 +24,10 @@ import { isUkrainianPage } from "../../helpers/handlers";
 
 // Style.
 import "./Header.css";
+import { navigationPropTypes } from "../../helpers/genericPropTypes";
 
-const Header = ({ noSticky }) => {
+const Header = ({ noSticky, navigation }) => {
+  console.log({ navigation });
   const [headerHeight, setHeaderHeight] = React.useState(null);
   const { pathname } = useLocation();
   const altHeader = isUkrainianPage();
@@ -61,7 +63,7 @@ const Header = ({ noSticky }) => {
     if (altHeader) {
       return NAVIGATION_MAIN_MENU_ALT;
     }
-    return NAVIGATION_MAIN_MENU;
+    return navigation?.items || NAVIGATION_MAIN_MENU;
   };
 
   return (
@@ -93,29 +95,29 @@ const Header = ({ noSticky }) => {
             {mainMenu().map((item) => {
               return (
                 <li
-                  key={item.pathname}
+                  key={item.id}
                   className={classNames(`Header__menu-link`, {
-                    "is-active": pathname.includes(item.pathname),
+                    "is-active": pathname.includes(item.slug),
                   })}
                 >
                   <Link
-                    aria-haspopup={!!item.children}
-                    to={item.pathname}
+                    aria-haspopup={!!item.items}
+                    to={`/${item.slug}`}
                     onClick={() => {
-                      closeMenuOnSameLink(item.pathname);
+                      closeMenuOnSameLink(item.slug);
                     }}
                   >
                     {item.title}
                   </Link>
-                  {item.children && (
+                  {item.items && (
                     <ul>
-                      {item.children.map((subItem) => {
+                      {item.items.map((subItem) => {
                         return (
-                          <li key={subItem.pathname}>
+                          <li key={subItem.slug}>
                             <Link
-                              to={subItem.pathname}
+                              to={`/${item.slug}/${subItem.slug}`}
                               onClick={() => {
-                                closeMenuOnSameLink(subItem.pathname);
+                                closeMenuOnSameLink(subItem.slug);
                               }}
                             >
                               {subItem.title}
@@ -152,6 +154,7 @@ const Header = ({ noSticky }) => {
 
 Header.propTypes = {
   noSticky: PropTypes.bool,
+  navigation: navigationPropTypes.isRequired,
 };
 
 export default Header;
