@@ -69,7 +69,7 @@ export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
 
 export const NAVIGATION_ITEM_HELP = {
   pathname: `/ua/help-search/`,
-  title: `Знайти довідку`,
+  title: `Послуги для українців`,
   altTitle: `Послуги`,
   translation: `Pagalba`,
 };
