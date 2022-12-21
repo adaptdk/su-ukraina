@@ -10,7 +10,7 @@
  */
 const logContentfulWarning = (type, id, locale) => {
   console.warn(
-    `Tried to create ${type} for > ${id} < id and > ${locale} < locale.
+    `Failed creating \x1b[32m${type}\x1b[0m for \x1b[33m${locale}\x1b[0m locale.
     Link to Contentful entry: https://app.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/entries/${id}`
   );
 };

@@ -1,25 +1,13 @@
 import PropTypes from "prop-types";
+import { gatsbyImagePropType } from "../../helpers/genericPropTypes";
 
 const HeroSectionPropTypes = {
-  image: PropTypes.shape({
-    gatsbyImageData: PropTypes.shape({
-      height: PropTypes.number,
-      width: PropTypes.number,
-      images: PropTypes.shape({
-        sources: PropTypes.arrayOf(
-          PropTypes.shape({
-            sizes: PropTypes.string,
-            srcSet: PropTypes.string,
-            type: PropTypes.string,
-          })
-        ),
-      }),
-      layout: PropTypes.string,
-      placeholder: PropTypes.shape({
-        fallback: PropTypes.string,
-      }),
-    }),
-  }).isRequired,
+  heroTitle: PropTypes.string,
+  heroImage: gatsbyImagePropType,
 };
 
-export { HeroSectionPropTypes };
+const HeroSectionDefaultProps = {
+  heroTitle: ``,
+};
+
+export { HeroSectionPropTypes, HeroSectionDefaultProps };

@@ -32,7 +32,8 @@ const createOrganisationPages = (result, createPage) => {
     if (organisationPage?.name && organisationPage?.node_locale) {
       const pagePath = getOrganisationPagePath(
         organisationPage?.name,
-        organisationPage?.node_locale
+        organisationPage?.node_locale,
+        organisationPage?.organisationType
       );
 
       createPage({

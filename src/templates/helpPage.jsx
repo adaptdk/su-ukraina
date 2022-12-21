@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Layout from "../components/Layout";
-import { HeroSection, HeroSectionPropTypes } from "../components/HeroSection";
+import { HeroSection } from "../components/HeroSection";
 import Constraint from "../components/Constraint";
 import NavigationGroup from "../components/NavigationGroup";
 import SlidingNavigation from "../components/SlidingNavigation";
@@ -12,13 +12,17 @@ import {
   OrganisationPropTypes,
 } from "../components/Organisation";
 
-import { localePropType, seoPropTypes } from "../helpers/genericPropTypes";
+import {
+  gatsbyImagePropType,
+  localePropType,
+} from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
 
 const HelpPage = ({ path, pageContext }) => {
   const {
-    seo,
-    hero,
+    metaTitle,
+    metaDescription,
+    heroImage,
     node_locale,
     pageHeading,
     pageDescription,
@@ -50,8 +54,12 @@ const HelpPage = ({ path, pageContext }) => {
   ];
 
   return (
-    <Layout pagePath={path} seo={seo}>
-      {hero && <HeroSection {...hero} />}
+    <Layout
+      pagePath={path}
+      metaTitle={metaTitle}
+      metaDescription={metaDescription}
+    >
+      {heroImage && <HeroSection heroImage={heroImage} />}
 
       <Constraint>
         <NavigationGroup crumbs={crumbs} />
@@ -80,7 +88,9 @@ const HelpPage = ({ path, pageContext }) => {
             })}
           </>
         )}
-        {!slidingNav && <CardListSection organisations={organisations} />}
+        {!slidingNav && (
+          <CardListSection organisations={organisations} locale={node_locale} />
+        )}
       </Constraint>
     </Layout>
   );
@@ -100,8 +110,9 @@ HelpPage.propTypes = {
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     slidingNav: PropTypes.bool.isRequired,
-    seo: PropTypes.shape(seoPropTypes).isRequired,
-    hero: PropTypes.shape(HeroSectionPropTypes),
+    metaTitle: PropTypes.string.isRequired,
+    metaDescription: PropTypes.string.isRequired,
+    heroImage: gatsbyImagePropType,
     node_locale: localePropType.isRequired,
     pageHeading: PropTypes.string,
     pageDescription: PropTypes.shape({

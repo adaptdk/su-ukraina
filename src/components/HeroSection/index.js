@@ -1,4 +1,7 @@
 import HeroSection from "./HeroSection";
-import { HeroSectionPropTypes } from "./HeroSectionPropTypes";
+import {
+  HeroSectionPropTypes,
+  HeroSectionDefaultProps,
+} from "./HeroSectionPropTypes";
 
-export { HeroSection, HeroSectionPropTypes };
+export { HeroSection, HeroSectionPropTypes, HeroSectionDefaultProps };

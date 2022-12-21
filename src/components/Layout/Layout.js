@@ -20,22 +20,22 @@ import {
 import { isUkrainianPage } from "../../helpers/handlers";
 
 import "./Layout.css";
-import { seoPropTypes } from "../../helpers/genericPropTypes";
 import PageTitle from "../PageTitle";
 
 const Layout = ({
   children,
   noStickyHeader,
   pagePath,
-  seo,
+  metaTitle,
+  metaDescription,
   includeContactForm,
 }) => {
   const isUa = isUkrainianPage();
 
   return (
     <div className="Layout">
-      <PageTitle title={seo?.pageTitle || ``} />
-      <Meta name="description" content={seo?.description || ``} />
+      <PageTitle title={metaTitle || ``} />
+      <Meta name="description" content={metaDescription || ``} />
       <Header noSticky={noStickyHeader} />
       {!isUa && (
         <PromoLine
@@ -77,9 +77,10 @@ const Layout = ({
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  noStickyHeader: PropTypes.bool,
   pagePath: PropTypes.string.isRequired,
-  seo: PropTypes.shape(seoPropTypes).isRequired,
+  metaTitle: PropTypes.string.isRequired,
+  metaDescription: PropTypes.string.isRequired,
+  noStickyHeader: PropTypes.bool,
   includeContactForm: PropTypes.bool,
 };
 

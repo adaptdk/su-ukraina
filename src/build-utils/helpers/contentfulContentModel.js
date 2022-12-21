@@ -1,16 +1,13 @@
+// not querying heroTitle yet because none of the heros have a title
 const hero = `
-  hero {
-    image {
-      gatsbyImageData(height: 148, placeholder: BLURRED, formats: WEBP)
-    }
+  heroImage {
+    gatsbyImageData(height: 148, placeholder: BLURRED, formats: WEBP)
   }
 `;
 
 const seo = `
-  seo {
-    pageTitle
-    description
-  }
+  metaTitle
+  metaDescription
 `;
 
 const organisation = `

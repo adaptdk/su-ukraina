@@ -1,10 +1,25 @@
 import PropTypes from "prop-types";
 
-const seoPropTypes = {
-  pageTitle: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
+const localePropType = PropTypes.oneOf([`lt-LT`, `uk-UA`, `en`]);
 
-const localePropType = PropTypes.oneOf([`lt-LT`, `uk-UA`]);
+const gatsbyImagePropType = PropTypes.shape({
+  gatsbyImageData: PropTypes.shape({
+    height: PropTypes.number,
+    width: PropTypes.number,
+    images: PropTypes.shape({
+      sources: PropTypes.arrayOf(
+        PropTypes.shape({
+          sizes: PropTypes.string,
+          srcSet: PropTypes.string,
+          type: PropTypes.string,
+        })
+      ),
+    }),
+    layout: PropTypes.string,
+    placeholder: PropTypes.shape({
+      fallback: PropTypes.string,
+    }),
+  }),
+});
 
-export { seoPropTypes, localePropType };
+export { localePropType, gatsbyImagePropType };

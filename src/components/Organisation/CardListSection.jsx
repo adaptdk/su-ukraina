@@ -30,7 +30,13 @@ const CardListSection = ({ organisations, locale }) => {
           );
 
           return (
-            <Card title={name} locale={locale} logo={logo} key={id}>
+            <Card
+              title={name}
+              locale={locale}
+              organisationType={organisationType}
+              logo={logo}
+              key={id}
+            >
               {!!description?.raw && (
                 <CardSection title="Apie" content={description} />
               )}

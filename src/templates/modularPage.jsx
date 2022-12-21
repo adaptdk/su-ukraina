@@ -5,7 +5,7 @@ import classNames from "classnames";
 import Layout from "../components/Layout";
 import Constraint from "../components/Constraint";
 import NavigationGroup from "../components/NavigationGroup";
-import { HeroSection, HeroSectionPropTypes } from "../components/HeroSection";
+import { HeroSection } from "../components/HeroSection";
 import {
   ContentfulModule,
   ContentfulModulePropTypes,
@@ -13,13 +13,14 @@ import {
 import SlidingNavigation from "../components/SlidingNavigation";
 import { SlidingNavBlockPropTypes } from "../components/ContentfulModule/SlidingNavBlock";
 
-import { seoPropTypes } from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
+import { gatsbyImagePropType } from "../helpers/genericPropTypes";
 
 const ModularPage = ({ path, pageContext }) => {
   const {
-    seo,
-    hero,
+    metaTitle,
+    metaDescription,
+    heroImage,
     pageHeading,
     pageDescription,
     modules,
@@ -27,9 +28,6 @@ const ModularPage = ({ path, pageContext }) => {
     includeContactForm,
     breadcrumb: { crumbs },
   } = pageContext;
-
-  console.log({ modules });
-  console.log(`tihs: `, slidingNavData);
 
   // in some cases you want to add extra props to a module
   // this function does exactly that
@@ -46,8 +44,13 @@ const ModularPage = ({ path, pageContext }) => {
   };
 
   return (
-    <Layout pagePath={path} includeContactForm={includeContactForm} seo={seo}>
-      {hero && <HeroSection {...hero} />}
+    <Layout
+      pagePath={path}
+      includeContactForm={includeContactForm}
+      metaTitle={metaTitle}
+      metaDescription={metaDescription}
+    >
+      {heroImage && <HeroSection heroImage={heroImage} />}
 
       <Constraint>
         <NavigationGroup crumbs={crumbs} />
@@ -88,8 +91,9 @@ ModularPage.propTypes = {
     }).isRequired,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
-    seo: PropTypes.shape(seoPropTypes).isRequired,
-    hero: PropTypes.shape(HeroSectionPropTypes),
+    metaTitle: PropTypes.string.isRequired,
+    metaDescription: PropTypes.string.isRequired,
+    heroImage: gatsbyImagePropType,
     pageHeading: PropTypes.string,
     pageDescription: PropTypes.shape({
       raw: PropTypes.string,

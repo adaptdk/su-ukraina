@@ -85,9 +85,14 @@ const getFaqNavDataByLocale = (faqPages, locale) => {
 /**
  * @param {String} name Name of the organisation.
  * @param {String} locale Queried locale, `lt-LT` or `uk-UA`.
+ * @param {String} type Organisation type, either `Volunteering` or `Donation`. Defaults to `Donation`.
  * @returns {String} Full path, eg.: `ua/organisation/blueyellow`.
  */
-const getOrganisationPagePath = (name, locale) => {
+const getOrganisationPagePath = (name, locale, type = `Donation`) => {
+  if (!name) {
+    return null;
+  }
+
   const slug =
     slugify(name, {
       lower: true,
@@ -95,9 +100,12 @@ const getOrganisationPagePath = (name, locale) => {
       remove: /[*+~.()/'"!:@]/g,
     }) || null;
 
+  const ltPrefix = type === `Donation` ? `aukojimas` : `savanoryste`;
+
   return getPathByLocale(locale, slug, {
-    lt: `kaip-galiu-padeti/aukojimas`,
-    ua: `help`,
+    lt: `kaip-galiu-padeti/${ltPrefix}`,
+    ua: `dopomogti`,
+    en: `help`,
   });
 };
 

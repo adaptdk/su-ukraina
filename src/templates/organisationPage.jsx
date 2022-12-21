@@ -24,10 +24,8 @@ const OrganisationPage = ({ path, pageContext }) => {
     breadcrumb: { crumbs },
   } = pageContext;
 
-  const seo = { pageTitle: name || `Organisation`, description: `` };
-
   return (
-    <Layout pagePath={path} seo={seo}>
+    <Layout pagePath={path} metaTitle={name || ``} metaDescription={``}>
       <Constraint className="OrganisationPage">
         <NavigationGroup crumbs={crumbs} />
         {name && <h1>{name}</h1>}

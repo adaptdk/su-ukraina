@@ -2,26 +2,30 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Layout from "../components/Layout";
-import { HeroSection, HeroSectionPropTypes } from "../components/HeroSection";
+import { HeroSection } from "../components/HeroSection";
 
-import { seoPropTypes } from "../helpers/genericPropTypes";
 import { Faq, FaqNavDataPropTypes } from "../components/Faq";
 import { FaqModulePropTypes } from "../components/Faq/FaqModule/FaqModulePropTypes";
+import { gatsbyImagePropType } from "../helpers/genericPropTypes";
 
 const FaqPage = ({ path, pageContext }) => {
   const {
-    seo,
-    hero,
+    metaTitle,
+    metaDescription,
+    heroImage,
     pageHeading,
     pageDescription,
     content,
     navData,
     breadcrumb: { crumbs },
   } = pageContext;
-  console.log({ pageContext });
   return (
-    <Layout pagePath={path} seo={seo}>
-      {hero && <HeroSection {...hero} />}
+    <Layout
+      pagePath={path}
+      metaTitle={metaTitle}
+      metaDescription={metaDescription}
+    >
+      {heroImage && <HeroSection heroImage={heroImage} />}
 
       <Faq
         title={pageHeading}
@@ -47,8 +51,9 @@ FaqPage.propTypes = {
     }).isRequired,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
-    seo: PropTypes.shape(seoPropTypes).isRequired,
-    hero: PropTypes.shape(HeroSectionPropTypes),
+    metaTitle: PropTypes.string.isRequired,
+    metaDescription: PropTypes.string.isRequired,
+    heroImage: gatsbyImagePropType,
     pageHeading: PropTypes.string,
     pageDescription: PropTypes.shape({
       raw: PropTypes.string,
