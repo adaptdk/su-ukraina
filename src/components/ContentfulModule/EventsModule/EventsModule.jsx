@@ -3,58 +3,52 @@ import { EventsModulePropTypes } from "./EventsModulePropTypes";
 import EventCardList from "../../EventCardList";
 import EventCard from "../../EventCard";
 import DetailsWrapper from "../../DetailsWrapper";
+import { getTranslatedText } from "../../../utils/getTranslatedText";
 
-const EventsModule = ({ events }) => {
+const EventsModule = ({ events, locale }) => {
   const currentDate = new Date();
   const upcomingEvents = [];
   const previousEvents = [];
 
-  events.forEach((event) => {
-    const startDate = new Date(event.startDate);
+  events
+    .filter((event) => {
+      return event.title;
+    })
+    .forEach((event) => {
+      const startDate = new Date(event.startDate);
 
-    if (event.endDate) {
-      const endDate = new Date(event.endDate);
-      if (currentDate > endDate) {
+      if (event.endDate) {
+        const endDate = new Date(event.endDate);
+        if (currentDate > endDate) {
+          previousEvents.unshift(event);
+        } else {
+          upcomingEvents.push(event);
+        }
+      } else if (currentDate > startDate) {
         previousEvents.unshift(event);
       } else {
         upcomingEvents.push(event);
       }
-    } else if (currentDate > startDate) {
-      previousEvents.unshift(event);
-    } else {
-      upcomingEvents.push(event);
-    }
-  });
+    });
 
   return (
     <div className="EventsModule">
-      {/* @todo: translate this */}
-      <h2>Organizuojami renginiai</h2>
+      <h2>{getTranslatedText(`events.upcomingEvents`)}</h2>
       <EventCardList>
         {upcomingEvents.length ? (
           upcomingEvents.map((event, i) => {
-            return (
-              <EventCard
-                key={i}
-                type={event.eventType}
-                title={event.title}
-                organizer={event.eventOrganizer}
-                startDate={event.startDate}
-                endDate={event.endDate}
-                location={event.location}
-                description={event.description}
-                url={event.eventUrl}
-              />
-            );
+            return <EventCard key={i} {...event} locale={locale} />;
           })
         ) : (
-          // @todo: translate this
-          <p>Numatomų renginių kol kas nėra.</p>
+          <p>{getTranslatedText(`events.noEvents`)}</p>
         )}
       </EventCardList>
 
       {!!previousEvents.length && (
-        <DetailsWrapper tag="h2" summary="Praėję renginiai">
+        <DetailsWrapper
+          tag="h2"
+          summary={getTranslatedText(`events.previousEvents`)}
+        >
           <EventCardList>
             {previousEvents.map((event, i) => {
               console.log(`event: `, event);
@@ -62,14 +56,8 @@ const EventsModule = ({ events }) => {
                 <EventCard
                   key={i}
                   className="EventCard--previous"
-                  type={event.eventType}
-                  title={event.title}
-                  organizer={event.eventOrganizer}
-                  startDate={event.startDate}
-                  endDate={event.endDate}
-                  location={event.location}
-                  description={event.html}
-                  url={event.eventUrl}
+                  {...event}
+                  locale={locale}
                 />
               );
             })}

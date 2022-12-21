@@ -14,10 +14,14 @@ import SlidingNavigation from "../components/SlidingNavigation";
 import { SlidingNavBlockPropTypes } from "../components/ContentfulModule/SlidingNavBlock";
 
 import { formatRichText } from "../helpers/formatting";
-import { gatsbyImagePropType } from "../helpers/genericPropTypes";
+import {
+  gatsbyImagePropType,
+  localePropType,
+} from "../helpers/genericPropTypes";
 
 const ModularPage = ({ path, pageContext }) => {
   const {
+    node_locale,
     metaTitle,
     metaDescription,
     heroImage,
@@ -37,6 +41,13 @@ const ModularPage = ({ path, pageContext }) => {
       return {
         ...module,
         pathname: path,
+      };
+    }
+
+    if (type === `ContentfulEventsModule`) {
+      return {
+        ...module,
+        locale: node_locale,
       };
     }
 
@@ -89,6 +100,7 @@ ModularPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
+    node_locale: localePropType.isRequired,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     metaTitle: PropTypes.string.isRequired,

@@ -10,17 +10,18 @@ import { localePropType } from "../../helpers/genericPropTypes";
 
 // Styles.
 import "./EventCard.css";
+import { getTranslatedText } from "../../utils/getTranslatedText";
 
 const EventCard = ({
   className = ``,
   title,
-  type,
+  eventType,
   organizer,
   location,
   startDate,
   endDate,
   description,
-  url,
+  eventUrl,
   locale,
 }) => {
   const getEventDate = (date, locale) => {
@@ -51,9 +52,9 @@ const EventCard = ({
   return (
     <div className={`EventCard ${className}`}>
       <div className="EventCard__content-container">
-        {type && (
+        {eventType && (
           <div className="EventCard__event-type-wrapper">
-            <p className="EventCard__event-type">{type}</p>
+            <p className="EventCard__event-type">{eventType}</p>
           </div>
         )}
         {title && <p className="EventCard__event-title">{title}</p>}
@@ -88,16 +89,15 @@ const EventCard = ({
         )}
         {description?.raw && formatRichText(description.raw)}
       </div>
-      {url && (
+      {eventUrl && (
         <Button
           endIcon="arrow-blue"
           color="transparent"
           target="_blank"
           rel="noopener"
-          href={url}
+          href={eventUrl}
         >
-          {locale === `lt-LT` && `Renginio Nuoroda`}
-          {locale === `uk-UA` && `Посилання на подію`}
+          {getTranslatedText(`events.eventLink`)}
         </Button>
       )}
     </div>
@@ -107,13 +107,13 @@ const EventCard = ({
 EventCard.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
-  type: PropTypes.string,
+  eventType: PropTypes.string,
   organizer: PropTypes.string,
   location: PropTypes.string,
   startDate: PropTypes.string,
   endDate: PropTypes.string,
   description: PropTypes.node,
-  url: PropTypes.string,
+  eventUrl: PropTypes.string,
   locale: localePropType.isRequired,
 };
 

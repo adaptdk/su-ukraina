@@ -21,6 +21,12 @@
     "purpose": "Призначення",
     "otherInfo": "Інша інформація"
   },
+  "events": {
+    "eventLink": "Посилання на подію",
+    "upcomingEvents": "<need to translate>",
+    "previousEvents": "<need to translate>",
+    "noEvents": "<need to translate>"
+  },
   "placeholders": {
     "name": "Ім'я прізвище",
     "phone": "+37011111111",

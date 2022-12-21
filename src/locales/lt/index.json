@@ -21,6 +21,12 @@
     "purpose": "Paskirtis",
     "otherInfo": "Kita informacija"
   },
+  "events": {
+    "eventLink": "Rengino nuoroda",
+    "upcomingEvents": "Organizuojami renginiai",
+    "previousEvents": "Praėję renginiai",
+    "noEvents": "Numatomų renginių kol kas nėra."
+  },
   "placeholders": {
     "name": "Vardenis Pavardenis",
     "phone": "+37061111111",
