@@ -26,6 +26,23 @@ questions:
   resources: []
   contacts: []
   adresses: []
+- title: Як підтвердити професійну кваліфікацію?
+  answer: <p><strong><em>Нерегульована професія:</em></strong></p><ol><li><p>Звернутися
+    до роботодавця</p></li><li><p>Роботодавець прийматиме рішення щодо придатності
+    до праці</p></li><li><p>Якщо у роботодавця виникнуть запитання щодо оцінки іноземної
+    кваліфікації, роботодавець звернеться до <a href="https://www.skvc.lt/default/en/refugees-from-ukraine"
+    title="" editing="" creating="">Центру оцінки якості навчання</a> (SKVC).</p></li></ol><p><strong><em>Регульована
+    професія:</em></strong></p><ol><li><p>Звернутися до установи, яка визнає професійну
+    кваліфікацію (контакти за <a href="https://kc.inovacijuagentura.lt/ukrainos-verslui/ukrainos-pilieciams-norintiems-dirbti-lietuvoje.html?lang=lt#:~:text=%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B8%20%D1%89%D0%BE%D0%B4%D0%BE%20%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D1%80%D0%B5%D0%B3%D1%83%D0%BB%D1%8C%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%85%20%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%96%D0%B9%3A"
+    title="" editing="" creating="">посиланням</a>)</p></li><li><p>Установа звертатиметься
+    до <a href="https://www.skvc.lt/default/en/refugees-from-ukraine" title="" editing=""
+    creating="">SKVC</a> для оцінки іноземної кваліфікації</p></li><li><p>Якщо робота
+    вимагає, напр. ліцензію, дозвіл, про це повідомить установа, яка визнала професійну
+    кваліфікацію</p></li></ol>
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: 'Інформація про допомогу та послуги в окремих регіонах та містах доступна
     за номерами:'
   answer: <p><a href="tel:+37065826755"><strong>+370 658 26 755</strong></a><strong>
