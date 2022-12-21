@@ -4,7 +4,11 @@ import PropTypes from "prop-types";
 import "./Card.css";
 import { Link } from "gatsby";
 import { getOrganisationPagePath } from "../../build-utils/helpers/hooks";
-import { localePropType } from "../../helpers/genericPropTypes";
+import {
+  gatsbyImagePropType,
+  localePropType,
+} from "../../helpers/genericPropTypes";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Card = ({ children, title, logo, locale, organisationType }) => {
   const pagePath = getOrganisationPagePath(title, locale, organisationType);
@@ -15,7 +19,11 @@ const Card = ({ children, title, logo, locale, organisationType }) => {
         <Link to={`/${pagePath}`}>
           <div className="Card__heading">
             <h2 className="Card__title">{title}</h2>
-            {!!logo && <div className="Card__logo">{logo}</div>}
+            {!!logo && (
+              <div className="Card__logo">
+                <GatsbyImage image={getImage(logo)} alt={title} src="" />
+              </div>
+            )}
           </div>
         </Link>
         <div className="Card__body">{children}</div>
@@ -38,7 +46,7 @@ const Card = ({ children, title, logo, locale, organisationType }) => {
 Card.propTypes = {
   children: PropTypes.node,
   title: PropTypes.node,
-  logo: PropTypes.node,
+  logo: gatsbyImagePropType,
   locale: localePropType.isRequired,
   organisationType: PropTypes.oneOf([`Donation`, `Volunteering`]),
 };

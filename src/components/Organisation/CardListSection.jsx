@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import CardList from "../CardList";
 import Card from "../Card";
@@ -25,16 +24,12 @@ const CardListSection = ({ organisations, locale }) => {
           websiteUrl,
           actionUrl,
         }) => {
-          const logo = organisationLogo && (
-            <GatsbyImage image={getImage(organisationLogo)} alt={name} />
-          );
-
           return (
             <Card
               title={name}
               locale={locale}
               organisationType={organisationType}
-              logo={logo}
+              logo={organisationLogo}
               key={id}
             >
               {!!description?.raw && (
