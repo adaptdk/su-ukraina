@@ -56,21 +56,13 @@ const eventsModule = `
   }
 `;
 
-const linkIcon = `
-  id
-  iconType
-  url
-`;
-
 const chip = `
   id
   heading
   subheading
-  links {
-    ... on ContentfulLinkIcon {
-      ${linkIcon}
-    }
-  }
+  webUrl
+  facebookUrl
+  twitterUrl
 `;
 
 const chipModule = `

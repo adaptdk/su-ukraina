@@ -3,22 +3,30 @@ import { ChipPropTypes } from "./ChipModulePropTypes";
 
 import "./ContactChip.css";
 
-const ContactChip = ({ heading, subheading, links }) => {
-  const getLabelByType = (type) => {
-    if (type === `web`) {
-      return `WWW`;
-    }
-
-    if (type === `facebook`) {
-      return `Facebook`;
-    }
-
-    if (type === `twitter`) {
-      return `Twitter`;
-    }
-
-    return null;
-  };
+const ContactChip = ({
+  heading,
+  subheading,
+  webUrl,
+  facebookUrl,
+  twitterUrl,
+}) => {
+  const links = [
+    {
+      url: webUrl,
+      iconType: `web`,
+      label: `WWW`,
+    },
+    {
+      url: facebookUrl,
+      iconType: `facebook`,
+      label: `Facebook`,
+    },
+    {
+      url: twitterUrl,
+      iconType: `twitter`,
+      label: `Twitter`,
+    },
+  ];
 
   return (
     <article className="ContactChip">
@@ -27,18 +35,20 @@ const ContactChip = ({ heading, subheading, links }) => {
         <div>{subheading}</div>
       </div>
       <div className="ContactChip__actions">
-        {links.map((link) => {
-          return (
-            <a
-              key={link.id}
-              href={link.url}
-              rel="noopener"
-              className={`ContactChip__actions-${link.iconType}`}
-              target="_blank"
-            >
-              {getLabelByType(link.iconType)}
-            </a>
-          );
+        {links.map((link, index) => {
+          if (link.url) {
+            return (
+              <a
+                key={index}
+                href={link.url}
+                rel="noopener"
+                className={`ContactChip__actions-${link.iconType}`}
+                target="_blank"
+              >
+                {link.label}
+              </a>
+            );
+          }
         })}
       </div>
     </article>

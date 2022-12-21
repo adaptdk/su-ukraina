@@ -3,13 +3,9 @@ import PropTypes from "prop-types";
 const ChipPropTypes = {
   heading: PropTypes.string.isRequired,
   subheading: PropTypes.string,
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      iconType: PropTypes.oneOf([`web`, `facebook`, `twitter`]).isRequired,
-      url: PropTypes.string.isRequired,
-    })
-  ),
+  webUrl: PropTypes.string,
+  facebookUrl: PropTypes.string,
+  twitterUrl: PropTypes.string,
 };
 
 const ChipModulePropTypes = {
@@ -18,7 +14,9 @@ const ChipModulePropTypes = {
 
 const ChipModuleDefaultProps = {
   subheading: ``,
-  links: [],
+  webUrl: ``,
+  facebookUrl: ``,
+  twitterUrl: ``,
 };
 
 export { ChipPropTypes, ChipModuleDefaultProps, ChipModulePropTypes };
