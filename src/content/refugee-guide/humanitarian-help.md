@@ -5,7 +5,7 @@ title: humanitarian-help
 slug: "/humanitarian-help"
 questions:
 - title: Литовський «Червоний Хрест»
-  answer: <p>Організація допомагає українцям гуманітарною допомогою.</p><p>При реєстрації
+  answer: '<p>Організація допомагає українцям гуманітарною допомогою.</p><p>При реєстрації
     в міграційному центрі вашого міста надається купон, який можна обміняти на набір
     першої необхідності – гігієна (шампунь, гель для душу, зубна щітка та паста, мило).
     Наповнення та бренди продукції залежить від наявності товарів на складі в тому
@@ -15,7 +15,10 @@ questions:
     <a href="https://suukraina.lt/ua/refugee-guide/migration-office/#tab-3" title="">за
     посиланням</a>) або завітавши за адресою Червоного Хреста у вашому місті. Адреси
     відділень Червоного Хреста, а також всі необхіні контакти організації <a href="https://suukraina.lt/ua/refugee-guide/contacts/#tab-0:~:text=Red%20Cross%2C%20%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%D0%B8%D1%81%D1%82%D0%B2%D0%BE%20%D0%A7%D0%B5%D1%80%D0%B2%D0%BE%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%A5%D1%80%D0%B5%D1%81%D1%82%D0%B0%20%D0%B2%20%D0%9B%D0%B8%D1%82%D0%B2%D1%96%20(%D0%B3%D1%83%D0%BC%D0%B0%D0%BD%D1%96%D1%82%D0%B0%D1%80%D0%BD%D0%B0%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%B0)%3A"
-    title="">за посиланням.</a></p>
+    title="">за посиланням.</a></p><p>Також можна звернутись за тел. <a href="+37065971598"
+    title="">+370 659 71 598</a> або ел. поштою <a href="info@redcross.lt" title="">info@redcross.lt</a></p><p>Офіційна
+    сторінка:<a href="https://redcross.lt/" title=""> www.redcross.lt</a></p><p>Сторінка
+    у Фейсбуці: <a href="https://www.facebook.com/redcross.lt" title="https://www.facebook.com/redcross.lt">https://www.facebook.com/redcross.lt</a></p>'
   content_blocks: []
   image: ''
   resources: []
