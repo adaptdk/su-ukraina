@@ -119,7 +119,7 @@ questions:
   - template: image-block
     image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
     title: Соціальні послуги
-- title: Допомога українським військовим біженцям за особистим статусом
+- title: Який вид соціальної допомоги я можу отримати?
   answer: ''
   resources: []
   contacts: []
