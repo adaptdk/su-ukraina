@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import { ChipModulePropTypes } from "./ChipModule";
 import { EventsModulePropTypes } from "./EventsModule";
-import { ResourceListModulePropTypes } from "../Faq/FaqModule";
+import { ResourceListModulePropTypes } from "./ResourceListModule";
 import { SlidingNavBlockPropTypes } from "./SlidingNavBlock/SlidingNavBlockPropTypes";
 
 const ContentfulModulePropTypes = PropTypes.oneOfType([
