@@ -43,18 +43,18 @@ questions:
   adresses: []
   content_blocks: []
 - title: Компенсація частини орендної оплати житла для українців
-  answer: '<p>Компенсація частини орендної оплати житла надається особам та сім''ям,
-    які: </p><ol><li><p>задекларували активи та отримані доходи і ці суми не перевищують
+  answer: <p>Компенсація частини орендної оплати житла надається особам та сім'ям,
+    які:</p><ol><li><p>задекларували активи та отримані доходи і ці суми не перевищують
     встановлених сум доходів і активів</p></li><li><p>не володіють житлом у Литві,
     що належить за правом власності, або наявне житло, що належить за правом власності,
     зношене</p></li><li><p>не менше одного року орендували житло в самовряуванні,
     де задекларували своє місце проживання або включені до обліку осіб, які не мають
-    місця проживання, та зареєстрували договір про оренду в Реєстрі нерухомого майна  </p><p><strong>Для
-    оформлення компенсації, будь ласка, зверніться до самоврядування Вашого місця
-    проживання.</strong></p><p>Контакти координаторів у органах місцевого самоврядування
-    в Литві <a href="https://migracija.lrv.lt/uploads/migracija/documents/files/%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B8%20%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%BE%D1%80%D1%96%D0%B2%20%D1%83%20%D1%81%D0%B0%D0%BC%D0%BE%D0%B2%D1%80%D1%8F%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D1%85%20(pat).pdf"
-    title="">за посиланням</a>.</p><p>Детальніше про види допомоги <a href="https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini/sotsialna-pidtrimka#:~:text=%D0%9A%D0%BE%D0%BC%D0%BF%D0%B5%D0%BD%D1%81%D0%B0%D1%86%D1%96%D1%8F%20%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B8%20%D0%BE%D1%80%D0%B5%D0%BD%D0%B4%D0%BD%D0%BE%D1%97%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B8%20%D0%B6%D0%B8%D1%82%D0%BB%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%86%D1%96%D0%B2"
-    title="">за посиланням.</a></p></li></ol>'
+    місця проживання, та зареєстрували договір про оренду в Реєстрі нерухомого майна</p><p>Детальніше
+    про види допомоги <a href="https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini/sotsialna-pidtrimka#:~:text=%D0%9A%D0%BE%D0%BC%D0%BF%D0%B5%D0%BD%D1%81%D0%B0%D1%86%D1%96%D1%8F%20%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B8%20%D0%BE%D1%80%D0%B5%D0%BD%D0%B4%D0%BD%D0%BE%D1%97%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B8%20%D0%B6%D0%B8%D1%82%D0%BB%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%86%D1%96%D0%B2"
+    title="">за посиланням.</a></p><p><strong>Для оформлення компенсації, будь ласка,
+    зверніться до самоврядування Вашого місця проживання.</strong></p><p>Контакти
+    координаторів у органах місцевого самоврядування в Литві <a href="https://migracija.lrv.lt/uploads/migracija/documents/files/%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B8%20%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%BE%D1%80%D1%96%D0%B2%20%D1%83%20%D1%81%D0%B0%D0%BC%D0%BE%D0%B2%D1%80%D1%8F%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D1%85%20(pat).pdf"
+    title="">за посиланням</a>.</p></li></ol>
   resources: []
   contacts: []
   adresses: []
