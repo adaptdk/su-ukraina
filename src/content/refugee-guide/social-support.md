@@ -4,6 +4,15 @@ title_override: Соціальна підтримка
 title: social-support
 slug: "/social-support"
 questions:
+- title: Який вид соціальної допомоги я можу отримати?
+  answer: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks:
+  - template: image-block
+    title: Допомога українським військовим біженцям за особистим статусом
+    image: "../uploads/623b72d4d333774c1f34800a_-1-p-1080.jpeg"
 - title: Грошова допомога українським дітям
   answer: <p>Українці, які отримали тимчасовий захист у Литві, мають право на отримання
     грошової допомоги на дітей:</p><ul><li><p>Допомога на дитину (дитячі гроші)</p></li><li><p>Додаткова
@@ -110,24 +119,6 @@ questions:
   - template: image-block
     image: "../uploads/623b6fc928f79c4ac84b997e_-p-1080.jpeg"
     title: Яка допомога належить українцям, якщо померла близька людина?
-- title: Соціальні послуги
-  answer: ''
-  resources: []
-  contacts: []
-  adresses: []
-  content_blocks:
-  - template: image-block
-    image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
-    title: Соціальні послуги
-- title: Який вид соціальної допомоги я можу отримати?
-  answer: ''
-  resources: []
-  contacts: []
-  adresses: []
-  content_blocks:
-  - template: image-block
-    title: Допомога українським військовим біженцям за особистим статусом
-    image: "../uploads/623b72d4d333774c1f34800a_-1-p-1080.jpeg"
 contacts: []
 adresses: []
 image: "../uploads/623b6eb161447c76da819572_.jpg"
@@ -138,5 +129,7 @@ resources: []
 
 ---
 Для забезпечення мінімальних потреб і засобів до існування українських біженців у Литві, органи місцевого самоврядування надають соціальну допомогу, що необхідна українцям у важкій ситуації. 
+
+Детальніше про соціальні послуги для українців в Литві [за посиланням. ](https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini/sotsialna-pidtrimka#:\~:text=I%C5%A1skleisti-,%D0%A1%D0%BE%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D1%96%20%D0%BF%D0%BE%D1%81%D0%BB%D1%83%D0%B3%D0%B8,-I%C5%A1skleisti)
 
 _Важливо:_ **Право на соціальну допомогу мають іноземці, яким надано тимчасовий захист, тобто виданий дозвіл на тимчасове проивання в Литовській Республіці у зв'язку з тимчасовим захистом** 
