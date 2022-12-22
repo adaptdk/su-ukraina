@@ -98,33 +98,6 @@ questions:
   contacts: []
   adresses: []
   content_blocks: []
-- title: Соціальні послуги
-  answer: ''
-  resources: []
-  contacts: []
-  adresses: []
-  content_blocks:
-  - template: image-block
-    image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
-    title: Соціальні послуги
-- title: Процедура встановлення інвалідності
-  answer: ''
-  resources: []
-  contacts: []
-  adresses: []
-  content_blocks:
-  - template: image-block
-    title: Встановлення інвалідності.
-    image: "../uploads/623b6f80a01bddbc26d36804_-p-1080.jpeg"
-- title: Допомога, виплати та послуги для людей із інвалідністю
-  answer: ''
-  resources: []
-  contacts: []
-  adresses: []
-  content_blocks:
-  - template: image-block
-    image: "../uploads/623b6f9ec26286581d28d6e6_-p-1080.jpeg"
-    title: Допомога, виплати та послуги для людей із інвалідністю
 - title: Яка допомога належить українцям, якщо померла близька людина?
   answer: <p>Допомогу може отримати людина, яка ховає померлого. Для цього необхідно
     звернутись до самоврядування Вашого місця проживання. Контакти координаторів у
@@ -137,6 +110,15 @@ questions:
   - template: image-block
     image: "../uploads/623b6fc928f79c4ac84b997e_-p-1080.jpeg"
     title: Яка допомога належить українцям, якщо померла близька людина?
+- title: Соціальні послуги
+  answer: ''
+  resources: []
+  contacts: []
+  adresses: []
+  content_blocks:
+  - template: image-block
+    image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
+    title: Соціальні послуги
 - title: Допомога українським військовим біженцям за особистим статусом
   answer: ''
   resources: []
