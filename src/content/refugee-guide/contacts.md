@@ -43,7 +43,7 @@ questions:
     Ordino,</strong> <strong>Мальтійський орден (гуманітарна допомога):</strong></p><p>Гаряча
     лінія <a href="tel:+37060023220">+370 600 23 220</a> (пн-пт 09:00-19:00, російською,
     англійською, литовською мовами)</p><p>Адреса: <a href="https://www.google.com/maps/place/Gedimino+pr.+56B,+Vilnius+01110/@54.6888431,25.2619019,17z/data=!3m1!4b1!4m5!3m4!1s0x46dd9409a6eeb601:0x70f519e6b9b56daf!8m2!3d54.6888431!4d25.2640906">Gedimino
-    pr. 56B, Vilnius</a></p><p>Електронна пошта: info@maltieciai.lt</p><p>Офіційна
+    pr. 56B, Vilnius</a></p><p>Електронна пошта: <a href="info@maltieciai.lt" title="">info@maltieciai.lt</a></p><p>Офіційна
     сторінка: <a href="https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY"
     title="https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY">https://maltieciai.lt/?fbclid=IwAR3r8d5MP5MIh-l5bA9Dr4Zj2uquubFkt-qKksZgnRyVxvUlgLeeArM1fcY</a></p><p>Сторінка
     у Фейсбуці: <a href="https://www.facebook.com/maltieciai/" title="https://www.facebook.com/maltieciai/">https://www.facebook.com/maltieciai/</a></p><p>Мальтійський
