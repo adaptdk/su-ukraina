@@ -1,0 +1,57 @@
+{
+  "actions": {
+    "copyLink": "Copy link",
+    "close": "Close",
+    "send": "Send",
+    "donate": "Donate",
+    "officialPage": "Official Page",
+    "applyForm": "Submit form"
+  },
+  "labels": {
+    "navigation": "<need to translate>",
+    "name": "Name",
+    "phone": "Phone number",
+    "email": "E-mail",
+    "message": "Message",
+    "source": "Source",
+    "links": "Links"
+  },
+  "organisation": {
+    "about": "<need to translate>",
+    "purpose": "<need to translate>",
+    "otherInfo": "<need to translate>"
+  },
+  "events": {
+    "eventLink": "<need to translate>",
+    "upcomingEvents": "<need to translate>",
+    "previousEvents": "<need to translate>",
+    "noEvents": "<need to translate>"
+  },
+  "placeholders": {
+    "name": "Name Surname",
+    "phone": "+37061111111",
+    "email": "name@email.com",
+    "message": "Message"
+  },
+  "partners": {
+    "heading": "<need to translate>",
+    "informationHeading": "<need to translate>",
+    "contentHeading": "<need to translate>",
+    "technologyHeading": "<need to translate>",
+    "institutionHeading": "<need to translate>"
+  },
+  "generic": {
+    "privacyPolicy": "Privacy Policy"
+  },
+  "footer": {
+    "pageCoordinate": "Page coordinated by"
+  },
+  "contactForm": {
+    "title": "Have questions or suggestions?",
+    "text": "<need to translate>",
+    "subtext": "<need to translate>",
+    "tacAgree": "I read and agree with the",
+    "success": "Your message was successfully sent. Thank you!",
+    "error": "<need to translate>"
+  }
+}

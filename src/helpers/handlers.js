@@ -8,18 +8,15 @@ const isUkrainianPage = () => {
 const getLocaleFromPath = () => {
   const { pathname } = useLocation();
 
-  if (pathname.includes(`/ua/`)) {
+  if (pathname.includes(`/ua`)) {
     return `uk-UA`;
   }
 
-  if (pathname.includes(`/en/`)) {
+  if (pathname.includes(`/en`)) {
     return `en`;
   }
 
   return `lt-LT`;
 };
 
-module.exports = {
-  isUkrainianPage,
-  getLocaleFromPath,
-};
+export { isUkrainianPage, getLocaleFromPath };
