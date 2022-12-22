@@ -24,6 +24,15 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const promises = [];
 
+  // Process Home Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.homePage.query(graphql),
+      createFunction: PAGE_UTILS.homePage.createHomePages,
+      createPage,
+    })
+  );
+
   // Process Help Pages
   promises.push(
     processPage({

@@ -33,6 +33,13 @@
     "email": "email@email.com",
     "message": "Введіть свою відповідь тут"
   },
+  "partners": {
+    "heading": "<need to translate>",
+    "informationHeading": "<need to translate>",
+    "contentHeading": "<need to translate>",
+    "technologyHeading": "<need to translate>",
+    "institutionHeading": "<need to translate>"
+  },
   "generic": {
     "privacyPolicy": "Політика конфіденційності"
   },

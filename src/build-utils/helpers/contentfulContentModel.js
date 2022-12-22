@@ -127,9 +127,41 @@ const resourceListModule = `
   }
 `;
 
+const partner = `
+  id
+  label
+  url
+  logo {
+    gatsbyImageData(height: 80, placeholder: BLURRED, formats: WEBP)
+  }
+`;
+
+const homepagePartners = `
+  informationPartners {
+    ... on ContentfulPartner {
+      ${partner}
+    }
+  }
+  contentPartners {
+    ... on ContentfulPartner {
+      ${partner}
+    }
+  }
+  technologyPartners {
+    ... on ContentfulPartner {
+      ${partner}
+    }
+  }
+  institutionPartners {
+    ... on ContentfulPartner {
+      ${partner}
+    }
+  }
+`;
+
 // the contentful_id is the same as the entry id in URL
 const globalNavigation = `
-  allContentfulNavigation(filter: {contentful_id: {eq: "1yKThqiNevVEU4BCn7zZ9y"}}) {
+  allContentfulNavigation(filter: {contentful_id: { eq: "1yKThqiNevVEU4BCn7zZ9y" }}) {
     edges {
       node {
         node_locale
@@ -161,5 +193,7 @@ module.exports = {
   faqNavigation,
   faqItem,
   resourceListModule,
+  partner,
+  homepagePartners,
   globalNavigation,
 };

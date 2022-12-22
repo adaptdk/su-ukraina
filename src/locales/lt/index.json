@@ -33,6 +33,13 @@
     "email": "vardas@post.lt",
     "message": "Žinutė"
   },
+  "partners": {
+    "heading": "Puslapio partneriai",
+    "informationHeading": "Informaciniai",
+    "contentHeading": "Turinio",
+    "technologyHeading": "Technologiniai",
+    "institutionHeading": "Instituciniai"
+  },
   "generic": {
     "privacyPolicy": "Privatumo politika"
   },

@@ -40,17 +40,18 @@ const Layout = ({
       <Meta name="description" content={metaDescription || ``} />
       <Header navigation={navigation} noSticky={noStickyHeader} />
       {!isUa && (
+        // @todo: connect to contentful
         <PromoLine
           title="Вся важлива інформація для громадян України"
           subtitle="Svarbiausia informacija Ukrainos piliečiams"
-          titleLink={NAVIGATION_ITEM_HELP.pathname}
+          titleLink={NAVIGATION_ITEM_HELP.slug}
         >
           {NAVIGATION_MAIN_MENU_ALT.map((item) => {
             return (
               <Button
-                key={item.pathname}
+                key={item.slug}
                 endIcon={`arrow-blue`}
-                to={item.pathname}
+                to={item.slug}
                 color={`secondary`}
                 target="_blank"
                 rel="noopener"

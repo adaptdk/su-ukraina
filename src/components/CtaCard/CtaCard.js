@@ -5,6 +5,10 @@ import "./CtaCard.css";
 import Link from "../Link";
 
 const CtaCard = ({ children, title, iconHandle, link, ...props }) => {
+  if (!title || !link) {
+    return null;
+  }
+
   return (
     <div className="CtaCard">
       <Link to={link} title={title} {...props}>

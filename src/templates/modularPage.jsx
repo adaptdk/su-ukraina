@@ -22,7 +22,6 @@ import {
 
 const ModularPage = ({ path, pageContext }) => {
   const {
-    isHomepage,
     navigation,
     node_locale,
     metaTitle,
@@ -67,13 +66,11 @@ const ModularPage = ({ path, pageContext }) => {
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
-      {!isHomepage && (
-        <Constraint>
-          <NavigationGroup crumbs={crumbs} />
-          {pageHeading && <h1>{pageHeading}</h1>}
-          {pageDescription?.raw && formatRichText(pageDescription.raw)}
-        </Constraint>
-      )}
+      <Constraint>
+        <NavigationGroup crumbs={crumbs} />
+        {pageHeading && <h1>{pageHeading}</h1>}
+        {pageDescription?.raw && formatRichText(pageDescription.raw)}
+      </Constraint>
 
       <Constraint
         className={classNames({
@@ -106,7 +103,6 @@ ModularPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
-    isHomepage: PropTypes.bool.isRequired,
     navigation: navigationPropTypes.isRequired,
     node_locale: localePropType.isRequired,
     id: PropTypes.string.isRequired,

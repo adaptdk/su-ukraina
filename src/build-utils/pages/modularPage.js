@@ -75,9 +75,6 @@ const createModularPages = (result, createPage) => {
         modularPage?.slug
       );
 
-      const isHomepage =
-        pagePath === `/` || pagePath === `ua` || pagePath === `en`;
-
       createPage({
         path: pagePath,
         component: path.resolve(`./src/templates/modularPage.jsx`),
@@ -85,7 +82,6 @@ const createModularPages = (result, createPage) => {
           ...modularPage,
           navigation,
           slidingNavData,
-          isHomepage,
         },
       });
     } else {

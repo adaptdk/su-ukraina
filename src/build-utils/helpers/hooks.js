@@ -37,9 +37,6 @@ const getSlidingNavData = (modules) => {
  */
 const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   if (locale === `lt-LT`) {
-    if (slug === `homepage`) {
-      return `/`;
-    }
     if (prefix?.lt) {
       return `${prefix.lt}/${slug}`;
     }
@@ -47,9 +44,6 @@ const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   }
 
   if (locale === `uk-UA`) {
-    if (slug === `homepage`) {
-      return `ua`;
-    }
     if (prefix?.ua) {
       return `ua/${prefix.ua}/${slug}`;
     }
@@ -57,13 +51,27 @@ const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   }
 
   if (locale === `en`) {
-    if (slug === `homepage`) {
-      return `en`;
-    }
     if (prefix?.en) {
       return `en/${prefix.en}/${slug}`;
     }
     return `en/${slug}`;
+  }
+
+  // This will break the build and we want that
+  return null;
+};
+
+const getHomePagePath = (locale) => {
+  if (locale === `lt-LT`) {
+    return `/`;
+  }
+
+  if (locale === `uk-UA`) {
+    return `ua`;
+  }
+
+  if (locale === `en`) {
+    return `en`;
   }
 
   // This will break the build and we want that
@@ -121,6 +129,7 @@ const getOrganisationPagePath = (name, locale, type = `Donation`) => {
 module.exports = {
   getSlidingNavData,
   getPathByLocale,
+  getHomePagePath,
   getFaqNavDataByLocale,
   getOrganisationPagePath,
 };
