@@ -1,7 +1,13 @@
 // not querying heroTitle yet because none of the heros have a title
 const hero = `
   heroImage {
-    gatsbyImageData(height: 148, placeholder: BLURRED, formats: WEBP)
+    gatsbyImageData(
+      width: 1440
+      height: 148
+      placeholder: BLURRED
+      formats: WEBP
+      layout: FULL_WIDTH
+    )
   }
 `;
 
