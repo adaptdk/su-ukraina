@@ -103,7 +103,7 @@ questions:
   - template: image-block
     image: "../uploads/623b6f5cc72c16925daac82f_.jpeg"
     title: Соціальні послуги
-- title: Встановлення інвалідності. Що важливо знати українцям?
+- title: Процедура встановлення інвалідності
   answer: ''
   resources: []
   contacts: []
