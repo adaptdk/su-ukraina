@@ -121,8 +121,9 @@ const resourceListModule = `
   }
 `;
 
+// the contentful_id is the same as the entry id in URL
 const globalNavigation = `
-  allContentfulNavigation {
+  allContentfulNavigation(filter: {contentful_id: {eq: "1yKThqiNevVEU4BCn7zZ9y"}}) {
     edges {
       node {
         node_locale
