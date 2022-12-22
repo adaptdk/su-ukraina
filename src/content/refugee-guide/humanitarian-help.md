@@ -4,14 +4,20 @@ title_override: Гуманітарна допомога
 title: humanitarian-help
 slug: "/humanitarian-help"
 questions:
-- title: Save the Children - Врятуйте дітей
-  answer: '<p>Oрганізація „Врятуємо дітей” надає гуманітарну допомогу дітям та вагітним
-    з України.</p><p>Загальний номер „Врятуйте дітей“ y Литві <a href="+37052610815"
-    title="">+37052610815</a></p><p>Сайт організації: <a href="https://gelbekitvaikus.lt/"
-    title="https://gelbekitvaikus.lt/">https://gelbekitvaikus.lt/</a></p><p>Група
-    в Фейсбуці: <a href="https://www.facebook.com/savethechildrenlithuania" title="https://www.facebook.com/savethechildrenlithuania">https://www.facebook.com/savethechildrenlithuania</a></p><p>Контакти
-    представників організації в різних містах Литви <a href="https://gelbekitvaikus.lt/dopomoga/"
-    title="">за посиланням</a>.</p>'
+- title: Maisto bankas - Продовольчий банк
+  answer: <p>Організація надає біженцям з України, яким не вистачає їжі, картки “Maisto
+    bankas” вартістю 115 євро. З їх допомогою ви зможете придбати харчові продукти
+    в одній із торгових мереж Литви.</p><p class="p1"><strong>Якщо Вам потрібна картка
+    “Maisto bankas”,</strong> <strong>заповніть форму</strong> <a href="https://www.maistobankas.lt/ukraina/"
+    title="">за посиланням</a>.</p><p>Картки будуть видаватися особам, які приїхали
+    до Литви та <strong>зареєструвалися</strong> не раніше 24 лютого 2022 року.</p><p
+    class="p1">Щойно ваша картка буде готова, волонтери організації зв’яжуться з вами
+    по телефону, SMS або електронною поштою, щоб повідомити, де і коли її можна отримати.</p><p
+    class="p1">Для цього обов’язково мати паспорт (оригінал) та картку, видану Департаментом
+    реєстраційної міграції в Литві, яка містить автентичний ILTU код, призначений
+    вам, і дату вашої реєстрації.</p><p class="p1">Особа, якій видається картка, повинна
+    бути присутня під час її отримання. Посередникам картки видавати не будуть<strong>.
+    Одна особа може зареєструватися лише раз. Це одноразова картка.</strong></p>
   content_blocks: []
   resources: []
   contacts: []
@@ -33,6 +39,18 @@ questions:
     у Фейсбуці: <a href="https://www.facebook.com/redcross.lt" title="https://www.facebook.com/redcross.lt">https://www.facebook.com/redcross.lt</a></p>'
   content_blocks: []
   image: ''
+  resources: []
+  contacts: []
+  adresses: []
+- title: Save the Children - Врятуйте дітей
+  answer: '<p>Oрганізація „Врятуємо дітей” надає гуманітарну допомогу дітям та вагітним
+    з України.</p><p>Загальний номер „Врятуйте дітей“ y Литві <a href="+37052610815"
+    title="">+37052610815</a></p><p>Сайт організації: <a href="https://gelbekitvaikus.lt/"
+    title="https://gelbekitvaikus.lt/">https://gelbekitvaikus.lt/</a></p><p>Група
+    в Фейсбуці: <a href="https://www.facebook.com/savethechildrenlithuania" title="https://www.facebook.com/savethechildrenlithuania">https://www.facebook.com/savethechildrenlithuania</a></p><p>Контакти
+    представників організації в різних містах Литви <a href="https://gelbekitvaikus.lt/dopomoga/"
+    title="">за посиланням</a>.</p>'
+  content_blocks: []
   resources: []
   contacts: []
   adresses: []
