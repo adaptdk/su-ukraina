@@ -15,7 +15,6 @@ import Logo from "../../images/logos/su-ukraina--original.svg";
 // Constants.
 import {
   NAVIGATION_MAIN_MENU,
-  NAVIGATION_MAIN_MENU_ALT,
   NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP,
 } from "../../constants/Navigation";
 
@@ -59,9 +58,6 @@ const Header = ({ noSticky, navigation, locale }) => {
   };
 
   const mainMenu = () => {
-    if (altHeader) {
-      return NAVIGATION_MAIN_MENU_ALT;
-    }
     return navigation?.items || NAVIGATION_MAIN_MENU;
   };
 
