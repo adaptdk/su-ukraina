@@ -16,12 +16,12 @@ import {
   NAVIGATION_MAIN_MENU_ALT,
 } from "../../constants/Navigation";
 
-// Helpers
-import { isUkrainianPage } from "../../helpers/handlers";
-
 import "./Layout.css";
 import PageTitle from "../PageTitle";
-import { navigationPropTypes } from "../../helpers/genericPropTypes";
+import {
+  localePropType,
+  navigationPropTypes,
+} from "../../helpers/genericPropTypes";
 
 const Layout = ({
   children,
@@ -31,15 +31,18 @@ const Layout = ({
   metaDescription,
   includeContactForm,
   navigation,
+  locale,
 }) => {
-  const isUa = isUkrainianPage();
-
   return (
     <div className="Layout">
       <PageTitle title={metaTitle || ``} />
       <Meta name="description" content={metaDescription || ``} />
-      <Header navigation={navigation} noSticky={noStickyHeader} />
-      {!isUa && (
+      <Header
+        navigation={navigation}
+        noSticky={noStickyHeader}
+        locale={locale}
+      />
+      {locale === `lt-LT` && (
         // @todo: connect to contentful
         <PromoLine
           title="Вся важлива інформація для громадян України"
@@ -73,7 +76,7 @@ const Layout = ({
         </Section>
       )}
 
-      <Footer />
+      <Footer locale={locale} />
     </div>
   );
 };
@@ -86,6 +89,7 @@ Layout.propTypes = {
   noStickyHeader: PropTypes.bool,
   includeContactForm: PropTypes.bool,
   navigation: navigationPropTypes.isRequired,
+  locale: localePropType.isRequired,
 };
 
 Layout.defaultProps = {

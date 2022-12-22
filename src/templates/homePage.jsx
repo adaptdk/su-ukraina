@@ -27,6 +27,7 @@ import { filterPartners } from "../utils/filters";
 
 const HomePage = ({ path, pageContext }) => {
   const {
+    node_locale,
     navigation,
     metaTitle,
     metaDescription,
@@ -67,6 +68,7 @@ const HomePage = ({ path, pageContext }) => {
       metaTitle={metaTitle}
       metaDescription={metaDescription}
       navigation={navigation}
+      locale={node_locale}
     >
       {heroImage && (
         <Section className="HeroSection">

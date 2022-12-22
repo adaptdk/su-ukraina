@@ -19,17 +19,15 @@ import {
   TEXT_WANT_TO_VOLUNTEER,
 } from "../../constants/Footer";
 
-// Helpers
-import { isUkrainianPage } from "../../helpers/handlers";
-
 // SVGs.
 import SuUkrainaWhite from "../../images/logos/su-ukraina--secondary.svg";
 import Adapt from "../../images/logos/adapt.svg";
 import LaisvesTv from "../../images/logos/laisves-tv.svg";
 import { getTranslatedText } from "../../utils/getTranslatedText";
+import { localePropType } from "../../helpers/genericPropTypes";
 
-const Footer = () => {
-  const altFooter = isUkrainianPage();
+const Footer = ({ locale }) => {
+  const altFooter = locale !== `lt-LT`;
 
   return (
     <footer className="Footer">
@@ -122,6 +120,7 @@ const Footer = () => {
 
 Footer.propTypes = {
   altFooter: PropTypes.bool,
+  locale: localePropType.isRequired,
 };
 
 export default Footer;

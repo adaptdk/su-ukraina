@@ -19,18 +19,17 @@ import {
   NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP,
 } from "../../constants/Navigation";
 
-// Helpers
-import { isUkrainianPage } from "../../helpers/handlers";
-
 // Style.
 import "./Header.css";
-import { navigationPropTypes } from "../../helpers/genericPropTypes";
+import {
+  localePropType,
+  navigationPropTypes,
+} from "../../helpers/genericPropTypes";
 
-const Header = ({ noSticky, navigation }) => {
-  console.log({ navigation });
+const Header = ({ noSticky, navigation, locale }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
   const { pathname } = useLocation();
-  const altHeader = isUkrainianPage();
+  const altHeader = locale !== `lt-LT`;
 
   const headerRef = React.useRef(null);
 
@@ -155,6 +154,7 @@ const Header = ({ noSticky, navigation }) => {
 Header.propTypes = {
   noSticky: PropTypes.bool,
   navigation: navigationPropTypes.isRequired,
+  locale: localePropType.isRequired,
 };
 
 export default Header;
