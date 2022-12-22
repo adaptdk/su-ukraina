@@ -4,6 +4,18 @@ title_override: Гуманітарна допомога
 title: humanitarian-help
 slug: "/humanitarian-help"
 questions:
+- title: Save the Children - Врятуйте дітей
+  answer: '<p>Oрганізація „Врятуємо дітей” надає гуманітарну допомогу дітям та вагітним
+    з України.</p><p>Загальний номер „Врятуйте дітей“ y Литві <a href="+37052610815"
+    title="">+37052610815</a></p><p>Сайт організації: <a href="https://gelbekitvaikus.lt/"
+    title="https://gelbekitvaikus.lt/">https://gelbekitvaikus.lt/</a></p><p>Група
+    в Фейсбуці: <a href="https://www.facebook.com/savethechildrenlithuania" title="https://www.facebook.com/savethechildrenlithuania">https://www.facebook.com/savethechildrenlithuania</a></p><p>Контакти
+    представників організації в різних містах Литви <a href="https://gelbekitvaikus.lt/dopomoga/"
+    title="">за посиланням</a>.</p>'
+  content_blocks: []
+  resources: []
+  contacts: []
+  adresses: []
 - title: Литовський «Червоний Хрест»
   answer: '<p>Організація допомагає українцям гуманітарною допомогою.</p><p>При реєстрації
     в міграційному центрі вашого міста надається купон, який можна обміняти на набір
