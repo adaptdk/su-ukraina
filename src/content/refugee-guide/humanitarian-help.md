@@ -4,20 +4,6 @@ title_override: Гуманітарна допомога
 title: humanitarian-help
 slug: "/humanitarian-help"
 questions:
-- title: MIS love asociacija
-  answer: '<p>Асоціація MIS love надає матеріальну підтримку українським родинам.
-    Організація надає одяг, взуття, посуд, постільну білизну, засоби гігієни, засоби
-    догляду за дитиною, візочки, кроватки, пеленальні столики, стільчики для годування,
-    іграшки, нічні горщики, ванночки, підгузки 1-4 розміру, дитячі суміщі та пюре,
-    тощо. </p><p>Для отримання допомоги звертайтесь:</p><p><a href="mailto:love@motherhood.is">love@motherhood.is</a>
-    </p><p>Група у Facebook:</p><p><a href="https://www.facebook.com/misloveasoc/"
-    title="">https://www.facebook.com/misloveasoc/</a></p><p>Сайт організації: </p><p><a
-    href="https://www.motherhoodissexy.com/misloveparama?fbclid=IwAR2Qj4OdSZwZsU4bncRl23tSpwBM2Whez2M2wCX8n3aAv_xWcXAad-Q62_Q"
-    title="https://www.motherhoodissexy.com/misloveparama?fbclid=IwAR2Qj4OdSZwZsU4bncRl23tSpwBM2Whez2M2wCX8n3aAv_xWcXAad-Q62_Q">https://www.motherhoodissexy.com/misloveparama?fbclid=IwAR2Qj4OdSZwZsU4bncRl23tSpwBM2Whez2M2wCX8n3aAv_xWcXAad-Q62_Q</a></p><p></p>'
-  content_blocks: []
-  resources: []
-  contacts: []
-  adresses: []
 - title: Литовський «Червоний Хрест»
   answer: <p><a href="https://redcross.lt" title="https://redcross.lt">https://redcross.lt</a></p><p>Товариство
     Червоного Хреста, одна з найстарших гуманітарних місій у світі, не могла залишатися
@@ -32,6 +18,20 @@ questions:
     title="">за посиланням. </a></p>
   content_blocks: []
   image: ''
+  resources: []
+  contacts: []
+  adresses: []
+- title: MIS love asociacija
+  answer: '<p>Асоціація MIS love надає матеріальну підтримку українським родинам.
+    Організація надає одяг, взуття, посуд, постільну білизну, засоби гігієни, засоби
+    догляду за дитиною, візочки, кроватки, пеленальні столики, стільчики для годування,
+    іграшки, нічні горщики, ванночки, підгузки 1-4 розміру, дитячі суміщі та пюре,
+    тощо. </p><p>Для отримання допомоги звертайтесь:</p><p><a href="mailto:love@motherhood.is">love@motherhood.is</a>
+    </p><p>Група у Facebook:</p><p><a href="https://www.facebook.com/misloveasoc/"
+    title="">https://www.facebook.com/misloveasoc/</a></p><p>Сайт організації: </p><p><a
+    href="https://www.motherhoodissexy.com/misloveparama?fbclid=IwAR2Qj4OdSZwZsU4bncRl23tSpwBM2Whez2M2wCX8n3aAv_xWcXAad-Q62_Q"
+    title="https://www.motherhoodissexy.com/misloveparama?fbclid=IwAR2Qj4OdSZwZsU4bncRl23tSpwBM2Whez2M2wCX8n3aAv_xWcXAad-Q62_Q">https://www.motherhoodissexy.com/misloveparama?fbclid=IwAR2Qj4OdSZwZsU4bncRl23tSpwBM2Whez2M2wCX8n3aAv_xWcXAad-Q62_Q</a></p><p></p>'
+  content_blocks: []
   resources: []
   contacts: []
   adresses: []
