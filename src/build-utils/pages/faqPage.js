@@ -1,7 +1,11 @@
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
-const { getFaqNavDataByLocale, getPathByLocale } = require(`../helpers/hooks`);
+const {
+  getFaqNavDataByLocale,
+  getPathByLocale,
+  getAllPagesLocalisedSlugs,
+} = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
 
 const query = (graphql) => {
@@ -51,6 +55,8 @@ const createFaqPages = (result, createPage) => {
     (edge) => edge.node
   );
 
+  const allNodeSlugs = getAllPagesLocalisedSlugs(faqPages);
+
   // gather all the LT pages data
   const ltNavData = getFaqNavDataByLocale(faqPages, `lt-LT`);
 
@@ -59,6 +65,8 @@ const createFaqPages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === faqPage.node_locale)
         .shift();
+
+      const currentNodeSlugs = allNodeSlugs[faqPage.contentful_id];
 
       const pagePath = getPathByLocale(faqPage?.node_locale, faqPage?.slug, {
         lt: `informacija-lietuviams`,
@@ -71,6 +79,7 @@ const createFaqPages = (result, createPage) => {
         component: path.resolve(`./src/templates/faqPage.jsx`),
         context: {
           ...faqPage,
+          currentNodeSlugs,
           navData: faqPage.node_locale === `lt-LT` ? ltNavData : null,
           navigation,
         },

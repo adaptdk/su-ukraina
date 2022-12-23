@@ -1,7 +1,10 @@
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
-const { getPathByLocale } = require(`../helpers/hooks`);
+const {
+  getPathByLocale,
+  getAllPagesLocalisedSlugs,
+} = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
 
 const query = (graphql) => {
@@ -42,11 +45,15 @@ const createHelpPages = (result, createPage) => {
     (edge) => edge.node
   );
 
+  const allNodeSlugs = getAllPagesLocalisedSlugs(helpPages);
+
   helpPages.forEach((helpPage) => {
     if (helpPage?.slug && helpPage?.node_locale) {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === helpPage.node_locale)
         .shift();
+
+      const currentNodeSlugs = allNodeSlugs[helpPage.contentful_id];
 
       const pagePath = getPathByLocale(helpPage?.node_locale, helpPage?.slug, {
         lt: `kaip-galiu-padeti`,
@@ -58,6 +65,7 @@ const createHelpPages = (result, createPage) => {
         component: path.resolve(`./src/templates/helpPage.jsx`),
         context: {
           ...helpPage,
+          currentNodeSlugs,
           navigation,
         },
       });

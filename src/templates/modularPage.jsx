@@ -18,10 +18,12 @@ import {
   gatsbyImagePropType,
   localePropType,
   navigationPropTypes,
+  nodeSlugsPropTypes,
 } from "../helpers/genericPropTypes";
 
 const ModularPage = ({ path, pageContext }) => {
   const {
+    currentNodeSlugs,
     navigation,
     node_locale,
     metaTitle,
@@ -63,6 +65,8 @@ const ModularPage = ({ path, pageContext }) => {
       metaTitle={metaTitle}
       metaDescription={metaDescription}
       navigation={navigation}
+      currentNodeSlugs={currentNodeSlugs}
+      locale={node_locale}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -103,6 +107,7 @@ ModularPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
+    currentNodeSlugs: nodeSlugsPropTypes.isRequired,
     navigation: navigationPropTypes.isRequired,
     node_locale: localePropType.isRequired,
     id: PropTypes.string.isRequired,

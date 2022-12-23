@@ -8,11 +8,15 @@ import { Faq, FaqNavDataPropTypes } from "../components/Faq";
 import { FaqModulePropTypes } from "../components/Faq/FaqModule/FaqModulePropTypes";
 import {
   gatsbyImagePropType,
+  localePropType,
   navigationPropTypes,
+  nodeSlugsPropTypes,
 } from "../helpers/genericPropTypes";
 
 const FaqPage = ({ path, pageContext }) => {
   const {
+    currentNodeSlugs,
+    node_locale,
     navigation,
     metaTitle,
     metaDescription,
@@ -29,6 +33,8 @@ const FaqPage = ({ path, pageContext }) => {
       metaTitle={metaTitle}
       metaDescription={metaDescription}
       navigation={navigation}
+      locale={node_locale}
+      currentNodeSlugs={currentNodeSlugs}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -54,7 +60,9 @@ FaqPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
+    currentNodeSlugs: nodeSlugsPropTypes.isRequired,
     navigation: navigationPropTypes.isRequired,
+    node_locale: localePropType.isRequired,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     metaTitle: PropTypes.string.isRequired,

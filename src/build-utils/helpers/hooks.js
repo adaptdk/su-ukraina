@@ -126,10 +126,33 @@ const getOrganisationPagePath = (name, locale, type = `Donation`) => {
   });
 };
 
+/**
+ * Get all of the pages' localised slugs. Used for the LanguageSwitch.
+ *
+ * @param {Array} pages All pages queried from Contentful.
+ * @returns {Object} Object where each item's key is the `contentful_id` and the value is an object of slugs by locale.
+ */
+const getAllPagesLocalisedSlugs = (pages) => {
+  return pages.reduce((acc, curr) => {
+    const id = curr.contentful_id;
+    const locale = curr.node_locale;
+    const slug = curr.slug;
+
+    if (locale === `uk-UA`) {
+      return { ...acc, [id]: { ...acc[id], [`uk-UA`]: slug } };
+    }
+    if (locale === `en`) {
+      return { ...acc, [id]: { ...acc[id], en: slug } };
+    }
+    return { ...acc, [id]: { ...acc[id], [`lt-LT`]: slug } };
+  }, {});
+};
+
 module.exports = {
   getSlidingNavData,
   getPathByLocale,
   getHomePagePath,
   getFaqNavDataByLocale,
   getOrganisationPagePath,
+  getAllPagesLocalisedSlugs,
 };

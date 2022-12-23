@@ -23,9 +23,11 @@ import "./Header.css";
 import {
   localePropType,
   navigationPropTypes,
+  nodeSlugsDefaultProps,
+  nodeSlugsPropTypes,
 } from "../../helpers/genericPropTypes";
 
-const Header = ({ noSticky, navigation, locale }) => {
+const Header = ({ noSticky, navigation, locale, currentNodeSlugs }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
   const { pathname } = useLocation();
   const altHeader = locale !== `lt-LT`;
@@ -141,7 +143,7 @@ const Header = ({ noSticky, navigation, locale }) => {
             )}
           </ul>
         </nav>
-        <LanguageSwitch />
+        <LanguageSwitch currentNodeSlugs={currentNodeSlugs} />
       </Constraint>
     </div>
   );
@@ -151,6 +153,11 @@ Header.propTypes = {
   noSticky: PropTypes.bool,
   navigation: navigationPropTypes.isRequired,
   locale: localePropType.isRequired,
+  currentNodeSlugs: nodeSlugsPropTypes,
+};
+
+Header.defaultProps = {
+  currentNodeSlugs: nodeSlugsDefaultProps,
 };
 
 export default Header;

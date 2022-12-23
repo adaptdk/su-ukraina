@@ -1,36 +1,41 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { useLocation } from "@gatsbyjs/reach-router";
 import classNames from "classnames";
 
-import { PATHNAMES } from "../../constants/LanguageSwitch";
-import { isUkrainianPage } from "../../helpers/handlers";
+import { getLocaleFromPath } from "../../helpers/handlers";
 
 import "./LanguageSwitch.css";
+import {
+  nodeSlugsDefaultProps,
+  nodeSlugsPropTypes,
+} from "../../helpers/genericPropTypes";
 
-const LanguageSwitch = () => {
-  const { pathname } = useLocation();
-  const isUa = isUkrainianPage();
+const LanguageSwitch = ({ currentNodeSlugs }) => {
+  const locale = getLocaleFromPath();
+  const isUa = locale === `uk-UA`;
+  const isEn = locale === `en`;
+  const isLt = locale === `lt-LT`;
 
   // @TODO think of a better name
-  const findPageLanguageSibling = () => {
-    const splitPathname = pathname.split(`/`);
-    if (isUa) {
-      const found = PATHNAMES.find((object) => {
-        return object.ua === splitPathname[2];
-      });
-      if (found) {
-        return `/${found.lt}/`;
-      }
-      return `/`;
-    } else {
-      const found = PATHNAMES.find((object) => {
-        return object.lt === splitPathname[1];
-      });
-      if (found) {
-        return `/ua/${found.ua}/`;
-      }
-      return `/ua/refugee-guide`;
+  const findLocalisedPath = (goToLang) => {
+    switch (goToLang) {
+      case `uk-UA`:
+        if (currentNodeSlugs?.[`uk-UA`]) {
+          return `/ua/${currentNodeSlugs[`uk-UA`]}`;
+        }
+        return `/ua`;
+      case `en`:
+        if (currentNodeSlugs?.[`en`]) {
+          return `/en/${currentNodeSlugs[`en`]}`;
+        }
+        return `/en`;
+      case `lt-LT`:
+        if (currentNodeSlugs?.[`lt-LT`]) {
+          return `/${currentNodeSlugs[`lt-LT`]}`;
+        }
+        return `/`;
+      default:
+        return `/`;
     }
   };
 
@@ -45,17 +50,20 @@ const LanguageSwitch = () => {
           <div
             className={classNames(`LanguageSwitch__language-icon`, {
               "LanguageSwitch__language-icon--ua-flag-alt": isUa,
-              "LanguageSwitch__language-icon--lt-flag": !isUa,
+              "LanguageSwitch__language-icon--lt-flag": isLt,
+              "LanguageSwitch__language-icon--en-flag": isEn,
             })}
           ></div>
           <div className="LanguageSwitch__language-title">
-            {isUa ? `UA` : `LT`}
+            {isUa && `UA`}
+            {isLt && `LT`}
+            {isEn && `EN`}
           </div>
         </div>
         <ul className="LanguageSwitch__list">
           <li className="LanguageSwitch__list-item">
             <Link
-              to={findPageLanguageSibling()}
+              to={findLocalisedPath(`uk-UA`)}
               className={classNames(`LanguageSwitch__language`, {
                 "LanguageSwitch__language--active-list-item": isUa,
               })}
@@ -66,19 +74,38 @@ const LanguageSwitch = () => {
           </li>
           <li className="LanguageSwitch__list-item">
             <Link
-              to={findPageLanguageSibling()}
+              to={findLocalisedPath(`lt-LT`)}
               className={classNames(`LanguageSwitch__language`, {
-                "LanguageSwitch__language--active-list-item": !isUa,
+                "LanguageSwitch__language--active-list-item": isLt,
               })}
             >
               <div className="LanguageSwitch__language-icon LanguageSwitch__language-icon--lt-flag" />
               <div className="LanguageSwitch__language-title">LT</div>
             </Link>
           </li>
+          <li className="LanguageSwitch__list-item">
+            <Link
+              to={findLocalisedPath(`en`)}
+              className={classNames(`LanguageSwitch__language`, {
+                "LanguageSwitch__language--active-list-item": isEn,
+              })}
+            >
+              <div className="LanguageSwitch__language-icon LanguageSwitch__language-icon--en-flag" />
+              <div className="LanguageSwitch__language-title">EN</div>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
   );
+};
+
+LanguageSwitch.propTypes = {
+  currentNodeSlugs: nodeSlugsPropTypes,
+};
+
+LanguageSwitch.defaultProps = {
+  currentNodeSlugs: nodeSlugsDefaultProps,
 };
 
 export default LanguageSwitch;

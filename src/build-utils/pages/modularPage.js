@@ -1,7 +1,11 @@
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
-const { getSlidingNavData, getPathByLocale } = require(`../helpers/hooks`);
+const {
+  getSlidingNavData,
+  getPathByLocale,
+  getAllPagesLocalisedSlugs,
+} = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
 
 const query = (graphql) => {
@@ -57,11 +61,15 @@ const createModularPages = (result, createPage) => {
     (edge) => edge.node
   );
 
+  const allNodeSlugs = getAllPagesLocalisedSlugs(modularPages);
+
   modularPages.forEach((modularPage) => {
     if (modularPage?.slug && modularPage?.node_locale) {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === modularPage.node_locale)
         .shift();
+
+      const currentNodeSlugs = allNodeSlugs[modularPage.contentful_id];
 
       const slidingNavData = getSlidingNavData(modularPage.modules);
       const pagePath = getPathByLocale(
@@ -74,6 +82,7 @@ const createModularPages = (result, createPage) => {
         component: path.resolve(`./src/templates/modularPage.jsx`),
         context: {
           ...modularPage,
+          currentNodeSlugs,
           navigation,
           slidingNavData,
         },

@@ -16,11 +16,13 @@ import {
   gatsbyImagePropType,
   localePropType,
   navigationPropTypes,
+  nodeSlugsPropTypes,
 } from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
 
 const HelpPage = ({ path, pageContext }) => {
   const {
+    currentNodeSlugs,
     navigation,
     metaTitle,
     metaDescription,
@@ -61,6 +63,8 @@ const HelpPage = ({ path, pageContext }) => {
       metaTitle={metaTitle}
       metaDescription={metaDescription}
       navigation={navigation}
+      locale={node_locale}
+      currentNodeSlugs={currentNodeSlugs}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -110,6 +114,7 @@ HelpPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
+    currentNodeSlugs: nodeSlugsPropTypes.isRequired,
     navigation: navigationPropTypes.isRequired,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,

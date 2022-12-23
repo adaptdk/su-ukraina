@@ -40,4 +40,22 @@ const navigationPropTypes = PropTypes.shape({
   node_locale: localePropType.isRequired,
 });
 
-export { localePropType, gatsbyImagePropType, navigationPropTypes };
+const nodeSlugsPropTypes = PropTypes.shape({
+  [`lt-LT`]: PropTypes.string,
+  [`uk-UA`]: PropTypes.string,
+  [`en`]: PropTypes.string,
+});
+
+const nodeSlugsDefaultProps = {
+  [`lt-LT`]: null,
+  [`uk-UA`]: null,
+  [`en`]: null,
+};
+
+export {
+  localePropType,
+  gatsbyImagePropType,
+  navigationPropTypes,
+  nodeSlugsPropTypes,
+  nodeSlugsDefaultProps,
+};

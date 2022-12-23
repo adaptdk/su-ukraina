@@ -21,6 +21,8 @@ import PageTitle from "../PageTitle";
 import {
   localePropType,
   navigationPropTypes,
+  nodeSlugsDefaultProps,
+  nodeSlugsPropTypes,
 } from "../../helpers/genericPropTypes";
 
 const Layout = ({
@@ -32,6 +34,7 @@ const Layout = ({
   includeContactForm,
   navigation,
   locale,
+  currentNodeSlugs,
 }) => {
   return (
     <div className="Layout">
@@ -41,6 +44,7 @@ const Layout = ({
         navigation={navigation}
         noSticky={noStickyHeader}
         locale={locale}
+        currentNodeSlugs={currentNodeSlugs}
       />
       {locale === `lt-LT` && (
         // @todo: connect to contentful
@@ -90,11 +94,13 @@ Layout.propTypes = {
   includeContactForm: PropTypes.bool,
   navigation: navigationPropTypes.isRequired,
   locale: localePropType.isRequired,
+  currentNodeSlugs: nodeSlugsPropTypes,
 };
 
 Layout.defaultProps = {
   noStickyHeader: false,
   includeContactForm: true,
+  currentNodeSlugs: nodeSlugsDefaultProps,
 };
 
 export default Layout;
