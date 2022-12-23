@@ -30,7 +30,6 @@ import {
 const Header = ({ noSticky, navigation, locale, currentNodeSlugs }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
   const { pathname } = useLocation();
-  const altHeader = locale !== `lt-LT`;
 
   const headerRef = React.useRef(null);
 
@@ -127,7 +126,7 @@ const Header = ({ noSticky, navigation, locale, currentNodeSlugs }) => {
                 </li>
               );
             })}
-            {altHeader && (
+            {locale === `uk-UA` && (
               <li>
                 <Button
                   className="Header__menu-help-btn"
