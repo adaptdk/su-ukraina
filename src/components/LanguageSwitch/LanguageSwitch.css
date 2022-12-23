@@ -56,6 +56,14 @@
         width: var(--icon-width);
       }
     }
+
+    &--en-flag {
+      &::before {
+        background: url("../../images/icons/en-flag.svg") center center
+          no-repeat;
+        width: var(--icon-width);
+      }
+    }
   }
 
   ul {
