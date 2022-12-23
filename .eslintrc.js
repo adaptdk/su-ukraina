@@ -24,7 +24,6 @@ module.exports = {
     sourceType: `module`,
   },
   rules: {
-    "arrow-body-style": [`error`, `always`],
     "eol-last": [`error`, `always`],
     "linebreak-style": [`error`, `unix`],
     "no-alert": `error`,

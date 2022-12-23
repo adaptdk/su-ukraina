@@ -44,13 +44,11 @@ const query = (graphql) => {
 };
 
 const createFaqPages = (result, createPage) => {
-  const faqPages = result.data.allContentfulFaqPage.edges.map((edge) => {
-    return edge.node;
-  });
+  const faqPages = result.data.allContentfulFaqPage.edges.map(
+    (edge) => edge.node
+  );
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
-    (edge) => {
-      return edge.node;
-    }
+    (edge) => edge.node
   );
 
   // gather all the LT pages data
@@ -59,9 +57,7 @@ const createFaqPages = (result, createPage) => {
   faqPages.forEach((faqPage) => {
     if (faqPage?.slug && faqPage?.node_locale) {
       const navigation = globalNavigation
-        .filter((item) => {
-          return item.node_locale === faqPage.node_locale;
-        })
+        .filter((item) => item.node_locale === faqPage.node_locale)
         .shift();
 
       const pagePath = getPathByLocale(faqPage?.node_locale, faqPage?.slug, {

@@ -58,21 +58,17 @@ const query = (graphql) => {
 };
 
 const createHomePages = (result, createPage) => {
-  const homePages = result.data.allContentfulHomepage.edges.map((edge) => {
-    return edge.node;
-  });
+  const homePages = result.data.allContentfulHomepage.edges.map(
+    (edge) => edge.node
+  );
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
-    (edge) => {
-      return edge.node;
-    }
+    (edge) => edge.node
   );
 
   homePages.forEach((homePage) => {
     if (homePage?.metaTitle && homePage?.node_locale) {
       const navigation = globalNavigation
-        .filter((item) => {
-          return item.node_locale === homePage.node_locale;
-        })
+        .filter((item) => item.node_locale === homePage.node_locale)
         .shift();
 
       const pagePath = getHomePagePath(homePage.node_locale);

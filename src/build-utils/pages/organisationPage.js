@@ -24,22 +24,16 @@ const query = (graphql) => {
 
 const createOrganisationPages = (result, createPage) => {
   const organisationPages = result.data.allContentfulOrganisation.edges.map(
-    (edge) => {
-      return edge.node;
-    }
+    (edge) => edge.node
   );
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
-    (edge) => {
-      return edge.node;
-    }
+    (edge) => edge.node
   );
 
   organisationPages.forEach((organisationPage) => {
     if (organisationPage?.name && organisationPage?.node_locale) {
       const navigation = globalNavigation
-        .filter((item) => {
-          return item.node_locale === organisationPage.node_locale;
-        })
+        .filter((item) => item.node_locale === organisationPage.node_locale)
         .shift();
 
       const pagePath = getOrganisationPagePath(

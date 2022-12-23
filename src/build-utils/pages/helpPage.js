@@ -35,21 +35,17 @@ const query = (graphql) => {
 };
 
 const createHelpPages = (result, createPage) => {
-  const helpPages = result.data.allContentfulHelpPage.edges.map((edge) => {
-    return edge.node;
-  });
+  const helpPages = result.data.allContentfulHelpPage.edges.map(
+    (edge) => edge.node
+  );
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
-    (edge) => {
-      return edge.node;
-    }
+    (edge) => edge.node
   );
 
   helpPages.forEach((helpPage) => {
     if (helpPage?.slug && helpPage?.node_locale) {
       const navigation = globalNavigation
-        .filter((item) => {
-          return item.node_locale === helpPage.node_locale;
-        })
+        .filter((item) => item.node_locale === helpPage.node_locale)
         .shift();
 
       const pagePath = getPathByLocale(helpPage?.node_locale, helpPage?.slug, {

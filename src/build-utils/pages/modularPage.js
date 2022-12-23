@@ -51,22 +51,16 @@ const query = (graphql) => {
 
 const createModularPages = (result, createPage) => {
   const modularPages = result.data.allContentfulModularPage.edges.map(
-    (edge) => {
-      return edge.node;
-    }
+    (edge) => edge.node
   );
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
-    (edge) => {
-      return edge.node;
-    }
+    (edge) => edge.node
   );
 
   modularPages.forEach((modularPage) => {
     if (modularPage?.slug && modularPage?.node_locale) {
       const navigation = globalNavigation
-        .filter((item) => {
-          return item.node_locale === modularPage.node_locale;
-        })
+        .filter((item) => item.node_locale === modularPage.node_locale)
         .shift();
 
       const slidingNavData = getSlidingNavData(modularPage.modules);
