@@ -1,9 +1,15 @@
 import ResourceListModule from "./ResourceListModule";
-import { ResourceListModulePropTypes } from "./ResourceListModulePropTypes";
-import { ResourceListModuleDefaultProps } from "./ResourceListModulePropTypes";
+import ResourceItem from "./ResourceItem";
+import {
+  ResourceItemPropTypes,
+  ResourceListModulePropTypes,
+  ResourceListModuleDefaultProps,
+} from "./ResourceListModulePropTypes";
 
 export {
   ResourceListModule,
+  ResourceItem,
   ResourceListModuleDefaultProps,
   ResourceListModulePropTypes,
+  ResourceItemPropTypes,
 };

@@ -51,7 +51,6 @@ const EventsModule = ({ events, locale }) => {
         >
           <EventCardList>
             {previousEvents.map((event, i) => {
-              console.log(`event: `, event);
               return (
                 <EventCard
                   key={i}

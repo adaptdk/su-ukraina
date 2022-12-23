@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 const ResourceItemPropTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  subText: PropTypes.string,
   sourceUrl: PropTypes.string.isRequired,
 };
 

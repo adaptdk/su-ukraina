@@ -4,8 +4,9 @@ import ContentfulModulePropTypes from "./ContentfulModulePropTypes";
 import { EventsModule } from "./EventsModule";
 import { ChipModule } from "./ChipModule";
 import { SlidingNavBlock } from "./SlidingNavBlock";
-import { ResourceListModule } from "./ResourceListModule";
+import { ResourceListModule, ResourceItem } from "./ResourceListModule";
 import { FaqNav } from "../Faq";
+import { ContentfulAsset } from "./ContentfulAsset";
 
 const ContentfulModule = ({ module }) => {
   const type = module?.internal?.type || ``;
@@ -28,6 +29,14 @@ const ContentfulModule = ({ module }) => {
 
   if (type === `ContentfulResourceListModule`) {
     return <ResourceListModule {...module} />;
+  }
+
+  if (type === `ContentfulResourceItem`) {
+    return <ResourceItem {...module} />;
+  }
+
+  if (type === `ContentfulAsset`) {
+    return <ContentfulAsset {...module} />;
   }
 
   return null;

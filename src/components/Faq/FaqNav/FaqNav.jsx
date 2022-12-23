@@ -54,7 +54,7 @@ FaqNav.propTypes = {
       id: PropTypes.string.isRequired,
       pageHeading: PropTypes.string.isRequired,
       slug: PropTypes.string.isRequired,
-      iconType: PropTypes.string.isRequired,
+      iconType: PropTypes.string,
     })
   ),
   pathname: PropTypes.string,

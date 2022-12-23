@@ -27,6 +27,7 @@ const FaqPage = ({ path, pageContext }) => {
     navData,
     breadcrumb: { crumbs },
   } = pageContext;
+
   return (
     <Layout
       pagePath={path}
@@ -73,7 +74,7 @@ FaqPage.propTypes = {
       raw: PropTypes.string,
     }),
     navData: PropTypes.arrayOf(PropTypes.shape(FaqNavDataPropTypes)),
-    content: PropTypes.arrayOf(FaqModulePropTypes),
+    content: PropTypes.arrayOf(PropTypes.shape(FaqModulePropTypes)),
   }),
 };
 

@@ -161,10 +161,12 @@ Faq.propTypes = {
       crumbLabel: PropTypes.string.isRequired,
     })
   ).isRequired,
-  content: PropTypes.oneOfType([
-    PropTypes.shape(ResourceListModulePropTypes),
-    PropTypes.shape(FaqItemPropTypes),
-  ]),
+  content: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.shape(ResourceListModulePropTypes),
+      PropTypes.shape(FaqItemPropTypes),
+    ])
+  ),
 };
 
 export default Faq;

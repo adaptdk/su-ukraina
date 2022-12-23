@@ -101,13 +101,6 @@ const faqNavigation = `
   }
 `;
 
-const faqItem = `
-  question
-  answer {
-    raw
-  }
-`;
-
 const resourceItem = `
   id
   label
@@ -123,6 +116,33 @@ const resourceListModule = `
   resources {
     ... on ContentfulResourceItem {
       ${resourceItem}
+    }
+  }
+`;
+
+const faqItem = `
+  question
+  answer {
+    raw
+    references {
+      ... on ContentfulAsset {
+        id
+        contentful_id
+        internal {
+          type
+        }
+        file {
+          contentType
+        }
+        gatsbyImageData(formats: WEBP, placeholder: BLURRED)
+      }
+      ... on ContentfulResourceItem {
+        contentful_id
+        internal {
+          type
+        }
+        ${resourceItem}
+      }
     }
   }
 `;

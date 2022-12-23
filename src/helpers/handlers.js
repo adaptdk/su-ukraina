@@ -19,4 +19,11 @@ const getLocaleFromPath = () => {
   return `lt-LT`;
 };
 
-export { isUkrainianPage, getLocaleFromPath };
+const getRichTextModuleData = (node, refs) => {
+  const contentfulId = node.data.target.sys.id;
+  const moduleData = refs.find((ref) => ref.contentful_id === contentfulId);
+
+  return moduleData || null;
+};
+
+export { isUkrainianPage, getLocaleFromPath, getRichTextModuleData };

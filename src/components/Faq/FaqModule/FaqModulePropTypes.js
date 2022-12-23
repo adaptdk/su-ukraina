@@ -7,8 +7,8 @@ const FaqModulePropTypes = {
   module: PropTypes.oneOfType([
     PropTypes.shape(ResourceListModulePropTypes),
     PropTypes.shape(FaqItemPropTypes),
-  ]).isRequired,
-  index: PropTypes.number.isRequired,
+  ]),
+  index: PropTypes.number,
 };
 
 export { FaqModulePropTypes };

@@ -4,12 +4,26 @@ import { formatRichText } from "../../../../helpers/formatting";
 import { FaqItemPropTypes } from "./FaqItemPropTypes";
 import { getTranslatedText } from "../../../../utils/getTranslatedText";
 import { handleAnchorClick } from "./faqItemUtils";
+import { ContentfulModule } from "../../../ContentfulModule";
+import { getRichTextModuleData } from "../../../../helpers/handlers";
 
-const formatContent = (str) => {
+const formatContent = (str, refs) => {
   const options = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => {
-        return <p className="Faq__answer">{children}</p>;
+        return <p>{children}</p>;
+      },
+      [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+        const moduleData = getRichTextModuleData(node, refs);
+        if (moduleData) {
+          return <ContentfulModule module={moduleData} />;
+        }
+      },
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const moduleData = getRichTextModuleData(node, refs);
+        if (moduleData) {
+          return <ContentfulModule module={moduleData} />;
+        }
       },
     },
   };
@@ -27,7 +41,9 @@ const FaqItem = ({ answer, question, index }) => {
             <h2>{question}</h2>
           </div>
         </summary>
-        {formatContent(answer.raw)}
+        <div className="Faq__answer">
+          {formatContent(answer.raw, answer.references)}
+        </div>
 
         <div className="Faq__actions">
           <div className="Faq__copy-action">
