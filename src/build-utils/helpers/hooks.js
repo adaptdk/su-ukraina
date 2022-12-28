@@ -61,18 +61,6 @@ const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   return null;
 };
 
-const getFaqPagePath = (slug, forceTranslate) => {
-  if (forceTranslate === `uk-UA`) {
-    return getPathByLocale(`uk-UA`, slug);
-  }
-
-  if (forceTranslate === `en`) {
-    return getPathByLocale(`en`, slug);
-  }
-
-  return getPathByLocale(`lt-LT`, slug);
-};
-
 const getHomePagePath = (locale) => {
   if (locale === `lt-LT`) {
     return `/`;
@@ -142,7 +130,6 @@ const getAllPagesLocalisedSlugs = (pages) => {
 module.exports = {
   getSlidingNavData,
   getPathByLocale,
-  getFaqPagePath,
   getHomePagePath,
   getOrganisationPagePath,
   getAllPagesLocalisedSlugs,

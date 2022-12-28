@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
-const { getFaqPagePath } = require(`../helpers/hooks`);
+const { getPathByLocale } = require(`../helpers/hooks`);
 
 const query = (graphql) => {
   return graphql(`
@@ -54,10 +54,10 @@ const createFaqPages = (result, createPage) => {
   faqPages.forEach((faqPage) => {
     if (faqPage?.slug && faqPage?.node_locale === `lt-LT`) {
       const navigation = globalNavigation
-        .filter((item) => item.node_locale === faqPage.node_locale)
+        .filter((item) => item.node_locale === faqPage.forceTranslate)
         .shift();
 
-      const rootPath = getFaqPagePath(faqPage?.slug, faqPage?.forceTranslate);
+      const rootPath = getPathByLocale(faqPage?.forceTranslate, faqPage?.slug);
 
       faqPage.categories.forEach((faqCategory) => {
         const categoryPath = `${rootPath}/${faqCategory.slug}`;
