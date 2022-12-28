@@ -5,7 +5,6 @@ import { EventsModule } from "./EventsModule";
 import { ChipModule } from "./ChipModule";
 import { SlidingNavBlock } from "./SlidingNavBlock";
 import { ResourceListModule, ResourceItem } from "./ResourceListModule";
-import { FaqNav } from "../Faq";
 import { ContentfulAsset } from "./ContentfulAsset";
 
 const ContentfulModule = ({ module }) => {
@@ -21,10 +20,6 @@ const ContentfulModule = ({ module }) => {
 
   if (type === `ContentfulChipModule`) {
     return <ChipModule {...module} />;
-  }
-
-  if (type === `ContentfulFaqNavigation`) {
-    return <FaqNav {...module} />;
   }
 
   if (type === `ContentfulResourceListModule`) {

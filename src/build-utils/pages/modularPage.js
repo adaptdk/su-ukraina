@@ -37,9 +37,6 @@ const query = (graphql) => {
               ... on ContentfulSlidingNavBlock {
                 ${contentModel.slidingNavBlock}
               }
-              ... on ContentfulFaqNavigation {
-                ${contentModel.faqNavigation}
-              }
               ... on ContentfulResourceListModule {
                 ${contentModel.resourceListModule}
               }

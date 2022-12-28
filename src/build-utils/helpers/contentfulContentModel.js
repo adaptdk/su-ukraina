@@ -90,17 +90,6 @@ const slidingNavBlock = `
   }
 `;
 
-const faqNavigation = `
-  pages {
-    ... on ContentfulFaqPage {
-      id
-      slug
-      pageHeading
-      iconType
-    }
-  }
-`;
-
 const resourceItem = `
   id
   label
@@ -202,6 +191,15 @@ const globalNavigation = `
   }
 `;
 
+const pageData = `
+  id
+  slug
+  pageHeading
+  pageDescription {
+    raw
+  }
+`;
+
 module.exports = {
   hero,
   seo,
@@ -210,10 +208,10 @@ module.exports = {
   eventsModule,
   slidingNavBlock,
   chipModule,
-  faqNavigation,
   faqItem,
   resourceListModule,
   partner,
   homepagePartners,
   globalNavigation,
+  pageData,
 };

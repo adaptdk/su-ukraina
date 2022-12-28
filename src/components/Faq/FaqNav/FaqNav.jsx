@@ -4,60 +4,46 @@ import PropTypes from "prop-types";
 import "./FaqNav.css";
 import Button from "../../Button";
 
-const FaqNav = ({ pages, pathname }) => {
-  if (!pages) {
+const FaqNav = ({ rootPath, categories, pathname }) => {
+  if (!categories) {
     return null;
-  }
-
-  let pathRoot = `/ua/refugee-guide`;
-
-  switch (true) {
-    case pathname.includes(`/informacija-ukrainieciams`):
-      pathRoot = `/informacija-ukrainieciams`;
-      break;
-    case pathname.includes(`/ua/refugee-guide`):
-      pathRoot = `/ua/refugee-guide`;
-      break;
-    case pathname.includes(`/informacija-lietuviams`):
-      pathRoot = `/informacija-lietuviams`;
-      break;
-    default:
-      break;
   }
 
   return (
     <nav className="FaqNav">
       <ul className="FaqNav__list">
-        {pages.map((page) => {
-          return (
-            <li className="FaqNav__list-item" key={page.id}>
-              <Button
-                active={pathname.includes(page.slug)}
-                color="primary"
-                startIcon={page.iconType || page.icon}
-                endIcon={`arrow-white`}
-                to={`${pathRoot}/${page.slug}/`}
-              >
-                {page.pageHeading || page.title_override}
-              </Button>
-            </li>
-          );
-        })}
+        {categories?.at(0) &&
+          categories.map((category) => {
+            return (
+              <li className="FaqNav__list-item" key={category.id}>
+                <Button
+                  active={pathname.includes(category.slug)}
+                  color="primary"
+                  startIcon={category.iconType}
+                  endIcon={`arrow-white`}
+                  to={`/${rootPath}/${category.slug}/`}
+                >
+                  {category.pageHeading}
+                </Button>
+              </li>
+            );
+          })}
       </ul>
     </nav>
   );
 };
 
 FaqNav.propTypes = {
-  pages: PropTypes.arrayOf(
+  rootPath: PropTypes.string.isRequired,
+  categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       pageHeading: PropTypes.string.isRequired,
       slug: PropTypes.string.isRequired,
       iconType: PropTypes.string,
     })
-  ),
-  pathname: PropTypes.string,
+  ).isRequired,
+  pathname: PropTypes.string.isRequired,
 };
 
 export default FaqNav;

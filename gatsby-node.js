@@ -60,6 +60,15 @@ exports.createPages = ({ graphql, actions }) => {
     })
   );
 
+  // Process FAQ Index Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.faqIndexPage.query(graphql),
+      createFunction: PAGE_UTILS.faqIndexPage.createFaqIndexPages,
+      createPage,
+    })
+  );
+
   // Process FAQ Pages
   promises.push(
     processPage({

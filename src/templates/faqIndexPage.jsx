@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 
 import Layout from "../components/Layout";
 import { HeroSection } from "../components/HeroSection";
+import NavigationGroup from "../components/NavigationGroup";
+import Constraint from "../components/Constraint";
+import { FaqNav } from "../components/Faq";
 
-import { Faq } from "../components/Faq";
-import { FaqModulePropTypes } from "../components/Faq/FaqModule/FaqModulePropTypes";
+import { formatRichText } from "../helpers/formatting";
 import {
   gatsbyImagePropType,
   localePropType,
@@ -13,9 +15,8 @@ import {
   nodeSlugsPropTypes,
 } from "../helpers/genericPropTypes";
 
-const FaqPage = ({ path, pageContext }) => {
+const FaqIndexPage = ({ path, pageContext }) => {
   const {
-    currentNodeSlugs,
     node_locale,
     navigation,
     metaTitle,
@@ -23,13 +24,10 @@ const FaqPage = ({ path, pageContext }) => {
     heroImage,
     pageHeading,
     pageDescription,
-    content,
     categories,
     rootPath,
     breadcrumb: { crumbs },
   } = pageContext;
-
-  console.log({ pageContext });
 
   return (
     <Layout
@@ -38,24 +36,25 @@ const FaqPage = ({ path, pageContext }) => {
       metaDescription={metaDescription}
       navigation={navigation}
       locale={node_locale}
-      currentNodeSlugs={currentNodeSlugs}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
-      <Faq
-        title={pageHeading}
-        description={pageDescription}
-        categories={categories}
-        pathname={path}
-        rootPath={rootPath}
-        content={content}
-        crumbs={crumbs}
-      />
+      <Constraint>
+        <NavigationGroup crumbs={crumbs} />
+        {pageHeading && <h1>{pageHeading}</h1>}
+        {pageDescription?.raw && formatRichText(pageDescription.raw)}
+      </Constraint>
+
+      {categories?.at(0) && (
+        <Constraint>
+          <FaqNav rootPath={rootPath} categories={categories} pathname={path} />
+        </Constraint>
+      )}
     </Layout>
   );
 };
 
-FaqPage.propTypes = {
+FaqIndexPage.propTypes = {
   path: PropTypes.string.isRequired,
   pageContext: PropTypes.shape({
     breadcrumb: PropTypes.shape({
@@ -78,18 +77,18 @@ FaqPage.propTypes = {
     pageDescription: PropTypes.shape({
       raw: PropTypes.string,
     }),
-    // @TODO: fix proptypes
-    categories: PropTypes.array.isRequired,
-    content: PropTypes.arrayOf(PropTypes.shape(FaqModulePropTypes)),
+    // @TODO: fix this proptype
+    categories: PropTypes.array,
   }),
 };
 
-FaqPage.defaultProps = {
+FaqIndexPage.defaultProps = {
   pageTitle: ``,
   pageDescription: {
     raw: ``,
   },
   organisations: [],
+  navData: [],
 };
 
-export default FaqPage;
+export default FaqIndexPage;

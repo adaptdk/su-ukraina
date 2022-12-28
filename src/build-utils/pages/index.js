@@ -3,6 +3,7 @@ const pageUtils = {
   homePage: require(`./homePage`),
   modularPage: require(`./modularPage`),
   faqPage: require(`./faqPage`),
+  faqIndexPage: require(`./faqIndexPage`),
   organisationPage: require(`./organisationPage`),
 };
 

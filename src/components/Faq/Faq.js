@@ -58,7 +58,15 @@ const openTarget = () => {
 //   }
 // };
 
-const Faq = ({ title, description, navData, content, crumbs }) => {
+const Faq = ({
+  title,
+  description,
+  categories,
+  rootPath,
+  pathname,
+  content,
+  crumbs,
+}) => {
   useEffect(() => {
     window.addEventListener(`hashchange`, openTarget);
     openTarget();
@@ -112,7 +120,13 @@ const Faq = ({ title, description, navData, content, crumbs }) => {
           id="faqnav-sensor"
           onChange={handleFaqNavSensorChange}
         />
-        {!!navData && <FaqNavCollapsible navData={navData} />}
+        {!!categories && (
+          <FaqNavCollapsible
+            categories={categories}
+            rootPath={rootPath}
+            pathname={pathname}
+          />
+        )}
 
         <div className="Faq__content">
           <Breadcrumbs crumbs={crumbs} />
@@ -154,7 +168,10 @@ Faq.propTypes = {
   description: PropTypes.shape({
     raw: PropTypes.string,
   }),
-  navData: PropTypes.arrayOf(PropTypes.shape(FaqNavDataPropTypes)).isRequired,
+  // @TODO: Fix proptypes
+  categories: PropTypes.array.isRequired,
+  pathname: PropTypes.string.isRequired,
+  rootPath: PropTypes.string.isRequired,
   crumbs: PropTypes.arrayOf(
     PropTypes.shape({
       pathname: PropTypes.string.isRequired,
