@@ -7,7 +7,7 @@ const query = (graphql) => {
   return graphql(`
   {
     ${contentModel.globalNavigation}
-    allContentfulFaqPage {
+    allContentfulFaqPage(filter: { node_locale: { eq: "lt-LT" } }) {
       edges {
         node {
           contentful_id
