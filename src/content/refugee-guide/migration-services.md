@@ -1,9 +1,26 @@
 ---
 weight: 10
 title: migration-office
-title_override: Міграційні служби
+title_override: Міграційні послуги
 slug: "/migration-office"
 questions:
+  - title: Як продовжити\отримати дозвіл на тимчасове проживання в Литві?
+    answer:
+      <p>З початку 2023 р. дозвіл на тимчасове проживання для всіх українських
+      біженців війни в Литві буде лише в цифровому форматі. Українські біженці, які
+      раніше отримували дозволи у вигляді пластикових карток, тепер можуть розпочати
+      спрощену процедуру оформлення цих документів.</p><p><strong>Подати заяву на отримання\продовження
+      дозволу на тимчасове проживання в Литві</strong> на сторінці Департаменту міграції:</p><p><a
+      href="https://www.migracija.lt/" title="https://www.migracija.lt/">https://www.migracija.lt/</a></p><p><strong>Інструкція,
+      </strong>як подати заяву на<strong> продовження дозволу на тимчасове проживання
+      в Литві</strong> (англійською) за посиланням:</p><p><a href="https://www.youtube.com/watch?v=6U7tieijizw"
+      title="https://www.youtube.com/watch?v=6U7tieijizw">https://www.youtube.com/watch?v=6U7tieijizw</a></p><p><strong>Інструкція,</strong>
+      як подати заяву на<strong> отримання посвідки на тимчасове проживання в Литві
+      </strong>(англійською) за посиланням:</p><p><a href="https://www.youtube.com/watch?v=rUjOaauUl_g"
+      title="https://www.youtube.com/watch?v=rUjOaauUl_g">https://www.youtube.com/watch?v=rUjOaauUl_g</a></p>
+    content_blocks:
+      - template: image-block
+        image: "../uploads/podaty-zayavu.jpg"
   - title: Як зареєструватися після прибуття в Литву?
     answer:
       '<p>Громадяни України та члени їх сімей можуть зареєструватись в Департаменті
@@ -125,4 +142,4 @@ questions:
 icon: user-police
 ---
 
-Для отримання консультації щодо міграційних питань для громадян України в Литві телефонуйте на гарячу лінію [+370 5 271 7112](tel:+37052717112) (пн-чт 07:30-16:30, пт 07:30-15:15)
+Для отримання консультації щодо міграційних питань для громадян України в Литві телефонуйте на гарячу лінію [+370 5 271 7112](tel:+37052717112) (пн-чт 07:30-16:30, пт 07:30-15:15).
