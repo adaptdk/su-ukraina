@@ -52,7 +52,11 @@ const createFaqPages = (result, createPage) => {
   );
 
   faqPages.forEach((faqPage) => {
-    if (faqPage?.slug && faqPage?.node_locale === `lt-LT`) {
+    if (
+      faqPage?.slug &&
+      faqPage?.metaTitle &&
+      faqPage?.node_locale === `lt-LT`
+    ) {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === faqPage.forceTranslate)
         .shift();

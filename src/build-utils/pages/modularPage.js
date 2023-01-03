@@ -64,7 +64,11 @@ const createModularPages = (result, createPage) => {
   const allNodeSlugs = getAllPagesLocalisedSlugs(modularPages);
 
   modularPages.forEach((modularPage) => {
-    if (modularPage?.slug && modularPage?.node_locale) {
+    if (
+      modularPage?.slug &&
+      modularPage?.metaTitle &&
+      modularPage?.node_locale
+    ) {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === modularPage.node_locale)
         .shift();

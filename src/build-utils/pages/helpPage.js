@@ -48,7 +48,7 @@ const createHelpPages = (result, createPage) => {
   const allNodeSlugs = getAllPagesLocalisedSlugs(helpPages);
 
   helpPages.forEach((helpPage) => {
-    if (helpPage?.slug && helpPage?.node_locale) {
+    if (helpPage?.slug && helpPage?.metaTitle && helpPage?.node_locale) {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === helpPage.node_locale)
         .shift();

@@ -38,7 +38,11 @@ const createFaqIndexPages = (result, createPage) => {
   );
 
   faqIndexPages.forEach((faqIndexPage) => {
-    if (faqIndexPage?.slug && faqIndexPage?.node_locale === `lt-LT`) {
+    if (
+      faqIndexPage?.slug &&
+      faqIndexPage?.metaTitle &&
+      faqIndexPage?.node_locale === `lt-LT`
+    ) {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === faqIndexPage.forceTranslate)
         .shift();
