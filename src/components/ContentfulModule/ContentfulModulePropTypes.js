@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 import { ChipModulePropTypes } from "./ChipModule";
 import { EventsModulePropTypes } from "./EventsModule";
+import { LinkCollectionModulePropTypes } from "./LinkCollectionModule";
 import {
   ResourceListModulePropTypes,
   ResourceItemPropTypes,
@@ -14,6 +15,7 @@ const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(ResourceListModulePropTypes),
   PropTypes.shape(SlidingNavBlockPropTypes),
   PropTypes.shape(ResourceItemPropTypes),
+  PropTypes.shape(LinkCollectionModulePropTypes),
 ]);
 
 export default ContentfulModulePropTypes;

@@ -6,6 +6,7 @@ import { ChipModule } from "./ChipModule";
 import { SlidingNavBlock } from "./SlidingNavBlock";
 import { ResourceListModule, ResourceItem } from "./ResourceListModule";
 import { ContentfulAsset } from "./ContentfulAsset";
+import { LinkCollectionModule } from "./LinkCollectionModule";
 
 const ContentfulModule = ({ module }) => {
   const type = module?.internal?.type || ``;
@@ -32,6 +33,10 @@ const ContentfulModule = ({ module }) => {
 
   if (type === `ContentfulAsset`) {
     return <ContentfulAsset {...module} />;
+  }
+
+  if (type === `ContentfulLinkCollectionModule`) {
+    return <LinkCollectionModule {...module} />;
   }
 
   return null;

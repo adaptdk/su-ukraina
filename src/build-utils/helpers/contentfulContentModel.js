@@ -16,6 +16,20 @@ const seo = `
   metaDescription
 `;
 
+const link = `
+  id
+  label
+  url
+`;
+
+const linkCollectionModule = `
+  links {
+    ... on ContentfulLink {
+      ${link}
+    }
+  }
+`;
+
 const organisation = `
   id
   name
@@ -204,6 +218,8 @@ module.exports = {
   hero,
   seo,
   organisation,
+  link,
+  linkCollectionModule,
   eventItem,
   eventsModule,
   slidingNavBlock,

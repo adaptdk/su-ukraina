@@ -7,14 +7,8 @@ import { Meta } from "react-head";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import Section from "../../components/Section";
-import LinkCollection from "../../components/LinkCollection";
-import LinkCollectionItem from "../../components/LinkCollection/LinkCollectionItem";
 import NavigationGroup from "../../components/NavigationGroup";
 import PageTitle from "../../components/PageTitle";
-
-// Constants.
-import { NAVIGATION_PROTEST_FORMS } from "../../constants/Navigation";
-
 const Page = ({ data, pageContext }) => {
   const {
     breadcrumb: { crumbs },
@@ -41,19 +35,7 @@ const Page = ({ data, pageContext }) => {
       )}
 
       <Section className="LinksCollectionWrapper">
-        <Constraint>
-          <LinkCollection>
-            {NAVIGATION_PROTEST_FORMS.map((item) => {
-              return (
-                <LinkCollectionItem
-                  key={item.pathname}
-                  to={item.pathname}
-                  text={item.title}
-                />
-              );
-            })}
-          </LinkCollection>
-        </Constraint>
+        <Constraint></Constraint>
       </Section>
     </Layout>
   );

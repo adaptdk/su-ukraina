@@ -40,6 +40,9 @@ const query = (graphql) => {
               ... on ContentfulResourceListModule {
                 ${contentModel.resourceListModule}
               }
+              ... on ContentfulLinkCollectionModule {
+                ${contentModel.linkCollectionModule}
+              }
             }
           }
           includeContactForm

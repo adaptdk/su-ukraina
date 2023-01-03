@@ -44,9 +44,7 @@ const query = (graphql) => {
           }
           mainSectionLinks {
             ... on ContentfulLink {
-              id
-              label
-              url
+              ${contentModel.link}
             }
           }
           ${contentModel.homepagePartners}
