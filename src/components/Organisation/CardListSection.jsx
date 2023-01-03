@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import CardList from "../CardList";
-import Card from "../Card";
-import CardSection from "../Card/CardSection";
+import CardList from "./CardList";
+import { Card, CardSection } from "./Card";
 import { OrganisationPropTypes } from "./OrganisationPropTypes";
 import OrganisationActions from "./OrganisationActions";
 

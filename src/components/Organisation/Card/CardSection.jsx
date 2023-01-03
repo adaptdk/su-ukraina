@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { formatRichText } from "../../helpers/formatting";
+import { formatRichText } from "../../../helpers/formatting";
 
 const CardSection = ({ content, title }) => {
   return (

@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Components.
-import Button from "../../components/Button";
-import Icon from "../Icon";
+import Button from "../../../Button";
+import Icon from "../../../Icon";
 
-import { formatRichText } from "../../helpers/formatting";
-import { localePropType } from "../../helpers/genericPropTypes";
+import { formatRichText } from "../../../../helpers/formatting";
+import { localePropType } from "../../../../helpers/genericPropTypes";
 
 // Styles.
 import "./EventCard.css";
-import { getTranslatedText } from "../../utils/getTranslatedText";
+import { getTranslatedText } from "../../../../utils/getTranslatedText";
 
 const EventCard = ({
   className = ``,

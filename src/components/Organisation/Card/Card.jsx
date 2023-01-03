@@ -1,14 +1,15 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-
-import "./Card.css";
 import { Link } from "gatsby";
-import { getOrganisationPagePath } from "../../build-utils/helpers/hooks";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+import { getOrganisationPagePath } from "../../../build-utils/helpers/hooks";
 import {
   gatsbyImagePropType,
   localePropType,
-} from "../../helpers/genericPropTypes";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+} from "../../../helpers/genericPropTypes";
+
+import "./Card.css";
 
 const Card = ({ children, title, logo, locale, organisationType }) => {
   const pagePath = getOrganisationPagePath(title, locale, organisationType);

@@ -3,12 +3,10 @@ import PropTypes from "prop-types";
 import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Card from "../../components/Card";
-import CardList from "../../components/CardList";
+import { Card, CardList, CardSection } from "../../components/Organisation";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
-import CardSection from "../../components/Card/CardSection";
 import Button from "../../components/Button";
 import Section from "../../components/Section";
 import TabsButton from "../../components/TabsButton";

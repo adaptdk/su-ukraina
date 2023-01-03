@@ -4,8 +4,7 @@ import { graphql } from "gatsby";
 import { Meta } from "react-head";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Card from "../../components/Card";
-import CardList from "../../components/CardList";
+import { Card, CardList } from "../../components/Organisation";
 import Constraint from "../../components/Constraint";
 import Layout from "../../components/Layout";
 import NavigationGroup from "../../components/NavigationGroup";
