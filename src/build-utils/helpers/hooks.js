@@ -1,6 +1,10 @@
 const slugify = require(`slugify`);
 
 /**
+ * @typedef {"lt-LT" | "uk-UA" | "en"} LocaleType
+ */
+
+/**
  * Finds all the SlidingNavBlocks in your modules array and injects them with the `linkId`.
  *
  * @param {Array} modules All of the modules on your single page. Make sure it has the internal type queried.
@@ -30,7 +34,7 @@ const getSlidingNavData = (modules) => {
  * An optional `prefix` string can be passed in to get path that are nested.
  * For example passing in a `page` slug, `uk-UA` locale and a `help` prefix
  * would return `"ua/help/page"`.
- * @param {String} locale Locale queried from GraphQL, eg: `"lt-LT"`.
+ * @param {LocaleType} locale Locale queried from GraphQL, eg: `"lt-LT"`.
  * @param {String} slug Slug queried from GraphQL without trailing slashes.
  * @param {lt: String, ua: String, en: String} prefix Optional prefix object for generating page/subpage. No trailing slashes
  * @returns Returns full `path`, eg: `"ua/privacy-policy"`
@@ -61,6 +65,12 @@ const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
   return null;
 };
 
+/**
+ * Generates pathname for homepage and it's locales.
+ *
+ * @param {LocaleType} locale
+ * @returns {string} Generated pathname to pass into the `createPage` function.
+ */
 const getHomePagePath = (locale) => {
   if (locale === `lt-LT`) {
     return `/`;
@@ -80,8 +90,8 @@ const getHomePagePath = (locale) => {
 
 /**
  * @param {String} name Name of the organisation.
- * @param {String} locale Queried locale, `lt-LT` or `uk-UA`.
- * @param {String} type Organisation type, either `Volunteering` or `Donation`. Defaults to `Donation`.
+ * @param {LocaleType} locale
+ * @param {"Donation" | "Volunteering"} type Organisation type.
  * @returns {String} Full path, eg.: `ua/organisation/blueyellow`.
  */
 const getOrganisationPagePath = (name, locale, type = `Donation`) => {
