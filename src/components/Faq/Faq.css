@@ -216,6 +216,10 @@
   }
 
   &__answer {
+    a {
+      word-break: break-all;
+    }
+
     blockquote {
       border: 1px solid var(--c__red);
       border-radius: 6px;
