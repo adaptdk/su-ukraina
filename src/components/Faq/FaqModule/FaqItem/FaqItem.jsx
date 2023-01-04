@@ -33,6 +33,7 @@ const formatContent = (str, refs) => {
 
 const FaqItem = ({ answer, question, index }) => {
   const tabId = `tab-${index}`;
+
   return (
     <div className="Faq__question" id={tabId}>
       <details>
@@ -49,7 +50,7 @@ const FaqItem = ({ answer, question, index }) => {
           <div className="Faq__copy-action">
             <a
               href={`#${tabId}`}
-              data-copied="Скопійовано"
+              data-copied={getTranslatedText(`actions.copyLinkPopupLabel`)}
               onClick={(e) => {
                 handleAnchorClick(e);
               }}

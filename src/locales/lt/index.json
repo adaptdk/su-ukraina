@@ -1,6 +1,7 @@
 {
   "actions": {
     "copyLink": "Kopijuoti nuorodą",
+    "copyLinkPopupLabel": "Nukopijuota",
     "close": "Uždaryti",
     "send": "Siųsti",
     "donate": "Paremti",

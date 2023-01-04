@@ -1,6 +1,7 @@
 {
   "actions": {
     "copyLink": "Copy link",
+    "copyLinkPopupLabel": "Copied",
     "close": "Close",
     "send": "Send",
     "donate": "Donate",

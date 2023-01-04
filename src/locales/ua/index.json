@@ -1,6 +1,7 @@
 {
   "actions": {
     "copyLink": "Kопіювати посилання",
+    "copyLinkPopupLabel": "Скопійовано",
     "close": "Закрити",
     "send": "Надіслати",
     "donate": "<need to translate>",
