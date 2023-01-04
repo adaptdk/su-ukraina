@@ -73,7 +73,7 @@ exports.createPages = async ({ actions }) => {
   });
   createRedirect({
     fromPath: `/refugee-guide*`,
-    toPath: `/ua/refugee-guide:splat`,
+    toPath: `/ua/vazhlyva-informatsiia`,
     isPermanent: true,
   });
   createRedirect({
@@ -84,6 +84,16 @@ exports.createPages = async ({ actions }) => {
   createRedirect({
     fromPath: `/pagalbos-paieska`,
     toPath: `/pagalba-ukrainai`,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: `/ua/refugee-guide`,
+    toPath: `/ua/vazhlyva-informatsiia`,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: `/employment`,
+    toPath: `/poshuk-roboty`,
     isPermanent: true,
   });
 };
