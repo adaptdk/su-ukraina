@@ -82,7 +82,7 @@ export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
 };
 
 export const NAVIGATION_ITEM_EVENTS_UA = {
-  slug: `ua/podiyi/`,
+  slug: `ua/podii/`,
   title: `Події`,
   altTitle: `Події`,
   translation: `Renginiai`,
