@@ -108,12 +108,7 @@ exports.createPages = async ({ actions }) => {
   });
 
   createRedirect({
-    fromPath: `/refugee-guide`,
-    toPath: `/ua/vazhlyva-informatsiia/`,
-    isPermanent: true,
-  });
-  createRedirect({
-    fromPath: `/refugee-guide/`,
+    fromPath: `/refugee-guide*`,
     toPath: `/ua/vazhlyva-informatsiia/`,
     isPermanent: true,
   });
