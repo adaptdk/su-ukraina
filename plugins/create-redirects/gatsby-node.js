@@ -115,7 +115,12 @@ exports.createPages = async ({ actions }) => {
 
   // new UA refugee guide paths
   createRedirect({
-    fromPath: `/ua/refugee-guide*`,
+    fromPath: `/ua/refugee-guide`,
+    toPath: `/ua/vazhlyva-informatsiia/`,
+    isPermanent: true,
+  });
+  createRedirect({
+    fromPath: `/ua/refugee-guide/`,
     toPath: `/ua/vazhlyva-informatsiia/`,
     isPermanent: true,
   });
