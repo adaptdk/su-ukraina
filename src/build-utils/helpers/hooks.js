@@ -32,7 +32,7 @@ const getSlidingNavData = (modules) => {
  * would return `"ua/help/page"`.
  * @param {String} locale Locale queried from GraphQL, eg: `"lt-LT"`.
  * @param {String} slug Slug queried from GraphQL without trailing slashes.
- * @param {lt: String, ua: String} prefix Optional prefix object for generating page/subpage. No trailing slashes
+ * @param {lt: String, ua: String, en: String} prefix Optional prefix object for generating page/subpage. No trailing slashes
  * @returns Returns full `path`, eg: `"ua/privacy-policy"`
  */
 const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
