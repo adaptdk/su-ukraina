@@ -68,7 +68,7 @@ export const NAVIGATION_ITEM_BE_VIGILANT_SCAMS_AND_MISINFORMATION = {
 };
 
 export const NAVIGATION_ITEM_HELP = {
-  pathname: `/ua/help-search/`,
+  slug: `/ua/help-search/`,
   title: `Послуги для українців`,
   altTitle: `Послуги`,
   translation: `Pagalba`,
@@ -82,7 +82,7 @@ export const NAVIGATION_ITEM_REFUGEE_GUIDE = {
 };
 
 export const NAVIGATION_ITEM_EVENTS_UA = {
-  slug: `ua/events/`,
+  slug: `ua/podiyi/`,
   title: `Події`,
   altTitle: `Події`,
   translation: `Renginiai`,
