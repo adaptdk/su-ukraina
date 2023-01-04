@@ -13,6 +13,7 @@ const query = (graphql) => {
           contentful_id
           node_locale
           slug
+          metaTitle
           forceTranslate
           categories {
             ... on ContentfulFaqCategory {
