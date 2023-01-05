@@ -42,11 +42,10 @@ questions:
     члена сім''ї або 3 сумами ДЗД (387 євро) на одну особу, що проживує</p></li><li><p><strong>Компенсація
     витрат на гарячу воду</strong>, коли вартість гарячої води перевищує 5% сімейного
     або особистого доходу</p></li><li><p><strong>Компенсація виплат на питну воду</strong>,
-    коли вартість питної води перевищує 2% сімейного або особистого доходу.</p></li></ul><p>Детальніше
-    про види допомоги<a href="https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini/sotsialna-pidtrimka#:~:text=%D0%93%D1%80%D0%BE%D1%88%D0%BE%D0%B2%D0%B5%20%D1%81%D0%BE%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5%20%D0%B7%D0%B0%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%BD%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%86%D1%96%D0%B2"
-    title=""> за посиланням</a>.</p><p><strong>Для оформлення грошової допомоги, будь
-    ласка, зверніться до самоврядування Вашого місця проживання.</strong></p><p>Контакти
-    координаторів у органах місцевого самоврядування в Литві <a href="https://migracija.lrv.lt/uploads/migracija/documents/files/%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B8%20%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%BE%D1%80%D1%96%D0%B2%20%D1%83%20%D1%81%D0%B0%D0%BC%D0%BE%D0%B2%D1%80%D1%8F%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D1%85%20(pat).pdf"
+    коли вартість питної води перевищує 2% сімейного або особистого доходу.</p></li></ul><p><strong>Для
+    оформлення грошової допомоги, будь ласка, зверніться до самоврядування Вашого
+    місця проживання.</strong></p><p>Контакти координаторів у органах місцевого самоврядування
+    в Литві <a href="https://migracija.lrv.lt/uploads/migracija/documents/files/%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B8%20%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%BE%D1%80%D1%96%D0%B2%20%D1%83%20%D1%81%D0%B0%D0%BC%D0%BE%D0%B2%D1%80%D1%8F%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D1%85%20(pat).pdf"
     title="">за посиланням</a>.</p>'
   resources: []
   contacts: []
