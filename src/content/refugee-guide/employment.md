@@ -91,7 +91,8 @@ questions:
   resources: []
   contacts: []
   adresses: []
-- title: 'Інформація про допомогу та послуги в окремих регіонах та містах за номерами:'
+- title: 'Інформація про допомогу з працевлаштуванням в окремих регіонах та містах
+    за номерами:'
   answer: <p><a href="tel:+37065826755"><strong>+370 658 26 755</strong></a><strong>
     <em>(Вільнюс)<br></em></strong><a href="tel:%E2%80%8D+37065825471"><strong><em>‍</em>+370
     658 25 471</strong></a><strong> (<em>Каунас</em>)<br></strong><a href="tel:+37067228204"><strong>+370
