@@ -28,6 +28,16 @@ questions:
   adresses: []
   image: ''
   content_blocks: []
+- title: Консультація психолога контактно або онлайн
+  answer: '<p>Для запису на прийом до психолога необхідно зателефонувати за номером
+    <a href="tel:+37064051555">+37064051555</a>. <br>Години праці: пн-пт 16:00-20:00,
+    сб –12:00-16:00.<br>Детальніше за<a href="https://krizesiveikimas.lt/wp-content/themes/kic-2022-dizainas/assets/pdf/psychological-counseling-ru.pdf"
+    title=""> посиланням</a>.</p>'
+  resources: []
+  contacts: []
+  adresses: []
+  image: ''
+  content_blocks: []
 - title: ПСИХОЛОГІЧНА ДОПОМОГА ДЛЯ ПІДЛІТКІВ «ЛІНІЯ ДОВІРИ»РОСІЙСЬКОЮ МОВОЮ
   answer: '<p><a href="tel:+37080077277">+370 800 77277</a> </p><p>Години праці: Понеділок
     – Субота з 16 до 19 год. Емоційну підтримку надають школярі добровольці.</p><p><br></p>'
@@ -42,14 +52,6 @@ questions:
     мовою жестів (Skype, Messenger). <br>На консультацію потрібно реєструватися електронною
     поштою: <a href="mailto:luk.donata@gmail.com">luk.donata@gmail.com</a> або <a
     href="mailto:vilmanark@gmail.com">vilmanark@gmail.com</a> або skype: LKD.psichologas</p>'
-  resources: []
-  contacts: []
-  adresses: []
-  image: ''
-  content_blocks: []
-- title: КОНСУЛЬТАЦІЯ ПСИХОЛОГА НА РОСІЙСЬКІЙ МОВІ ОНЛАЙН (АБО КОНТАКТНО)
-  answer: '<p><a href="tel:+37064051555">+37064051555 </a><br>Г одини праці: Понеділок
-    – п’ятниця з 16 до 20 год., Субота –з 12 до 16 год.<br>Детальніше за <a href="https://krizesiveikimas.lt/paslaugos/konsultacii-psihologa">посиланням</a>.</p>'
   resources: []
   contacts: []
   adresses: []
