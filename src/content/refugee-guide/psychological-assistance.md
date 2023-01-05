@@ -48,7 +48,7 @@ questions:
   adresses: []
   image: ''
   content_blocks: []
-- title: 'Психологічна допомога на мові жестів (для глухонімих) '
+- title: 'Психологічна допомога мовою жестів (для глухонімих) '
   answer: '<p>Професійні психологи надають індивідуальну допомогу та ведуть групи
     онлайн або <a href="http://www.lkd.lt/kurtiesiems-nemokama-psichologine-pagalba-gestu-kalba">контактно</a>
     мовою жестів (Skype, Messenger). <br>На консультацію потрібно реєструватися електронною
