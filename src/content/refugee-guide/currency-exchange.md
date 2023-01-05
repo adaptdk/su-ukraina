@@ -1,6 +1,6 @@
 ---
 weight: 40
-title_override: ОБМІН ВАЛЮТИ
+title_override: Обмін валюти
 title: currency-exchange
 slug: "/currency-exchange"
 questions:
