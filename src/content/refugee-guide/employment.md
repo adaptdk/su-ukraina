@@ -94,14 +94,14 @@ questions:
 - title: 'Інформація про допомогу з працевлаштуванням в окремих регіонах та містах
     за номерами:'
   answer: <p><a href="tel:+37065826755"><strong>+370 658 26 755</strong></a><strong>
-    <em>- Вільнюс<br></em></strong><a href="tel:%E2%80%8D+37065825471"><strong><em>‍</em>+370
-    658 25 471</strong></a><strong> - <em>Каунас</em><br></strong><a href="tel:+37067228204"><strong>+370
-    672 28 204</strong></a><strong> - <em>Йонава</em><br></strong><a href="tel:+37061807602"><strong>+370
-    618 07 602</strong></a><strong> - <em>Алітус</em><br></strong><a href="tel:+37065824346"><strong>+370
-    658 24 346</strong></a><strong> - <em>Клайпеда</em><br></strong><a href="tel:+37061038727"><strong>+370
-    610 38 727</strong></a><strong> - <em>Паневежис</em><br></strong><a href="tel:+37061646608"><strong>+370
-    616 46 608</strong></a><strong> - <em>Шяуляй</em><br></strong><a href="tel:+37061400179"><strong>+370
-    614 00 179</strong></a><strong> - <em>Маріямполє</em></strong></p>
+    <em>- </em>Вільнюс<em><br></em></strong><a href="tel:%E2%80%8D+37065825471"><strong><em>‍</em>+370
+    658 25 471</strong></a><strong> - Каунас<br></strong><a href="tel:+37067228204"><strong>+370
+    672 28 204</strong></a><strong> - Йонава<br></strong><a href="tel:+37061807602"><strong>+370
+    618 07 602</strong></a><strong> - Алітус<br></strong><a href="tel:+37065824346"><strong>+370
+    658 24 346</strong></a><strong> - Клайпеда<br></strong><a href="tel:+37061038727"><strong>+370
+    610 38 727</strong></a><strong> - Паневежис<br></strong><a href="tel:+37061646608"><strong>+370
+    616 46 608</strong></a><strong> - Шяуляй<br></strong><a href="tel:+37061400179"><strong>+370
+    614 00 179</strong></a><strong> - Маріямполє</strong></p>
   content_blocks: []
   resources: []
   contacts: []
