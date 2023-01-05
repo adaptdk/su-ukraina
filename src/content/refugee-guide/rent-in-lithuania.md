@@ -27,7 +27,7 @@ questions:
   contacts: []
   adresses: []
 - title: Як знайти житло?
-  answer: <p><strong>На короткий час:</strong></p><p>Якщо у вас немає де зупинитися
+  answer: '<p><strong>На короткий час:</strong></p><p>Якщо у вас немає де зупинитися
     в Литві, поки ви шукаєте довгострокове житло, після прибуття можна скористатися
     послугами короткострокової оренди, замовивши проживання в готелях або апартаментах
     через <a href="https://www.airbnb.com/" title="">www.airbnb.com</a> або платформу
@@ -39,25 +39,21 @@ questions:
     сайтах оголошень NT:</p><p><a href="https://ru.aruodas.lt/butu-nuoma/" title="https://ru.aruodas.lt/butu-nuoma/">https://ru.aruodas.lt/butu-nuoma/</a></p><p><a
     href="https://domoplius.lt/ru/" title="https://domoplius.lt/ru/">https://domoplius.lt/ru/</a></p><p><a
     href="https://ru.skelbiu.lt" title="https://ru.skelbiu.lt">https://ru.skelbiu.lt</a></p><p>2)
-    Пошук у групі Facebook «<a href="https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&amp;sa=D&amp;source=docs&amp;ust=1648811400237652&amp;usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD"
-    title="https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&amp;sa=D&amp;source=docs&amp;ust=1648811400237652&amp;usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD">https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&amp;sa=D&amp;source=docs&amp;ust=1648811400237652&amp;usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD</a>»
-    (литовською мовою, об 'єднує понад 130 тисяч осіб). Тут найчастіше розміщуються
-    останні пропозиції оренди квартир, які часто навіть не виходять на публіку. Часто
-    орендарі розміщують свої пошукові запити та отримують пропозиції оренди індивідуально.
-    Крім того, у Facebook з' явилася група «<a href="https://www.facebook.com/groups/209733365824002/">Foreigners
-    in Vilnius</a>».</p><p>Інші групи Facebook:</p><p><strong>Каунас:</strong></p><p><a
-    href="https://www.facebook.com/groups/butunuomakaune">Butu nuoma Kaune | Kaunas
-    Housing, Rooms, Flats, Apartments, Sublets</a></p><p><strong>Клайпеда:</strong></p><p><a
-    href="https://www.facebook.com/groups/501175606582292">Butu nuoma klaipeda</a></p><p><strong>Важливо
-    (!):</strong></p><p>- Ні в якому разі не переказуйте гроші за житло, яке ви хочете,
-    до тих пір, поки ви не перевірили його і не підписали договір оренди.</p><p>-
-    Перед тим, як говорити про огляд цікавого житла, обов 'язково з' ясуйте, чи власники
-    будуть схильні оголошувати місце проживання (Іноді за декларацію додатково стягується
-    податок у розмірі 50 євро/місяць). Це важливо для того, щоб отримати доступ до
-    всіх послуг, наданих муніципалітетом.</p><p>- Інформуйте ще до огляду, якщо у
-    вас є домашні тварини (оскільки не всі власники приймають домашніх тварин в орендовані
-    квартири), скільки людей збираються жити, чи є у вас неповнолітні діти і в якому
-    віці ви хочете взяти в оренду.</p><p><br></p>
+    Пошук у групах Facebook: </p><p>Вільнюс - <a href="https://www.facebook.com/groups/474634139331294/about/"
+    title="">Butu nuoma Vilniuje be tarpininku</a> (литовською); <a href="https://www.facebook.com/groups/209733365824002/">Foreigners
+    in Vilnius</a> (англійською)</p><p>Каунас -<strong> </strong><a href="https://www.facebook.com/groups/butunuomakaune">Butu
+    nuoma Kaune | Kaunas Housing, Rooms, Flats, Apartments, Sublets</a> (литовською)</p><p>Клайпеда
+    -<strong> </strong><a href="https://www.facebook.com/groups/501175606582292">Butu
+    nuoma klaipeda</a> (литовською)</p><p><strong>Важливо (!):</strong></p><p>- Ні
+    в якому разі не переказуйте гроші за житло, яке ви хочете, до тих пір, поки ви
+    не перевірили його і не підписали договір оренди.</p><p>- Перед тим, як говорити
+    про огляд цікавого житла, обов ''язково з'' ясуйте, чи власники будуть схильні
+    оголошувати місце проживання (Іноді за декларацію додатково стягується податок
+    у розмірі 50 євро/місяць). Це важливо для того, щоб отримати доступ до всіх послуг,
+    наданих муніципалітетом.</p><p>- Інформуйте ще до огляду, якщо у вас є домашні
+    тварини (оскільки не всі власники приймають домашніх тварин в орендовані квартири),
+    скільки людей збираються жити, чи є у вас неповнолітні діти і в якому віці ви
+    хочете взяти в оренду.</p><p><br></p>'
   content_blocks: []
   image: ''
   resources: []
