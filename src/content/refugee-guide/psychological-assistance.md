@@ -16,12 +16,13 @@ questions:
   content_blocks: []
 - title: Відео-консультації з кваліфікованими психологами
   answer: <p>Manodaktaras надає безкоштовну психологічну допомогу населенню України
-    у форматі відео-консультацій з кваліфікованими психологами. </p><p>Для запису
-    на прийом необхідно перейти на сайт <a href="https://www.manodaktaras.lt/klinika/psichologine-pagalba-ukrainos-zmonems/2405"
+    у форматі відео-консультацій з кваліфікованими психологами. Мови консультацій
+    - українська або російська.  </p><p>Для запису на прийом необхідно перейти на
+    сайт <a href="https://www.manodaktaras.lt/klinika/psichologine-pagalba-ukrainos-zmonems/2405"
     title="">www.manodaktaras.lt </a>, створити свій обліковий запис, обрати психолога
-    та час консультації, й записатись на прийом. </p><p>Інструкція українською, як
+    та час консультації, й записатись на прийом.</p><p>Інструкція українською, як
     записатись на безкоштовну консультацію <a href="https://www.manodaktaras.lt/instructions/Instructions_Ukraine.pdf"
-    title="">за посиланням</a>. </p>
+    title="">за посиланням</a>.</p>
   resources: []
   contacts: []
   adresses: []
