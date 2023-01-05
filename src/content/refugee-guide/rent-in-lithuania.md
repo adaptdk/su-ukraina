@@ -26,16 +26,17 @@ questions:
   resources: []
   contacts: []
   adresses: []
-- title: Орендувати житло самостійно. Як знайти житло?
-  answer: <p><strong>На короткий час</strong></p><p>Якщо у вас немає де зупинитися
+- title: Як знайти житло?
+  answer: <p><strong>На короткий час:</strong></p><p>Якщо у вас немає де зупинитися
     в Литві, поки ви шукаєте довгострокове житло, після прибуття можна скористатися
     послугами короткострокової оренди, замовивши проживання в готелях або апартаментах
-    через www.airbnb.com або платформу www.booking.complatforms.</p><p><strong>Надовго</strong></p><p>При
-    самостійному пошуку житла для довгострокової оренди найбільш продуктивним є пошук
-    оголошень в інтернеті і безпосередній контакт з зазначеною контактною особою.</p><p>У
-    пошуках найбільш поширеними і результативними є 2 способи пошуку:</p><p>1) Пошук
-    на популярних сайтах оголошень NT:</p><p><a href="https://ru.aruodas.lt/butu-nuoma/"
-    title="https://ru.aruodas.lt/butu-nuoma/">https://ru.aruodas.lt/butu-nuoma/</a></p><p><a
+    через <a href="https://www.airbnb.com/" title="">www.airbnb.com</a> або платформу
+    <a href="https://www.booking.com/index.en-gb.html?label=gen173nr-1BCAEoggI46AdIM1gEaIgBiAEBmAEJuAEXyAEM2AEB6AEBiAIBqAIDuALi9NmdBsACAdICJGIyMTNiYTgwLWQ3NDUtNDg5MS04NDFmLTc2NmJiM2ZmMDQxMdgCBeACAQ&amp;sid=019ca50924a384c44877faca4981ef47&amp;keep_landing=1&amp;sb_price_type=total&amp;"
+    title="">www.booking.com.</a></p><p><strong>Надовго:</strong></p><p>При самостійному
+    пошуку житла для довгострокової оренди найбільш продуктивним є пошук оголошень
+    в інтернеті і безпосередній контакт з зазначеною контактною особою.</p><p>У пошуках
+    найбільш поширеними і результативними є 2 способи пошуку:</p><p>1) Пошук на популярних
+    сайтах оголошень NT:</p><p><a href="https://ru.aruodas.lt/butu-nuoma/" title="https://ru.aruodas.lt/butu-nuoma/">https://ru.aruodas.lt/butu-nuoma/</a></p><p><a
     href="https://domoplius.lt/ru/" title="https://domoplius.lt/ru/">https://domoplius.lt/ru/</a></p><p><a
     href="https://ru.skelbiu.lt" title="https://ru.skelbiu.lt">https://ru.skelbiu.lt</a></p><p>2)
     Пошук у групі Facebook «<a href="https://www.google.com/url?q=https://www.facebook.com/groups/474634139331294/&amp;sa=D&amp;source=docs&amp;ust=1648811400237652&amp;usg=AOvVaw0jIJdCHhfULUsXpFGLRdeD"
@@ -44,7 +45,7 @@ questions:
     останні пропозиції оренди квартир, які часто навіть не виходять на публіку. Часто
     орендарі розміщують свої пошукові запити та отримують пропозиції оренди індивідуально.
     Крім того, у Facebook з' явилася група «<a href="https://www.facebook.com/groups/209733365824002/">Foreigners
-    in Vilnius</a>».<br></p><p>Інші групи Facebook:</p><p><strong>Каунас:</strong></p><p><a
+    in Vilnius</a>».</p><p>Інші групи Facebook:</p><p><strong>Каунас:</strong></p><p><a
     href="https://www.facebook.com/groups/butunuomakaune">Butu nuoma Kaune | Kaunas
     Housing, Rooms, Flats, Apartments, Sublets</a></p><p><strong>Клайпеда:</strong></p><p><a
     href="https://www.facebook.com/groups/501175606582292">Butu nuoma klaipeda</a></p><p><strong>Важливо
@@ -117,6 +118,8 @@ questions:
 contacts: []
 adresses: []
 icon: key-skeleton
+page_title: ''
+page_description: ''
+resources: []
 
 ---
-У цьому розділі ми надаємо детальну інформацію про оренду житла в Литві: від середніх цін, до найважливіших документів при укладанні договору оренди.
