@@ -1,6 +1,6 @@
 ---
 title: ČIURLIONIS/LYSENKO| QUARTET «ČIURLYS»| ORGANUM
-startDate: 2023-01-15T02:00:00Z
+startDate: 2023-01-15T14:00:00Z
 location: ‏‎Fortepijonų salonas "Organum"‎‏
 endDate: 
 eventType: concert
