@@ -128,8 +128,6 @@ page_description: ''
 resources: []
 
 ---
-Для забезпечення мінімальних потреб і засобів до існування українських біженців у Литві, органи місцевого самоврядування надають соціальну допомогу, що необхідна українцям у важкій ситуації. 
+Всі види соціальні послуги для українців в Литві Ви можете побачити [за посиланням.](https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini/sotsialna-pidtrimka#:\~:text=I%C5%A1skleisti-,%D0%A1%D0%BE%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D1%96%20%D0%BF%D0%BE%D1%81%D0%BB%D1%83%D0%B3%D0%B8,-I%C5%A1skleisti) 
 
-Детальніше про соціальні послуги для українців в Литві [за посиланням. ](https://migracija.lrv.lt/lt/naudinga-informacija/ukraina-ukrayina-ukraina-ukraine/informatsiia-dlia-gromadian-ukrayini/sotsialna-pidtrimka#:\~:text=I%C5%A1skleisti-,%D0%A1%D0%BE%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D1%96%20%D0%BF%D0%BE%D1%81%D0%BB%D1%83%D0%B3%D0%B8,-I%C5%A1skleisti)
-
-_Важливо:_ **Право на соціальну допомогу мають іноземці, яким надано тимчасовий захист, тобто виданий дозвіл на тимчасове проивання в Литовській Республіці у зв'язку з тимчасовим захистом** 
+_Важливо:_ **Право на соціальну допомогу мають іноземці, яким надано тимчасовий захист, тобто виданий дозвіл на тимчасове проивання в Литовській Республіці у зв'язку з тимчасовим захистом**
