@@ -48,6 +48,7 @@ fields:
     required: false
   label: Renginio tiklalapis (Event website)
 pages:
+- src/content/events-ua/ciurlionis-lysenko-quartet-ciurlys-organum.md
 - src/content/events-ua/lorem-ipsum-event.md
 - src/content/events-ua/благодійний-спектакль-хай-буде-весна.md
 - src/content/events-ua/різдвяно-новорічну-зустріч.md
