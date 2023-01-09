@@ -31,30 +31,26 @@ const HelpPage = ({ path, pageContext }) => {
     node_locale,
     pageHeading,
     pageDescription,
-    organisations,
+    organisations: orgs,
     slidingNav,
     breadcrumb: { crumbs },
   } = pageContext;
 
-  const lithuanianOrganisations = organisations.filter((organisation) => {
-    return organisation.location === `Lithuania`;
-  });
-  const foreignOrganisations = organisations.filter((organisation) => {
-    return organisation.location === `Foreign`;
-  });
+  const ltOrgs = orgs.filter(({ location }) => location === `Lithuania`);
+  const foreignOrgs = orgs.filter(({ location }) => location === `Foreign`);
 
   const slidingNavData = [
     {
       title: getTranslatedText(`helpPage.lithuanian`),
       linkId: `lithuanian`,
       icon: `house`,
-      data: lithuanianOrganisations,
+      data: ltOrgs,
     },
     {
       title: getTranslatedText(`helpPage.foreign`),
       linkId: `foreign`,
       icon: `foreign`,
-      data: foreignOrganisations,
+      data: foreignOrgs,
     },
   ];
 
@@ -97,7 +93,7 @@ const HelpPage = ({ path, pageContext }) => {
           </>
         )}
         {!slidingNav && (
-          <CardListSection organisations={organisations} locale={node_locale} />
+          <CardListSection organisations={orgs} locale={node_locale} />
         )}
       </Constraint>
     </Layout>
