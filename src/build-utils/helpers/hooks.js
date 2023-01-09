@@ -133,13 +133,7 @@ const getAllPagesLocalisedValuesByKey = (pages, searchKey) => {
     const locale = curr.node_locale;
     const searchValue = curr[searchKey];
 
-    if (locale === `uk-UA`) {
-      return { ...acc, [id]: { ...acc[id], [`uk-UA`]: searchValue } };
-    }
-    if (locale === `en`) {
-      return { ...acc, [id]: { ...acc[id], en: searchValue } };
-    }
-    return { ...acc, [id]: { ...acc[id], [`lt-LT`]: searchValue } };
+    return { ...acc, [id]: { ...acc[id], [locale]: searchValue } };
   }, {});
 };
 
