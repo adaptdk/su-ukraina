@@ -12,7 +12,7 @@ const Breadcrumbs = ({ crumbs }) => {
 
   return (
     <div className="Breadcrumbs">
-      <Breadcrumb crumbs={formattedCrumbs} hiddenCrumbs={[`/ua/`]} />
+      <Breadcrumb crumbs={formattedCrumbs} hiddenCrumbs={[`/ua/`, `/en/`]} />
     </div>
   );
 };
