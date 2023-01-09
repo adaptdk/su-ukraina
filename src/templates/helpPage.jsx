@@ -46,7 +46,7 @@ const HelpPage = ({ path, pageContext }) => {
   const slidingNavData = [
     {
       title: getTranslatedText(`helpPage.lithuanian`),
-      linkId: `lithuania`,
+      linkId: `lithuanian`,
       icon: `house`,
       data: lithuanianOrganisations,
     },
