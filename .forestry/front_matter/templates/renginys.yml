@@ -48,11 +48,14 @@ fields:
     required: false
   label: Renginio tiklalapis (Event website)
 pages:
+- src/content/events-ua/ciurlionis-lysenko-quartet-ciurlys-organum.md
+- src/content/events-ua/enjoy-japan-way.md
 - src/content/events-ua/lorem-ipsum-event.md
 - src/content/events-ua/благодійний-спектакль-хай-буде-весна.md
 - src/content/events-ua/різдвяно-новорічну-зустріч.md
 - src/content/events-ua/святковий-захід-для-дітей-до-дня-святого-миколая-різдвяна-історія-в-українському-центрі.md
 - src/content/events-ua/шановні-батьки-особливих-діток-запрошуємо-на-безкоштовні-майстер-класи-зі-створення-органайзерів.md
+- src/content/events-ua/щедрий-вечір.md
 - src/content/events/alyona-alyona-koncertas.md
 - src/content/events/amber-food-blokada.md
 - src/content/events/as-priklausau-tik-sau.md

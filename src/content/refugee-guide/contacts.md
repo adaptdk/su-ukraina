@@ -23,15 +23,15 @@ questions:
   - title: "Консульські та міграційні питання "
     answer:
       '<p><strong>Відділ міграції при Міністерстві внутрішніх справ Литовської
-      республіки:</strong></p><p>тел.: <a href="tel:+37052717112">+370 5 271 7112</a>
+      республіки:</strong></p><p>Тел.: <a href="tel:+37052717112">+370 5 271 7112</a>
       (працює в пн-чт 07:30-16:30, пт 07:30-15:15)</p><p>Електронна пошта: <a href="mailto:info@migracija.gov.lt">info@migracija.gov.lt</a></p><p>Офіційна
       сторінка: <a href="http://www.migracija.lrv.lt/">www.migracija.lrv.lt</a></p><p><strong>Посольство
       України в Литві:</strong></p><p>Тел.: <a href="tel:+37052121536">+370 521 21 536</a>
-      (загальний номер); <a href="tel:+37052330782">+370 523 307 82</a> (консульський
-      відділ); <a href="tel:+37065550194">+370 655 501 94</a> (для надзвичайних ситуацій)</p><p>Адреса:
-      <a href="https://www.google.com/url?q=https://www.google.com/maps/place/Teatro%2Bg.%2B4,%2BVilnius%2B03107/@54.6813198,25.2714532,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd94128ee80c7d:0x719bc25d92788d9a!8m2!3d54.6813198!4d25.2736419&amp;sa=D&amp;source=docs&amp;ust=1647605238983823&amp;usg=AOvVaw2u6MN32HosibMaa2fuey7V">Teatro
-      g. 4</a> (Вільнюс)</p><p>Електронна пошта: emb_lt@mfa.gov.ua</p><p>Офіційна сторінка:  <a
-      href="https://lithuania.mfa.gov.ua/" title="https://lithuania.mfa.gov.ua/">https://lithuania.mfa.gov.ua/</a></p><p>Сторінка
+      (загальний номер);</p><p> <a href="tel:+37052330782">+370 523 307 82</a> (консульський
+      відділ);</p><p> <a href="tel:+37065550194">+370 655 501 94</a> (для надзвичайних
+      ситуацій)</p><p>Адреса: <a href="https://www.google.com/url?q=https://www.google.com/maps/place/Teatro%2Bg.%2B4,%2BVilnius%2B03107/@54.6813198,25.2714532,17z/data%3D!3m1!4b1!4m5!3m4!1s0x46dd94128ee80c7d:0x719bc25d92788d9a!8m2!3d54.6813198!4d25.2736419&amp;sa=D&amp;source=docs&amp;ust=1647605238983823&amp;usg=AOvVaw2u6MN32HosibMaa2fuey7V">Teatro
+      g. 4</a> (Вільнюс)</p><p>Електронна пошта: emb_lt@mfa.gov.ua</p><p>Офіційна сторінка:
+      <a href="https://lithuania.mfa.gov.ua/" title="https://lithuania.mfa.gov.ua/">https://lithuania.mfa.gov.ua/</a></p><p>Сторінка
       у Фейсбуці: <a href="https://lithuania.mfa.gov.ua/" title="https://lithuania.mfa.gov.ua/">https://www.facebook.com/ukr.embassy.Lithuania/?ref=bookmarks</a></p>'
     content_blocks: []
     resources: []
