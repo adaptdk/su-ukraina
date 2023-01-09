@@ -4,7 +4,8 @@ const contentModel = require(`../helpers/contentfulContentModel`);
 const {
   getSlidingNavData,
   getPathByLocale,
-  getAllPagesLocalisedSlugs,
+  getCurrentHeroImage,
+  getAllPagesLocalisedValuesByKey,
 } = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
 
@@ -61,42 +62,41 @@ const createModularPages = (result, createPage) => {
     (edge) => edge.node
   );
 
-  const allNodeSlugs = getAllPagesLocalisedSlugs(modularPages);
+  const allNodeSlugs = getAllPagesLocalisedValuesByKey(modularPages, `slug`);
+  const allHeroImages = getAllPagesLocalisedValuesByKey(
+    modularPages,
+    `heroImage`
+  );
 
   modularPages.forEach((modularPage) => {
-    if (
-      modularPage?.slug &&
-      modularPage?.metaTitle &&
-      modularPage?.node_locale
-    ) {
+    const slug = modularPage?.slug;
+    const locale = modularPage?.node_locale;
+    const id = modularPage?.contentful_id;
+
+    if (slug && modularPage?.metaTitle && locale) {
       const navigation = globalNavigation
-        .filter((item) => item.node_locale === modularPage.node_locale)
+        .filter((item) => item.node_locale === locale)
         .shift();
 
-      const currentNodeSlugs = allNodeSlugs[modularPage.contentful_id];
+      const currentNodeSlugs = allNodeSlugs[id];
+      const currentHeroImage = getCurrentHeroImage(allHeroImages, id, locale);
 
       const slidingNavData = getSlidingNavData(modularPage.modules);
-      const pagePath = getPathByLocale(
-        modularPage?.node_locale,
-        modularPage?.slug
-      );
+      const pagePath = getPathByLocale(locale, slug);
 
       createPage({
         path: pagePath,
         component: path.resolve(`./src/templates/modularPage.jsx`),
         context: {
           ...modularPage,
+          heroImage: currentHeroImage,
           currentNodeSlugs,
           navigation,
           slidingNavData,
         },
       });
     } else {
-      logContentfulWarning(
-        `Modular Page`,
-        modularPage.contentful_id,
-        modularPage.node_locale
-      );
+      logContentfulWarning(`Modular Page`, id, locale);
     }
   });
 };

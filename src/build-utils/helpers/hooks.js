@@ -116,25 +116,44 @@ const getOrganisationPagePath = (name, locale, type = `Donation`) => {
 };
 
 /**
- * Get all of the pages' localised slugs. Used for the LanguageSwitch.
+ * Get all of the pages' localised values by key.
+ *
+ * This function is a helper for things like getting all of the pages' slugs
+ * or all of the pages' hero images.
+ * The `searchKey` would be something that the pages would have in the top level,
+ * like `slug`, `heroImage`, `metaTitle` etc.
  *
  * @param {Array} pages All pages queried from Contentful.
- * @returns {Object} Object where each item's key is the `contentful_id` and the value is an object of slugs by locale.
+ * @param {string} searchKey String of what key to search for.
+ * @returns {Object} Object where each item's key is the `contentful_id` and the value is an object of mapped values by locale.
  */
-const getAllPagesLocalisedSlugs = (pages) => {
+const getAllPagesLocalisedValuesByKey = (pages, searchKey) => {
   return pages.reduce((acc, curr) => {
     const id = curr.contentful_id;
     const locale = curr.node_locale;
-    const slug = curr.slug;
+    const searchValue = curr[searchKey];
 
     if (locale === `uk-UA`) {
-      return { ...acc, [id]: { ...acc[id], [`uk-UA`]: slug } };
+      return { ...acc, [id]: { ...acc[id], [`uk-UA`]: searchValue } };
     }
     if (locale === `en`) {
-      return { ...acc, [id]: { ...acc[id], en: slug } };
+      return { ...acc, [id]: { ...acc[id], en: searchValue } };
     }
-    return { ...acc, [id]: { ...acc[id], [`lt-LT`]: slug } };
+    return { ...acc, [id]: { ...acc[id], [`lt-LT`]: searchValue } };
   }, {});
+};
+
+/**
+ * Gets the current locale's hero image or it's fallback.
+ *
+ * @param {object} allHeroImages All hero images from the `getAllPagesLocalisedValuesByKey` hook
+ * @param {string} id Contentful node's ID.
+ * @param {LocaleType} locale
+ * @returns {object} Hero Image
+ */
+const getCurrentHeroImage = (allHeroImages, id, locale) => {
+  const currentNodeImages = allHeroImages[id];
+  return currentNodeImages[locale] || currentNodeImages[`lt-LT`] || null;
 };
 
 module.exports = {
@@ -142,5 +161,6 @@ module.exports = {
   getPathByLocale,
   getHomePagePath,
   getOrganisationPagePath,
-  getAllPagesLocalisedSlugs,
+  getAllPagesLocalisedValuesByKey,
+  getCurrentHeroImage,
 };

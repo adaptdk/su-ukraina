@@ -3,7 +3,7 @@ const path = require(`path`);
 const contentModel = require(`../helpers/contentfulContentModel`);
 const {
   getPathByLocale,
-  getAllPagesLocalisedSlugs,
+  getAllPagesLocalisedValuesByKey,
 } = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
 
@@ -45,17 +45,21 @@ const createHelpPages = (result, createPage) => {
     (edge) => edge.node
   );
 
-  const allNodeSlugs = getAllPagesLocalisedSlugs(helpPages);
+  const allNodeSlugs = getAllPagesLocalisedValuesByKey(helpPages, `slug`);
 
   helpPages.forEach((helpPage) => {
-    if (helpPage?.slug && helpPage?.metaTitle && helpPage?.node_locale) {
+    const slug = helpPage?.slug;
+    const locale = helpPage?.node_locale;
+    const id = helpPage?.contentful_id;
+
+    if (slug && helpPage?.metaTitle && locale) {
       const navigation = globalNavigation
-        .filter((item) => item.node_locale === helpPage.node_locale)
+        .filter((item) => item.node_locale === locale)
         .shift();
 
-      const currentNodeSlugs = allNodeSlugs[helpPage.contentful_id];
+      const currentNodeSlugs = allNodeSlugs[id];
 
-      const pagePath = getPathByLocale(helpPage?.node_locale, helpPage?.slug, {
+      const pagePath = getPathByLocale(locale, slug, {
         lt: `kaip-galiu-padeti`,
         ua: `help`,
       });
@@ -70,11 +74,7 @@ const createHelpPages = (result, createPage) => {
         },
       });
     } else {
-      logContentfulWarning(
-        `Help Page`,
-        helpPage.contentful_id,
-        helpPage.node_locale
-      );
+      logContentfulWarning(`Help Page`, id, locale);
     }
   });
 };

@@ -64,12 +64,14 @@ const createHomePages = (result, createPage) => {
   );
 
   homePages.forEach((homePage) => {
-    if (homePage?.metaTitle && homePage?.node_locale) {
+    const locale = homePage?.node_locale;
+
+    if (homePage?.metaTitle && locale) {
       const navigation = globalNavigation
-        .filter((item) => item.node_locale === homePage.node_locale)
+        .filter((item) => item.node_locale === locale)
         .shift();
 
-      const pagePath = getHomePagePath(homePage.node_locale);
+      const pagePath = getHomePagePath(locale);
 
       createPage({
         path: pagePath,
@@ -80,11 +82,7 @@ const createHomePages = (result, createPage) => {
         },
       });
     } else {
-      logContentfulWarning(
-        `Home Page`,
-        homePage.contentful_id,
-        homePage.node_locale
-      );
+      logContentfulWarning(`Home Page`, homePage.contentful_id, locale);
     }
   });
 };
