@@ -110,6 +110,7 @@ const getOrganisationPagePath = (name, locale, type = `Donation`) => {
       remove: /[*+~.()/'"!:@]/g,
     }) || null;
 
+  // @todo: use HELP_PAGE_PREFIXES here somehow
   const ltPrefix = type === `Donation` ? `aukojimas` : `savanoryste`;
   const uaPrefix = type === `Donation` ? `pozhertvuvannya` : `volonterstvo`;
   const enPrefix = type === `Donation` ? `donation` : `volunteering`;
