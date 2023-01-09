@@ -39,24 +39,28 @@ const getSlidingNavData = (modules) => {
  * @param {lt: String, ua: String, en: String} prefix Optional prefix object for generating page/subpage. No trailing slashes
  * @returns Returns full `path`, eg: `"ua/privacy-policy"`
  */
-const getPathByLocale = (locale, slug, prefix = { lt: ``, ua: ``, en: `` }) => {
+const getPathByLocale = (
+  locale,
+  slug,
+  prefix = { [`lt-LT`]: ``, [`uk-UA`]: ``, en: `` }
+) => {
   if (locale === `lt-LT`) {
-    if (prefix?.lt) {
-      return `${prefix.lt}/${slug}`;
+    if (prefix[locale]) {
+      return `${prefix[locale]}/${slug}`;
     }
     return slug;
   }
 
   if (locale === `uk-UA`) {
-    if (prefix?.ua) {
-      return `ua/${prefix.ua}/${slug}`;
+    if (prefix[locale]) {
+      return `ua/${prefix[locale]}/${slug}`;
     }
     return `ua/${slug}`;
   }
 
   if (locale === `en`) {
-    if (prefix?.en) {
-      return `en/${prefix.en}/${slug}`;
+    if (prefix[locale]) {
+      return `en/${prefix[locale]}/${slug}`;
     }
     return `en/${slug}`;
   }
@@ -107,11 +111,13 @@ const getOrganisationPagePath = (name, locale, type = `Donation`) => {
     }) || null;
 
   const ltPrefix = type === `Donation` ? `aukojimas` : `savanoryste`;
+  const uaPrefix = type === `Donation` ? `pozhertvuvannya` : `volonterstvo`;
+  const enPrefix = type === `Donation` ? `donation` : `volunteering`;
 
   return getPathByLocale(locale, slug, {
     lt: `kaip-galiu-padeti/${ltPrefix}`,
-    ua: `dopomogti`,
-    en: `help`,
+    ua: `dopomoha/${uaPrefix}`,
+    en: `help/${enPrefix}`,
   });
 };
 

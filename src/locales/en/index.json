@@ -47,6 +47,10 @@
   "footer": {
     "pageCoordinate": "Page coordinated by"
   },
+  "helpPage": {
+    "lithuanian": "Lithuanian",
+    "foreign": "Foreign"
+  },
   "contactForm": {
     "title": "Have questions or suggestions?",
     "text": "<need to translate>",

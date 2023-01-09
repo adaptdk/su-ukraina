@@ -19,6 +19,7 @@ import {
   nodeSlugsPropTypes,
 } from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
+import { getTranslatedText } from "../utils/getTranslatedText";
 
 const HelpPage = ({ path, pageContext }) => {
   const {
@@ -44,14 +45,14 @@ const HelpPage = ({ path, pageContext }) => {
 
   const slidingNavData = [
     {
-      title: `Lietuvoje`,
-      linkId: `lietuvoje`,
+      title: getTranslatedText(`helpPage.lithuanian`),
+      linkId: `lithuania`,
       icon: `house`,
       data: lithuanianOrganisations,
     },
     {
-      title: `Užsienyje`,
-      linkId: `uzsienyje`,
+      title: getTranslatedText(`helpPage.foreign`),
+      linkId: `foreign`,
       icon: `foreign`,
       data: foreignOrganisations,
     },

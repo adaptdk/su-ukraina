@@ -5,7 +5,10 @@ const {
   getPathByLocale,
   getAllPagesLocalisedValuesByKey,
 } = require(`../helpers/hooks`);
-const { logContentfulWarning } = require(`../helpers/utils`);
+const {
+  logContentfulWarning,
+  HELP_PAGE_PREFIXES,
+} = require(`../helpers/utils`);
 
 const query = (graphql) => {
   return graphql(`
@@ -58,18 +61,22 @@ const createHelpPages = (result, createPage) => {
         .shift();
 
       const currentNodeSlugs = allNodeSlugs[id];
+      const modifiedSlugs = Object.entries(currentNodeSlugs).reduce(
+        (acc, [key, value]) => {
+          const currentLocalePrefix = HELP_PAGE_PREFIXES[key];
+          return { ...acc, [key]: `${currentLocalePrefix}/${value}` };
+        },
+        {}
+      );
 
-      const pagePath = getPathByLocale(locale, slug, {
-        lt: `kaip-galiu-padeti`,
-        ua: `help`,
-      });
+      const pagePath = getPathByLocale(locale, slug, HELP_PAGE_PREFIXES);
 
       createPage({
         path: pagePath,
         component: path.resolve(`./src/templates/helpPage.jsx`),
         context: {
           ...helpPage,
-          currentNodeSlugs,
+          currentNodeSlugs: modifiedSlugs,
           navigation,
         },
       });

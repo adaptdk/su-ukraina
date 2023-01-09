@@ -47,6 +47,10 @@
   "footer": {
     "pageCoordinate": "Puslapį koordinuoja"
   },
+  "helpPage": {
+    "lithuanian": "Lietuvoje",
+    "foreign": "Užsienyje"
+  },
   "contactForm": {
     "title": "Turite klausimų ar pasiūlymų?",
     "text": "Šio puslapio tikslas pateikti svarbiausią informaciją susijusią su pagalba Ukrainai ir jos žmonėms.",
