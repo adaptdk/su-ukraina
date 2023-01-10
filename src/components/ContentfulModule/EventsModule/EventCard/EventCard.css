@@ -87,6 +87,7 @@
 
       background: var(--c__primary);
       margin-right: 10px;
+      min-width: var(--icon-size);
     }
   }
 
