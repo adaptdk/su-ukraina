@@ -1,14 +1,20 @@
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
-const { getHomePagePath } = require(`../helpers/hooks`);
+const {
+  getHomePagePath,
+  getAllPagesLocalisedValuesByKey,
+  getCurrentNodeValue,
+} = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
+
+const homepageId = `VoE6QU1LhN2Y5h6Tja3fq`;
 
 const query = (graphql) => {
   return graphql(`
   {
     ${contentModel.globalNavigation}
-    allContentfulHomepage(filter: {contentful_id: { eq: "VoE6QU1LhN2Y5h6Tja3fq" }}) {
+    allContentfulHomepage(filter: {contentful_id: { eq: "${homepageId}" }}) {
       edges {
         node {
           id
@@ -63,6 +69,30 @@ const createHomePages = (result, createPage) => {
     (edge) => edge.node
   );
 
+  const allHeroImages = getAllPagesLocalisedValuesByKey(homePages, `heroImage`);
+  const allMainSectionImages = getAllPagesLocalisedValuesByKey(
+    homePages,
+    `mainSectionImage`
+  );
+
+  // @todo: revisit this but honestly quite proud with solution lol
+  const partnerKeys = [
+    `informationPartners`,
+    `contentPartners`,
+    `technologyPartners`,
+    `institutionPartners`,
+  ];
+
+  const allLtPartners = partnerKeys.reduce((acc, curr) => {
+    const allLocalesValues = getAllPagesLocalisedValuesByKey(homePages, curr);
+    const ltLocaleValue = getCurrentNodeValue(
+      allLocalesValues,
+      homepageId,
+      `lt-LT`
+    );
+    return { ...acc, [curr]: ltLocaleValue };
+  }, {});
+
   homePages.forEach((homePage) => {
     const locale = homePage?.node_locale;
 
@@ -71,6 +101,17 @@ const createHomePages = (result, createPage) => {
         .filter((item) => item.node_locale === locale)
         .shift();
 
+      const currentHeroImage = getCurrentNodeValue(
+        allHeroImages,
+        homepageId,
+        locale
+      );
+      const currentMainSectionImage = getCurrentNodeValue(
+        allMainSectionImages,
+        homepageId,
+        locale
+      );
+
       const pagePath = getHomePagePath(locale);
 
       createPage({
@@ -78,11 +119,14 @@ const createHomePages = (result, createPage) => {
         component: path.resolve(`./src/templates/homePage.jsx`),
         context: {
           ...homePage,
+          ...allLtPartners,
+          heroImage: currentHeroImage,
+          mainSectionImage: currentMainSectionImage,
           navigation,
         },
       });
     } else {
-      logContentfulWarning(`Home Page`, homePage.contentful_id, locale);
+      logContentfulWarning(`Home Page`, homepageId, locale);
     }
   });
 };
