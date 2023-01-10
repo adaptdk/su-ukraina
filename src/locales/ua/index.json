@@ -4,9 +4,9 @@
     "copyLinkPopupLabel": "Скопійовано",
     "close": "Закрити",
     "send": "Надіслати",
-    "donate": "<need to translate>",
-    "officialPage": "<need to translate>",
-    "applyForm": "<need to translate>"
+    "donate": "Пожертвуйте",
+    "officialPage": "Офіційний веб-сайт",
+    "applyForm": "Надіслати форму"
   },
   "labels": {
     "navigation": "Навігація",
@@ -25,9 +25,9 @@
   },
   "events": {
     "eventLink": "Посилання на подію",
-    "upcomingEvents": "<need to translate>",
-    "previousEvents": "<need to translate>",
-    "noEvents": "<need to translate>"
+    "upcomingEvents": "Організовані заходи",
+    "previousEvents": "Минулі події",
+    "noEvents": "Наразі немає запланованих подій."
   },
   "placeholders": {
     "name": "Ім'я прізвище",
@@ -36,11 +36,11 @@
     "message": "Введіть свою відповідь тут"
   },
   "partners": {
-    "heading": "<need to translate>",
-    "informationHeading": "<need to translate>",
-    "contentHeading": "<need to translate>",
-    "technologyHeading": "<need to translate>",
-    "institutionHeading": "<need to translate>"
+    "heading": "Партнери проекту",
+    "informationHeading": "Інформаційний",
+    "contentHeading": "Content",
+    "technologyHeading": "Зміст",
+    "institutionHeading": "Інституційний"
   },
   "generic": {
     "privacyPolicy": "Політика конфіденційності"

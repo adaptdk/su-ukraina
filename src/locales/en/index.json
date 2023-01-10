@@ -9,7 +9,7 @@
     "applyForm": "Submit form"
   },
   "labels": {
-    "navigation": "<need to translate>",
+    "navigation": "Navigation",
     "name": "Name",
     "phone": "Phone number",
     "email": "E-mail",
@@ -24,10 +24,10 @@
     "otherInfo": "Other information"
   },
   "events": {
-    "eventLink": "<need to translate>",
-    "upcomingEvents": "<need to translate>",
-    "previousEvents": "<need to translate>",
-    "noEvents": "<need to translate>"
+    "eventLink": "Event link",
+    "upcomingEvents": "Organized events",
+    "previousEvents": "Past events",
+    "noEvents": "The are currently no events upcoming."
   },
   "placeholders": {
     "name": "Name Surname",
@@ -36,11 +36,11 @@
     "message": "Message"
   },
   "partners": {
-    "heading": "<need to translate>",
-    "informationHeading": "<need to translate>",
-    "contentHeading": "<need to translate>",
-    "technologyHeading": "<need to translate>",
-    "institutionHeading": "<need to translate>"
+    "heading": "Project partners",
+    "informationHeading": "Informational",
+    "contentHeading": "Content",
+    "technologyHeading": "Technological",
+    "institutionHeading": "Institutional"
   },
   "generic": {
     "privacyPolicy": "Privacy Policy"
@@ -54,10 +54,10 @@
   },
   "contactForm": {
     "title": "Have questions or suggestions?",
-    "text": "<need to translate>",
-    "subtext": "<need to translate>",
-    "tacAgree": "I read and agree with the",
+    "text": "The purpose of this page is to provide the most important information related to assistance to Ukraine and its people.",
+    "subtext": "If you have ideas on how we can improve your experience and supplement the site's content, please contact us.",
+    "tacAgree": "I have read and agree with the",
     "success": "Your message was successfully sent. Thank you!",
-    "error": "<need to translate>"
+    "error": "Failed to send. Please try again or report technical issues."
   }
 }
