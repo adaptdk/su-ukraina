@@ -1,6 +1,10 @@
 .OrganisationPage {
   padding-bottom: var(--s__alt-padding);
 
+  &__logo {
+    margin-top: var(--s__alt-padding);
+  }
+
   &__actions {
     display: flex;
     padding: var(--s__main-padding) 0;

@@ -33,11 +33,20 @@ const HelpPage = ({ path, pageContext }) => {
     pageDescription,
     organisations: orgs,
     slidingNav,
+    organisationLogos,
     breadcrumb: { crumbs },
   } = pageContext;
 
-  const ltOrgs = orgs.filter(({ location }) => location === `Lithuania`);
-  const foreignOrgs = orgs.filter(({ location }) => location === `Foreign`);
+  const orgsWithLtLogo = orgs.map((org, index) => {
+    return { ...org, organisationLogo: organisationLogos[index] };
+  });
+
+  const ltOrgs = orgsWithLtLogo.filter(
+    ({ location }) => location === `Lithuania`
+  );
+  const foreignOrgs = orgsWithLtLogo.filter(
+    ({ location }) => location === `Foreign`
+  );
 
   const slidingNavData = [
     {
@@ -85,6 +94,7 @@ const HelpPage = ({ path, pageContext }) => {
                 >
                   <CardListSection
                     organisations={item.data}
+                    organisationLogos={organisationLogos}
                     locale={node_locale}
                   />
                 </SlidingNavBlock>
@@ -125,6 +135,7 @@ HelpPage.propTypes = {
       raw: PropTypes.string,
     }),
     organisations: PropTypes.arrayOf(PropTypes.shape(OrganisationPropTypes)),
+    organisationLogos: PropTypes.arrayOf(PropTypes.shape(gatsbyImagePropType)),
   }),
 };
 

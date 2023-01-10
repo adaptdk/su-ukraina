@@ -18,9 +18,10 @@
     "links": "Links"
   },
   "organisation": {
-    "about": "<need to translate>",
-    "purpose": "<need to translate>",
-    "otherInfo": "<need to translate>"
+    "about": "About",
+    "aboutOrg": "About the organisation",
+    "purpose": "Purpose",
+    "otherInfo": "Other information"
   },
   "events": {
     "eventLink": "<need to translate>",

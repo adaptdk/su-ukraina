@@ -15,6 +15,7 @@ import {
   localePropType,
   navigationPropTypes,
 } from "../helpers/genericPropTypes";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const OrganisationPage = ({ path, pageContext }) => {
   const {
@@ -27,6 +28,8 @@ const OrganisationPage = ({ path, pageContext }) => {
     websiteUrl,
     actionUrl,
     organisationType,
+    organisationLogo,
+    currentNodeSlugs,
     breadcrumb: { crumbs },
   } = pageContext;
 
@@ -36,14 +39,20 @@ const OrganisationPage = ({ path, pageContext }) => {
       metaTitle={name || ``}
       metaDescription={``}
       navigation={navigation}
+      currentNodeSlugs={currentNodeSlugs}
       locale={node_locale}
     >
       <Constraint className="OrganisationPage">
         <NavigationGroup crumbs={crumbs} />
+        {organisationLogo && (
+          <div className="OrganisationPage__logo">
+            <GatsbyImage image={getImage(organisationLogo)} alt="" src="" />
+          </div>
+        )}
         {name && <h1>{name}</h1>}
         {description?.raw && (
           <div>
-            <h2>{getTranslatedText(`organisation.about`)}</h2>
+            <h2>{getTranslatedText(`organisation.aboutOrg`)}</h2>
             {formatRichText(description.raw)}
           </div>
         )}

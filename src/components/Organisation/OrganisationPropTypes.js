@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
+import { gatsbyImagePropType } from "../../helpers/genericPropTypes";
 
 const OrganisationPropTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   organisationType: PropTypes.oneOf([`Donation`, `Volunteering`]).isRequired,
+  organisationLogo: PropTypes.shape(gatsbyImagePropType),
   location: PropTypes.oneOf([`Lithuania`, `Foreign`]).isRequired,
   description: PropTypes.shape({
     raw: PropTypes.string,

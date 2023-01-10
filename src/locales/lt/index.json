@@ -18,7 +18,8 @@
     "links": "Nuorodos"
   },
   "organisation": {
-    "about": "Apie organizaciją",
+    "about": "Apie",
+    "aboutOrg": "Apie organizaciją",
     "purpose": "Paskirtis",
     "otherInfo": "Kita informacija"
   },

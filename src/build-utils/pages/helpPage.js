@@ -4,6 +4,7 @@ const contentModel = require(`../helpers/contentfulContentModel`);
 const {
   getPathByLocale,
   getAllPagesLocalisedValuesByKey,
+  getCurrentNodeValue,
 } = require(`../helpers/hooks`);
 const {
   logContentfulWarning,
@@ -49,6 +50,11 @@ const createHelpPages = (result, createPage) => {
   );
 
   const allNodeSlugs = getAllPagesLocalisedValuesByKey(helpPages, `slug`);
+  const allHeroImages = getAllPagesLocalisedValuesByKey(helpPages, `heroImage`);
+  const allOrganisations = getAllPagesLocalisedValuesByKey(
+    helpPages,
+    `organisations`
+  );
 
   helpPages.forEach((helpPage) => {
     const slug = helpPage?.slug;
@@ -61,6 +67,17 @@ const createHelpPages = (result, createPage) => {
         .shift();
 
       const currentNodeSlugs = allNodeSlugs[id];
+      const currentHeroImage = getCurrentNodeValue(allHeroImages, id, locale);
+      const ltOrganisations = getCurrentNodeValue(
+        allOrganisations,
+        id,
+        `lt-LT`
+      );
+
+      const organisationLogos = ltOrganisations.map((org) => {
+        return org.organisationLogo;
+      });
+
       const modifiedSlugs = Object.entries(currentNodeSlugs).reduce(
         (acc, [key, value]) => {
           const currentLocalePrefix = HELP_PAGE_PREFIXES[key];
@@ -76,8 +93,10 @@ const createHelpPages = (result, createPage) => {
         component: path.resolve(`./src/templates/helpPage.jsx`),
         context: {
           ...helpPage,
+          heroImage: currentHeroImage,
           currentNodeSlugs: modifiedSlugs,
           navigation,
+          organisationLogos,
         },
       });
     } else {

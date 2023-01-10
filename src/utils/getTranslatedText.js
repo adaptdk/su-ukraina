@@ -2,6 +2,7 @@ import { getLocaleFromPath } from "../helpers/handlers";
 import LT from "../locales/lt";
 import UA from "../locales/ua";
 import EN from "../locales/en";
+import { getObjectValueByStringPath } from "../build-utils/helpers/utils";
 
 const getTranslations = () => {
   const locale = getLocaleFromPath();
@@ -19,9 +20,6 @@ const getTranslations = () => {
 
 export const getTranslatedText = (path) => {
   const translations = getTranslations();
-  // reduce() referenced from stackoverflow
-  // https://stackoverflow.com/a/43849204
-  return path.split(`.`).reduce((prevValue, currValue) => {
-    return (prevValue && prevValue[currValue]) || null;
-  }, translations);
+
+  return getObjectValueByStringPath(path, translations);
 };

@@ -29,8 +29,6 @@ const FaqPage = ({ path, pageContext }) => {
     breadcrumb: { crumbs },
   } = pageContext;
 
-  console.log({ pageContext });
-
   return (
     <Layout
       pagePath={path}

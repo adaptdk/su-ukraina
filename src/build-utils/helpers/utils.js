@@ -21,7 +21,25 @@ const HELP_PAGE_PREFIXES = {
   en: `help`,
 };
 
+/**
+ * Utility to get nested object values by string path.
+ *
+ * For example if you have an object `a: { b: { c: 3 }}`, passing
+ * in the path as `"a.b.c"` would return the value of `c` - `3`.
+ * @param {string} path String path, for example `item.subitem`.
+ * @param {object} object
+ * @returns {*} Any value of path's key.
+ */
+const getObjectValueByStringPath = (path, object) => {
+  // reduce() referenced from stackoverflow
+  // https://stackoverflow.com/a/43849204
+  return path.split(`.`).reduce((prevValue, currValue) => {
+    return (prevValue && prevValue[currValue]) || null;
+  }, object);
+};
+
 module.exports = {
   logContentfulWarning,
   HELP_PAGE_PREFIXES,
+  getObjectValueByStringPath,
 };

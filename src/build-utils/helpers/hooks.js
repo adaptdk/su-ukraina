@@ -1,5 +1,5 @@
 const slugify = require(`slugify`);
-
+const { getObjectValueByStringPath } = require(`./utils`);
 /**
  * @typedef {"lt-LT" | "uk-UA" | "en"} LocaleType
  */
@@ -92,13 +92,8 @@ const getHomePagePath = (locale) => {
   return null;
 };
 
-/**
- * @param {String} name Name of the organisation.
- * @param {LocaleType} locale
- * @param {"Donation" | "Volunteering"} type Organisation type.
- * @returns {String} Full path, eg.: `ua/organisation/blueyellow`.
- */
-const getOrganisationPagePath = (name, locale, type = `Donation`) => {
+// @todo fix jsdocs for this and organisation page path
+const getOrganisationPageSlug = (name, locale, type = `Donation`) => {
   if (!name) {
     return null;
   }
@@ -111,15 +106,29 @@ const getOrganisationPagePath = (name, locale, type = `Donation`) => {
     }) || null;
 
   // @todo: use HELP_PAGE_PREFIXES here somehow
-  const ltPrefix = type === `Donation` ? `aukojimas` : `savanoryste`;
-  const uaPrefix = type === `Donation` ? `pozhertvuvannya` : `volonterstvo`;
-  const enPrefix = type === `Donation` ? `donation` : `volunteering`;
+  const ltSuffix = type === `Donation` ? `aukojimas` : `savanoryste`;
+  const uaSuffix = type === `Donation` ? `pozhertvuvannya` : `volonterstvo`;
+  const enSuffix = type === `Donation` ? `donation` : `volunteering`;
 
-  return getPathByLocale(locale, slug, {
-    lt: `kaip-galiu-padeti/${ltPrefix}`,
-    ua: `dopomoha/${uaPrefix}`,
-    en: `help/${enPrefix}`,
-  });
+  if (locale === `en`) {
+    return `help/${enSuffix}/${slug}`;
+  }
+
+  if (locale === `uk-UA`) {
+    return `dopomoha/${uaSuffix}/${slug}`;
+  }
+
+  return `kaip-galiu-padeti/${ltSuffix}/${slug}`;
+};
+
+/**
+ * @param {String} name Name of the organisation.
+ * @param {LocaleType} locale
+ * @param {"Donation" | "Volunteering"} type Organisation type.
+ * @returns {String} Full path, eg.: `ua/organisation/blueyellow`.
+ */
+const getOrganisationPagePath = (name, locale, type = `Donation`) => {
+  return getPathByLocale(locale, getOrganisationPageSlug(name, locale, type));
 };
 
 /**
@@ -138,7 +147,7 @@ const getAllPagesLocalisedValuesByKey = (pages, searchKey) => {
   return pages.reduce((acc, curr) => {
     const id = curr.contentful_id;
     const locale = curr.node_locale;
-    const searchValue = curr[searchKey];
+    const searchValue = getObjectValueByStringPath(searchKey, curr);
 
     return { ...acc, [id]: { ...acc[id], [locale]: searchValue } };
   }, {});
@@ -147,21 +156,25 @@ const getAllPagesLocalisedValuesByKey = (pages, searchKey) => {
 /**
  * Gets the current locale's hero image or it's fallback.
  *
- * @param {object} allHeroImages All hero images from the `getAllPagesLocalisedValuesByKey` hook
+ * @param {object} allNodeValues All node values from the `getAllPagesLocalisedValuesByKey` hook
  * @param {string} id Contentful node's ID.
  * @param {LocaleType} locale
- * @returns {object} Hero Image
+ * @returns {*}
  */
-const getCurrentHeroImage = (allHeroImages, id, locale) => {
-  const currentNodeImages = allHeroImages[id];
-  return currentNodeImages[locale] || currentNodeImages[`lt-LT`] || null;
+const getCurrentNodeValue = (allNodeValues, id, locale) => {
+  const currentNodeValues = allNodeValues[id];
+
+  return (
+    currentNodeValues[locale] || currentNodeValues[`lt-LT`] || `kas kurwa yra`
+  );
 };
 
 module.exports = {
   getSlidingNavData,
   getPathByLocale,
   getHomePagePath,
+  getOrganisationPageSlug,
   getOrganisationPagePath,
   getAllPagesLocalisedValuesByKey,
-  getCurrentHeroImage,
+  getCurrentNodeValue,
 };

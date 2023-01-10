@@ -4,7 +4,7 @@ const contentModel = require(`../helpers/contentfulContentModel`);
 const {
   getSlidingNavData,
   getPathByLocale,
-  getCurrentHeroImage,
+  getCurrentNodeValue,
   getAllPagesLocalisedValuesByKey,
 } = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
@@ -79,7 +79,7 @@ const createModularPages = (result, createPage) => {
         .shift();
 
       const currentNodeSlugs = allNodeSlugs[id];
-      const currentHeroImage = getCurrentHeroImage(allHeroImages, id, locale);
+      const currentHeroImage = getCurrentNodeValue(allHeroImages, id, locale);
 
       const slidingNavData = getSlidingNavData(modularPage.modules);
       const pagePath = getPathByLocale(locale, slug);

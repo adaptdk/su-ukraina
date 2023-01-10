@@ -2,7 +2,12 @@ require(`dotenv`).config();
 const path = require(`path`);
 
 const contentModel = require(`../helpers/contentfulContentModel`);
-const { getOrganisationPagePath } = require(`../helpers/hooks`);
+const {
+  getOrganisationPageSlug,
+  getPathByLocale,
+  getAllPagesLocalisedValuesByKey,
+  getCurrentNodeValue,
+} = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
 
 const query = (graphql) => {
@@ -14,6 +19,9 @@ const query = (graphql) => {
         node {
           contentful_id
           ${contentModel.organisation}
+          bigLogo: organisationLogo {
+            gatsbyImageData(height: 100, placeholder: BLURRED, formats: WEBP)
+          }
           node_locale
         }
       }
@@ -30,32 +38,53 @@ const createOrganisationPages = (result, createPage) => {
     (edge) => edge.node
   );
 
-  organisationPages.forEach((organisationPage) => {
-    if (organisationPage?.name && organisationPage?.node_locale) {
+  // @todo: look at this whole commit with second opinion
+  const orgPagesWithSlug = organisationPages.map((page) => {
+    return {
+      ...page,
+      slug: getOrganisationPageSlug(
+        page?.name,
+        page?.node_locale,
+        page?.organisationType
+      ),
+    };
+  });
+
+  const allNodeSlugs = getAllPagesLocalisedValuesByKey(
+    orgPagesWithSlug,
+    `slug`
+  );
+  const allOrganisationLogos = getAllPagesLocalisedValuesByKey(
+    orgPagesWithSlug,
+    `bigLogo`
+  );
+
+  orgPagesWithSlug.forEach((organisationPage) => {
+    const locale = organisationPage?.node_locale;
+    const id = organisationPage?.contentful_id;
+
+    if (organisationPage?.name && locale) {
       const navigation = globalNavigation
-        .filter((item) => item.node_locale === organisationPage.node_locale)
+        .filter((item) => item.node_locale === locale)
         .shift();
 
-      const pagePath = getOrganisationPagePath(
-        organisationPage?.name,
-        organisationPage?.node_locale,
-        organisationPage?.organisationType
-      );
+      const currentNodeSlugs = allNodeSlugs[id];
+      const ltOrgLogo = getCurrentNodeValue(allOrganisationLogos, id, `lt-LT`);
+
+      const pagePath = getPathByLocale(locale, organisationPage?.slug);
 
       createPage({
         path: pagePath,
         component: path.resolve(`./src/templates/organisationPage.jsx`),
         context: {
           ...organisationPage,
+          organisationLogo: ltOrgLogo,
           navigation,
+          currentNodeSlugs,
         },
       });
     } else {
-      logContentfulWarning(
-        `Organisation Page`,
-        organisationPage.contentful_id,
-        organisationPage.node_locale
-      );
+      logContentfulWarning(`Organisation Page`, id, locale);
     }
   });
 };

@@ -7,6 +7,7 @@ import { OrganisationPropTypes } from "./OrganisationPropTypes";
 import OrganisationActions from "./OrganisationActions";
 
 import { localePropType } from "../../helpers/genericPropTypes";
+import { getTranslatedText } from "../../utils/getTranslatedText";
 
 const CardListSection = ({ organisations, locale }) => {
   return (
@@ -32,14 +33,20 @@ const CardListSection = ({ organisations, locale }) => {
               key={id}
             >
               {!!description?.raw && (
-                <CardSection title="Apie" content={description} />
+                <CardSection
+                  title={getTranslatedText(`organisation.about`)}
+                  content={description}
+                />
               )}
               {!!purpose?.raw && (
-                <CardSection title="Paskirtis" content={purpose} />
+                <CardSection
+                  title={getTranslatedText(`organisation.purpose`)}
+                  content={purpose}
+                />
               )}
               {!!otherInformation?.raw && (
                 <CardSection
-                  title="Kita informacija"
+                  title={getTranslatedText(`organisation.otherInfo`)}
                   content={otherInformation}
                 />
               )}
