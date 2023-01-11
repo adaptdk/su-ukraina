@@ -1,7 +1,7 @@
 const slugify = require(`slugify`);
 const { getObjectValueByStringPath } = require(`./utils`);
 /**
- * @typedef {"lt-LT" | "uk-UA" | "en"} LocaleType
+ * @typedef {"lt-LT" | "uk-UA" | "en-US"} LocaleType
  */
 
 /**
@@ -42,7 +42,7 @@ const getSlidingNavData = (modules) => {
 const getPathByLocale = (
   locale,
   slug,
-  prefix = { [`lt-LT`]: ``, [`uk-UA`]: ``, en: `` }
+  prefix = { [`lt-LT`]: ``, [`uk-UA`]: ``, [`en-US`]: `` }
 ) => {
   if (locale === `lt-LT`) {
     if (prefix[locale]) {
@@ -58,7 +58,7 @@ const getPathByLocale = (
     return `ua/${slug}`;
   }
 
-  if (locale === `en`) {
+  if (locale === `en-US`) {
     if (prefix[locale]) {
       return `en/${prefix[locale]}/${slug}`;
     }
@@ -84,8 +84,8 @@ const getHomePagePath = (locale) => {
     return `ua`;
   }
 
-  if (locale === `en`) {
-    return `en`;
+  if (locale === `en-US`) {
+    return `en-US`;
   }
 
   // This will break the build and we want that
@@ -110,7 +110,7 @@ const getOrganisationPageSlug = (name, locale, type = `Donation`) => {
   const uaSuffix = type === `Donation` ? `pozhertvuvannya` : `volonterstvo`;
   const enSuffix = type === `Donation` ? `donation` : `volunteering`;
 
-  if (locale === `en`) {
+  if (locale === `en-US`) {
     return `help/${enSuffix}/${slug}`;
   }
 

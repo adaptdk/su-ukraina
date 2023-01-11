@@ -11,7 +11,7 @@ const getTranslations = () => {
     return UA;
   }
 
-  if (locale === `en`) {
+  if (locale === `en-US`) {
     return EN;
   }
 

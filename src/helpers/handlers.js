@@ -13,7 +13,7 @@ const getLocaleFromPath = () => {
   }
 
   if (pathname.includes(`/en`)) {
-    return `en`;
+    return `en-US`;
   }
 
   return `lt-LT`;

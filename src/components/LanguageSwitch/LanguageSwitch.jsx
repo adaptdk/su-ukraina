@@ -13,7 +13,7 @@ import {
 const LanguageSwitch = ({ currentNodeSlugs }) => {
   const locale = getLocaleFromPath();
   const isUa = locale === `uk-UA`;
-  const isEn = locale === `en`;
+  const isEn = locale === `en-US`;
   const isLt = locale === `lt-LT`;
 
   // @TODO think of a better name
@@ -24,9 +24,9 @@ const LanguageSwitch = ({ currentNodeSlugs }) => {
           return `/ua/${currentNodeSlugs[`uk-UA`]}`;
         }
         return `/ua`;
-      case `en`:
-        if (currentNodeSlugs?.[`en`]) {
-          return `/en/${currentNodeSlugs[`en`]}`;
+      case `en-US`:
+        if (currentNodeSlugs?.[`en-US`]) {
+          return `/en/${currentNodeSlugs[`en-US`]}`;
         }
         return `/en`;
       case `lt-LT`:
@@ -85,7 +85,7 @@ const LanguageSwitch = ({ currentNodeSlugs }) => {
           </li>
           <li className="LanguageSwitch__list-item">
             <Link
-              to={findLocalisedPath(`en`)}
+              to={findLocalisedPath(`en-US`)}
               className={classNames(`LanguageSwitch__language`, {
                 "LanguageSwitch__language--active-list-item": isEn,
               })}

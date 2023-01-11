@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const localePropType = PropTypes.oneOf([`lt-LT`, `uk-UA`, `en`]);
+const localePropType = PropTypes.oneOf([`lt-LT`, `uk-UA`, `en-US`]);
 
 const gatsbyImagePropType = PropTypes.shape({
   gatsbyImageData: PropTypes.shape({
@@ -43,13 +43,13 @@ const navigationPropTypes = PropTypes.shape({
 const nodeSlugsPropTypes = PropTypes.shape({
   [`lt-LT`]: PropTypes.string,
   [`uk-UA`]: PropTypes.string,
-  [`en`]: PropTypes.string,
+  [`en-US`]: PropTypes.string,
 });
 
 const nodeSlugsDefaultProps = {
   [`lt-LT`]: null,
   [`uk-UA`]: null,
-  [`en`]: null,
+  [`en-US`]: null,
 };
 
 export {
