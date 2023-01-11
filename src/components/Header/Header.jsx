@@ -6,17 +6,11 @@ import classNames from "classnames";
 
 // Components.
 import Constraint from "../Constraint";
-import Button from "../Button";
 import LanguageSwitch from "../LanguageSwitch";
 
 // SVGs.
 import Logo from "../../images/logos/su-ukraina--original.svg";
 import { getTranslatedText } from "../../utils/getTranslatedText";
-// Constants.
-import {
-  NAVIGATION_MAIN_MENU,
-  NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP,
-} from "../../constants/Navigation";
 
 // Style.
 import "./Header.css";
@@ -27,9 +21,11 @@ import {
   nodeSlugsPropTypes,
 } from "../../helpers/genericPropTypes";
 
-const Header = ({ noSticky, navigation, locale, currentNodeSlugs }) => {
+const Header = ({ noSticky, navigation, currentNodeSlugs }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
   const { pathname } = useLocation();
+
+  const navigationItems = navigation?.items;
 
   const headerRef = React.useRef(null);
 
@@ -56,10 +52,6 @@ const Header = ({ noSticky, navigation, locale, currentNodeSlugs }) => {
     if (nextPathName === window.location.pathname) {
       menuTriggerElement.click();
     }
-  };
-
-  const mainMenu = () => {
-    return navigation?.items || NAVIGATION_MAIN_MENU;
   };
 
   return (
@@ -91,58 +83,45 @@ const Header = ({ noSticky, navigation, locale, currentNodeSlugs }) => {
         </label>
         <nav className="Header__nav" aria-label="Pagrindinė navigacija">
           <ul className="Header__menu">
-            {mainMenu().map((item) => {
-              return (
-                <li
-                  key={item.id}
-                  className={classNames(`Header__menu-link`, {
-                    "is-active": pathname.includes(item.slug),
-                  })}
-                >
-                  <Link
-                    aria-haspopup={!!item.items}
-                    to={`/${item.slug}`}
-                    onClick={() => {
-                      closeMenuOnSameLink(item.slug);
-                    }}
+            {navigationItems?.at(0) &&
+              navigationItems.map((item) => {
+                return (
+                  <li
+                    key={item.id}
+                    className={classNames(`Header__menu-link`, {
+                      "is-active": pathname.includes(item.slug),
+                    })}
                   >
-                    {item.title}
-                  </Link>
-                  {item.items && (
-                    <ul>
-                      {item.items.map((subItem) => {
-                        return (
-                          <li key={subItem.slug}>
-                            <Link
-                              to={`/${item.slug}/${subItem.slug}`}
-                              onClick={() => {
-                                closeMenuOnSameLink(subItem.slug);
-                              }}
-                            >
-                              {subItem.title}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  )}
-                </li>
-              );
-            })}
-            {locale === `uk-UA` && (
-              <li>
-                <Button
-                  className="Header__menu-help-btn"
-                  startIcon={`edit`}
-                  href={NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.url}
-                  color={`primary`}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {NAVIGATION_EXTERNAL_LINK_PROVIDE_HELP.title}
-                </Button>
-              </li>
-            )}
+                    <Link
+                      aria-haspopup={!!item.items}
+                      to={`/${item.slug}`}
+                      onClick={() => {
+                        closeMenuOnSameLink(item.slug);
+                      }}
+                    >
+                      {item.title}
+                    </Link>
+                    {item.items && (
+                      <ul>
+                        {item.items.map((subItem) => {
+                          return (
+                            <li key={subItem.slug}>
+                              <Link
+                                to={`/${item.slug}/${subItem.slug}`}
+                                onClick={() => {
+                                  closeMenuOnSameLink(subItem.slug);
+                                }}
+                              >
+                                {subItem.title}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
           </ul>
         </nav>
         <LanguageSwitch currentNodeSlugs={currentNodeSlugs} />
