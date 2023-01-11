@@ -8,6 +8,7 @@ import {
   ResourceItemPropTypes,
 } from "./ResourceListModule";
 import { SlidingNavBlockPropTypes } from "./SlidingNavBlock/SlidingNavBlockPropTypes";
+import { HelpSearchPropTypes } from "../HelpSearch";
 
 const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(EventsModulePropTypes),
@@ -16,6 +17,7 @@ const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(SlidingNavBlockPropTypes),
   PropTypes.shape(ResourceItemPropTypes),
   PropTypes.shape(LinkCollectionModulePropTypes),
+  PropTypes.shape(HelpSearchPropTypes),
 ]);
 
 export default ContentfulModulePropTypes;

@@ -44,9 +44,13 @@ const query = (graphql) => {
               ... on ContentfulLinkCollectionModule {
                 ${contentModel.linkCollectionModule}
               }
+              ... on ContentfulHelpSearchModule {
+                ${contentModel.helpSearchModule}
+              }
             }
           }
           includeContactForm
+          fullWidthModules
         }
       }
     }

@@ -7,6 +7,7 @@ import { SlidingNavBlock } from "./SlidingNavBlock";
 import { ResourceListModule, ResourceItem } from "./ResourceListModule";
 import { ContentfulAsset } from "./ContentfulAsset";
 import { LinkCollectionModule } from "./LinkCollectionModule";
+import { HelpSearch } from "../HelpSearch";
 
 const ContentfulModule = ({ module }) => {
   const type = module?.internal?.type || ``;
@@ -37,6 +38,10 @@ const ContentfulModule = ({ module }) => {
 
   if (type === `ContentfulLinkCollectionModule`) {
     return <LinkCollectionModule {...module} />;
+  }
+
+  if (type === `ContentfulHelpSearchModule`) {
+    return <HelpSearch {...module} />;
   }
 
   return null;

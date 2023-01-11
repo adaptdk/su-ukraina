@@ -123,6 +123,10 @@ const resourceListModule = `
   }
 `;
 
+const helpSearchModule = `
+  defaultResultsLang
+`;
+
 const faqItem = `
   question
   answer {
@@ -226,6 +230,7 @@ module.exports = {
   chipModule,
   faqItem,
   resourceListModule,
+  helpSearchModule,
   partner,
   homepagePartners,
   globalNavigation,

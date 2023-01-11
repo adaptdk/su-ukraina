@@ -34,6 +34,7 @@ const ModularPage = ({ path, pageContext }) => {
     modules,
     slidingNavData,
     includeContactForm,
+    fullWidthModules,
     breadcrumb: { crumbs },
   } = pageContext;
 
@@ -67,11 +68,13 @@ const ModularPage = ({ path, pageContext }) => {
       navigation={navigation}
       currentNodeSlugs={currentNodeSlugs}
       locale={node_locale}
+      noStickyHeader={fullWidthModules}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
       <Constraint>
-        <NavigationGroup crumbs={crumbs} />
+        {/* @todo: have a separate check for breadcrumbs and noStickyHeader */}
+        {!fullWidthModules && <NavigationGroup crumbs={crumbs} />}
         {pageHeading && <h1>{pageHeading}</h1>}
         {pageDescription?.raw && formatRichText(pageDescription.raw)}
       </Constraint>
@@ -79,6 +82,7 @@ const ModularPage = ({ path, pageContext }) => {
       <Constraint
         className={classNames({
           "Constraint--sliding-nav": slidingNavData,
+          "Constraint--full-width": fullWidthModules,
         })}
       >
         {slidingNavData && <SlidingNavigation data={slidingNavData} />}
@@ -127,6 +131,7 @@ ModularPage.propTypes = {
       })
     ),
     includeContactForm: PropTypes.bool,
+    fullWidthModules: PropTypes.bool,
   }),
 };
 
@@ -138,6 +143,7 @@ ModularPage.defaultProps = {
     },
     organisations: [],
     includeContactForm: true,
+    fullWidthModules: false,
   },
 };
 

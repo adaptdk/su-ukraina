@@ -18,4 +18,9 @@
       }
     }
   }
+
+  &--full-width {
+    max-width: initial;
+    padding: 0;
+  }
 }
