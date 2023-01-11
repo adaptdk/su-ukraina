@@ -1,5 +1,5 @@
 export const LANG_LT = `lt`;
-export const LANG_EN = `ru`;
+export const LANG_EN = `en`;
 export const LANG_UK = `uk`;
 
 export const POSSIBLE_SEARCH_LANGS = [LANG_LT, LANG_EN, LANG_UK];
