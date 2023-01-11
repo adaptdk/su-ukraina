@@ -10,7 +10,6 @@ module.exports = {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
         useAutoGen: true,
-        autoGenHomeLabel: `Titulinis`,
         crumbLabelUpdates: breadcrumbLabels,
         trailingSlashes: true,
       },

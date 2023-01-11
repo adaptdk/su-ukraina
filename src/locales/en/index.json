@@ -14,6 +14,7 @@
     "footerNav": "Footer navigation"
   },
   "labels": {
+    "homePage": "Home",
     "navigation": "Navigation",
     "name": "Name",
     "phone": "Phone number",
@@ -68,6 +69,7 @@
   },
   "pagePath": {
     "home": "/en/",
+    "homeNoTrailing": "/en",
     "privacyPolicy": "/en/privacy-policy/",
     "donate": "/en/help/donation",
     "volunteer": "/en/help/volunteering/"

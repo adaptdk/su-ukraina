@@ -14,6 +14,7 @@
     "footerNav": "Footer navigation"
   },
   "labels": {
+    "homePage": "Назва",
     "navigation": "Навігація",
     "name": "Ім'я",
     "phone": "Телефон",
@@ -68,6 +69,7 @@
   },
   "pagePath": {
     "home": "/ua/",
+    "homeNoTrailing": "/ua",
     "privacyPolicy": "/ua/polityka-konfideitsinosti/",
     "donate": "/ua/dopomoha/pozhertvuvannya/",
     "volunteer": "/ua/dopomoha/volonterstvo/"

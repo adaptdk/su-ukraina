@@ -14,6 +14,7 @@
     "footerNav": "Poraštės navigacija"
   },
   "labels": {
+    "homePage": "Titulinis",
     "navigation": "Navigacija",
     "name": "Vardas",
     "phone": "Tel. numeris",
@@ -68,6 +69,7 @@
   },
   "pagePath": {
     "home": "/",
+    "homeNoTrailing": "/",
     "privacyPolicy": "/privatumo-politika/",
     "donate": "/kaip-galiu-padeti/aukojimas/",
     "volunteer": "/kaip-galiu-padeti/savanoryste/"
