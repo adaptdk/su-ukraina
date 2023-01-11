@@ -6,7 +6,12 @@
     "send": "Надіслати",
     "donate": "Пожертвуйте",
     "officialPage": "Офіційний веб-сайт",
-    "applyForm": "Надіслати форму"
+    "applyForm": "Надіслати форму",
+    "wantToDonate": "I want to donate",
+    "wantToVolunteer": "I want to volunteer"
+  },
+  "ariaLabels": {
+    "footerNav": "Footer navigation"
   },
   "labels": {
     "navigation": "Навігація",
@@ -46,7 +51,8 @@
     "privacyPolicy": "Політика конфіденційності"
   },
   "footer": {
-    "pageCoordinate": "Внесла внесок на сторінку"
+    "pageCoordinate": "Внесла внесок на сторінку",
+    "sectionTitle": "Every action matters"
   },
   "helpPage": {
     "lithuanian": "в Литві",
@@ -59,5 +65,11 @@
     "tacAgree": "Я прочитав і погоджуюсь",
     "success": "Ваше повідомлення було відправлене. Дякую!",
     "error": "Не вдалося надіслати. Будь ласка, спробуйте ще раз або повідомте технічні проблеми"
+  },
+  "pagePath": {
+    "home": "/ua/",
+    "privacyPolicy": "/ua/polityka-konfideitsinosti/",
+    "donate": "/ua/dopomoha/pozhertvuvannya/",
+    "volunteer": "/ua/dopomoha/volonterstvo/"
   }
 }

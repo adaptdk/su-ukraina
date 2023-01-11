@@ -6,7 +6,12 @@
     "send": "Siųsti",
     "donate": "Paremti",
     "officialPage": "Oficialus Puslapis",
-    "applyForm": "Pildyti formą"
+    "applyForm": "Pildyti formą",
+    "wantToDonate": "Noriu aukoti",
+    "wantToVolunteer": "Noriu tapti savanoriu"
+  },
+  "ariaLabels": {
+    "footerNav": "Poraštės navigacija"
   },
   "labels": {
     "navigation": "Navigacija",
@@ -46,7 +51,8 @@
     "privacyPolicy": "Privatumo politika"
   },
   "footer": {
-    "pageCoordinate": "Puslapį koordinuoja"
+    "pageCoordinate": "Puslapį koordinuoja",
+    "sectionTitle": "Kiekvienas veiksmas svarbus"
   },
   "helpPage": {
     "lithuanian": "Lietuvoje",
@@ -59,5 +65,11 @@
     "tacAgree": "Susipažinau ir sutinku su",
     "success": "Jūsų žinutė išsiųsta. Ačiū!",
     "error": "Išsiųsti nepavyko. Bandykite dar kartą arba praneškite apie technines problemas"
+  },
+  "pagePath": {
+    "home": "/",
+    "privacyPolicy": "/privatumo-politika/",
+    "donate": "/kaip-galiu-padeti/aukojimas/",
+    "volunteer": "/kaip-galiu-padeti/savanoryste/"
   }
 }

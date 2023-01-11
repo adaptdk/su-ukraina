@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 // Styles.
@@ -9,16 +8,6 @@ import "./Footer.css";
 import Button from "../Button";
 import Constraint from "../Constraint";
 
-// Constants.
-import {
-  PATH_HOW_TO_DONATE,
-  PATH_HOW_TO_VOLUNTEER,
-  ICON_DONATE,
-  ICON_VOLUNTEER,
-  TEXT_WANT_TO_DONATE,
-  TEXT_WANT_TO_VOLUNTEER,
-} from "../../constants/Footer";
-
 // SVGs.
 import SuUkrainaWhite from "../../images/logos/su-ukraina--secondary.svg";
 import Adapt from "../../images/logos/adapt.svg";
@@ -27,34 +16,32 @@ import { getTranslatedText } from "../../utils/getTranslatedText";
 import { localePropType } from "../../helpers/genericPropTypes";
 
 const Footer = ({ locale }) => {
-  const altFooter = locale !== `lt-LT`;
+  const isLt = locale === `lt-LT`;
 
   return (
     <footer className="Footer">
       <Constraint>
-        {!altFooter && (
-          <div className="Footer__cta-section">
-            <div className="Footer__cta-section-title">
-              Kiekvienas veiksmas svarbus
-            </div>
-            <div className="Footer__cta-section-actions">
-              <Button
-                to={PATH_HOW_TO_DONATE}
-                startIcon={ICON_DONATE}
-                color={`secondary`}
-              >
-                {TEXT_WANT_TO_DONATE}
-              </Button>
-              <Button
-                to={PATH_HOW_TO_VOLUNTEER}
-                startIcon={ICON_VOLUNTEER}
-                color={`secondary`}
-              >
-                {TEXT_WANT_TO_VOLUNTEER}
-              </Button>
-            </div>
+        <div className="Footer__cta-section">
+          <div className="Footer__cta-section-title">
+            {getTranslatedText(`footer.sectionTitle`)}
           </div>
-        )}
+          <div className="Footer__cta-section-actions">
+            <Button
+              to={getTranslatedText(`pagePath.donate`)}
+              startIcon={`donate`}
+              color={`secondary`}
+            >
+              {getTranslatedText(`actions.wantToDonate`)}
+            </Button>
+            <Button
+              to={getTranslatedText(`pagePath.volunteer`)}
+              startIcon={`volunteer`}
+              color={`secondary`}
+            >
+              {getTranslatedText(`actions.wantToVolunteer`)}
+            </Button>
+          </div>
+        </div>
         <div className="Footer__menus">
           <p>
             <img
@@ -66,19 +53,18 @@ const Footer = ({ locale }) => {
             />
           </p>
           <p>
-            <nav className="Footer__nav" aria-label="Poraštės navigacija">
+            <nav
+              className="Footer__nav"
+              aria-label={getTranslatedText(`ariaLabels.footerNav`)}
+            >
               <ul className="Footer__menu">
-                {!altFooter && (
+                {isLt && (
                   <li>
                     <Link to="/apie-mus/">Apie mus</Link>
                   </li>
                 )}
                 <li>
-                  <Link
-                    to={
-                      altFooter ? `/ua/privacy-policy/` : `/privatumo-politika`
-                    }
-                  >
+                  <Link to={getTranslatedText(`pagePath.privacyPolicy`)}>
                     {getTranslatedText(`generic.privacyPolicy`)}
                   </Link>
                 </li>
@@ -119,7 +105,6 @@ const Footer = ({ locale }) => {
 };
 
 Footer.propTypes = {
-  altFooter: PropTypes.bool,
   locale: localePropType.isRequired,
 };
 

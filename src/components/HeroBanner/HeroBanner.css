@@ -69,7 +69,8 @@
   &__content .Constraint {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: var(--s__main-padding);
+    justify-content: center;
   }
 
   @media (min-width: 40rem) {

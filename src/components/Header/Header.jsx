@@ -11,7 +11,7 @@ import LanguageSwitch from "../LanguageSwitch";
 
 // SVGs.
 import Logo from "../../images/logos/su-ukraina--original.svg";
-
+import { getTranslatedText } from "../../utils/getTranslatedText";
 // Constants.
 import {
   NAVIGATION_MAIN_MENU,
@@ -73,7 +73,10 @@ const Header = ({ noSticky, navigation, locale, currentNodeSlugs }) => {
         <style>{`:root { --header-height: ${headerHeight}px; }`}</style>
       )}
       <Constraint className="Header__content">
-        <Link className="Header__logo-wrapper" to="/">
+        <Link
+          className="Header__logo-wrapper"
+          to={getTranslatedText(`pagePath.home`)}
+        >
           <img
             className="Header__logo"
             src={Logo}

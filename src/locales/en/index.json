@@ -6,7 +6,12 @@
     "send": "Send",
     "donate": "Donate",
     "officialPage": "Official Page",
-    "applyForm": "Submit form"
+    "applyForm": "Submit form",
+    "wantToDonate": "I want to donate",
+    "wantToVolunteer": "I want to volunteer"
+  },
+  "ariaLabels": {
+    "footerNav": "Footer navigation"
   },
   "labels": {
     "navigation": "Navigation",
@@ -46,7 +51,8 @@
     "privacyPolicy": "Privacy Policy"
   },
   "footer": {
-    "pageCoordinate": "Page coordinated by"
+    "pageCoordinate": "Page coordinated by",
+    "sectionTitle": "Every action matters"
   },
   "helpPage": {
     "lithuanian": "Lithuanian",
@@ -59,5 +65,11 @@
     "tacAgree": "I have read and agree with the",
     "success": "Your message was successfully sent. Thank you!",
     "error": "Failed to send. Please try again or report technical issues."
+  },
+  "pagePath": {
+    "home": "/en/",
+    "privacyPolicy": "/en/privacy-policy/",
+    "donate": "/en/help/donation",
+    "volunteer": "/en/help/volunteering/"
   }
 }
