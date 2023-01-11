@@ -85,7 +85,7 @@ const getHomePagePath = (locale) => {
   }
 
   if (locale === `en-US`) {
-    return `en-US`;
+    return `en`;
   }
 
   // This will break the build and we want that
