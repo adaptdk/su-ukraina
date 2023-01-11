@@ -172,7 +172,7 @@ const HomePage = ({ path, pageContext }) => {
                           key={i}
                           title={partner.title}
                           logo={partner.logo}
-                          website={partner.website}
+                          website={partner.url}
                         />
                       );
                     })}
