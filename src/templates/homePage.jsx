@@ -101,6 +101,7 @@ const HomePage = ({ path, pageContext }) => {
           <PromoLine
             title={promoLine?.heading}
             titleLink={promoLine?.titleLink}
+            subtitle={promoLine?.subheading}
             large={true}
           >
             {promoLine?.linkButtons?.at(0) &&
