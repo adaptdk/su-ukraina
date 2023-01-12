@@ -220,7 +220,7 @@ const pageData = `
 `;
 
 const promoLine = `
-  allContentfulPromoLineModule(filter: { contentful_id: { eq: 1zlccw24eib2cd3wTXRHfk" }}) {
+  allContentfulPromoLineModule(filter: { contentful_id: { eq: "1zlccw24eib2cd3wTXRHfk" }}) {
     edges {
       node {
         id
