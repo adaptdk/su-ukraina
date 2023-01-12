@@ -22,6 +22,7 @@ const query = (graphql) => {
           node_locale
           ${contentModel.seo}
           heroTitle
+          heroDescription
           heroImage {
             gatsbyImageData(
               formats: WEBP

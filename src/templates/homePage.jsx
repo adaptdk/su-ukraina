@@ -33,6 +33,7 @@ const HomePage = ({ path, pageContext }) => {
     metaDescription,
     heroImage,
     heroTitle,
+    heroDescription,
     heroCtaCards,
     mainSectionHeading,
     mainSectionImage,
@@ -77,7 +78,7 @@ const HomePage = ({ path, pageContext }) => {
             image={getImage(heroImage)}
             alt=""
           />
-          <HeroBanner title={heroTitle}>
+          <HeroBanner title={heroTitle} subtitle={heroDescription}>
             <Constraint className="HeroBanner__inner">
               {heroCtaCards?.at(0) &&
                 heroCtaCards.map((item) => {
@@ -205,6 +206,7 @@ HomePage.propTypes = {
     metaTitle: PropTypes.string.isRequired,
     metaDescription: PropTypes.string.isRequired,
     heroTitle: PropTypes.string.isRequired,
+    heroDescription: PropTypes.string.isRequired,
     heroImage: gatsbyImagePropType.isRequired,
     heroCtaCards: PropTypes.arrayOf(
       PropTypes.shape({
