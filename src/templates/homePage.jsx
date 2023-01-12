@@ -8,15 +8,12 @@ import Button from "../components/Button";
 import LinkCollectionWithImage from "../components/LinkCollectionWithImage";
 import PartnerList from "../components/PartnerList";
 import Partner from "../components/Partner";
-import {
-  NAVIGATION_ITEM_REFUGEE_GUIDE,
-  NAVIGATION_MAIN_MENU_ALT,
-} from "../constants/Navigation";
 
 import {
   gatsbyImagePropType,
   localePropType,
   navigationPropTypes,
+  promoLinePropTypes,
 } from "../helpers/genericPropTypes";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Constraint from "../components/Constraint";
@@ -42,6 +39,7 @@ const HomePage = ({ path, pageContext }) => {
     contentPartners,
     technologyPartners,
     institutionPartners,
+    promoLine,
   } = pageContext;
 
   const partners = [
@@ -70,6 +68,7 @@ const HomePage = ({ path, pageContext }) => {
       metaDescription={metaDescription}
       navigation={navigation}
       locale={node_locale}
+      promoLine={promoLine}
     >
       {heroImage && (
         <Section className="HeroSection">
@@ -96,29 +95,32 @@ const HomePage = ({ path, pageContext }) => {
         </Section>
       )}
 
-      {/* @todo: connect to contentful */}
-      <Section>
-        <PromoLine
-          title="Вся важлива інформація для громадян України"
-          titleLink={NAVIGATION_ITEM_REFUGEE_GUIDE.slug}
-          large={true}
-        >
-          {NAVIGATION_MAIN_MENU_ALT.map((item) => {
-            return (
-              <Button
-                key={item.slug}
-                endIcon={`arrow-blue`}
-                to={item.slug}
-                color={`secondary`}
-                target="_blank"
-                rel="noopener"
-              >
-                {item.altTitle || item.title}
-              </Button>
-            );
-          })}
-        </PromoLine>
-      </Section>
+      {promoLine && (
+        <Section>
+          <PromoLine
+            title={promoLine?.heading}
+            titleLink={promoLine?.titleLink}
+            large={true}
+          >
+            {promoLine?.linkButtons?.at(0) &&
+              promoLine?.linkButtons.map((item) => {
+                return (
+                  <Button
+                    key={item.id}
+                    endIcon={`arrow-blue`}
+                    to={item.url}
+                    color={`secondary`}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {item.label}
+                    {item?.sublabel && <span>{item.sublabel}</span>}
+                  </Button>
+                );
+              })}
+          </PromoLine>
+        </Section>
+      )}
 
       {mainSectionLinks && mainSectionHeading && (
         <Section className="BeVigilantSection">
@@ -201,6 +203,7 @@ HomePage.propTypes = {
   path: PropTypes.string.isRequired,
   pageContext: PropTypes.shape({
     navigation: navigationPropTypes.isRequired,
+    promoLine: promoLinePropTypes,
     id: PropTypes.string.isRequired,
     node_locale: localePropType.isRequired,
     metaTitle: PropTypes.string.isRequired,

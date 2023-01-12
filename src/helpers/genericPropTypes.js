@@ -40,6 +40,20 @@ const navigationPropTypes = PropTypes.shape({
   node_locale: localePropType.isRequired,
 });
 
+const promoLinePropTypes = PropTypes.shape({
+  heading: PropTypes.string.isRequired,
+  headingLink: PropTypes.string,
+  subheading: PropTypes.string,
+  linkButton: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      url: PropTypes.string,
+      sublabel: PropTypes.string,
+    })
+  ),
+});
+
 const nodeSlugsPropTypes = PropTypes.shape({
   [`lt-LT`]: PropTypes.string,
   [`uk-UA`]: PropTypes.string,
@@ -56,6 +70,7 @@ export {
   localePropType,
   gatsbyImagePropType,
   navigationPropTypes,
+  promoLinePropTypes,
   nodeSlugsPropTypes,
   nodeSlugsDefaultProps,
 };

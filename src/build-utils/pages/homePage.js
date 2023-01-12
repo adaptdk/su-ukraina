@@ -14,6 +14,7 @@ const query = (graphql) => {
   return graphql(`
   {
     ${contentModel.globalNavigation}
+    ${contentModel.promoLine}
     allContentfulHomepage(filter: {contentful_id: { eq: "${homepageId}" }}) {
       edges {
         node {
@@ -69,6 +70,9 @@ const createHomePages = (result, createPage) => {
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
     (edge) => edge.node
   );
+  const globalPromoLine = result.data.allContentfulPromoLineModule.edges.map(
+    (edge) => edge.node
+  );
 
   const allHeroImages = getAllPagesLocalisedValuesByKey(homePages, `heroImage`);
   const allMainSectionImages = getAllPagesLocalisedValuesByKey(
@@ -101,6 +105,9 @@ const createHomePages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === locale)
         .shift();
+      const promoLine = globalPromoLine.filter(
+        (item) => item.node_locale === locale
+      );
 
       const currentHeroImage = getCurrentNodeValue(
         allHeroImages,
@@ -124,6 +131,7 @@ const createHomePages = (result, createPage) => {
           heroImage: currentHeroImage,
           mainSectionImage: currentMainSectionImage,
           navigation,
+          promoLine,
         },
       });
     } else {

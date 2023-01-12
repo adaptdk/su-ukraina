@@ -11,6 +11,7 @@ import {
   localePropType,
   navigationPropTypes,
   nodeSlugsPropTypes,
+  promoLinePropTypes,
 } from "../helpers/genericPropTypes";
 
 const FaqPage = ({ path, pageContext }) => {
@@ -26,6 +27,7 @@ const FaqPage = ({ path, pageContext }) => {
     content,
     categories,
     rootPath,
+    promoLine,
     breadcrumb: { crumbs },
   } = pageContext;
 
@@ -37,6 +39,7 @@ const FaqPage = ({ path, pageContext }) => {
       navigation={navigation}
       locale={node_locale}
       currentNodeSlugs={currentNodeSlugs}
+      promoLine={promoLine}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -66,6 +69,7 @@ FaqPage.propTypes = {
     }).isRequired,
     currentNodeSlugs: nodeSlugsPropTypes.isRequired,
     navigation: navigationPropTypes.isRequired,
+    promoLine: promoLinePropTypes,
     node_locale: localePropType.isRequired,
     id: PropTypes.string.isRequired,
     rootPath: PropTypes.string.isRequired,

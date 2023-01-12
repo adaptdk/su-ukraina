@@ -7,6 +7,7 @@ const query = (graphql) => {
   return graphql(`
   {
     ${contentModel.globalNavigation}
+    ${contentModel.promoLine}
     allContentfulFaqPage(filter: { node_locale: { eq: "lt-LT" } }) {
       edges {
         node {
@@ -51,6 +52,9 @@ const createFaqPages = (result, createPage) => {
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
     (edge) => edge.node
   );
+  const globalPromoLine = result.data.allContentfulPromoLineModule.edges.map(
+    (edge) => edge.node
+  );
 
   faqPages.forEach((faqPage) => {
     if (
@@ -61,6 +65,9 @@ const createFaqPages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === faqPage.forceTranslate)
         .shift();
+      const promoLine = globalPromoLine.filter(
+        (item) => item.node_locale === faqPage.forceTranslate
+      );
 
       const rootPath = getPathByLocale(faqPage?.forceTranslate, faqPage?.slug);
 
@@ -74,6 +81,7 @@ const createFaqPages = (result, createPage) => {
             ...faqCategory,
             categories: faqPage?.categories || [],
             navigation,
+            promoLine,
             rootPath,
           },
         });

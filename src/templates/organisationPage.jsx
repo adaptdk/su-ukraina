@@ -14,6 +14,7 @@ import "../components/Organisation/OrganisationPage.css";
 import {
   localePropType,
   navigationPropTypes,
+  promoLinePropTypes,
 } from "../helpers/genericPropTypes";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -30,6 +31,7 @@ const OrganisationPage = ({ path, pageContext }) => {
     organisationType,
     organisationLogo,
     currentNodeSlugs,
+    promoLine,
     breadcrumb: { crumbs },
   } = pageContext;
 
@@ -41,6 +43,7 @@ const OrganisationPage = ({ path, pageContext }) => {
       navigation={navigation}
       currentNodeSlugs={currentNodeSlugs}
       locale={node_locale}
+      promoLine={promoLine}
     >
       <Constraint className="OrganisationPage">
         <NavigationGroup crumbs={crumbs} />
@@ -81,6 +84,7 @@ const OrganisationPage = ({ path, pageContext }) => {
 const organisationPageContext = {
   ...OrganisationPropTypes,
   navigation: navigationPropTypes.isRequired,
+  promoLine: promoLinePropTypes,
   node_locale: localePropType.isRequired,
   breadcrumb: PropTypes.shape({
     crumbs: PropTypes.arrayOf(

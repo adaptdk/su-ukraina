@@ -14,6 +14,7 @@ const query = (graphql) => {
   return graphql(`
   {
     ${contentModel.globalNavigation}
+    ${contentModel.promoLine}
     allContentfulOrganisation {
       edges {
         node {
@@ -35,6 +36,9 @@ const createOrganisationPages = (result, createPage) => {
     (edge) => edge.node
   );
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
+    (edge) => edge.node
+  );
+  const globalPromoLine = result.data.allContentfulPromoLineModule.edges.map(
     (edge) => edge.node
   );
 
@@ -67,6 +71,9 @@ const createOrganisationPages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === locale)
         .shift();
+      const promoLine = globalPromoLine.filter(
+        (item) => item.node_locale === locale
+      );
 
       const currentNodeSlugs = allNodeSlugs[id];
       const ltOrgLogo = getCurrentNodeValue(allOrganisationLogos, id, `lt-LT`);
@@ -80,6 +87,7 @@ const createOrganisationPages = (result, createPage) => {
           ...organisationPage,
           organisationLogo: ltOrgLogo,
           navigation,
+          promoLine,
           currentNodeSlugs,
         },
       });

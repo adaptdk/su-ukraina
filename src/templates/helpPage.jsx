@@ -17,6 +17,7 @@ import {
   localePropType,
   navigationPropTypes,
   nodeSlugsPropTypes,
+  promoLinePropTypes,
 } from "../helpers/genericPropTypes";
 import { formatRichText } from "../helpers/formatting";
 import { getTranslatedText } from "../utils/getTranslatedText";
@@ -34,6 +35,7 @@ const HelpPage = ({ path, pageContext }) => {
     organisations: orgs,
     slidingNav,
     organisationLogos,
+    promoLine,
     breadcrumb: { crumbs },
   } = pageContext;
 
@@ -71,6 +73,7 @@ const HelpPage = ({ path, pageContext }) => {
       navigation={navigation}
       locale={node_locale}
       currentNodeSlugs={currentNodeSlugs}
+      promoLine={promoLine}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -123,6 +126,7 @@ HelpPage.propTypes = {
     }).isRequired,
     currentNodeSlugs: nodeSlugsPropTypes.isRequired,
     navigation: navigationPropTypes.isRequired,
+    promoLine: promoLinePropTypes,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     slidingNav: PropTypes.bool.isRequired,

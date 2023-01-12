@@ -20,6 +20,7 @@ const link = `
   id
   label
   url
+  sublabel
 `;
 
 const linkCollectionModule = `
@@ -218,6 +219,26 @@ const pageData = `
   }
 `;
 
+const promoLine = `
+  allContentfulPromoLineModule(filter: { contentful_id: { eq: 1zlccw24eib2cd3wTXRHfk" }}) {
+    edges {
+      node {
+        id
+        node_locale
+        contentful_id
+        heading
+        subheading
+        headingLink
+        linkButtons {
+          ... on ContentfulLink {
+            ${link}
+          }
+        }
+      }
+    }
+  }
+`;
+
 module.exports = {
   hero,
   seo,
@@ -235,4 +256,5 @@ module.exports = {
   homepagePartners,
   globalNavigation,
   pageData,
+  promoLine,
 };

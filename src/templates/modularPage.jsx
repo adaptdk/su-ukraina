@@ -19,6 +19,7 @@ import {
   localePropType,
   navigationPropTypes,
   nodeSlugsPropTypes,
+  promoLinePropTypes,
 } from "../helpers/genericPropTypes";
 
 const ModularPage = ({ path, pageContext }) => {
@@ -35,6 +36,7 @@ const ModularPage = ({ path, pageContext }) => {
     slidingNavData,
     includeContactForm,
     fullWidthModules,
+    promoLine,
     breadcrumb: { crumbs },
   } = pageContext;
 
@@ -69,6 +71,7 @@ const ModularPage = ({ path, pageContext }) => {
       currentNodeSlugs={currentNodeSlugs}
       locale={node_locale}
       noStickyHeader={fullWidthModules}
+      promoLine={promoLine}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -113,6 +116,7 @@ ModularPage.propTypes = {
     }).isRequired,
     currentNodeSlugs: nodeSlugsPropTypes.isRequired,
     navigation: navigationPropTypes.isRequired,
+    promoLine: promoLinePropTypes,
     node_locale: localePropType.isRequired,
     id: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,

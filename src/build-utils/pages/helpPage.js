@@ -15,6 +15,7 @@ const query = (graphql) => {
   return graphql(`
   {
     ${contentModel.globalNavigation}
+    ${contentModel.promoLine}
     allContentfulHelpPage {
       edges {
         node {
@@ -48,7 +49,9 @@ const createHelpPages = (result, createPage) => {
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
     (edge) => edge.node
   );
-
+  const globalPromoLine = result.data.allContentfulPromoLineModule.edges.map(
+    (edge) => edge.node
+  );
   const allNodeSlugs = getAllPagesLocalisedValuesByKey(helpPages, `slug`);
   const allHeroImages = getAllPagesLocalisedValuesByKey(helpPages, `heroImage`);
   const allOrganisations = getAllPagesLocalisedValuesByKey(
@@ -65,6 +68,9 @@ const createHelpPages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === locale)
         .shift();
+      const promoLine = globalPromoLine.filter(
+        (item) => item.node_locale === locale
+      );
 
       const currentNodeSlugs = allNodeSlugs[id];
       const currentHeroImage = getCurrentNodeValue(allHeroImages, id, locale);
@@ -96,6 +102,7 @@ const createHelpPages = (result, createPage) => {
           heroImage: currentHeroImage,
           currentNodeSlugs: modifiedSlugs,
           navigation,
+          promoLine,
           organisationLogos,
         },
       });

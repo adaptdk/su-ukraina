@@ -13,6 +13,7 @@ const query = (graphql) => {
   return graphql(`
   {
     ${contentModel.globalNavigation}
+    ${contentModel.promoLine}
     allContentfulModularPage {
       edges {
         node {
@@ -65,6 +66,9 @@ const createModularPages = (result, createPage) => {
   const globalNavigation = result.data.allContentfulNavigation.edges.map(
     (edge) => edge.node
   );
+  const globalPromoLine = result.data.allContentfulPromoLineModule.edges.map(
+    (edge) => edge.node
+  );
 
   const allNodeSlugs = getAllPagesLocalisedValuesByKey(modularPages, `slug`);
   const allHeroImages = getAllPagesLocalisedValuesByKey(
@@ -81,6 +85,9 @@ const createModularPages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === locale)
         .shift();
+      const promoLine = globalPromoLine.filter(
+        (item) => item.node_locale === locale
+      );
 
       const currentNodeSlugs = allNodeSlugs[id];
       const currentHeroImage = getCurrentNodeValue(allHeroImages, id, locale);
@@ -96,6 +103,7 @@ const createModularPages = (result, createPage) => {
           heroImage: currentHeroImage,
           currentNodeSlugs,
           navigation,
+          promoLine,
           slidingNavData,
         },
       });

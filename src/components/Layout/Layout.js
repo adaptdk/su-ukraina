@@ -10,12 +10,6 @@ import Section from "../Section";
 import PromoLine from "../PromoLine";
 import Button from "../Button";
 
-// Constants.
-import {
-  NAVIGATION_ITEM_HELP,
-  NAVIGATION_MAIN_MENU_ALT,
-} from "../../constants/Navigation";
-
 import "./Layout.css";
 import PageTitle from "../PageTitle";
 import {
@@ -23,6 +17,7 @@ import {
   navigationPropTypes,
   nodeSlugsDefaultProps,
   nodeSlugsPropTypes,
+  promoLinePropTypes,
 } from "../../helpers/genericPropTypes";
 
 const Layout = ({
@@ -35,6 +30,7 @@ const Layout = ({
   navigation,
   locale,
   currentNodeSlugs,
+  promoLine,
 }) => {
   return (
     <div className="Layout">
@@ -46,28 +42,28 @@ const Layout = ({
         locale={locale}
         currentNodeSlugs={currentNodeSlugs}
       />
-      {locale === `lt-LT` && (
-        // @todo: connect to contentful
+      {promoLine && (
         <PromoLine
-          title="Вся важлива інформація для громадян України"
-          subtitle="Svarbiausia informacija Ukrainos piliečiams"
-          titleLink={NAVIGATION_ITEM_HELP.slug}
+          title={promoLine?.heading}
+          subtitle={promoLine?.subheading}
+          titleLink={promoLine?.titleLink}
         >
-          {NAVIGATION_MAIN_MENU_ALT.map((item) => {
-            return (
-              <Button
-                key={item.slug}
-                endIcon={`arrow-blue`}
-                to={item.slug}
-                color={`secondary`}
-                target="_blank"
-                rel="noopener"
-              >
-                {item.altTitle || item.title}
-                <span>{item.translation}</span>
-              </Button>
-            );
-          })}
+          {promoLine?.linkButtons?.at(0) &&
+            promoLine?.linkButtons.map((item) => {
+              return (
+                <Button
+                  key={item.id}
+                  endIcon={`arrow-blue`}
+                  to={item.url}
+                  color={`secondary`}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {item.label}
+                  {item?.sublabel && <span>{item.sublabel}</span>}
+                </Button>
+              );
+            })}
         </PromoLine>
       )}
       <main>{children}</main>
@@ -93,6 +89,7 @@ Layout.propTypes = {
   noStickyHeader: PropTypes.bool,
   includeContactForm: PropTypes.bool,
   navigation: navigationPropTypes.isRequired,
+  promoLine: promoLinePropTypes,
   locale: localePropType.isRequired,
   currentNodeSlugs: nodeSlugsPropTypes,
 };
