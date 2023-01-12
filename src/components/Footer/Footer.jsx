@@ -88,15 +88,6 @@ const Footer = ({ locale }) => {
             >
               <img src={Adapt} alt="Adapt LT logo" width="93" height="15" />
             </a>
-            {` `}
-            <a href="https://laisves.tv" rel="noopener" target="_blank">
-              <img
-                src={LaisvesTv}
-                alt="Laisvės TV logo"
-                width="49"
-                height="49"
-              />
-            </a>
           </p>
         </div>
       </Constraint>

@@ -45,6 +45,7 @@
 
     p {
       margin: 0 auto;
+      margin-bottom: calc(var(--s__unit) * 2);
     }
 
     @media (min-width: 40rem) {
