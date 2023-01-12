@@ -283,7 +283,7 @@ const LangSwitcher = ({ resultsLang, handleSearchLangChange, name }) => {
               {lang
                 .toUpperCase()
                 .replace(`LT`, `Lietuvių`)
-                .replace(`RU`, `Русский`)
+                .replace(`EN`, `English`)
                 .replace(`UK`, `Українська`)}
             </span>
             <span>{lang.toUpperCase()}</span>

@@ -57,8 +57,8 @@ export const TRANSLATIONS = {
     },
     languages: {
       [LANG_LT]: `Kalba`,
-      [LANG_EN]: `Language`,
-      [LANG_UK]: `Мова`,
+      [LANG_EN]: `Service language`,
+      [LANG_UK]: `Мова послуг`,
     },
     region: {
       [LANG_LT]: `Vieta`,
