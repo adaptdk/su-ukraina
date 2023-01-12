@@ -68,9 +68,9 @@ const createHelpPages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === locale)
         .shift();
-      const promoLine = globalPromoLine.filter(
-        (item) => item.node_locale === locale
-      );
+      const promoLine = globalPromoLine
+        .filter((item) => item.node_locale === locale)
+        .shift();
 
       const currentNodeSlugs = allNodeSlugs[id];
       const currentHeroImage = getCurrentNodeValue(allHeroImages, id, locale);

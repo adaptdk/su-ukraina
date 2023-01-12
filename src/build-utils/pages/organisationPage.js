@@ -71,9 +71,9 @@ const createOrganisationPages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === locale)
         .shift();
-      const promoLine = globalPromoLine.filter(
-        (item) => item.node_locale === locale
-      );
+      const promoLine = globalPromoLine
+        .filter((item) => item.node_locale === locale)
+        .shift();
 
       const currentNodeSlugs = allNodeSlugs[id];
       const ltOrgLogo = getCurrentNodeValue(allOrganisationLogos, id, `lt-LT`);

@@ -65,9 +65,9 @@ const createFaqPages = (result, createPage) => {
       const navigation = globalNavigation
         .filter((item) => item.node_locale === faqPage.forceTranslate)
         .shift();
-      const promoLine = globalPromoLine.filter(
-        (item) => item.node_locale === faqPage.forceTranslate
-      );
+      const promoLine = globalPromoLine
+        .filter((item) => item.node_locale === faqPage.forceTranslate)
+        .shift();
 
       const rootPath = getPathByLocale(faqPage?.forceTranslate, faqPage?.slug);
 
