@@ -31,7 +31,10 @@ const Layout = ({
   locale,
   currentNodeSlugs,
   promoLine,
+  isHomepage,
 }) => {
+  const isUa = locale === `uk-UA`;
+
   return (
     <div className="Layout">
       <PageTitle title={metaTitle || ``} />
@@ -42,7 +45,7 @@ const Layout = ({
         locale={locale}
         currentNodeSlugs={currentNodeSlugs}
       />
-      {promoLine && (
+      {promoLine && !isUa && !isHomepage && (
         <PromoLine
           title={promoLine?.heading}
           subtitle={promoLine?.subheading}
@@ -92,12 +95,14 @@ Layout.propTypes = {
   promoLine: promoLinePropTypes,
   locale: localePropType.isRequired,
   currentNodeSlugs: nodeSlugsPropTypes,
+  isHomepage: PropTypes.bool,
 };
 
 Layout.defaultProps = {
   noStickyHeader: false,
   includeContactForm: true,
   currentNodeSlugs: nodeSlugsDefaultProps,
+  isHomepage: false,
 };
 
 export default Layout;

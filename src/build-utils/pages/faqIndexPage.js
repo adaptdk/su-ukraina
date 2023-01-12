@@ -42,28 +42,27 @@ const createFaqIndexPages = (result, createPage) => {
   );
 
   faqIndexPages.forEach((faqIndexPage) => {
+    const locale = faqIndexPage?.forceTranslate || faqIndexPage?.node_locale;
     if (
       faqIndexPage?.slug &&
       faqIndexPage?.metaTitle &&
       faqIndexPage?.node_locale === `lt-LT`
     ) {
       const navigation = globalNavigation
-        .filter((item) => item.node_locale === faqIndexPage.forceTranslate)
+        .filter((item) => item.node_locale === locale)
         .shift();
       const promoLine = globalPromoLine
-        .filter((item) => item.node_locale === faqIndexPage.forceTranslate)
+        .filter((item) => item.node_locale === locale)
         .shift();
 
-      const pagePath = getPathByLocale(
-        faqIndexPage.forceTranslate,
-        faqIndexPage.slug
-      );
+      const pagePath = getPathByLocale(locale, faqIndexPage.slug);
 
       createPage({
         path: pagePath,
         component: path.resolve(`./src/templates/faqIndexPage.jsx`),
         context: {
           ...faqIndexPage,
+          node_locale: locale || faqIndexPage.node_locale,
           navigation,
           promoLine,
           rootPath: pagePath,

@@ -63,7 +63,6 @@ const urlToSearchState = ({ search }) => {
 };
 
 const HelpSearch = ({ defaultResultsLang }) => {
-  console.log({ defaultResultsLang });
   const [searchState, setSearchState] = React.useState(
     typeof window === `undefined` ? {} : urlToSearchState(location)
   );

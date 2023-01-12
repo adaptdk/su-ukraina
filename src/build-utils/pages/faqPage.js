@@ -57,19 +57,20 @@ const createFaqPages = (result, createPage) => {
   );
 
   faqPages.forEach((faqPage) => {
+    const locale = faqPage?.forceTranslate || faqPage?.node_locale;
     if (
       faqPage?.slug &&
       faqPage?.metaTitle &&
       faqPage?.node_locale === `lt-LT`
     ) {
       const navigation = globalNavigation
-        .filter((item) => item.node_locale === faqPage.forceTranslate)
+        .filter((item) => item.node_locale === locale)
         .shift();
       const promoLine = globalPromoLine
-        .filter((item) => item.node_locale === faqPage.forceTranslate)
+        .filter((item) => item.node_locale === locale)
         .shift();
 
-      const rootPath = getPathByLocale(faqPage?.forceTranslate, faqPage?.slug);
+      const rootPath = getPathByLocale(locale, faqPage?.slug);
 
       faqPage.categories.forEach((faqCategory) => {
         const categoryPath = `${rootPath}/${faqCategory.slug}`;
@@ -79,6 +80,7 @@ const createFaqPages = (result, createPage) => {
           component: path.resolve(`./src/templates/faqPage.jsx`),
           context: {
             ...faqCategory,
+            node_locale: locale || faqPage.node_locale,
             categories: faqPage?.categories || [],
             navigation,
             promoLine,

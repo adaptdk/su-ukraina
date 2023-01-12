@@ -69,6 +69,7 @@ const HomePage = ({ path, pageContext }) => {
       navigation={navigation}
       locale={node_locale}
       promoLine={promoLine}
+      isHomepage={true}
     >
       {heroImage && (
         <Section className="HeroSection">
