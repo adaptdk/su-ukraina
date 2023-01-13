@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import Layout from "../components/Layout";
 import { HeroSection } from "../components/HeroSection";
 
-import { Faq } from "../components/Faq";
-import { FaqModulePropTypes } from "../components/Faq/FaqModule/FaqModulePropTypes";
+import { Faq, FaqModulePropTypes } from "../components/Faq";
+import { FaqCategoriesPropType } from "../components/Faq/FaqPropTypes";
 import {
   gatsbyImagePropType,
   localePropType,
@@ -80,8 +80,7 @@ FaqPage.propTypes = {
     pageDescription: PropTypes.shape({
       raw: PropTypes.string,
     }),
-    // @TODO: fix proptypes
-    categories: PropTypes.array.isRequired,
+    categories: FaqCategoriesPropType.isRequired,
     content: PropTypes.arrayOf(PropTypes.shape(FaqModulePropTypes)),
   }),
 };

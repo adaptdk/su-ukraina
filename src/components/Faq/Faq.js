@@ -2,16 +2,18 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { getTranslatedText } from "../../utils/getTranslatedText";
 
-import { FaqNavCollapsible } from "./FaqNav";
 import Constraint from "../Constraint";
 import Button from "../Button";
 import Breadcrumbs from "../Breadcrumbs";
 
-import "./Faq.css";
-import { formatRichText } from "../../helpers/formatting";
 import { FaqModule } from "./FaqModule";
+import { FaqItemPropTypes } from "./FaqModule/FaqItem";
+import { FaqNavCollapsible } from "./FaqNav";
+import { FaqCategoriesPropType } from "./FaqPropTypes";
 import { ResourceListModulePropTypes } from "../ContentfulModule/ResourceListModule";
-import { FaqItemPropTypes } from "./FaqModule/FaqItem/FaqItemPropTypes";
+import { formatRichText } from "../../helpers/formatting";
+
+import "./Faq.css";
 
 // Used stackoverflow as reference
 // Not a 1:1 copy
@@ -168,8 +170,7 @@ Faq.propTypes = {
   description: PropTypes.shape({
     raw: PropTypes.string,
   }),
-  // @TODO: Fix proptypes
-  categories: PropTypes.array.isRequired,
+  categories: FaqCategoriesPropType,
   pathname: PropTypes.string.isRequired,
   rootPath: PropTypes.string.isRequired,
   crumbs: PropTypes.arrayOf(

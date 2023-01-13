@@ -15,6 +15,7 @@ import {
   nodeSlugsPropTypes,
   promoLinePropTypes,
 } from "../helpers/genericPropTypes";
+import { FaqCategoriesPropType } from "../components/Faq/FaqPropTypes";
 
 const FaqIndexPage = ({ path, pageContext }) => {
   const {
@@ -81,8 +82,7 @@ FaqIndexPage.propTypes = {
     pageDescription: PropTypes.shape({
       raw: PropTypes.string,
     }),
-    // @TODO: fix this proptype
-    categories: PropTypes.array,
+    categories: FaqCategoriesPropType,
   }),
 };
 

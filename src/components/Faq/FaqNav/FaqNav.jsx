@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import "./FaqNav.css";
 import Button from "../../Button";
+import { FaqCategoriesPropType } from "../FaqPropTypes";
 
 const FaqNav = ({ rootPath, categories, pathname }) => {
   if (!categories) {
@@ -35,14 +36,7 @@ const FaqNav = ({ rootPath, categories, pathname }) => {
 
 FaqNav.propTypes = {
   rootPath: PropTypes.string.isRequired,
-  categories: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      pageHeading: PropTypes.string.isRequired,
-      slug: PropTypes.string.isRequired,
-      iconType: PropTypes.string,
-    })
-  ).isRequired,
+  categories: FaqCategoriesPropType.isRequired,
   pathname: PropTypes.string.isRequired,
 };
 
