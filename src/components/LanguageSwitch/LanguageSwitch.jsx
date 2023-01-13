@@ -16,7 +16,6 @@ const LanguageSwitch = ({ currentNodeSlugs }) => {
   const isEn = locale === `en-US`;
   const isLt = locale === `lt-LT`;
 
-  // @TODO think of a better name
   const findLocalisedPath = (goToLang) => {
     switch (goToLang) {
       case `uk-UA`:

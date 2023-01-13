@@ -11,6 +11,24 @@ import {
 
 import "./Card.css";
 
+const CardHeading = ({ title, logo }) => {
+  return (
+    <div className="Card__heading">
+      <h2 className="Card__title">{title}</h2>
+      {!!logo && (
+        <div className="Card__logo">
+          <GatsbyImage image={getImage(logo)} alt={title} src="" />
+        </div>
+      )}
+    </div>
+  );
+};
+
+CardHeading.propTypes = {
+  title: PropTypes.string,
+  logo: gatsbyImagePropType,
+};
+
 const Card = ({ children, title, logo, locale, organisationType }) => {
   const pagePath = getOrganisationPagePath(title, locale, organisationType);
 
@@ -18,27 +36,16 @@ const Card = ({ children, title, logo, locale, organisationType }) => {
     return (
       <article className="Card">
         <Link to={`/${pagePath}`}>
-          <div className="Card__heading">
-            <h2 className="Card__title">{title}</h2>
-            {!!logo && (
-              <div className="Card__logo">
-                <GatsbyImage image={getImage(logo)} alt={title} src="" />
-              </div>
-            )}
-          </div>
+          <CardHeading title={title} logo={logo} />
         </Link>
         <div className="Card__body">{children}</div>
       </article>
     );
   }
 
-  // @todo: extract and refactor
   return (
     <article className="Card">
-      <div className="Card__heading">
-        <h2 className="Card__title">{title}</h2>
-        {!!logo && <div className="Card__logo">{logo}</div>}
-      </div>
+      <CardHeading title={title} logo={logo} />
       <div className="Card__body">{children}</div>
     </article>
   );

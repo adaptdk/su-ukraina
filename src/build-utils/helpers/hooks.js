@@ -1,5 +1,5 @@
 const slugify = require(`slugify`);
-const { getObjectValueByStringPath } = require(`./utils`);
+const { getObjectValueByStringPath, HELP_PAGE_PREFIXES } = require(`./utils`);
 /**
  * @typedef {"lt-LT" | "uk-UA" | "en-US"} LocaleType
  */
@@ -92,7 +92,14 @@ const getHomePagePath = (locale) => {
   return null;
 };
 
-// @todo fix jsdocs for this and organisation page path
+/**
+ * Slugifies the organization name and returns a slug based on locale and type of organization.
+ *
+ * @param {string} name Name of organisation
+ * @param {LocaleType} locale
+ * @param {"Donation" | "Volunteering"} type
+ * @returns {string} Slug of organisation, eg `kaip-galiu-padeti/aukojimas/blueyellow`
+ */
 const getOrganisationPageSlug = (name, locale, type = `Donation`) => {
   if (!name) {
     return null;
@@ -105,27 +112,28 @@ const getOrganisationPageSlug = (name, locale, type = `Donation`) => {
       remove: /[*+~.()/'"!:@]/g,
     }) || null;
 
-  // @todo: use HELP_PAGE_PREFIXES here somehow
   const ltSuffix = type === `Donation` ? `aukojimas` : `savanoryste`;
   const uaSuffix = type === `Donation` ? `pozhertvuvannya` : `volonterstvo`;
   const enSuffix = type === `Donation` ? `donation` : `volunteering`;
 
   if (locale === `en-US`) {
-    return `help/${enSuffix}/${slug}`;
+    return `${HELP_PAGE_PREFIXES[locale]}/${enSuffix}/${slug}`;
   }
 
   if (locale === `uk-UA`) {
-    return `dopomoha/${uaSuffix}/${slug}`;
+    return `${HELP_PAGE_PREFIXES[locale]}/${uaSuffix}/${slug}`;
   }
 
-  return `kaip-galiu-padeti/${ltSuffix}/${slug}`;
+  return `${HELP_PAGE_PREFIXES[locale]}/${ltSuffix}/${slug}`;
 };
 
 /**
+ * Gets the full organisation path based on name, locale and type.
+ *
  * @param {String} name Name of the organisation.
  * @param {LocaleType} locale
  * @param {"Donation" | "Volunteering"} type Organisation type.
- * @returns {String} Full path, eg.: `ua/organisation/blueyellow`.
+ * @returns {String} Full path, eg.: `ua/dopomoha/volonterstvo/stiprus-kartu`.
  */
 const getOrganisationPagePath = (name, locale, type = `Donation`) => {
   return getPathByLocale(locale, getOrganisationPageSlug(name, locale, type));
