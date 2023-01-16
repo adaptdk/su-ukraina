@@ -41,7 +41,7 @@
     "gatsby-plugin-sharp": "^4.11.1",
     "gatsby-plugin-sitemap": "^5.11.1",
     "gatsby-source-contentful": "7.12",
-    "gatsby-transformer-remark": "^5.11.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.11.0",
     "instantsearch.css": "^7.4.5",
     "postcss": "^8.4.12",
