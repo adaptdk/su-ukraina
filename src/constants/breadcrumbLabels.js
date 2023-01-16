@@ -1,7 +1,7 @@
 const ltLabels = [
   {
     pathname: `/pagalba-ukrainai`,
-    crumbLabel: `Kaip galiu padėti?`,
+    crumbLabel: `Pagalba Ukrainai`,
   },
   {
     pathname: `/pagalba-ukrainai/aukojimas`,
