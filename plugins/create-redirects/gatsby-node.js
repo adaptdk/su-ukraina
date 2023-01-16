@@ -12,12 +12,12 @@ exports.createPages = async ({ actions }) => {
     isPermanent: true,
   });
   createRedirect({
-    fromPathh: `/kaip-galiu-padeti/aukojimas*`,
+    fromPath: `/kaip-galiu-padeti/aukojimas*`,
     toPath: `/pagalba-ukrainai/aukojimas:splat`,
     isPermanent: true,
   });
   createRedirect({
-    fromPathh: `/kaip-galiu-padeti/savanoryste*`,
+    fromPath: `/kaip-galiu-padeti/savanoryste*`,
     toPath: `/pagalba-ukrainai/savanoryste:splat`,
     isPermanent: true,
   });
