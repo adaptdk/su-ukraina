@@ -2,23 +2,23 @@ exports.createPages = async ({ actions }) => {
   const { createRedirect } = actions;
 
   createRedirect({
-    fromPath: `/kaip-galiu-padeti/aukojimas/lietuvoje/`,
-    toPath: `/kaip-galiu-padeti/aukojimas/`,
+    fromPath: `/kaip-galiu-padeti/`,
+    toPath: `/pagalba-ukrainai/`,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: `/kaip-galiu-padeti/aukojimas/lietuvoje`,
-    toPath: `/kaip-galiu-padeti/aukojimas/`,
+    fromPath: `/kaip-galiu-padeti`,
+    toPath: `/pagalba-ukrainai/`,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: `/kaip-galiu-padeti/aukojimas/uzsienyje/`,
-    toPath: `/kaip-galiu-padeti/aukojimas/`,
+    fromPathh: `/kaip-galiu-padeti/aukojimas*`,
+    toPath: `/pagalba-ukrainai/aukojimas:splat`,
     isPermanent: true,
   });
   createRedirect({
-    fromPath: `/kaip-galiu-padeti/aukojimas/uzsienyje`,
-    toPath: `/kaip-galiu-padeti/aukojimas/`,
+    fromPathh: `/kaip-galiu-padeti/savanoryste*`,
+    toPath: `/pagalba-ukrainai/savanoryste:splat`,
     isPermanent: true,
   });
   createRedirect({
@@ -79,11 +79,6 @@ exports.createPages = async ({ actions }) => {
   createRedirect({
     fromPath: `/ua/help-search*`,
     toPath: `/ua/poshuk-posluh:splat`,
-    isPermanent: true,
-  });
-  createRedirect({
-    fromPath: `/pagalbos-paieska*`,
-    toPath: `/pagalba-ukrainai/`,
     isPermanent: true,
   });
   createRedirect({
@@ -171,12 +166,12 @@ exports.createPages = async ({ actions }) => {
 
   createRedirect({
     fromPath: `/ua/refugee-guide/residence`,
-    toPath: `/ua/vazhlyva-informatsiia/bezkoshtovne-zhytlo/`,
+    toPath: `/ua/vazhlyva-informatsiia/dopomoha-z-zhytlom/`,
     isPermanent: true,
   });
   createRedirect({
     fromPath: `/ua/refugee-guide/residence/`,
-    toPath: `/ua/vazhlyva-informatsiia/bezkoshtovne-zhytlo/`,
+    toPath: `/ua/vazhlyva-informatsiia/dopomoha-z-zhytlom/`,
     isPermanent: true,
   });
 
