@@ -99,7 +99,7 @@ Layout.propTypes = {
 };
 
 Layout.defaultProps = {
-  noStickyHeader: true,
+  stickyHeader: true,
   includeContactForm: true,
   currentNodeSlugs: nodeSlugsDefaultProps,
   isHomepage: false,
