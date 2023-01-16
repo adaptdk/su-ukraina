@@ -22,7 +22,7 @@ import {
 
 const Layout = ({
   children,
-  noStickyHeader,
+  stickyHeader,
   pagePath,
   metaTitle,
   metaDescription,
@@ -41,7 +41,7 @@ const Layout = ({
       <Meta name="description" content={metaDescription || ``} />
       <Header
         navigation={navigation}
-        noSticky={noStickyHeader}
+        noSticky={!stickyHeader}
         locale={locale}
         currentNodeSlugs={currentNodeSlugs}
       />
@@ -89,7 +89,7 @@ Layout.propTypes = {
   pagePath: PropTypes.string.isRequired,
   metaTitle: PropTypes.string.isRequired,
   metaDescription: PropTypes.string.isRequired,
-  noStickyHeader: PropTypes.bool,
+  stickyHeader: PropTypes.bool,
   includeContactForm: PropTypes.bool,
   navigation: navigationPropTypes.isRequired,
   promoLine: promoLinePropTypes,
@@ -99,7 +99,7 @@ Layout.propTypes = {
 };
 
 Layout.defaultProps = {
-  noStickyHeader: false,
+  noStickyHeader: true,
   includeContactForm: true,
   currentNodeSlugs: nodeSlugsDefaultProps,
   isHomepage: false,

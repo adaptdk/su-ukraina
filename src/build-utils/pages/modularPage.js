@@ -52,6 +52,8 @@ const query = (graphql) => {
           }
           includeContactForm
           fullWidthModules
+          showBreadcrumbs
+          stickyHeader
         }
       }
     }

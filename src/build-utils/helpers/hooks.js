@@ -172,9 +172,7 @@ const getAllPagesLocalisedValuesByKey = (pages, searchKey) => {
 const getCurrentNodeValue = (allNodeValues, id, locale) => {
   const currentNodeValues = allNodeValues[id];
 
-  return (
-    currentNodeValues[locale] || currentNodeValues[`lt-LT`] || `kas kurwa yra`
-  );
+  return currentNodeValues[locale] || currentNodeValues[`lt-LT`] || null;
 };
 
 module.exports = {

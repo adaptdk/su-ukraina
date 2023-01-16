@@ -152,8 +152,7 @@ const HomePage = ({ path, pageContext }) => {
         </Section>
       )}
 
-      {/* @todo: maybe clean this up */}
-      {/* basically here we check if atleast one partner item has the necessary data */}
+      {/* check if atleast one partner item has the necessary data */}
       {partners.some((obj) => {
         return obj.data?.at(0);
       }) && (
