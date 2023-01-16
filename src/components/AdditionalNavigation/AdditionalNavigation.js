@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import { useLocation } from "@gatsbyjs/reach-router";
 
-import { ADDITIONAL_NAVIGATION } from "../../constants/Navigation";
+import { ADDITIONAL_NAVIGATION } from "../../constants/AdditionalNavigation";
 
 import "./AdditionalNavigation.css";
 
