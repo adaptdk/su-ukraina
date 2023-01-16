@@ -32,34 +32,6 @@ const openTarget = () => {
   }
 };
 
-/** @todo: don't know currently how to generate the answer for metadata
- * because the answer comes as a JSON string
- */
-
-// const generateLdMetadataArr = (currentItemData) => {
-//   const { questions } = currentItemData;
-//   if (questions && questions.length) {
-//     const questionsMetadataLdArray = questions.map((question) => {
-//       let questionObj = {};
-//       (questionObj[`@type`] = `Question`),
-//         (questionObj[`name`] = question.title),
-//         (questionObj[`acceptedAnswer`] = {
-//           "@type": `Answer`,
-//           text: question.answer,
-//         });
-//       return questionObj;
-//     });
-//     const metadataLDObj = {
-//       "@context": `https://schema.org`,
-//       "@type": `FAQPage`,
-//       mainEntity: questionsMetadataLdArray,
-//     };
-//     return metadataLDObj;
-//   } else {
-//     return false;
-//   }
-// };
-
 const Faq = ({
   title,
   description,
@@ -84,23 +56,6 @@ const Faq = ({
     };
   }, []);
 
-  // SEE NOTE ABOVE FOR generateLdMetadataArr
-  // useEffect(() => {
-  //   const metadataLdContent = generateLdMetadataArr(currentItemData);
-  //   let script;
-  //   if (metadataLdContent) {
-  //     script = document.createElement(`script`);
-  //     script.type = `application/ld+json`;
-  //     script.innerText = JSON.stringify(metadataLdContent);
-  //     document.body.appendChild(script);
-  //   }
-  //   return () => {
-  //     if (script) {
-  //       document.body.removeChild(script);
-  //     }
-  //   };
-  // }, [currentItemData]);
-
   const handleFaqNavSensorChange = (e) => {
     if (typeof window === `undefined`) {
       return;
@@ -114,7 +69,7 @@ const Faq = ({
   };
 
   return (
-    <div className="Faq">
+    <div className="Faq" itemScope itemType="https://schema.org/FAQPage">
       <Constraint className="Faq__inner">
         <input
           type="checkbox"

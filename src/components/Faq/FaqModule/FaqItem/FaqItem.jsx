@@ -35,15 +35,28 @@ const FaqItem = ({ answer, question, index }) => {
   const tabId = `tab-${index}`;
 
   return (
-    <div className="Faq__question" id={tabId}>
+    <div
+      className="Faq__question"
+      id={tabId}
+      itemScope
+      itemProp="mainEntity"
+      itemType="https://schema.org/Question"
+    >
       <details>
         <summary>
           <div className="Faq__summary">
-            <h2>{question}</h2>
+            <h2 itemProp="name">{question}</h2>
           </div>
         </summary>
-        <div className="Faq__answer">
-          {formatContent(answer.raw, answer.references)}
+        <div
+          className="Faq__answer"
+          itemScope
+          itemProp="acceptedAnswer"
+          itemType="https://schema.org/Answer"
+        >
+          <div itemProp="text">
+            {formatContent(answer.raw, answer.references)}
+          </div>
         </div>
 
         <div className="Faq__actions">
