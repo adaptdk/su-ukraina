@@ -19,6 +19,8 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.16.0",
+    "@contentful/rich-text-types": "^16.0.2",
     "@fontsource/roboto": "^4.5.5",
     "@mediacurrent/gatsby-plugin-silence-css-order-warning": "^1.0.0",
     "algoliasearch": "^4.13.0",
@@ -30,7 +32,7 @@
     "es5-ext": "^0.10.60",
     "gatsby": "^4.11.2",
     "gatsby-plugin-breadcrumb": "^12.3.1",
-    "gatsby-plugin-image": "^2.11.1",
+    "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.11.1",
     "gatsby-plugin-netlify": "^4.2.0",
     "gatsby-plugin-offline": "^5.11.1",
@@ -38,7 +40,7 @@
     "gatsby-plugin-preact": "^6.11.0",
     "gatsby-plugin-sharp": "^4.11.1",
     "gatsby-plugin-sitemap": "^5.11.1",
-    "gatsby-source-filesystem": "^4.11.1",
+    "gatsby-source-contentful": "7.12",
     "gatsby-transformer-remark": "^5.11.1",
     "gatsby-transformer-sharp": "^4.11.0",
     "instantsearch.css": "^7.4.5",
@@ -54,6 +56,7 @@
     "react-head": "^3.4.0",
     "react-instantsearch-dom": "^6.23.0",
     "react-linkify": "^1.0.0-alpha",
+    "slugify": "^1.6.5",
     "stylelint": "^14.6.1",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0"

@@ -1,10 +1,20 @@
 {
   "actions": {
     "copyLink": "Kopijuoti nuorodą",
+    "copyLinkPopupLabel": "Nukopijuota",
     "close": "Uždaryti",
-    "send": "Siųsti"
+    "send": "Siųsti",
+    "donate": "Paremti",
+    "officialPage": "Oficialus Puslapis",
+    "applyForm": "Pildyti formą",
+    "wantToDonate": "Noriu aukoti",
+    "wantToVolunteer": "Noriu tapti savanoriu"
+  },
+  "ariaLabels": {
+    "footerNav": "Poraštės navigacija"
   },
   "labels": {
+    "homePage": "Titulinis",
     "navigation": "Navigacija",
     "name": "Vardas",
     "phone": "Tel. numeris",
@@ -13,17 +23,41 @@
     "source": "Šaltinis",
     "links": "Nuorodos"
   },
+  "organisation": {
+    "about": "Apie",
+    "aboutOrg": "Apie organizaciją",
+    "purpose": "Paskirtis",
+    "otherInfo": "Kita informacija"
+  },
+  "events": {
+    "eventLink": "Renginio nuoroda",
+    "upcomingEvents": "Organizuojami renginiai",
+    "previousEvents": "Praėję renginiai",
+    "noEvents": "Numatomų renginių kol kas nėra."
+  },
   "placeholders": {
     "name": "Vardenis Pavardenis",
     "phone": "+37061111111",
     "email": "vardas@post.lt",
     "message": "Žinutė"
   },
+  "partners": {
+    "heading": "Puslapio partneriai",
+    "informationHeading": "Informaciniai",
+    "contentHeading": "Turinio",
+    "technologyHeading": "Technologiniai",
+    "institutionHeading": "Instituciniai"
+  },
   "generic": {
     "privacyPolicy": "Privatumo politika"
   },
   "footer": {
-    "pageCoordinate": "Puslapį koordinuoja"
+    "pageCoordinate": "Techninis sprendimas",
+    "sectionTitle": "Kiekvienas veiksmas svarbus"
+  },
+  "helpPage": {
+    "lithuanian": "Lietuvoje",
+    "foreign": "Užsienyje"
   },
   "contactForm": {
     "title": "Turite klausimų ar pasiūlymų?",
@@ -32,5 +66,12 @@
     "tacAgree": "Susipažinau ir sutinku su",
     "success": "Jūsų žinutė išsiųsta. Ačiū!",
     "error": "Išsiųsti nepavyko. Bandykite dar kartą arba praneškite apie technines problemas"
+  },
+  "pagePath": {
+    "home": "/",
+    "homeNoTrailing": "/",
+    "privacyPolicy": "/privatumo-politika/",
+    "donate": "/pagalba-ukrainai/aukojimas/",
+    "volunteer": "/pagalba-ukrainai/savanoryste/"
   }
 }

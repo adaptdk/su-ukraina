@@ -1,10 +1,20 @@
 {
   "actions": {
     "copyLink": "Kопіювати посилання",
+    "copyLinkPopupLabel": "Скопійовано",
     "close": "Закрити",
-    "send": "Надіслати"
+    "send": "Надіслати",
+    "donate": "Пожертвуйте",
+    "officialPage": "Офіційний веб-сайт",
+    "applyForm": "Надіслати форму",
+    "wantToDonate": "Я хочу допомогти",
+    "wantToVolunteer": "Я хочу стати волонтером"
+  },
+  "ariaLabels": {
+    "footerNav": "Footer navigation"
   },
   "labels": {
+    "homePage": "Назва",
     "navigation": "Навігація",
     "name": "Ім'я",
     "phone": "Телефон",
@@ -13,17 +23,41 @@
     "source": "Джерело",
     "links": "Посилання"
   },
+  "organisation": {
+    "about": "Про",
+    "aboutOrg": "Про організацію",
+    "purpose": "Призначення",
+    "otherInfo": "Інша інформація"
+  },
+  "events": {
+    "eventLink": "Посилання на подію",
+    "upcomingEvents": "Організовані заходи",
+    "previousEvents": "Минулі події",
+    "noEvents": "Наразі немає запланованих подій."
+  },
   "placeholders": {
     "name": "Ім'я прізвище",
     "phone": "+37011111111",
     "email": "email@email.com",
     "message": "Введіть свою відповідь тут"
   },
+  "partners": {
+    "heading": "Партнери проекту",
+    "informationHeading": "Інформаційний",
+    "contentHeading": "Зміст",
+    "technologyHeading": "Технологічний",
+    "institutionHeading": "Інституційний"
+  },
   "generic": {
     "privacyPolicy": "Політика конфіденційності"
   },
   "footer": {
-    "pageCoordinate": "Внесла внесок на сторінку"
+    "pageCoordinate": "Технічне рішення",
+    "sectionTitle": "Будь-яка дія важлива"
+  },
+  "helpPage": {
+    "lithuanian": "в Литві",
+    "foreign": "За кордоном"
   },
   "contactForm": {
     "title": "У Вас є запитання чи пропозиції?",
@@ -32,5 +66,12 @@
     "tacAgree": "Я прочитав і погоджуюсь",
     "success": "Ваше повідомлення було відправлене. Дякую!",
     "error": "Не вдалося надіслати. Будь ласка, спробуйте ще раз або повідомте технічні проблеми"
+  },
+  "pagePath": {
+    "home": "/ua/",
+    "homeNoTrailing": "/ua",
+    "privacyPolicy": "/ua/polityka-konfideitsinosti/",
+    "donate": "/ua/dopomoha/pozhertvy/",
+    "volunteer": "/ua/dopomoha/volonterstvo/"
   }
 }

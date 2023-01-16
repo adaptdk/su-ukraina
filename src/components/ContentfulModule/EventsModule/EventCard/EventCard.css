@@ -1,0 +1,103 @@
+.EventCard {
+  align-items: flex-start;
+  background: #f5f9ff;
+  border-radius: var(--s__alt-border-radius);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: calc(var(--s__unit) * 5);
+  padding: 24px;
+  width: 100%;
+
+  &--previous {
+    background: #f9f9f9;
+  }
+
+  @media (min-width: 40rem) {
+    margin-right: calc(var(--s__unit) * 5);
+    width: calc(50% - var(--s__unit) * 5);
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 60rem) {
+    margin-right: calc(var(--s__unit) * 5);
+    width: calc(33.3% - var(--s__unit) * 5);
+
+    /* For now */
+    &:nth-of-type(2n) {
+      margin-right: calc(var(--s__unit) * 5);
+    }
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__content-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__event-type-wrapper {
+    background: #e7ecef;
+    border-radius: var(--s__main-border-radius);
+    margin-bottom: calc(var(--s__unit) * 2);
+    padding: var(--s__unit) calc(var(--s__unit) * 2);
+  }
+
+  &__event-type {
+    align-items: center;
+    color: var(--c__primary);
+    display: flex;
+    font-size: 0.75rem;
+    margin: 0;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__event-title {
+    color: #262626;
+    font-size: 1.45rem;
+    font-style: normal;
+    font-weight: var(--fw__medium);
+    line-height: 29px;
+    margin: 0 0 2px;
+  }
+
+  &__event-organizer {
+    color: #262626;
+    font-size: 0.825rem;
+    font-style: normal;
+    font-weight: var(--fw__medium);
+    margin: 0 0 12px;
+  }
+
+  &__event-info-wrapper {
+    align-items: center;
+    display: flex;
+    margin-bottom: calc(var(--s__unit) * 2);
+
+    .Icon {
+      --icon-size: 16px;
+
+      background: var(--c__primary);
+      margin-right: 10px;
+      min-width: var(--icon-size);
+    }
+  }
+
+  &__event-info-text {
+    margin: 0;
+  }
+
+  .Button {
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

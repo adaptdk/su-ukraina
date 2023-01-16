@@ -2,14 +2,12 @@ import * as React from "react";
 import PropTypes from "prop-types";
 
 import { getTranslatedText } from "../../utils/getTranslatedText";
-import { isUkrainianPage } from "../../helpers/handlers";
+import { getLocaleFromPath } from "../../helpers/handlers";
 
 import Button from "../Button";
 import FormField from "../FormField";
-import TextInput from "../TextInput";
+import { TextInput, PhoneInput, EmailInput } from "../Input";
 import TextArea from "../TextArea";
-import PhoneInput from "../PhoneInput";
-import EmailInput from "../EmailInput";
 
 import "./ContactForm.css";
 
@@ -60,10 +58,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
     success: false,
   });
 
-  const categoryValue = isUkrainianPage() ? `UA` : `LT`;
-  const privacyPolicyUrl = isUkrainianPage()
-    ? `/ua/privacy-policy`
-    : `/privatumo-politika`;
+  const locale = getLocaleFromPath();
 
   const curriedHandleSubmit = React.useCallback(handleSubmit(setFormState), []);
 
@@ -141,12 +136,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
               />
             </FormField>
 
-            <input
-              type="hidden"
-              id="category"
-              name="category"
-              value={categoryValue}
-            />
+            <input type="hidden" id="category" name="category" value={locale} />
 
             <div className="form-field form-field--type-checkbox">
               <label htmlFor="privacy-policy-accepted" tabIndex="0">
@@ -161,7 +151,7 @@ const ContactForm = ({ returnDestination = `/` }) => {
                   {` `}
                 </span>
                 <a
-                  href={privacyPolicyUrl}
+                  href={getTranslatedText(`pagePath.privacyPolicy`)}
                   target="_blank"
                   className="ContactForm__privacy-policy-text-link"
                   title={getTranslatedText(`generic.privacyPolicy`)}

@@ -1,0 +1,77 @@
+{
+  "actions": {
+    "copyLink": "Copy link",
+    "copyLinkPopupLabel": "Copied",
+    "close": "Close",
+    "send": "Send",
+    "donate": "Donate",
+    "officialPage": "Official Page",
+    "applyForm": "Submit form",
+    "wantToDonate": "I want to donate",
+    "wantToVolunteer": "I want to volunteer"
+  },
+  "ariaLabels": {
+    "footerNav": "Footer navigation"
+  },
+  "labels": {
+    "homePage": "Home",
+    "navigation": "Navigation",
+    "name": "Name",
+    "phone": "Phone number",
+    "email": "E-mail",
+    "message": "Message",
+    "source": "Source",
+    "links": "Links"
+  },
+  "organisation": {
+    "about": "About",
+    "aboutOrg": "About the organisation",
+    "purpose": "Purpose",
+    "otherInfo": "Other information"
+  },
+  "events": {
+    "eventLink": "Event link",
+    "upcomingEvents": "Organized events",
+    "previousEvents": "Past events",
+    "noEvents": "The are currently no events upcoming."
+  },
+  "placeholders": {
+    "name": "Name Surname",
+    "phone": "+37061111111",
+    "email": "name@email.com",
+    "message": "Message"
+  },
+  "partners": {
+    "heading": "Project partners",
+    "informationHeading": "Informational",
+    "contentHeading": "Content",
+    "technologyHeading": "Technological",
+    "institutionHeading": "Institutional"
+  },
+  "generic": {
+    "privacyPolicy": "Privacy Policy"
+  },
+  "footer": {
+    "pageCoordinate": "Technical solution",
+    "sectionTitle": "Every action matters"
+  },
+  "helpPage": {
+    "lithuanian": "Lithuanian",
+    "foreign": "Foreign"
+  },
+  "contactForm": {
+    "title": "Have questions or suggestions?",
+    "text": "The purpose of this page is to provide the most important information related to assistance to Ukraine and its people.",
+    "subtext": "If you have ideas on how we can improve your experience and supplement the site's content, please contact us.",
+    "tacAgree": "I have read and agree with the",
+    "success": "Your message was successfully sent. Thank you!",
+    "error": "Failed to send. Please try again or report technical issues."
+  },
+  "pagePath": {
+    "home": "/en/",
+    "homeNoTrailing": "/en",
+    "privacyPolicy": "/en/privacy-policy/",
+    "donate": "/en/help/donation",
+    "volunteer": "/en/help/volunteering/"
+  }
+}

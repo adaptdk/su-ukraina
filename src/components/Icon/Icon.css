@@ -34,7 +34,7 @@
   }
 
   .SlidingNavigation__item > &,
-  .TitledSection__title > & {
+  .SlidingNavBlock__title > & {
     margin-right: var(--icon-margin);
   }
 

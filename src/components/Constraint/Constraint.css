@@ -8,14 +8,19 @@
   &--sliding-nav {
     padding: 0;
 
-    .TitledSection__content {
+    .SlidingNavBlock__content {
       padding: var(--constraint-padding);
     }
 
     @media (min-width: 1140px) {
-      .TitledSection__content {
+      .SlidingNavBlock__content {
         padding: 0;
       }
     }
+  }
+
+  &--full-width {
+    max-width: initial;
+    padding: 0;
   }
 }

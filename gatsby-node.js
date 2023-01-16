@@ -1,86 +1,84 @@
-exports.createPages = async function ({ actions, graphql }) {
-  const { data } = await graphql(`
-    query {
-      lithuanianGuide: allFile(
-        filter: { sourceInstanceName: { eq: "lithuanian-guide" } }
-      ) {
-        edges {
-          node {
-            childMarkdownRemark {
-              frontmatter {
-                slug
-              }
-            }
-          }
-        }
-      }
-      refugeeGuideLt: allFile(
-        filter: { sourceInstanceName: { eq: "refugee-guide-lt" } }
-      ) {
-        edges {
-          node {
-            childMarkdownRemark {
-              frontmatter {
-                slug
-              }
-            }
-          }
-        }
-      }
-      refugeeGuideUa: allFile(
-        filter: { sourceInstanceName: { eq: "refugee-guide" } }
-      ) {
-        edges {
-          node {
-            childMarkdownRemark {
-              frontmatter {
-                slug
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
+const PAGE_UTILS = require(`./src/build-utils/pages`);
 
-  data.lithuanianGuide.edges.forEach((edge) => {
-    const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
-    actions.createPage({
-      path: `/informacija-lietuviams/${slug}/`,
-      component: require.resolve(`./src/templates/guide-page.js`),
-      context: {
-        slug: `/${slug}`,
-        sourceInstanceName: `lithuanian-guide`,
-        title: `Informacija lietuviams`,
-      },
-    });
-  });
+const processPage = ({ pageQuery, createFunction, createPage }) => {
+  const promises = [];
 
-  data.refugeeGuideLt.edges.forEach((edge) => {
-    const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
-    actions.createPage({
-      path: `/informacija-ukrainieciams/${slug}/`,
-      component: require.resolve(`./src/templates/guide-page.js`),
-      context: {
-        slug: `/${slug}`,
-        sourceInstanceName: `refugee-guide-lt`,
-        title: `Informacija ukrainiečiams`,
-      },
-    });
-  });
+  promises.push(
+    new Promise((resolve, reject) => {
+      pageQuery
+        .then((result) => {
+          createFunction(result, createPage);
+          resolve();
+        })
+        .catch((error) => {
+          console.error(error);
+          reject(error);
+        });
+    })
+  );
 
-  data.refugeeGuideUa.edges.forEach((edge) => {
-    const slug = edge.node.childMarkdownRemark.frontmatter.slug.slice(1);
-    actions.createPage({
-      path: `/ua/refugee-guide/${slug}/`,
-      component: require.resolve(`./src/templates/guide-page.js`),
-      context: {
-        slug: `/${slug}`,
-        sourceInstanceName: `refugee-guide`,
-        title: `Важлива інформація`,
-      },
-    });
-  });
+  return Promise.all(promises);
+};
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const promises = [];
+
+  // Process Home Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.homePage.query(graphql),
+      createFunction: PAGE_UTILS.homePage.createHomePages,
+      createPage,
+    })
+  );
+
+  // Process Help Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.helpPage.query(graphql),
+      createFunction: PAGE_UTILS.helpPage.createHelpPages,
+      createPage,
+    })
+  );
+
+  // Process Organisation Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.organisationPage.query(graphql),
+      createFunction: PAGE_UTILS.organisationPage.createOrganisationPages,
+      createPage,
+    })
+  );
+
+  // Process Modular Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.modularPage.query(graphql),
+      createFunction: PAGE_UTILS.modularPage.createModularPages,
+      createPage,
+    })
+  );
+
+  // Process FAQ Index Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.faqIndexPage.query(graphql),
+      createFunction: PAGE_UTILS.faqIndexPage.createFaqIndexPages,
+      createPage,
+    })
+  );
+
+  // Process FAQ Pages
+  promises.push(
+    processPage({
+      pageQuery: PAGE_UTILS.faqPage.query(graphql),
+      createFunction: PAGE_UTILS.faqPage.createFaqPages,
+      createPage,
+    })
+  );
+
+  return Promise.all(promises);
 };
 
 exports.createSchemaCustomization = ({ actions }) => {

@@ -1,1 +1,4 @@
-export { default } from "./HelpSearch.js";
+import HelpSearch from "./HelpSearch";
+import { HelpSearchPropTypes } from "./HelpSearchPropTypes";
+
+export { HelpSearch, HelpSearchPropTypes };
