@@ -11,7 +11,7 @@ const formatContent = (str, refs) => {
   const options = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => {
-        return <p itemProp="text">{children}</p>;
+        return <p>{children}</p>;
       },
       [BLOCKS.EMBEDDED_ENTRY]: (node) => {
         const moduleData = getRichTextModuleData(node, refs);
@@ -54,7 +54,9 @@ const FaqItem = ({ answer, question, index }) => {
           itemProp="acceptedAnswer"
           itemType="https://schema.org/Answer"
         >
-          {formatContent(answer.raw, answer.references)}
+          <div itemProp="text">
+            {formatContent(answer.raw, answer.references)}
+          </div>
         </div>
 
         <div className="Faq__actions">
