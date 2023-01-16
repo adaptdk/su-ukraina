@@ -185,7 +185,7 @@ const uaFaqLabels = [
 
 const enLabels = [
   {
-    pathname: `/en/help`,
+    pathname: `/en/support-ukraine`,
     crumbLabel: `How can I help?`,
   },
 ];

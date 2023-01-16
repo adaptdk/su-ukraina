@@ -23,15 +23,15 @@ export const ADDITIONAL_NAVIGATION = {
       title: `Пожертви`,
     },
   ],
-  "/en/help/donation": [
+  "/en/support-ukraine/donation": [
     {
-      pathname: `/en/help/volunteering`,
+      pathname: `/en/support-ukraine/volunteering`,
       title: `Volunteering`,
     },
   ],
-  "/en/help/volunteering": [
+  "/en/support-ukraine/volunteering": [
     {
-      pathname: `/en/help/donation`,
+      pathname: `/en/support-ukraine/donation`,
       title: `Donation`,
     },
   ],
