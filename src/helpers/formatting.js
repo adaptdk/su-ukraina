@@ -1,8 +1,19 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 export const formatRichText = (str, options = {}) => {
   const content = JSON.parse(str);
   return documentToReactComponents(content, options);
+};
+
+export const removeParagraphsFromRichText = (content) => {
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => children,
+    },
+  };
+
+  return formatRichText(content, options);
 };
 
 export const toTitleCase = (str) => {
