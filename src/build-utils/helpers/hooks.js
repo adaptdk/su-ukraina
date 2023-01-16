@@ -98,7 +98,7 @@ const getHomePagePath = (locale) => {
  * @param {string} name Name of organisation
  * @param {LocaleType} locale
  * @param {"Donation" | "Volunteering"} type
- * @returns {string} Slug of organisation, eg `kaip-galiu-padeti/aukojimas/blueyellow`
+ * @returns {string} Slug of organisation, eg `pagalba-ukrainai/aukojimas/blueyellow`
  */
 const getOrganisationPageSlug = (name, locale, type = `Donation`) => {
   if (!name) {

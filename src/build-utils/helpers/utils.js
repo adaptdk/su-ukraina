@@ -16,7 +16,7 @@ const logContentfulWarning = (type, id, locale) => {
 };
 
 const HELP_PAGE_PREFIXES = {
-  [`lt-LT`]: `kaip-galiu-padeti`,
+  [`lt-LT`]: `pagalba-ukrainai`,
   [`uk-UA`]: `dopomoha`,
   [`en-US`]: `help`,
 };

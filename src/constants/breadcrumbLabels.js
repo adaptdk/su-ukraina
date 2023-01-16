@@ -1,14 +1,14 @@
 const ltLabels = [
   {
-    pathname: `/kaip-galiu-padeti`,
+    pathname: `/pagalba-ukrainai`,
     crumbLabel: `Kaip galiu padėti?`,
   },
   {
-    pathname: `/kaip-galiu-padeti/aukojimas`,
+    pathname: `/pagalba-ukrainai/aukojimas`,
     crumbLabel: `Aukojimas`,
   },
   {
-    pathname: `/kaip-galiu-padeti/savanoryste`,
+    pathname: `/pagalba-ukrainai/savanoryste`,
     crumbLabel: `Savanorystė`,
   },
   {

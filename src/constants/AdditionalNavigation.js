@@ -1,13 +1,13 @@
 export const ADDITIONAL_NAVIGATION = {
-  "/kaip-galiu-padeti/savanoryste": [
+  "/pagalba-ukrainai/savanoryste": [
     {
-      pathname: `/kaip-galiu-padeti/aukojimas`,
+      pathname: `/pagalba-ukrainai/aukojimas`,
       title: `Aukojimas`,
     },
   ],
-  "/kaip-galiu-padeti/aukojimas": [
+  "/pagalba-ukrainai/aukojimas": [
     {
-      pathname: `/kaip-galiu-padeti/savanoryste`,
+      pathname: `/pagalba-ukrainai/savanoryste`,
       title: `Savanorystė`,
     },
   ],
