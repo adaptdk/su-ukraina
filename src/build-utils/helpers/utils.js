@@ -18,7 +18,7 @@ const logContentfulWarning = (type, id, locale) => {
 const HELP_PAGE_PREFIXES = {
   [`lt-LT`]: `pagalba-ukrainai`,
   [`uk-UA`]: `dopomoha`,
-  [`en-US`]: `help`,
+  [`en-US`]: `support-ukraine`,
 };
 
 /**
