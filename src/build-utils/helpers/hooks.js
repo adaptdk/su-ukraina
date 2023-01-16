@@ -113,7 +113,7 @@ const getOrganisationPageSlug = (name, locale, type = `Donation`) => {
     }) || null;
 
   const ltSuffix = type === `Donation` ? `aukojimas` : `savanoryste`;
-  const uaSuffix = type === `Donation` ? `pozhertvuvannya` : `volonterstvo`;
+  const uaSuffix = type === `Donation` ? `pozhertvy` : `volonterstvo`;
   const enSuffix = type === `Donation` ? `donation` : `volunteering`;
 
   if (locale === `en-US`) {

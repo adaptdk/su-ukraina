@@ -75,7 +75,7 @@ const uaLabels = [
     crumbLabel: `Допомога`,
   },
   {
-    pathname: `/ua/dopomoha/pozhertvuvannya`,
+    pathname: `/ua/dopomoha/pozhertvy`,
     crumbLabel: `Пожертви`,
   },
   {

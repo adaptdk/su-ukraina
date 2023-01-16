@@ -11,7 +11,7 @@ export const ADDITIONAL_NAVIGATION = {
       title: `Savanorystė`,
     },
   ],
-  "/ua/dopomoha/pozhertvuvannya": [
+  "/ua/dopomoha/pozhertvy": [
     {
       pathname: `/ua/dopomoha/volonterstvo`,
       title: `Волонтерство`,
@@ -19,7 +19,7 @@ export const ADDITIONAL_NAVIGATION = {
   ],
   "/ua/dopomoha/volonterstvo": [
     {
-      pathname: `/ua/dopomoha/pozhertvuvannya`,
+      pathname: `/ua/dopomoha/pozhertvy`,
       title: `Пожертви`,
     },
   ],
