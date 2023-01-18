@@ -100,3 +100,17 @@ exports.createSchemaCustomization = ({ actions }) => {
 
   createTypes(typeDefs);
 };
+
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
+  // https://stackoverflow.com/a/63128321/20346883
+  if (stage === `develop` || stage === `build-javascript`) {
+    const config = getConfig();
+    const miniCssExtractPlugin = config.plugins.find(
+      (plugin) => plugin.constructor.name === `MiniCssExtractPlugin`
+    );
+    if (miniCssExtractPlugin) {
+      miniCssExtractPlugin.options.ignoreOrder = true;
+    }
+    actions.replaceWebpackConfig(config);
+  }
+};
