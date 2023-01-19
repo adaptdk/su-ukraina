@@ -61,17 +61,54 @@
     text-decoration: none;
   }
 
+  &__logo-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: var(--s__main-padding);
+
+    @media (min-width: 46rem) {
+      flex-direction: row;
+    }
+  }
+
+  &__logo-link-wrapper {
+    display: flex;
+  }
+
   &__logo {
-    height: 24px;
+    height: 32px;
     padding: calc(var(--s__unit) * 3) 0;
     width: auto;
 
-    @media (min-width: 22rem) {
-      height: 32px;
+    &--original {
+      display: none;
     }
 
-    @media (min-width: 46rem) {
-      height: 40px;
+    @media (min-width: 40rem) {
+      &--original {
+        display: block;
+      }
+
+      &--small {
+        display: none;
+      }
+    }
+  }
+
+  &__hotline-button {
+    &--original {
+      display: none;
+    }
+
+    @media (min-width: 66rem) {
+      &--original {
+        display: flex;
+      }
+
+      &--small {
+        display: none;
+      }
     }
   }
 
