@@ -107,7 +107,7 @@ const Header = ({ noSticky, navigation, currentNodeSlugs }) => {
                           return (
                             <li key={subItem.slug}>
                               <Link
-                                to={`/${item.slug}/${subItem.slug}`}
+                                to={`/${subItem.slug}`}
                                 onClick={() => {
                                   closeMenuOnSameLink(subItem.slug);
                                 }}
