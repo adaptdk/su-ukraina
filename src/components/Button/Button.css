@@ -92,6 +92,10 @@
 
   .Icon {
     --icon-size: 20px;
+
+    &--hotline {
+      --icon-size: 24px;
+    }
   }
 
   &--active {

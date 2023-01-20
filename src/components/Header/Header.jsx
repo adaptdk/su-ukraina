@@ -30,6 +30,7 @@ const HotlineButton = ({ className }) => {
       className={`Header__hotline-button ${className}`}
       startIcon="hotline"
       href="tel:1827"
+      aria-label="Phone hotline emergency number"
     >
       1827
     </Button>
