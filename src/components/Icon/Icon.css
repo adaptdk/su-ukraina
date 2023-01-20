@@ -144,4 +144,8 @@
   &--location {
     mask-image: url("../../images/icons/location.svg");
   }
+
+  &--hotline {
+    mask-image: url("../../images/icons/hotline.svg");
+  }
 }

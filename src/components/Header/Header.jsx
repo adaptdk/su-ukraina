@@ -7,9 +7,11 @@ import classNames from "classnames";
 // Components.
 import Constraint from "../Constraint";
 import LanguageSwitch from "../LanguageSwitch";
+import Button from "../Button";
 
 // SVGs.
 import Logo from "../../images/logos/su-ukraina--original.svg";
+import LogoSmall from "../../images/logos/su-ukraina--small.svg";
 import { getTranslatedText } from "../../utils/getTranslatedText";
 
 // Style.
@@ -21,9 +23,28 @@ import {
   nodeSlugsPropTypes,
 } from "../../helpers/genericPropTypes";
 
+const HotlineButton = ({ className }) => {
+  return (
+    <Button
+      color="primary-outline"
+      className={`Header__hotline-button ${className}`}
+      startIcon="hotline"
+      href="tel:1827"
+      aria-label="Phone hotline emergency number"
+    >
+      1827
+    </Button>
+  );
+};
+
+HotlineButton.propTypes = {
+  className: PropTypes.string,
+};
+
 const Header = ({ noSticky, navigation, currentNodeSlugs }) => {
   const [headerHeight, setHeaderHeight] = React.useState(null);
   const { pathname } = useLocation();
+  const SU_UKRAINA_LOGO_ALT = `SuUkraina.lt`;
 
   const navigationItems = navigation?.items;
 
@@ -65,18 +86,27 @@ const Header = ({ noSticky, navigation, currentNodeSlugs }) => {
         <style>{`:root { --header-height: ${headerHeight}px; }`}</style>
       )}
       <Constraint className="Header__content">
-        <Link
-          className="Header__logo-wrapper"
-          to={getTranslatedText(`pagePath.home`)}
-        >
-          <img
-            className="Header__logo"
-            src={Logo}
-            alt="SuUkraina.lt"
-            height="40"
-            width="235"
-          />
-        </Link>
+        <div className="Header__logo-wrapper">
+          <Link
+            className="Header__logo-link-wrapper"
+            to={getTranslatedText(`pagePath.home`)}
+          >
+            <img
+              className="Header__logo Header__logo--original"
+              src={Logo}
+              alt={SU_UKRAINA_LOGO_ALT}
+              height="32"
+            />
+            <img
+              className="Header__logo Header__logo--small"
+              src={LogoSmall}
+              alt={SU_UKRAINA_LOGO_ALT}
+              height="32"
+              width="32"
+            />
+          </Link>
+          <HotlineButton className="Header__hotline-button--small" />
+        </div>
         <input type="checkbox" name="menu-sensor" id="menu-sensor" />
         <label className="Header__menu-trigger" htmlFor="menu-sensor">
           <span></span>Navigacija
@@ -124,6 +154,7 @@ const Header = ({ noSticky, navigation, currentNodeSlugs }) => {
               })}
           </ul>
         </nav>
+        <HotlineButton className="Header__hotline-button--original" />
         <LanguageSwitch currentNodeSlugs={currentNodeSlugs} />
       </Constraint>
     </div>
