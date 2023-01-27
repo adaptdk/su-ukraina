@@ -69,6 +69,33 @@ const ltLabels = [
   },
 ];
 
+const ltFaqLabels = [
+  {
+    pathname: `/informacija-lietuviams/kaip-as-galiu-padeti`,
+    crumbLabel: `Kaip aš galiu padėti?`,
+  },
+  {
+    pathname: `/informacija-lietuviams/darbo-galimybes`,
+    crumbLabel: `Darbo galimybės`,
+  },
+  {
+    pathname: `/informacija-lietuviams/ismokos-ukrainieciams`,
+    crumbLabel: `Išmokos ukrainiečiams`,
+  },
+  {
+    pathname: `/informacija-lietuviams/ukrainieciu-apgyvendinimas`,
+    crumbLabel: `Ukrainiečių apgyvendinimas`,
+  },
+  {
+    pathname: `/informacija-lietuviams/sukciai-ir-dezinformacija`,
+    crumbLabel: `Sukčiai ir dezinformacija`,
+  },
+  {
+    pathname: `/informacija-lietuviams/lietuvos-respublikos-vyriausybes-informacija`,
+    crumbLabel: `Lietuvos Respublikos vyriausybės informacija`,
+  },
+];
+
 const uaLabels = [
   {
     pathname: `/ua/dopomoha`,
@@ -192,6 +219,7 @@ const enLabels = [
 
 const breadcrumbLabels = [
   ...ltLabels,
+  ...ltFaqLabels,
   ...uaLabels,
   ...uaFaqLabels,
   ...enLabels,
