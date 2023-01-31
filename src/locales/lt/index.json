@@ -8,7 +8,8 @@
     "officialPage": "Oficialus Puslapis",
     "applyForm": "Pildyti formą",
     "wantToDonate": "Noriu aukoti",
-    "wantToVolunteer": "Noriu tapti savanoriu"
+    "wantToVolunteer": "Noriu tapti savanoriu",
+    "seeAll": "Žiūrėti visus"
   },
   "ariaLabels": {
     "footerNav": "Poraštės navigacija"
@@ -40,13 +41,6 @@
     "phone": "+37061111111",
     "email": "vardas@post.lt",
     "message": "Žinutė"
-  },
-  "partners": {
-    "heading": "Puslapio partneriai",
-    "informationHeading": "Informaciniai",
-    "contentHeading": "Turinio",
-    "technologyHeading": "Technologiniai",
-    "institutionHeading": "Instituciniai"
   },
   "generic": {
     "privacyPolicy": "Privatumo politika"

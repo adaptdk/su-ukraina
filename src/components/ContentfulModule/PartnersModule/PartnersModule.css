@@ -1,0 +1,20 @@
+.PartnersModule {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  &__category {
+    flex-basis: calc(50% - 1rem);
+  }
+
+  &__category-title {
+    text-align: center;
+  }
+}

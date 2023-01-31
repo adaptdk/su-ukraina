@@ -9,7 +9,9 @@ import {
 } from "./ResourceListModule";
 import { SlidingNavBlockPropTypes } from "./SlidingNavBlock/SlidingNavBlockPropTypes";
 import { HelpSearchPropTypes } from "../HelpSearch";
+import { PartnersModulePropTypes } from "./PartnersModule";
 
+// @todo: add faq categories module
 const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(EventsModulePropTypes),
   PropTypes.shape(ChipModulePropTypes),
@@ -18,6 +20,7 @@ const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(ResourceItemPropTypes),
   PropTypes.shape(LinkCollectionModulePropTypes),
   PropTypes.shape(HelpSearchPropTypes),
+  PropTypes.shape(PartnersModulePropTypes),
 ]);
 
 export default ContentfulModulePropTypes;

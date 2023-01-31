@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import ContentfulModulePropTypes from "./ContentfulModulePropTypes";
 import { EventsModule } from "./EventsModule";
@@ -8,8 +9,10 @@ import { ResourceListModule, ResourceItem } from "./ResourceListModule";
 import { ContentfulAsset } from "./ContentfulAsset";
 import { LinkCollectionModule } from "./LinkCollectionModule";
 import { HelpSearch } from "../HelpSearch";
+import { PartnersModule } from "./PartnersModule";
+import { FaqCategoriesModule } from "./FaqCategoriesModule";
 
-const ContentfulModule = ({ module }) => {
+const ContentfulModule = ({ module, pathname }) => {
   const type = module?.internal?.type || ``;
 
   if (type === `ContentfulEventsModule`) {
@@ -44,11 +47,20 @@ const ContentfulModule = ({ module }) => {
     return <HelpSearch {...module} />;
   }
 
+  if (type === `ContentfulPartnersModule`) {
+    return <PartnersModule {...module} />;
+  }
+
+  if (type === `ContentfulFaqCategoriesModule`) {
+    return <FaqCategoriesModule {...module} pathname={pathname} />;
+  }
+
   return null;
 };
 
 ContentfulModule.propTypes = {
   module: ContentfulModulePropTypes.isRequired,
+  pathname: PropTypes.string,
 };
 
 export default ContentfulModule;

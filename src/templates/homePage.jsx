@@ -1,13 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-import Layout from "../components/Layout";
-import Section from "../components/Section";
-import HeroBanner from "../components/HeroBanner";
-import Button from "../components/Button";
-import LinkCollectionWithImage from "../components/LinkCollectionWithImage";
-import PartnerList from "../components/PartnerList";
-import Partner from "../components/Partner";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import {
   gatsbyImagePropType,
@@ -15,12 +8,20 @@ import {
   navigationPropTypes,
   promoLinePropTypes,
 } from "../helpers/genericPropTypes";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { getLocaleFromPath } from "../helpers/handlers";
+
+import Layout from "../components/Layout";
+import Section from "../components/Section";
+import HeroBanner from "../components/HeroBanner";
+import Button from "../components/Button";
+import LinkCollectionWithImage from "../components/LinkCollectionWithImage";
+import {
+  ContentfulModule,
+  ContentfulModulePropTypes,
+} from "../components/ContentfulModule";
 import Constraint from "../components/Constraint";
 import CtaCard from "../components/CtaCard";
 import PromoLine from "../components/PromoLine";
-import { getTranslatedText } from "../utils/getTranslatedText";
-import { filterPartners } from "../utils/filters";
 
 const HomePage = ({ path, pageContext }) => {
   const {
@@ -35,31 +36,12 @@ const HomePage = ({ path, pageContext }) => {
     mainSectionHeading,
     mainSectionImage,
     mainSectionLinks,
-    informationPartners,
-    contentPartners,
-    technologyPartners,
-    institutionPartners,
     promoLine,
+    modules,
   } = pageContext;
 
-  const partners = [
-    {
-      heading: getTranslatedText(`partners.informationHeading`),
-      data: filterPartners(informationPartners),
-    },
-    {
-      heading: getTranslatedText(`partners.contentHeading`),
-      data: filterPartners(contentPartners),
-    },
-    {
-      heading: getTranslatedText(`partners.technologyHeading`),
-      data: filterPartners(technologyPartners),
-    },
-    {
-      heading: getTranslatedText(`partners.institutionHeading`),
-      data: filterPartners(institutionPartners),
-    },
-  ];
+  const locale = getLocaleFromPath();
+  const isLt = locale === `lt-LT`;
 
   return (
     <Layout
@@ -96,7 +78,8 @@ const HomePage = ({ path, pageContext }) => {
         </Section>
       )}
 
-      {promoLine && (
+      {/* @todo: move promoline to modules */}
+      {promoLine && isLt && (
         <Section>
           <PromoLine
             title={promoLine?.heading}
@@ -152,53 +135,15 @@ const HomePage = ({ path, pageContext }) => {
         </Section>
       )}
 
-      {/* check if atleast one partner item has the necessary data */}
-      {partners.some((obj) => {
-        return obj.data?.at(0);
-      }) && (
-        <Section className="PartnerSection">
-          <Constraint>
-            <h2 className="Section__title">
-              {getTranslatedText(`partners.heading`)}
-            </h2>
-
-            {partners.map((partner) => {
-              if (!partner.data?.at(0)) {
-                return null;
-              }
-              return (
-                <div key={partner.heading} className="PartnerSection__category">
-                  <h3>{partner.heading}</h3>
-                  <PartnerList>
-                    {partner.data.map((partner, i) => {
-                      return (
-                        <Partner
-                          key={i}
-                          title={partner.title}
-                          logo={partner.logo}
-                          website={partner.url}
-                        />
-                      );
-                    })}
-                  </PartnerList>
-                </div>
-              );
-            })}
-          </Constraint>
-        </Section>
-      )}
+      {!!modules?.at(0) &&
+        modules.map((module) => {
+          return (
+            <ContentfulModule key={module.id} module={module} pathname={path} />
+          );
+        })}
     </Layout>
   );
 };
-
-const partnerPropTypes = PropTypes.arrayOf(
-  PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-    logo: gatsbyImagePropType.isRequired,
-  })
-);
 
 HomePage.propTypes = {
   path: PropTypes.string.isRequired,
@@ -229,10 +174,7 @@ HomePage.propTypes = {
         url: PropTypes.string.isRequired,
       })
     ).isRequired,
-    informationPartners: partnerPropTypes,
-    contentPartners: partnerPropTypes,
-    technologyPartners: partnerPropTypes,
-    institutionPartners: partnerPropTypes,
+    modules: ContentfulModulePropTypes,
   }),
 };
 
