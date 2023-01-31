@@ -12,7 +12,6 @@ import { HelpSearchPropTypes } from "../HelpSearch";
 import { PartnersModulePropTypes } from "./PartnersModule";
 import { FaqCategoriesModulePropTypes } from "./FaqCategoriesModule";
 
-// @todo: add faq categories module
 const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(EventsModulePropTypes),
   PropTypes.shape(ChipModulePropTypes),
