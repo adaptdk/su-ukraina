@@ -1,8 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import { FaqNav } from "../../Faq";
-import { FaqCategoriesPropType } from "../../Faq/FaqPropTypes";
 import Section from "../../Section";
 import Constraint from "../../Constraint";
 import Link from "../../Link";
@@ -10,6 +8,7 @@ import { getTranslatedText } from "../../../utils/getTranslatedText";
 import Icon from "../../Icon";
 
 import "./FaqCategoriesModule.css";
+import { FaqCategoriesModulePropTypes } from "./FaqCategoriesModulePropTypes";
 
 const FaqCategoriesModule = ({ heading, seeAllLink, categories, pathname }) => {
   return (
@@ -35,11 +34,6 @@ const FaqCategoriesModule = ({ heading, seeAllLink, categories, pathname }) => {
   );
 };
 
-FaqCategoriesModule.propTypes = {
-  heading: PropTypes.string,
-  seeAllLink: PropTypes.string,
-  categories: FaqCategoriesPropType.isRequired,
-  pathname: PropTypes.string,
-};
+FaqCategoriesModule.propTypes = FaqCategoriesModulePropTypes;
 
 export default FaqCategoriesModule;

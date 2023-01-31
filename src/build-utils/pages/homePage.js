@@ -77,28 +77,6 @@ const createHomePages = (result, createPage) => {
   );
 
   const allHeroImages = getAllPagesLocalisedValuesByKey(homePages, `heroImage`);
-  const allMainSectionImages = getAllPagesLocalisedValuesByKey(
-    homePages,
-    `mainSectionImage`
-  );
-
-  // // @todo: revisit this but honestly quite proud with solution lol
-  // const partnerKeys = [
-  //   `informationPartners`,
-  //   `contentPartners`,
-  //   `technologyPartners`,
-  //   `institutionPartners`,
-  // ];
-
-  // const allLtPartners = partnerKeys.reduce((acc, curr) => {
-  //   const allLocalesValues = getAllPagesLocalisedValuesByKey(homePages, curr);
-  //   const ltLocaleValue = getCurrentNodeValue(
-  //     allLocalesValues,
-  //     homepageId,
-  //     `lt-LT`
-  //   );
-  //   return { ...acc, [curr]: ltLocaleValue };
-  // }, {});
 
   homePages.forEach((homePage) => {
     const locale = homePage?.node_locale;
@@ -116,12 +94,6 @@ const createHomePages = (result, createPage) => {
         homepageId,
         locale
       );
-      const currentMainSectionImage = getCurrentNodeValue(
-        allMainSectionImages,
-        homepageId,
-        locale
-      );
-
       const pagePath = getHomePagePath(locale);
 
       createPage({
@@ -130,7 +102,6 @@ const createHomePages = (result, createPage) => {
         context: {
           ...homePage,
           heroImage: currentHeroImage,
-          mainSectionImage: currentMainSectionImage,
           navigation,
           promoLine,
         },

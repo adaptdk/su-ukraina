@@ -14,7 +14,6 @@ import Layout from "../components/Layout";
 import Section from "../components/Section";
 import HeroBanner from "../components/HeroBanner";
 import Button from "../components/Button";
-import LinkCollectionWithImage from "../components/LinkCollectionWithImage";
 import {
   ContentfulModule,
   ContentfulModulePropTypes,
@@ -33,9 +32,6 @@ const HomePage = ({ path, pageContext }) => {
     heroTitle,
     heroDescription,
     heroCtaCards,
-    mainSectionHeading,
-    mainSectionImage,
-    mainSectionLinks,
     promoLine,
     modules,
   } = pageContext;
@@ -107,34 +103,6 @@ const HomePage = ({ path, pageContext }) => {
         </Section>
       )}
 
-      {mainSectionLinks && mainSectionHeading && (
-        <Section className="BeVigilantSection">
-          <Constraint>
-            <LinkCollectionWithImage
-              image={mainSectionImage}
-              title={mainSectionHeading}
-            >
-              {mainSectionLinks.map(({ id, url, label }) => {
-                if (!label || !url) {
-                  return null;
-                }
-                return (
-                  <li key={id}>
-                    <Button
-                      endIcon={`arrow-blue`}
-                      to={url}
-                      color={`transparent`}
-                    >
-                      {label}
-                    </Button>
-                  </li>
-                );
-              })}
-            </LinkCollectionWithImage>
-          </Constraint>
-        </Section>
-      )}
-
       {!!modules?.at(0) &&
         modules.map((module) => {
           return (
@@ -165,25 +133,14 @@ HomePage.propTypes = {
         iconType: PropTypes.oneOf([`volunteer`, `donate`, `ua-flag`]),
       })
     ),
-    mainSectionHeading: PropTypes.string.isRequired,
-    mainSectionImage: gatsbyImagePropType.isRequired,
-    mainSectionLinks: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-      })
-    ).isRequired,
     modules: ContentfulModulePropTypes,
   }),
 };
 
 HomePage.defaultProps = {
   pageContext: {
-    informationPartners: [],
-    contentPartners: [],
-    technologyPartners: [],
-    institutionPartners: [],
+    heroCtaCards: [],
+    modules: [],
   },
 };
 
