@@ -55,7 +55,7 @@
     }
   }
 
-  + section {
+  + section:not(.PromoLineSection) {
     padding-top: 4rem;
   }
 

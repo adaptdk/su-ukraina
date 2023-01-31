@@ -80,7 +80,7 @@ const HomePage = ({ path, pageContext }) => {
 
       {/* @todo: move promoline to modules */}
       {promoLine && isLt && (
-        <Section>
+        <Section className="PromoLineSection">
           <PromoLine
             title={promoLine?.heading}
             titleLink={promoLine?.titleLink}
