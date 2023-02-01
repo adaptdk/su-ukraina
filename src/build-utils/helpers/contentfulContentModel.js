@@ -24,6 +24,15 @@ const link = `
 `;
 
 const linkCollectionModule = `
+  heading
+  image {
+    gatsbyImageData(
+      formats: WEBP
+      height: 440
+      width: 611
+      placeholder: BLURRED
+    )
+  }
   links {
     ... on ContentfulLink {
       ${link}
@@ -155,35 +164,34 @@ const faqItem = `
   }
 `;
 
-const partner = `
-  id
-  label
-  url
-  logo {
-    gatsbyImageData(height: 80, placeholder: BLURRED, formats: WEBP)
+const partnersModule = `
+  heading
+  partnerCollections {
+    ... on ContentfulPartnerCollection {
+      id
+      category
+      partners {
+        ... on ContentfulPartner {
+          id
+          label
+          url
+          logo {
+            gatsbyImageData(height: 80, placeholder: BLURRED, formats: WEBP)
+          }
+        }
+      }
+    }
   }
 `;
 
-const homepagePartners = `
-  informationPartners {
-    ... on ContentfulPartner {
-      ${partner}
-    }
-  }
-  contentPartners {
-    ... on ContentfulPartner {
-      ${partner}
-    }
-  }
-  technologyPartners {
-    ... on ContentfulPartner {
-      ${partner}
-    }
-  }
-  institutionPartners {
-    ... on ContentfulPartner {
-      ${partner}
-    }
+const faqCategoriesModule = `
+  heading
+  seeAllLink
+  categories {
+    id
+    slug
+    pageHeading
+    iconType
   }
 `;
 
@@ -249,11 +257,11 @@ module.exports = {
   eventsModule,
   slidingNavBlock,
   chipModule,
+  partnersModule,
   faqItem,
+  faqCategoriesModule,
   resourceListModule,
   helpSearchModule,
-  partner,
-  homepagePartners,
   globalNavigation,
   pageData,
   promoLine,

@@ -8,7 +8,8 @@
     "officialPage": "Офіційний веб-сайт",
     "applyForm": "Надіслати форму",
     "wantToDonate": "Я хочу допомогти",
-    "wantToVolunteer": "Я хочу стати волонтером"
+    "wantToVolunteer": "Я хочу стати волонтером",
+    "seeAll": "Подивіться на все"
   },
   "ariaLabels": {
     "footerNav": "Footer navigation"
@@ -40,13 +41,6 @@
     "phone": "+37011111111",
     "email": "email@email.com",
     "message": "Введіть свою відповідь тут"
-  },
-  "partners": {
-    "heading": "Партнери проекту",
-    "informationHeading": "Інформаційний",
-    "contentHeading": "Зміст",
-    "technologyHeading": "Технологічний",
-    "institutionHeading": "Інституційний"
   },
   "generic": {
     "privacyPolicy": "Політика конфіденційності"

@@ -8,7 +8,8 @@
     "officialPage": "Official Page",
     "applyForm": "Submit form",
     "wantToDonate": "I want to donate",
-    "wantToVolunteer": "I want to volunteer"
+    "wantToVolunteer": "I want to volunteer",
+    "seeAll": "See all"
   },
   "ariaLabels": {
     "footerNav": "Footer navigation"
@@ -40,13 +41,6 @@
     "phone": "+37061111111",
     "email": "name@email.com",
     "message": "Message"
-  },
-  "partners": {
-    "heading": "Project partners",
-    "informationHeading": "Informational",
-    "contentHeading": "Content",
-    "technologyHeading": "Technological",
-    "institutionHeading": "Institutional"
   },
   "generic": {
     "privacyPolicy": "Privacy Policy"

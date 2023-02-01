@@ -1,0 +1,14 @@
+.FaqCategoriesModule {
+  padding-bottom: var(--s__alt-padding);
+
+  &__see-all {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+  }
+
+  &__see-all-text {
+    margin-right: calc(var(--s__unit) * 3);
+  }
+}

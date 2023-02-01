@@ -148,4 +148,12 @@
   &--hotline {
     mask-image: url("../../images/icons/hotline.svg");
   }
+
+  &--information {
+    mask-image: url("../../images/icons/information.svg");
+  }
+
+  &--ua-flag {
+    background: url("../../images/icons/ua-flag.svg") center center no-repeat;
+  }
 }
