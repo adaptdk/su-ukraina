@@ -1,5 +1,5 @@
 .FaqCategoriesModule {
-  padding-bottom: var(--s__main-padding);
+  padding-bottom: var(--s__alt-padding);
 
   &__see-all {
     align-items: center;
