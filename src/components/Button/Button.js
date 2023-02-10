@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import classNames from "classnames";
 
 import Icon from "../Icon";
 
@@ -33,9 +34,11 @@ const Button = ({
 
   return (
     <Tag
-      className={`Button Button--${color} ${className} ${
-        active ? `Button--active` : ``
-      }`}
+      className={classNames(`Button`, {
+        [`Button--${color}`]: color,
+        [`Button--active`]: active,
+        className,
+      })}
       {...props}
     >
       {startIcon && <Icon type={startIcon} />}
