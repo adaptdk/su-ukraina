@@ -41,21 +41,23 @@ const query = (graphql) => {
               iconType
             }
           }
-          mainSectionHeading
-          mainSectionImage {
-            gatsbyImageData(
-              formats: WEBP
-              height: 440
-              width: 611
-              placeholder: BLURRED
-            )
-          }
-          mainSectionLinks {
-            ... on ContentfulLink {
-              ${contentModel.link}
+          modules {
+            ... on Node {
+              id
+              internal {
+                type
+              }
+              ... on ContentfulPartnersModule {
+                ${contentModel.partnersModule}
+              }
+              ... on ContentfulFaqCategoriesModule {
+                ${contentModel.faqCategoriesModule}
+              }
+              ... on ContentfulLinkCollectionModule {
+                ${contentModel.linkCollectionModule}
+              }
             }
           }
-          ${contentModel.homepagePartners}
         }
       }
     }
@@ -75,28 +77,6 @@ const createHomePages = (result, createPage) => {
   );
 
   const allHeroImages = getAllPagesLocalisedValuesByKey(homePages, `heroImage`);
-  const allMainSectionImages = getAllPagesLocalisedValuesByKey(
-    homePages,
-    `mainSectionImage`
-  );
-
-  // @todo: revisit this but honestly quite proud with solution lol
-  const partnerKeys = [
-    `informationPartners`,
-    `contentPartners`,
-    `technologyPartners`,
-    `institutionPartners`,
-  ];
-
-  const allLtPartners = partnerKeys.reduce((acc, curr) => {
-    const allLocalesValues = getAllPagesLocalisedValuesByKey(homePages, curr);
-    const ltLocaleValue = getCurrentNodeValue(
-      allLocalesValues,
-      homepageId,
-      `lt-LT`
-    );
-    return { ...acc, [curr]: ltLocaleValue };
-  }, {});
 
   homePages.forEach((homePage) => {
     const locale = homePage?.node_locale;
@@ -114,12 +94,6 @@ const createHomePages = (result, createPage) => {
         homepageId,
         locale
       );
-      const currentMainSectionImage = getCurrentNodeValue(
-        allMainSectionImages,
-        homepageId,
-        locale
-      );
-
       const pagePath = getHomePagePath(locale);
 
       createPage({
@@ -127,9 +101,7 @@ const createHomePages = (result, createPage) => {
         component: path.resolve(`./src/templates/homePage.jsx`),
         context: {
           ...homePage,
-          ...allLtPartners,
           heroImage: currentHeroImage,
-          mainSectionImage: currentMainSectionImage,
           navigation,
           promoLine,
         },

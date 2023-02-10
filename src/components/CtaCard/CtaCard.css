@@ -40,40 +40,9 @@
   }
 
   &__icon {
-    &::before {
-      background: var(--c__primary);
-      content: "";
-      display: block;
-      height: 40px;
-      margin-right: calc(var(--s__unit) * 4);
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
-      position: relative;
-      width: 40px;
-    }
+    --icon-size: 40px;
 
-    &--volunteer {
-      &::before {
-        mask-image: url("../../images/icons/volunteer.svg");
-        width: 40px;
-      }
-    }
-
-    &--donate {
-      &::before {
-        mask-image: url("../../images/icons/donate.svg");
-        width: 40px;
-      }
-    }
-
-    &--ua-flag {
-      &::before {
-        background: url("../../images/icons/ua-flag.svg") center center
-          no-repeat;
-        width: 40px;
-      }
-    }
+    margin-right: calc(var(--s__unit) * 4);
   }
 
   &__title {
