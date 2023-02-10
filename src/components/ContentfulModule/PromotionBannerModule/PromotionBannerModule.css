@@ -4,7 +4,6 @@
   border-radius: var(--s__alt-border-radius);
   display: flex;
   flex-direction: column;
-  gap: var(--s__alt-padding);
   margin: var(--s__alt-padding) auto;
 
   /* max size of image */
@@ -24,6 +23,7 @@
 
   @media (min-width: 60rem) {
     flex-direction: row;
+    gap: var(--s__alt-padding);
     max-width: 100%;
 
     &__content {
