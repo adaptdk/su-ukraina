@@ -32,13 +32,17 @@ const Button = ({
     Tag = Link;
   }
 
+  console.log({ className });
   return (
     <Tag
-      className={classNames(`Button`, {
-        [`Button--${color}`]: color,
-        [`Button--active`]: active,
-        className,
-      })}
+      className={classNames(
+        `Button`,
+        {
+          [`Button--${color}`]: color,
+          [`Button--active`]: active,
+        },
+        className
+      )}
       {...props}
     >
       {startIcon && <Icon type={startIcon} />}
