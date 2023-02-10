@@ -52,6 +52,7 @@
       --icon-size: 32px;
 
       margin-left: var(--s__main-padding);
+      min-width: var(--icon-size);
     }
 
     &:hover {

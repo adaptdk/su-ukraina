@@ -5,6 +5,7 @@ import { Breadcrumb } from "gatsby-plugin-breadcrumb";
 import "./Breadcrumbs.css";
 import { kebabCaseToTitleCase } from "../../helpers/formatting";
 import { getTranslatedText } from "../../utils/getTranslatedText";
+import { breadcrumbLabels } from "../../constants/breadcrumbLabels";
 
 const Breadcrumbs = ({ crumbs }) => {
   const formattedCrumbs = crumbs.map(({ pathname, crumbLabel }) => {
@@ -16,6 +17,12 @@ const Breadcrumbs = ({ crumbs }) => {
         crumbLabel: getTranslatedText(`labels.homePage`),
       };
     }
+
+    // if crumb label is hardcoded, no need to transform it to title case
+    if (breadcrumbLabels.find((item) => item.crumbLabel === crumbLabel)) {
+      return { pathname, crumbLabel };
+    }
+
     return { pathname, crumbLabel: kebabCaseToTitleCase(crumbLabel) };
   });
 
