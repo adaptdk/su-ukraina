@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 // Components.
 import Button from "../../../Button";
@@ -13,7 +14,7 @@ const EventCard = (props) => {
   const { className, eventUrl } = props;
 
   return (
-    <div className={`EventCard ${className}`}>
+    <div className={classNames(`EventCard`, { className })}>
       <EventCardContent {...props} />
       {eventUrl && (
         <Button
