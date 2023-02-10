@@ -10,26 +10,55 @@ const EventsModule = ({ events, locale }) => {
   const upcomingEvents = [];
   const previousEvents = [];
 
-  events
+  const filteredSortedEvents = events
     .filter((event) => {
       return event.title;
     })
-    .forEach((event) => {
-      const startDate = new Date(event.startDate);
+    .sort((a, b) => {
+      if (a.startDate > b.startDate) {
+        return -1;
+      }
 
-      if (event.endDate) {
-        const endDate = new Date(event.endDate);
-        if (currentDate > endDate) {
-          previousEvents.unshift(event);
-        } else {
-          upcomingEvents.push(event);
-        }
-      } else if (currentDate > startDate) {
+      return 1;
+    });
+  const starredEvents = filteredSortedEvents.filter(({ starred }) => starred);
+  const nonStarredEvents = filteredSortedEvents.filter(
+    ({ starred }) => !starred
+  );
+
+  nonStarredEvents.forEach((event) => {
+    const startDate = new Date(event.startDate);
+
+    if (event.endDate) {
+      const endDate = new Date(event.endDate);
+      if (currentDate > endDate) {
+        previousEvents.push(event);
+      } else {
+        upcomingEvents.unshift(event);
+      }
+    } else if (currentDate > startDate) {
+      previousEvents.push(event);
+    } else {
+      upcomingEvents.unshift(event);
+    }
+  });
+
+  starredEvents.forEach((event) => {
+    const startDate = new Date(event.startDate);
+
+    if (event.endDate) {
+      const endDate = new Date(event.endDate);
+      if (currentDate > endDate) {
         previousEvents.unshift(event);
       } else {
-        upcomingEvents.push(event);
+        upcomingEvents.unshift(event);
       }
-    });
+    } else if (currentDate > startDate) {
+      previousEvents.unshift(event);
+    } else {
+      upcomingEvents.unshift(event);
+    }
+  });
 
   return (
     <div className="EventsModule">

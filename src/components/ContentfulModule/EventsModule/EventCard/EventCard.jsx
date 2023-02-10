@@ -9,12 +9,13 @@ import "./EventCard.css";
 import { getTranslatedText } from "../../../../utils/getTranslatedText";
 import { EventCardPropTypes } from "./EventCardPropTypes";
 import EventCardContent from "./EventCardContent";
+import Icon from "../../../Icon";
 
 const EventCard = (props) => {
-  const { className, eventUrl } = props;
+  const { className, eventUrl, starred } = props;
 
   return (
-    <div className={classNames(`EventCard`, { className })}>
+    <div className={classNames(`EventCard`, className)}>
       <EventCardContent {...props} />
       {eventUrl && (
         <Button
@@ -27,6 +28,7 @@ const EventCard = (props) => {
           {getTranslatedText(`events.eventLink`)}
         </Button>
       )}
+      {starred && <Icon className="EventCard__star" type="star-filled" />}
     </div>
   );
 };
