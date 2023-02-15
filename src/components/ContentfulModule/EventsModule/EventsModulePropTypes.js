@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const EventItemPropTypes = {
   id: PropTypes.string.isRequired,
-  eventType: PropTypes.string.isRequired,
+  eventType: PropTypes.string,
   title: PropTypes.string.isRequired,
   organizer: PropTypes.string,
   startDate: PropTypes.string,
@@ -25,6 +25,7 @@ const EventsModulePropTypes = {
 const EventsModuleDefaultProps = {
   events: [
     {
+      eventType: ``,
       organizer: ``,
       startDate: ``,
       endDate: ``,

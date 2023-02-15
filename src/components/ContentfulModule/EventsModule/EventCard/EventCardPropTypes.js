@@ -9,7 +9,9 @@ const EventCardPropTypes = {
   location: PropTypes.string,
   startDate: PropTypes.string,
   endDate: PropTypes.string,
-  description: PropTypes.node,
+  description: PropTypes.shape({
+    raw: PropTypes.string,
+  }),
   eventUrl: PropTypes.string,
   locale: localePropType.isRequired,
 };
