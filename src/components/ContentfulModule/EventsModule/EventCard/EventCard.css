@@ -14,6 +14,8 @@
   &__star {
     color: var(--c__secondary);
     position: absolute;
+
+    /* same as card's padding */
     right: 24px;
     top: 24px;
   }
