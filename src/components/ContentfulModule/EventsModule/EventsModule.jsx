@@ -10,12 +10,14 @@ const EventsModule = ({ events, locale }) => {
   const upcomingEvents = [];
   const previousEvents = [];
 
-  const filteredSortedEvents = events
-    .filter((event) => event.title)
-    .sort((a, b) => (a.startDate > b.startDate ? -1 : 1));
-  const starredEvents = filteredSortedEvents.filter(({ starred }) => starred);
-  const nonStarredEvents = filteredSortedEvents.filter(
-    ({ starred }) => !starred
+  const sortedEvents = events.sort((a, b) =>
+    a.startDate > b.startDate ? -1 : 1
+  );
+  const starredEvents = sortedEvents.filter(
+    ({ starred, title }) => starred && title
+  );
+  const nonStarredEvents = sortedEvents.filter(
+    ({ starred, title }) => !starred && title
   );
 
   const categorizeEvent = (event) => {
