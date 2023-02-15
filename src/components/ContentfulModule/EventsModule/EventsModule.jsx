@@ -11,54 +11,26 @@ const EventsModule = ({ events, locale }) => {
   const previousEvents = [];
 
   const filteredSortedEvents = events
-    .filter((event) => {
-      return event.title;
-    })
-    .sort((a, b) => {
-      if (a.startDate > b.startDate) {
-        return -1;
-      }
-
-      return 1;
-    });
+    .filter((event) => event.title)
+    .sort((a, b) => (a.startDate > b.startDate ? -1 : 1));
   const starredEvents = filteredSortedEvents.filter(({ starred }) => starred);
   const nonStarredEvents = filteredSortedEvents.filter(
     ({ starred }) => !starred
   );
 
-  nonStarredEvents.forEach((event) => {
+  const categorizeEvent = (event) => {
     const startDate = new Date(event.startDate);
+    const endDate = event.endDate ? new Date(event.endDate) : null;
 
-    if (event.endDate) {
-      const endDate = new Date(event.endDate);
-      if (currentDate > endDate) {
-        previousEvents.push(event);
-      } else {
-        upcomingEvents.unshift(event);
-      }
-    } else if (currentDate > startDate) {
-      previousEvents.push(event);
-    } else {
-      upcomingEvents.unshift(event);
-    }
-  });
-
-  starredEvents.forEach((event) => {
-    const startDate = new Date(event.startDate);
-
-    if (event.endDate) {
-      const endDate = new Date(event.endDate);
-      if (currentDate > endDate) {
-        previousEvents.unshift(event);
-      } else {
-        upcomingEvents.unshift(event);
-      }
-    } else if (currentDate > startDate) {
+    if (endDate ? currentDate > endDate : currentDate > startDate) {
       previousEvents.unshift(event);
     } else {
       upcomingEvents.unshift(event);
     }
-  });
+  };
+
+  nonStarredEvents.forEach(categorizeEvent);
+  starredEvents.forEach(categorizeEvent);
 
   return (
     <div className="EventsModule">
