@@ -32,7 +32,6 @@ const Button = ({
     Tag = Link;
   }
 
-  console.log({ className });
   return (
     <Tag
       className={classNames(

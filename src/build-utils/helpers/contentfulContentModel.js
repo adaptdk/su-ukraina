@@ -63,6 +63,7 @@ const organisation = `
 
 const eventItem = `
   id
+  starred
   eventType
   title
   organizer

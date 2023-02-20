@@ -10,26 +10,29 @@ const EventsModule = ({ events, locale }) => {
   const upcomingEvents = [];
   const previousEvents = [];
 
-  events
-    .filter((event) => {
-      return event.title;
-    })
-    .forEach((event) => {
-      const startDate = new Date(event.startDate);
+  const sortedEvents = events.sort((a, b) =>
+    a.startDate > b.startDate ? -1 : 1
+  );
+  const starredEvents = sortedEvents.filter(
+    ({ starred, title }) => starred && title
+  );
+  const nonStarredEvents = sortedEvents.filter(
+    ({ starred, title }) => !starred && title
+  );
 
-      if (event.endDate) {
-        const endDate = new Date(event.endDate);
-        if (currentDate > endDate) {
-          previousEvents.unshift(event);
-        } else {
-          upcomingEvents.push(event);
-        }
-      } else if (currentDate > startDate) {
-        previousEvents.unshift(event);
-      } else {
-        upcomingEvents.push(event);
-      }
-    });
+  const categorizeEvent = (event) => {
+    const startDate = new Date(event.startDate);
+    const endDate = event.endDate ? new Date(event.endDate) : null;
+
+    if (endDate ? currentDate > endDate : currentDate > startDate) {
+      previousEvents.unshift(event);
+    } else {
+      upcomingEvents.unshift(event);
+    }
+  };
+
+  nonStarredEvents.forEach(categorizeEvent);
+  starredEvents.forEach(categorizeEvent);
 
   return (
     <div className="EventsModule">
