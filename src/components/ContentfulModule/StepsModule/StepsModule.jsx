@@ -30,7 +30,11 @@ const StepsModule = ({ steps }) => {
           <details key={step.id} id={tabId} open={index === 0}>
             <summary>
               <h3>
-                <b>Step {index + 1}.</b> {step.question}
+                <b>
+                  {getTranslatedText(`labels.step`)} {index + 1}.
+                </b>
+                {` `}
+                {step.question}
               </h3>
             </summary>
             <div className="StepsModule__content">
