@@ -8,11 +8,11 @@ import {
 import { formatRichText } from "../../../helpers/formatting";
 import ResourceItem from "./ResourceItem";
 
-const ResourceListModule = ({ heading, subheading, resources }) => {
+const ResourceListModule = ({ heading, subheadingRich, resources }) => {
   return (
     <section className="ResourceListModule">
       {!!heading && <h2 className="ResourceListModule__title">{heading}</h2>}
-      {subheading?.raw && formatRichText(subheading.raw)}
+      {subheadingRich?.raw && formatRichText(subheadingRich.raw)}
       <ul className="ResourceListModule__list">
         {resources?.at(0) &&
           resources.map((item) => {

@@ -48,6 +48,12 @@ const query = (graphql) => {
               ... on ContentfulHelpSearchModule {
                 ${contentModel.helpSearchModule}
               }
+              ... on ContentfulStepsModule {
+                ${contentModel.stepsModule}
+              }
+              ... on ContentfulFaqCategoriesModule {
+                ${contentModel.faqCategoriesModule}
+              }
             }
           }
           includeContactForm

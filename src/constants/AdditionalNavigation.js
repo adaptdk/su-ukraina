@@ -35,4 +35,15 @@ export const ADDITIONAL_NAVIGATION = {
       title: `Donation`,
     },
   ],
+  // @todo: fix these links once we have all the slugs for personalized guide pages
+  "/ua/guide-for-new-arrivals": [
+    {
+      pathname: `/ua`,
+      title: `Temp link`,
+    },
+    {
+      pathname: `/ua`,
+      title: `temp link 2`,
+    },
+  ],
 };

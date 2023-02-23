@@ -8,7 +8,10 @@ const {
 } = require(`../helpers/hooks`);
 const { logContentfulWarning } = require(`../helpers/utils`);
 
-const homepageId = `VoE6QU1LhN2Y5h6Tja3fq`;
+// comment out one line to determine which homepage you want to render
+// don't forget to uncomment correct homepage before merging PR
+// const homepageId = `VoE6QU1LhN2Y5h6Tja3fq`; // this is the PRODUCTION homepage
+const homepageId = `2hHrtVu5fUseOPMTxz82fV`; // this is the DUMMY homepage
 
 const query = (graphql) => {
   return graphql(`

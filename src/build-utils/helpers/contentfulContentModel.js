@@ -25,6 +25,8 @@ const link = `
 
 const linkCollectionModule = `
   heading
+  subheading
+  variant
   image {
     gatsbyImageData(
       formats: WEBP
@@ -124,7 +126,7 @@ const resourceItem = `
 
 const resourceListModule = `
   heading
-  subheading {
+  subheadingRich: subheading {
     raw
   }
   resources {
@@ -277,6 +279,20 @@ const promotionBannerModule = `
   }
 `;
 
+const stepsModule = `
+  steps {
+    ... on Node {
+      id
+      internal {
+        type
+      }
+      ... on ContentfulFaqItem {
+        ${faqItem}
+      }
+    }
+  }
+`;
+
 module.exports = {
   hero,
   seo,
@@ -296,4 +312,5 @@ module.exports = {
   pageData,
   promoLine,
   promotionBannerModule,
+  stepsModule,
 };

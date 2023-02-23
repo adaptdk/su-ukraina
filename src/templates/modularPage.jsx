@@ -96,6 +96,7 @@ const ModularPage = ({ path, pageContext }) => {
               <ContentfulModule
                 key={module.id}
                 module={supplementModule(module)}
+                pathname={path}
               />
             );
           })}

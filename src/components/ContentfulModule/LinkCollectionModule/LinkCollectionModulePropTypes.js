@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 
 const LinkCollectionModulePropTypes = {
-  title: PropTypes.string,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  variant: PropTypes.oneOf([`default`, `light-blocks`, `with-image`]),
   links: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -11,4 +13,10 @@ const LinkCollectionModulePropTypes = {
   ).isRequired,
 };
 
-export { LinkCollectionModulePropTypes };
+const LinkCollectionModuleDefaultProps = {
+  heading: ``,
+  subheading: ``,
+  variant: `default`,
+};
+
+export { LinkCollectionModulePropTypes, LinkCollectionModuleDefaultProps };
