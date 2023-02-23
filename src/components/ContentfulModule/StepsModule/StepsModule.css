@@ -21,6 +21,10 @@
     display: flex;
     justify-content: space-between;
 
+    &::-webkit-details-marker {
+      display: none;
+    }
+
     &,
     h3 {
       font-size: 1.5rem;
