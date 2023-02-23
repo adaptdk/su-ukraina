@@ -56,6 +56,9 @@ const query = (graphql) => {
               ... on ContentfulLinkCollectionModule {
                 ${contentModel.linkCollectionModule}
               }
+              ... on ContentfulPromotionBannerModule {
+                ${contentModel.promotionBannerModule}
+              }
             }
           }
         }

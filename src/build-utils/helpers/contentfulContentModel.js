@@ -63,6 +63,7 @@ const organisation = `
 
 const eventItem = `
   id
+  starred
   eventType
   title
   organizer
@@ -247,6 +248,35 @@ const promoLine = `
   }
 `;
 
+const promotionBannerModule = `
+  heading
+  thumbnail {
+    gatsbyImageData(
+      formats: WEBP
+      height: 600
+      width: 600
+      placeholder: BLURRED
+    )
+  }
+  thumbnailUrl
+  content {
+    ... on Node {
+      id
+      internal {
+        type
+      }
+      ... on ContentfulEventItem {
+        contentful_id
+        ${eventItem}
+      }
+      ... on ContentfulOrganisation {
+        contentful_id
+        ${organisation}
+      }
+    }
+  }
+`;
+
 module.exports = {
   hero,
   seo,
@@ -265,4 +295,5 @@ module.exports = {
   globalNavigation,
   pageData,
   promoLine,
+  promotionBannerModule,
 };

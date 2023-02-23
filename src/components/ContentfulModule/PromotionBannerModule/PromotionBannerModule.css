@@ -1,0 +1,33 @@
+.PromotionBannerModule {
+  /* @todo: use color var */
+  border: 1px solid #c0c0c0;
+  border-radius: var(--s__alt-border-radius);
+  display: flex;
+  flex-direction: column;
+  margin: var(--s__alt-padding) auto;
+
+  /* max size of image */
+  max-width: 600px;
+
+  &__thumbnail {
+    border-bottom-left-radius: var(--s__alt-border-radius);
+    border-top-left-radius: var(--s__alt-border-radius);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--s__main-padding);
+  }
+
+  @media (min-width: 60rem) {
+    flex-direction: row;
+    gap: var(--s__alt-padding);
+    max-width: 100%;
+
+    &__content {
+      padding: 0;
+    }
+  }
+}

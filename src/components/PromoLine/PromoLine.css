@@ -3,7 +3,7 @@
   padding: calc(var(--s__unit) * 3) 0;
 
   &--large {
-    padding: calc(var(--s__unit) * 10) 0;
+    padding: calc(var(--s__unit) * 15) 0;
 
     .PromoLine__content {
       > a {
@@ -22,33 +22,6 @@
 
       .Button {
         font-size: 1.4rem;
-      }
-    }
-
-    @media (min-width: 40rem) {
-      padding: calc(var(--s__unit) * 20) 0;
-
-      .PromoLine__content {
-        > a {
-          font-size: 1.8rem;
-        }
-      }
-
-      .PromoLine__actions {
-        flex-wrap: nowrap;
-        margin-left: 50px;
-        margin-top: 0;
-        width: auto;
-
-        .Button {
-          font-size: 1.4rem;
-          width: auto;
-
-          + .Button {
-            margin-left: 10px;
-            margin-top: 0;
-          }
-        }
       }
     }
   }
@@ -74,15 +47,6 @@
         font-size: 1rem;
       }
     }
-
-    @media (min-width: 40rem) {
-      flex-wrap: nowrap;
-
-      > a {
-        font-size: 1.5rem;
-        text-align: left;
-      }
-    }
   }
 
   &__actions {
@@ -103,8 +67,44 @@
         margin-top: 10px;
       }
     }
+  }
 
-    @media (min-width: 40rem) {
+  @media (min-width: 60rem) {
+    &--large {
+      padding: calc(var(--s__unit) * 20) 0;
+
+      .PromoLine__content {
+        > a {
+          font-size: 1.8rem;
+        }
+      }
+
+      .PromoLine__actions {
+        flex-wrap: nowrap;
+        width: auto;
+
+        .Button {
+          font-size: 1.4rem;
+          width: auto;
+
+          + .Button {
+            margin-left: 10px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    &__content {
+      flex-wrap: nowrap;
+
+      > a {
+        font-size: 1.5rem;
+        text-align: left;
+      }
+    }
+
+    &__actions {
       display: flex;
       flex-wrap: nowrap;
       margin-top: 0;

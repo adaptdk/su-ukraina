@@ -153,6 +153,10 @@
     mask-image: url("../../images/icons/information.svg");
   }
 
+  &--star-filled {
+    mask-image: url("../../images/icons/star-filled.svg");
+  }
+
   &--ua-flag {
     background: url("../../images/icons/ua-flag.svg") center center no-repeat;
   }

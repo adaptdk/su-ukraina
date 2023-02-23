@@ -11,6 +11,7 @@ import { SlidingNavBlockPropTypes } from "./SlidingNavBlock/SlidingNavBlockPropT
 import { HelpSearchPropTypes } from "../HelpSearch";
 import { PartnersModulePropTypes } from "./PartnersModule";
 import { FaqCategoriesModulePropTypes } from "./FaqCategoriesModule";
+import { PromotionBannerModulePropTypes } from "./PromotionBannerModule";
 
 const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(EventsModulePropTypes),
@@ -22,6 +23,7 @@ const ContentfulModulePropTypes = PropTypes.oneOfType([
   PropTypes.shape(HelpSearchPropTypes),
   PropTypes.shape(PartnersModulePropTypes),
   PropTypes.shape(FaqCategoriesModulePropTypes),
+  PropTypes.shape(PromotionBannerModulePropTypes),
 ]);
 
 export default ContentfulModulePropTypes;

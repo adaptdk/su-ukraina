@@ -1,4 +1,6 @@
 .EventCard {
+  --card-padding: calc(var(--s__unit) * 6);
+
   align-items: flex-start;
   background: #f5f9ff;
   border-radius: var(--s__alt-border-radius);
@@ -7,8 +9,16 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: calc(var(--s__unit) * 5);
-  padding: 24px;
+  padding: var(--card-padding);
+  position: relative;
   width: 100%;
+
+  &__star {
+    color: var(--c__secondary);
+    position: absolute;
+    right: var(--card-padding);
+    top: var(--card-padding);
+  }
 
   &--previous {
     background: #f9f9f9;
@@ -74,13 +84,13 @@
     font-size: 0.825rem;
     font-style: normal;
     font-weight: var(--fw__medium);
-    margin: 0 0 12px;
+    margin: 0;
   }
 
   &__event-info-wrapper {
     align-items: center;
     display: flex;
-    margin-bottom: calc(var(--s__unit) * 2);
+    margin: calc(var(--s__unit) * 3) 0 calc(var(--s__unit) * 2);
 
     .Icon {
       --icon-size: 16px;
@@ -88,6 +98,10 @@
       background: var(--c__primary);
       margin-right: 10px;
       min-width: var(--icon-size);
+    }
+
+    + .EventCard__event-info-wrapper {
+      margin: 0 0 calc(var(--s__unit) * 2);
     }
   }
 

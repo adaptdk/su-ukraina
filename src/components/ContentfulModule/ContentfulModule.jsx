@@ -11,6 +11,7 @@ import { LinkCollectionModule } from "./LinkCollectionModule";
 import { HelpSearch } from "../HelpSearch";
 import { PartnersModule } from "./PartnersModule";
 import { FaqCategoriesModule } from "./FaqCategoriesModule";
+import { PromotionBannerModule } from "./PromotionBannerModule";
 
 const ContentfulModule = ({ module, pathname }) => {
   const type = module?.internal?.type || ``;
@@ -53,6 +54,10 @@ const ContentfulModule = ({ module, pathname }) => {
 
   if (type === `ContentfulFaqCategoriesModule`) {
     return <FaqCategoriesModule {...module} pathname={pathname} />;
+  }
+
+  if (type === `ContentfulPromotionBannerModule`) {
+    return <PromotionBannerModule {...module} />;
   }
 
   return null;

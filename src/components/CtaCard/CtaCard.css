@@ -8,14 +8,8 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  margin: var(--s__small-padding) 0;
   overflow: hidden;
   width: 100%;
-
-  @media (min-width: 40rem) {
-    margin: var(--s__main-padding) 0;
-    width: 32%;
-  }
 
   a {
     align-items: stretch;
@@ -31,11 +25,6 @@
     padding: var(--s__main-padding);
     white-space: pre-line;
     word-break: break-word;
-
-    @media (min-width: 40rem) {
-      display: block;
-      font-size: var(--fs__h3);
-    }
   }
 
   &__heading {
@@ -97,8 +86,20 @@
     }
   }
 
-  .CtaCardItem {
-    font-size: 1.25rem;
-    padding: calc(var(--s__unit) * 4) 0;
+  @media (min-width: 40rem) {
+    &__body {
+      display: block;
+      font-size: var(--fs__h3);
+    }
   }
+
+  @media (min-width: 60rem) {
+    margin: var(--s__main-padding) 0;
+    width: 32%;
+  }
+}
+
+.CtaCardItem {
+  font-size: 1.25rem;
+  padding: calc(var(--s__unit) * 4) 0;
 }
