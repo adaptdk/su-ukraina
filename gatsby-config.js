@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-preact`,
+    // `gatsby-plugin-preact`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     {
