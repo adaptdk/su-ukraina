@@ -11,7 +11,6 @@ import {
 import "./LcmLightBlocks.css";
 
 const LcmLightBlocks = ({ heading, subheading, links }) => {
-  console.log({ links });
   return (
     <Section className="LcmLightBlocks">
       <Constraint>
