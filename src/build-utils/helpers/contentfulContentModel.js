@@ -165,6 +165,11 @@ const faqItem = `
       }
     }
   }
+  additionalLink {
+    ... on ContentfulLink {
+      ${link}
+    }
+  }
 `;
 
 const partnersModule = `

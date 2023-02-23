@@ -10,6 +10,7 @@ import { handleAnchorClick } from "../../Faq";
 import "./StepsModule.css";
 import { useEffect } from "react";
 import { openDetailsByHash } from "../../../helpers/handlers";
+import Button from "../../Button";
 
 const StepsModule = ({ steps }) => {
   useEffect(() => {
@@ -32,19 +33,28 @@ const StepsModule = ({ steps }) => {
                 <b>Step {index + 1}.</b> {step.question}
               </h3>
             </summary>
-            {formatRichText(step.answer.raw)}
-            <div className="Faq__actions">
-              <div className="Faq__copy-action">
-                <a
-                  href={`#${tabId}`}
-                  data-copied={getTranslatedText(`actions.copyLinkPopupLabel`)}
-                  onClick={(e) => {
-                    handleAnchorClick(e);
-                  }}
-                  className="copy"
-                >
-                  {getTranslatedText(`actions.copyLink`)}
-                </a>
+            <div className="StepsModule__content">
+              {formatRichText(step.answer.raw)}
+              <div className="StepsModule__actions">
+                {step?.additionalLink && (
+                  <Button color="primary-outline" to={step.additionalLink.url}>
+                    {step.additionalLink.label}
+                  </Button>
+                )}
+                <div className="StepsModule__copy-action">
+                  <a
+                    href={`#${tabId}`}
+                    data-copied={getTranslatedText(
+                      `actions.copyLinkPopupLabel`
+                    )}
+                    onClick={(e) => {
+                      handleAnchorClick(e);
+                    }}
+                    className="copy"
+                  >
+                    {getTranslatedText(`actions.copyLink`)}
+                  </a>
+                </div>
               </div>
             </div>
           </details>
