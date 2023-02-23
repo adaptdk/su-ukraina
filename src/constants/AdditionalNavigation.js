@@ -35,15 +35,102 @@ export const ADDITIONAL_NAVIGATION = {
       title: `Donation`,
     },
   ],
+
   // @todo: fix these links once we have all the slugs for personalized guide pages
-  "/ua/guide-for-new-arrivals": [
+  /* Personalized guides */
+  /* Guide for new arrivals */
+  "/guide-for-new-arrivals": [
     {
-      pathname: `/ua`,
-      title: `Temp link`,
+      pathname: `/guide-for-persons-with-children`,
+      title: `Guide for persons with children`,
     },
     {
-      pathname: `/ua`,
-      title: `temp link 2`,
+      pathname: `/guide-for-persons-with-disabilities`,
+      title: `Guide for persons with disabilities`,
+    },
+  ],
+  "/en/guide-for-new-arrivals": [
+    {
+      pathname: `/en/guide-for-persons-with-children`,
+      title: `Guide for persons with children`,
+    },
+    {
+      pathname: `/en/guide-for-persons-with-disabilities`,
+      title: `Guide for persons with disabilities`,
+    },
+  ],
+  "/ua/guide-for-new-arrivals": [
+    {
+      pathname: `/ua/guide-for-persons-with-children`,
+      title: `Guide for persons with children`,
+    },
+    {
+      pathname: `/ua/guide-for-persons-with-disabilities`,
+      title: `Guide for persons with disabilities`,
+    },
+  ],
+
+  /* Guide for persons with children */
+  "/guide-for-persons-with-children": [
+    {
+      pathname: `/guide-for-persons-with-disabilities`,
+      title: `Guide for persons with disabilities`,
+    },
+    {
+      pathname: `/guide-for-new-arrivals`,
+      title: `Guide for new arrivals`,
+    },
+  ],
+  "/en/guide-for-persons-with-children": [
+    {
+      pathname: `/en/guide-for-persons-with-disabilities`,
+      title: `Guide for persons with disabilities`,
+    },
+    {
+      pathname: `/en/guide-for-new-arrivals`,
+      title: `Guide for new arrivals`,
+    },
+  ],
+  "/ua/guide-for-persons-with-children": [
+    {
+      pathname: `/ua/guide-for-persons-with-disabilities`,
+      title: `Guide for persons with disabilities`,
+    },
+    {
+      pathname: `/ua/guide-for-new-arrivals`,
+      title: `Guide for new arrivals`,
+    },
+  ],
+
+  /* Guide for persons with disabilities */
+  "/guide-for-persons-with-disabilities": [
+    {
+      pathname: `/guide-for-new-arrivals`,
+      title: `Guide for new arrivals`,
+    },
+    {
+      pathname: `/guide-for-persons-with-children`,
+      title: `Guide for persons with children`,
+    },
+  ],
+  "/en/guide-for-persons-with-disabilities": [
+    {
+      pathname: `/en/guide-for-new-arrivals`,
+      title: `Guide for new arrivals`,
+    },
+    {
+      pathname: `/en/guide-for-persons-with-children`,
+      title: `Guide for persons with children`,
+    },
+  ],
+  "/ua/guide-for-persons-with-disabilities": [
+    {
+      pathname: `/ua/guide-for-new-arrivals`,
+      title: `Guide for new arrivals`,
+    },
+    {
+      pathname: `/ua/guide-for-persons-with-children`,
+      title: `Guide for persons with children`,
     },
   ],
 };
