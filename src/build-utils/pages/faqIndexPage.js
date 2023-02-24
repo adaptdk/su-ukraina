@@ -8,6 +8,10 @@ const query = (graphql) => {
   {
     ${contentModel.globalNavigation}
     ${contentModel.promoLine}
+    contentfulLinkCollectionModule(contentful_id: {eq: "1JYPNg9dcfazxccUEpijxk"}) {
+      id
+      ${contentModel.linkCollectionModule}
+    }
     allContentfulFaqPage(filter: { node_locale: { eq: "lt-LT" } }) {
       edges {
         node {
@@ -40,6 +44,7 @@ const createFaqIndexPages = (result, createPage) => {
   const globalPromoLine = result.data.allContentfulPromoLineModule.edges.map(
     (edge) => edge.node
   );
+  const personalizedGuidesLinks = result.data.contentfulLinkCollectionModule;
 
   faqIndexPages.forEach((faqIndexPage) => {
     const locale = faqIndexPage?.forceTranslate || faqIndexPage?.node_locale;
@@ -66,6 +71,7 @@ const createFaqIndexPages = (result, createPage) => {
           navigation,
           promoLine,
           rootPath: pagePath,
+          personalizedGuidesLinks,
         },
       });
     }

@@ -3,6 +3,11 @@
   overflow: hidden;
   width: 100%;
 
+  /* @todo: this is a temporary solution for quickly adding padding */
+  &--with-padding {
+    padding: var(--s__alt-padding) 0;
+  }
+
   &__heading {
     font-size: 1.8rem;
     margin: 0;

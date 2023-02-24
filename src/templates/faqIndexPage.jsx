@@ -16,6 +16,11 @@ import {
   promoLinePropTypes,
 } from "../helpers/genericPropTypes";
 import { FaqCategoriesPropType } from "../components/Faq/FaqPropTypes";
+import {
+  LinkCollectionModule,
+  LinkCollectionModulePropTypes,
+  LinkCollectionModuleDefaultProps,
+} from "../components/ContentfulModule/LinkCollectionModule";
 
 const FaqIndexPage = ({ path, pageContext }) => {
   const {
@@ -29,6 +34,7 @@ const FaqIndexPage = ({ path, pageContext }) => {
     categories,
     rootPath,
     promoLine,
+    personalizedGuidesLinks,
     breadcrumb: { crumbs },
   } = pageContext;
 
@@ -53,6 +59,13 @@ const FaqIndexPage = ({ path, pageContext }) => {
         <Constraint>
           <FaqNav rootPath={rootPath} categories={categories} pathname={path} />
         </Constraint>
+      )}
+
+      {personalizedGuidesLinks && (
+        <LinkCollectionModule
+          {...personalizedGuidesLinks}
+          className="LcmLightBlocks--with-padding"
+        />
       )}
     </Layout>
   );
@@ -83,6 +96,7 @@ FaqIndexPage.propTypes = {
       raw: PropTypes.string,
     }),
     categories: FaqCategoriesPropType,
+    personalizedGuidesLinks: PropTypes.shape(LinkCollectionModulePropTypes),
   }),
 };
 
@@ -93,6 +107,7 @@ FaqIndexPage.defaultProps = {
   },
   organisations: [],
   navData: [],
+  personalizedGuidesLinks: LinkCollectionModuleDefaultProps,
 };
 
 export default FaqIndexPage;

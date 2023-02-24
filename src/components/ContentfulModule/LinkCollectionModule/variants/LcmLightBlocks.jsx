@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from "react";
 
 import Button from "../../../Button";
@@ -10,9 +11,9 @@ import {
 
 import "./LcmLightBlocks.css";
 
-const LcmLightBlocks = ({ heading, subheading, links }) => {
+const LcmLightBlocks = ({ heading, subheading, links, className }) => {
   return (
-    <Section className="LcmLightBlocks">
+    <Section className={classNames(`LcmLightBlocks`, className)}>
       <Constraint>
         {!!heading && <h2 className="LcmLightBlocks__heading">{heading}</h2>}
         {!!subheading && (
