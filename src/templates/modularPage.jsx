@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 
 import Layout from "../components/Layout";
 import Constraint from "../components/Constraint";
@@ -35,7 +34,6 @@ const ModularPage = ({ path, pageContext }) => {
     modules,
     slidingNavData,
     includeContactForm,
-    fullWidthModules,
     showBreadcrumbs,
     stickyHeader,
     promoLine,
@@ -83,24 +81,21 @@ const ModularPage = ({ path, pageContext }) => {
         {pageDescription?.raw && formatRichText(pageDescription.raw)}
       </Constraint>
 
-      <Constraint
-        className={classNames({
-          "Constraint--sliding-nav": slidingNavData,
-          "Constraint--full-width": fullWidthModules,
+      {slidingNavData && (
+        <Constraint className="Constraint--sliding-nav">
+          <SlidingNavigation data={slidingNavData} />
+        </Constraint>
+      )}
+      {!!modules?.at(0) &&
+        modules.map((module) => {
+          return (
+            <ContentfulModule
+              key={module.id}
+              module={supplementModule(module)}
+              pathname={path}
+            />
+          );
         })}
-      >
-        {slidingNavData && <SlidingNavigation data={slidingNavData} />}
-        {!!modules?.at(0) &&
-          modules.map((module) => {
-            return (
-              <ContentfulModule
-                key={module.id}
-                module={supplementModule(module)}
-                pathname={path}
-              />
-            );
-          })}
-      </Constraint>
     </Layout>
   );
 };

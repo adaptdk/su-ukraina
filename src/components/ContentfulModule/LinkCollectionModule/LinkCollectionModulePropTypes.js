@@ -11,12 +11,14 @@ const LinkCollectionModulePropTypes = {
       url: PropTypes.string.isRequired,
     })
   ).isRequired,
+  fullWidth: PropTypes.bool,
 };
 
 const LinkCollectionModuleDefaultProps = {
   heading: ``,
   subheading: ``,
   variant: `default`,
+  fullWidth: false,
 };
 
 export { LinkCollectionModulePropTypes, LinkCollectionModuleDefaultProps };

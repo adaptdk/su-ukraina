@@ -11,16 +11,20 @@ import "./PromotionBannerModule.css";
 import Thumbnail from "./Thumbnail";
 import Organisation from "./ContentComponents/Organisation";
 import EventItem from "./ContentComponents/EventItem";
+import classNames from "classnames";
 
 const PromotionBannerModule = ({
   heading,
   thumbnail,
   thumbnailUrl,
   content,
+  fullWidth,
 }) => {
   return (
     <Section>
-      <Constraint>
+      <Constraint
+        className={classNames({ "Constraint--full-width": fullWidth })}
+      >
         <div className="PromotionBannerModule">
           <Thumbnail img={thumbnail} url={thumbnailUrl} />
           <div className="PromotionBannerModule__content">

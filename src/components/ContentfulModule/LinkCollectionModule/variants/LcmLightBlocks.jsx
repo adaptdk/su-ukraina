@@ -11,10 +11,18 @@ import {
 
 import "./LcmLightBlocks.css";
 
-const LcmLightBlocks = ({ heading, subheading, links, className }) => {
+const LcmLightBlocks = ({
+  heading,
+  subheading,
+  links,
+  className,
+  fullWidth,
+}) => {
   return (
     <Section className={classNames(`LcmLightBlocks`, className)}>
-      <Constraint>
+      <Constraint
+        className={classNames({ "Constraint--full-width": fullWidth })}
+      >
         {!!heading && <h2 className="LcmLightBlocks__heading">{heading}</h2>}
         {!!subheading && (
           <p className="LcmLightBlocks__subheading">{subheading}</p>

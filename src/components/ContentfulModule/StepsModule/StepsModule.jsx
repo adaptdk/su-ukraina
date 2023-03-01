@@ -11,8 +11,10 @@ import "./StepsModule.css";
 import { useEffect } from "react";
 import { openDetailsByHash } from "../../../helpers/handlers";
 import Button from "../../Button";
+import Constraint from "../../Constraint";
+import classNames from "classnames";
 
-const StepsModule = ({ steps }) => {
+const StepsModule = ({ steps, fullWidth }) => {
   useEffect(() => {
     window.addEventListener(`hashchange`, openDetailsByHash);
     openDetailsByHash();
@@ -23,48 +25,53 @@ const StepsModule = ({ steps }) => {
   }, []);
 
   return (
-    <div className="StepsModule">
-      {steps.map((step, index) => {
-        const tabId = `tab-${index + 1}`;
-        return (
-          <details key={step.id} id={tabId} open={index === 0}>
-            <summary>
-              <h3>
-                <b>
-                  {getTranslatedText(`labels.step`)} {index + 1}.
-                </b>
-                {` `}
-                {step.question}
-              </h3>
-            </summary>
-            <div className="StepsModule__content">
-              {formatRichText(step.answer.raw)}
-              <div className="StepsModule__actions">
-                {step?.additionalLink && (
-                  <Button color="primary-outline" to={step.additionalLink.url}>
-                    {step.additionalLink.label}
-                  </Button>
-                )}
-                <div className="StepsModule__copy-action">
-                  <a
-                    href={`#${tabId}`}
-                    data-copied={getTranslatedText(
-                      `actions.copyLinkPopupLabel`
-                    )}
-                    onClick={(e) => {
-                      handleAnchorClick(e);
-                    }}
-                    className="copy"
-                  >
-                    {getTranslatedText(`actions.copyLink`)}
-                  </a>
+    <Constraint className={classNames({ "Constraint--full-width": fullWidth })}>
+      <div className="StepsModule">
+        {steps.map((step, index) => {
+          const tabId = `tab-${index + 1}`;
+          return (
+            <details key={step.id} id={tabId} open={index === 0}>
+              <summary>
+                <h3>
+                  <b>
+                    {getTranslatedText(`labels.step`)} {index + 1}.
+                  </b>
+                  {` `}
+                  {step.question}
+                </h3>
+              </summary>
+              <div className="StepsModule__content">
+                {formatRichText(step.answer.raw)}
+                <div className="StepsModule__actions">
+                  {step?.additionalLink && (
+                    <Button
+                      color="primary-outline"
+                      to={step.additionalLink.url}
+                    >
+                      {step.additionalLink.label}
+                    </Button>
+                  )}
+                  <div className="StepsModule__copy-action">
+                    <a
+                      href={`#${tabId}`}
+                      data-copied={getTranslatedText(
+                        `actions.copyLinkPopupLabel`
+                      )}
+                      onClick={(e) => {
+                        handleAnchorClick(e);
+                      }}
+                      className="copy"
+                    >
+                      {getTranslatedText(`actions.copyLink`)}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </details>
-        );
-      })}
-    </div>
+            </details>
+          );
+        })}
+      </div>
+    </Constraint>
   );
 };
 

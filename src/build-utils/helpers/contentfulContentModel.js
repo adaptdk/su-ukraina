@@ -40,6 +40,7 @@ const linkCollectionModule = `
       ${link}
     }
   }
+  fullWidth
 `;
 
 const organisation = `
@@ -84,6 +85,7 @@ const eventsModule = `
       ${eventItem}
     }
   }
+  fullWidth
 `;
 
 const chip = `
@@ -101,6 +103,7 @@ const chipModule = `
       ${chip}
     }
   }
+  fullWidth
 `;
 
 const slidingNavBlock = `
@@ -134,6 +137,7 @@ const resourceListModule = `
       ${resourceItem}
     }
   }
+  fullWidth
 `;
 
 const helpSearchModule = `
@@ -190,6 +194,7 @@ const partnersModule = `
       }
     }
   }
+  fullWidth
 `;
 
 const faqCategoriesModule = `
@@ -201,6 +206,7 @@ const faqCategoriesModule = `
     pageHeading
     iconType
   }
+  fullWidth
 `;
 
 // the contentful_id is the same as the entry id in URL
@@ -282,6 +288,7 @@ const promotionBannerModule = `
       }
     }
   }
+  fullWidth
 `;
 
 const stepsModule = `
@@ -296,6 +303,7 @@ const stepsModule = `
       }
     }
   }
+  fullWidth
 `;
 
 module.exports = {

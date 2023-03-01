@@ -1,19 +1,32 @@
 import React from "react";
+import classNames from "classnames";
 
 import { FaqNav } from "../../Faq";
 import Section from "../../Section";
 import Constraint from "../../Constraint";
 import Link from "../../Link";
-import { getTranslatedText } from "../../../utils/getTranslatedText";
 import Icon from "../../Icon";
 
-import "./FaqCategoriesModule.css";
-import { FaqCategoriesModulePropTypes } from "./FaqCategoriesModulePropTypes";
+import { getTranslatedText } from "../../../utils/getTranslatedText";
 
-const FaqCategoriesModule = ({ heading, seeAllLink, categories, pathname }) => {
+import "./FaqCategoriesModule.css";
+import {
+  FaqCategoriesModuleDefaultProps,
+  FaqCategoriesModulePropTypes,
+} from "./FaqCategoriesModulePropTypes";
+
+const FaqCategoriesModule = ({
+  heading,
+  seeAllLink,
+  categories,
+  pathname,
+  fullWidth,
+}) => {
   return (
     <Section className="FaqCategoriesModule">
-      <Constraint>
+      <Constraint
+        className={classNames({ "Constraint--full-width": fullWidth })}
+      >
         {heading && <h2>{heading}</h2>}
         <FaqNav
           rootPath={seeAllLink}
@@ -35,5 +48,7 @@ const FaqCategoriesModule = ({ heading, seeAllLink, categories, pathname }) => {
 };
 
 FaqCategoriesModule.propTypes = FaqCategoriesModulePropTypes;
+
+FaqCategoriesModule.defaultProps = FaqCategoriesModuleDefaultProps;
 
 export default FaqCategoriesModule;
