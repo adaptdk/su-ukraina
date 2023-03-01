@@ -9,6 +9,7 @@ import Icon from "../../Icon";
 
 import "./FaqCategoriesModule.css";
 import { FaqCategoriesModulePropTypes } from "./FaqCategoriesModulePropTypes";
+import { graphql } from "gatsby";
 
 const FaqCategoriesModule = ({ heading, seeAllLink, categories, pathname }) => {
   return (
@@ -37,3 +38,16 @@ const FaqCategoriesModule = ({ heading, seeAllLink, categories, pathname }) => {
 FaqCategoriesModule.propTypes = FaqCategoriesModulePropTypes;
 
 export default FaqCategoriesModule;
+
+export const query = graphql`
+  fragment FaqCategoriesFragment on ContentfulFaqCategoriesModule {
+    heading
+    seeAllLink
+    categories {
+      id
+      slug
+      pageHeading
+      iconType
+    }
+  }
+`;

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import { HeroSection } from "../components/HeroSection";
@@ -22,33 +23,28 @@ import {
 import { formatRichText } from "../helpers/formatting";
 import { getTranslatedText } from "../utils/getTranslatedText";
 
-const HelpPage = ({ path, pageContext }) => {
+const HelpPage = ({ data, path, pageContext }) => {
   const {
-    currentNodeSlugs,
-    navigation,
-    metaTitle,
-    metaDescription,
-    heroImage,
-    node_locale,
-    pageHeading,
-    pageDescription,
-    organisations: orgs,
-    slidingNav,
-    organisationLogos,
-    promoLine,
     breadcrumb: { crumbs },
+    locale,
+    currentNodeSlugs,
   } = pageContext;
+  const {
+    contentfulNavigation,
+    contentfulPromoLineModule,
+    contentfulHelpPage: {
+      metaTitle,
+      metaDescription,
+      heroImage,
+      pageHeading,
+      pageDescription,
+      organisations: orgs,
+      slidingNav,
+    },
+  } = data;
 
-  const orgsWithLtLogo = orgs.map((org, index) => {
-    return { ...org, organisationLogo: organisationLogos[index] };
-  });
-
-  const ltOrgs = orgsWithLtLogo.filter(
-    ({ location }) => location === `Lithuania`
-  );
-  const foreignOrgs = orgsWithLtLogo.filter(
-    ({ location }) => location === `Foreign`
-  );
+  const ltOrgs = orgs.filter(({ location }) => location === `Lithuania`);
+  const foreignOrgs = orgs.filter(({ location }) => location === `Foreign`);
 
   const slidingNavData = [
     {
@@ -63,17 +59,17 @@ const HelpPage = ({ path, pageContext }) => {
       icon: `foreign`,
       data: foreignOrgs,
     },
-  ];
+  ].filter((item) => item?.data?.length);
 
   return (
     <Layout
       pagePath={path}
       metaTitle={metaTitle}
       metaDescription={metaDescription}
-      navigation={navigation}
-      locale={node_locale}
+      navigation={contentfulNavigation}
+      locale={locale}
       currentNodeSlugs={currentNodeSlugs}
-      promoLine={promoLine}
+      promoLine={contentfulPromoLineModule}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -95,18 +91,14 @@ const HelpPage = ({ path, pageContext }) => {
                   title={item.title}
                   icon={item.icon}
                 >
-                  <CardListSection
-                    organisations={item.data}
-                    organisationLogos={organisationLogos}
-                    locale={node_locale}
-                  />
+                  <CardListSection organisations={item.data} locale={locale} />
                 </SlidingNavBlock>
               );
             })}
           </>
         )}
         {!slidingNav && (
-          <CardListSection organisations={orgs} locale={node_locale} />
+          <CardListSection organisations={orgs} locale={locale} />
         )}
       </Constraint>
     </Layout>
@@ -124,22 +116,24 @@ HelpPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
+    locale: localePropType.isRequired,
     currentNodeSlugs: nodeSlugsPropTypes.isRequired,
-    navigation: navigationPropTypes.isRequired,
-    promoLine: promoLinePropTypes,
-    id: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    slidingNav: PropTypes.bool.isRequired,
-    metaTitle: PropTypes.string.isRequired,
-    metaDescription: PropTypes.string.isRequired,
-    heroImage: gatsbyImagePropType,
-    node_locale: localePropType.isRequired,
-    pageHeading: PropTypes.string,
-    pageDescription: PropTypes.shape({
-      raw: PropTypes.string,
-    }),
-    organisations: PropTypes.arrayOf(PropTypes.shape(OrganisationPropTypes)),
     organisationLogos: PropTypes.arrayOf(PropTypes.shape(gatsbyImagePropType)),
+  }),
+  data: PropTypes.shape({
+    contentfulNavigation: navigationPropTypes.isRequired,
+    contentfulPromoLineModule: promoLinePropTypes,
+    contentfulHelpPage: PropTypes.shape({
+      slidingNav: PropTypes.bool.isRequired,
+      metaTitle: PropTypes.string.isRequired,
+      metaDescription: PropTypes.string.isRequired,
+      heroImage: gatsbyImagePropType,
+      pageHeading: PropTypes.string,
+      pageDescription: PropTypes.shape({
+        raw: PropTypes.string,
+      }),
+      organisations: PropTypes.arrayOf(PropTypes.shape(OrganisationPropTypes)),
+    }),
   }),
 };
 
@@ -152,3 +146,59 @@ HelpPage.defaultProps = {
 };
 
 export default HelpPage;
+
+export const helpPageQuery = graphql`
+  query (
+    $id: String
+    $navigationId: String
+    $locale: String
+    $promoLineId: String
+  ) {
+    # Global Navigation
+    contentfulNavigation(
+      contentful_id: { eq: $navigationId }
+      node_locale: { eq: $locale }
+    ) {
+      ...NavigationFragment
+    }
+
+    # Global Promo Line
+    contentfulPromoLineModule(
+      contentful_id: { eq: $promoLineId }
+      node_locale: { eq: $locale }
+    ) {
+      heading
+      subheading
+      headingLink
+      linkButtons {
+        ...LinkFragment
+      }
+    }
+
+    # Help Page
+    contentfulHelpPage(
+      contentful_id: { eq: $id }
+      node_locale: { eq: $locale }
+    ) {
+      metaTitle
+      metaDescription
+      heroImage {
+        gatsbyImageData(
+          width: 1440
+          height: 148
+          placeholder: BLURRED
+          formats: WEBP
+          layout: FULL_WIDTH
+        )
+      }
+      pageHeading
+      pageDescription {
+        raw
+      }
+      slidingNav
+      organisations {
+        ...OrganisationFragment
+      }
+    }
+  }
+`;

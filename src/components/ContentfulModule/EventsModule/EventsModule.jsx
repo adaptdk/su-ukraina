@@ -4,6 +4,7 @@ import EventCardList from "./EventCardList";
 import EventCard from "./EventCard";
 import DetailsWrapper from "../../DetailsWrapper";
 import { getTranslatedText } from "../../../utils/getTranslatedText";
+import { graphql } from "gatsby";
 
 const EventsModule = ({ events, locale }) => {
   const currentDate = new Date();
@@ -73,3 +74,11 @@ const EventsModule = ({ events, locale }) => {
 EventsModule.propTypes = EventsModulePropTypes;
 
 export default EventsModule;
+
+export const query = graphql`
+  fragment EventsModuleFragment on ContentfulEventsModule {
+    events {
+      ...EventItemFragment
+    }
+  }
+`;

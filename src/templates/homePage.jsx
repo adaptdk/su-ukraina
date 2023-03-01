@@ -8,7 +8,6 @@ import {
   navigationPropTypes,
   promoLinePropTypes,
 } from "../helpers/genericPropTypes";
-import { getLocaleFromPath } from "../helpers/handlers";
 
 import Layout from "../components/Layout";
 import Section from "../components/Section";
@@ -21,22 +20,24 @@ import {
 import Constraint from "../components/Constraint";
 import CtaCard from "../components/CtaCard";
 import PromoLine from "../components/PromoLine";
+import { graphql } from "gatsby";
 
-const HomePage = ({ path, pageContext }) => {
+const HomePage = ({ data, path, pageContext }) => {
+  const { locale } = pageContext;
   const {
-    node_locale,
-    navigation,
-    metaTitle,
-    metaDescription,
-    heroImage,
-    heroTitle,
-    heroDescription,
-    heroCtaCards,
-    promoLine,
-    modules,
-  } = pageContext;
+    contentfulNavigation,
+    contentfulPromoLineModule: promoLine,
+    contentfulHomepage: {
+      metaTitle,
+      metaDescription,
+      heroImage,
+      heroTitle,
+      heroDescription,
+      heroCtaCards,
+      modules,
+    },
+  } = data;
 
-  const locale = getLocaleFromPath();
   const isLt = locale === `lt-LT`;
 
   return (
@@ -44,8 +45,8 @@ const HomePage = ({ path, pageContext }) => {
       pagePath={path}
       metaTitle={metaTitle}
       metaDescription={metaDescription}
-      navigation={navigation}
-      locale={node_locale}
+      navigation={contentfulNavigation}
+      locale={locale}
       promoLine={promoLine}
       isHomepage={true}
     >
@@ -74,7 +75,7 @@ const HomePage = ({ path, pageContext }) => {
         </Section>
       )}
 
-      {/* @todo: move promoline to modules */}
+      {/* @todo: move promoLine to modules */}
       {promoLine && isLt && (
         <Section className="PromoLineSection">
           <PromoLine
@@ -116,24 +117,27 @@ const HomePage = ({ path, pageContext }) => {
 HomePage.propTypes = {
   path: PropTypes.string.isRequired,
   pageContext: PropTypes.shape({
-    navigation: navigationPropTypes.isRequired,
-    promoLine: promoLinePropTypes,
-    id: PropTypes.string.isRequired,
-    node_locale: localePropType.isRequired,
-    metaTitle: PropTypes.string.isRequired,
-    metaDescription: PropTypes.string.isRequired,
-    heroTitle: PropTypes.string.isRequired,
-    heroDescription: PropTypes.string.isRequired,
-    heroImage: gatsbyImagePropType.isRequired,
-    heroCtaCards: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-        iconType: PropTypes.oneOf([`volunteer`, `donate`, `ua-flag`]),
-      })
-    ),
-    modules: ContentfulModulePropTypes,
+    locale: localePropType.isRequired,
+  }),
+  data: PropTypes.shape({
+    contentfulNavigation: navigationPropTypes.isRequired,
+    contentfulPromoLineModule: promoLinePropTypes,
+    contentfulHomepage: PropTypes.shape({
+      metaTitle: PropTypes.string.isRequired,
+      metaDescription: PropTypes.string.isRequired,
+      heroTitle: PropTypes.string.isRequired,
+      heroDescription: PropTypes.string.isRequired,
+      heroImage: gatsbyImagePropType.isRequired,
+      heroCtaCards: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          label: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired,
+          iconType: PropTypes.oneOf([`volunteer`, `donate`, `ua-flag`]),
+        })
+      ),
+      modules: ContentfulModulePropTypes,
+    }),
   }),
 };
 
@@ -145,3 +149,68 @@ HomePage.defaultProps = {
 };
 
 export default HomePage;
+
+export const modularPageQuery = graphql`
+  query (
+    $id: String
+    $navigationId: String
+    $locale: String
+    $promoLineId: String
+  ) {
+    # Global Navigation
+    contentfulNavigation(
+      contentful_id: { eq: $navigationId }
+      node_locale: { eq: $locale }
+    ) {
+      ...NavigationFragment
+    }
+
+    # Global Promo Line
+    contentfulPromoLineModule(
+      contentful_id: { eq: $promoLineId }
+      node_locale: { eq: $locale }
+    ) {
+      ...PromoLineFragment
+    }
+
+    # Home Page
+    contentfulHomepage(
+      contentful_id: { eq: $id }
+      node_locale: { eq: $locale }
+    ) {
+      metaTitle
+      metaDescription
+      heroTitle
+      heroDescription
+      heroImage {
+        gatsbyImageData(
+          formats: WEBP
+          height: 567
+          width: 1440
+          placeholder: BLURRED
+          layout: FULL_WIDTH
+        )
+      }
+      heroCtaCards {
+        ... on ContentfulLinkIcon {
+          id
+          label
+          url
+          iconType
+        }
+      }
+      modules {
+        ... on Node {
+          id
+          internal {
+            type
+          }
+          ...PartnersModuleFragment
+          ...FaqCategoriesFragment
+          ...LinkCollectionModuleFragment
+          ...PromotionBannerFragment
+        }
+      }
+    }
+  }
+`;

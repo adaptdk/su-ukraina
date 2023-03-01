@@ -7,6 +7,7 @@ import Constraint from "../Constraint";
 
 // Style.
 import "./PromoLine.css";
+import { graphql } from "gatsby";
 
 const PromoLine = ({ title, subtitle, titleLink, large, children }) => {
   return (
@@ -35,3 +36,14 @@ PromoLine.propTypes = {
 };
 
 export default PromoLine;
+
+export const query = graphql`
+  fragment PromoLineFragment on ContentfulPromoLineModule {
+    heading
+    subheading
+    headingLink
+    linkButtons {
+      ...LinkFragment
+    }
+  }
+`;

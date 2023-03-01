@@ -6,6 +6,7 @@ const OrganisationPropTypes = {
   name: PropTypes.string.isRequired,
   organisationType: PropTypes.oneOf([`Donation`, `Volunteering`]).isRequired,
   organisationLogo: PropTypes.shape(gatsbyImagePropType),
+  bigLogo: PropTypes.shape(gatsbyImagePropType),
   location: PropTypes.oneOf([`Lithuania`, `Foreign`]).isRequired,
   description: PropTypes.shape({
     raw: PropTypes.string,
