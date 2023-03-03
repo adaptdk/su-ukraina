@@ -28,7 +28,7 @@ const EventCard = (props) => {
           {getTranslatedText(`events.eventLink`)}
         </Button>
       )}
-      {starred && <Icon className="EventCard__star" type="star-filled" />}
+      {starred && <Icon className="EventCard__star" type="star-bookmark" />}
     </div>
   );
 };
