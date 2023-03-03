@@ -13,10 +13,11 @@ export const onServiceWorkerUpdateReady = () => {
 };
 
 export const shouldUpdateScroll = ({ routerProps: { location } }) => {
+  const path = location.pathname.toLowerCase();
   if (
-    [`pagalba-ukrainai`, `help-search`].includes(
-      location.pathname.toLowerCase().split(`/`)[1]
-    )
+    path.includes(`pagalbos-paieska`) ||
+    path.includes(`poshuk-posluh`) ||
+    path.includes(`help-search`)
   ) {
     return false;
   }
