@@ -6,7 +6,7 @@ import Constraint from "../Constraint";
 import Button from "../Button";
 import Breadcrumbs from "../Breadcrumbs";
 
-import { FaqModule } from "./FaqModule";
+import { FaqItemPropTypes, FaqModule } from "./FaqModule";
 import { FaqNavCollapsible } from "./FaqNav";
 import { FaqCategoriesPropType } from "./FaqPropTypes";
 import { ResourceListModulePropTypes } from "../ContentfulModule/ResourceListModule";
@@ -134,7 +134,10 @@ Faq.propTypes = {
     })
   ).isRequired,
   content: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.shape(ResourceListModulePropTypes)])
+    PropTypes.oneOfType([
+      PropTypes.shape(ResourceListModulePropTypes),
+      PropTypes.shape(FaqItemPropTypes),
+    ])
   ),
 };
 

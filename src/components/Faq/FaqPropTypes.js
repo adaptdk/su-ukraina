@@ -2,11 +2,15 @@ import PropTypes from "prop-types";
 
 import { ResourceListModulePropTypes } from "../ContentfulModule/ResourceListModule";
 import { gatsbyImagePropType } from "../../helpers/genericPropTypes";
+import { FaqItemPropTypes } from "./FaqModule";
 
 const FaqCategoriesPropType = PropTypes.arrayOf(
   PropTypes.shape({
     content: PropTypes.arrayOf(
-      PropTypes.oneOfType([PropTypes.shape(ResourceListModulePropTypes)])
+      PropTypes.oneOfType([
+        PropTypes.shape(ResourceListModulePropTypes),
+        PropTypes.shape(FaqItemPropTypes),
+      ])
     ),
     heroImage: gatsbyImagePropType,
     iconType: PropTypes.string,
