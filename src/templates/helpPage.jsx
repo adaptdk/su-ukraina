@@ -63,7 +63,7 @@ const HelpPage = ({ path, pageContext }) => {
       icon: `foreign`,
       data: foreignOrgs,
     },
-  ];
+  ].filter((item) => item?.data?.length);
 
   return (
     <Layout
