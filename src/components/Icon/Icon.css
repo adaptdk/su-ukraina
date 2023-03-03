@@ -153,8 +153,9 @@
     mask-image: url("../../images/icons/information.svg");
   }
 
-  &--star-filled {
-    mask-image: url("../../images/icons/star-filled.svg");
+  &--star-bookmark {
+    background: var(--c__primary);
+    mask-image: url("../../images/icons/star-bookmark.svg");
   }
 
   &--ua-flag {
