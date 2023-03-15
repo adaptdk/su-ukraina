@@ -65,12 +65,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    {
-      resolve: `remove-empty-fields`,
-      options: {
-        fieldsToRemove: [`image`],
-      },
-    },
     `create-redirects`,
     `@mediacurrent/gatsby-plugin-silence-css-order-warning`,
     {
