@@ -1,4 +1,4 @@
 import FaqModule from "./FaqModule";
-import { FaqItem, FaqItemPropTypes } from "./FaqItem";
+import { FaqItem } from "./FaqItem";
 
-export { FaqModule, FaqItem, FaqItemPropTypes };
+export { FaqModule, FaqItem };

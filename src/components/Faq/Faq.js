@@ -6,7 +6,8 @@ import Constraint from "../Constraint";
 import Button from "../Button";
 import Breadcrumbs from "../Breadcrumbs";
 
-import { FaqItemPropTypes, FaqModule } from "./FaqModule";
+import { FaqModule } from "./FaqModule";
+import { FaqItemPropTypes } from "./FaqModule/FaqItem/FaqItemPropTypes";
 import { FaqNavCollapsible } from "./FaqNav";
 import { FaqCategoriesPropType } from "./FaqPropTypes";
 import { ResourceListModulePropTypes } from "../ContentfulModule/ResourceListModule";
