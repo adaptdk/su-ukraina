@@ -10,6 +10,7 @@ import {
 import Constraint from "../../Constraint";
 
 import "./PartnersModule.css";
+import { graphql } from "gatsby";
 
 const PartnersModule = ({ heading, partnerCollections, fullWidth }) => {
   return (
@@ -46,3 +47,25 @@ PartnersModule.propTypes = PartnersModulePropTypes;
 PartnersModule.defaultProps = PartnersModuleDefaultProps;
 
 export default PartnersModule;
+
+export const query = graphql`
+  fragment PartnersModuleFragment on ContentfulPartnersModule {
+    heading
+    partnerCollections {
+      ... on ContentfulPartnerCollection {
+        id
+        category
+        partners {
+          ... on ContentfulPartner {
+            id
+            label
+            url
+            logo {
+              gatsbyImageData(height: 80, placeholder: BLURRED, formats: WEBP)
+            }
+          }
+        }
+      }
+    }
+  }
+`;

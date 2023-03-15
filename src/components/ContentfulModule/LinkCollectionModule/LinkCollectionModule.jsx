@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 
 import {
   LinkCollectionModuleDefaultProps,
@@ -27,3 +28,20 @@ LinkCollectionModule.propTypes = LinkCollectionModulePropTypes;
 LinkCollectionModule.defaultProps = LinkCollectionModuleDefaultProps;
 
 export default LinkCollectionModule;
+
+export const query = graphql`
+  fragment LinkCollectionModuleFragment on ContentfulLinkCollectionModule {
+    heading
+    image {
+      gatsbyImageData(
+        formats: WEBP
+        height: 440
+        width: 611
+        placeholder: BLURRED
+      )
+    }
+    links {
+      ...LinkFragment
+    }
+  }
+`;

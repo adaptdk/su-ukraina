@@ -12,6 +12,7 @@ import Thumbnail from "./Thumbnail";
 import Organisation from "./ContentComponents/Organisation";
 import EventItem from "./ContentComponents/EventItem";
 import classNames from "classnames";
+import { graphql } from "gatsby";
 
 const PromotionBannerModule = ({
   heading,
@@ -55,3 +56,28 @@ PromotionBannerModule.propTypes = PromotionBannerModulePropTypes;
 PromotionBannerModule.defaultProps = PromotionBannerModuleDefaultProps;
 
 export default PromotionBannerModule;
+
+export const query = graphql`
+  fragment PromotionBannerFragment on ContentfulPromotionBannerModule {
+    heading
+    thumbnail {
+      gatsbyImageData(
+        formats: WEBP
+        height: 600
+        width: 600
+        placeholder: BLURRED
+      )
+    }
+    thumbnailUrl
+    content {
+      ... on Node {
+        id
+        internal {
+          type
+        }
+        ...EventItemFragment
+        ...OrganisationFragment
+      }
+    }
+  }
+`;

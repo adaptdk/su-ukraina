@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 import { ResourceListModulePropTypes } from "../../ContentfulModule/ResourceListModule";
-import { FaqItemPropTypes } from "./FaqItem";
+import { FaqItemPropTypes } from "./FaqItem/FaqItemPropTypes";
 
 const FaqModulePropTypes = {
   module: PropTypes.oneOfType([

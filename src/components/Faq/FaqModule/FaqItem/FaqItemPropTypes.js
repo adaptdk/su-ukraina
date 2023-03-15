@@ -6,6 +6,7 @@ const FaqItemPropTypes = {
   question: PropTypes.string.isRequired,
   answer: PropTypes.shape({
     raw: PropTypes.string,
+    references: PropTypes.array,
   }).isRequired,
   index: PropTypes.number.isRequired,
   additionalLink: linkPropTypes,

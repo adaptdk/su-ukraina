@@ -8,6 +8,8 @@ import Link from "../../Link";
 import Icon from "../../Icon";
 
 import { getTranslatedText } from "../../../utils/getTranslatedText";
+import "./FaqCategoriesModule.css";
+import { graphql } from "gatsby";
 
 import "./FaqCategoriesModule.css";
 import {
@@ -52,3 +54,16 @@ FaqCategoriesModule.propTypes = FaqCategoriesModulePropTypes;
 FaqCategoriesModule.defaultProps = FaqCategoriesModuleDefaultProps;
 
 export default FaqCategoriesModule;
+
+export const query = graphql`
+  fragment FaqCategoriesFragment on ContentfulFaqCategoriesModule {
+    heading
+    seeAllLink
+    categories {
+      id
+      slug
+      pageHeading
+      iconType
+    }
+  }
+`;

@@ -7,6 +7,7 @@ import {
 } from "./ResourceListModulePropTypes";
 import { formatRichText } from "../../../helpers/formatting";
 import ResourceItem from "./ResourceItem";
+import { graphql } from "gatsby";
 
 const ResourceListModule = ({ heading, subheadingRich, resources }) => {
   return (
@@ -32,3 +33,15 @@ ResourceListModule.propTypes = ResourceListModulePropTypes;
 ResourceListModule.defaultProps = ResourceListModuleDefaultProps;
 
 export default ResourceListModule;
+
+export const query = graphql`
+  fragment ResourceListModuleFragment on ContentfulResourceListModule {
+    heading
+    subheading {
+      raw
+    }
+    resources {
+      ...ResourceItemFragment
+    }
+  }
+`;

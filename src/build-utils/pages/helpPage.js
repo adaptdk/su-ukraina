@@ -1,10 +1,12 @@
 const path = require(`path`);
+const {
+  NAVIGATION_ID,
+  PROMOLINE_ID,
+} = require(`../../constants/contentfulIds`);
 
-const contentModel = require(`../helpers/contentfulContentModel`);
 const {
   getPathByLocale,
   getAllPagesLocalisedValuesByKey,
-  getCurrentNodeValue,
 } = require(`../helpers/hooks`);
 const {
   logContentfulWarning,
@@ -13,51 +15,28 @@ const {
 
 const query = (graphql) => {
   return graphql(`
-  {
-    ${contentModel.globalNavigation}
-    ${contentModel.promoLine}
-    allContentfulHelpPage {
-      edges {
-        node {
-          contentful_id
-          id
-          slug
-          node_locale
-          slidingNav
-          ${contentModel.seo}
-          ${contentModel.hero}
-          pageHeading
-          pageDescription {
-            raw
-          }
-          organisations {
-            ... on ContentfulOrganisation {
-              ${contentModel.organisation}
-            }
+    {
+      allContentfulHelpPage {
+        edges {
+          node {
+            contentful_id
+            id
+            slug
+            node_locale
+            metaTitle
           }
         }
       }
     }
-  }
-`);
+  `);
 };
 
 const createHelpPages = (result, createPage) => {
   const helpPages = result.data.allContentfulHelpPage.edges.map(
     (edge) => edge.node
   );
-  const globalNavigation = result.data.allContentfulNavigation.edges.map(
-    (edge) => edge.node
-  );
-  const globalPromoLine = result.data.allContentfulPromoLineModule.edges.map(
-    (edge) => edge.node
-  );
+
   const allNodeSlugs = getAllPagesLocalisedValuesByKey(helpPages, `slug`);
-  const allHeroImages = getAllPagesLocalisedValuesByKey(helpPages, `heroImage`);
-  const allOrganisations = getAllPagesLocalisedValuesByKey(
-    helpPages,
-    `organisations`
-  );
 
   helpPages.forEach((helpPage) => {
     const slug = helpPage?.slug;
@@ -65,24 +44,7 @@ const createHelpPages = (result, createPage) => {
     const id = helpPage?.contentful_id;
 
     if (slug && helpPage?.metaTitle && locale) {
-      const navigation = globalNavigation
-        .filter((item) => item.node_locale === locale)
-        .shift();
-      const promoLine = globalPromoLine
-        .filter((item) => item.node_locale === locale)
-        .shift();
-
       const currentNodeSlugs = allNodeSlugs[id];
-      const currentHeroImage = getCurrentNodeValue(allHeroImages, id, locale);
-      const ltOrganisations = getCurrentNodeValue(
-        allOrganisations,
-        id,
-        `lt-LT`
-      );
-
-      const organisationLogos = ltOrganisations.map((org) => {
-        return org.organisationLogo;
-      });
 
       const modifiedSlugs = Object.entries(currentNodeSlugs).reduce(
         (acc, [key, value]) => {
@@ -98,12 +60,11 @@ const createHelpPages = (result, createPage) => {
         path: pagePath,
         component: path.resolve(`./src/templates/helpPage.jsx`),
         context: {
-          ...helpPage,
-          heroImage: currentHeroImage,
+          id,
+          navigationId: NAVIGATION_ID,
+          promoLineId: PROMOLINE_ID,
+          locale,
           currentNodeSlugs: modifiedSlugs,
-          navigation,
-          promoLine,
-          organisationLogos,
         },
       });
     } else {

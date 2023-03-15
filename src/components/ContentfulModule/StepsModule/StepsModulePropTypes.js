@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { FaqItemPropTypes } from "../../Faq";
+import { FaqItemPropTypes } from "../../Faq/FaqModule/FaqItem/FaqItemPropTypes";
 
 const StepsModulePropTypes = {
   steps: PropTypes.arrayOf(

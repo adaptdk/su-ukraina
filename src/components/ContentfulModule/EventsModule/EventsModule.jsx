@@ -8,6 +8,7 @@ import DetailsWrapper from "../../DetailsWrapper";
 import Constraint from "../../Constraint";
 
 import { getTranslatedText } from "../../../utils/getTranslatedText";
+import { graphql } from "gatsby";
 
 const EventsModule = ({ events, locale, fullWidth }) => {
   const currentDate = new Date();
@@ -79,3 +80,11 @@ const EventsModule = ({ events, locale, fullWidth }) => {
 EventsModule.propTypes = EventsModulePropTypes;
 
 export default EventsModule;
+
+export const query = graphql`
+  fragment EventsModuleFragment on ContentfulEventsModule {
+    events {
+      ...EventItemFragment
+    }
+  }
+`;
