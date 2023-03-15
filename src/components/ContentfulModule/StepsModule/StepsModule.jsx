@@ -13,6 +13,7 @@ import { openDetailsByHash } from "../../../helpers/handlers";
 import Button from "../../Button";
 import Constraint from "../../Constraint";
 import classNames from "classnames";
+import { graphql } from "gatsby";
 
 const StepsModule = ({ steps, fullWidth }) => {
   useEffect(() => {
@@ -80,3 +81,17 @@ StepsModule.propTypes = StepsModulePropTypes;
 StepsModule.defaultProps = StepsModuleDefaultProps;
 
 export default StepsModule;
+
+export const query = graphql`
+  fragment StepsModuleFragment on ContentfulStepsModule {
+    steps {
+      ... on Node {
+        id
+        internal {
+          type
+        }
+        ...FaqItemFragment
+      }
+    }
+  }
+`;

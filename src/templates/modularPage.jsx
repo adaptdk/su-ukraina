@@ -211,6 +211,7 @@ export const modularPageQuery = graphql`
           ...ResourceListModuleFragment
           ...LinkCollectionModuleFragment
           ...HelpSearchFragment
+          ...StepsModuleFragment
         }
       }
       includeContactForm
