@@ -14,42 +14,49 @@ import "../components/Organisation/OrganisationPage.css";
 import {
   localePropType,
   navigationPropTypes,
+  nodeSlugsPropTypes,
+  nodeSlugsDefaultProps,
   promoLinePropTypes,
 } from "../helpers/genericPropTypes";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
-const OrganisationPage = ({ path, pageContext }) => {
+const OrganisationPage = ({ data, path, pageContext }) => {
   const {
-    node_locale,
-    navigation,
-    name,
-    description,
-    purpose,
-    otherInformation,
-    websiteUrl,
-    actionUrl,
-    organisationType,
-    organisationLogo,
+    locale,
     currentNodeSlugs,
-    promoLine,
     breadcrumb: { crumbs },
   } = pageContext;
+  const {
+    contentfulNavigation,
+    contentfulPromoLineModule,
+    contentfulOrganisation: {
+      name,
+      description,
+      purpose,
+      otherInformation,
+      websiteUrl,
+      actionUrl,
+      organisationType,
+      bigLogo,
+    },
+  } = data;
 
   return (
     <Layout
       pagePath={path}
       metaTitle={name || ``}
       metaDescription={``}
-      navigation={navigation}
+      navigation={contentfulNavigation}
       currentNodeSlugs={currentNodeSlugs}
-      locale={node_locale}
-      promoLine={promoLine}
+      locale={locale}
+      promoLine={contentfulPromoLineModule}
     >
       <Constraint className="OrganisationPage">
         <NavigationGroup crumbs={crumbs} />
-        {organisationLogo && (
+        {bigLogo && (
           <div className="OrganisationPage__logo">
-            <GatsbyImage image={getImage(organisationLogo)} alt="" src="" />
+            <GatsbyImage image={getImage(bigLogo)} alt="" src="" />
           </div>
         )}
         {name && <h1>{name}</h1>}
@@ -81,41 +88,83 @@ const OrganisationPage = ({ path, pageContext }) => {
   );
 };
 
-const organisationPageContext = {
-  ...OrganisationPropTypes,
-  navigation: navigationPropTypes.isRequired,
-  promoLine: promoLinePropTypes,
-  node_locale: localePropType.isRequired,
-  breadcrumb: PropTypes.shape({
-    crumbs: PropTypes.arrayOf(
-      PropTypes.shape({
-        pathname: PropTypes.string.isRequired,
-        crumbLabel: PropTypes.string.isRequired,
-      })
-    ).isRequired,
-  }).isRequired,
-};
-
 OrganisationPage.propTypes = {
   path: PropTypes.string.isRequired,
-  pageContext: PropTypes.shape(organisationPageContext),
+  pageContext: PropTypes.shape({
+    locale: localePropType.isRequired,
+    currentNodeSlugs: nodeSlugsPropTypes,
+    breadcrumb: PropTypes.shape({
+      crumbs: PropTypes.arrayOf(
+        PropTypes.shape({
+          pathname: PropTypes.string.isRequired,
+          crumbLabel: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    }).isRequired,
+  }),
+  data: PropTypes.shape({
+    contentfulNavigation: navigationPropTypes.isRequired,
+    contentfulPromoLineModule: promoLinePropTypes,
+    contentfulOrganisation: PropTypes.shape(OrganisationPropTypes),
+  }),
 };
 
 OrganisationPage.defaultProps = {
   pageContext: {
-    name: ``,
-    description: {
-      raw: ``,
+    nodeSlugsPropTypes: nodeSlugsDefaultProps,
+  },
+  data: {
+    contentfulOrganisation: {
+      name: ``,
+      description: {
+        raw: ``,
+      },
+      purpose: {
+        raw: ``,
+      },
+      otherInformation: {
+        raw: ``,
+      },
+      websiteUrl: ``,
+      actionUrl: ``,
     },
-    purpose: {
-      raw: ``,
-    },
-    otherInformation: {
-      raw: ``,
-    },
-    websiteUrl: ``,
-    actionUrl: ``,
   },
 };
 
 export default OrganisationPage;
+
+export const organisationPageQuery = graphql`
+  query (
+    $id: String
+    $navigationId: String
+    $locale: String
+    $promoLineId: String
+  ) {
+    # Global Navigation
+    contentfulNavigation(
+      contentful_id: { eq: $navigationId }
+      node_locale: { eq: $locale }
+    ) {
+      ...NavigationFragment
+    }
+
+    # Global Promo Line
+    contentfulPromoLineModule(
+      contentful_id: { eq: $promoLineId }
+      node_locale: { eq: $locale }
+    ) {
+      ...PromoLineFragment
+    }
+
+    # Modular Page
+    contentfulOrganisation(
+      contentful_id: { eq: $id }
+      node_locale: { eq: $locale }
+    ) {
+      ...OrganisationFragment
+      bigLogo: organisationLogo {
+        gatsbyImageData(height: 100, placeholder: BLURRED, formats: WEBP)
+      }
+    }
+  }
+`;

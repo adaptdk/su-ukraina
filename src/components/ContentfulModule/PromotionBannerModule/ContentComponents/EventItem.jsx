@@ -3,6 +3,7 @@ import { EventCardContent } from "../../EventsModule";
 import Button from "../../../Button";
 import { getTranslatedText } from "../../../../utils/getTranslatedText";
 import { EventCardPropTypes } from "../../EventsModule/EventCard/EventCardPropTypes";
+import { graphql } from "gatsby";
 
 const EventItem = (props) => {
   return (
@@ -26,3 +27,20 @@ const EventItem = (props) => {
 EventItem.propTypes = EventCardPropTypes;
 
 export default EventItem;
+
+export const query = graphql`
+  fragment EventItemFragment on ContentfulEventItem {
+    id
+    starred
+    eventType
+    title
+    organizer
+    startDate
+    endDate
+    location
+    description {
+      raw
+    }
+    eventUrl
+  }
+`;

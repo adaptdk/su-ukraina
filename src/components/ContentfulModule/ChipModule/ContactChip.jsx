@@ -1,3 +1,4 @@
+import { graphql } from "gatsby";
 import * as React from "react";
 import { ChipPropTypes } from "./ChipModulePropTypes";
 
@@ -58,3 +59,14 @@ const ContactChip = ({
 ContactChip.propTypes = ChipPropTypes;
 
 export default ContactChip;
+
+export const query = graphql`
+  fragment ChipFragment on ContentfulChip {
+    id
+    heading
+    subheading
+    webUrl
+    facebookUrl
+    twitterUrl
+  }
+`;

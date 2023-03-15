@@ -11,7 +11,6 @@ import {
   ContentfulModulePropTypes,
 } from "../components/ContentfulModule";
 import SlidingNavigation from "../components/SlidingNavigation";
-import { SlidingNavBlockPropTypes } from "../components/ContentfulModule/SlidingNavBlock";
 
 import { formatRichText } from "../helpers/formatting";
 import {
@@ -21,27 +20,33 @@ import {
   nodeSlugsPropTypes,
   promoLinePropTypes,
 } from "../helpers/genericPropTypes";
+import { graphql } from "gatsby";
+import { getSlidingNavData } from "../build-utils/helpers/hooks";
 
-const ModularPage = ({ path, pageContext }) => {
+const ModularPage = ({ data, path, pageContext }) => {
   const {
+    locale,
     currentNodeSlugs,
-    navigation,
-    node_locale,
-    metaTitle,
-    metaDescription,
-    heroImage,
-    pageHeading,
-    pageDescription,
-    modules,
-    slidingNavData,
-    includeContactForm,
-    fullWidthModules,
-    showBreadcrumbs,
-    stickyHeader,
-    promoLine,
     breadcrumb: { crumbs },
   } = pageContext;
+  const {
+    contentfulNavigation,
+    contentfulPromoLineModule,
+    contentfulModularPage: {
+      pageHeading,
+      metaTitle,
+      metaDescription,
+      heroImage,
+      pageDescription,
+      modules,
+      includeContactForm,
+      fullWidthModules,
+      showBreadcrumbs,
+      stickyHeader,
+    },
+  } = data;
 
+  const slidingNavData = getSlidingNavData(modules);
   // in some cases you want to add extra props to a module
   // this function does exactly that
   const supplementModule = (module) => {
@@ -56,7 +61,7 @@ const ModularPage = ({ path, pageContext }) => {
     if (type === `ContentfulEventsModule`) {
       return {
         ...module,
-        locale: node_locale,
+        locale,
       };
     }
 
@@ -69,11 +74,11 @@ const ModularPage = ({ path, pageContext }) => {
       includeContactForm={includeContactForm}
       metaTitle={metaTitle}
       metaDescription={metaDescription}
-      navigation={navigation}
+      navigation={contentfulNavigation}
       currentNodeSlugs={currentNodeSlugs}
-      locale={node_locale}
+      locale={locale}
       stickyHeader={stickyHeader}
-      promoLine={promoLine}
+      promoLine={contentfulPromoLineModule}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
 
@@ -115,45 +120,107 @@ ModularPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
+    locale: localePropType.isRequired,
     currentNodeSlugs: nodeSlugsPropTypes.isRequired,
-    navigation: navigationPropTypes.isRequired,
-    promoLine: promoLinePropTypes,
-    node_locale: localePropType.isRequired,
-    id: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    metaTitle: PropTypes.string.isRequired,
-    metaDescription: PropTypes.string.isRequired,
-    heroImage: gatsbyImagePropType,
-    pageHeading: PropTypes.string,
-    pageDescription: PropTypes.shape({
-      raw: PropTypes.string,
+  }),
+  data: PropTypes.shape({
+    contentfulNavigation: navigationPropTypes.isRequired,
+    contentfulPromoLineModule: promoLinePropTypes,
+    contentfulModularPage: PropTypes.shape({
+      metaTitle: PropTypes.string.isRequired,
+      metaDescription: PropTypes.string.isRequired,
+      heroImage: gatsbyImagePropType,
+      pageHeading: PropTypes.string,
+      pageDescription: PropTypes.shape({
+        raw: PropTypes.string,
+      }),
+      modules: PropTypes.arrayOf(ContentfulModulePropTypes),
+      includeContactForm: PropTypes.bool,
+      fullWidthModules: PropTypes.bool,
+      showBreadcrumbs: PropTypes.bool,
+      stickyHeader: PropTypes.bool,
     }),
-    modules: PropTypes.arrayOf(ContentfulModulePropTypes),
-    slidingNavData: PropTypes.arrayOf(
-      PropTypes.shape({
-        ...SlidingNavBlockPropTypes,
-        linkId: PropTypes.string.isRequired,
-      })
-    ),
-    includeContactForm: PropTypes.bool,
-    fullWidthModules: PropTypes.bool,
-    showBreadcrumbs: PropTypes.bool,
-    stickyHeader: PropTypes.bool,
   }),
 };
 
 ModularPage.defaultProps = {
-  pageContext: {
-    pageTitle: ``,
-    pageDescription: {
-      raw: ``,
+  data: {
+    contentfulModularPage: {
+      pageTitle: ``,
+      pageDescription: {
+        raw: ``,
+      },
+      organisations: [],
+      includeContactForm: true,
+      fullWidthModules: false,
+      showBreadcrumbs: true,
+      stickyHeader: true,
     },
-    organisations: [],
-    includeContactForm: true,
-    fullWidthModules: false,
-    showBreadcrumbs: true,
-    stickyHeader: true,
   },
 };
 
 export default ModularPage;
+
+export const modularPageQuery = graphql`
+  query (
+    $id: String
+    $navigationId: String
+    $locale: String
+    $promoLineId: String
+  ) {
+    # Global Navigation
+    contentfulNavigation(
+      contentful_id: { eq: $navigationId }
+      node_locale: { eq: $locale }
+    ) {
+      ...NavigationFragment
+    }
+
+    # Global Promo Line
+    contentfulPromoLineModule(
+      contentful_id: { eq: $promoLineId }
+      node_locale: { eq: $locale }
+    ) {
+      ...PromoLineFragment
+    }
+
+    # Modular Page
+    contentfulModularPage(
+      contentful_id: { eq: $id }
+      node_locale: { eq: $locale }
+    ) {
+      metaTitle
+      metaDescription
+      heroImage {
+        gatsbyImageData(
+          width: 1440
+          height: 148
+          placeholder: BLURRED
+          formats: WEBP
+          layout: FULL_WIDTH
+        )
+      }
+      pageHeading
+      pageDescription {
+        raw
+      }
+      modules {
+        ... on Node {
+          id
+          internal {
+            type
+          }
+          ...EventsModuleFragment
+          ...SlidingNavBlockFragment
+          ...ResourceListModuleFragment
+          ...LinkCollectionModuleFragment
+          ...HelpSearchFragment
+        }
+      }
+      includeContactForm
+      fullWidthModules
+      showBreadcrumbs
+      stickyHeader
+    }
+  }
+`;

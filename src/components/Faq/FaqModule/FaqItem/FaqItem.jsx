@@ -6,6 +6,7 @@ import { getTranslatedText } from "../../../../utils/getTranslatedText";
 import { handleAnchorClick } from "./faqItemUtils";
 import { ContentfulModule } from "../../../ContentfulModule";
 import { getRichTextModuleData } from "../../../../helpers/handlers";
+import { graphql } from "gatsby";
 
 const formatContent = (str, refs) => {
   const options = {
@@ -81,3 +82,32 @@ const FaqItem = ({ answer, question, index }) => {
 FaqItem.propTypes = FaqItemPropTypes;
 
 export default FaqItem;
+
+export const query = graphql`
+  fragment FaqItemFragment on ContentfulFaqItem {
+    question
+    answer {
+      raw
+      references {
+        ... on ContentfulAsset {
+          id
+          contentful_id
+          internal {
+            type
+          }
+          file {
+            contentType
+          }
+          gatsbyImageData(formats: WEBP, placeholder: BLURRED)
+        }
+        ... on ContentfulResourceItem {
+          contentful_id
+          internal {
+            type
+          }
+          ...ResourceItemFragment
+        }
+      }
+    }
+  }
+`;

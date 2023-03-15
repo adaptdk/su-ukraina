@@ -7,7 +7,7 @@ import Button from "../Button";
 import Breadcrumbs from "../Breadcrumbs";
 
 import { FaqModule } from "./FaqModule";
-import { FaqItemPropTypes } from "./FaqModule/FaqItem";
+import { FaqItemPropTypes } from "./FaqModule/FaqItem/FaqItemPropTypes";
 import { FaqNavCollapsible } from "./FaqNav";
 import { FaqCategoriesPropType } from "./FaqPropTypes";
 import { ResourceListModulePropTypes } from "../ContentfulModule/ResourceListModule";
