@@ -86,5 +86,6 @@ export const query = graphql`
     events {
       ...EventItemFragment
     }
+    fullWidth
   }
 `;

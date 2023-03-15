@@ -65,5 +65,6 @@ export const query = graphql`
       pageHeading
       iconType
     }
+    fullWidth
   }
 `;

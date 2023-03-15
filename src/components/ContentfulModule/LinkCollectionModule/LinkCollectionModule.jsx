@@ -40,6 +40,8 @@ export const query = graphql`
         placeholder: BLURRED
       )
     }
+    fullWidth
+    variant
     links {
       ...LinkFragment
     }

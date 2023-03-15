@@ -43,5 +43,6 @@ export const query = graphql`
     resources {
       ...ResourceItemFragment
     }
+    fullWidth
   }
 `;

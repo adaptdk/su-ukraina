@@ -79,5 +79,6 @@ export const query = graphql`
         ...OrganisationFragment
       }
     }
+    fullWidth
   }
 `;
