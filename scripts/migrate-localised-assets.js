@@ -6,6 +6,14 @@ const ACCESS_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
 const CONTENTFUL_ENV = process.env.CONTENTFUL_ENV || `sandbox`;
 const DEFAULT_LOCALE = `lt-LT`;
 
+// Console.log messages only if you run the script with the `--verbose` flag
+const verbose = process.argv.includes(`--verbose`);
+const log = (msg) => {
+  if (verbose) {
+    console.log(msg);
+  }
+};
+
 if (!SPACE_ID || !ACCESS_TOKEN) {
   console.error(
     `Please set CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN environment variables.`
@@ -31,6 +39,7 @@ async function migrateAssets() {
   for (const asset of assets.items) {
     const assetId = asset.sys.id;
     const locales = [`lt-LT`, `en-US`, `uk-UA`];
+    let updateAsset = false;
 
     locales.forEach((locale) => {
       // Check if the asset is published
@@ -40,10 +49,12 @@ async function migrateAssets() {
         if (!fields.title[locale]) {
           // Title is missing, let's copy from the default locale
           asset.fields.title[locale] = asset.fields.title[DEFAULT_LOCALE];
+          updateAsset = true;
         }
         if (!fields.file[locale]) {
           // File is missing, let's copy from the default locale
           asset.fields.file[locale] = asset.fields.file[DEFAULT_LOCALE];
+          updateAsset = true;
         } else {
           // File locale is present, let's check for missing fields
           const defaultFields = asset.fields.file[DEFAULT_LOCALE];
@@ -51,6 +62,7 @@ async function migrateAssets() {
             if (!fields.file[locale][field]) {
               // Field is missing, let's copy from the default locale
               asset.fields.file[locale][field] = defaultFields[field];
+              updateAsset = true;
             }
           }
         }
@@ -58,8 +70,12 @@ async function migrateAssets() {
     });
 
     try {
-      await asset.update();
-      console.log(`Updated asset ${assetId}`);
+      if (updateAsset) {
+        await asset.update();
+        log(`Updated asset ${assetId}`);
+      } else {
+        log(`Skipping asset ${assetId}`);
+      }
     } catch (e) {
       console.log(`Failed updating asset. ID: `, assetId);
       console.error(e);

@@ -83,7 +83,20 @@ It is highly advised to first make a backup of your space. Read up more in the [
 2.  Run the migration script
 3.  You should see in your terminal log that the migration was successful. Now you can go to the Contentful web app and review/publish your assets.
 
+#### Run the script with default settings (sandbox env)
+
 ```
-# It is recommended to first test it out in a sandbox environment, which is the default environment for the script
-CONTENTFUL_ENV=<environment id> node scripts/migrate-localised-assets.js
+node scripts/migrate-localised-assets.js
+```
+
+#### Run the script for master environment
+
+```
+CONTENTFUL_ENV=master node scripts/migrate-localised-assets.js
+```
+
+#### Run the script with status logs for each asset
+
+```
+node scripts/migrate-localised-assets.js --verbose
 ```
