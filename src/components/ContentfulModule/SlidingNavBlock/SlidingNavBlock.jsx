@@ -4,6 +4,7 @@ import "./SlidingNavBlock.css";
 import Icon from "../../Icon";
 import { ChipModule } from "../ChipModule";
 import { SlidingNavBlockPropTypes } from "./SlidingNavBlockPropTypes";
+import { graphql } from "gatsby";
 
 const SlidingNavBlock = ({ id = ``, children, title, icon, data }) => {
   const getModule = (data) => {
@@ -36,3 +37,19 @@ const SlidingNavBlock = ({ id = ``, children, title, icon, data }) => {
 SlidingNavBlock.propTypes = SlidingNavBlockPropTypes;
 
 export default SlidingNavBlock;
+
+export const query = graphql`
+  fragment SlidingNavBlockFragment on ContentfulSlidingNavBlock {
+    title
+    icon
+    data {
+      ... on Node {
+        id
+        internal {
+          type
+        }
+        ...ChipModuleFragment
+      }
+    }
+  }
+`;

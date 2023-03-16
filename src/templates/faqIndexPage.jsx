@@ -12,25 +12,29 @@ import {
   gatsbyImagePropType,
   localePropType,
   navigationPropTypes,
-  nodeSlugsPropTypes,
   promoLinePropTypes,
 } from "../helpers/genericPropTypes";
 import { FaqCategoriesPropType } from "../components/Faq/FaqPropTypes";
+import { graphql } from "gatsby";
 
-const FaqIndexPage = ({ path, pageContext }) => {
+const FaqIndexPage = ({ data, path, pageContext }) => {
   const {
-    node_locale,
-    navigation,
-    metaTitle,
-    metaDescription,
-    heroImage,
-    pageHeading,
-    pageDescription,
-    categories,
+    locale,
     rootPath,
-    promoLine,
     breadcrumb: { crumbs },
   } = pageContext;
+  const {
+    contentfulNavigation: navigation,
+    contentfulPromoLineModule: promoLine,
+    contentfulFaqPage: {
+      metaTitle,
+      metaDescription,
+      heroImage,
+      pageHeading,
+      pageDescription,
+      categories,
+    },
+  } = data;
 
   return (
     <Layout
@@ -38,7 +42,7 @@ const FaqIndexPage = ({ path, pageContext }) => {
       metaTitle={metaTitle}
       metaDescription={metaDescription}
       navigation={navigation}
-      locale={node_locale}
+      locale={locale}
       promoLine={promoLine}
     >
       {heroImage && <HeroSection heroImage={heroImage} />}
@@ -69,20 +73,22 @@ FaqIndexPage.propTypes = {
         })
       ).isRequired,
     }).isRequired,
-    currentNodeSlugs: nodeSlugsPropTypes.isRequired,
-    navigation: navigationPropTypes.isRequired,
-    promoLine: promoLinePropTypes,
-    node_locale: localePropType.isRequired,
-    id: PropTypes.string.isRequired,
+    locale: localePropType.isRequired,
     rootPath: PropTypes.string.isRequired,
-    metaTitle: PropTypes.string.isRequired,
-    metaDescription: PropTypes.string.isRequired,
-    heroImage: gatsbyImagePropType,
-    pageHeading: PropTypes.string,
-    pageDescription: PropTypes.shape({
-      raw: PropTypes.string,
+  }),
+  data: PropTypes.shape({
+    contentfulNavigation: navigationPropTypes.isRequired,
+    contentfulPromoLineModule: promoLinePropTypes,
+    contentfulFaqPage: PropTypes.shape({
+      metaTitle: PropTypes.string.isRequired,
+      metaDescription: PropTypes.string.isRequired,
+      heroImage: gatsbyImagePropType,
+      pageHeading: PropTypes.string,
+      pageDescription: PropTypes.shape({
+        raw: PropTypes.string,
+      }),
+      categories: FaqCategoriesPropType,
     }),
-    categories: FaqCategoriesPropType,
   }),
 };
 
@@ -96,3 +102,59 @@ FaqIndexPage.defaultProps = {
 };
 
 export default FaqIndexPage;
+
+export const faqIndexPageQuery = graphql`
+  query (
+    $id: String
+    $navigationId: String
+    $locale: String
+    $promoLineId: String
+    $node_locale: String
+  ) {
+    # Global Navigation
+    contentfulNavigation(
+      contentful_id: { eq: $navigationId }
+      node_locale: { eq: $locale }
+    ) {
+      ...NavigationFragment
+    }
+
+    # Global Promo Line
+    contentfulPromoLineModule(
+      contentful_id: { eq: $promoLineId }
+      node_locale: { eq: $locale }
+    ) {
+      ...PromoLineFragment
+    }
+
+    # Faq Page (all categories for faq nav)
+    contentfulFaqPage(
+      contentful_id: { eq: $id }
+      node_locale: { eq: $node_locale }
+    ) {
+      metaTitle
+      metaDescription
+      pageHeading
+      pageDescription {
+        raw
+      }
+      heroImage {
+        gatsbyImageData(
+          width: 1440
+          height: 148
+          placeholder: BLURRED
+          formats: WEBP
+          layout: FULL_WIDTH
+        )
+      }
+      categories {
+        ... on ContentfulFaqCategory {
+          id
+          slug
+          pageHeading
+          iconType
+        }
+      }
+    }
+  }
+`;

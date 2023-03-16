@@ -14,7 +14,7 @@ import {
   SearchBox,
 } from "react-instantsearch-dom";
 import qs from "qs";
-import { navigate } from "gatsby";
+import { graphql, navigate } from "gatsby";
 
 import { TRANSLATIONS } from "../../constants/HelpSearch";
 import LangSwitcher from "./LangSwitcher";
@@ -346,3 +346,9 @@ const HelpSearch = ({ defaultResultsLang }) => {
 HelpSearch.propTypes = HelpSearchPropTypes;
 
 export default HelpSearch;
+
+export const query = graphql`
+  fragment HelpSearchFragment on ContentfulHelpSearchModule {
+    defaultResultsLang
+  }
+`;

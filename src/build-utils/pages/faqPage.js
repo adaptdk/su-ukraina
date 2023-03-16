@@ -1,47 +1,32 @@
 const path = require(`path`);
+const {
+  NAVIGATION_ID,
+  PROMOLINE_ID,
+} = require(`../../constants/contentfulIds`);
 
-const contentModel = require(`../helpers/contentfulContentModel`);
 const { getPathByLocale } = require(`../helpers/hooks`);
 
 const query = (graphql) => {
   return graphql(`
-  {
-    ${contentModel.globalNavigation}
-    ${contentModel.promoLine}
-    allContentfulFaqPage(filter: { node_locale: { eq: "lt-LT" } }) {
-      edges {
-        node {
-          contentful_id
-          node_locale
-          slug
-          metaTitle
-          forceTranslate
-          categories {
-            ... on ContentfulFaqCategory {
-              ${contentModel.pageData}
-              iconType
-              ${contentModel.seo}
-              ${contentModel.hero}
-              content {
-                ... on Node {
-                  id
-                  internal {
-                    type
-                  }
-                  ... on ContentfulFaqItem {
-                    ${contentModel.faqItem}
-                  }
-                  ... on ContentfulResourceListModule {
-                    ${contentModel.resourceListModule}
-                  }
-                }
+    {
+      allContentfulFaqPage(filter: { node_locale: { eq: "lt-LT" } }) {
+        edges {
+          node {
+            contentful_id
+            node_locale
+            slug
+            forceTranslate
+            categories {
+              contentful_id
+              ... on ContentfulFaqCategory {
+                slug
+                pageHeading
               }
             }
           }
         }
       }
     }
-  }
   `);
 };
 
@@ -49,41 +34,28 @@ const createFaqPages = (result, createPage) => {
   const faqPages = result.data.allContentfulFaqPage.edges.map(
     (edge) => edge.node
   );
-  const globalNavigation = result.data.allContentfulNavigation.edges.map(
-    (edge) => edge.node
-  );
-  const globalPromoLine = result.data.allContentfulPromoLineModule.edges.map(
-    (edge) => edge.node
-  );
 
   faqPages.forEach((faqPage) => {
     const locale = faqPage?.forceTranslate || faqPage?.node_locale;
-    if (
-      faqPage?.slug &&
-      faqPage?.metaTitle &&
-      faqPage?.node_locale === `lt-LT`
-    ) {
-      const navigation = globalNavigation
-        .filter((item) => item.node_locale === locale)
-        .shift();
-      const promoLine = globalPromoLine
-        .filter((item) => item.node_locale === locale)
-        .shift();
-
+    const id = faqPage?.contentful_id;
+    if (faqPage?.slug && faqPage?.node_locale === `lt-LT`) {
       const rootPath = getPathByLocale(locale, faqPage?.slug);
 
       faqPage.categories.forEach((faqCategory) => {
         const categoryPath = `${rootPath}/${faqCategory.slug}`;
+        const categoryId = faqCategory.contentful_id;
 
         createPage({
           path: categoryPath,
           component: path.resolve(`./src/templates/faqPage.jsx`),
           context: {
-            ...faqCategory,
-            node_locale: locale || faqPage.node_locale,
-            categories: faqPage?.categories || [],
-            navigation,
-            promoLine,
+            pageId: id,
+            locale /* fake locale forcing for navigation etc. */,
+            node_locale:
+              faqPage.node_locale /* real node-locale to query correct categories */,
+            categoryId,
+            navigationId: NAVIGATION_ID,
+            promoLineId: PROMOLINE_ID,
             rootPath,
           },
         });

@@ -10,6 +10,10 @@ import { localePropType } from "../../helpers/genericPropTypes";
 import { getTranslatedText } from "../../utils/getTranslatedText";
 
 const CardListSection = ({ organisations, locale }) => {
+  if (!organisations) {
+    return null;
+  }
+
   return (
     <CardList>
       {organisations.map(
@@ -24,6 +28,10 @@ const CardListSection = ({ organisations, locale }) => {
           websiteUrl,
           actionUrl,
         }) => {
+          if (!name) {
+            return null;
+          }
+
           return (
             <Card
               title={name}

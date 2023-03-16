@@ -7,6 +7,7 @@ import LinkCollectionWithImage from "../../LinkCollectionWithImage";
 import Section from "../../Section";
 
 import "./LinkCollectionModule.css";
+import { graphql } from "gatsby";
 
 const LinkCollectionModule = ({ links, heading, image }) => {
   if (image) {
@@ -56,3 +57,20 @@ LinkCollectionModule.defaultProps = {
 };
 
 export default LinkCollectionModule;
+
+export const query = graphql`
+  fragment LinkCollectionModuleFragment on ContentfulLinkCollectionModule {
+    heading
+    image {
+      gatsbyImageData(
+        formats: WEBP
+        height: 440
+        width: 611
+        placeholder: BLURRED
+      )
+    }
+    links {
+      ...LinkFragment
+    }
+  }
+`;

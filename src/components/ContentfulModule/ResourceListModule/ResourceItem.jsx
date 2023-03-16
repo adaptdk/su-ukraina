@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../../Button";
 import { getTranslatedText } from "../../../utils/getTranslatedText";
 import { ResourceItemPropTypes } from "./ResourceListModulePropTypes";
+import { graphql } from "gatsby";
 
 const ResourceItem = ({ label, subtext, sourceUrl }) => {
   return (
@@ -26,3 +27,12 @@ const ResourceItem = ({ label, subtext, sourceUrl }) => {
 ResourceItem.propTypes = ResourceItemPropTypes;
 
 export default ResourceItem;
+
+export const query = graphql`
+  fragment ResourceItemFragment on ContentfulResourceItem {
+    id
+    label
+    subtext
+    sourceUrl
+  }
+`;

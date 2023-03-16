@@ -1,6 +1,7 @@
 import React from "react";
 import ContactChip from "./ContactChip";
 import { ChipModulePropTypes } from "./ChipModulePropTypes";
+import { graphql } from "gatsby";
 
 const ChipModule = ({ chips }) => {
   return (
@@ -16,3 +17,11 @@ const ChipModule = ({ chips }) => {
 ChipModule.propTypes = ChipModulePropTypes;
 
 export default ChipModule;
+
+export const query = graphql`
+  fragment ChipModuleFragment on ContentfulChipModule {
+    chips {
+      ...ChipFragment
+    }
+  }
+`;
