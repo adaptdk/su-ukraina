@@ -31,6 +31,10 @@ const client = contentfulManagement.createClient({
   accessToken: ACCESS_TOKEN,
 });
 
+let amountOfAssets = 0;
+let amountOfUpdatedAssets = 0;
+let amountOfUnpublishedAssets = 0;
+
 async function migrateAssets() {
   const space = await client.getSpace(SPACE_ID);
   const environments = await space.getEnvironments();
@@ -41,6 +45,7 @@ async function migrateAssets() {
 
   const environment = await space.getEnvironment(CONTENTFUL_ENV);
   const assets = await environment.getAssets();
+  amountOfAssets = assets?.items?.length || 0;
 
   for (const asset of assets.items) {
     const assetId = asset.sys.id;
@@ -72,12 +77,15 @@ async function migrateAssets() {
             }
           }
         }
+      } else {
+        amountOfUnpublishedAssets++;
       }
     });
 
     try {
       if (updateAsset) {
         await asset.update();
+        amountOfUpdatedAssets++;
         verboseLog(`Updated asset ${assetId}`);
       } else {
         verboseLog(`Skipping asset ${assetId}`);
@@ -91,6 +99,12 @@ async function migrateAssets() {
 
 migrateAssets()
   .then(() => {
+    console.log(
+      `\nUpdated ${amountOfUpdatedAssets} out of ${amountOfAssets} assets.`
+    );
+    console.log(
+      `Out of ${amountOfAssets} assets, there were ${amountOfUnpublishedAssets} assets in draft state.`
+    );
     console.log(`\nMigration completed \x1b[32msuccessfully\x1b[0m! Hooray!`);
     console.warn(
       `\nDon't forget to check your migrated assets. They are not published yet!`
