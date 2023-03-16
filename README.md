@@ -62,3 +62,41 @@
     - `tags_uk`
 8.  Add API keys in the `.env` file (from the "API Keys" section in the
     Algolia application).
+
+## Updating localised Contentful assets
+
+This project's Contentful space is using three different locales.
+Because of the way Contentful is, when uploading an asset you have to upload it to each locale.
+That may be troublesome, therefore we have an automated way of doing that.
+
+### Disclaimer
+
+It is highly advised to first make a backup of your space. Read up more in the [official Contentful CLI documentation](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/)
+
+### Using the script
+
+1.  Set up your `.env` keys
+    - You can get the `CONTENTFUL_SPACE_ID` by going to **Contentful** -> **Settings** -> **General settings**
+    - You can get the `CONTENTFUL_ACCESS_TOKEN` by going to **Contentful** -> **Settings** -> **API Keys** -> **Content management tokens** -> **Generate personal token**
+    - Set the `CONTENTFUL_ENV` to the desired environment
+      - You can also specify the `CONTENTFUL_ENV` when running the script. See example below.
+2.  Run the migration script
+3.  You should see in your terminal log that the migration was successful. Now you can go to the Contentful web app and review/publish your assets.
+
+#### Run the script with default settings (sandbox env)
+
+```
+node scripts/migrate-localised-assets.js
+```
+
+#### Run the script for master environment
+
+```
+CONTENTFUL_ENV=master node scripts/migrate-localised-assets.js
+```
+
+#### Run the script with status logs for each asset
+
+```
+node scripts/migrate-localised-assets.js --verbose
+```
