@@ -8,11 +8,17 @@ const DEFAULT_LOCALE = `lt-LT`;
 
 // Console.log messages only if you run the script with the `--verbose` flag
 const verbose = process.argv.includes(`--verbose`);
-const log = (msg) => {
+const verboseLog = (msg) => {
   if (verbose) {
     console.log(msg);
   }
 };
+
+if (!verbose) {
+  console.log(
+    `If you want to see more detailed logs, run the script again with the --verbose flag.`
+  );
+}
 
 if (!SPACE_ID || !ACCESS_TOKEN) {
   console.error(
@@ -72,9 +78,9 @@ async function migrateAssets() {
     try {
       if (updateAsset) {
         await asset.update();
-        log(`Updated asset ${assetId}`);
+        verboseLog(`Updated asset ${assetId}`);
       } else {
-        log(`Skipping asset ${assetId}`);
+        verboseLog(`Skipping asset ${assetId}`);
       }
     } catch (e) {
       console.log(`Failed updating asset. ID: `, assetId);
@@ -90,7 +96,7 @@ migrateAssets()
       `\nDon't forget to check your migrated assets. They are not published yet!`
     );
     console.log(
-      `\nIf everything looks OK - you should now \x1b[32mre-publish\x1b[0m your changed assets.\n`
+      `\nIf everything looks OK - you should now \x1b[32mre-publish\x1b[0m your changed assets.`
     );
   })
   .catch(console.error);
