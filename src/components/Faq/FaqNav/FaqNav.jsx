@@ -11,7 +11,12 @@ const FaqNav = ({ rootPath, categories, pathname }) => {
   }
 
   // @todo: fix this bandaid patch
-  const fixedRootPath = rootPath.startsWith(`/`) ? rootPath : `/${rootPath}`;
+  const startingSlashRootPath = rootPath.startsWith(`/`)
+    ? rootPath
+    : `/${rootPath}`;
+  const endingSlashRootPath = startingSlashRootPath.endsWith(`/`)
+    ? startingSlashRootPath
+    : `${startingSlashRootPath}/`;
 
   return (
     <nav className="FaqNav">
@@ -25,7 +30,7 @@ const FaqNav = ({ rootPath, categories, pathname }) => {
                   color="primary"
                   startIcon={category.iconType}
                   endIcon={`arrow-white`}
-                  to={`${fixedRootPath}/${category.slug}/`}
+                  to={`${endingSlashRootPath}${category.slug}/`}
                 >
                   {category.pageHeading}
                 </Button>
