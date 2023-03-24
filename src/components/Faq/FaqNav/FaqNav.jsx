@@ -10,6 +10,9 @@ const FaqNav = ({ rootPath, categories, pathname }) => {
     return null;
   }
 
+  // @todo: fix this bandaid patch
+  const fixedRootPath = rootPath.startsWith(`/`) ? rootPath : `/${rootPath}`;
+
   return (
     <nav className="FaqNav">
       <ul className="FaqNav__list">
@@ -22,7 +25,7 @@ const FaqNav = ({ rootPath, categories, pathname }) => {
                   color="primary"
                   startIcon={category.iconType}
                   endIcon={`arrow-white`}
-                  to={`/${rootPath}/${category.slug}/`}
+                  to={`${fixedRootPath}/${category.slug}/`}
                 >
                   {category.pageHeading}
                 </Button>
