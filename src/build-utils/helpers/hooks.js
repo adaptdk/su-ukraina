@@ -46,23 +46,23 @@ const getPathByLocale = (
 ) => {
   if (locale === `lt-LT`) {
     if (prefix[locale]) {
-      return `${prefix[locale]}/${slug}`;
+      return `${prefix[locale]}/${slug}/`;
     }
-    return slug;
+    return `${slug}/`;
   }
 
   if (locale === `uk-UA`) {
     if (prefix[locale]) {
-      return `ua/${prefix[locale]}/${slug}`;
+      return `ua/${prefix[locale]}/${slug}/`;
     }
-    return `ua/${slug}`;
+    return `ua/${slug}/`;
   }
 
   if (locale === `en-US`) {
     if (prefix[locale]) {
-      return `en/${prefix[locale]}/${slug}`;
+      return `en/${prefix[locale]}/${slug}/`;
     }
-    return `en/${slug}`;
+    return `en/${slug}/`;
   }
 
   // This will break the build and we want that
@@ -81,11 +81,11 @@ const getHomePagePath = (locale) => {
   }
 
   if (locale === `uk-UA`) {
-    return `ua`;
+    return `ua/`;
   }
 
   if (locale === `en-US`) {
-    return `en`;
+    return `en/`;
   }
 
   // This will break the build and we want that

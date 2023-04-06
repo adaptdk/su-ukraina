@@ -45,25 +45,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-          allSitePage {
-            nodes {
-              path
-            }
-          }
-        }
-        `,
-      },
-    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify`,
     `create-redirects`,
     `@mediacurrent/gatsby-plugin-silence-css-order-warning`,
