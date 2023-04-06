@@ -42,7 +42,7 @@ const createFaqPages = (result, createPage) => {
       const rootPath = getPathByLocale(locale, faqPage?.slug);
 
       faqPage.categories.forEach((faqCategory) => {
-        const categoryPath = `${rootPath}/${faqCategory.slug}`;
+        const categoryPath = `${rootPath}${faqCategory.slug}/`;
         const categoryId = faqCategory.contentful_id;
 
         createPage({

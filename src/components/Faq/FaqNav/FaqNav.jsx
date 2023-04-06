@@ -10,14 +10,6 @@ const FaqNav = ({ rootPath, categories, pathname }) => {
     return null;
   }
 
-  // @todo: fix this bandaid patch
-  const startingSlashRootPath = rootPath.startsWith(`/`)
-    ? rootPath
-    : `/${rootPath}`;
-  const endingSlashRootPath = startingSlashRootPath.endsWith(`/`)
-    ? startingSlashRootPath
-    : `${startingSlashRootPath}/`;
-
   return (
     <nav className="FaqNav">
       <ul className="FaqNav__list">
@@ -30,7 +22,7 @@ const FaqNav = ({ rootPath, categories, pathname }) => {
                   color="primary"
                   startIcon={category.iconType}
                   endIcon={`arrow-white`}
-                  to={`${endingSlashRootPath}${category.slug}/`}
+                  to={`/${rootPath}${category.slug}/`}
                 >
                   {category.pageHeading}
                 </Button>

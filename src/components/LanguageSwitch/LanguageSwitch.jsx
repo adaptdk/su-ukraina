@@ -20,17 +20,17 @@ const LanguageSwitch = ({ currentNodeSlugs }) => {
     switch (goToLang) {
       case `uk-UA`:
         if (currentNodeSlugs?.[`uk-UA`]) {
-          return `/ua/${currentNodeSlugs[`uk-UA`]}`;
+          return `/ua/${currentNodeSlugs[`uk-UA`]}/`;
         }
-        return `/ua`;
+        return `/ua/`;
       case `en-US`:
         if (currentNodeSlugs?.[`en-US`]) {
-          return `/en/${currentNodeSlugs[`en-US`]}`;
+          return `/en/${currentNodeSlugs[`en-US`]}/`;
         }
-        return `/en`;
+        return `/en/`;
       case `lt-LT`:
         if (currentNodeSlugs?.[`lt-LT`]) {
-          return `/${currentNodeSlugs[`lt-LT`]}`;
+          return `/${currentNodeSlugs[`lt-LT`]}/`;
         }
         return `/`;
       default:
