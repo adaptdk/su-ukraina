@@ -11,6 +11,10 @@ const ContactChip = ({
   facebookUrl,
   twitterUrl,
 }) => {
+  if (!heading) {
+    return null;
+  }
+
   const links = [
     {
       url: webUrl,
