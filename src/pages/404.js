@@ -26,12 +26,6 @@ const NotFoundPage = () => {
           Go home
         </Button>
       </ErrorPage>
-
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `plausible("404",{ props: { path: document.location.pathname } });`,
-        }}
-      />
     </main>
   );
 };
